@@ -14,21 +14,21 @@ struct ReadmeSectionOnSupportedPlatforms1718: View {
     var body: some View {
         Group {
             ReadmeSectionHeader(LocalizedStringResource("Supported Platforms",
-                                                  table: "PhotoClubHub.Readme",
-                                                  comment: "Title of one section of Readme screen"),
+                                                        table: "PhotoClubHub.Readme",
+                                                        comment: "Title of one section of Readme screen"),
+                                geo: geo)
+            ReadmeSection(LocalizedStringResource("§4.1", table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
                           geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§4.1", table: "PhotoClubHub.Readme",
+            ReadmeSection(LocalizedStringResource("§4.2", table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§4.2", table: "PhotoClubHub.Readme",
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§4.3", table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§4.3", table: "PhotoClubHub.Readme",
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§4.4", table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§4.4", table: "PhotoClubHub.Readme",
-                                                  comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+                          geo: geo)
         }
     }
 }

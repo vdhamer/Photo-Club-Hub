@@ -14,17 +14,17 @@ struct ReadmeSectionOnHowYouCanHelp1718: View {
     var body: some View {
         Group {
             ReadmeSectionHeader(LocalizedStringResource("How you can help",
+                                                        table: "PhotoClubHub.Readme",
+                                                        comment: "Title of one section of Readme screen"),
+                                geo: geo)
+            ReadmeSection(LocalizedStringResource("§5.1",
                                                   table: "PhotoClubHub.Readme",
-                                                  comment: "Title of one section of Readme screen"),
+                                                  comment: "Paragraph in the Readme screen"),
                           geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§5.1",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§5.2",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§5.2",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             VStack {
                 Image("Bellus_Imago_Level_1")
@@ -40,19 +40,19 @@ struct ReadmeSectionOnHowYouCanHelp1718: View {
                 Text(verbatim: "")
             }
 
-            ReadmeSection1718(LocalizedStringResource("§5.3",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§5.4",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§5.5",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo,
-                              bottomPaddingAmount: 0)
+            ReadmeSection(LocalizedStringResource("§5.3",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§5.4",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§5.5",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo,
+                          bottomPaddingAmount: 0)
 
             VStack {
                 Image("Swift_enum")

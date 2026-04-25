@@ -15,18 +15,18 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
     public var body: some View {
         Group {
             ReadmeSectionHeader(LocalizedStringResource("Features and Tips",
-                                                  table: "PhotoClubHub.Readme",
-                                                  comment: "Title of one section of Readme screen"),
-                          geo: geo)
+                                                        table: "PhotoClubHub.Readme",
+                                                        comment: "Title of one section of Readme screen"),
+                                geo: geo)
 
-            ReadmeSection2626(LocalizedStringResource("§3.01.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.01.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo, bottomPaddingAmount: 0)
+            ReadmeSection(LocalizedStringResource("§3.01.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.01.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo, bottomPaddingAmount: 0)
 
             Image("Search-bar-bottom")
                 .resizable()
@@ -38,17 +38,17 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
             .font(.callout.italic())
             Text(verbatim: "")
 
-            ReadmeSection2626(LocalizedStringResource("§3.01.c", table: "PhotoClubHub.Readme",
+            ReadmeSection(LocalizedStringResource("§3.01.c", table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
-            ReadmeSection2626(LocalizedStringResource("§3.02.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.02.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo, bottomPaddingAmount: 0)
+            ReadmeSection(LocalizedStringResource("§3.02.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.02.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo, bottomPaddingAmount: 0)
 
             Text(verbatim: "")
             Image("Expertise")
@@ -63,19 +63,19 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
             .frame(width: geo.size.width * 0.8, alignment: .center)
             Text(verbatim: "")
 
-            ReadmeSection2626(LocalizedStringResource("§3.02.c",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.02.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
-            ReadmeSection2626(LocalizedStringResource("§3.03.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.03.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.03.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.03.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("Localizations") // belongs to Section 3.1
                 .resizable()
@@ -89,14 +89,14 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
             Text(verbatim: "")
             Text(verbatim: "")
 
-            ReadmeSection2626(LocalizedStringResource("§3.04.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.04.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.04.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.04.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("3D_map") // belongs to Section 3.2
                 .resizable()
@@ -109,53 +109,53 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
             .frame(width: geo.size.width, alignment: .center)
             Text(verbatim: "")
 
-            ReadmeSection2626(LocalizedStringResource("§3.05.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.05.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.05.c",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.05.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.05.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.05.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
-            ReadmeSection2626(LocalizedStringResource("§3.06.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.06.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
             let persistenceController = PersistenceController.shared // for Core Data
             let viewContext = persistenceController.container.viewContext
             // -2 is not counting TemplateMin and TemplateMax
             let orgCount = Organization.count(context: viewContext,
                                               organizationTypeE: OrganizationTypeEnum.club) - 2
-            ReadmeSection2626(LocalizedStringResource("§3.06.b \(orgCount)", // dynamic via query
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.06.c",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.06.d",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.06.b \(orgCount)", // dynamic via query
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.06.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.06.d",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
-            ReadmeSection2626(LocalizedStringResource("§3.07.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.07.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.07.c",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.07.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.07.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.07.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("Maps") // belongs to Section 3.5
                 .resizable()
@@ -168,23 +168,23 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
             .frame(width: geo.size.width, alignment: .center)
             Text(verbatim: "")
 
-            ReadmeSection2626(LocalizedStringResource("§3.08.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.08.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.08.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.08.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
-            ReadmeSection2626(LocalizedStringResource("§3.09.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.09.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.09.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.09.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("Website")
                 .resizable()
@@ -198,26 +198,26 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
             .frame(width: geo.size.width, alignment: .center)
             Text(verbatim: "")
 
-            ReadmeSection2626(LocalizedStringResource("§3.10.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.10.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.10.c",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.10.d",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.10.e",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.10.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.10.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.10.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.10.d",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.10.e",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("2021_FotogroepWaalre_058")
                 .resizable()
@@ -229,18 +229,18 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                 .font(.callout.italic())
                 .frame(width: geo.size.width, alignment: .center)
 
-            ReadmeSection2626(LocalizedStringResource("§3.11.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.11.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.11.c",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.11.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.11.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.11.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("Preferences")
                 .resizable()
@@ -253,18 +253,18 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
             .frame(width: geo.size.width * 0.8, alignment: .center)
             Text(verbatim: "")
 
-            ReadmeSection2626(LocalizedStringResource("§3.12.a",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of a section of the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.12.b",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection2626(LocalizedStringResource("§3.12.c",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.12.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.12.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.12.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("Play-button")
                 .resizable()

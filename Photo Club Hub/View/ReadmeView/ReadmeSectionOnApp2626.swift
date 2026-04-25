@@ -20,19 +20,19 @@ public struct ReadmeSectionOnApp2626: View {
                                         comment: "Title of one section of Readme screen"),
                 geo: geo
             )
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§1.1",
                                         table: "PhotoClubHub.Readme",
                                         comment: "The App section paragraph 1.1"),
                 geo: geo
             )
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§1.2",
                                         table: "PhotoClubHub.Readme",
                                         comment: "The App section paragraph 1.2"),
                 geo: geo
             )
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§1.3",
                                         table: "PhotoClubHub.Readme",
                                         comment: "The App section paragraph 1.3"),
@@ -55,19 +55,19 @@ public struct ReadmeSectionOnApp2626: View {
             .frame(width: geo.size.width, alignment: .center)
             Text(verbatim: "")
 
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§1.4",
                                         table: "PhotoClubHub.Readme",
                                         comment: "The App section paragraphs 1.4"),
                 geo: geo
             )
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§1.5",
                                         table: "PhotoClubHub.Readme",
                                         comment: "The App section paragraphs 1.5"),
                 geo: geo
             )
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§1.6",
                                         table: "PhotoClubHub.Readme",
                                         comment: "The App section paragraphs 1.6"),

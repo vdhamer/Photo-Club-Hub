@@ -16,21 +16,21 @@ public struct ReadmeSectionOnApp1718: View {
         Group {
 
             ReadmeSectionHeader(LocalizedStringResource("The App",
+                                                        table: "PhotoClubHub.Readme",
+                                                        comment: "Title of one section of Readme screen"),
+                                geo: geo)
+            ReadmeSection(LocalizedStringResource("§1.1",
                                                   table: "PhotoClubHub.Readme",
-                                                  comment: "Title of one section of Readme screen"),
+                                                  comment: "Paragraph in the Readme screen"),
                           geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§1.1",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§1.2",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§1.3",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§1.2",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§1.3",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             Image("app_screenshots_EN")
                 .resizable()
@@ -43,18 +43,18 @@ public struct ReadmeSectionOnApp1718: View {
             .frame(width: geo.size.width, alignment: .center)
             Text(verbatim: "")
 
-            ReadmeSection1718(LocalizedStringResource("§1.4",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§1.5",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§1.6",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Paragraph in the Readme screen"),
-                              geo: geo)
+            ReadmeSection(LocalizedStringResource("§1.4",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§1.5",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§1.6",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
         }
     }
 }

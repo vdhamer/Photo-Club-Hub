@@ -20,27 +20,27 @@ public struct ReadmeSectionOnConcept2626: View {
                                         comment: "Title of one section of Readme screen"),
                 geo: geo
             )
-           ReadmeSection2626(
+           ReadmeSection(
                 LocalizedStringResource("§2.1",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Paragraph in the Readme screen"),
                 geo: geo)
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§2.2",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Paragraph in the Readme screen"),
                 geo: geo)
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§2.3",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Paragraph in the Readme screen"),
                 geo: geo)
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§2.4",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Paragraph in the Readme screen"),
                 geo: geo)
-            ReadmeSection2626(
+            ReadmeSection(
                 LocalizedStringResource("§2.5",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Paragraph in the Readme screen"),
