@@ -28,7 +28,7 @@ struct ReadmeView2626: View {
                         ReadmeSectionOnSupportedPlatforms2626(geo: geo)
                         ReadmeSectionOnHowYouCanHelp2626(geo: geo)
 
-                        SectionHeader(LocalizedStringResource("",
+                        ReadmeSectionHeader(LocalizedStringResource("",
                                                               table: "PhotoClubHub.Readme",
                                                               comment: "Empty section header"),
                                       geo: geo)

@@ -9,7 +9,7 @@ import SwiftUI
 
 // struct to define some standard view modifiers for use in Readme text sections
 @available(iOS 26.0, *)
-struct ReadmeSection: View {
+struct ReadmeSection2626: View {
     private let localizedString: LocalizedStringResource
     private let geo: GeometryProxy
     private var bottomPaddingAmount: CGFloat // defaults to value of horizontal padding

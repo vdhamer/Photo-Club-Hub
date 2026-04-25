@@ -20,6 +20,7 @@
 		3723DAE92F008E25006E2BB4 /* root_.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAE82F008E25006E2BB4 /* root_.level1.json */; };
 		3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */; };
 		373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE0D02EED808700F311BE /* FotobondNumbers.swift */; };
+		37415B082F9D2DA3004B4647 /* ReadmeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37415B072F9D2DA3004B4647 /* ReadmeSection.swift */; };
 		3744553D2F46611B007DBDE3 /* TemplateMin.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3744553B2F46611B007DBDE3 /* TemplateMin.level1.json */; };
 		3744553E2F46611B007DBDE3 /* TemplateMax.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 374455392F46611B007DBDE3 /* TemplateMax.level1.json */; };
 		3744553F2F46611B007DBDE3 /* TemplateMin.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3744553C2F46611B007DBDE3 /* TemplateMin.level2.json */; };
@@ -33,7 +34,7 @@
 		3768E6CB2F0DC0D600E12F6F /* museumsJP.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3768E6CA2F0DC0D600E12F6F /* museumsJP.level1.json */; };
 		3768E6CC2F0DC0D600E12F6F /* museumsDE.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3768E6C92F0DC0D600E12F6F /* museumsDE.level1.json */; };
 		3768E6CE2F0DC72800E12F6F /* museumsGB.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3768E6CD2F0DC72800E12F6F /* museumsGB.level1.json */; };
-		376C49C72F9CF8D900E449FC /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C49C62F9CF8D900E449FC /* SectionHeader.swift */; };
+		376C49C72F9CF8D900E449FC /* ReadmeSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C49C62F9CF8D900E449FC /* ReadmeSectionHeader.swift */; };
 		376D14F82E6DE60900A1403B /* PreludeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F72E6DE60900A1403B /* PreludeView2626.swift */; };
 		376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */; };
 		376DC9522EC3A98900FB429B /* PreludeImageStore2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */; };
@@ -208,6 +209,7 @@
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
 		3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard.txt; sourceTree = "<group>"; };
 		373EE0D02EED808700F311BE /* FotobondNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotobondNumbers.swift; sourceTree = "<group>"; };
+		37415B072F9D2DA3004B4647 /* ReadmeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSection.swift; sourceTree = "<group>"; };
 		374455392F46611B007DBDE3 /* TemplateMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMax.level1.json; sourceTree = "<group>"; };
 		3744553A2F46611B007DBDE3 /* TemplateMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMax.level2.json; sourceTree = "<group>"; };
 		3744553B2F46611B007DBDE3 /* TemplateMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMin.level1.json; sourceTree = "<group>"; };
@@ -223,7 +225,7 @@
 		3768E6C92F0DC0D600E12F6F /* museumsDE.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsDE.level1.json; sourceTree = "<group>"; };
 		3768E6CA2F0DC0D600E12F6F /* museumsJP.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsJP.level1.json; sourceTree = "<group>"; };
 		3768E6CD2F0DC72800E12F6F /* museumsGB.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsGB.level1.json; sourceTree = "<group>"; };
-		376C49C62F9CF8D900E449FC /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		376C49C62F9CF8D900E449FC /* ReadmeSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionHeader.swift; sourceTree = "<group>"; };
 		376D14F72E6DE60900A1403B /* PreludeView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeView2626.swift; sourceTree = "<group>"; };
 		376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2626.swift; sourceTree = "<group>"; };
 		376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2626.swift; sourceTree = "<group>"; };
@@ -582,9 +584,10 @@
 		D05E451C27EF297100D31327 /* ReadmeView */ = {
 			isa = PBXGroup;
 			children = (
-				376C49C62F9CF8D900E449FC /* SectionHeader.swift */,
 				37E134C02E6F7AE700C61714 /* OldIOSVersionSupport */,
 				37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */,
+				37415B072F9D2DA3004B4647 /* ReadmeSection.swift */,
+				376C49C62F9CF8D900E449FC /* ReadmeSectionHeader.swift */,
 				37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */,
 				371FADC62F9B6A290095417A /* ReadmeSectionOnApp2626.swift */,
 				371FADC82F9B6E7C0095417A /* ReadmeSectionOnConcept2626.swift */,
@@ -1243,6 +1246,7 @@
 				D05840182E3C18B00013E438 /* PhotographersTextInfo.swift in Sources */,
 				D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */,
 				3792CBF42F9BE084007331DF /* ReadmeSectionOnConcept1718.swift in Sources */,
+				37415B082F9D2DA3004B4647 /* ReadmeSection.swift in Sources */,
 				37B1A3EB2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift in Sources */,
 				D0F4FAAA2D82275100FFAEAE /* Level0JsonReader.swift in Sources */,
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
@@ -1349,7 +1353,7 @@
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				371FADC72F9B6A290095417A /* ReadmeSectionOnApp2626.swift in Sources */,
 				D0BADF842DF9C80800BDE2CD /* PreferencesViewModel.swift in Sources */,
-				376C49C72F9CF8D900E449FC /* SectionHeader.swift in Sources */,
+				376C49C72F9CF8D900E449FC /* ReadmeSectionHeader.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				3722DCA02F98CE9000F2851C /* MemberPortolioRow+chooseImageURL.swift in Sources */,
 				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,

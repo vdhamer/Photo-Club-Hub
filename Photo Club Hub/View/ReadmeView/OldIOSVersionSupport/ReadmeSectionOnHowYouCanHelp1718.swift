@@ -13,7 +13,7 @@ struct ReadmeSectionOnHowYouCanHelp1718: View {
 
     var body: some View {
         Group {
-            SectionHeader(LocalizedStringResource("How you can help",
+            ReadmeSectionHeader(LocalizedStringResource("How you can help",
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Title of one section of Readme screen"),
                           geo: geo)

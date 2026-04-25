@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SectionHeader: View {
+struct ReadmeSectionHeader: View {
     private let localizedString: LocalizedStringResource
     private let geo: GeometryProxy
 
@@ -46,6 +46,6 @@ struct SectionHeader: View {
             }
         }
         .frame(width: geo.size.width * 0.9, height: 50, alignment: .center)
-        .padding(Edge.Set([.horizontal]), SectionHeader.paddingConstant)
+        .padding(Edge.Set([.horizontal]), ReadmeSectionHeader.paddingConstant)
     }
 }
