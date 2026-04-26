@@ -30,7 +30,7 @@ MEMBERS SCREEN
 README SCREEN
 
 * Added a close button at top of the screen (for consistency with Preferences).
-* Various small fixes (especially for iOS 17/18, updated Preferences screenshot).
+* Minor bug fixes (especially for iOS 17/18, updated Preferences screenshot).
 
 CODE MAINTENANCE
 
@@ -38,7 +38,7 @@ CODE MAINTENANCE
 * Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.2 (23E261).
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
 * Sync code with Photo Club Hub HTML code.
-* Splitting of file ReadmeView1718 and ReadmeView2626 (were 400 lines long)
+* Refactoring ReadmeView code to avoid having separate files for iOS 17/18 and iOS 26.
 
 DATA MAINTENANCE
 

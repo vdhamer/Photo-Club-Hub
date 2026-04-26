@@ -1,5 +1,5 @@
 //
-//  ReadmeView1718.swift
+//  ReadmeView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 26/03/2022.
@@ -7,20 +7,18 @@
 
 import SwiftUI
 
-// https://stackoverflow.com/questions/77735635/how-to-have-a-conditional-modifier-based-on-the-os-version-in-swiftui
-@available(iOS, obsoleted: 19.0)
 extension View {
     func apply<V: View>(@ViewBuilder _ block: (Self) -> V) -> V { block(self) }
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'ReadmeView2626' for versions about iOS 18.x")
-struct ReadmeView1718: View {
+struct ReadmeView: View {
 
-    private let title = String(localized: "Readme", table: "PhotoClubHub.Readme", comment: "Title of Readme screen")
-    @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
+    @Environment(\.dismiss) var dismiss: DismissAction
     @State private var showingRoadmap = false // controls visibility of Preferences screen
-    @State private var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
-    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
+
+    private let title = String(localized: "Readme",
+                               table: "PhotoClubHub.Readme",
+                               comment: "Title of Readme screen")
 
     var body: some View {
         GeometryReader { geo in
@@ -69,12 +67,11 @@ struct ReadmeView1718: View {
 
 // MARK: - Preview
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'ReadmeView2626_Previews' for versions about iOS 18.x")
-struct ReadmeView1718_Previews: PreviewProvider {
+struct ReadmeView_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 
     static var previews: some View {
-        ReadmeView1718()
+        ReadmeView()
             .preferredColorScheme(.light)
             .navigationTitle(title)
             .previewInterfaceOrientation(.portrait)

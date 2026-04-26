@@ -88,7 +88,7 @@ struct MemberPortfolioListView1718: View {
                         .foregroundStyle(.linkColor, .gray, .white)
                 }
                 .sheet(isPresented: $showingReadme, content: {
-                    ReadmeView1718()
+                    ReadmeView()
                     // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedReadmeDetent)
                         .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView

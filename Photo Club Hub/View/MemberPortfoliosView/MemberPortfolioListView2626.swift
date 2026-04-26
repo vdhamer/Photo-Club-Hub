@@ -87,7 +87,7 @@ struct MemberPortfolioListView2626: View {
                         .foregroundStyle(.linkColor, .gray, .white)
                 }
                 .sheet(isPresented: $showingReadme, content: {
-                    ReadmeView2626()
+                    ReadmeView()
                         .presentationDetents(detentsList, selection: $selectedReadmeDetent)
                         .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
                         .presentationCornerRadius(40) // compiler can't handle this yet
