@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52E7381D10067CE6B /* fkGestel.level2.json */; };
 		370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */; };
+		370D38202F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */; };
 		371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371414B62F12FF460032EF21 /* PreferencesIcon.swift */; };
-		37145C122F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37145C112F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift */; };
 		37145C562F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */; };
 		37174DAA2F8F93E100E58B6E /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37174DA92F8F93E100E58B6E /* PreferencesView.swift */; };
 		372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
@@ -43,7 +43,6 @@
 		37913A2D2F452BB8009B5D8A /* clubTemplates.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37913A2C2F452BB8009B5D8A /* clubTemplates.level1.json */; };
 		37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */; };
 		37913A312F452C01009B5D8A /* TemplateMinMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */; };
-		3792CC0E2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792CC0D2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift */; };
 		3792CC262F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */; };
 		37989A022F4A25D80039FABF /* clubsXamples.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37989A012F4A25D80039FABF /* clubsXamples.level1.json */; };
 		37A57B1D2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */; };
@@ -194,8 +193,8 @@
 /* Begin PBXFileReference section */
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips.swift; sourceTree = "<group>"; };
+		370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms.swift; sourceTree = "<group>"; };
 		371414B62F12FF460032EF21 /* PreferencesIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesIcon.swift; sourceTree = "<group>"; };
-		37145C112F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms2626.swift; sourceTree = "<group>"; };
 		37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp2626.swift; sourceTree = "<group>"; };
 		37174DA92F8F93E100E58B6E /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
@@ -230,7 +229,6 @@
 		37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMaxMembersProvider.swift; sourceTree = "<group>"; };
 		37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMinMembersProvider.swift; sourceTree = "<group>"; };
 		37922A512F50ECAF00E596B8 /* Photo_Club_Hub_2_9_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_3.xcdatamodel; sourceTree = "<group>"; };
-		3792CC0D2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms1718.swift; sourceTree = "<group>"; };
 		3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp1718.swift; sourceTree = "<group>"; };
 		37989A012F4A25D80039FABF /* clubsXamples.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsXamples.level1.json; sourceTree = "<group>"; };
 		37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView1718.swift; sourceTree = "<group>"; };
@@ -509,7 +507,6 @@
 			isa = PBXGroup;
 			children = (
 				D05E451D27EF2A2C00D31327 /* ReadmeView1718.swift */,
-				3792CC0D2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift */,
 				3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */,
 			);
 			path = OldIOSVersionSupport;
@@ -580,7 +577,7 @@
 				37415B1F2F9D3733004B4647 /* ReadmeSectionOnApp.swift */,
 				37415B212F9D5E96004B4647 /* ReadmeSectionOnConcept.swift */,
 				370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */,
-				37145C112F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift */,
+				370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */,
 				37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */,
 			);
 			path = ReadmeView;
@@ -1319,13 +1316,13 @@
 				D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographersListView2626.swift in Sources */,
 				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,
-				3792CC0E2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift in Sources */,
 				376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */,
 				D0FB52912E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift in Sources */,
 				D0831A21277F72270049AB84 /* FilteredPhotographerView2626.swift in Sources */,
 				D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */,
 				D0ACCEE12DEF9B070002FACC /* FotogroepWaalreMembersProvider.swift in Sources */,
 				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,
+				370D38202F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift in Sources */,
 				376D14F82E6DE60900A1403B /* PreludeView2626.swift in Sources */,
 				D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */,
 				D08319E7277F70A30049AB84 /* PhotoClubHubApp.swift in Sources */,
@@ -1333,7 +1330,6 @@
 				37B39FAD2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift in Sources */,
 				D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */,
 				D0831A1E277F72270049AB84 /* PreferencesView2626.swift in Sources */,
-				37145C122F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift in Sources */,
 				D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */,
 				D0DD2B7D2EF8A14F002210DA /* Persoonlijk03MembersProvider.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,

@@ -30,7 +30,7 @@ struct ReadmeView1718: View {
                         ReadmeSectionOnApp(geo: geo)
                         ReadmeSectionOnConcept(geo: geo)
                         ReadmeSectionOnFeaturesAndTips(geo: geo)
-                        ReadmeSectionOnSupportedPlatforms1718(geo: geo)
+                        ReadmeSectionOnSupportedPlatforms(geo: geo)
                         ReadmeSectionOnHowYouCanHelp1718(geo: geo)
 
                         ReadmeSectionHeader(LocalizedStringResource("",

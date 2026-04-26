@@ -25,7 +25,7 @@ struct ReadmeView2626: View {
                         ReadmeSectionOnApp(geo: geo)
                         ReadmeSectionOnConcept(geo: geo)
                         ReadmeSectionOnFeaturesAndTips(geo: geo)
-                        ReadmeSectionOnSupportedPlatforms2626(geo: geo)
+                        ReadmeSectionOnSupportedPlatforms(geo: geo)
                         ReadmeSectionOnHowYouCanHelp2626(geo: geo)
 
                         ReadmeSectionHeader(LocalizedStringResource("",
