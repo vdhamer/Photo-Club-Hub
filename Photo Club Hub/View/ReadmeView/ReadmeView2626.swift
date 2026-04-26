@@ -24,7 +24,7 @@ struct ReadmeView2626: View {
                     VStack {
                         ReadmeSectionOnApp(geo: geo)
                         ReadmeSectionOnConcept(geo: geo)
-                        ReadmeSectionOnFeaturesAndTips2626(geo: geo)
+                        ReadmeSectionOnFeaturesAndTips(geo: geo)
                         ReadmeSectionOnSupportedPlatforms2626(geo: geo)
                         ReadmeSectionOnHowYouCanHelp2626(geo: geo)
 

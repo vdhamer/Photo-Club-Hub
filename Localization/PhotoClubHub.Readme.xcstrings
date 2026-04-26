@@ -966,7 +966,7 @@
       }
     },
     "Amsterdam has two photography museums." : {
-      "comment" : "Caption of Museums image on Readme page\nExample of a link to a club web site",
+      "comment" : "Example of a link to a club web site",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1034,7 +1034,7 @@
       }
     },
     "Example of a link to a club web site" : {
-      "comment" : "Caption of Websites image on Readme page\nExample of a link to a club web site",
+      "comment" : "Example of a link to a club web site",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1171,6 +1171,7 @@
     },
     "Search bar of _Portfolios_ screen (up to iOS 18)" : {
       "comment" : "Caption about Search Bar on the Readme page",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1187,7 +1188,7 @@
       }
     },
     "Supported (🏵) and temporary (🪲) expertise tags" : {
-      "comment" : "Caption about Expertise on the Readme page\nFigure caption about Expertise on the Readme page",
+      "comment" : "Figure caption about Expertise on the Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {

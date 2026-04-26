@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52E7381D10067CE6B /* fkGestel.level2.json */; };
+		370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */; };
 		371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371414B62F12FF460032EF21 /* PreferencesIcon.swift */; };
-		37145C102F9B9A1D00B4C203 /* ReadmeSectionOnFeaturesAndTips2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37145C0F2F9B9A1D00B4C203 /* ReadmeSectionOnFeaturesAndTips2626.swift */; };
 		37145C122F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37145C112F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift */; };
 		37145C562F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */; };
 		37174DAA2F8F93E100E58B6E /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37174DA92F8F93E100E58B6E /* PreferencesView.swift */; };
@@ -43,7 +43,6 @@
 		37913A2D2F452BB8009B5D8A /* clubTemplates.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37913A2C2F452BB8009B5D8A /* clubTemplates.level1.json */; };
 		37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */; };
 		37913A312F452C01009B5D8A /* TemplateMinMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */; };
-		3792CBF62F9BE236007331DF /* ReadmeSectionOnFeaturesAndTips1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792CBF52F9BE236007331DF /* ReadmeSectionOnFeaturesAndTips1718.swift */; };
 		3792CC0E2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792CC0D2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift */; };
 		3792CC262F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */; };
 		37989A022F4A25D80039FABF /* clubsXamples.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37989A012F4A25D80039FABF /* clubsXamples.level1.json */; };
@@ -194,8 +193,8 @@
 
 /* Begin PBXFileReference section */
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
+		370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips.swift; sourceTree = "<group>"; };
 		371414B62F12FF460032EF21 /* PreferencesIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesIcon.swift; sourceTree = "<group>"; };
-		37145C0F2F9B9A1D00B4C203 /* ReadmeSectionOnFeaturesAndTips2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips2626.swift; sourceTree = "<group>"; };
 		37145C112F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms2626.swift; sourceTree = "<group>"; };
 		37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp2626.swift; sourceTree = "<group>"; };
 		37174DA92F8F93E100E58B6E /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
@@ -231,7 +230,6 @@
 		37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMaxMembersProvider.swift; sourceTree = "<group>"; };
 		37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMinMembersProvider.swift; sourceTree = "<group>"; };
 		37922A512F50ECAF00E596B8 /* Photo_Club_Hub_2_9_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_3.xcdatamodel; sourceTree = "<group>"; };
-		3792CBF52F9BE236007331DF /* ReadmeSectionOnFeaturesAndTips1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips1718.swift; sourceTree = "<group>"; };
 		3792CC0D2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms1718.swift; sourceTree = "<group>"; };
 		3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp1718.swift; sourceTree = "<group>"; };
 		37989A012F4A25D80039FABF /* clubsXamples.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsXamples.level1.json; sourceTree = "<group>"; };
@@ -511,7 +509,6 @@
 			isa = PBXGroup;
 			children = (
 				D05E451D27EF2A2C00D31327 /* ReadmeView1718.swift */,
-				3792CBF52F9BE236007331DF /* ReadmeSectionOnFeaturesAndTips1718.swift */,
 				3792CC0D2F9BE3E2007331DF /* ReadmeSectionOnSupportedPlatforms1718.swift */,
 				3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */,
 			);
@@ -582,7 +579,7 @@
 				37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */,
 				37415B1F2F9D3733004B4647 /* ReadmeSectionOnApp.swift */,
 				37415B212F9D5E96004B4647 /* ReadmeSectionOnConcept.swift */,
-				37145C0F2F9B9A1D00B4C203 /* ReadmeSectionOnFeaturesAndTips2626.swift */,
+				370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */,
 				37145C112F9B9E6400B4C203 /* ReadmeSectionOnSupportedPlatforms2626.swift */,
 				37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */,
 			);
@@ -1265,7 +1262,6 @@
 				376855692F2BA418002590F6 /* FEGGemertMembersProvider.swift in Sources */,
 				D0273F632DEE555C00C4F5E1 /* FetchAndProcessFile.swift in Sources */,
 				D0273F642DEE555C00C4F5E1 /* FileSelector.swift in Sources */,
-				3792CBF62F9BE236007331DF /* ReadmeSectionOnFeaturesAndTips1718.swift in Sources */,
 				D0273E6D2DEE484C00C4F5E1 /* FotoclubEricameraMembersProvider.swift in Sources */,
 				D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */,
 				D0831A38277F72590049AB84 /* Organization+ComputedProperties.swift in Sources */,
@@ -1280,7 +1276,6 @@
 				37D9840B2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift in Sources */,
 				D0839DAD2DFCDBEE004DC584 /* FotogroepDenDungenMembersProvider.swift in Sources */,
 				D08B8FCC2E04B01A00944B8E /* Expertise.swift in Sources */,
-				37145C102F9B9A1D00B4C203 /* ReadmeSectionOnFeaturesAndTips2626.swift in Sources */,
 				D08B8FCD2E04B01A00944B8E /* PhotographerExpertise.swift in Sources */,
 				37E134AF2E6F63D100C61714 /* MemberPortfolioListView2626.swift in Sources */,
 				D08B8FCE2E04B01A00944B8E /* LocalizedExpertiseResult.swift in Sources */,
@@ -1301,6 +1296,7 @@
 				3792CC262F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift in Sources */,
 				D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */,
 				D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */,
+				370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */,
 				37415B202F9D3733004B4647 /* ReadmeSectionOnApp.swift in Sources */,
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,

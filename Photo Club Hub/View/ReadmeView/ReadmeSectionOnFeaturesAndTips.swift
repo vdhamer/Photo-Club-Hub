@@ -1,5 +1,5 @@
 //
-//  ReadmeSectionOnFeaturesAndTips2626.swift
+//  ReadmeSectionOnFeaturesAndTips.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 24/04/2026.
@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-@available(iOS 26.0, *)
-struct ReadmeSectionOnFeaturesAndTips2626: View {
+struct ReadmeSectionOnFeaturesAndTips: View {
     let geo: GeometryProxy
     public init(geo: GeometryProxy) { self.geo = geo }
-    // Mino differences between the iOS 26 and 17/18 versions are handled by logic rather than having 2 file copies
+    // Minor differences between the iOS 26 and 17/18 versions are handled by logic rather than having 2 file copies
     private var iOS2626: Bool { if #available(iOS 26, *) { true } else { false } }
 
     var body: some View {
@@ -250,15 +249,14 @@ struct ReadmeSectionOnFeaturesAndTips2626: View {
     }
 }
 
-@available(iOS 26.0, *)
-struct ReadmeSectionOnFeaturesAndTips2626_Previews: PreviewProvider {
+struct ReadmeSectionOnFeaturesAndTips_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 
     static var previews: some View {
         GeometryReader { geo in
             NavigationStack {
                 ScrollView(.vertical, showsIndicators: true) {
-                    ReadmeSectionOnFeaturesAndTips2626(geo: geo)
+                    ReadmeSectionOnFeaturesAndTips(geo: geo)
                         .preferredColorScheme(.light)
                         .navigationTitle(title)
                         .previewInterfaceOrientation(.portrait)
