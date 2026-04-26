@@ -1,5 +1,5 @@
 //
-//  ReadmeSectionOnHowYouCanHelp2626.swift
+//  ReadmeSectionOnHowYouCanHelp.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 24/04/2026.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 26.0, *)
-struct ReadmeSectionOnHowYouCanHelp2626: View {
+struct ReadmeSectionOnHowYouCanHelp: View {
     let geo: GeometryProxy
     public init(geo: GeometryProxy) { self.geo = geo }
 
@@ -71,15 +70,14 @@ struct ReadmeSectionOnHowYouCanHelp2626: View {
     }
 }
 
-@available(iOS 26.0, *)
-struct ReadmeSectionOnHowYouCanHelp2626_Previews: PreviewProvider {
+struct ReadmeSectionOnHowYouCanHelp_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 
     static var previews: some View {
         GeometryReader { geo in
             NavigationStack {
                 ScrollView(.vertical, showsIndicators: true) {
-                    ReadmeSectionOnHowYouCanHelp2626(geo: geo)
+                    ReadmeSectionOnHowYouCanHelp(geo: geo)
                         .preferredColorScheme(.light)
                         .navigationTitle(title)
                         .previewInterfaceOrientation(.portrait)

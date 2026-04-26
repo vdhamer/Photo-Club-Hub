@@ -10,8 +10,8 @@
 		3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52E7381D10067CE6B /* fkGestel.level2.json */; };
 		370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */; };
 		370D38202F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */; };
+		370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */; };
 		371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371414B62F12FF460032EF21 /* PreferencesIcon.swift */; };
-		37145C562F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */; };
 		37174DAA2F8F93E100E58B6E /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37174DA92F8F93E100E58B6E /* PreferencesView.swift */; };
 		372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
 		3722DCA02F98CE9000F2851C /* MemberPortolioRow+chooseImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722DC9F2F98CE9000F2851C /* MemberPortolioRow+chooseImageURL.swift */; };
@@ -43,7 +43,6 @@
 		37913A2D2F452BB8009B5D8A /* clubTemplates.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37913A2C2F452BB8009B5D8A /* clubTemplates.level1.json */; };
 		37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */; };
 		37913A312F452C01009B5D8A /* TemplateMinMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */; };
-		3792CC262F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */; };
 		37989A022F4A25D80039FABF /* clubsXamples.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37989A012F4A25D80039FABF /* clubsXamples.level1.json */; };
 		37A57B1D2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */; };
 		37A74C032F145202003DCD06 /* museumsCN.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37A74C022F1451F6003DCD06 /* museumsCN.level1.json */; };
@@ -194,8 +193,8 @@
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips.swift; sourceTree = "<group>"; };
 		370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms.swift; sourceTree = "<group>"; };
+		370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp.swift; sourceTree = "<group>"; };
 		371414B62F12FF460032EF21 /* PreferencesIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesIcon.swift; sourceTree = "<group>"; };
-		37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp2626.swift; sourceTree = "<group>"; };
 		37174DA92F8F93E100E58B6E /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		3722DC9F2F98CE9000F2851C /* MemberPortolioRow+chooseImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortolioRow+chooseImageURL.swift"; sourceTree = "<group>"; };
@@ -229,7 +228,6 @@
 		37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMaxMembersProvider.swift; sourceTree = "<group>"; };
 		37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMinMembersProvider.swift; sourceTree = "<group>"; };
 		37922A512F50ECAF00E596B8 /* Photo_Club_Hub_2_9_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_3.xcdatamodel; sourceTree = "<group>"; };
-		3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp1718.swift; sourceTree = "<group>"; };
 		37989A012F4A25D80039FABF /* clubsXamples.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsXamples.level1.json; sourceTree = "<group>"; };
 		37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView1718.swift; sourceTree = "<group>"; };
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
@@ -507,7 +505,6 @@
 			isa = PBXGroup;
 			children = (
 				D05E451D27EF2A2C00D31327 /* ReadmeView1718.swift */,
-				3792CC252F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift */,
 			);
 			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
@@ -578,7 +575,7 @@
 				37415B212F9D5E96004B4647 /* ReadmeSectionOnConcept.swift */,
 				370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */,
 				370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */,
-				37145C552F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift */,
+				370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */,
 			);
 			path = ReadmeView;
 			sourceTree = "<group>";
@@ -1247,7 +1244,6 @@
 				37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */,
 				37B5349B2F243171000EA5BB /* FFCShot71MembersProvider.swift in Sources */,
 				D02F88532C4C242C0043B25B /* String+Date.swift in Sources */,
-				37145C562F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift in Sources */,
 				D0ACCEE22DEF9BCD0002FACC /* FotoclubBellusImagoMembersProvider.swift in Sources */,
 				D0ACCED22DEF99800002FACC /* FotogroepDeGenderMembersProvider.swift in Sources */,
 				37D984252F904DB200C30EE5 /* PreferencesViewAdvancedSection.swift in Sources */,
@@ -1290,7 +1286,6 @@
 				D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */,
 				37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */,
 				D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */,
-				3792CC262F9C1544007331DF /* ReadmeSectionOnHowYouCanHelp1718.swift in Sources */,
 				D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */,
 				D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */,
 				370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */,
@@ -1337,6 +1332,7 @@
 				376C49C72F9CF8D900E449FC /* ReadmeSectionHeader.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				3722DCA02F98CE9000F2851C /* MemberPortolioRow+chooseImageURL.swift in Sources */,
+				370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */,
 				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */,

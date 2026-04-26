@@ -31,7 +31,7 @@ struct ReadmeView1718: View {
                         ReadmeSectionOnConcept(geo: geo)
                         ReadmeSectionOnFeaturesAndTips(geo: geo)
                         ReadmeSectionOnSupportedPlatforms(geo: geo)
-                        ReadmeSectionOnHowYouCanHelp1718(geo: geo)
+                        ReadmeSectionOnHowYouCanHelp(geo: geo)
 
                         ReadmeSectionHeader(LocalizedStringResource("",
                                                               table: "PhotoClubHub.Readme",
