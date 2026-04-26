@@ -43,7 +43,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                 ReadmeCaptionedImage("Search-bar-top",
                                      imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
                                      caption: LocalizedStringResource(
-                                        "Maps can be viewed in 3D",
+                                        "The search bar is at the top of the screen (for iOS versions up to 18).",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Figure caption about Search Bar on the Readme page")
                 )

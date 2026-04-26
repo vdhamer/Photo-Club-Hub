@@ -35,19 +35,11 @@ public struct ReadmeSectionOnApp: View {
                            geo: geo
             )
 
-            Image("app_screenshots_EN")
-                .resizable()
-                .border(.gray, width: 1)
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, alignment: .center)
-            Text(LocalizedStringResource(
-                "Clubs, their Members, and their Portfolios\n",
-                table: "PhotoClubHub.Readme",
-                comment: "Caption of an image on the Readme page"
-            ))
-            .font(.callout.italic())
-            .frame(width: geo.size.width, alignment: .center)
-            Text(verbatim: "")
+            ReadmeCaptionedImage("app_screenshots_EN",
+                                 imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 600 : 250),
+                                 caption: LocalizedStringResource("Clubs, their Members, and their Portfolios",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Caption for image on Readme page"))
 
             ReadmeSection(LocalizedStringResource("§1.4",
                                                   table: "PhotoClubHub.Readme",

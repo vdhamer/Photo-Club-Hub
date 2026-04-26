@@ -26,19 +26,11 @@ struct ReadmeSectionOnHowYouCanHelp: View {
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
 
-            VStack {
-                Image("Bellus_Imago_Level_1")
-                    .resizable()
-                    .border(.gray, width: 1)
-                    .scaledToFit()
-                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                Text("Configuring Level 1 data for a Dutch photo club",
-                     tableName: "PhotoClubHub.Readme",
-                     comment: "Caption for image on Readme page")
-                .font(.callout.italic())
-                .frame(width: geo.size.width, alignment: .center)
-                Text(verbatim: "")
-            }
+            ReadmeCaptionedImage("Bellus_Imago_Level_1",
+                                 imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 500 : 250),
+                                 caption: LocalizedStringResource("Configuring Level 1 data for a Dutch photo club",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Caption for image on Readme page"))
 
             ReadmeSection(LocalizedStringResource("§5.3",
                                                   table: "PhotoClubHub.Readme",
@@ -54,18 +46,11 @@ struct ReadmeSectionOnHowYouCanHelp: View {
                           geo: geo,
                           bottomPaddingAmount: 0)
 
-            VStack {
-                Image("Swift_enum")
-                    .resizable()
-                    .border(.gray, width: 1)
-                    .scaledToFit()
-                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                Text("Fragment of the Swift source code", tableName: "PhotoClubHub.Readme",
-                     comment: "Caption for image on Readme page")
-                .font(.callout.italic())
-                .frame(width: geo.size.width, alignment: .center)
-                Text(verbatim: "")
-            }
+            ReadmeCaptionedImage("Swift_enum",
+                                 imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 500 : 250),
+                                 caption: LocalizedStringResource("Fragment of the Swift source code",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Caption for image on Readme page"))
         }
     }
 }

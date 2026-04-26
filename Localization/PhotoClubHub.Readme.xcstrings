@@ -999,8 +999,8 @@
         }
       }
     },
-    "Clubs, their Members, and their Portfolios\n" : {
-      "comment" : "Caption of an image on the Readme page",
+    "Clubs, their Members, and their Portfolios" : {
+      "comment" : "Caption for image on Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1011,7 +1011,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clubs, hun Leden en hun Foto’s"
+            "value" : "Clubs, de Leden, en hun Foto’s."
           }
         }
       }
@@ -1102,7 +1102,7 @@
       }
     },
     "Maps can be viewed in 3D" : {
-      "comment" : "Caption of 3D image on Readme page\nFigure caption about Search Bar on the Readme page",
+      "comment" : "Caption of 3D image on Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1165,24 +1165,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De zoekfunctie zit bij een iPhone vanaf iOS 26 onderaan het scherm."
-          }
-        }
-      }
-    },
-    "Search bar of _Portfolios_ screen (up to iOS 18)" : {
-      "comment" : "Caption about Search Bar on the Readme page",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The search bar is at the top of the screen (for iOS versions up to 18)."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De zoekfunctie vindt men bij iOS versies t/m 18 helemaal bovenaan het scherm."
           }
         }
       }
@@ -1268,6 +1250,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Het Instellingen scherm in de app."
+          }
+        }
+      }
+    },
+    "The search bar is at the top of the screen (for iOS versions up to 18)." : {
+      "comment" : "Figure caption about Search Bar on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The search bar is at the top of the screen (for iOS versions up to 18)."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De zoekfunctie zit bij een iPhone met iOS 17 of 18 bovenaan het scherm."
           }
         }
       }
