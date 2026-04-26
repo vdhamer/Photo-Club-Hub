@@ -8,12 +8,15 @@
 import SwiftUI
 
 @available(iOS 26.0, *)
-public struct ReadmeSectionOnFeaturesAndTips2626: View {
+struct ReadmeSectionOnFeaturesAndTips2626: View {
     let geo: GeometryProxy
     public init(geo: GeometryProxy) { self.geo = geo }
+    // Mino differences between the iOS 26 and 17/18 versions are handled by logic rather than having 2 file copies
+    private var iOS2626: Bool { if #available(iOS 26, *) { true } else { false } }
 
-    public var body: some View {
+    var body: some View {
         Group {
+
             ReadmeSectionHeader(LocalizedStringResource("Features and Tips",
                                                         table: "PhotoClubHub.Readme",
                                                         comment: "Title of one section of Readme screen"),
@@ -28,18 +31,29 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo, bottomPaddingAmount: 0)
 
-            Image("Search-bar-bottom")
-                .resizable()
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-            Text("Search bar of _Portfolios_ screen (for iOS 26 and up)",
-                 tableName: "PhotoClubHub.Readme",
-                 comment: "Caption about Search Bar on the Readme page")
-            .font(.callout.italic())
-            Text(verbatim: "")
+            if iOS2626 {
+                ReadmeCaptionedImage("Search-bar-bottom",
+                                     imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
+                                     caption: LocalizedStringResource(
+                                        "Search bar of _Portfolios_ screen (for iOS 26 and up)",
+                                        table: "PhotoClubHub.Readme",
+                                        comment: "Figure caption about Search Bar on the Readme page"
+                                     )
+                )
+            } else {
+                ReadmeCaptionedImage("Search-bar-top",
+                                     imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
+                                     caption: LocalizedStringResource(
+                                        "Maps can be viewed in 3D",
+                                        table: "PhotoClubHub.Readme",
+                                        comment: "Figure caption about Search Bar on the Readme page")
+                )
+            }
 
-            ReadmeSection(LocalizedStringResource("§3.01.c", table: "PhotoClubHub.Readme",
-                                                  comment: "Paragraph in the Readme screen"), geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.01.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
 
             ReadmeSection(LocalizedStringResource("§3.02.a",
                                                   table: "PhotoClubHub.Readme",
@@ -49,19 +63,12 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo, bottomPaddingAmount: 0)
-
-            Text(verbatim: "")
-            Image("Expertise")
-                .resizable()
-                .border(.gray, width: 1)
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-            Text("Supported (🏵) and temporary (🪲) expertise tags",
-                 tableName: "PhotoClubHub.Readme",
-                 comment: "Caption about Expertise on the Readme page")
-            .font(.callout.italic())
-            .frame(width: geo.size.width * 0.8, alignment: .center)
-            Text(verbatim: "")
+            ReadmeCaptionedImage("Expertise",
+                                 imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
+                                 caption: LocalizedStringResource("Supported (🏵) and temporary (🪲) expertise tags",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment:
+                                                                   "Figure caption about Expertise on the Readme page"))
 
             ReadmeSection(LocalizedStringResource("§3.02.c",
                                                   table: "PhotoClubHub.Readme",
@@ -76,18 +83,12 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
-
-            Image("Localizations") // belongs to Section 3.1
-                .resizable()
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, alignment: .center)
-            Text("Part of the internal translation table",
-                 tableName: "PhotoClubHub.Readme",
-                 comment: "Caption of Localizations image on Readme page")
-            .font(.callout.italic())
-            .frame(width: geo.size.width, alignment: .center)
-            Text(verbatim: "")
-            Text(verbatim: "")
+            ReadmeCaptionedImage("Localizations",
+                                 imageSize: CGSize(width: geo.size.width * 0.95, height: UIDevice.isIPad ? 250 : 100),
+                                 caption: LocalizedStringResource("Part of the internal translation table",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment:
+                                                                       "Caption of Localizations image on Readme page"))
 
             ReadmeSection(LocalizedStringResource("§3.04.a",
                                                   table: "PhotoClubHub.Readme",
@@ -97,17 +98,11 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
-
-            Image("3D_map") // belongs to Section 3.2
-                .resizable()
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, alignment: .center)
-                .border(.gray, width: 1)
-            Text("Maps can be viewed in 3D", tableName: "PhotoClubHub.Readme",
-                 comment: "Caption of 3D image on Readme page")
-            .font(.callout.italic())
-            .frame(width: geo.size.width, alignment: .center)
-            Text(verbatim: "")
+            ReadmeCaptionedImage("3D_map",
+                                 imageSize: CGSize(width: geo.size.width * 0.8, height: UIDevice.isIPad ? 450 : 200),
+                                 caption: LocalizedStringResource("Maps can be viewed in 3D",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Caption of 3D image on Readme page"))
 
             ReadmeSection(LocalizedStringResource("§3.05.a",
                                                   table: "PhotoClubHub.Readme",
@@ -156,17 +151,11 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
-
-            Image("Maps") // belongs to Section 3.5
-                .resizable()
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, alignment: .center)
-                .border(.gray, width: 1)
-            Text("Amsterdam has two photography museums.", tableName: "PhotoClubHub.Readme",
-                 comment: "Caption of Museums image on Readme page")
-            .font(.callout.italic())
-            .frame(width: geo.size.width, alignment: .center)
-            Text(verbatim: "")
+            ReadmeCaptionedImage("Maps",
+                                 imageSize: CGSize(width: geo.size.width * 0.95, height: UIDevice.isIPad ? 400 : 200),
+                                 caption: LocalizedStringResource("Amsterdam has two photography museums.",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Example of a link to a club web site"))
 
             ReadmeSection(LocalizedStringResource("§3.08.a",
                                                   table: "PhotoClubHub.Readme",
@@ -185,18 +174,11 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
-
-            Image("Website")
-                .resizable()
-                .scaledToFit()
-                .border(.gray, width: 1)
-                .frame(width: geo.size.width * 0.6, alignment: .center)
-            Text("Example of a link to a club web site",
-                 tableName: "PhotoClubHub.Readme",
-                 comment: "Caption of Websites image on Readme page")
-            .font(.callout.italic())
-            .frame(width: geo.size.width, alignment: .center)
-            Text(verbatim: "")
+            ReadmeCaptionedImage("Website",
+                                 imageSize: CGSize(width: geo.size.width * 0.7, height: UIDevice.isIPad ? 300 : 250),
+                                 caption: LocalizedStringResource("Example of a link to a club web site",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Example of a link to a club web site"))
 
             ReadmeSection(LocalizedStringResource("§3.10.a",
                                                   table: "PhotoClubHub.Readme",
@@ -218,16 +200,11 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
-
-            Image("2021_FotogroepWaalre_058")
-                .resizable()
-                .frame(width: 250, height: 375, alignment: .center)
-                .scaledToFill()
-                .border(.gray, width: 1)
-                .frame(width: geo.size.width, alignment: .center)
-            Text(verbatim: "© Greetje van Son\n")
-                .font(.callout.italic())
-                .frame(width: geo.size.width, alignment: .center)
+            ReadmeCaptionedImage("2021_FotogroepWaalre_058",
+                                 imageSize: CGSize(width: 250, height: 375),
+                                 caption: LocalizedStringResource("© Greetje van Son",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Caption of an image on the Readme page"))
 
             ReadmeSection(LocalizedStringResource("§3.11.a",
                                                   table: "PhotoClubHub.Readme",
@@ -241,16 +218,11 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
-
-            Image("Preferences")
-                .resizable()
-                .border(.gray, width: 1)
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
-            Text("The Preferences screen.", tableName: "PhotoClubHub.Readme",
-                 comment: "Caption of an image on the Readme page")
-            .font(.callout.italic())
-            .frame(width: geo.size.width * 0.8, alignment: .center)
+            ReadmeCaptionedImage("Preferences",
+                                 imageSize: CGSize(width: geo.size.width * 0.8, height: 400),
+                                 caption: LocalizedStringResource("The Preferences screen.",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Caption of an image on the Readme page"))
             Text(verbatim: "")
 
             ReadmeSection(LocalizedStringResource("§3.12.a",
@@ -266,15 +238,12 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
 
-            Image("Play-button")
-                .resizable()
-                .border(.gray, width: 1)
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
-            Text("Buttons for the automatic slide show", tableName: "PhotoClubHub.Readme",
-                 comment: "Caption about Play button on the Readme page")
-            .font(.callout.italic())
-            .frame(width: geo.size.width * 0.8, alignment: .center)
+            ReadmeCaptionedImage("Play-button",
+                                 imageSize: CGSize(width: geo.size.width * 0.8, height: 300),
+                                 caption: LocalizedStringResource("Buttons for the automatic slide show",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment:
+                                                                        "Caption about Play button on the Readme page"))
             Text(verbatim: "")
 
         }

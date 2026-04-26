@@ -30,6 +30,7 @@ MEMBERS SCREEN
 README SCREEN
 
 * Added a close button at top of the screen (for consistency with Preferences).
+* Various small fixes (especially for iOS 17/18, updated Preferences screenshot).
 
 CODE MAINTENANCE
 

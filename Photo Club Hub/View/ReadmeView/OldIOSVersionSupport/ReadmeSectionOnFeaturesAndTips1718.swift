@@ -10,6 +10,11 @@ import SwiftUI
 struct ReadmeSectionOnFeaturesAndTips1718: View {
     let geo: GeometryProxy
     public init(geo: GeometryProxy) { self.geo = geo }
+    // Minor differences between the iOS 26 and 17/18 versions are handled by logic rather than having 2 file copies
+    private var iOS2626: Bool {
+        if #available(iOS 26, *) { true } else { false
+        }
+    }
 
     var body: some View {
         Group {
@@ -28,7 +33,7 @@ struct ReadmeSectionOnFeaturesAndTips1718: View {
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo, bottomPaddingAmount: 0)
 
-            Image("Search-bar-top")
+            Image(iOS2626 ? "Search-bar-bottom" : "Search-bar-top")
                 .resizable()
                 .scaledToFit()
                 .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
@@ -59,7 +64,8 @@ struct ReadmeSectionOnFeaturesAndTips1718: View {
                 .border(.gray, width: 1)
                 .scaledToFit()
                 .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-            Text("Supported (🏵) and temporary (🪲) expertise tags", tableName: "PhotoClubHub.Readme",
+            Text("Supported (🏵) and temporary (🪲) expertise tags",
+                 tableName: "PhotoClubHub.Readme",
                  comment: "Caption about Expertise on the Readme page")
             .font(.callout.italic())
             .frame(width: geo.size.width * 0.8, alignment: .center)
@@ -83,7 +89,8 @@ struct ReadmeSectionOnFeaturesAndTips1718: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: geo.size.width * 0.8, alignment: .center)
-            Text("Part of the internal translation table", tableName: "PhotoClubHub.Readme",
+            Text("Part of the internal translation table",
+                 tableName: "PhotoClubHub.Readme",
                  comment: "Caption of Localizations image on Readme page")
             .font(.callout.italic())
             .frame(width: geo.size.width, alignment: .center)
@@ -226,7 +233,7 @@ struct ReadmeSectionOnFeaturesAndTips1718: View {
                 .scaledToFill()
                 .border(.gray, width: 1)
                 .frame(width: geo.size.width, alignment: .center)
-            Text(verbatim: "© 2021 Greetje van Son\n")
+            Text(verbatim: "© Greetje van Son\n")
                 .font(.callout.italic())
                 .frame(width: geo.size.width, alignment: .center)
 

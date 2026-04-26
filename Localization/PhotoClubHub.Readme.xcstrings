@@ -948,8 +948,25 @@
         }
       }
     },
+    "© Greetje van Son" : {
+      "comment" : "Caption of an image on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© Greetje van Son"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© Greetje van Son"
+          }
+        }
+      }
+    },
     "Amsterdam has two photography museums." : {
-      "comment" : "Caption of Museums image on Readme page",
+      "comment" : "Caption of Museums image on Readme page\nExample of a link to a club web site",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1017,7 +1034,7 @@
       }
     },
     "Example of a link to a club web site" : {
-      "comment" : "Caption of Websites image on Readme page",
+      "comment" : "Caption of Websites image on Readme page\nExample of a link to a club web site",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1085,7 +1102,7 @@
       }
     },
     "Maps can be viewed in 3D" : {
-      "comment" : "Caption of 3D image on Readme page",
+      "comment" : "Caption of 3D image on Readme page\nFigure caption about Search Bar on the Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1136,7 +1153,7 @@
       }
     },
     "Search bar of _Portfolios_ screen (for iOS 26 and up)" : {
-      "comment" : "Caption about Search Bar on the Readme page",
+      "comment" : "Figure caption about Search Bar on the Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1170,7 +1187,7 @@
       }
     },
     "Supported (🏵) and temporary (🪲) expertise tags" : {
-      "comment" : "Caption about Expertise on the Readme page",
+      "comment" : "Caption about Expertise on the Readme page\nFigure caption about Expertise on the Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1249,7 +1266,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het Instellingen scherm in de app zelf."
+            "value" : "Het Instellingen scherm in de app."
           }
         }
       }

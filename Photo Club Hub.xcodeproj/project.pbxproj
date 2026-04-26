@@ -63,6 +63,7 @@
 		37C61B8F2E72091000C5BAEF /* FotokringSintMichielsgestel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */; };
 		37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */; };
 		37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */; };
+		37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */; };
 		37D984092F90406200C30EE5 /* PreferencesViewMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D984082F90406200C30EE5 /* PreferencesViewMembersSection.swift */; };
 		37D9840B2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9840A2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift */; };
 		37D984232F904B8B00C30EE5 /* PreferencesViewPhotographersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D984222F904B8B00C30EE5 /* PreferencesViewPhotographersSection.swift */; };
@@ -253,6 +254,7 @@
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
+		37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeCaptionedImage.swift; sourceTree = "<group>"; };
 		37D984082F90406200C30EE5 /* PreferencesViewMembersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewMembersSection.swift; sourceTree = "<group>"; };
 		37D9840A2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewOrganizationsSection.swift; sourceTree = "<group>"; };
 		37D984222F904B8B00C30EE5 /* PreferencesViewPhotographersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewPhotographersSection.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */,
 				37415B072F9D2DA3004B4647 /* ReadmeSection.swift */,
 				376C49C62F9CF8D900E449FC /* ReadmeSectionHeader.swift */,
+				37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */,
 				37415B1F2F9D3733004B4647 /* ReadmeSectionOnApp.swift */,
 				37415B212F9D5E96004B4647 /* ReadmeSectionOnConcept.swift */,
 				37145C0F2F9B9A1D00B4C203 /* ReadmeSectionOnFeaturesAndTips2626.swift */,
@@ -1247,6 +1250,7 @@
 				37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */,
 				D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift in Sources */,
+				37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */,
 				37B5349B2F243171000EA5BB /* FFCShot71MembersProvider.swift in Sources */,
 				D02F88532C4C242C0043B25B /* String+Date.swift in Sources */,
 				37145C562F9BA35900B4C203 /* ReadmeSectionOnHowYouCanHelp2626.swift in Sources */,
