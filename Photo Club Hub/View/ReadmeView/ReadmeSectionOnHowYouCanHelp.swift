@@ -55,6 +55,7 @@ struct ReadmeSectionOnHowYouCanHelp: View {
     }
 }
 
+// believe it or not, the following Preview does work
 struct ReadmeSectionOnHowYouCanHelp_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 

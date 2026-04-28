@@ -49,3 +49,24 @@ struct ReadmeSectionHeader: View {
         .padding(Edge.Set([.horizontal]), ReadmeSectionHeader.paddingConstant)
     }
 }
+
+// believe it or not, the following Preview does work
+#Preview {
+    GeometryReader { geo in
+        NavigationStack {
+            ScrollView(.vertical, showsIndicators: true) {
+                Divider()
+                ReadmeSectionHeader(
+
+                    LocalizedStringResource("Features and Tips",
+                                            table: "PhotoClubHub.Readme",
+                                            comment: "Title of one section of Readme screen"),
+                    geo: geo
+                )
+                Divider()
+            }
+            .navigationTitle("Readme/Header Preview")
+        }
+    }
+    .preferredColorScheme(.light)
+}

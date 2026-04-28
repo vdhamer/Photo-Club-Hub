@@ -14,7 +14,7 @@
       "shouldTranslate" : false
     },
     "§1.1" : {
-      "comment" : "The App section paragraph 1.1",
+      "comment" : "Preview sample from The App section\nThe App section paragraph 1.1",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -25,13 +25,13 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De _Fotoclub Hub_ app toont geselecteerde foto’s van leden van fotoclubs. De foto's zijn op een consistente wijze te bekijken. De app is ondermeer te gebruiken als een permanente online expositie."
+            "value" : "De _Fotoclub Hub_ app toont geselecteerde foto’s van leden van fotoclubs. De foto's zijn op een consistente wijze te bekijken."
           }
         }
       }
     },
     "§1.2" : {
-      "comment" : "The App section paragraph 1.2",
+      "comment" : "Preview sample from The App section\nThe App section paragraph 1.2",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -42,7 +42,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet op te zoeken of de foto’s binnen de website te vinden."
+            "value" : " De app is ondermeer te gebruiken als een permanente, centrale, online expositie. Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de websites van clubs niet op te zoeken of de foto’s binnen die websites te zoeken."
           }
         }
       }
@@ -76,7 +76,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het woord _Hub_ (middelpunt, trefpunt) in de naam van de app benadrukt dat het _meerdere_ fotoclubs ondersteunt en verbindt. Het ondersteunen van tientallen of zelfs honderden clubs vereist dat de clubs _zelf_ hun gegevens beheren. Het gaat hier om het bijhouden van ledenlijsten en lijsten met portfolio foto’s. Hier is geen specifieke softwarekennis voor vereist."
+            "value" : "Het woord _Hub_ (middelpunt, trefpunt) in de naam van de app benadrukt dat het fotoclubs ondersteunt en verbindt. Het ondersteunen van tientallen of zelfs honderden clubs vereist dat de clubs _zelf_ hun gegevens beheren. Het gaat hier om het bijhouden van ledenlijsten en lijsten met portfolio foto’s. Hiervoor is geen specifieke softwarekennis nodig."
           }
         }
       }
@@ -127,7 +127,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fotoclubs en hun leden spelen een dominante rol in deze app. Het centrale _Portfolio’s_ scherm bevat een lijst met _clubs_."
+            "value" : "Fotoclubs en hun leden spelen een dominante rol in deze app."
           }
         }
       }
@@ -144,7 +144,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clubs bevatten een lijst met _portfolio's_ van hun leden. En ieder portfolio toont (via links) de geselecteerde _foto’s_ in dat portfolio."
+            "value" : "Het centrale _Leden_ scherm toont een lijst met _clubs_. Clubs hebben doorgaans tientallen _leden_. En ieder lid heeft een (optionele) link naar diens _portfolio_: een zorgvuldig geselecteerde verzameling _foto’s_."
           }
         }
       }
@@ -161,7 +161,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Een Portfolio vertegenwoordigt dus het werk van één fotograaf voor zover dat hoort bij één club. Een fotograaf die lid is (of was) van meer dan één fotoclub kan _meerdere_ portfolio's in de app hebben. Bijvoorbeeld één portfolio horend bij de huidige club en ander portfolio gerelateerd aan een vorige club."
+            "value" : "Een portfolio vertegenwoordigt dus het werk van één fotograaf voor zover dat hoort bij één club. Een fotograaf die lid is (of was) van meer dan één fotoclub kan daardoor _meerdere_ portfolio's in de app hebben. Bijvoorbeeld één portfolio horend bij de ene club en ander portfolio horend bij een andere club."
           }
         }
       }
@@ -229,7 +229,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Op het _Portfolio's_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied gebied zoeken. Op het _Orgnisaties_ scherm kan men op de clubnaam en op gemeente zoeken."
+            "value" : "In het _Portfolio's_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied gebied zoeken. In het _Clubs_ en _Musea_ scherm kan men op de clubnaam of op gemeente zoeken."
           }
         }
       }
@@ -246,7 +246,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De plek en zichtbaarheid van het zoekveld hangt af van de schermgrootte van het apparaat en de versie van iOS."
+            "value" : "De locatie van het zoekveld hangt af van de schermgrootte van het apparaat en de versie van iOS."
           }
         }
       }
@@ -280,7 +280,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fotografen kunnen één of twee specialisaties vermelden waar ze om bekend staan. Voorbeeld: portretfotografie, zwart-wit fotografie. Meer details hierover [via deze link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
+            "value" : "Fotografen kunnen één of twee specialisaties vermelden waar ze om bekend staan. Voorbeeld: portretfotografie en zwart-wit fotografie. Meer details hierover [via deze link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
           }
         }
       }
@@ -297,7 +297,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er is een centrale lijst met ondersteunde expertise tags. Door op het Portfolio scherm te zoeken naar “Portret” of “por” kan je fotografen vinden die in portretfotografie gespecialiseerd zijn."
+            "value" : "Er is een centrale lijst met ondersteunde expertise tags. Door op het Portfolio scherm te zoeken naar “Portret” of bijvoorbeeld “por” kan je fotografen vinden die in portretfotografie gespecialiseerd zijn."
           }
         }
       }
@@ -365,7 +365,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wanneer men ver genoeg inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat het slotje bij de kaart open is. Probeer het zelf maar uit midden in New York met zijn wolkenkrabbers."
+            "value" : "Wanneer men ver genoeg inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Inzoomen vereist dat het slotje bij de kaart open is. Probeer het zelf maar uit midden in Manhattan (New York) met zijn vele wolkenkrabbers."
           }
         }
       }
@@ -376,13 +376,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Live location__"
+            "value" : "__Photographer portraits__"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Locatieweergave__"
+            "value" : "__Smoelenboek__"
           }
         }
       }
@@ -393,13 +393,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Maps can display your current location as a purple dot when it falls within the map’s range. This can help you navigate to a club or to estimate distances. If the map is unlocked (interactive), an arrow button lets you re-center the map around your current location."
+            "value" : "The image next to a photographer’s name on the Members screen and the Photographers screen can be toggled between two different images, if both are provided. One is what the photographer looks like (“photographerImage”); the other is what the photographer’s work looks like (“featuredImage”). You can set a preference in the Preferences screen. It is really a “preference” in the sense that the app will try to show the image you chose, but will switch to the alternative if the preferred image is not available."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De landkaarten kunnen de huidige locatie van de gebruiker als paarse stip weergeven als deze binnen het bereik van de kaart valt. Indien het slotje open is, verschijnt er een pijlvormige knop waarmee men de kaart kan verplaatsen naar de huidige locatie."
+            "value" : "Op het Leden scherm (en straks ook het Fotografen scherm) kan je instellen of je het gezicht van de fotograaf wilt zien. Ander zie je een foto gemaakt door de fotograaf. Een gebruiker kan een voorkeur hiervoor aangeven onder Instellingen. Indien gezicht (“photographerImage”) de voorkeur is, wordt het gezicht getoond indien een dergelijke foto beschikbaar is. Anders toont de app een foto gemaakt door de fotograaf (“featuredImage”)."
           }
         }
       }
@@ -410,13 +410,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share your location with anyone or anything."
+            "value" : "When the feature is fully implemented, you can also toggle an individual image by tapping on it. This allows you to switch back and forth quickly."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Locatieweergave vereist dat de gebruiker desgevraagd _toestemming_ geeft aan de app om locatiegegevens van iOS te ontvangen. Locatie informatie wordt niet door de app opgeslagen of doorgegeven: het dient hier alleen om de paarse stip te tonen."
+            "value" : "Je kunt (straks) ook schakelen tussen beide soorten plaatjes door het plaatje aan te raken. Dan schakelt het plaatje om - mits er 2 plaatjes beschikbaar zijn."
           }
         }
       }
@@ -1011,7 +1011,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clubs, de Leden, en hun Foto’s."
+            "value" : "Clubs, Leden, en Foto’s."
           }
         }
       }
@@ -1284,6 +1284,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "U draait app versie %@ (build %@)"
+          }
+        }
+      }
+    },
+    "You can set a preference for thumbnails" : {
+      "comment" : "Image caption on Readme page",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instelbare voorkeur voor plaatjes per fotograaf"
           }
         }
       }

@@ -32,3 +32,28 @@ struct ReadmeCaptionedImage: View {
         }
     }
 }
+
+// believe it or not, the following Preview does work
+// Preview for ReadmeCaptionedImage
+#Preview("ReadmeCaptionedImage", traits: .portrait) {
+    Group {
+        Divider()
+        ReadmeCaptionedImage(
+            "Maps",
+            imageSize: CGSize(width: 260, height: 180),
+            caption: LocalizedStringResource("Maps can be viewed in 3D.",
+                                             table: "PhotoClubHub.Readme",
+                                             comment: "Caption under example image in Features and Tips section")
+        )
+        ReadmeCaptionedImage(
+            "Preferences",
+            imageSize: CGSize(width: 260, height: 180),
+            caption: LocalizedStringResource("This is the second caption.",
+                                             table: "PhotoClubHub.Readme",
+                                             comment: "Another caption example in Features and Tips section")
+        )
+        Divider()
+    }
+    .padding()
+    .preferredColorScheme(.light)
+}

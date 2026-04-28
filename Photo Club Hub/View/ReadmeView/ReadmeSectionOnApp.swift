@@ -60,6 +60,7 @@ public struct ReadmeSectionOnApp: View {
     }
 }
 
+// believe it or not, the following Preview does work
 struct ReadmeSectionOnApp2626_Previews: PreviewProvider {
     @State static private var title = "Readme/App Preview"
 

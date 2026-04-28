@@ -111,6 +111,11 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
+            ReadmeCaptionedImage("photographerimage",
+                                 imageSize: CGSize(width: geo.size.width * 0.95, height: 75),
+                                 caption: LocalizedStringResource("You can set a preference for thumbnails",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment: "Image caption on Readme page"))
             ReadmeSection(LocalizedStringResource("§3.05.c",
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
@@ -249,6 +254,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
     }
 }
 
+// believe it or not, the following Preview does work
 struct ReadmeSectionOnFeaturesAndTips_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 
