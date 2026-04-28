@@ -21,11 +21,13 @@ PREFERENCES SCREEN
 
 * User can switch between seeing FeaturedImage and PhotographerImage as thumbnails for club members.
 * New titlebar on Preferences screen with options to discard changes and revert to factory defaults.
+* Fixed bug (in b4658, not provided via App Store): Thumbnail toggle state for Photographers was incorrect.
 
 MEMBERS SCREEN
 
 * Thumbnails can show a portrait of the photographer (instead of a featured image) if available. See PREFERENCES.
-* Fixed title of screen on iOS 17 and iOS 18.
+* Fixed bug: title of screen on iOS 17 and iOS 18.
+* Fixed bug: club officers ("bestuurslid", "other") didn't have a proper icon
 
 README SCREEN
 

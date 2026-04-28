@@ -14,7 +14,8 @@ struct RoleStatusIconView: View {
         .chairman: Image("chairman"),
         .secretary: Image(systemName: "square.text.square"),
         .treasurer: Image(systemName: "eurosign.square"),
-        .viceChairman: Image("vice-chairman")
+        .viceChairman: Image("vice-chairman"),
+        .other: Image(systemName: "tag.square")
     ]
 
     private let memberStatusToImage: [MemberStatus: Image] = [ // dictionary
@@ -55,6 +56,7 @@ struct RoleStatusIconView: View {
         if memberRolesAndStatus.roles[.treasurer] == true { return .treasurer}
         if memberRolesAndStatus.roles[.secretary] == true { return .secretary}
         if memberRolesAndStatus.roles[.admin] == true { return .admin}
+        if memberRolesAndStatus.roles[.other] == true { return .other}
         return nil // member may not have any official managerial Role
     }
 
@@ -75,6 +77,7 @@ struct RoleStatusIconView: View {
     }
 }
 
+// Believe it or not, the following (fancy) Preview actually works
 struct RoleStatusIconView_Previews: PreviewProvider {
     static let layout: [GridItem] = [GridItem(.adaptive(minimum: 200, maximum: .infinity))]
 

@@ -15,21 +15,7 @@ struct PreferencesViewPhotographersSection: View {
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Preferences, section title"),
                 content: {
-            HStack {
-                Image(systemName: "photo.artframe")
-                    .foregroundStyle(.gray, .photographerColor, .red)
-                Picker(String(localized: "ThumbnailPhotographers",
-                              table: "PhotoClubHub.SwiftUI",
-                              comment: "Picker to display featuredImage or photographerImage"),
-                       selection: $localPreferences.preferenceForFeaturedImage) {
-                    Text(String(localized: "photographerImage",
-                                table: "PhotoClubHub.SwiftUI",
-                                comment: "Label of picker item")).tag(true)
-                    Text(String(localized: "featuredImage",
-                                table: "PhotoClubHub.SwiftUI",
-                                comment: "Label of picker item")).tag(false)
-                }
-            }
+            PreferencesViewThumbnail(localPreferences: $localPreferences)
         })
    }
 }
@@ -46,6 +32,7 @@ private struct PreferencesViewPhotSectionPreviewHost: View {
     }
 }
 
+// Believe it or not, the following Preview actually works
 #Preview {
         PreferencesViewPhotSectionPreviewHost()
 }
