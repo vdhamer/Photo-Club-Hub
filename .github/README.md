@@ -75,6 +75,9 @@
                      <li>OrganizationType</li>
                      <li>Language</li>
                      <li>LocalizedRemark</li>
+                     <li>Expertise</li>
+                     <li>LocalizedExpertise</li>
+                     <li>PhotographerExpertise</li>
                </ul>
                <li><a href="#how-data-is-loaded">How Data is Loaded</a></li>
                <ul>
