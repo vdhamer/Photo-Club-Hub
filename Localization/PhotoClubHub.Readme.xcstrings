@@ -795,6 +795,57 @@
         }
       }
     },
+    "§3.13.a" : {
+      "comment" : "Title of a section of the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maps and clubs within the __Fotobond__"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benadrukken van Fotobond clubs"
+          }
+        }
+      }
+    },
+    "§3.13.b" : {
+      "comment" : "Paragraph in the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Many of the clubs in the Netherlands are federated under the umbrella of a national [Fotobond](www.fotobond.nl) organization for amateur photography. By default all clubs are shown in the same color. In the __Preferences__ screen you can choose to highlight Fotobond or non-Fotobond clubs using a selectable color."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Een groot deel van de fotoclubs in Nederland zijn aangesloten bij de overkoepelende [Fotobond](www.fotobond.nl) organisatie. Die clubs kunnen met een apart kleurtje weergeven worden op de landkaarten in de app. Deze optie staat standaard uit, en kan aangezet worden onder __Instellingen__."
+          }
+        }
+      }
+    },
+    "§3.13.c" : {
+      "comment" : "Paragraph in the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This feature won’t be of interest for clubs outside the Netherlands."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Het is ook mogelijk om juist niet-Fotobond clubs op de landkaarten te benadrukken. De kleur voor het benadrukken van clubs is overigens instelbaar onder __Instellingen__."
+          }
+        }
+      }
+    },
     "§4.1" : {
       "comment" : "Paragraph in the Readme screen",
       "localizations" : {
@@ -1084,6 +1135,17 @@
         }
       }
     },
+    "Highlighted clubs are part of the Fotobond" : {
+      "comment" : "Caption about Fotobond clubs on Readme page",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De oranje clubs zijn aangesloten bij de Fotobond."
+          }
+        }
+      }
+    },
     "How you can help" : {
       "comment" : "Title of one section of Readme screen",
       "localizations" : {
@@ -1291,6 +1353,12 @@
     "You can set a preference for thumbnails" : {
       "comment" : "Image caption on Readme page",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can set a preference for thumbnails"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",

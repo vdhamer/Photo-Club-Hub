@@ -250,6 +250,27 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                                                                         "Caption about Play button on the Readme page"))
             Text(verbatim: "")
 
+            ReadmeSection(LocalizedStringResource("§3.13.a",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of a section of the Readme screen"),
+                          geo: geo)
+            ReadmeSection(LocalizedStringResource("§3.13.b",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeCaptionedImage("FotobondNL",
+                                 imageSize: CGSize(width: geo.size.width * 0.8, height: UIDevice.isIPad ? 500 : 400),
+                                 caption: LocalizedStringResource("Highlighted clubs are part of the Fotobond",
+                                                                  table: "PhotoClubHub.Readme",
+                                                                  comment:
+                                                                        "Caption about Fotobond clubs on Readme page"))
+            ReadmeSection(LocalizedStringResource("§3.13.c",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+
+            Text(verbatim: "")
+
         }
     }
 }
