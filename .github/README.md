@@ -826,18 +826,30 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 - **Optional** fields (that are ignored)
     - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
 - **Optional** fields (that are used)
-    - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding `root.level1.json` fields if needed. This allows a club to _correct_ the centrally-provided information with club-provided information. Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
+    - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding `root.level1.json` fields if needed.
+      This allows a club to _correct_ the centrally-provided information with club-provided information.
+      Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
     - `maintainerEmail` is who to contact who to reach out to if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
     - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _Photographers_ screen.
         - An omitted "infixName" is interpreted as "infixName" = "".
     - the `level3URL` field allows the app to find the Level 3 information with the selected images for this member.</p>
-    - the `roles` field indicates whether a member fullfills a role as a club officer (e.g. chairman). If a given `role` is not mentioned, a default value of `false` is assumed. Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
-    - the `status` entries indicate a member's status in the club. If a given `status` is not mentioned, a default value of `false` is assumed. Many `members` have an empty or even absent `status` section. Some `members` may have multiple special statuses (e.g., `former` and `honorary`).
-    - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible. The user interface will state `former member` where applicable. By default (see Preferences) former members are shown. When shown, users see "Former member of <clubname>". The user interface can generate text for more complex cases like "Former honorary member of <clubname>".
-    - `isDeceased` is a special variant of `isFormerMember`. If deceased members are not removed from the level2.json list, this allows the user interface to indicate this. By default (see Preferences) former and deceased members are not shown. When shown, users see "Deceased, former member of <club>" and the text is shown in a different color.
+    - the `roles` field indicates whether a member fullfills a role as a club officer (e.g. chairman).
+      If a given `role` is not mentioned, a default value of `false` is assumed.
+      Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
+    - the `status` entries indicate a member's status in the club. If a given `status` is not mentioned, a default value of `false` is assumed.
+      Many `members` have an empty or even absent `status` section. Some `members` may have multiple special statuses (e.g., `former` and `honorary`).
+    - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible.
+      The user interface will state `former member` where applicable. 
+      By default (see Preferences) former members are shown. When shown, users see "Former member of <clubname>".
+      The user interface can generate text for more complex cases like "Former honorary member of <clubname>".
+    - `isDeceased` is a special variant of `isFormerMember`.
+      If deceased members are not removed from the level2.json list, this allows the user interface to indicate this.
+      By default (see Preferences) former and deceased members are not shown.
+      When shown, users see "Deceased former member of <club>" and the text is shown in a different color.
     - `isHonaryMember` can be used if the person is no longer an active member, but is still treated as a member (e.g., after retiring) because of past achievements. Most clubs won't need this feature.
-    - `isMentor` is for coaches who coach or previously (`isFormerMember` to `true`) coached the club. They can have a Portfolio (e.g. with pictures of them or pictures of their own work).
+    - `isMentor` is for coaches who coach or previously (`isFormerMember` to `true`) coached the club.
+      They can have a Portfolio (e.g. with pictures of them or pictures of their own work).
     - `isProspectiveMember` is a possible future member who is currently participating in some of the club activities, but isn't formally a member yet. Most clubs won't need this feature.
     - `birthday` can be the full date of birth but currently only the month and date are shown in the user interface. So you can provide a dummy year (like `9999`) if that is preferred.
     - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
