@@ -1166,14 +1166,14 @@ The `Language` table is a small utility table to support multiple languages used
 It's properties hold the ISO 2- or 3-letter code of the language and a readable name.</p>
 
 The set of languages used in the app's **data** can differ from the set of languages supported by the app's user interface **code**:
-Localization of code is enabled at build-time using mechanisms provided in Xcode.
-Localization of database strings is handled at run-time using mechanisms defined in the app's code.</p>
+Localization of text inside code is enabled using build-time mechanisms provided in the Xcode development environment.
+Localization of database strings is handled at run-time using mechanisms defined in the app's own code.</p>
 
 So by storing translations in the database, the set of supported `Languages` used in the data is open-ended.
-For example, a museum in Portugal may have a descriptive remark in both English and Portuguese, 
+For example, a museum in Portugal may have a associated remark in English and Portuguese, 
 even when the app's user interface currently has no support for Portuguese.
 This allows the app to display Portuguese text for the local museum whenever the user set Portuguese as the preferred language
-while the app's user interface will be displayed in English.</p>
+while the app's user interface will default to English because the user interface doesn't include Portuguese translations.</p>
 
 Currently there are two features in the app that display Strings from the database and thus require localization support:
 1. max one `localizedRemark` attached to an `organization` (club, museum) and
