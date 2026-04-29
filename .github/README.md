@@ -1198,12 +1198,14 @@ The actual text shown in the user interface is provided in the `LocalizedRemark`
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `Expertise` table holds predefined strings that can used as tags for `Photographers`. Examples: `black and white`, `landscape`, `portrait`.
+The `Expertise` table holds predefined tags that can be attached to `Photographers` to indicate areas of expertise.
+Examples: `black and white`, `landscape`, `portrait`.
 Like Xcode's string catalogs, the item has a string identifier which can then be translated for every supported `Language`.</p>
-
-At the moment, it hasn't been decided yet how the content of the `Keyboard` table is submitted.
-This is related to error checking of the `PhotographerExpertise` table (see description there).
-The data can come from an extra section in the `root.level1.json` file or a new `level0.json` file containing reference data.<p>
+Supported `expertise` tags and their representation in Dutch and English are stored in the `root.level0.json` file.
+These "supporteed expertises" are meant for general use. If an unknown expertise shows up in a Level 2 file,
+it is shown in the user interface, but considered a "temporary expertise". It might be a typing error.
+But it can also be a valid (or less valid) proposal to add a new "supported expertise".
+<p>
 </details></ul>
 
 #### LocalizedExpertise
