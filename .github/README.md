@@ -1177,7 +1177,7 @@ while the app's user interface will default to English because the user interfac
 
 Currently there are two features in the app that display Strings from the database and thus require localization support:
 1. max one `localizedRemark` attached to an `organization` (club, museum) and
-2. multiple `localizedExpertise`s attached (indirectly via `Expertise`) to a `photographer`.</p>#### LocalizedRemark
+2. multiple `localizedExpertise`s attached (indirectly via `Expertise`) to a `photographer`.</p>
 </details></ul>
 
 #### LocalizedRemark
