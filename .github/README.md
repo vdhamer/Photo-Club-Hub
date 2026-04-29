@@ -1163,7 +1163,7 @@ And it can be used to extract statistics about how many `Organizations` of each 
 <ul><details><summary>Details (click to expand)</summary></p>
 
 The `Language` table is a small utility table to support multiple languages used in the app's data.
-It's properties hold the ISO 2 or 3-letter code of the language and a readable name.</p>
+It's properties hold the ISO 2- or 3-letter code of the language and a readable name.</p>
 
 The set of languages used in the app's **data** can differ from the set of languages supported by the app's user interface **code**:
 Localization of code is enabled at build-time using mechanisms provided in Xcode.
