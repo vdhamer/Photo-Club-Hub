@@ -1153,9 +1153,9 @@ modelled using once concept (aka table) instead of two. We named that `MemberPor
 <ul><details><summary>Details (click to expand)</summary></p>
 
 This is a tiny table used to hold the supported types of `Organization` records.
-It could be used someday to drive a picker in a data editing tool.
+It could be used to drive a value picker in a data entry tool.
 For now, it ensures that each `Organization` belongs to exactly one of the supported `OrganizationTypes`.
-And it could be used to generate statistics about how many `Organizations` of each `OrganizationType` are supported.
+And it can be used to extract statistics about how many `Organizations` of each `OrganizationType` are supported.
 </details></ul>
 
 #### Language
