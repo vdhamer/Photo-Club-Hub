@@ -795,7 +795,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 },
                 "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
-                "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
+                "photographerImage": "https://www.fcDeGender.nl/wp-content/uploads/Peter-van-den-Hamer.png",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
                 "membershipStartDate": "2024-01-01",
@@ -841,7 +841,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `isProspectiveMember` is a possible future member who is currently participating in some of the club activities, but isn't formally a member yet. Most clubs won't need this feature.
     - `birthday` can be the full date of birth but currently only the month and date are shown in the user interface. So you can provide a dummy year (like `9999`) if that is preferred.
     - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
-    - `photographerImage` is a depiction of the photographer. A special mode may be added whereby this photo or avatar of the photographer is shown instead of the featured image made by the photographer.
+    - `photographerImage` is a depiction of the photographer. The app displays either this photo of the photographer or a featured image made by the photographer, depending on the current Preferences.
     - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Photographers` screen.
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
     - `membershipStartDate` is the date when the member joined the club.
@@ -861,17 +861,17 @@ But it also signals a temporary tag (e.g., using "Scenery" or "Desert" instead o
  
 > Note that the `birthday`, `website`, `isDeceased`, `photographerImage`, and `expertises` fields are technically special
 > because they describe the photographer - and not the photographer in the context of a particular club membership.
-> Usually this doesn't matter, but it can show up if the photographer is associated with **multiple** clubs,
-> each with its own level2.json file (for example, a former photo club and the current photo club).
-> Conceivably these multiple files may not agree on the value of `birthday`, `website` or `isDeceased`.
-> The app currently will use the last answer it encountered.
+> Usually this distinction isn't important, but it becomes visible for photographers who are associated with **multiple** clubs:
+> each club has its own level2.json file (for example, a former photo club and the current photo club).
+> Conceivably these multiple files may not agree on the value of `birthday`, `website`, `isDeceased`, or `photographerImage`.
+> The app currently will use one of the two answers (the last encountered value overwrites earlier values).
 > This problem should occur infrequently, but a workaround is to only fill in these fields in one of the level2.json files.
 > In the future, we could add rules to determine what to do if there are multiple
-> different values for these fields (e.g. membership trumps former membership).
-> If multiple clubs supply `expertises` for the same photographer, the lists are automatically merged for use by the app.
+> different values for these fields (e.g. a current club trumps a former club).
+> If multiple clubs supply `expertises` for the same photographer, the app automatically merges both lists.
 > The respective `Level 2` data files are left as is.
 > Example: John is a member of Club A (expertises K1 and K2) and Club B (expertises K2 and K3) and Club C (no expertises provided).
-> Result: all three clubs show expertises K1, K2 and K3.
+> Result: all three clubs show expertises K1, K2 and K3 because these supposedly describe John.
 
 </details></ul>
 
