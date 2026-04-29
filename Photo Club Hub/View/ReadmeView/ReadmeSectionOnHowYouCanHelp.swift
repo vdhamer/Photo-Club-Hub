@@ -26,7 +26,7 @@ struct ReadmeSectionOnHowYouCanHelp: View {
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
 
-            ReadmeCaptionedImage("Bellus_Imago_Level_1",
+            ReadmeCaptionedImage("TemplateMax_Level_1",
                                  imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 500 : 250),
                                  caption: LocalizedStringResource("Configuring Level 1 data for a Dutch photo club",
                                                                   table: "PhotoClubHub.Readme",

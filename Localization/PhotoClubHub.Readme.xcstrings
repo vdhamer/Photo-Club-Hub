@@ -823,7 +823,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Een groot deel van de fotoclubs in Nederland zijn aangesloten bij de overkoepelende [Fotobond](www.fotobond.nl) organisatie. Die clubs kunnen met een apart kleurtje weergeven worden op de landkaarten in de app. Deze optie staat standaard uit, en kan aangezet worden onder __Instellingen__."
           }
         }
@@ -840,7 +840,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Het is ook mogelijk om juist niet-Fotobond clubs op de landkaarten te benadrukken. De kleur voor het benadrukken van clubs is overigens instelbaar onder __Instellingen__."
           }
         }
@@ -920,13 +920,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The app needs information in order to cover your local photo club(s). This involves three so-called __Levels__. A club can stay at any level for a while before proceeding to a next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details."
+            "value" : "The app needs information in order to cover your local photo club(s). This involves three so-called _Levels_. A club can stay at any level for a while before proceeding to a next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om zelf een __fotoclub toe te voegen__ zijn bepaalde gegevens nodig. Dit gaat in __3 Niveaus__ die men kan zien als etages in een trappenhuis: een club kan een tijd op een Niveau verblijven om pas later naar het volgende, hogere Niveau te gaan. Op GitHub staat een uitgebreide engelstalige [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) met details hierover."
+            "value" : "Om zelf een fotoclub toe te voegen zijn bepaalde gegevens nodig. Het gaat om drie _Niveaus_ die men kan zien als etages verbonden door roltrappen: een club kan een tijd op een bepaald Niveau verblijven om pas later naar het volgende, hogere Niveau te gaan. Op GitHub staat een uitgebreide engelstalige [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) over de 3 niveaus."
           }
         }
       }
@@ -943,7 +943,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Niveau 1__ informatie bevat de naam en locatie van de club. Zodra Niveau 1 gegevens beschikbaar zijn, wordt de club zichtbaar in de clublijst op het _Organisaties_ scherm. Verder wordt de club hier letterlijk “op de kaart gezet”. _Fotoclub de Soos_ (Grave) is een voorbeeld van een club op Niveau 1. Wij kunnen deze gegevens voor een club handmatig aan de centrale clublijst toevoegen als U ons die gegevens stuurt. Wij zien echter liever dat een club (of misschien een _Fotobond_ regio) deze gegevens via een [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=2) aanbiedt. GitHub is weliswaar voor fotografen een geheel onbekende wereld, maar dit zorgt dat clubs hun gegevensinvoer en gegevensonderhoud in eigen hand houden. Dit verkleint de kans op vertraging of vergissingen."
+            "value" : "__Niveau 1__ informatie bevat de naam en locatie van de club. Zodra Niveau 1 gegevens beschikbaar zijn, wordt de club al zichtbaar in de clublijst op het _Organisaties/Clubs/Musea_ scherm. Hier wordt de club letterlijk “op de kaart gezet”. _Fotoclub de Soos_ (Grave) is een voorbeeld van een club op Niveau 1. Wij kunnen deze gegevens voor een club handmatig aan een centrale clublijst toevoegen als men ons die gegevens stuurt. Wij zien echter nog liever dat een club (of misschien een _Fotobond_ afdeling) op termijn deze gegevens via een [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=2) aanbiedt. GitHub is weliswaar voor fotografen een onbekende wereld, maar dit zorgt dat clubs hun gegevensinvoer en gegevensonderhoud in eigen hand houden. Dat verkleint de kans op kwijtraken of vergissingen."
           }
         }
       }
@@ -960,7 +960,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Niveau 2__ bestaat uit de __ledenlijst__ in de vorm van een JSON tekstbestand. Het bestand kan op een willekeurige locatie online gezet worden. De app haalt het bestand op via een webadres. Wij zullen documenteren hoe men de ledenlijst kan aanbieden via een _Wordpress_ club website. _Fotoclub den Dungen_ is een voorbeeld van een club op Niveau 2: de naam en locatie zijn bekend (Niveau 1), het _Portfolio’s_ scherm laat alle clubleden zien (Niveau 2), maar er zijn nog geen online portfolio’s via de app beschikbaar (Niveau 3)."
+            "value" : "__Niveau 2__ bestaat uit een lijst met leden in de vorm van een JSON tekstbestand. De app haalt het bestand op via een webadres. De huidige voorkeur is om het bestand te stallen op Github ([instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md)). _Fotoclub den Dungen_ is een voorbeeld van een club op Niveau 2: de naam en locatie zijn bekend (Niveau 1), het _Leden_ scherm laat alle clubleden zien (Niveau 2), maar er zijn nog geen online portfolio’s via de app beschikbaar (Niveau 3)."
           }
         }
       }
@@ -977,7 +977,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Niveau 3__ bestaat uit de eigenlijke ledenportfolio’s. Een goed voorbeeld is _Fotogroep de Gender_: de portfolio’s van leden en recente ex-leden zijn via het _Portfolio’s_ scherm te bereiken. Omdat een club met tientallen leden vaak honderden foto’s wil tonen, is het genereren van online portfolio's via een _Lightroom_ plug-in geautomatiseerd. Gedetailleerde instructies hiervoor staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md)."
+            "value" : "__Niveau 3__ bestaat uit de eigenlijke portfolio’s met foto’s. Een goed voorbeeld is _Fotogroep de Gender_: de portfolio’s van leden en recente ex-leden zijn via het _Leden_ of _Fotografen_ scherm te bereiken. Omdat een club met tientallen leden vaak honderden foto’s wil tonen, is het genereren van online portfolio's via een _Lightroom_ plug-in geautomatiseerd. Gedetailleerde instructies hiervoor staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md)."
           }
         }
       }
@@ -994,7 +994,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naast het toevoegen van clubs, kunnen wij allerlei andere hulp goed gebruiken. Voorbeelden van __niet-technische__ hulp zijn: het testen van de app, schrijven van FAQs en instructies, en nieuwe ideeën. De app is _open source_ (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)) om dergelijke hulp bij de __softwareontwikkeling__ mogelijk te maken. Voorbeelden van technische hulp zijn: app uitbreidingen, bugs oplossen, technisch meedenken, of zelfs aanvullende programma’s (b.v. voor gegevensinvoer)."
+            "value" : "Naast het toevoegen van clubs, kunnen wij overigens andere hulp ook goed gebruiken. Voorbeelden van _niet-technische_ hulp zijn: het testen van de app, schrijven van FAQs en instructies, en nieuwe ideeën. De app is _open source_ (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)) om dergelijke hulp bij de _softwareontwikkeling_ mogelijk te maken. Voorbeelden van technische hulp zijn: app uitbreidingen, bugs oplossen, technisch meedenken, of zelfs aanvullende programma’s (b.v. voor gegevensinvoer)."
           }
         }
       }
@@ -1070,16 +1070,10 @@
     "Configuring Level 1 data for a Dutch photo club" : {
       "comment" : "Caption for image on Readme page",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configuring Level 1 data for a Dutch photo club"
-          }
-        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Template voor het toevoegen van een fotoclub"
+            "value" : "Invoeren van club informatie vereist vervangen van de rode teksten en gele getallen in een voorbeeldbestand."
           }
         }
       }
