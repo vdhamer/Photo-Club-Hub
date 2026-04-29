@@ -1083,8 +1083,8 @@ Note that the tables are fully "normalized" in the relational database sense.
 This means that redundancy in the stored data is minimized by using references instead of using copies of the values.</p>
 
 Optional properties in the database with names like `Organization.town_` have a corresponding computed
-property named `Organization.town` that always has a useable value. This allows `Organization.town` to always return
-a value such as "Unknown town" (for display purposes) instead of `nil` (the representation in the database).
+property named `Organization.town` that always has a non-nil value. This allows `Organization.town` to always hold
+a value such as "Unknown town" (e.g. for display purposes) instead of `nil` (the representation in the database).
 
 #### Organization
 
