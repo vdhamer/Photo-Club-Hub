@@ -1131,7 +1131,7 @@ struct/record.
 
 Every `PhotoClub` has (zero or more) `Members` who can have various roles (`isChairman`, `isAdmin`, ...)
 representing the tasks they perform in the photo club. A `Member` may have multiple roles within one
-`PhotoClub` (e.g., members is both `isSecretary` and `isAdmin`).</p>
+`PhotoClub` (e.g., someone is both `isSecretary` and `isAdmin`).</p>
 
 Members also have a status, the implicit default being `isCurrent` membership.
 Explicit status values include `isFormer`, `isAspiring`, `isHonorary` and `isMentor`.</p>
