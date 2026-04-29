@@ -1219,25 +1219,13 @@ The `LocalizedExpertise` table holds the strings representing `Expertises` in an
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `PhotographerExpertise` table links a supported `Expertise` to a `Photographer`.
+The `PhotographerExpertise` table links an `Expertise` to a `Photographer`.
 It is thus a many-to-many relationship without any additional attributes.</p>
 
-Note that `Expertise`s per `Photographer` are provided per Club (`Level2.json`) but are stored at the `Photographer` level.
+Note that `Expertises` per `Photographer` are provided per Club (`Level2.json` input files) but are stored at the `Photographer` level.
 Example: John is or was a member of both ClubA and ClubB.
-This means there are two independent `Level2.json` files providing information about John which can hold different sets of `Expertise`s.
+This means there are two independent `Level2.json` files providing information about John. Each file can hold different sets of `Expertises`.
 The app will store the union of both sets in the `PhotographerExpertise` table.</p>
-
-Do we allow a `Level2.json` file to define new expertises for the `Expertise` table rather than just allow the 
-file to link `Photographers` to pre-existing `Expertise`s? To prevent polution of the `Expertise` and `PhotographerExpertise` tables, 
-we decided to only accept expertises that already exist in the `Expertise` table.
-This means a typo in an expertise identifier in the `Level2.json` file (e.g. "landscape" vs "landscapes") means the entry is ignored.
-It also means that a deliberately new expertise encountered in the `Level2.json` file is ignored, until it gets added to the `Keyboard` table.</p>
-
-While being deliberately restrictive, this is quite powerful: a club may list a new expertise (`PhotographerExpertise`) to a `Photographer`.
-It will be in the `Level2.json` file, but won't get loaded by the app. The club can then lobby to get this expertise accepted. When accepted
-and added to the `Expertise` table, the ignored entry will immediately be used.
-Actually it might be nice to someday have a feature (same app? separate app?) that simultaneously detects typos ("landscap")
-in Level 1 expertise references and suggests extensions to the `Expertise` list ("astrophotography").
 </details></ul>
 </details></ul>
     
