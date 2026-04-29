@@ -1092,10 +1092,14 @@ a value such as "Unknown town" (e.g. for display purposes) instead of `nil` (the
 
 `Organization` supports both photo clubs and photo museums. Almost all properties apply to both.
 The relationship to `OrganizationType` is used to distinguish between clubs and museums.
-This approach could allow the app to add photography `festivals`, for example, in the future.</p>
+This approach could, for example, allow the app to support photography `festivals`, if ever wanted.</p>
 
 An Organization s uniquely identified by its `name` *and* its `town`.
-Its `town` string is part of the identification ("uniqueness constraint" in an rDBMS) to distinguish photo clubs in different towns that happen to have the same name.</p>
+Its `town` string is part of the identification ("uniqueness constraint" in database-speak) to distinguish 
+photo clubs that happen to have the exact same name, but are located in different towns. The `name/town` pair should
+be unique enough - although it fails if there is a club in Paris Texas that happens to have a photography club 
+that exactly matches a club in Paris France. The workaround is to extend one of the two names to avoid both being
+treated as one big club containing rodeo fans and fine dining fans.</p>
 
 An `Organization` has a rough address (`town`) and `latitude_` and `longitude_` (together `coordinates`).
 The coordinates are not considered optional, but they _could_ be missing in the JSON data. You will find the stray map pin in the ocean off Africa ([at coordinates (0,0)](https://en.wikipedia.org/wiki/Null_Island)).</p>
