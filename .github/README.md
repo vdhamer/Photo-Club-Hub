@@ -1142,9 +1142,8 @@ An `Image` can show up in multiple `Portfolios` if the `Photographer` presented 
 multiple `PhotoClubs`.</p>
 
 `Member` and `Portfolio` can be considered *synonyms* from a modeling perspective:
-we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` became a `Member` of.
-And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it still contains zero images - 
-because this is needed to store information about this membership.
+we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` joined.
+And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it still contains zero images.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
 </details></ul>
