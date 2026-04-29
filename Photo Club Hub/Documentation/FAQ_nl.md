@@ -657,7 +657,7 @@ Jazeker:
 | Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | - | ✓ |
 | Interne readme in Photo Club Hub app | ingebouwd in app | ✓ | ✓ |
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://tinyurl.com/fchPPTnl) | ✓ | komt |
-| Bestandsbeheer rechstreeks in Github | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md) | ✓ | komt |
+| Bestandsbeheer rechtstreeks in Github | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md) | ✓ | komt |
 | Featured Image pipeline (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | - | ✓ |
 </details></p>
 
