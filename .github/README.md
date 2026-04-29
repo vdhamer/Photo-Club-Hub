@@ -1094,22 +1094,24 @@ a value such as "Unknown town" (e.g. for display purposes) instead of `nil` (the
 The relationship to `OrganizationType` is used to distinguish between clubs and museums.
 This approach could, for example, allow the app to support photography `festivals`, if needed someday.</p>
 
-An Organization s uniquely identified by its `name` *and* its `town`.
-Its `town` string is part of the identification ("uniqueness constraint" in database-speak) to distinguish 
-photo clubs that happen to have the exact same name, but are located in different towns. The `name/town` pair should
-be unique enough - although it fails if there is a club in Paris Texas that happens to have a photography club 
-that exactly matches a club in Paris France. The workaround is to extend one of the two names to avoid both being
-treated as one big club containing rodeo fans and fine dining fans.</p>
+Each Organization is uniquely identified by its `name` and its `town`.
+Its `town` string is included in the identification ("uniqueness constraint") to distinguish 
+photo clubs that happen to have the exact same name, but are located in another town. Such examples exist in the Netherlands: 
+one club may not have been aware of the existence of the other club. The `name/town` solution should
+be unique enough - although it can hypothetically fail if there is a club in Paris Texas that happens to have an identical club name
+as a club in Paris France. This would call for a simple workaround (extend one name) to avoid treating both as a single club.</p>
 
-An `Organization` has a rough address (`town`) and `latitude_` and `longitude_` (together `coordinates`).
-The coordinates are not considered optional, but they _could_ be missing in the JSON data. You will find the stray map pin in the ocean off Africa ([at coordinates (0,0)](https://en.wikipedia.org/wiki/Null_Island)).</p>
+An `Organization` has a rough address (`town`) and `coordinates` (`latitude_` plus `longitude_`).
+The `coordinates` are not considered optional, but they _could_ be omitted in the JSON data.
+You will find that stray map pin in the ocean off Africa ([at coordinates (0,0)](https://en.wikipedia.org/wiki/Null_Island)).</p>
 
-The coordinates for a club indicate where the club meets or holds expositions (we don't distinguish, they tend to be identical or near each other).
-The coordinates are used to position markers on the maps. 
+The `coordinates` are used to position marker pins on the maps. 
+The pins indicate where the club meets or holds expositions (we don't distinguish, they are often the same or nearby).
 The coordinates are also used to translate `town` names to `localizedTown_` and `localizedCountry_`.
-This works by asking an online mapping service to convert the `coordinates` into a textual address (using the device settings).
-So if your device is set to English, you might see "The Hague" and "London", while the Dutch would see "Den Haag" and "Londen".
-In fact, if your device is set to any language supported by the device (say Japanese) and you are looking at a Japanese location, Town and Country will be shown in Japanese.
+This works by asking an online mapping service to convert the `coordinates` into a textual address (using the device's language settings).
+So if your device is set to English, you might see "The Hague" and "London", while a Dutch user might see "Den Haag" and "Londen" instead.
+In fact, if your device is set to any language supported by the device (say Japanese or Chinese) 
+and you are looking at a Japanese or Chinese organization, these will be shown localized to the device's language setting.
 
 </details></ul>
 
