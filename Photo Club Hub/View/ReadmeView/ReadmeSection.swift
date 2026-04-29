@@ -30,3 +30,35 @@ struct ReadmeSection: View {
             .fixedSize() // magic to get Text to wrap
     }
 }
+
+// believe it or not, the following Preview does work
+struct ReadmeSection_Previews: PreviewProvider {
+    @State static private var title = "ReadmeSection Preview"
+
+    static var previews: some View {
+        GeometryReader { geo in
+            NavigationStack {
+                ScrollView(.vertical, showsIndicators: true) {
+                    Divider()
+                    ReadmeSection(
+                        LocalizedStringResource("§1.1",
+                                                table: "PhotoClubHub.Readme",
+                                                comment: "Preview sample from The App section"),
+                        geo: geo
+                    )
+                    ReadmeSection(
+                        LocalizedStringResource("§1.2",
+                                                table: "PhotoClubHub.Readme",
+                                                comment: "Preview sample from The App section"),
+                        geo: geo,
+                        bottomPaddingAmount: 0
+                    )
+                    Divider()
+                }
+                .navigationTitle(title)
+                .preferredColorScheme(.light)
+                .previewInterfaceOrientation(.portrait)
+            }
+        }
+    }
+}

@@ -1407,59 +1407,6 @@
         }
       }
     },
-    "ThumbnailPhotographers" : {
-      "comment" : "Picker to display featuredImage or photographerImage",
-      "localizations" : {
-        "en" : {
-          "variations" : {
-            "device" : {
-              "ipad" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Thumbnails filled using field"
-                }
-              },
-              "iphone" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Thumbnails"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Thumbnails"
-                }
-              }
-            }
-          }
-        },
-        "nl" : {
-          "variations" : {
-            "device" : {
-              "ipad" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Thumbnails tonen"
-                }
-              },
-              "iphone" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Thumbnail"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Thumbnail"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." : {
       "comment" : "Hint to the user if the database returns zero Members with Search filter in use.",
       "localizations" : {

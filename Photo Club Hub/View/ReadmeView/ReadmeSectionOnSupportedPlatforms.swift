@@ -37,6 +37,7 @@ struct ReadmeSectionOnSupportedPlatforms: View {
     }
 }
 
+// believe it or not, the following Preview does work
 struct ReadmeSectionOnSupportedPlatforms_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 

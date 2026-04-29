@@ -24,11 +24,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Deze clubbeschrijving kan overschreven worden door een remark veld in club.level2.json"
+                        "value": "Deze clubbeschrijving kan overruled worden in bestand TemplateMax.level2.json"
                     },
                     {
                         "language": "EN",
-                        "value": "A remark here about the club can be overruled by a remark in club's level2.json file."
+                        "value": "A remark here about the club can be overruled by a remark in TemplateMax.level2.json"
                     }
                 ],
                 "maintainerEmail": "admin@TemplateMax.nl",

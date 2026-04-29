@@ -36,7 +36,7 @@ public struct ReadmeSectionOnApp: View {
             )
 
             ReadmeCaptionedImage("app_screenshots_EN",
-                                 imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 600 : 250),
+                                 imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 500 : 250),
                                  caption: LocalizedStringResource("Clubs, their Members, and their Portfolios",
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment: "Caption for image on Readme page"))
@@ -60,6 +60,7 @@ public struct ReadmeSectionOnApp: View {
     }
 }
 
+// believe it or not, the following Preview does work
 struct ReadmeSectionOnApp2626_Previews: PreviewProvider {
     @State static private var title = "Readme/App Preview"
 

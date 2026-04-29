@@ -64,7 +64,7 @@ public struct ReadmeSectionOnConcept: View {
     }
 }
 
-@available(iOS 26.0, *)
+// believe it or not, the following Preview does work
 struct ReadmeSectionOnConcept_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 

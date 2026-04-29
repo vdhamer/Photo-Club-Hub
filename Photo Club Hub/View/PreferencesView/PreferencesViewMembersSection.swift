@@ -94,25 +94,12 @@ struct PreferencesViewMembersSection: View {
                               comment: "Label of toggle in Preferences"),
                        isOn: $localPreferences.showExternalCoaches)
             }
-            HStack {
-                Image(systemName: "photo.artframe")
-                    .foregroundStyle(.gray, .memberPortfolioColor, .red)
-                Picker(String(localized: "ThumbnailMembers",
-                              table: "PhotoClubHub.SwiftUI",
-                              comment: "Picker to display featuredImage or photographerImage"),
-                       selection: $localPreferences.preferenceForFeaturedImage) {
-                    Text(String(localized: "featuredImage",
-                                table: "PhotoClubHub.SwiftUI",
-                                comment: "Label of picker item")).tag(true)
-                    Text(String(localized: "photographerImage",
-                                table: "PhotoClubHub.SwiftUI",
-                                comment: "Label of picker item")).tag(false)
-                }
-            }
+            PreferencesViewThumbnail(localPreferences: $localPreferences)
         }) // end of section
     } // end of body
 }
 
+// Believe it or not, the following Preview actually works
 private struct PreferencesViewMembersSectionPreviewHost: View {
     @StateObject var model = PreferencesViewModel()
 

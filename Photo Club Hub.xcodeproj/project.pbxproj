@@ -74,6 +74,7 @@
 		37E134B22E6F693E00C61714 /* OrganizationListView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */; };
 		37E134B32E6F693E00C61714 /* FilteredOrganizationView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */; };
 		37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B42E6F709500C61714 /* PreferencesView1718.swift */; };
+		37EEEB9D2FA0B3A3001463BA /* PreferencesViewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEEB9C2FA0B3A3001463BA /* PreferencesViewThumbnail.swift */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
@@ -264,6 +265,7 @@
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
 		37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitHub_bestandsbeheer_NL.md; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
+		37EEEB9C2FA0B3A3001463BA /* PreferencesViewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewThumbnail.swift; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2626.swift; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 				37D9840A2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift */,
 				37D984222F904B8B00C30EE5 /* PreferencesViewPhotographersSection.swift */,
 				37D984242F904DB200C30EE5 /* PreferencesViewAdvancedSection.swift */,
+				37EEEB9C2FA0B3A3001463BA /* PreferencesViewThumbnail.swift */,
 			);
 			path = PreferencesView;
 			sourceTree = "<group>";
@@ -1280,6 +1283,7 @@
 				D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */,
 				370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */,
 				37415B202F9D3733004B4647 /* ReadmeSectionOnApp.swift in Sources */,
+				37EEEB9D2FA0B3A3001463BA /* PreferencesViewThumbnail.swift in Sources */,
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
 				D016DF992DF6D1850018B526 /* LocalizedExpertiseResultLists.swift in Sources */,

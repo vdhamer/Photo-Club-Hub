@@ -67,6 +67,7 @@ struct ReadmeView: View {
 
 // MARK: - Preview
 
+// Believe it or not, the following Preview actually works
 struct ReadmeView_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 

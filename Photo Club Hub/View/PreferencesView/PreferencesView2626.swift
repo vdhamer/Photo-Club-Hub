@@ -26,7 +26,7 @@ struct PreferencesView2626: View {
 
 }
 
-// believe it or not, the following Preview does work
+// Believe it or not, the following Preview actually works
 @available(iOS 26.0, *)
 struct PreferencesView2626_Previews: PreviewProvider {
     @State static private var title = "PreferencesView Preview"
