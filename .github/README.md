@@ -1199,7 +1199,7 @@ The actual text shown in the user interface is provided in the `LocalizedRemark`
 <ul><details><summary>Details (click to expand)</summary></p>
 
 The `Expertise` table holds predefined strings that can used as tags for `Photographers`. Examples: `black and white`, `landscape`, `portrait`.
-Like Xcodes string catalogs, the item has a string identifier which can then be translated for every supported `Language`.</p>
+Like Xcode's string catalogs, the item has a string identifier which can then be translated for every supported `Language`.</p>
 
 At the moment, it hasn't been decided yet how the content of the `Keyboard` table is submitted.
 This is related to error checking of the `PhotographerExpertise` table (see description there).
