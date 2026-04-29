@@ -1092,7 +1092,7 @@ a value such as "Unknown town" (e.g. for display purposes) instead of `nil` (the
 
 `Organization` supports both photo clubs and photo museums. Almost all properties apply to both.
 The relationship to `OrganizationType` is used to distinguish between clubs and museums.
-This approach could, for example, allow the app to support photography `festivals`, if ever wanted.</p>
+This approach could, for example, allow the app to support photography `festivals`, if needed someday.</p>
 
 An Organization s uniquely identified by its `name` *and* its `town`.
 Its `town` string is part of the identification ("uniqueness constraint" in database-speak) to distinguish 
