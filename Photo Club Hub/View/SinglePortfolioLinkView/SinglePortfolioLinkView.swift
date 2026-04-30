@@ -34,7 +34,7 @@ struct SinglePortfolioLinkView<Content: View>: View {
     }
 }
 
-#Preview { // doesn't really work
+#Preview { // doesn't really work? but does show something
     let persistenceController = PersistenceController.shared // for Core Data
     let viewContext = persistenceController.container.viewContext
 
