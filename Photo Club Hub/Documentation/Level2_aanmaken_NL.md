@@ -5,7 +5,7 @@ Het resulterende bestand wordt straks automatisch ingelezen door de [Photo Club 
 en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps.
 Om dit automatisch inlezen mogelijk te maken zijn er stricte eisen ten aanzien het bestandsformaat ("Level 2" JSON).
 Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md) hoe bestanden aan te bieden via GitHub.
-En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe te voegen.
+En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen.
 
 > 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand met enkele testleden kost pakweg 1 uur. \
 > Die eenmalige investering is nodig om aan de aanpak te wennen en te ontdekken hoe met de vereiste software om te gaan. \
