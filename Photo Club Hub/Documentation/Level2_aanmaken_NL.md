@@ -69,7 +69,7 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te v
       Die namen worden namelijk gebruikt om te bepalen of twee personen in verschillende bestanden (clubs) wel of niet dezelfde persoon zijn.
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Jan de Vries voer je in als `"givenName": "Jan", "infixName": "de", "familyName": "Vries"`.
-        - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"`. Maar het kan ook `"givenName": "Max", "familyName": "Verstappen"`.
+        - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"`. Maar het kan ook als `"givenName": "Max", "familyName": "Verstappen"`.
     </br>
     
     > Tip: De lijst met leden hoeft niet in een keer compleet te zijn:
