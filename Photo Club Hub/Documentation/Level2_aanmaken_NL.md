@@ -17,7 +17,7 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te v
 
 2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) of [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand met een passende bestandsnaam:
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
-     Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand bij voorkeur `fgScheveningen.level2.json` moeten heten:
+     Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou het bestand bij voorkeur `fgScheveningen.level2.json` moeten heten:
      Scheveningen is essentieel voor de herkenbaarheid, en Fotogroep en Fotoclub korten we hier af tot tot een voorvoegsel "fg" en "fc" omdat ze vaak voorkomen.
    - Onderstaande tabel bevat, voor enkele clubs in Brabant Oost, deze `nickName` plus enkele andere velden die het invullen vergemakkelijken.
      Dan hoef je die velden niet zelf op te zoeken (in lijsten zoals [deze](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)).
