@@ -713,8 +713,8 @@
 				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D029C4D02C54096200ABA977 /* Organization */,
 				D0F5EE852C54ED750028C9A6 /* Photographer */,
-				D0447C862BA510AF00982A1E /* Language.swift */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
+				D0447C862BA510AF00982A1E /* Language.swift */,
 				D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */,
 			);
 			path = ViewModel;
