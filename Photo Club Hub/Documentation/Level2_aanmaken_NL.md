@@ -40,14 +40,14 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
 
    > Tip: Hoe kies je tussen het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) of [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand?
-   > Het Min bestand toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
-   > Het is wel erg minimaal, dus je zult vervolgens enkele optionele velden willen toevoegen.
-   > Het Max bestand bevat voorbeelden van alle momenteel beschikbare optionele velden.
-   > Het is wel erg maximaal, dus je zult vervolgens enkele velden die je nog niet wilt of kunt invullen willen weglaten.
-   > Suggestie: start met een kopie van Min. En haal alle extra velden die je wilt toevoegen van Max.
-   > Wees hierbij voorzichting, want de kans bestaat dat je net een comma of haakje teveel meeneemt.
+   > Het Min voorbeeldbestand toont hoe het eruit ziet als alle weglaatbare velden ontbreken.
+   > Het werkt, maar is wel erg minimaal, dus je zult vervolgens enkele opties willen toevoegen.
+   > Het Max voorbeeldbestand bevat juist alle beschikbare optionele velden.
+   > Het is wel erg maximaal, dus je zult vervolgens enkele velden die je nog niet wilt of kunt invullen willen verwijderen.
+   > Suggestie: start met een kopie van Min. En haal alle extra velden die je wilt toevoegen over vanuit Max.
+   > Wees hierbij voorzichting, want de kans is groot dat je net een comma of haakje teveel meeneemt.
    > Het JSON formaat is daar (in tegenstelling tot HTML) heel kieskeurig over.
-   > Gelukkig zijn foutjes straks snel opgespoord omdat JSON bestanden automatisch gecontrolleerd kunnen worden. Hier komen we op terug.
+   > Gelukkig zijn foutjes straks snel opgespoord omdat JSON bestanden automatisch gecontrolleerd kunnen worden. Hier komen we zo op terug.
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     > Tip: gebruik voor het aanpassen van het bestand [JSON Editor Online](https://jsoneditoronline.org).
@@ -56,62 +56,63 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe
     > NotePad controlleert de JSON conventiies niet. NotePad++ of Sublime Text wel (mits de bestandsnaam op .json eindigt).
 
     - Neem, indien beschikbaar, de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
-      velden uit de bovenstaande tabel over. Die gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) en Drenthe Vechtdal (afdeling 03) te vinden in
-      [clubsNL16.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json) en
+      uit de bovenstaande tabel over. De gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) en Drenthe Vechtdal (afdeling 03) te vinden in
+      [clubsNL16.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json) respectievelijk
       [clubsNL03.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL03.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
     > bekijken en aanpassen. Dan kan je dubbelklikken op cellen die je wilt aanpassen,
-    > en regels toevoegen of verwijderen via het een menu ("__⋮__").
+    > en regels toevoegen of verwijderen via een menu (te vinden als "__⋮__").
   
-    - De spelling van de namen van clubleden let nauw.
+    - De spelling van de namen van clubleden is belangrijk.
       Die namen worden namelijk gebruikt om te bepalen of twee personen in verschillende bestanden (clubs) wel of niet dezelfde persoon zijn.
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Jan de Vries voer je in als `"givenName": "Jan", "infixName": "de", "familyName": "Vries"`.
-        - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"`. Als alternatief mag ook `"givenName": "Max", "familyName": "Verstappen"`.
+        - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"`. Maar het kan ook `"givenName": "Max", "familyName": "Verstappen"`.
     </br>
     
     > Tip: De lijst met leden hoeft niet in een keer compleet te zijn:
     > je kan dus eerst enkele leden toevoegen om de kijken of alles lukt.
-    > En de lijst vervolgens completer maken in een 2e versie. En b.v. eventuele moeilijke namen
-    > (b.v. na ruggespraak met ons) in een 3e versie.
+    > En de lijst vervolgens completer maken in een volgende versie.
 
     - Het `featuredImage` veld mag later aangepast worden.
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
-      Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een gestileerde "?" getoond.
+      Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een gestileerde "?" door de app getoond.
+    - Het `photographerImage` veld kan later ingevuld worden.
+      Het bevat het webadres (URL) van een foto met het gezicht van de fotograaf.
     </br>
     
     > Tip: Speciale lettertekens in namen (en elders) zijn toegestaan.
-    > Bijvoorbeeld "Juriën" of "Saša". 
+    > Bijvoorbeeld "Juriën" of "Saša". Je kunt ze bijvoorbeeld m.b.v. Google ergens vinden en vervolgens inkopiëeren.
  
 5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
-      Het controleert namelijk voortdurend of de tekst voldoet aan de JSON regels en sommige fouten worden zelfs helemaal voorkomen.
-    - Controle van de inhoud van het bestand kan ook door de inhoud te kopiëren naar [www.jsonlint.com](https://www.jsonlint.com).
+      Het controleert namelijk voortdurend of de tekst voldoet aan de JSON basisregels en sommige fouten worden zelfs helemaal voorkomen.
+    - Controle van de inhoud van een bestaand bestand kan ook door de text te kopiëren naar [JSON Editor Online](https://jsoneditoronline.org).
       Dit controleert de diverse JSON basisregels, en benoemt de eventuele fouten met het regelnummer waar de fout gevonden is.
-        - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) zal blijken of er meer fouten zijn.
-        - Het JSON formaat let nogal nauw ten aanzien van komma's en openen en sluiten van haakjes en aanhalingstekens. Vandaar dat we hier begonnen met een voorbeeldbestand.
+        - JSON Editor Online wijst je op de eerste fout. Na correctie blijkt meteen of er meer fouten zijn.
+        - Het JSON formaat let nogal nauw ten aanzien van komma's en openen en sluiten van haakjes en aanhalingstekens. Vandaar dat we hier uitgaan van een kloppend voorbeeldbestand.
         - Daarentegen is JSON totaal _niet_ kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
-          Inspringen van de tekst is heel nuttig voor menselijke lezers, maar de software analyseert de
+          Inspringen van de tekst is wel heel handig voor menselijke lezers, maar de software analyseert de
           inhoud volledig aan de hand van de genoemde leestekens.
     </br>
     
-    > Tip: het is handig om de leden in alfabetische volgorde van voornaam of achternaam te zetten:
-    > dan valt het makkelijke op als een lid dubbel op de lijst staat.
+    > Tip: het is handig om de leden op alfabetische volgorde (voornaam of achternaam) te zetten:
+    > dan valt het makkelijke op als een lid dubbel op de lijst staat of juist ontbreekt.
 
-6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren.
+6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij reageren vaak binnen 24 uur.
     - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden.
-      Wij kijken niet of de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
-    - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
+      Wij kijken niet of de aangeleverde gegevens fouten (zoals spelfouten) bevatten.
+    - Voor de proefkonijnclubs zullen we het bestand op GitHub zetten en het bijbehorende adres (URL) terugmelden.
       Er zijn ook [instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md)
       hoe een club _zelf_ zijn Level2 ledenbestand op [GitHub](https://github.com/vdhamer/Photo-Club-Hub) kan bijhouden.
       Dan kan een club zijn Level2 bestand aanpassen met minimale afhankelijkheid van derden.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina
-als men niet over een iPhone of iPad beschikt.
+als men niet zelf over een iPhone of iPad beschikt.
 
 ## Bonus informatie
 
