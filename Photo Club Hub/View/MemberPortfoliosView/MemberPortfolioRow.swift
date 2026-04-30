@@ -10,12 +10,23 @@ import WebKit // for wkWebView
 import CoreLocation // for CLLocationCoordinate2D
 import CoreData // for NSManagedObjectContext
 
+/// A single row representing a MemberPortfolio (aka Photographer in the context of a particular Club).
+///
+/// Displays the member's role/status icon, name, expertise tags, club/town role description,
+/// and a thumbnail image that can toggle between featured and photographer images.
+/// Tapping the thumbnail toggles the show image variant if both variants are available.
+/// The entire row is wrapped in a navigation link to the member's detailed portfolio view.
 struct MemberPortfolioRow: View {
+    /// The member portfolio model used to populate this row.
     var member: MemberPortfolio
+    /// Shared `WKWebView` instance used by downstream views for web content.
     let wkWebView: WKWebView
+    /// Localized connector text used as '<person> of <photo club>'.
     private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
+    /// Core Data context used to resolve localized expertise lists.
     let moc = PersistenceController.shared.container.viewContext
 
+    /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     var body: some View {
         SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
             HStack(alignment: .top) {
@@ -97,6 +108,11 @@ struct MemberPortfolioRow: View {
         } // NavigationLink
     } // body of View
 
+    /// Chooses a color based on deceased status, otherwise returns the provided default.
+    /// - Parameters:
+    ///   - defaultColor: The color to use when the person is not deceased.
+    ///   - isDeceased: Whether the person is marked as deceased.
+    /// - Returns: `.deceasedColor` when deceased, else `defaultColor`.
     private func chooseColor(defaultColor: Color, isDeceased: Bool) -> Color {
         if isDeceased {
             return .deceasedColor
@@ -105,9 +121,14 @@ struct MemberPortfolioRow: View {
         }
     }
 
+    private func debugSuffix() -> String {
+        imageFlipped ? " true" : " false" // TODO temp function
+    }
+
 }
 
- struct MemberPortfolioRow_Previews: PreviewProvider { // this preview actually works!
+// Believe it or not, the following Preview actually works
+struct MemberPortfolioRow_Previews: PreviewProvider { // this preview actually works!
     static var previews: some View {
         Group {
             let persistenceController = PersistenceController.shared // for Core Data
@@ -144,4 +165,4 @@ struct MemberPortfolioRow: View {
             MemberPortfolioRow(member: member, wkWebView: WKWebView())
         } .border(.blue, width: 1) .padding([.horizontal], 10)
     }
- }
+}

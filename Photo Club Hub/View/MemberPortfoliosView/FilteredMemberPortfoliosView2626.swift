@@ -9,6 +9,8 @@ import SwiftUI
 import WebKit // for wkWebView
 
 @available(iOS 26.0, *)
+/// View that creates `MemberPortfolioRow` views for each MemberPortfolio returned by a CoreData sectioned fetchrequest.
+/// The sectioning is done per Club.
 struct FilteredMemberPortfoliosView2626: View {
     private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
@@ -237,6 +239,7 @@ struct FilteredMemberPortfoliosView2626: View {
 
 }
 
+// Unfortunately, the following Preview doesn't work yet.
 @available(iOS 26.0, *)
 struct FilteredMemberPortfolios2626_Previews: PreviewProvider {
     static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
