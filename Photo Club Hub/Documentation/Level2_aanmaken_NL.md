@@ -136,18 +136,19 @@ Het zijn dus velden die je bij een tekstaanpassing alsnog kan toevoegen, bijvoor
          Als je de persoon zelf vraagt ("de familienaam is Beelaerts van Blokland") voorkom je dit probleem. 
        - In principe kan de app met de volledige [Unicode](https://nl.wikipedia.org/wiki/Unicode) karakterset uit de voeten. Voor een enkele letter is dat vaak ok, maar voor volledige namen zoals Вікторія Кобленко wordt dat onhandig.
    - Voorlopig kan het `Level3URL` veld weggelaten worden (het dient voor verwijzingen naar Level 3 bestanden).
-   - Men zal vaak het `featuredImage` veld vrij snel willen invullen. Een voorbeeld is daarom te vinden in de [TemplateMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand.
-Het levert een voorbeeldplaatje op van het werk van een clublid.
+   - Men zal vaak ministens het `featuredImage` veld willen invullen. Een voorbeeld is daarom te vinden in de [TemplateMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand.
+Het `featuredImage` veld levert een klein voorbeeldplaatje op van het oevre van een clublid.
    - Op termijn is het vast de moeite waard om nog enkele velden in te vullen:
        - `website` is het webadres van een portfolio website van de fotograaf. Voorbeeld: een site op [Glass.photo](http://glass.photo/vdhamer) dat geen direct verband heeft met een specifieke club.
-         De iOS app en HTML generator maken met dit veld een klikbare link naar deze website.
+         De iOS app en HTML generator tonen met dit veld een klikbare link naar die website.
        - `roles` bevat eventuele bestuursfuncties van het lid binnen de club. Een lid kan meerdere bestuurfuncties hebben.
            - Men hoeft niet te vermelden dat een lid een bestuursfunctie _niet_ heeft.
-             Invoer zoals '"isSecretary": false` kan nodig zijn om te expliciet aan te geven dat iemand die vroeger secretaris was dat niet meer is.
+             Invoer zoals '"isSecretary": false` kan nodig zijn om te expliciet aan te geven dat iemand die vroeger secretaris was dat niet meer is. Dit is momenteel een beperking in de app software.
        - `membershipStartDate`. Dit veld wordt momenteel alleen gebruikt in _Photo Club Hub HTML_ en niet in de iOS app.
        - `expertises` geven één of twee opvallendste expertisegebieden van de fotograaf aan. Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) over hoe het `expertises` veld het beste te gebruiken.
-- Het `maintainerEmail` veld is diegene die benaderd kan worden als er iets aan de hand is met dit JSON bestand.
-  Vaak ik dat de website beheerder (b.v. admin@clubnaam.nl mits dat werkt), maar het zou een direct gmail account van een clublid kunnen zijn.
+       - `photographerImage` bevat het adres van een soort pasfoto van de fotograaf. In de kleine "thumbnails" naast de naam van de fotograaf wordt (afhankelijk van instellingen en beschikbaarheid) `photographerImage` of `featuredImage` getoond).
+- Het `maintainerEmail` veld is diegene binnen de club die benaderd kan worden als er iets aan de hand is met het JSON bestand.
+  Het zou liefst de clublid moeten zijn die het `level2.json` bestand aangemaakt heeft. Mogelijk is dat de websitebeheerder (b.v. admin@clubnaam.nl of jandewit123@gmail.com). 
 </details></p>
 
 ### Meer over JSON Editor Online
