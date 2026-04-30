@@ -20,7 +20,7 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand bij voorkeur `fgScheveningen.level2.json` moeten heten:
      Scheveningen is essentieel voor de herkenbaarheid, en Fotogroep en Fotoclub korten we hier af tot tot een voorvoegsel "fg" en "fc" omdat ze vaak voorkomen.
    - Onderstaande tabel bevat, voor enkele clubs in Brabant Oost, deze `nickName` plus enkele andere velden die het invullen vergemakkelijken.
-     Dan hoef je die velden niet zelf op te zoeken (in de [lijst](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json)).
+     Dan hoef je die velden niet zelf op te zoeken (in lijsten zoals [deze](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)).
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input bestand | Output pagina |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: | :-----: |
