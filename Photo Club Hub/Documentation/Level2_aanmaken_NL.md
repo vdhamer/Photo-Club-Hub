@@ -45,7 +45,7 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe
    > Het Max bestand bevat voorbeelden van alle momenteel beschikbare optionele velden.
    > Het is wel erg maximaal, dus je zult vervolgens enkele velden die je nog niet wilt of kunt invullen willen weglaten.
    > Suggestie: start met een kopie van Min. En haal alle extra velden die je wilt toevoegen van Max.
-   > Wees hierbij voorzichting, want de kans bestaat dat je net en comma of haakje teveel meeneemt
+   > Wees hierbij voorzichting, want de kans bestaat dat je net een comma of haakje teveel meeneemt
    > Het JSON formaat is daar (in tegenstelling tot bijvoorbeeld HTML) heel kieskeurig in.
    > Gelukkig zijn foutjes straks snel opgespoord omdat JSON bestanden automatisch gecontrolleerd kunnen worden.
 
