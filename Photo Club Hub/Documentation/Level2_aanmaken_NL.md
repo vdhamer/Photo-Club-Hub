@@ -7,7 +7,7 @@ Om dit automatisch inlezen mogelijk te maken zijn er stricte eisen ten aanzien h
 Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md) hoe bestanden aan te bieden via GitHub.
 En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen.
 
-> 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand met enkele testleden kost pakweg 1 uur. \
+> 🕚 Het kost pakweg 1 uur om de allereerste keer een Level2 bestand met enkele testleden aan te maken. \
 > Die eenmalige investering is nodig om aan de aanpak te wennen en te ontdekken hoe met de vereiste software om te gaan. \
 > Hierna kosten uitbreiding en aanpassingen van de gegevens slechts minuten per clublid.
 
