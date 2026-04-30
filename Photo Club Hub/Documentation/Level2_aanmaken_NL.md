@@ -88,31 +88,28 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te v
     > Bijvoorbeeld "Juriën" of "Saša". Je kunt ze bijvoorbeeld m.b.v. Google ergens vinden en vervolgens inkopiëeren.
  
 5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
-    - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
-      Het controleert namelijk voortdurend of de tekst voldoet aan de JSON basisregels en sommige fouten worden zelfs helemaal voorkomen.
-    - Controle van de inhoud van een bestaand bestand kan ook door de text te kopiëren naar [JSON Editor Online](https://jsoneditoronline.org).
-      Dit controleert de diverse JSON basisregels, en benoemt de eventuele fouten met het regelnummer waar de fout gevonden is.
+    - Controle van de inhoud van een bestaand bestand kan door de text te kopiëren naar [JSON Editor Online](https://jsoneditoronline.org).
+      Dit controleert de diverse JSON basisregels, en benoemt eventuele fouten samen met het regelnummer waar de fout zit.
         - JSON Editor Online wijst je op de eerste fout. Na correctie blijkt meteen of er meer fouten zijn.
-        - Het JSON formaat let nogal nauw ten aanzien van komma's en openen en sluiten van haakjes en aanhalingstekens. Vandaar dat we hier uitgaan van een kloppend voorbeeldbestand.
-        - Daarentegen is JSON totaal _niet_ kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
-          Inspringen van de tekst is wel heel handig voor menselijke lezers, maar de software analyseert de
-          inhoud volledig aan de hand van de genoemde leestekens.
+        - Het JSON formaat let nogal nauw ten aanzien van komma's en openen/sluiten van haakjes en aanhalingstekens. Vandaar dat we hier werken vanuit een correct voorbeeldbestand.
+        - Het JSON formaat is daarentegen totaal _niet_ kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
+          Inspringen van de tekst is wel heel handig voor leesbaarheid van de bestanden door menselijke lezers.
     </br>
     
-    > Tip: het is handig om de leden op alfabetische volgorde (voornaam of achternaam) te zetten:
-    > dan valt het makkelijke op als een lid dubbel op de lijst staat of juist ontbreekt.
+    > Tip: het is handig om de leden op alfabetische volgorde (b.v. op voornaam) te zetten:
+    > dan valt het snel op als een lid ontbreekt of dubbel op de lijst staat.
 
-6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij reageren vaak binnen 24 uur.
+6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij proberen te reageren binnen 24 uur.
     - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden.
-      Wij kijken niet of de aangeleverde gegevens fouten (zoals spelfouten) bevatten.
-    - Voor de proefkonijnclubs zullen we het bestand op GitHub zetten en het bijbehorende adres (URL) terugmelden.
+      Wij kijken niet of het aangeleverde bestand inhoudelijke fouten (zoals spelfouten) bevatten.
+    - Vooralsnog zullen we het bestand op GitHub zetten en het bijbehorende adres (URL) terugmelden.
       Er zijn ook [instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md)
-      hoe een club _zelf_ zijn Level2 ledenbestand op [GitHub](https://github.com/vdhamer/Photo-Club-Hub) kan bijhouden.
-      Dan kan een club zijn Level2 bestand aanpassen met minimale afhankelijkheid van derden.
+      hoe een club _zelf_ zijn Level 2 ledenbestand op [GitHub](https://github.com/vdhamer/Photo-Club-Hub) kan zetten.
+      Dan kan een club zijn Level 2 bestand aanpassen met minimale afhankelijkheid van derden.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina
-als men niet zelf over een iPhone of iPad beschikt.
+als men niet over een iPhone of iPad beschikt.
 
 ## Bonus informatie
 
