@@ -41,7 +41,7 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te v
 
    > Tip: Hoe kies je tussen het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) of [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand?
    > Het Min voorbeeldbestand toont hoe het eruit ziet als alle weglaatbare velden ontbreken.
-   > Het werkt, maar is wel erg minimaal, dus je zult vervolgens enkele opties willen toevoegen.
+   > Het is wel erg minimaal, dus je zult daarna enkele opties willen toevoegen.
    > Het Max voorbeeldbestand bevat juist alle beschikbare optionele velden.
    > Het is wel erg maximaal, dus je zult vervolgens enkele velden die je nog niet wilt of kunt invullen willen verwijderen.
    > Suggestie: start met een kopie van Min. En haal alle extra velden die je wilt toevoegen over vanuit Max.
