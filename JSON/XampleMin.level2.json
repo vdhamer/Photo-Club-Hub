@@ -25,7 +25,7 @@
                 "familyName": "Jordaan"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+                "featuredImage": "https://picsum.photos/200"
             }
         },
 
@@ -36,7 +36,7 @@
                 "familyName": "Amsterdam"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+                "featuredImage": "https://picsum.photos/200"
             }
         }
 

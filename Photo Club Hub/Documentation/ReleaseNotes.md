@@ -53,6 +53,8 @@ DOCUMENTATION MAINTENANCE
 
 * Fixed broken links in Level2_aanmaken_NL.md and updated Level2_creation_NL.md
 * Updated documentation of Include feature (Level1_aanmaken_NL.md). No English translation yet.
+* Updated Level2_aanmaken_NL.md
+* Updated README.md
 
 This build #4659 was made using Xcode 26.4.1 and is intended for testing only.
 Amount of code and data lines changed since previous release: 1497 additions and 615 deletions in unknown # of files.
