@@ -15,7 +15,7 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe
    [TemplateMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) ("Max") voorbeeldbestanden.
    _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ bevat juist alle beschikbare opties.
 
-2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand met een passende bestandsnaam:
+2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) of [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand met een passende bestandsnaam:
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand bij voorkeur `fgScheveningen.level2.json` moeten heten:
      Scheveningen is essentieel voor de herkenbaarheid, en Fotogroep en Fotoclub korten we hier af tot tot een voorvoegsel "fg" en "fc" omdat ze vaak voorkomen.
@@ -39,14 +39,15 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe
       | Veghel | Fotoclub Zzzoom | fcVeghel | 51.35712 | 5.31062 | ? |  |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
 
-   > Tip: Je kunt eventueel ook uitgaan van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand.
-   > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
-   > Het [Min](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand 
-   > toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
-   > Als je dus uitgaat van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json)
-   > bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
-   > Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
-   > Verderop staat hoe je dat automatisch kan controleren: het JSON formaat is kieskeurig over haakjes en comma's.
+   > Tip: Hoe kies je tussen het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) of [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand?
+   > Het Min bestand toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
+   > Het is wel erg minimaal, dus je zult vervolgens enkele optionele velden willen toevoegen.
+   > Het Max bestand bevat voorbeelden van alle momenteel beschikbare optionele velden.
+   > Het is wel erg maximaal, dus je zult vervolgens enkele velden die je nog niet wilt of kunt invullen willen weglaten.
+   > Suggestie: start met een kopie van Min. En haal alle extra velden die je wilt toevoegen van Max.
+   > Wees hierbij voorzichting, want de kans bestaat dat je net en comma of haakje teveel meeneemt
+   > Het JSON formaat is daar (in tegenstelling tot bijvoorbeeld HTML) heel kieskeurig in.
+   > Gelukkig zijn foutjes straks snel opgespoord omdat JSON bestanden automatisch gecontrolleerd kunnen worden.
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     > Tip: gebruik voor het aanpassen van het bestand [JSON Editor Online](https://jsoneditoronline.org).
