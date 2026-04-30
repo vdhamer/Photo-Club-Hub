@@ -1,10 +1,11 @@
 ## Een level2.json bestand aanmaken voor een club
 
-Dit stappenplan beschrijft hoe men een lijst met clubleden aan kan maken.
-Het resulterende bestand dient om automatisch ingelezen te worden door de [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
+Dit stappenplan beschrijft hoe men een lijst met de clubleden van een club aanmaakt.
+Het resulterende bestand wordt straks automatisch ingelezen door de [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
 en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps.
-Om dit automatisch inlezen mogelijk te maken zijn er vrij stricte eisen ten aanzien het bestandsformaat ("Level 2" JSON).
-Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe te voegen.
+Om dit automatisch inlezen mogelijk te maken zijn er stricte eisen ten aanzien het bestandsformaat ("Level 2" JSON).
+Er zijn aparte instructies hoe bestanden online te krijgen via GitHub.
+En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe te voegen.
 
 > 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand met enkele testleden blijkt ongeveer 1 uur te kosten. \
 > Die eenmalige investering is nodig om de aanpak te begrijpen en te ontdekken hoe met de vereiste software om te gaan. \
