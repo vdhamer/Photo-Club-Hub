@@ -45,18 +45,20 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3" JSON) toe
    > Het Max bestand bevat voorbeelden van alle momenteel beschikbare optionele velden.
    > Het is wel erg maximaal, dus je zult vervolgens enkele velden die je nog niet wilt of kunt invullen willen weglaten.
    > Suggestie: start met een kopie van Min. En haal alle extra velden die je wilt toevoegen van Max.
-   > Wees hierbij voorzichting, want de kans bestaat dat je net een comma of haakje teveel meeneemt
-   > Het JSON formaat is daar (in tegenstelling tot bijvoorbeeld HTML) heel kieskeurig in.
-   > Gelukkig zijn foutjes straks snel opgespoord omdat JSON bestanden automatisch gecontrolleerd kunnen worden.
+   > Wees hierbij voorzichting, want de kans bestaat dat je net een comma of haakje teveel meeneemt.
+   > Het JSON formaat is daar (in tegenstelling tot HTML) heel kieskeurig over.
+   > Gelukkig zijn foutjes straks snel opgespoord omdat JSON bestanden automatisch gecontrolleerd kunnen worden. Hier komen we op terug.
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     > Tip: gebruik voor het aanpassen van het bestand [JSON Editor Online](https://jsoneditoronline.org).
-    > Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
-    > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text). Maar dat biedt geen hulp t.a.v. de JSON conventiies.
+    > Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken en controleert de basis JSON regels tijdens invoer.
+    > Als alternatief kan je een algemene editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
+    > NotePad controlleert de JSON conventiies niet. NotePad++ of Sublime Text wel (mits de bestandsnaam op .json eindigt).
 
-    - Bepaalde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
-      velden uit de bovenstaande tabel overnemen. Die gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) te vinden in
-      [clubsNL16.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json).
+    - Neem, indien beschikbaar, de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
+      velden uit de bovenstaande tabel over. Die gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) en Drenthe Vechtdal (afdeling 03) te vinden in
+      [clubsNL16.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json) en
+      [clubsNL03.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL03.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
