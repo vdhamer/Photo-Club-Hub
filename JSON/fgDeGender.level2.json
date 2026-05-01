@@ -281,9 +281,11 @@
                 "familyName": "Verhoosel"
             },
             "optional": {
+                "birthday": "9999-11-21",
                 "level3URL": "https://www.fcDeGender.nl/portfolios/Jos_Verhoosel/",
                 "membershipStartDate": "2026-04-21",
-                "expertises": [ ],
+                "photographerImage": "https://www.fcDeGender.nl/wp-content/uploads/Jos-Verhoosel.jpg",
+                "expertises": [ "Landscape", "Travel" ],
                 "nlSpecific": { }
             }
         },
