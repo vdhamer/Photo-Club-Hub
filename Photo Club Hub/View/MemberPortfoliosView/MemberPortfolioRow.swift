@@ -109,9 +109,11 @@ struct MemberPortfolioRow: View {
                 }
                 .frame(width: 80, height: 80)
                 .border(chooseColor(defaultColor: .accentColor, isDeceased: member.photographer.isDeceased))
-                .onTapGesture { // overrules tap gestures on parent view
-                    flipImageFlag.toggle() // toggle between featuredImage and photographerImage
-                }
+                .clipped()
+                .contentShape(Rectangle())
+                .onTapGesture(perform: {
+                    flipImageFlag.toggle()
+                })
             } // HStack
         } // NavigationLink
     } // body of View
