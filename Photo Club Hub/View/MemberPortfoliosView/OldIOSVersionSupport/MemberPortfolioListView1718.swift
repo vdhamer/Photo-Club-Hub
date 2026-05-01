@@ -7,36 +7,57 @@
 
 import SwiftUI
 
+/// A list-based view that displays member portfolios with search and toolbar actions.
+/// This particular "1718" view is only used for iOS 18 or lower.
+///
+/// - Presents a `FilteredMemberPortfoliosView2626` inside a SwiftUI `List`.
+/// - Supports pull-to-refresh to delete and then reimport Core Data entities.
+/// - Provides toolbar buttons to open Preferences and Readme documentation in sheets, and
+///   to navigate to Organizations and Photographers lists.
+/// - Uses a search field to filter members by name or by expertise..
+///
+/// This particular "2626" view targets iOS 26 for Liquid Glass APIs and
+/// depends somewhat on whether the device is iPad or iPhone.
+
 @available(iOS, obsoleted: 19.0, message: "Please use 'MemberPortfolioListView2626' for versions about iOS 18.x")
 struct MemberPortfolioListView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
-    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
-    @State private var showingPreferences = false // controls visibility of Preferences screen
-    @State private var showingReadme = false // controls visibility of Readme screen
+    /// Available sheet detents shared by Preferences and Readme sheets.
+    private var detentsList: Set<PresentationDetent> = [ .large, .fraction(0.70) ]
 
-    @State private var selectedPreferencesDetent = PresentationDetent.large // must be elem. of detentsList
-    @State private var selectedReadmeDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
+    /// Controls visibility of the Preferences sheet.
+    @State private var showingPreferences = false
+    /// Controls visibility of the Readme sheet.
+    @State private var showingReadme = false
 
+    /// The currently selected detent for the Preferences sheet; must be contained in `detentsList`.
+    @State private var selectedPreferencesDetent = PresentationDetent.large
+    /// The currently selected detent for the Readme sheet; must be contained in `detentsList`.
+    @State private var selectedReadmeDetent = PresentationDetent.fraction(0.70)
+
+    /// The text bound to the search field used to filter member portfolios.
     @State private var searchText: String = ""
 
+    /// Photographers fetched for cross-page needs; sorting is intentionally atypical.
     @FetchRequest( // is this used? It is replaced by a fetchRequest in Photographers page
         sortDescriptors: [SortDescriptor(\.familyName_, order: .forward)], // deliberately in strange order
         animation: .default)
     private var photographers: FetchedResults<Photographer>
 
+    /// Organizations fetched and sorted with pinned items first, then by name and town.
     @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.pinned, order: .reverse), // pinned first
-                          SortDescriptor(\.fullName_, order: .forward), // photo clubs are identified by (name, town)
+        sortDescriptors: [SortDescriptor(\.pinned, order: .reverse),
+                          SortDescriptor(\.fullName_, order: .forward),
                           SortDescriptor(\.town_, order: .forward)],
         animation: .default)
     private var organizations: FetchedResults<Organization>
 
     @StateObject var model = PreferencesViewModel()
 
+    /// Toolbar placement that adapts: iPad shows search in the toolbar, iPhone in the drawer. 
     private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
-        .destructiveAction : // iPad: Search field in toolbar
-        .navigationBarTrailing // iPhone: Search field in drawer
+        .destructiveAction : .navigationBarTrailing
 
     var body: some View {
         List { // lists are automatically "Lazy"
@@ -45,6 +66,7 @@ struct MemberPortfolioListView1718: View {
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
+            // Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
             // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
             if Settings.dataResetPending {
                 print("dataResetPending flag toggled from true to false")
@@ -69,6 +91,7 @@ struct MemberPortfolioListView1718: View {
                 } label: {
                     PreferencesIcon()
                 }
+                // Preferences sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingPreferences, content: {
                     PreferencesView1718(preferences: $model.preferences)
                     // the detents don't do anything on an iPad
@@ -87,6 +110,7 @@ struct MemberPortfolioListView1718: View {
                         .font(.title)
                         .foregroundStyle(.linkColor, .gray, .white)
                 }
+                // Readme sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingReadme, content: {
                     ReadmeView()
                     // the detents don't do anything on an iPad
@@ -135,6 +159,7 @@ struct MemberPortfolioListView1718: View {
 
 }
 
+// Unfortunately, the following Preview doesn't work yet.
 @available(iOS, obsoleted: 19.0, message: "Please use 'MemberListView2626_Previews' for versions above iOS 18.x")
 struct MemberListView1718_Previews: PreviewProvider {
     static var previews: some View {

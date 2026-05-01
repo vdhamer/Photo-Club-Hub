@@ -9,6 +9,8 @@ import SwiftUI
 import WebKit // for wkWebView
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView_Previews2626' for versions > iOS 18.x")
+/// View that creates `MemberPortfolioRow` views for each MemberPortfolio returned by a CoreData sectioned fetchrequest.
+/// The sectioning is done per Club.
 struct FilteredMemberPortfoliosView1718: View {
     private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
