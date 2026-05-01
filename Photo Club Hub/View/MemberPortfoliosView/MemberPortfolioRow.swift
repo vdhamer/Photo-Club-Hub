@@ -25,6 +25,8 @@ struct MemberPortfolioRow: View {
     private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
     /// Core Data context used to resolve localized expertise lists.
     let moc = PersistenceController.shared.container.viewContext
+    /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
+    @State var flipImageFlag: Bool = false
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     var body: some View {
@@ -36,14 +38,18 @@ struct MemberPortfolioRow: View {
                     .imageScale(.large)
 
                 VStack(alignment: .leading) {
-                    Text(verbatim: "\(member.photographer.fullNameFirstLast)")
-                        .font(UIDevice.isIPad ? .title : .title2)
-                        .tracking(1)
-                        .allowsTightening(true)
-                        .foregroundColor(chooseColor(
-                            defaultColor: .accentColor,
-                            isDeceased: member.photographer.isDeceased
-                        ))
+                    HStack {
+                        Text(verbatim: "\(member.photographer.fullNameFirstLast)")
+                            .font(UIDevice.isIPad ? .title : .title2)
+                            .tracking(1)
+                            .allowsTightening(true)
+                        Spacer()
+                        Text(imageFlippedIndicator())
+                    }
+                    .foregroundColor(chooseColor(
+                        defaultColor: .accentColor,
+                        isDeceased: member.photographer.isDeceased
+                    ))
 
                     let localizedExpertiseResultLists = LocalizedExpertiseResultLists(moc: moc,
                                                             member.photographer.photographerExpertises)
@@ -80,7 +86,7 @@ struct MemberPortfolioRow: View {
                             .deceasedColor : .primary)
                 }
                 Spacer()
-                AsyncImage(url: chooseImageURL(member: member).url) { phase in
+                AsyncImage(url: chooseImageURL(member: member, isImageFlipped: flipImageFlag).url) { phase in
                     if let image = phase.image {
                         image // Displays the loaded image
                             .resizable()
@@ -102,8 +108,10 @@ struct MemberPortfolioRow: View {
                     }
                 }
                 .frame(width: 80, height: 80)
-                .clipped()
-                .border(TintShapeStyle() )
+                .border(chooseColor(defaultColor: .accentColor, isDeceased: member.photographer.isDeceased))
+                .onTapGesture { // overrules tap gestures on parent view
+                    flipImageFlag.toggle() // toggle between featuredImage and photographerImage
+                }
             } // HStack
         } // NavigationLink
     } // body of View
@@ -121,8 +129,8 @@ struct MemberPortfolioRow: View {
         }
     }
 
-    private func debugSuffix() -> String {
-        imageFlipped ? " true" : " false" // TODO temp function
+    private func imageFlippedIndicator() -> String {
+        flipImageFlag ? " ↻" : ""
     }
 
 }

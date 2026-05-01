@@ -19,15 +19,27 @@ extension MemberPortfolioRow {
         let content: ImageContent
     }
 
-    func chooseImageURL(member: MemberPortfolio) -> ImageChoice {
+    func chooseImageURL(member: MemberPortfolio, isImageFlipped: Bool) -> ImageChoice {
         let preferenceForFeaturedImage = PreferencesViewModel().preferences.preferenceForFeaturedImage
 
-        if preferenceForFeaturedImage {
-            return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImage) // non-optional
+        if isImageFlipped == false {
+            if preferenceForFeaturedImage {
+                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImage) // non-optional
+            }
+
+            if let photographerImageURL = member.photographer.photographerImage {
+                return ImageChoice(url: photographerImageURL, content: .photographerImage)
+            }
         }
 
-        if let photographerImageURL = member.photographer.photographerImage {
-            return ImageChoice(url: photographerImageURL, content: .photographerImage)
+        if isImageFlipped {
+            if preferenceForFeaturedImage == true, let photographerImageURL = member.photographer.photographerImage {
+                return ImageChoice(url: photographerImageURL, content: .photographerImage)
+            }
+
+            if preferenceForFeaturedImage == false {
+                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImage)
+            }
         }
 
         return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImage)
