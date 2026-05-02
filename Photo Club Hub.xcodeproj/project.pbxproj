@@ -60,6 +60,7 @@
 		37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */; };
 		37C61B8F2E72091000C5BAEF /* FotokringSintMichielsgestel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */; };
 		37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */; };
+		37CA632F2FA63EFA00C92F30 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */; };
 		37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */; };
 		37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */; };
 		37D984092F90406200C30EE5 /* PreferencesViewMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D984082F90406200C30EE5 /* PreferencesViewMembersSection.swift */; };
@@ -94,7 +95,6 @@
 		D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CD642B3AE2E800A12E90 /* OrganizationType.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */; };
-		D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */; };
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
 		D0447C882BA510AF00982A1E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0447C862BA510AF00982A1E /* Language.swift */; };
@@ -246,6 +246,7 @@
 		37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileOrganization+FindCreateUpdate.swift"; sourceTree = "<group>"; };
 		37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotokringSintMichielsgestel.swift; sourceTree = "<group>"; };
 		37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+canonicalCase.swift"; sourceTree = "<group>"; };
+		37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
@@ -302,7 +303,6 @@
 		D036591F2BADBAE10014F266 /* Photo_Club_Hub_2_5_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_6.xcdatamodel; sourceTree = "<group>"; };
 		D036EA082D5019510012A47D /* FAQ_nl.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FAQ_nl.md; sourceTree = "<group>"; };
 		D037C3772D5AACA800BA787D /* Photo_Club_Hub_2_7_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_3.xcdatamodel; sourceTree = "<group>"; };
-		D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
 		D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Equatable.swift"; sourceTree = "<group>"; };
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D0447C862BA510AF00982A1E /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
@@ -632,7 +632,7 @@
 				37E134BC2E6F7A7100C61714 /* OldIOSVersionSupport */,
 				37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */,
 				D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift */,
-				D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */,
+				37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */,
 				3722DC9F2F98CE9000F2851C /* MemberPortolioRow+chooseImageURL.swift */,
 			);
 			path = MemberPortfoliosView;
@@ -1218,7 +1218,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05840182E3C18B00013E438 /* PhotographersTextInfo.swift in Sources */,
-				D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */,
 				37415B082F9D2DA3004B4647 /* ReadmeSection.swift in Sources */,
 				37B1A3EB2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift in Sources */,
 				D0F4FAAA2D82275100FFAEAE /* Level0JsonReader.swift in Sources */,
@@ -1260,6 +1259,7 @@
 				D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */,
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				37D9840B2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift in Sources */,
+				37CA632F2FA63EFA00C92F30 /* MemberPortfolioRow.swift in Sources */,
 				D0839DAD2DFCDBEE004DC584 /* FotogroepDenDungenMembersProvider.swift in Sources */,
 				D08B8FCC2E04B01A00944B8E /* Expertise.swift in Sources */,
 				D08B8FCD2E04B01A00944B8E /* PhotographerExpertise.swift in Sources */,

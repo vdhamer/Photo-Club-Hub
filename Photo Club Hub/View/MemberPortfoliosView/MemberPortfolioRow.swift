@@ -14,8 +14,7 @@ import CoreData // for NSManagedObjectContext
 ///
 /// Displays the member's role/status icon, name, expertise tags, club/town role description,
 /// and a thumbnail image that can toggle between featured and photographer images.
-/// Tapping the thumbnail toggles the show image variant if both variants are available.
-/// The entire row is wrapped in a navigation link to the member's detailed portfolio view.
+/// Tapping the thumbnail toggles the shown image variant if both variants are available.
 struct MemberPortfolioRow: View {
     /// The member portfolio model used to populate this row.
     var member: MemberPortfolio
@@ -30,29 +29,26 @@ struct MemberPortfolioRow: View {
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     var body: some View {
-        SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
-            HStack(alignment: .top) {
+        HStack(alignment: .top) { // total view content
+
+            HStack(alignment: .top) { // everything to left of Image: icon + several lines of Text
 
                 RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus)
                     .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
                     .imageScale(.large)
 
                 VStack(alignment: .leading) {
-                    HStack {
-                        Text(verbatim: "\(member.photographer.fullNameFirstLast)")
-                            .font(UIDevice.isIPad ? .title : .title2)
-                            .tracking(1)
-                            .allowsTightening(true)
-                        Spacer()
-                        Text(imageFlippedIndicator())
-                    }
-                    .foregroundColor(chooseColor(
-                        defaultColor: .accentColor,
-                        isDeceased: member.photographer.isDeceased
-                    ))
+                    Text(verbatim: "\(member.photographer.fullNameFirstLast)") // photographer's name
+                        .font(UIDevice.isIPad ? .title : .title2)
+                        .tracking(1)
+                        .allowsTightening(true)
+                        .foregroundColor(chooseColor(
+                            defaultColor: .accentColor,
+                            isDeceased: member.photographer.isDeceased
+                        ))
 
                     let localizedExpertiseResultLists = LocalizedExpertiseResultLists(moc: moc,
-                                                            member.photographer.photographerExpertises)
+                                                                            member.photographer.photographerExpertises)
                     Group {
                         if !localizedExpertiseResultLists.supported.list.isEmpty { // list any supported expertises
                             HStack(spacing: 3) {
@@ -85,37 +81,55 @@ struct MemberPortfolioRow: View {
                         .foregroundColor(member.photographer.isDeceased ?
                             .deceasedColor : .primary)
                 }
-                Spacer()
-                AsyncImage(url: chooseImageURL(member: member, isImageFlipped: flipImageFlag).url) { phase in
-                    if let image = phase.image {
-                        image // Displays the loaded image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    } else if phase.error != nil {
-                        Image("Question-mark") // Displays image indicating an error occurred
+            }
+
+            Spacer()
+
+            AsyncImage(url: chooseImageURL(member: member, isImageFlipped: flipImageFlag).url) { phase in
+                if let image = phase.image {
+                    image // Displays the loaded image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else if phase.error != nil {
+                    Image("Question-mark") // Displays image indicating an error occurred
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } else {
+                    ZStack {
+                        Image("Tortoise") // Displays placeholder while loading
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                    } else {
-                        ZStack {
-                            Image("Tortoise") // Displays placeholder while loading
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .opacity(0.4)
-                            ProgressView()
-                                .scaleEffect(x: 2, y: 2, anchor: .center)
-                                .blendMode(BlendMode.difference)
-                        }
+                            .opacity(0.4)
+                        ProgressView()
+                            .scaleEffect(x: 2, y: 2, anchor: .center)
+                            .blendMode(BlendMode.difference)
                     }
                 }
-                .frame(width: 80, height: 80)
-                .border(chooseColor(defaultColor: .accentColor, isDeceased: member.photographer.isDeceased))
-                .clipped()
-                .contentShape(Rectangle())
-                .onTapGesture(perform: {
+            }
+            .frame(width: 80, height: 80)
+            .border(chooseColor(defaultColor: .accentColor, isDeceased: member.photographer.isDeceased))
+            .clipped()
+            .contentShape(Rectangle())
+            .onTapGesture(perform: {
+                if member.photographer.photographerImage != nil {
                     flipImageFlag.toggle()
-                })
-            } // HStack
-        } // NavigationLink
+                }
+            })
+
+            VStack {
+                SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {EmptyView()}
+                Spacer()
+                if member.photographer.photographerImage != nil {
+                    Text(imageFlippedIndicator())
+                        .onTapGesture(perform: {
+                            flipImageFlag.toggle()
+                        })
+                        .foregroundStyle(Color.accentColor)
+                }
+            }
+            .frame(width: 20, height: 80)
+
+        } // HStack
     } // body of View
 
     /// Chooses a color based on deceased status, otherwise returns the provided default.
@@ -132,13 +146,13 @@ struct MemberPortfolioRow: View {
     }
 
     private func imageFlippedIndicator() -> String {
-        flipImageFlag ? " ↻" : ""
+        flipImageFlag ? "↻" : "↺"
     }
 
 }
 
 // Believe it or not, the following Preview actually works
-struct MemberPortfolioRow_Previews: PreviewProvider { // this preview actually works!
+struct MemberPortfolioRow2_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             let persistenceController = PersistenceController.shared // for Core Data
