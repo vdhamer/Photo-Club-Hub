@@ -146,7 +146,7 @@ struct MemberPortfolioRow: View {
     }
 
     private func imageFlippedIndicator() -> String {
-        flipImageFlag ? "↻" : "↺"
+        flipImageFlag ? "↺" : "↻"
     }
 
 }
