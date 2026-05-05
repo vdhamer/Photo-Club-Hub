@@ -47,6 +47,10 @@
 		37989A022F4A25D80039FABF /* clubsXamples.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37989A012F4A25D80039FABF /* clubsXamples.level1.json */; };
 		37A2A0AF2FAA587F00EF39A1 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0AE2FAA587F00EF39A1 /* OrganizationView.swift */; };
 		37A2A0B22FAA7DD200EF39A1 /* FilteredOrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0B12FAA7DD200EF39A1 /* FilteredOrganizationView.swift */; };
+		37A2A0E02FAA959F00EF39A1 /* OrganizationViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0DF2FAA959F00EF39A1 /* OrganizationViewTitle.swift */; };
+		37A2A0E22FAA973400EF39A1 /* OrganizationViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */; };
+		37A2A0E42FAA9EA100EF39A1 /* OrganizationViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */; };
+		37A2A0E62FAAA53400EF39A1 /* OrganizationViewRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */; };
 		37A57B1D2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */; };
 		37A74C032F145202003DCD06 /* museumsCN.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37A74C022F1451F6003DCD06 /* museumsCN.level1.json */; };
 		37B1A3EB2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */; };
@@ -230,6 +234,10 @@
 		37989A012F4A25D80039FABF /* clubsXamples.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsXamples.level1.json; sourceTree = "<group>"; };
 		37A2A0AE2FAA587F00EF39A1 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
 		37A2A0B12FAA7DD200EF39A1 /* FilteredOrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredOrganizationView.swift; sourceTree = "<group>"; };
+		37A2A0DF2FAA959F00EF39A1 /* OrganizationViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewTitle.swift; sourceTree = "<group>"; };
+		37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewInfo.swift; sourceTree = "<group>"; };
+		37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewMap.swift; sourceTree = "<group>"; };
+		37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewRemark.swift; sourceTree = "<group>"; };
 		37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView1718.swift; sourceTree = "<group>"; };
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
 		37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level2JsonReaders+Helpers.swift"; sourceTree = "<group>"; };
@@ -813,6 +821,10 @@
 				37A2A0B12FAA7DD200EF39A1 /* FilteredOrganizationView.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
 				37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */,
+				37A2A0DF2FAA959F00EF39A1 /* OrganizationViewTitle.swift */,
+				37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */,
+				37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */,
+				37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */,
 			);
 			path = OrganizationsView;
 			sourceTree = "<group>";
@@ -1203,6 +1215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A2A0E42FAA9EA100EF39A1 /* OrganizationViewMap.swift in Sources */,
 				D05840182E3C18B00013E438 /* PhotographersTextInfo.swift in Sources */,
 				37415B082F9D2DA3004B4647 /* ReadmeSection.swift in Sources */,
 				37B1A3EB2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift in Sources */,
@@ -1219,6 +1232,7 @@
 				D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */,
 				37A2A0B22FAA7DD200EF39A1 /* FilteredOrganizationView.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift in Sources */,
+				37A2A0E62FAAA53400EF39A1 /* OrganizationViewRemark.swift in Sources */,
 				37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */,
 				37B5349B2F243171000EA5BB /* FFCShot71MembersProvider.swift in Sources */,
 				D02F88532C4C242C0043B25B /* String+Date.swift in Sources */,
@@ -1280,6 +1294,7 @@
 				376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */,
 				D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */,
 				371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */,
+				37A2A0E02FAA959F00EF39A1 /* OrganizationViewTitle.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */,
 				D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */,
 				37174DAA2F8F93E100E58B6E /* PreferencesView.swift in Sources */,
@@ -1313,6 +1328,7 @@
 				370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */,
 				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
+				37A2A0E22FAA973400EF39A1 /* OrganizationViewInfo.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */,
 				37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */,
 				37913A312F452C01009B5D8A /* TemplateMinMembersProvider.swift in Sources */,
