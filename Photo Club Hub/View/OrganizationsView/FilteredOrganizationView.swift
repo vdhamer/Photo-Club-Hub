@@ -1,17 +1,16 @@
 //
-//  FilteredOrganizationView1718.swift
+//  FilteredOrganizationView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
 //
 
-import SwiftUI
-import MapKit
-import CoreData
+import SwiftUI // for View
+import MapKit // for MKMapItem
+import CoreData // for NSFetchRequest
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 @MainActor
-struct FilteredOrganizationView1718: View {
+struct FilteredOrganizationView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
@@ -23,7 +22,8 @@ struct FilteredOrganizationView1718: View {
 
     private let searchText: Binding<String>
     private let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
-    private let iOS18: Bool
+    private let iOS1717: Bool // init() will set this to true if we are running iOS 17 (app only supports iOS17+)
+    private let iOS2626: Bool // actually true if iOS 26 or above (but 27 doesn't exist yet)
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate, searchText: Binding<String>) {
@@ -41,10 +41,16 @@ struct FilteredOrganizationView1718: View {
         )
         self.searchText = searchText
 
-        if #unavailable(iOS 18) { // used to optimize ScrollView smart scrolling under iOS 18
-            iOS18 = false
+        if #available(iOS 18, *) { // used to optimize ScrollView smart scrolling under iOS 18
+            iOS1717 = false // versions below iOS 17 not supported
         } else {
-            iOS18 = true
+            iOS1717 = true // must be exactly iOS 17.x
+        }
+
+        if #available(iOS 26, *) { // must be iOS 26 or above
+            iOS2626 = true
+        } else {
+            iOS2626 = false
         }
     }
 
@@ -54,6 +60,8 @@ struct FilteredOrganizationView1718: View {
                             unit: .organization)
         ForEach(filteredOrganizations, id: \.id) { filteredOrganization in // for each club or museum...
             VStack(alignment: .leading) {
+
+                /// first line of Text: club/museum name plus optional Wikipedia icon
                 HStack {
                     Text(verbatim: "\(filteredOrganization.fullName)") // name of club or museum (left aligned)
                         .font(UIDevice.isIPad ? .title : .title2)
@@ -75,6 +83,7 @@ struct FilteredOrganizationView1718: View {
                 }
                 .fixedSize(horizontal: false, vertical: true)
 
+                // type-icon on the left, few rows of text on the right, tapable lock symbol
                 HStack(alignment: .center, spacing: 0) {
                     Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
                                                  circleNeeded: true) // icon for organizationType
@@ -86,16 +95,22 @@ struct FilteredOrganizationView1718: View {
                     .padding(.horizontal, 5)
 
                     VStack(alignment: .leading) {
+
+                        // location consisting of town and country
                         Text(verbatim: layoutDirection == .leftToRight ?
                              "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
                              "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
                         .font(.subheadline)
+
+                        // number of members (if applicable)
                         if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
                             Text("\(filteredOrganization.members.count) members (inc. ex-members)",
                                  tableName: "PhotoClubHub.SwiftUI",
                                  comment: "<count> members (including all types of members) within photo club")
                             .font(.subheadline)
                         }
+
+                        // URL to existing club/museum website
                         if let website: URL = filteredOrganization.organizationWebsite {
                             Link(destination: website, label: {
                                 Text(website.absoluteString)
@@ -106,7 +121,10 @@ struct FilteredOrganizationView1718: View {
                             })
                             .buttonStyle(.plain) // to avoid entire List element to be clickable
                         }
+
                     }
+
+                    // lock icon
                     Spacer() // moved Button to trailing/right side
                     Button(
                         action: {
@@ -124,6 +142,7 @@ struct FilteredOrganizationView1718: View {
                     .buttonStyle(.plain) // to avoid entire List element to be clickable
                 }
                 .padding(.all, 0)
+
                 Map(position: cameraPositionBinding(for: filteredOrganization.id),
                     interactionModes: filteredOrganization.isMapScrollLocked ? [] : [
                         .rotate, // automatically enables the compas button when rotated
@@ -141,11 +160,26 @@ struct FilteredOrganizationView1718: View {
                                                selectedOrganization: filteredOrganization))
                     } // Marker loop
                     UserAnnotation() // show user's location on map
-                } // Map ends here
+                }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
-                    .padding(.top, 5)
-                    .frame(height: iOS18 ? nil : 70) // iOS 18 can handle variable size views for smart scrolling
+
+                // Remark describing club or museum (is a bit tricky due to unpredictable length)
+                if iOS2626 {
+                    Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
+                        .padding(.top, 5)
+                        .font(.footnote)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.9)
+                        .frame(height: 40)
+                } else if iOS1717 {
+                    Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
+                        .padding(.top, 5)
+                        .frame(height: 70) // iOS 17 smart scrolling can't (couldn't?) handle variable size views
+                } else {
+                    Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
+                        .padding(.top, 5)
+                }
+
             } // VStack
             .id(filteredOrganization.id)
             .task {
@@ -303,8 +337,7 @@ struct FilteredOrganizationView1718: View {
 
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-extension FilteredOrganizationView1718 { // reverse GeoCoding
+extension FilteredOrganizationView { // reverse GeoCoding
 
     private func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
@@ -322,21 +355,29 @@ extension FilteredOrganizationView1718 { // reverse GeoCoding
 
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-struct FilteredOrganizationView1718_Previews: PreviewProvider {
+struct FilteredOrganizationView_Previews: PreviewProvider {
     static let organizationPredicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
                                                    argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
     @State static var searchText: String = ""
 
     static var previews: some View {
         NavigationStack {
-            List { // lists are "Lazy" automatically
-                FilteredOrganizationView1718(predicate: organizationPredicate, searchText: $searchText)
-                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            if #available(iOS 26, *) {
+                List { // lists are "Lazy" automatically
+                    FilteredOrganizationView(predicate: organizationPredicate, searchText: $searchText)
+                        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+                }
+                .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
+                .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
+                .searchToolbarBehavior(.minimize)
+            } else {
+                List { // lists are "Lazy" automatically
+                    FilteredOrganizationView(predicate: organizationPredicate, searchText: $searchText)
+                        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+                }
+                .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
+                .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
             }
-            .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
-            .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
-            // .searchToolbarBehavior(.minimize) // unavailable before iOS 26
         }
     }
 }

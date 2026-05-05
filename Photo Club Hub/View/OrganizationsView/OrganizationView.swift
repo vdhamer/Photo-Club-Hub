@@ -42,15 +42,9 @@ struct OrganizationView: View {
             LazyVStack(alignment: .leading, spacing: 12) {
                 /// This is where the List of Photographers is generated.
                 /// So the most relevant stuff happens in FilteredOrganizationView
-                if #available(iOS 26.0, *) {
-                    FilteredOrganizationView2626(
-                        predicate: modelToHoldPreferences.preferences.organizationPredicate,
-                        searchText: $searchText)
-                } else {
-                    FilteredOrganizationView1718(
-                        predicate: modelToHoldPreferences.preferences.organizationPredicate,
-                        searchText: $searchText)
-                }
+                FilteredOrganizationView(
+                    predicate: modelToHoldPreferences.preferences.organizationPredicate,
+                    searchText: $searchText)
             }
             .scrollTargetLayout()
 
