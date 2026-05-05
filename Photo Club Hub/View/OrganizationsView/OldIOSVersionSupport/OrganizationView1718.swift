@@ -1,5 +1,5 @@
 //
-//  OrganizationListView1718.swift
+//  OrganizationView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
-struct OrganizationListView1718: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationView2626' for versions above iOS 18.x")
+struct OrganizationView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
     @State private var locationManager = LocationManager()
@@ -101,7 +101,7 @@ struct NoClubsText1718: View {
 struct PhotoClubListView1718_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            OrganizationListView1718()
+            OrganizationView1718()
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI // for View
 import CoreData // for NSPersistentContainer
 
 @available(iOS 26.0, *)
-struct OrganizationListView2626: View {
+struct OrganizationView2626: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
     @State private var locationManager = LocationManager()
@@ -103,7 +103,7 @@ struct NoClubsText2626: View {
 struct PhotoClubListView2626_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            OrganizationListView2626()
+            OrganizationView2626()
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

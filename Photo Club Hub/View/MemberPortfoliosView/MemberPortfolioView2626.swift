@@ -1,5 +1,5 @@
 //
-//  MemberPortfoliosView1718.swift
+//  MemberPortfoliosView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 20/06/2021.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A list-based view that displays member portfolios with search and toolbar actions.
-/// This particular "1718" view is only used for iOS 18 or lower.
+/// This particular "2626" view is only used with iOS 26 or higher.
 ///
 /// - Presents a `FilteredMemberPortfoliosView2626` inside a SwiftUI `List`.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
@@ -18,9 +18,8 @@ import SwiftUI
 ///
 /// This particular "2626" view targets iOS 26 for Liquid Glass APIs and
 /// depends somewhat on whether the device is iPad or iPhone.
-
-@available(iOS, obsoleted: 19.0, message: "Please use 'MemberPortfolioListView2626' for versions about iOS 18.x")
-struct MemberPortfolioListView1718: View {
+@available(iOS 26.0, *)
+struct MemberPortfolioView2626: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// Available sheet detents shared by Preferences and Readme sheets.
@@ -61,7 +60,7 @@ struct MemberPortfolioListView1718: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView1718(memberPredicate: model.preferences.memberPredicate,
+            FilteredMemberPortfoliosView2626(memberPredicate: model.preferences.memberPredicate,
                                              searchText: $searchText)
         }
         .listStyle(.plain)
@@ -93,7 +92,7 @@ struct MemberPortfolioListView1718: View {
                 }
                 // Preferences sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingPreferences, content: {
-                    PreferencesView1718(preferences: $model.preferences)
+                    PreferencesView2626(preferences: $model.preferences)
                     // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
                         .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
@@ -123,7 +122,7 @@ struct MemberPortfolioListView1718: View {
             ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                 NavigationLink(destination: {
-                    OrganizationListView1718()
+                    OrganizationView2626()
                 }, label: {
                     Image("mappin.ellipse.rectangle")
                         .font(.title)
@@ -132,7 +131,7 @@ struct MemberPortfolioListView1718: View {
                 .offset(x: 5)
 
                 NavigationLink(destination: {
-                    PhotographersListView1718(searchText: $searchText)
+                    PhotographersListView2626(searchText: $searchText)
                 }, label: {
                     Image("person.text.rectangle.custom")
                         .font(.title)
@@ -155,15 +154,16 @@ struct MemberPortfolioListView1718: View {
                                           """
                                 ))
         .disableAutocorrection(true)
+        .searchToolbarBehavior(.minimize)
     }
 
 }
 
 // Unfortunately, the following Preview doesn't work yet.
-@available(iOS, obsoleted: 19.0, message: "Please use 'MemberListView2626_Previews' for versions above iOS 18.x")
-struct MemberListView1718_Previews: PreviewProvider {
+@available(iOS 26.0, *)
+struct MemberListView2626_Previews: PreviewProvider {
     static var previews: some View {
-        MemberPortfolioListView1718()
+        MemberPortfolioView2626()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
