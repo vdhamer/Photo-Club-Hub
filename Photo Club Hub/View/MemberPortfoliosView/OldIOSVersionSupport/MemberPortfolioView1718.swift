@@ -123,7 +123,7 @@ struct MemberPortfolioView1718: View {
             ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                 NavigationLink(destination: {
-                    OrganizationView1718()
+                    OrganizationView()
                 }, label: {
                     Image("mappin.ellipse.rectangle")
                         .font(.title)

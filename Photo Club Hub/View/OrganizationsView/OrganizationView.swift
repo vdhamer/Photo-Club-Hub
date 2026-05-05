@@ -1,20 +1,34 @@
 //
-//  OrganizationView1718.swift
+//  OrganizationListView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
 //
 
-import SwiftUI
+import SwiftUI // for View
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationView2626' for versions above iOS 18.x")
-struct OrganizationView1718: View {
+/// A scroll-based view that displays photo clubs and museums with a search field
+/// and maps with markers showing club/museum locations.
+///
+/// - Presents a `FilteredOrganizationView` inside a SwiftUI `ScrollView` with a `LazyVStack`.
+/// - Shows a fallback `NoClubsText` hint when no organizations (= clubs or museums) are loaded.
+/// - Supports pull-to-refresh to delete and then reimport Core Data entities.
+/// - Requests location authorization (once) and starts location updates while the view is visible.
+/// - Uses a search field to filter organizations by name or town.
+///
+/// The code has one location where the code for iOS 27 and iOS 17/18 deviate from each other.
+///
+struct OrganizationView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @StateObject var model = PreferencesViewModel()
+    /// A wrapper that mainly holds a Preferences struct
+    @StateObject var modelToHoldPreferences = PreferencesViewModel()
+    /// Tracks user location to enable the user-location annotation on the map.
     @State private var locationManager = LocationManager()
-    @State private var searchText: String = "" // bindable string with content of Search bar
+    /// The text bound to the search field used to filter organizations by name or town.
+    @State private var searchText: String = "" // bindable String
 
+    /// Organizations fetched only to detect the empty state; sorting is irrelevant for counting.
     @FetchRequest(
         sortDescriptors: [], // organizations is only used for counting, so sorting doesn't matter
         animation: .default)
@@ -25,14 +39,23 @@ struct OrganizationView1718: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
 
-            LazyVStack {
-                FilteredOrganizationView1718(predicate: model.preferences.organizationPredicate,
-                                             searchText: $searchText)
+            LazyVStack(alignment: .leading, spacing: 12) {
+                /// This is where the List of Photographers is generated.
+                /// So the most relevant stuff happens in FilteredOrganizationView
+                if #available(iOS 26.0, *) {
+                    FilteredOrganizationView2626(
+                        predicate: modelToHoldPreferences.preferences.organizationPredicate,
+                        searchText: $searchText)
+                } else {
+                    FilteredOrganizationView1718(
+                        predicate: modelToHoldPreferences.preferences.organizationPredicate,
+                        searchText: $searchText)
+                }
             }
             .scrollTargetLayout()
 
             if organizations.isEmpty {
-                NoClubsText1718()
+                NoClubsText()
             }
 
             VStack(alignment: .leading) {
@@ -54,6 +77,7 @@ struct OrganizationView1718: View {
 
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .refreshable { // for pull-to-refresh
+            // Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
             // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
             if Settings.dataResetPending {
                 print("dataResetPending flag toggled from true to false")
@@ -62,6 +86,7 @@ struct OrganizationView1718: View {
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .task { // will be aborted when ScrollView disappears
+            // Request location authorization and start updates; aborted when ScrollView disappears.
             try? await locationManager.requestUserAuthorization()
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes
@@ -79,15 +104,16 @@ struct OrganizationView1718: View {
                                           filter the members based on a fragment of the organization name or town.
                                           """
                                 ))
-        // .searchToolbarBehavior(.minimize) // not available before iOS 26
+        // .searchToolbarBehavior(.minimize) // requires iOS 26+
         .autocapitalization(.sentences)
         .disableAutocorrection(true)
     }
 
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
-struct NoClubsText1718: View {
+/// Fallback hint displayed when the database returns zero organizations,
+/// instructing the user to pull down to reload the default clubs.
+struct NoClubsText: View {
     var body: some View {
         Text("""
              No photo clubs or museums seem to be currently loaded.
@@ -99,10 +125,9 @@ struct NoClubsText1718: View {
 }
 
 /// This preview doesn't work yet
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
 #Preview {
     NavigationStack {
-        OrganizationView1718()
+        OrganizationView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
