@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A list-based view that displays member portfolios with search and toolbar actions.
-/// This particular "2626" view is only used with iOS 26 or higher.
+/// This particular "2626" version of the view is only used with iOS 26 or higher.
 ///
 /// - Presents a `FilteredMemberPortfoliosView2626` inside a SwiftUI `List`.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.

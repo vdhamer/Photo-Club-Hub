@@ -10,6 +10,7 @@ import SwiftUI
 @available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationView2626' for versions above iOS 18.x")
 struct OrganizationView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
+
     @StateObject var model = PreferencesViewModel()
     @State private var locationManager = LocationManager()
     @State private var searchText: String = "" // bindable string with content of Search bar
@@ -97,12 +98,11 @@ struct NoClubsText1718: View {
     }
 }
 
+/// This preview doesn't work yet
 @available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
-struct PhotoClubListView1718_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            OrganizationView1718()
-                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-        }
+#Preview {
+    NavigationStack {
+        OrganizationView1718()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
