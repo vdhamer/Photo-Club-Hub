@@ -19,8 +19,8 @@ import SwiftUI
 /// This particular "2626" view targets iOS 26 for Liquid Glass APIs and
 /// depends somewhat on whether the device is iPad or iPhone.
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'MemberPortfolioListView2626' for versions about iOS 18.x")
-struct MemberPortfolioListView1718: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'MemberPortfolioView2626' for versions about iOS 18.x")
+struct MemberPortfolioView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// Available sheet detents shared by Preferences and Readme sheets.
@@ -163,7 +163,7 @@ struct MemberPortfolioListView1718: View {
 @available(iOS, obsoleted: 19.0, message: "Please use 'MemberListView2626_Previews' for versions above iOS 18.x")
 struct MemberListView1718_Previews: PreviewProvider {
     static var previews: some View {
-        MemberPortfolioListView1718()
+        MemberPortfolioView1718()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

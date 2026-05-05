@@ -475,13 +475,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "featuredImage"
+            "value" : "Portfolio"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "featuredImage"
+            "value" : "Portfolio"
           }
         }
       }
@@ -918,13 +918,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "photographerImage"
+            "value" : "Photographer"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "photographerImage"
+            "value" : "Fotograaf"
           }
         }
       }

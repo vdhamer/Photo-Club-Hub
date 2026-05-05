@@ -19,7 +19,7 @@ import SwiftUI
 /// This particular "2626" view targets iOS 26 for Liquid Glass APIs and
 /// depends somewhat on whether the device is iPad or iPhone.
 @available(iOS 26.0, *)
-struct MemberPortfolioListView2626: View {
+struct MemberPortfolioView2626: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// Available sheet detents shared by Preferences and Readme sheets.
@@ -163,7 +163,7 @@ struct MemberPortfolioListView2626: View {
 @available(iOS 26.0, *)
 struct MemberListView2626_Previews: PreviewProvider {
     static var previews: some View {
-        MemberPortfolioListView2626()
+        MemberPortfolioView2626()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
