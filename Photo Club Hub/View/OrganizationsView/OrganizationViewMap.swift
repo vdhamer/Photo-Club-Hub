@@ -68,6 +68,10 @@ struct OrganizationViewMap: View {
 
 // MARK: - Preview
 
+//        let predicateFormat: String = "town_ = %@ || town_ = %@" // avoid localization
+//        let predicate = NSPredicate(format: predicateFormat,
+//                                    argumentArray: [ "Waalre", "Eindhoven" ] ) TODO
+
 // Preview partially works: doesn't show markers
 @MainActor
 struct OrganizationViewMapPreviews: View {
