@@ -120,6 +120,9 @@ struct PreferencesViewOrganizationsSection: View {
     } // end of body
 }
 
+// MARK: - Previews
+
+// Believe it or not, the following Preview actually works
 private struct PreferencesViewOrgSectionPreviewHost: View {
     @StateObject var model = PreferencesViewModel()
 

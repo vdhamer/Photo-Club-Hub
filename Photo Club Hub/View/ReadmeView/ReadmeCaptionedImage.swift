@@ -33,8 +33,9 @@ struct ReadmeCaptionedImage: View {
     }
 }
 
-// believe it or not, the following Preview does work
-// Preview for ReadmeCaptionedImage
+// MARK: - Previews
+
+// Believe it or not, this preview actually works.
 #Preview("ReadmeCaptionedImage", traits: .portrait) {
     Group {
         Divider()

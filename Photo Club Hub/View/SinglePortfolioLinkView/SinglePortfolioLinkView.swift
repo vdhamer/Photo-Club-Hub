@@ -34,7 +34,10 @@ struct SinglePortfolioLinkView<Content: View>: View {
     }
 }
 
-#Preview { // doesn't really work? but does show something
+// MARK: - Previews
+
+// Believe it or not, this preview actually works.
+#Preview {
     let persistenceController = PersistenceController.shared // for Core Data
     let viewContext = persistenceController.container.viewContext
 
@@ -59,7 +62,9 @@ struct SinglePortfolioLinkView<Content: View>: View {
                                                          optionalFields: MemberOptionalFields())
 
     let wkWebView = WKWebView()
-    SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
-        Text(verbatim: "This is a test Link")
+    NavigationView {
+        SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
+            Text(verbatim: "This is a test Link, so click me!")
+        }
     }
 }

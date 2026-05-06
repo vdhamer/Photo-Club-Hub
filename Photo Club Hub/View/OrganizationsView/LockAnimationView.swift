@@ -58,6 +58,9 @@ struct LockAnimationView: View {
     }
 }
 
+// MARK: - Previews
+
+// This preview only kind-of works
 struct LockAnimation_Previews: PreviewProvider {
     @State private var locked: Bool = true
 

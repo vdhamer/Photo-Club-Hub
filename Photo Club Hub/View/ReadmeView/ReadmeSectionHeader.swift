@@ -50,7 +50,9 @@ struct ReadmeSectionHeader: View {
     }
 }
 
-// believe it or not, the following Preview does work
+// MARK: - Previews
+
+// Believe it or not, this preview actually works.
 #Preview {
     GeometryReader { geo in
         NavigationStack {

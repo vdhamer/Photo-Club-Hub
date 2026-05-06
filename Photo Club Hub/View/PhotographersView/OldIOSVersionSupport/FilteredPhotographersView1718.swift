@@ -128,6 +128,9 @@ struct FilteredPhotographersView1718: View {
     }
 }
 
+// MARK: - Preview
+
+// Unfortunately, the following Preview doesn't work yet.
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 struct FilteredPhotographersViewWrapper1718: View {
     var body: some View {

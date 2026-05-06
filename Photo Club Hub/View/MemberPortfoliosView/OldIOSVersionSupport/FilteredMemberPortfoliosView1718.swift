@@ -239,6 +239,9 @@ struct FilteredMemberPortfoliosView1718: View {
 
 }
 
+// MARK: - Preview
+
+// Unfortunately, the following Preview doesn't work yet.
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView_Previews2626' for versions > iOS 18.x")
 struct FilteredMemberPortfolios1718_Previews: PreviewProvider {
     static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])

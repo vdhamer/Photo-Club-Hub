@@ -42,6 +42,9 @@ struct CrossHairs2626: Shape {
     }
 }
 
+// MARK: - Preview
+
+// Believe it or not, this preview actually works.
 @available(iOS 26.0, *)
 struct Crosshairs2626_Previews: PreviewProvider {
     static let crossHairsWidth: CGFloat = 2

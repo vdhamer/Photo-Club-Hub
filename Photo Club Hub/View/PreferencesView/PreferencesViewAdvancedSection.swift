@@ -43,6 +43,8 @@ private struct PreferencesViewAdvSectionPreviewHost: View {
     }
 }
 
+// MARK: - Preview
+
 // Believe it or not, the following Preview actually works
 #Preview {
     PreferencesViewAdvSectionPreviewHost()

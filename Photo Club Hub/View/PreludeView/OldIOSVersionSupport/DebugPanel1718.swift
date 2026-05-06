@@ -39,6 +39,9 @@ struct DebugPanel1718: View {
     }
 }
 
+// MARK: - Preview
+
+// Believe it or not, this preview actually works.
 @available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")
 struct DebugPanel1718_Previews: PreviewProvider {
     @State private static var debugLocation = CGPoint(x: 0, y: 0)

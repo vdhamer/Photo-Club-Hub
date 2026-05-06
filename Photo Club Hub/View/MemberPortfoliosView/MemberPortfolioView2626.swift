@@ -159,6 +159,8 @@ struct MemberPortfolioView2626: View {
 
 }
 
+// MARK: - Previews
+
 // Unfortunately, the following Preview doesn't work yet.
 @available(iOS 26.0, *)
 struct MemberListView2626_Previews: PreviewProvider {

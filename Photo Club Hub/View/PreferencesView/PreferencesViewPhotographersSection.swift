@@ -32,6 +32,8 @@ private struct PreferencesViewPhotSectionPreviewHost: View {
     }
 }
 
+// MARK: - Previews
+
 // Believe it or not, the following Preview actually works
 #Preview {
         PreferencesViewPhotSectionPreviewHost()

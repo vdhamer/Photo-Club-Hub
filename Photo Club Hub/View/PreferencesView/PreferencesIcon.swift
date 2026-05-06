@@ -19,6 +19,8 @@ struct PreferencesIcon: View {
     }
 }
 
+// MARK: - Previews
+
 // Believe it or not, the following Preview actually works
 #Preview("PreferencesIcon", traits: .portrait) {
     VStack(spacing: 16) {

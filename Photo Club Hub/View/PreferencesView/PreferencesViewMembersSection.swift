@@ -99,6 +99,8 @@ struct PreferencesViewMembersSection: View {
     } // end of body
 }
 
+// MARK: - Previews
+
 // Believe it or not, the following Preview actually works
 private struct PreferencesViewMembersSectionPreviewHost: View {
     @StateObject var model = PreferencesViewModel()

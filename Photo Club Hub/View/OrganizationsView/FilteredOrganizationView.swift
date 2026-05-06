@@ -198,6 +198,9 @@ extension FilteredOrganizationView { // reverse GeoCoding
 
 }
 
+// MARK: - Previews
+
+// Unfortunately, the following Preview doesn't work yet.
 struct FilteredOrganizationView_Previews: PreviewProvider {
     static let organizationPredicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
                                                    argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])

@@ -128,6 +128,9 @@ struct FilteredPhotographerView2626: View {
     }
 }
 
+// MARK: - Previews
+
+// Unfortunately, the following Preview doesn't work yet.
 @available(iOS 26.0, *)
 struct FilteredPhotographersViewWrapper2626: View {
     var body: some View {

@@ -64,7 +64,9 @@ public struct ReadmeSectionOnConcept: View {
     }
 }
 
-// believe it or not, the following Preview does work
+// MARK: - Previews
+
+// Believe it or not, this preview actually works.
 struct ReadmeSectionOnConcept_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 

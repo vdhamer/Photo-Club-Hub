@@ -114,6 +114,9 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
     }
 }
 
+// MARK: - Preview
+
+// Unfortunately, the following Preview doesn't work yet.
 #Preview {
     List {
         ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, unit: .organization)

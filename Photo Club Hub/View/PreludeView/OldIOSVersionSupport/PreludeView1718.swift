@@ -237,6 +237,8 @@ struct PreludeView1718: View {
 
 }
 
+// MARK: - Previews
+
 @available(iOS, obsoleted: 19.0, message: "Please use 'OffsetVectorInCells2626' for versions about iOS 18.x")
 struct OffsetVectorInCells1718 {
     // swiftlint:disable:next identifier_name

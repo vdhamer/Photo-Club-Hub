@@ -288,6 +288,8 @@ struct PreludeView2626: View {
 
 }
 
+// MARK: - Previews
+
 @available(iOS 26.0, *)
 struct OffsetVectorInCells2626 {
     // swiftlint:disable:next identifier_name

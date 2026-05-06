@@ -42,6 +42,9 @@ struct CrossHairs1718: Shape {
     }
 }
 
+// MARK: - Preview
+
+// Believe it or not, this preview actually works.
 @available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")
 struct Crosshairs1718_Previews: PreviewProvider {
     static let crossHairsWidth: CGFloat = 2

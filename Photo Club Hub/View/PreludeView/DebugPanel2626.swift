@@ -40,6 +40,9 @@ struct DebugPanel2626: View {
     }
 }
 
+// MARK: - Preview
+
+// Believe it or not, this preview actually works.
 @available(iOS 26.0, *)
 struct DebugPanel2626_Previews: PreviewProvider {
     @State private static var debugLocation = CGPoint(x: 0, y: 0)
@@ -77,6 +80,5 @@ struct DebugPanel2626_Previews: PreviewProvider {
                 }
             }
         }
-
     }
 }

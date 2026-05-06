@@ -26,7 +26,10 @@ struct SinglePortfolioView: UIViewRepresentable {
 
 }
 
-// only visible when canvas is simulating/running
+// MARK: - Preview
+
+// only visible when canvas is simulating/running (?)
+// Believe it or not, this preview actually works.
 struct SinglePortfolioView_Previews: PreviewProvider {
 
     static var webView = WKWebView()

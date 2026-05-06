@@ -118,6 +118,8 @@ struct NoClubsText: View {
     }
 }
 
+// MARK: Previews
+
 /// This preview doesn't work yet
 #Preview {
     NavigationStack {

@@ -53,6 +53,7 @@ struct OrganizationViewTitle: View {
 
 // MARK: - Preview
 
+// Believe it or not, these previews actually works.
 #Preview {
     VStack(alignment: .leading) {
         OrganizationViewTitle(organizationFullName: "Fotogroep Waalre",

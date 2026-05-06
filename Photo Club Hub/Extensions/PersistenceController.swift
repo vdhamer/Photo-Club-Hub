@@ -51,6 +51,9 @@ public struct PersistenceController: Sendable {
 
     }
 
+    // MARK: - Preview
+
+    // Not sure anymore what this preview does: it doesn't return a View
     public static let preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
