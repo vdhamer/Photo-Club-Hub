@@ -65,3 +65,77 @@ struct OrganizationViewMap: View {
         )
     }
 }
+
+// MARK: - Preview
+
+// Preview partially works: doesn't show markers
+@MainActor
+struct OrganizationViewMapPreviews: View {
+
+    let context: NSManagedObjectContext
+    @ObservedObject var organization: Organization
+    @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
+
+    init() {
+        let container = NSPersistentContainer(name: "Photo_Club_Hub")
+        container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
+        container.loadPersistentStores { _, _ in }
+        self.context = container.viewContext
+
+        self.organization = Organization.findCreateUpdate(context: context,
+                                                          organizationTypeEnum: OrganizationTypeEnum.club,
+                                                          idPlus: OrganizationIdPlus(fullName: "Fotogroep Waalre",
+                                                                                     town: "Waalre",
+                                                                                     nickname: "fgWaalre"),
+                                                          coordinates: CLLocationCoordinate2D(latitude: 51.39184,
+                                                                                              longitude: 5.46144),
+                                                          removeOrganization: false,
+                                                          optionalFields: OrganizationOptionalFields(),
+                                                          pinned: false)
+
+        _ = Level1JsonReader(bgContext: context, isBeingTested: false, useOnlyInBundleFile: false)
+
+        // Save the context so the fetch request can find the data
+        do {
+            try context.save()
+            print("Preview: successfully saved preview input data")
+        } catch {
+            fatalError("Couldn't save preview data: \(error)")
+        }
+
+        let sortDescriptors: [SortDescriptor] = [
+            SortDescriptor(\Organization.pinned, order: .reverse), // pinned clubs first
+            SortDescriptor(\Organization.organizationType_?.organizationTypeName_, order: .forward),
+            SortDescriptor(\Organization.fullName_, order: .forward), // photoclubID=name&town
+            SortDescriptor(\Organization.town_, order: .forward)
+        ]
+
+        //        let predicateFormat: String = "town_ = %@ || town_ = %@" // avoid localization
+        //        let predicate = NSPredicate(format: predicateFormat,
+        //                                    argumentArray: [ "Waalre", "Eindhoven" ] ) TODO
+        let predicate = NSPredicate(format: "TRUEPREDICATE")
+        _fetchedOrganizations = FetchRequest<Organization>(
+            sortDescriptors: sortDescriptors, // replaces previous fetchRequest
+            predicate: predicate,
+            animation: .easeIn
+        )
+        print("Preview: \(fetchedOrganizations.count) returned organizations")
+    }
+
+    var body: some View {
+        OrganizationViewMap(filteredOrganization: organization, fetchedOrganizations: fetchedOrganizations)
+            .onAppear {
+                organization.isMapScrollLocked = false
+            }
+    }
+
+}
+
+#Preview {
+    VStack(alignment: .leading) {
+        Divider()
+        OrganizationViewMapPreviews()
+        Divider()
+    }
+    .padding(30)
+}
