@@ -68,7 +68,7 @@ struct OrganizationViewMap: View {
 
 // MARK: - Preview
 
-// Preview partially works: doesn't show markers
+// Preview only partially works: it doesn't show markers
 @MainActor
 struct OrganizationViewMapPreviews: View {
 
@@ -81,6 +81,10 @@ struct OrganizationViewMapPreviews: View {
         container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         container.loadPersistentStores { _, _ in }
         self.context = container.viewContext
+
+        // ensure OrganizationTypeEnum.club is in Core Data
+        // This may not be needed if OrganizationType.findCreateUpdate creates whatever we are looking for
+        OrganizationType.initConstants(context: context)
 
         self.organization = Organization.findCreateUpdate(context: context,
                                                           organizationTypeEnum: OrganizationTypeEnum.club,
@@ -112,8 +116,9 @@ struct OrganizationViewMapPreviews: View {
 
         //        let predicateFormat: String = "town_ = %@ || town_ = %@" // avoid localization
         //        let predicate = NSPredicate(format: predicateFormat,
-        //                                    argumentArray: [ "Waalre", "Eindhoven" ] ) TODO
+        //                                    argumentArray: [ "Waalre", "Eindhoven" ] )
         let predicate = NSPredicate(format: "TRUEPREDICATE")
+
         _fetchedOrganizations = FetchRequest<Organization>(
             sortDescriptors: sortDescriptors, // replaces previous fetchRequest
             predicate: predicate,
