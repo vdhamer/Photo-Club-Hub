@@ -48,7 +48,7 @@ struct FilteredOrganizationView: View {
 
             VStack(alignment: .leading) {
 
-                OrganizationViewTitle(filteredOrganization: filteredOrganization)
+                OrganizationViewTitle(organization: filteredOrganization)
 
                 OrganizationViewInfo(filteredOrganization: filteredOrganization)
 
