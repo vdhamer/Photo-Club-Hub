@@ -155,3 +155,103 @@ struct PhotographersTextInfo: View {
     }
 
 }
+
+// MARK: - Previews
+
+// Believe it or not, these 3 previews actually works.
+#Preview("Photographer with Birthday soon") {
+    let controller = PersistenceController(inMemory: true)
+    let context = controller.container.viewContext
+
+    // Create a photographer with a birthday coming up
+    let calendar = Calendar.current
+    let today = Date()
+    // Set birthday to 3 days from now
+    let birthdayComponents = calendar.dateComponents([.month, .day],
+                                                     from: calendar.date(byAdding: .day, value: 3, to: today)!)
+    var dateComponents = DateComponents()
+    dateComponents.month = birthdayComponents.month
+    dateComponents.day = birthdayComponents.day
+    dateComponents.year = 1975 // Some year in the past
+    let birthdayDate = calendar.date(from: dateComponents)!
+
+    let photographer = Photographer.findCreateUpdate(
+        context: context,
+        personName: PersonName(givenName: "Jane", infixName: "van", familyName: "Doe"),
+        optionalFields: PhotographerOptionalFields(
+            bornDT: birthdayDate,
+            isDeceased: false,
+            photographerWebsite: URL(string: "https://www.janedoe-photography.com")
+        )
+    )
+
+    try? context.save()
+
+    return VStack(alignment: .leading) {
+        VStack {
+            PhotographersTextInfo(photographer: photographer)
+                .border(Color.gray.opacity(0.3), width: 1)
+            Divider()
+            Text(verbatim: "Preview: Photographer with birthday in 3 days")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
+}
+
+#Preview("Deceased Photographer") {
+    let controller = PersistenceController(inMemory: true)
+    let context = controller.container.viewContext
+
+    // Create a photographer
+    let photographer = Photographer.findCreateUpdate(
+        context: context,
+        personName: PersonName(givenName: "John", infixName: "", familyName: "Smith"),
+        optionalFields: PhotographerOptionalFields(
+            bornDT: Date(timeIntervalSince1970: 315532800), // January 1, 1980
+            isDeceased: true,
+            photographerWebsite: URL(string: "https://www.johnsmith-memorial.org")
+        )
+    )
+
+    try? context.save()
+
+    return VStack(alignment: .leading) {
+        VStack {
+            PhotographersTextInfo(photographer: photographer)
+                .border(Color.gray.opacity(0.3), width: 1)
+            Divider()
+            Text(verbatim: "Preview: Deceased photographer")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
+}
+
+#Preview("Photographer Without Website") {
+    let controller = PersistenceController(inMemory: true)
+    let context = controller.container.viewContext
+
+    let photographer = Photographer.findCreateUpdate(
+        context: context,
+        personName: PersonName(givenName: "Alice", infixName: "de", familyName: "Berg"),
+        optionalFields: PhotographerOptionalFields(
+            bornDT: nil,
+            isDeceased: false,
+            photographerWebsite: nil
+        )
+    )
+
+    try? context.save()
+
+    return VStack(alignment: .leading) {
+        VStack {
+            PhotographersTextInfo(photographer: photographer)
+                .border(Color.gray.opacity(0.3), width: 1)
+            Divider()
+            Text(verbatim: "Preview: No birthday or website")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
+}
