@@ -118,9 +118,9 @@ struct NoClubsText: View {
     }
 }
 
-// MARK: Previews
+// MARK: - Previews
 
-/// This preview doesn't work yet
+// Unfortunately, the following Preview doesn't work yet.
 #Preview {
     NavigationStack {
         OrganizationView()
