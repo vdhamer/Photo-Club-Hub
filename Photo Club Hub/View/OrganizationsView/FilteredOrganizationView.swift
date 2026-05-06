@@ -55,7 +55,7 @@ struct FilteredOrganizationView: View {
                 OrganizationViewMap(filteredOrganization: filteredOrganization,
                                     fetchedOrganizations: fetchedOrganizations) // to show all markers within map scope
 
-                OrganizationViewRemark(filteredOrganization: filteredOrganization)
+                OrganizationViewRemark(organization: filteredOrganization)
 
             } // VStack
             .id(filteredOrganization.id)
