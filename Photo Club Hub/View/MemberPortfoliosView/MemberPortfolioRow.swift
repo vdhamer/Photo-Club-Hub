@@ -111,7 +111,7 @@ struct MemberPortfolioRow: View {
             .clipped()
             .contentShape(Rectangle())
             .onTapGesture(perform: {
-                if member.photographer.photographerImage != nil {
+                if isThumbnailFlippable(member: member) {
                     flipImageFlag.toggle()
                 }
             })
@@ -119,7 +119,7 @@ struct MemberPortfolioRow: View {
             VStack {
                 SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {EmptyView()}
                 Spacer()
-                if member.photographer.photographerImage != nil {
+                if isThumbnailFlippable(member: member) {
                     Text(imageFlippedIndicator())
                         .onTapGesture(perform: {
                             flipImageFlag.toggle()
@@ -147,6 +147,12 @@ struct MemberPortfolioRow: View {
 
     private func imageFlippedIndicator() -> String {
         flipImageFlag ? "↺" : "↻"
+    }
+
+    private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
+        return
+            member.photographer.photographerImage != nil && // there are two images defined for this member
+            member.photographer.photographerImage != member.featuredImage // and the two images are different
     }
 
 }
