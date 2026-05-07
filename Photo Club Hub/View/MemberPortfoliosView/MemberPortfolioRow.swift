@@ -85,7 +85,7 @@ struct MemberPortfolioRow: View {
 
             Spacer()
 
-            AsyncImage(url: chooseImageURL(member: member, isImageFlipped: flipImageFlag).url) { phase in
+            AsyncImage(url: ImageChoice(member: member, isImageFlipped: flipImageFlag, preferenceForFeaturedImage: true).url) { phase in // TODO replace `true`
                 if let image = phase.image {
                     image // Displays the loaded image
                         .resizable()

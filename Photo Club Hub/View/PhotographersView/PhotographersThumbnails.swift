@@ -42,10 +42,12 @@ struct PhotographersThumbnails: View {
 struct PhotographersThumbnail: View {
     var membership: MemberPortfolio // who is this about?
     var wkWebView: WKWebView // reusable WKWebView
+    /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
+    @State var flipImageFlag: Bool = false
 
     var body: some View {
         VStack { // to combine image and caption
-            AsyncImage(url: membership.featuredImage) { phase in
+            AsyncImage(url: ImageChoice(member: membership, isImageFlipped: flipImageFlag, preferenceForFeaturedImage: true).url) { phase in // TODO replace `true`
                 if let image = phase.image {
                     ZStack(alignment: .bottom) {
                         image // Displays the loaded image
@@ -73,6 +75,12 @@ struct PhotographersThumbnail: View {
             .frame(width: 160, height: 160) // square
             .clipShape(RoundedRectangle(cornerRadius: 25))
             .shadow(color: .accentColor.opacity(0.5), radius: 3)
+            .contentShape(Rectangle())
+            .onTapGesture(perform: {
+                if isThumbnailFlippable(member: membership) {
+                    flipImageFlag.toggle()
+                }
+            })
 
             Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
                 .frame(width: 160, height: 35)
@@ -82,6 +90,12 @@ struct PhotographersThumbnail: View {
                 .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
                     ...DynamicTypeSize.large)
         } // VStack to combine image and caption
+    }
+
+    private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
+        return
+            member.photographer.photographerImage != nil && // there are two images defined for this member
+            member.photographer.photographerImage != member.featuredImage // and the two images are different
     }
 }
 
