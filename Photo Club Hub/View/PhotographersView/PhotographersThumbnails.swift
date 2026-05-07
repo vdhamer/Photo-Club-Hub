@@ -115,19 +115,28 @@ struct PhotographersThumbnail: View {
     }
 }
 
+/// function (for preview only) is used to circumvent a limitation of #Preview that resulting in type checking error
+extension PhotographersThumbnail {
+
+    fileprivate static func makeFetchRequest(predicate: NSPredicate) -> NSFetchRequest<Photographer> {
+        let fetchRequest = Photographer.fetchRequest()
+        fetchRequest.predicate = predicate
+        return fetchRequest
+    }
+
+}
+
 #Preview("Photographer with Multiple Memberships") {
     let wkWebView = WKWebView()
-    let controller = PersistenceController.shared
+    let controller = PersistenceController.preview
     let context = controller.container.viewContext
 
     // Get first photographer from preview data (should have memberships)
-    let personName = PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer")
+    let personName = PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau1")
     let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
     let predicate = NSPredicate(format: predicateFormat,
                                 argumentArray: [ personName.givenName, personName.infixName, personName.familyName ])
-    let fetchRequest = Photographer.fetchRequest()
-
-//    fetchRequest.predicate = predicate
+    let fetchRequest = PhotographersThumbnail.makeFetchRequest(predicate: predicate)
 
     let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
 
@@ -137,7 +146,7 @@ struct PhotographersThumbnail: View {
                 Text(verbatim: "Photographer: \(photographer.fullNameFirstLast)")
                     .font(.headline)
 
-                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView)
+                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView) // wkWebView needed?
                     .border(Color.gray.opacity(0.7), width: 1)
 
                 Text(verbatim: "Preview: Horizontal scrolling thumbnails")
@@ -146,8 +155,10 @@ struct PhotographersThumbnail: View {
             }
             .padding()
         }
+        .border(Color.gray.opacity(0.7), width: 1)
     } else {
-        Text("No photographer data available")
+        Text(verbatim: "No photographer data available")
             .foregroundStyle(.secondary)
+            .border(Color.gray.opacity(0.7), width: 1)
     }
 }
