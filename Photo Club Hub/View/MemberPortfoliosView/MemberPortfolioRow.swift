@@ -18,7 +18,7 @@ import CoreData // for NSManagedObjectContext
 struct MemberPortfolioRow: View {
     /// The member portfolio model used to populate this row.
     var member: MemberPortfolio
-    /// Shared `WKWebView` instance used by downstream views for web content.
+    /// Shared `WKWebView` instance passed to downstream views that render web content.
     let wkWebView: WKWebView
     /// Localized connector text used as '<person> of <photo club>'.
     private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
