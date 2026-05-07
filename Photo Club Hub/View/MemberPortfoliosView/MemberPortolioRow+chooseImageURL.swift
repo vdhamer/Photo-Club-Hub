@@ -9,14 +9,14 @@ import Foundation // for URL
 
 extension MemberPortfolioRow {
 
-    enum ImageContent {
-        case featuredImage
-        case photographerImage
+    enum ImageContentType {
+        case featuredImageType
+        case photographerImageType
     }
 
     struct ImageChoice {
         let url: URL
-        let content: ImageContent
+        let content: ImageContentType
     }
 
     func chooseImageURL(member: MemberPortfolio, isImageFlipped: Bool) -> ImageChoice {
@@ -24,25 +24,25 @@ extension MemberPortfolioRow {
 
         if isImageFlipped == false {
             if preferenceForFeaturedImage {
-                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImage) // non-optional
+                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImageType) // non-optional
             }
 
             if let photographerImageURL = member.photographer.photographerImage {
-                return ImageChoice(url: photographerImageURL, content: .photographerImage)
+                return ImageChoice(url: photographerImageURL, content: .photographerImageType)
             }
         }
 
         if isImageFlipped {
             if preferenceForFeaturedImage == true, let photographerImageURL = member.photographer.photographerImage {
-                return ImageChoice(url: photographerImageURL, content: .photographerImage)
+                return ImageChoice(url: photographerImageURL, content: .photographerImageType)
             }
 
             if preferenceForFeaturedImage == false {
-                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImage)
+                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImageType)
             }
         }
 
-        return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImage)
+        return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImageType)
     }
 
 }
