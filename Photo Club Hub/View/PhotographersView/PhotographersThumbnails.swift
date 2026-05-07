@@ -149,9 +149,16 @@ extension PhotographersThumbnail {
                 PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView) // wkWebView needed?
                     .border(Color.gray.opacity(0.7), width: 1)
 
-                Text(verbatim: "Preview: Horizontal scrolling thumbnails")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                Divider()
+                HStack {
+                    Spacer()
+                    Text(verbatim: "Preview: Horizontal scrolling thumbnails")
+                        .font(.caption)
+                        .italic()
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                }
+
             }
             .padding()
         }

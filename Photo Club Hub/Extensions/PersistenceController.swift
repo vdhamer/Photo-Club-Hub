@@ -63,13 +63,30 @@ public struct PersistenceController: Sendable {
                                                               status: [.deceased: ((index % 4) == 0),
                                                                        .former: ((index % 4) == 1)]
             )
-            let organization = Organization.findCreateUpdate(
+            let organizationA = Organization.findCreateUpdate(
                 context: viewContext, // on main thread
                 organizationTypeEnum: .club,
                 idPlus: OrganizationIdPlus(
-                    fullName: "PhotoClub\(index)",
+                    fullName: "PhotoClub\(index)A",
                     town: "Town\(index)",
-                    nickname: "ClubNick\(index)"
+                    nickname: "ClubNick\(index)A"
+                ),
+                coordinates: CLLocationCoordinate2D( // spread around BeNeLux
+                    latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
+                    longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
+                optionalFields: OrganizationOptionalFields(
+                    organizationWebsite: URL(string: "http://www.example.com/\(index)"),
+                    fotobondClubNumber: FotobondClubNumber(id: Int16(index*1111))
+                ),
+                pinned: (index % 4 == 0)
+            )
+            let organizationB = Organization.findCreateUpdate(
+                context: viewContext, // on main thread
+                organizationTypeEnum: .club,
+                idPlus: OrganizationIdPlus(
+                    fullName: "PhotoClub\(index)B",
+                    town: "Town\(index)",
+                    nickname: "ClubNick\(index)B"
                 ),
                 coordinates: CLLocationCoordinate2D( // spread around BeNeLux
                     latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
@@ -87,14 +104,26 @@ public struct PersistenceController: Sendable {
                     bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
                     isDeceased: memberRolesAndStatus.isDeceased(),
                     photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
-                    photographerImage: nil
+                    photographerImage: URL(string: "https://picsum.photos/200")
                 )
             )
-            let memberPortfolio = MemberPortfolio.findCreateUpdate(
+            _ = MemberPortfolio.findCreateUpdate(
                 bgContext: viewContext,
-                organization: organization,
+                organization: organizationA,
                 photographer: photographer,
-                optionalFields: MemberOptionalFields( memberRolesAndStatus: memberRolesAndStatus )
+                optionalFields: MemberOptionalFields(
+                    featuredImage: URL(string: "https://picsum.photos/300"), // image is dynamically generated
+                    memberRolesAndStatus: memberRolesAndStatus
+                )
+            )
+            _ = MemberPortfolio.findCreateUpdate(
+                bgContext: viewContext,
+                organization: organizationB,
+                photographer: photographer,
+                optionalFields: MemberOptionalFields(
+                    featuredImage: URL(string: "https://picsum.photos/300"), // image is dynamically generated
+                    memberRolesAndStatus: memberRolesAndStatus
+                )
             )
         }
 
