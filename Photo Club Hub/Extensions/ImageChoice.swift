@@ -7,54 +7,62 @@
 
 import Foundation // for URL
 
-/// Chooses between a member’s featured image and the photographer’s image based on a user preference and a “flipped” flag.
+/// Picks which of a member's two images (featured vs. photographer portrait) to display, and exposes its URL.
+///
+/// The choice is driven by the user's Preferences setting and a per-thumbnail flip toggle,
+/// with a fallback to whichever image is available.
 struct ImageChoice {
 
+    /// Identifies the two candidate image types that can be selected.
     enum ImageContentType {
-        case featuredImageType
-        case photographerImageType
+        case featured
+        case photographer
     }
 
+    /// URL of the selected image (featuredImage or photographerImage).
     let url: URL
+    /// Indicates which of the two images was selected.
     let content: ImageContentType
 
+    /// Selects an image for a given `member`, honoring the user's preference and the current flip state.
+    /// - Parameters:
+    ///   - member: The portfolio supplying the candidate image URLs.
+    ///   - isImageFlipped: When `true`, swaps the preferred and fallback choices (e.g. after a tap-to-toggle).
+    ///   - preferenceForFeaturedImage: When `true`, the featured image is preferred over the photographer portrait.
     init(member: MemberPortfolio, isImageFlipped: Bool, preferenceForFeaturedImage: Bool) {
+        // Determine the preferred order based on the setting in Preferences and the flip state
+        let preference: ImageContentType
+        let alternative: ImageContentType
 
-        if isImageFlipped == false {
-            if preferenceForFeaturedImage {
-//                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImageType) // non-optional
-                self.url = member.featuredImageThumbnail
-                self.content = .featuredImageType
-                return
-            }
-
-            if let photographerImageURL = member.photographer.photographerImage {
-//                return ImageChoice(url: photographerImageURL, content: .photographerImageType)
-                self.url = photographerImageURL
-                self.content = .photographerImageType
-                return
-            }
+        if preferenceForFeaturedImage {
+            preference = isImageFlipped ? .photographer : .featured
+            alternative = isImageFlipped ? .featured : .photographer
+        } else {
+            preference = isImageFlipped ? .featured : .photographer
+            alternative = isImageFlipped ? .photographer : .featured
         }
 
-        if isImageFlipped {
-            if preferenceForFeaturedImage == true, let photographerImageURL = member.photographer.photographerImage {
-//                return ImageChoice(url: photographerImageURL, content: .photographerImageType)
-                self.url = photographerImageURL
-                self.content = .photographerImageType
-                return
-            }
-
-            if preferenceForFeaturedImage == false {
-//                return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImageType)
-                self.url = member.featuredImageThumbnail
-                self.content = .featuredImageType
-                return
-            }
+        // Pick the first available in the chosen order, fallback to featured
+        if let primaryURL = url(for: preference) {
+            self.url = primaryURL
+            self.content = preference
+        } else if let secondaryURL = url(for: alternative) {
+            self.url = secondaryURL
+            self.content = alternative
+        } else {
+            self.url = member.featuredImageThumbnail
+            self.content = .featured
         }
 
-//        return ImageChoice(url: member.featuredImageThumbnail, content: .featuredImageType)
-        self.url = member.featuredImageThumbnail
-        self.content = .featuredImageType
+        // Helper to get a URL for a given content type
+        func url(for type: ImageContentType) -> URL? {
+            switch type {
+            case .featured:
+                return member.featuredImageThumbnail
+            case .photographer:
+                return member.photographer.photographerImage
+            }
+        }
     }
 
 }
