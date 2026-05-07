@@ -22,9 +22,7 @@ struct PhotographersThumbnails: View {
         ScrollView(.horizontal, showsIndicators: true) { // 2nd row with images in photographer's "card"
             HStack { // to support multiple portfolio previews in one row
                 ForEach(photographer.memberships.sorted(), id: \.id) { membership in
-                    SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
-                        PhotographersThumbnail(membership: membership, wkWebView: wkWebView)
-                    } // SinglePortfolioLinkView
+                    PhotographersThumbnail(membership: membership, wkWebView: wkWebView)
                 } // ForEach
             } // HStack to support multiple portfolio previews in one row
             .scrollTargetLayout() // unit of horizontal "smart" scrolling, iOS smart scrolling
