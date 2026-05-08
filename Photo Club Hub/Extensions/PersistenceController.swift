@@ -58,62 +58,68 @@ public struct PersistenceController: Sendable {
     public static let preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for index in 1...10 {
-            let memberRolesAndStatus =  MemberRolesAndStatus( roles: [.chairman: (index==1),
-                                                                      .treasurer: (index==2)],
-                                                              status: [.deceased: ((index % 4) == 0),
-                                                                       .former: ((index % 4) == 1)]
+        for photographerIndex in 1...10 {
+            let memberRolesAndStatus =  MemberRolesAndStatus( roles: [.chairman: (photographerIndex==1),
+                                                                      .treasurer: (photographerIndex==2)],
+                                                              status: [.deceased: ((photographerIndex % 4) == 0),
+                                                                       .former: ((photographerIndex % 4) == 1)]
             )
+
+            // create photographers
+            let photographer = Photographer.findCreateUpdate(
+                context: viewContext, // on main thread
+                personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(photographerIndex)"),
+                optionalFields: PhotographerOptionalFields(
+                    bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
+                    isDeceased: memberRolesAndStatus.isDeceased(),
+                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(photographerIndex)"),
+                    photographerImage: URL(string: "https://picsum.photos/200")
+                )
+            )
+
+            // create 2 new organizations per photographer
             let organizationA = Organization.findCreateUpdate(
                 context: viewContext, // on main thread
                 organizationTypeEnum: .club,
                 idPlus: OrganizationIdPlus(
-                    fullName: "PhotoClub\(index)A",
-                    town: "Town\(index)",
-                    nickname: "ClubNick\(index)A"
+                    fullName: "PhotoClub\(photographerIndex)A",
+                    town: "Town\(photographerIndex)",
+                    nickname: "ClubNick\(photographerIndex)A"
                 ),
                 coordinates: CLLocationCoordinate2D( // spread around BeNeLux
                     latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
                     longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
                 optionalFields: OrganizationOptionalFields(
-                    organizationWebsite: URL(string: "http://www.example.com/\(index)"),
-                    fotobondClubNumber: FotobondClubNumber(id: Int16(index*1111))
+                    organizationWebsite: URL(string: "http://www.example.com/\(photographerIndex)"),
+                    fotobondClubNumber: FotobondClubNumber(id: Int16(photographerIndex*1111))
                 ),
-                pinned: (index % 4 == 0)
+                pinned: (photographerIndex % 4 == 0)
             )
             let organizationB = Organization.findCreateUpdate(
                 context: viewContext, // on main thread
                 organizationTypeEnum: .club,
                 idPlus: OrganizationIdPlus(
-                    fullName: "PhotoClub\(index)B",
-                    town: "Town\(index)",
-                    nickname: "ClubNick\(index)B"
+                    fullName: "PhotoClub\(photographerIndex)B",
+                    town: "Town\(photographerIndex)",
+                    nickname: "ClubNick\(photographerIndex)B"
                 ),
                 coordinates: CLLocationCoordinate2D( // spread around BeNeLux
                     latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
                     longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
                 optionalFields: OrganizationOptionalFields(
-                    organizationWebsite: URL(string: "http://www.example.com/\(index)"),
-                    fotobondClubNumber: FotobondClubNumber(id: Int16(index*1111))
+                    organizationWebsite: URL(string: "http://www.example.com/\(photographerIndex)"),
+                    fotobondClubNumber: FotobondClubNumber(id: Int16(photographerIndex*1111))
                 ),
-                pinned: (index % 4 == 0)
+                pinned: (photographerIndex % 4 == 0)
             )
-            let photographer = Photographer.findCreateUpdate(
-                context: viewContext, // on main thread
-                personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
-                optionalFields: PhotographerOptionalFields(
-                    bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
-                    isDeceased: memberRolesAndStatus.isDeceased(),
-                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
-                    photographerImage: URL(string: "https://picsum.photos/200")
-                )
-            )
+
+            // make photographer member of clubs
             _ = MemberPortfolio.findCreateUpdate(
                 bgContext: viewContext,
                 organization: organizationA,
                 photographer: photographer,
                 optionalFields: MemberOptionalFields(
-                    featuredImage: URL(string: "https://picsum.photos/300"), // image is dynamically generated
+                    featuredImage: URL(string: "https://picsum.photos/200"), // image is dynamically chosen
                     memberRolesAndStatus: memberRolesAndStatus
                 )
             )
@@ -122,7 +128,7 @@ public struct PersistenceController: Sendable {
                 organization: organizationB,
                 photographer: photographer,
                 optionalFields: MemberOptionalFields(
-                    featuredImage: URL(string: "https://picsum.photos/300"), // image is dynamically generated
+                    featuredImage: URL(string: "https://picsum.photos/200"), // image is dynamically chosen
                     memberRolesAndStatus: memberRolesAndStatus
                 )
             )
