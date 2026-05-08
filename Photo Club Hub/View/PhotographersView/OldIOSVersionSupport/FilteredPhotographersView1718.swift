@@ -18,7 +18,7 @@ import WebKit // for WKWebView
 //          - some textual information
 //          - a horizontally scrolling list of thumbnails representing portfolios
 
-@available(iOS, deprecated: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 struct FilteredPhotographerView1718: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
@@ -116,7 +116,8 @@ struct FilteredPhotographerView1718: View {
 
 }
 
-private struct PhotographerIconView1718: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+struct PhotographerIconView1718: View {
     let isDeceased: Bool
 
     var body: some View {
@@ -134,7 +135,7 @@ private struct PhotographerIconView1718: View {
 // The first one was generated in a lengthy session by Claude Code (Opus 4.7).
 // The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-#Preview {
+#Preview("FilteredPhotographerView1718") {
     NavigationStack {
         List {
             FilteredPhotographerView1718(predicate: NSPredicate(value: true),
