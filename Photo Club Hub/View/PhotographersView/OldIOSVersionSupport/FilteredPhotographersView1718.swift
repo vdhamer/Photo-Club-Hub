@@ -18,7 +18,7 @@ import WebKit // for WKWebView
 //          - some textual information
 //          - a horizontally scrolling list of thumbnails representing portfolios
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+@available(iOS, deprecated: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 struct FilteredPhotographerView1718: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
@@ -47,7 +47,7 @@ struct FilteredPhotographerView1718: View {
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
 
-                    PhotographerIconView(isDeceased: photographer.isDeceased)
+                    PhotographerIconView1718(isDeceased: photographer.isDeceased)
                         .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
                         .font(.title3)
                         .frame(width: 35)
@@ -116,7 +116,7 @@ struct FilteredPhotographerView1718: View {
 
 }
 
-private struct PhotographerIconView: View {
+private struct PhotographerIconView1718: View {
     let isDeceased: Bool
 
     var body: some View {
@@ -145,14 +145,15 @@ private struct PhotographerIconView: View {
     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
 
-#Preview("PhotographerIconView") {
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+#Preview("PhotographerIconView1718") {
     VStack(spacing: 20) {
         HStack {
-            PhotographerIconView(isDeceased: false)
+            PhotographerIconView1718(isDeceased: false)
             Text(verbatim: "isDeceased: false")
         }
         HStack {
-            PhotographerIconView(isDeceased: true)
+            PhotographerIconView1718(isDeceased: true)
             Text(verbatim: "isDeceased: true")
         }
     }
