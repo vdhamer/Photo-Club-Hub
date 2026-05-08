@@ -22,7 +22,7 @@ struct PhotographersThumbnails: View {
         ScrollView(.horizontal, showsIndicators: true) { // 2nd row with images in photographer's "card"
             HStack { // to support multiple portfolio previews in one row
                 ForEach(photographer.memberships.sorted(), id: \.id) { membership in
-                    PhotographersThumbnail(membership: membership, wkWebView: wkWebView)
+                    PhotographersThumbnail(member: membership, wkWebView: wkWebView)
                 } // ForEach
             } // HStack to support multiple portfolio previews in one row
             .scrollTargetLayout() // unit of horizontal "smart" scrolling, iOS smart scrolling
@@ -40,14 +40,14 @@ struct PhotographersThumbnails: View {
 // No preview because it didn't work.
 
 struct PhotographersThumbnail: View {
-    var membership: MemberPortfolio // who is this about?
+    var member: MemberPortfolio // who is this about?
     var wkWebView: WKWebView // reusable WKWebView
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
 
     var body: some View {
         VStack { // to combine image and caption
-            AsyncImage(url: ImageChoice(member: membership,
+            AsyncImage(url: ImageChoice(member: member,
                                         isImageFlipped: flipImageFlag,
                                         preferenceForFeaturedImage: true).url) { phase in // TODO replace `true`
                 if let image = phase.image {
@@ -58,7 +58,7 @@ struct PhotographersThumbnail: View {
                             .frame(height: 160)
                     }
                 } else if phase.error != nil ||
-                            membership.featuredImage == nil {
+                            member.featuredImage == nil {
                     Image("Question-mark") // image indicates an error occurred
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -79,12 +79,12 @@ struct PhotographersThumbnail: View {
             .shadow(color: .accentColor.opacity(0.5), radius: 3)
             .contentShape(Rectangle())
             .onTapGesture(perform: {
-                if isThumbnailFlippable(member: membership) {
+                if isThumbnailFlippable(member: member) {
                     flipImageFlag.toggle()
                 }
             })
 
-            Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
+            Text(verbatim: "\(member.roleDescriptionOfClubTown)")
                 .frame(width: 160, height: 35)
                 .font(.caption)
                 .lineLimit(2)
@@ -119,7 +119,7 @@ struct PhotographersThumbnail: View {
                 .font(.headline)
             Divider()
 
-            PhotographersThumbnail(membership: membership, wkWebView: wkWebView)
+            PhotographersThumbnail(member: membership, wkWebView: wkWebView)
                 .border(Color.gray.opacity(0.3), width: 1)
         }
         .padding()
