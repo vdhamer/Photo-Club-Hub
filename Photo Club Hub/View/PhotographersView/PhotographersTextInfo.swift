@@ -39,16 +39,17 @@ struct PhotographersTextInfo: View {
             // first green line with icon and name of photographer
             let alive: String = photographer.isDeceased ? // generate name suffix
                 (" - " + MemberStatus.deceased.displayName) : ""
-            let nameText = Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
+            let websiteLabelText = Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
                 .font(.title3)
                 .tracking(1)
-            if let firstMembership = photographer.memberships.sorted().first {
-                SinglePortfolioLinkView(destPortfolio: firstMembership, wkWebView: wkWebView) {
-                    nameText
-                }
-                .buttonStyle(.borderless)
+            // links to personal (not club-related) web site if available
+            if let url: URL = photographer.photographerWebsite {
+                Link(destination: url, label: {
+                    websiteLabelText
+                })
+                .buttonStyle(.plain)
             } else {
-                nameText
+                websiteLabelText
             }
 
             if let date: Date = photographer.bornDT {
