@@ -116,6 +116,7 @@ struct FilteredPhotographerView2626: View {
 
 }
 
+@available(iOS 26.0, *)
 private struct PhotographerIconView2626: View {
     let isDeceased: Bool
 
@@ -134,7 +135,7 @@ private struct PhotographerIconView2626: View {
 // The first one was generated in a lengthy session by Claude Code (Opus 4.7).
 // The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS 26.0, *)
-#Preview {
+#Preview("FilteredPhotographerView2626") {
     NavigationStack {
         List {
             FilteredPhotographerView2626(predicate: NSPredicate(value: true),
@@ -147,17 +148,19 @@ private struct PhotographerIconView2626: View {
 
 @available(iOS 26.0, *)
 #Preview("PhotographerIconView2626") {
-    VStack(spacing: 20) {
-        HStack {
-            PhotographerIconView2626(isDeceased: false)
-            Text(verbatim: "isDeceased: false")
+    NavigationStack {
+        VStack(spacing: 20) {
+            HStack {
+                PhotographerIconView2626(isDeceased: false)
+                Text(verbatim: "isDeceased: false")
+            }
+            HStack {
+                PhotographerIconView2626(isDeceased: true)
+                Text(verbatim: "isDeceased: true")
+            }
         }
-        HStack {
-            PhotographerIconView2626(isDeceased: true)
-            Text(verbatim: "isDeceased: true")
-        }
-    }
-    .font(.title3)
-    .foregroundStyle(.photographerColor, .gray, .red)
-    .padding()
+        .font(.title3)
+        .foregroundStyle(.photographerColor, .gray, .red)
+        .padding()
+    }    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
