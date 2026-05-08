@@ -65,7 +65,7 @@ struct ReadmeView: View {
 
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Believe it or not, this preview actually works.
 struct ReadmeView_Previews: PreviewProvider {

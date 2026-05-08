@@ -40,7 +40,7 @@ struct OrganizationViewRemark: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 #Preview {
     VStack(alignment: .leading, spacing: 12) {

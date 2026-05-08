@@ -40,7 +40,7 @@ struct DebugPanel2626: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Believe it or not, this preview actually works.
 @available(iOS 26.0, *)

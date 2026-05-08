@@ -39,7 +39,7 @@ struct DebugPanel1718: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Believe it or not, this preview actually works.
 @available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")

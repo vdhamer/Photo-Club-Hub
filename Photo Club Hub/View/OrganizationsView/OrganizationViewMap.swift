@@ -66,7 +66,7 @@ struct OrganizationViewMap: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Preview only partially works: it doesn't show markers
 @MainActor

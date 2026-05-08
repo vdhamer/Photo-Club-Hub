@@ -42,7 +42,7 @@ struct CrossHairs2626: Shape {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Believe it or not, this preview actually works.
 @available(iOS 26.0, *)

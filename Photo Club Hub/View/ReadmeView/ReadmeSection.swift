@@ -31,7 +31,7 @@ struct ReadmeSection: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Believe it or not, this preview actually works.
 struct ReadmeSection_Previews: PreviewProvider {

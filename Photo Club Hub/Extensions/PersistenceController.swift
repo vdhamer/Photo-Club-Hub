@@ -51,9 +51,10 @@ public struct PersistenceController: Sendable {
 
     }
 
-    // MARK: - Preview
+    // MARK: - Previews
 
-    // Not sure anymore what this preview does: it doesn't return a View
+    // Fills a preview version of the data store for testing purposes.
+    // There is no View here to preview.
     public static let preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext

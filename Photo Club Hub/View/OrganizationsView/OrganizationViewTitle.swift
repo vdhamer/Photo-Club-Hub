@@ -51,7 +51,7 @@ struct OrganizationViewTitle: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Believe it or not, these previews actually works.
 #Preview {

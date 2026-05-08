@@ -114,7 +114,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Unfortunately, the following Preview doesn't work yet.
 #Preview {

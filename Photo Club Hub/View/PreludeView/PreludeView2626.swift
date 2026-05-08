@@ -296,7 +296,7 @@ struct OffsetVectorInCells2626 {
     var x, y: Int
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 @available(iOS 26.0, *)
 #Preview("Prelude – Portrait", traits: .portrait) {

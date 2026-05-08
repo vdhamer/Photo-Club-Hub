@@ -138,6 +138,10 @@ struct PhotographersListView2626: View {
 
 }
 
+// MARK: - Previews
+
+// No preview yet.
+
 // struct PhotographersListView2626_Previews: PreviewProvider {
 //    @State static var searchText = "D'Eau1"
 //    static var previews: some View {

@@ -26,7 +26,7 @@ struct SinglePortfolioView: UIViewRepresentable {
 
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // only visible when canvas is simulating/running (?)
 // Believe it or not, this preview actually works.

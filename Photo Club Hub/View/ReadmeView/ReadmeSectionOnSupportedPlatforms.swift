@@ -37,7 +37,7 @@ struct ReadmeSectionOnSupportedPlatforms: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
 // Believe it or not, this preview actually works.
 struct ReadmeSectionOnSupportedPlatforms_Previews: PreviewProvider {
