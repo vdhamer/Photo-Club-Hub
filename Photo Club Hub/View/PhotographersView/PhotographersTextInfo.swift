@@ -5,7 +5,9 @@
 //  Created by Peter van den Hamer on 09/04/2024.
 //
 
-import SwiftUI
+import SwiftUI // for View
+import WebKit // for WKWebView
+import MapKit // for CLLocationCoordinate2D
 
 // Implements a few lines of text at top of each photographer card, containing:
 //     * an icon (with a special icon if the photographer is deceased)
@@ -17,6 +19,7 @@ import SwiftUI
 
 struct PhotographersTextInfo: View {
     var photographer: Photographer
+    let wkWebView: WKWebView
 
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -24,8 +27,9 @@ struct PhotographersTextInfo: View {
         return formatter
     }()
 
-    init(photographer: Photographer) {
+    init(photographer: Photographer, wkWebView: WKWebView) {
         self.photographer = photographer
+        self.wkWebView = wkWebView
     }
 
     @State private var animationTrigger: Bool = false
@@ -35,9 +39,17 @@ struct PhotographersTextInfo: View {
             // first green line with icon and name of photographer
             let alive: String = photographer.isDeceased ? // generate name suffix
                 (" - " + MemberStatus.deceased.displayName) : ""
-            Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
+            let nameText = Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
                 .font(.title3)
                 .tracking(1)
+            if let firstMembership = photographer.memberships.sorted().first {
+                SinglePortfolioLinkView(destPortfolio: firstMembership, wkWebView: wkWebView) {
+                    nameText
+                }
+                .buttonStyle(.borderless)
+            } else {
+                nameText
+            }
 
             if let date: Date = photographer.bornDT {
                 if isBirthdaySoon(date, minResult: -1, maxResult: 7) != nil {
@@ -185,11 +197,44 @@ struct PhotographersTextInfo: View {
         )
     )
 
+    // create new organization to house `photographer`
+    let organization = Organization.findCreateUpdate(
+        context: context, // on main thread
+        organizationTypeEnum: .club,
+        idPlus: OrganizationIdPlus(
+            fullName: "PhotoClub",
+            town: "Town",
+            nickname: "ClubNick"
+        ),
+        coordinates: CLLocationCoordinate2D( // spread around BeNeLux
+            latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
+            longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
+        optionalFields: OrganizationOptionalFields(
+            organizationWebsite: URL(string: "http://www.example.com)"),
+            fotobondClubNumber: FotobondClubNumber(id: Int16(1234))
+        ),
+        pinned: false
+    )
+
     try? context.save()
+
+    // make photographer member of club
+    _ = MemberPortfolio.findCreateUpdate(
+        bgContext: context,
+        organization: organization,
+        photographer: photographer,
+        optionalFields: MemberOptionalFields(
+            featuredImage: URL(string: "https://picsum.photos/512"), // image is dynamically generated
+            featuredImageThumbnail: URL(string: "https://picsum.photos/300"), // image is dynamically generated
+            memberRolesAndStatus: MemberRolesAndStatus( roles: [.chairman: true,
+                                                                .treasurer: true],
+                                                        status: [.former: true] )
+        )
+    )
 
     return VStack(alignment: .leading) {
         VStack {
-            PhotographersTextInfo(photographer: photographer)
+            PhotographersTextInfo(photographer: photographer, wkWebView: WKWebView())
                 .border(Color.gray.opacity(0.3), width: 1)
             Divider()
             Text(verbatim: "Preview: Photographer with birthday in 3 days")
@@ -218,7 +263,7 @@ struct PhotographersTextInfo: View {
 
     return VStack(alignment: .leading) {
         VStack {
-            PhotographersTextInfo(photographer: photographer)
+            PhotographersTextInfo(photographer: photographer, wkWebView: WKWebView())
                 .border(Color.gray.opacity(0.3), width: 1)
             Divider()
             Text(verbatim: "Preview: Deceased photographer")
@@ -246,7 +291,7 @@ struct PhotographersTextInfo: View {
 
     return VStack(alignment: .leading) {
         VStack {
-            PhotographersTextInfo(photographer: photographer)
+            PhotographersTextInfo(photographer: photographer, wkWebView: WKWebView())
                 .border(Color.gray.opacity(0.3), width: 1)
             Divider()
             Text(verbatim: "Preview: No birthday or website")

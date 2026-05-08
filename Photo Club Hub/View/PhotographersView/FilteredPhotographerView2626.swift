@@ -53,7 +53,7 @@ struct FilteredPhotographerView2626: View {
                         .frame(width: 35)
                         .padding(.top, 3)
 
-                    PhotographersTextInfo(photographer: photographer)
+                    PhotographersTextInfo(photographer: photographer, wkWebView: wkWebView)
 
                     Spacer() // push PhotographersTextInfo to the left
 
