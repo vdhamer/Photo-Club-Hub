@@ -72,7 +72,7 @@ public struct PersistenceController: Sendable {
                 optionalFields: PhotographerOptionalFields(
                     bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
                     isDeceased: memberRolesAndStatus.isDeceased(),
-                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
+                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(photographerIndex)"),
                     photographerImage: URL(string:
                                             "https://www.fcDeGender.nl/wp-content/uploads/Peter-van-den-Hamer.png")
                 )
