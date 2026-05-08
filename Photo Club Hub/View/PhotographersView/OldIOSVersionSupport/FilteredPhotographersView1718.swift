@@ -117,7 +117,7 @@ struct FilteredPhotographerView1718: View {
 }
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-struct PhotographerIconView1718: View {
+private struct PhotographerIconView1718: View {
     let isDeceased: Bool
 
     var body: some View {
@@ -131,9 +131,7 @@ struct PhotographerIconView1718: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Previews actually works.
-// The first one was generated in a lengthy session by Claude Code (Opus 4.7).
-// The List { } thing was likely needed to fix a bug somewhere.
+// The following Previews actually works for FilteredPrhotographersView2626 - but they don't work here yet ;-(
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 #Preview("FilteredPhotographerView1718") {
     NavigationStack {

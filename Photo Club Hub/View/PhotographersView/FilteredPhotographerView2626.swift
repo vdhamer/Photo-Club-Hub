@@ -116,6 +116,7 @@ struct FilteredPhotographerView2626: View {
 
 }
 
+@available(iOS 26.0, *)
 private struct PhotographerIconView2626: View {
     let isDeceased: Bool
 
@@ -134,7 +135,7 @@ private struct PhotographerIconView2626: View {
 // The first one was generated in a lengthy session by Claude Code (Opus 4.7).
 // The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS 26.0, *)
-#Preview {
+#Preview("FilteredPhotographerView2626") {
     NavigationStack {
         List {
             FilteredPhotographerView2626(predicate: NSPredicate(value: true),
