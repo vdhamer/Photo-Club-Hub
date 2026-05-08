@@ -17,7 +17,6 @@ import WebKit // for WKWebView
 //          - optionally a link icon that leads to the phototographer's own website
 //          - some textual information
 //          - a horizontally scrolling list of thumbnails representing portfolios
-// Preview unfortunately doesn't work.
 
 @available(iOS 26.0, *)
 struct FilteredPhotographerView2626: View {
@@ -130,27 +129,17 @@ struct FilteredPhotographerView2626: View {
 
 // MARK: - Previews
 
-// Unfortunately, the following Preview doesn't work yet.
-@available(iOS 26.0, *)
-struct FilteredPhotographersViewWrapper2626: View {
-    var body: some View {
-        let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
-                                    argumentArray: ["Eau1", "Eau2", "Eau10"])
-        @State var searchText: String = "Eau1"
-        let wkWebView = WKWebView()
-
-        return FilteredPhotographerView2626(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-
+// Believe it or not, the following Preview actually works.
+// It was generated in a length session by Claude Code (Sonnet 4.5).
+// The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS 26.0, *)
 #Preview {
     NavigationStack {
         List {
-            FilteredPhotographersViewWrapper2626()
+            FilteredPhotographerView2626(predicate: NSPredicate(value: true),
+                                         searchText: .constant(""),
+                                         wkWebView: WKWebView())
         }
     }
-    .searchable(text: .constant("Name"))
-    .searchToolbarBehavior(.minimize) // requires iOS 26
+    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

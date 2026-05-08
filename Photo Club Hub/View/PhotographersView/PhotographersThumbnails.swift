@@ -47,7 +47,9 @@ struct PhotographersThumbnail: View {
 
     var body: some View {
         VStack { // to combine image and caption
-            AsyncImage(url: ImageChoice(member: membership, isImageFlipped: flipImageFlag, preferenceForFeaturedImage: true).url) { phase in // TODO replace `true`
+            AsyncImage(url: ImageChoice(member: membership,
+                                        isImageFlipped: flipImageFlag,
+                                        preferenceForFeaturedImage: true).url) { phase in // TODO replace `true`
                 if let image = phase.image {
                     ZStack(alignment: .bottom) {
                         image // Displays the loaded image

@@ -44,7 +44,7 @@ struct PhotographersListView1718: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredPhotographersView1718(predicate: model.preferences.photographerPredicate,
+                FilteredPhotographerView1718(predicate: model.preferences.photographerPredicate,
                                          searchText: searchText,
                                          wkWebView: wkWebView)
             }
@@ -137,7 +137,7 @@ struct PhotographersListView1718: View {
 
 }
 
-// struct PhotographersListView_Previews: PreviewProvider {
+// struct PhotographersListView1718_Previews: PreviewProvider {
 //    @State static var searchText = "D'Eau1"
 //    static var previews: some View {
 //        NavigationStack {

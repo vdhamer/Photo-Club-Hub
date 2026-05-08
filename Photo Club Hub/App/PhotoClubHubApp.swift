@@ -15,6 +15,11 @@ struct PhotoClubHubApp: App {
 
     init() {
 
+        // Skip heavy app init when running under Xcode Previews to keep #Preview rendering alive.
+        if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
+            return
+        }
+
         // Core Data settings
         let persistenceController = PersistenceController.shared // for Core Data
         let viewContext = persistenceController.container.viewContext // "associated with the main application queue"

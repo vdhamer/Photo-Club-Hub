@@ -1,5 +1,5 @@
 //
-//  FilteredPhotographersView1718.swift
+//  FilteredPhotographerView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -17,10 +17,9 @@ import WebKit // for WKWebView
 //          - optionally a link icon that leads to the phototographer's own website
 //          - some textual information
 //          - a horizontally scrolling list of thumbnails representing portfolios
-// Preview unfortunately doesn't work.
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-struct FilteredPhotographersView1718: View {
+struct FilteredPhotographerView1718: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
@@ -128,28 +127,19 @@ struct FilteredPhotographersView1718: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 
-// Unfortunately, the following Preview doesn't work yet.
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-struct FilteredPhotographersViewWrapper1718: View {
-    var body: some View {
-        let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
-                                    argumentArray: ["Eau1", "Eau2", "Eau10"])
-        @State var searchText: String = "Eau1"
-        let wkWebView = WKWebView()
-
-        return FilteredPhotographersView1718(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-
+// Believe it or not, the following Preview actually works.
+// It was generated in a length session by Claude Code (Sonnet 4.5).
+// The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 #Preview {
     NavigationStack {
         List {
-            FilteredPhotographersViewWrapper1718()
+            FilteredPhotographerView1718(predicate: NSPredicate(value: true),
+                                         searchText: .constant(""),
+                                         wkWebView: WKWebView())
         }
     }
-    .searchable(text: .constant("Name"))
+    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
