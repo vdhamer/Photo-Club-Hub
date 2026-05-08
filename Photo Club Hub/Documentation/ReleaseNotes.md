@@ -29,6 +29,12 @@ MEMBERS SCREEN
 * Fixed bug: title of screen on iOS 17 and iOS 18.
 * Fixed bug: club officers ("bestuurslid", "other") didn't have a proper icon
 
+PHOTOGRAPHERS SCREEN
+
+* Clicking on image will toggle between portfolio/portrait if portrait is available
+* Clicking on photographer's name takes you to photographer's personal website
+* Clicking on image caption will bring you to portfolio in that club
+
 README SCREEN
 
 * Added a close button at top of the screen (for consistency with Preferences).
