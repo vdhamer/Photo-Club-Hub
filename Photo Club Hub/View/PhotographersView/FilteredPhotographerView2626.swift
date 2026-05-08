@@ -114,23 +114,24 @@ struct FilteredPhotographerView2626: View {
         }
     }
 
-    private struct PhotographerIconView: View {
-        let isDeceased: Bool
+}
 
-        var body: some View {
-            if isDeceased {
-                Image("deceased.photographer")
-            } else {
-                Image(systemName: "person.text.rectangle")
-            }
+private struct PhotographerIconView: View {
+    let isDeceased: Bool
+
+    var body: some View {
+        if isDeceased {
+            Image("deceased.photographer")
+        } else {
+            Image(systemName: "person.text.rectangle")
         }
     }
 }
 
 // MARK: - Previews
 
-// Believe it or not, the following Preview actually works.
-// It was generated in a length session by Claude Code (Sonnet 4.5).
+// Believe it or not, the following Previews actually works.
+// The first one was generated in a lengthy session by Claude Code (Opus 4.7).
 // The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS 26.0, *)
 #Preview {
@@ -142,4 +143,20 @@ struct FilteredPhotographerView2626: View {
         }
     }
     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+}
+
+#Preview("PhotographerIconView") {
+    VStack(spacing: 20) {
+        HStack {
+            PhotographerIconView(isDeceased: false)
+            Text(verbatim: "isDeceased: false")
+        }
+        HStack {
+            PhotographerIconView(isDeceased: true)
+            Text(verbatim: "isDeceased: true")
+        }
+    }
+    .font(.title3)
+    .foregroundStyle(.photographerColor, .gray, .red)
+    .padding()
 }
