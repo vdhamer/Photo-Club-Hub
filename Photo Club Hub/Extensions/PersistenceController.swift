@@ -72,8 +72,9 @@ public struct PersistenceController: Sendable {
                 optionalFields: PhotographerOptionalFields(
                     bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
                     isDeceased: memberRolesAndStatus.isDeceased(),
-                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(photographerIndex)"),
-                    photographerImage: URL(string: "https://picsum.photos/200")
+                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
+                    photographerImage: URL(string:
+                                            "https://www.fcDeGender.nl/wp-content/uploads/Peter-van-den-Hamer.png")
                 )
             )
 
@@ -119,7 +120,8 @@ public struct PersistenceController: Sendable {
                 organization: organizationA,
                 photographer: photographer,
                 optionalFields: MemberOptionalFields(
-                    featuredImage: URL(string: "https://picsum.photos/200"), // image is dynamically chosen
+                    featuredImage: URL(string: "https://picsum.photos/512"), // image is dynamically generated
+                    featuredImageThumbnail: URL(string: "https://picsum.photos/300"), // image is dynamically generated
                     memberRolesAndStatus: memberRolesAndStatus
                 )
             )
@@ -128,7 +130,8 @@ public struct PersistenceController: Sendable {
                 organization: organizationB,
                 photographer: photographer,
                 optionalFields: MemberOptionalFields(
-                    featuredImage: URL(string: "https://picsum.photos/200"), // image is dynamically chosen
+                    featuredImage: URL(string: "https://picsum.photos/512"), // image is dynamically generated
+                    featuredImageThumbnail: URL(string: "https://picsum.photos/300"), // image is dynamically generated
                     memberRolesAndStatus: memberRolesAndStatus
                 )
             )
