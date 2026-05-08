@@ -84,13 +84,17 @@ struct PhotographersThumbnail: View {
                 }
             })
 
-            Text(verbatim: "\(member.roleDescriptionOfClubTown)")
-                .frame(width: 160, height: 35)
-                .font(.caption)
-                .lineLimit(2)
-                .truncationMode(.middle)
-                .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
-                    ...DynamicTypeSize.large)
+            SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
+                Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                    .frame(width: 160, height: 35)
+                    .font(.caption)
+                    .lineLimit(2)
+                    .truncationMode(.middle)
+                    .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
+                        ...DynamicTypeSize.large)
+            }
+            .buttonStyle(.borderless)
+
         } // VStack to combine image and caption
     }
 
