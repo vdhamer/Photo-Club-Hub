@@ -28,6 +28,9 @@ import SemanticColorPicker // for SemanticColor
 ///   set of toggles (e.g., current members, officers, former members, etc.).
 @MainActor
 class PreferencesViewModel: ObservableObject {
+    /// Shared singleton instance used by all views to ensure preference changes propagate everywhere.
+    static let shared = PreferencesViewModel()
+
     /// Stores Combine cancellables tied to persistence of the `preferences` property.
     static var cancellableSet: Set<AnyCancellable> = [] // not used: view currently has no Cancel button
 

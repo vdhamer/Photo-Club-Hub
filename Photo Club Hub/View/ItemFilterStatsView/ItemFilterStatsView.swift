@@ -99,7 +99,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
                           comment: comment)
 
         case .organization: // may change unit to ElementTypeEnum.club if Museums are filted out in Preferences
-            let preferences = PreferencesViewModel().preferences
+            let preferences = PreferencesViewModel.shared.preferences
             if preferences.anyClubs && !preferences.showMuseums {
                 return localizedFilteredCount(unit: .club)
             } else if !preferences.anyClubs && preferences.showMuseums {
@@ -116,16 +116,19 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 
 // MARK: - Previews
 
-// Unfortunately, the following Preview doesn't work yet.
+// Believe it or not, this preview actually works.
 #Preview {
-    List {
-        ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, unit: .organization)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, unit: .organization)
-        ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, unit: .organization)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, unit: .organization)
-        ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, unit: .photographer)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, unit: .photographer)
-        ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, unit: .photographer)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, unit: .photographer)
+    NavigationStack {
+        List {
+            ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, unit: .organization)
+            ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, unit: .organization)
+            ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, unit: .organization)
+            ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, unit: .organization)
+            ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, unit: .photographer)
+            ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, unit: .photographer)
+            ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, unit: .photographer)
+            ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, unit: .photographer)
+        }
+        .navigationTitle(Text(verbatim: "ItemFilterStatsView"))
     }
 }
