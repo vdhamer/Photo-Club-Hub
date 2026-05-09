@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A list-based view that displays member portfolios with search and toolbar actions.
-/// This particular "1718" view is only used for iOS 18 or lower.
+/// This particular "1718" version of the view is only used with iOS 18 or lower.
 ///
 /// - Presents a `FilteredMemberPortfoliosView2626` inside a SwiftUI `List`.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
@@ -53,7 +53,7 @@ struct MemberPortfolioView1718: View {
         animation: .default)
     private var organizations: FetchedResults<Organization>
 
-    @StateObject var model = PreferencesViewModel()
+    @StateObject var preferencesModel = PreferencesViewModel.shared
 
     /// Toolbar placement that adapts: iPad shows search in the toolbar, iPhone in the drawer. 
     private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
@@ -61,7 +61,7 @@ struct MemberPortfolioView1718: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView1718(memberPredicate: model.preferences.memberPredicate,
+            FilteredMemberPortfoliosView1718(memberPredicate: preferencesModel.preferences.memberPredicate,
                                              searchText: $searchText)
         }
         .listStyle(.plain)
@@ -93,7 +93,7 @@ struct MemberPortfolioView1718: View {
                 }
                 // Preferences sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingPreferences, content: {
-                    PreferencesView1718(preferences: $model.preferences)
+                    PreferencesView1718(preferences: $preferencesModel.preferences)
                     // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
                         .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
@@ -156,7 +156,6 @@ struct MemberPortfolioView1718: View {
                                 ))
         .disableAutocorrection(true)
     }
-
 }
 
 // MARK: - Previews
