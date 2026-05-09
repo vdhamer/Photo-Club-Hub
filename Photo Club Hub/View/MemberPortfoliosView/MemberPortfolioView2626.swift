@@ -52,15 +52,15 @@ struct MemberPortfolioView2626: View {
         animation: .default)
     private var organizations: FetchedResults<Organization>
 
-    @StateObject var model = PreferencesViewModel()
+    @StateObject var preferencesModel = PreferencesViewModel.shared
 
-    /// Toolbar placement that adapts: iPad shows search in the toolbar, iPhone in the drawer. 
+    /// Toolbar placement that adapts: iPad shows search in the toolbar, iPhone in the drawer.
     private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
         .destructiveAction : .navigationBarTrailing
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView2626(memberPredicate: model.preferences.memberPredicate,
+            FilteredMemberPortfoliosView2626(memberPredicate: preferencesModel.preferences.memberPredicate,
                                              searchText: $searchText)
         }
         .listStyle(.plain)
@@ -92,7 +92,7 @@ struct MemberPortfolioView2626: View {
                 }
                 // Preferences sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingPreferences, content: {
-                    PreferencesView2626(preferences: $model.preferences)
+                    PreferencesView2626(preferences: $preferencesModel.preferences)
                     // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
                         .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
@@ -161,11 +161,10 @@ struct MemberPortfolioView2626: View {
 
 // MARK: - Previews
 
-// Unfortunately, the following Preview doesn't work yet.
 @available(iOS 26.0, *)
-struct MemberListView2626_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
+    NavigationStack {
         MemberPortfolioView2626()
-			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
