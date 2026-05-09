@@ -183,7 +183,9 @@ struct MemberPortfolioRow_Previews: PreviewProvider {
                 optionalFields: photographerOptionalFields
             )
 
-            let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub", town: "SomeLocation", nickname: "IgnoreMe")
+            let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub",
+                                                        town: "SomeLocation",
+                                                        nickname: "IgnoreMe")
             let organization = Organization.findCreateUpdate(
                 context: viewContext,
                 organizationTypeEnum: OrganizationTypeEnum.club,
