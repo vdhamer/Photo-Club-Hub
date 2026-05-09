@@ -195,3 +195,70 @@ extension PhotographersThumbnail {
             .border(Color.gray.opacity(0.7), width: 1)
     }
 }
+
+// MARK: - Previews
+
+// Believe it or not, these 3 previews actually works.
+#Preview("Single Portfolio Thumbnail") {
+    let controller = PersistenceController.shared
+    let context = controller.container.viewContext
+    let wkWebView = WKWebView()
+
+    // Get first membership from preview data
+    let fetchRequest = MemberPortfolio.fetchRequest()
+    let memberships = (try? context.fetch(fetchRequest)) ?? []
+
+    if let membership = memberships.first {
+        VStack(spacing: 20) {
+            Text(verbatim: "Portfolio for: \(membership.photographer.fullNameFirstLast)")
+                .font(.headline)
+            Divider()
+
+            PhotographersThumbnail(membership: membership, wkWebView: wkWebView)
+                .border(Color.gray.opacity(0.3), width: 1)
+        }
+        .padding()
+    } else {
+        Text("No membership data available")
+            .foregroundStyle(.secondary)
+    }
+}
+
+#Preview("Photographer with Multiple Memberships") {
+    let wkWebView = WKWebView()
+    let controller = PersistenceController.shared
+    let context = controller.container.viewContext
+
+    // Get first photographer from preview data (should have memberships)
+    let personName = PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer")
+    let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
+    let predicate = NSPredicate(format: predicateFormat,
+                                argumentArray: [ personName.givenName, personName.infixName, personName.familyName ])
+//    let fetchRequest: NSFetchRequest<Photographer> = Photographer.fetchRequest() // TODO
+//    fetchRequest.predicate = predicate
+
+    let fetchRequest = Photographer.fetchRequest() // TODO this line works but the 2 previous ones don't
+    fetchRequest.predicate = predicate
+
+    let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
+
+    if let photographer = photographers.first {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                Text(verbatim: "Photographer: \(photographer.fullNameFirstLast)")
+                    .font(.headline)
+
+                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView)
+                    .border(Color.gray.opacity(0.7), width: 1)
+
+                Text(verbatim: "Preview: Horizontal scrolling thumbnails")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .padding()
+        }
+    } else {
+        Text("No photographer data available")
+            .foregroundStyle(.secondary)
+    }
+}
