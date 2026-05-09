@@ -22,7 +22,7 @@ struct OrganizationView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// A wrapper that mainly holds a Preferences struct
-    @StateObject var modelToHoldPreferences = PreferencesViewModel()
+    @StateObject var modelToHoldPreferences = PreferencesViewModel.shared
     /// Tracks user location to enable the user-location annotation on the map.
     @State private var locationManager = LocationManager()
     /// The text bound to the search field used to filter organizations by name or town.
@@ -85,7 +85,7 @@ struct OrganizationView: View {
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes
         }
-        .navigationTitle(PreferencesViewModel().preferences.organizationLabel()) // trick: Published+UserDefaults.swift
+        .navigationTitle(modelToHoldPreferences.preferences.organizationLabel())
         .searchable(text: $searchText, placement: .automatic,
                     // .automatic
                     // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust
@@ -120,7 +120,7 @@ struct NoClubsText: View {
 
 // MARK: - Previews
 
-// Unfortunately, the following Preview doesn't work yet.
+// Believe it or not, the following Preview actually works
 #Preview {
     NavigationStack {
         OrganizationView()
