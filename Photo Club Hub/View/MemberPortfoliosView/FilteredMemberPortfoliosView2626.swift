@@ -239,7 +239,7 @@ struct FilteredMemberPortfoliosView2626: View {
 
 }
 
-// Unfortunately, the following Preview doesn't work yet.
+// Believe it or not, this preview actually works.
 @available(iOS 26.0, *)
 struct FilteredMemberPortfolios2626_Previews: PreviewProvider {
     static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])

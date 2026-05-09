@@ -161,6 +161,7 @@ struct MemberPortfolioView2626: View {
 
 // MARK: - Previews
 
+// Believe it or not, this preview actually works.
 @available(iOS 26.0, *)
 #Preview {
     NavigationStack {
