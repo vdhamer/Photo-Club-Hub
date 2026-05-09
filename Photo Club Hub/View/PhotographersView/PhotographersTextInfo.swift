@@ -171,7 +171,7 @@ struct PhotographersTextInfo: View {
 
 // MARK: - Previews
 
-// Believe it or not, these 3 previews actually works.
+// Believe it or not, these 3 previews actually work.
 #Preview("Photographer with Birthday soon") {
     let controller = PersistenceController(inMemory: true)
     let context = controller.container.viewContext

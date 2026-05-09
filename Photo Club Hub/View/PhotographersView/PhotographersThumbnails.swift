@@ -11,8 +11,8 @@ import CoreData // for NSFetchRequest
 
 // Shows horizontally scrolling thumbnails (normally 1 or 2) for photographer portfolios, each containing:
 //     * image representing the portfolio
-//     * role of protographer related to that photo club
-// No preview because it didn't work.
+//     * role of photographer related to that photo club
+//     * buttons (coming) to switch images, and to navigate to portfolio per club
 
 struct PhotographersThumbnails: View {
     let photographer: Photographer // who is this about?
@@ -37,120 +37,9 @@ struct PhotographersThumbnails: View {
     }
 }
 
-// Shows hor scrolling thumbnails (normally 1 or 2) for photographer portfolios, each containing:
-//     * image representing the portfolio
-//     * role of protographer related to that photo club
-// No preview because it didn't work.
-
-struct PhotographersThumbnail: View {
-    let member: MemberPortfolio // who is this about?
-    let wkWebView: WKWebView // reusable WKWebView
-    let preferences: PreferencesStruct
-    /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
-    @State var flipImageFlag: Bool = false
-
-    var body: some View {
-        VStack { // to combine image and caption
-            AsyncImage(url: ImageChoice(member: member,
-                            isImageFlipped: flipImageFlag,
-                            preferenceForFeaturedImage: preferences.preferenceForFeaturedImage).url) { phase in
-                if let image = phase.image {
-                    ZStack(alignment: .bottom) {
-                        image // Displays the loaded image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: 160)
-                    }
-                } else if phase.error != nil ||
-                            member.featuredImage == nil {
-                    Image("Question-mark") // image indicates an error occurred
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } else {
-                    ZStack {
-                        Image("Tortoise") // placeholder while loading
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .opacity(0.4)
-                        ProgressView()
-                            .scaleEffect(x: 2, y: 2, anchor: .center)
-                            .blendMode(BlendMode.difference)
-                    }
-                }
-            }
-            .frame(width: 160, height: 160) // square
-            .clipShape(RoundedRectangle(cornerRadius: 25))
-            .shadow(color: .accentColor.opacity(0.5), radius: 3)
-            .contentShape(Rectangle())
-            .onTapGesture(perform: {
-                if isThumbnailFlippable(member: member) {
-                    flipImageFlag.toggle()
-                }
-            })
-
-            SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
-                Text(verbatim: "\(member.roleDescriptionOfClubTown)")
-                    .frame(width: 160, height: 35)
-                    .font(.caption)
-                    .lineLimit(2)
-                    .truncationMode(.middle)
-                    .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
-                        ...DynamicTypeSize.large)
-            }
-            .buttonStyle(.borderless)
-
-        } // VStack to combine image and caption
-    }
-
-    private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
-        return
-            member.photographer.photographerImage != nil && // there are two images defined for this member
-            member.photographer.photographerImage != member.featuredImage // and the two images are different
-    }
-}
-
 // MARK: - Previews
 
-// Believe it or not, these 3 previews actually works.
-#Preview("Single Portfolio Thumbnail") {
-    @Previewable @StateObject var preferencesModel = PreferencesViewModel()
-    let controller = PersistenceController.preview
-    let context = controller.container.viewContext
-    let wkWebView = WKWebView()
-    let preferences = preferencesModel.preferences
-
-    // Get first membership from preview data
-    let fetchRequest = MemberPortfolio.fetchRequest()
-    let memberships = (try? context.fetch(fetchRequest)) ?? []
-
-    if let membership = memberships.first {
-        VStack(spacing: 20) {
-            Text(verbatim: "Portfolio for: \(membership.photographer.fullNameFirstLast)")
-                .font(.headline)
-            Divider()
-
-            PhotographersThumbnail(member: membership, wkWebView: wkWebView, preferences: preferences)
-                .border(Color.gray.opacity(0.3), width: 1)
-        }
-        .padding()
-    } else {
-        Text("No membership data available")
-            .foregroundStyle(.secondary)
-    }
-}
-
-/// function (for preview only) is used to circumvent a limitation of #Preview that resulting in type checking error
-extension PhotographersThumbnail {
-
-    fileprivate static func makeFetchRequest(predicate: NSPredicate) -> NSFetchRequest<Photographer> {
-        let fetchRequest = Photographer.fetchRequest()
-        fetchRequest.predicate = predicate
-        return fetchRequest
-    }
-
-}
-
-// Believe it or not, these 3 previews actually works.
+// Believe it or not, these 3 previews actually work.
 #Preview("Photographer with Multiple Memberships") {
     let wkWebView = WKWebView()
     let controller = PersistenceController.preview
@@ -172,7 +61,7 @@ extension PhotographersThumbnail {
                     .font(.headline)
                 Divider()
 
-                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView) // wkWebView needed?
+                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView)
                     .border(Color.gray.opacity(0.7), width: 1)
 
                 Divider()
@@ -184,7 +73,6 @@ extension PhotographersThumbnail {
                         .foregroundStyle(.secondary)
                     Spacer()
                 }
-
             }
             .padding()
         }
@@ -196,49 +84,18 @@ extension PhotographersThumbnail {
     }
 }
 
-// MARK: - Previews
-
-// Believe it or not, these 3 previews actually works.
-#Preview("Single Portfolio Thumbnail") {
-    let controller = PersistenceController.shared
-    let context = controller.container.viewContext
-    let wkWebView = WKWebView()
-
-    // Get first membership from preview data
-    let fetchRequest = MemberPortfolio.fetchRequest()
-    let memberships = (try? context.fetch(fetchRequest)) ?? []
-
-    if let membership = memberships.first {
-        VStack(spacing: 20) {
-            Text(verbatim: "Portfolio for: \(membership.photographer.fullNameFirstLast)")
-                .font(.headline)
-            Divider()
-
-            PhotographersThumbnail(membership: membership, wkWebView: wkWebView)
-                .border(Color.gray.opacity(0.3), width: 1)
-        }
-        .padding()
-    } else {
-        Text("No membership data available")
-            .foregroundStyle(.secondary)
-    }
-}
-
-#Preview("Photographer with Multiple Memberships") {
+// Believe it or not, these 3 previews actually work.
+#Preview("Photographer with Multiple Memberships (live data)") {
     let wkWebView = WKWebView()
     let controller = PersistenceController.shared
     let context = controller.container.viewContext
 
-    // Get first photographer from preview data (should have memberships)
+    // Get first photographer from live data (should have memberships)
     let personName = PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer")
     let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
     let predicate = NSPredicate(format: predicateFormat,
                                 argumentArray: [ personName.givenName, personName.infixName, personName.familyName ])
-//    let fetchRequest: NSFetchRequest<Photographer> = Photographer.fetchRequest() // TODO
-//    fetchRequest.predicate = predicate
-
-    let fetchRequest = Photographer.fetchRequest() // TODO this line works but the 2 previous ones don't
-    fetchRequest.predicate = predicate
+    let fetchRequest = PhotographersThumbnail.makeFetchRequest(predicate: predicate)
 
     let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
 
@@ -258,7 +115,7 @@ extension PhotographersThumbnail {
             .padding()
         }
     } else {
-        Text("No photographer data available")
+        Text(verbatim: "No photographer data available")
             .foregroundStyle(.secondary)
     }
 }
