@@ -26,6 +26,7 @@ struct MemberPortfolioRow: View {
     let moc = PersistenceController.shared.container.viewContext
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
+    @StateObject var preferencesModel = PreferencesViewModel.shared
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     var body: some View {
@@ -33,7 +34,7 @@ struct MemberPortfolioRow: View {
 
             HStack(alignment: .top) { // everything to left of Image: icon + several lines of Text
 
-                RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus)
+                RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus) // icon
                     .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
                     .imageScale(.large)
 
@@ -85,9 +86,12 @@ struct MemberPortfolioRow: View {
 
             Spacer()
 
-            AsyncImage(url: ImageChoice(member: member,
-                                        isImageFlipped: flipImageFlag,
-                                        preferenceForFeaturedImage: true).url) { phase in // TODO replace `true`
+            let pref: Bool = preferencesModel.preferences.preferenceForFeaturedImage
+            let imageChoice: ImageChoice = ImageChoice(member: member,
+                                                       isImageFlipped: flipImageFlag,
+                                                       preferenceForFeaturedImage: pref)
+            let url = imageChoice.url
+            AsyncImage(url: url) { phase in
                 if let image = phase.image {
                     image // Displays the loaded image
                         .resizable()
@@ -162,21 +166,24 @@ struct MemberPortfolioRow: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works
-struct MemberPortfolioRow2_Previews: PreviewProvider {
+struct MemberPortfolioRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             let persistenceController = PersistenceController.shared // for Core Data
             let viewContext = persistenceController.container.viewContext
 
             let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
-            let photographerOptionalFields = PhotographerOptionalFields(isDeceased: true)
+            let photographerOptionalFields = PhotographerOptionalFields(
+                isDeceased: true,
+                photographerImage: URL(string: "https://thispersondoesnotexist.com")
+                )
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext,
                 personName: personName,
                 optionalFields: photographerOptionalFields
             )
 
-            let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub", town: "Location", nickname: "IgnoreMe")
+            let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub", town: "SomeLocation", nickname: "IgnoreMe")
             let organization = Organization.findCreateUpdate(
                 context: viewContext,
                 organizationTypeEnum: OrganizationTypeEnum.club,
@@ -186,13 +193,16 @@ struct MemberPortfolioRow2_Previews: PreviewProvider {
                 optionalFields: OrganizationOptionalFields()
             )
 
-            let memberRolesAndStatus = MemberRolesAndStatus(roles: [.chairman: true],
+            let memberRolesAndStatus = MemberRolesAndStatus(roles: [.treasurer: true],
                                                             status: [.former: true])
             let member = MemberPortfolio.findCreateUpdate(
                 bgContext: viewContext,
                 organization: organization,
                 photographer: photographer,
                 optionalFields: MemberOptionalFields(
+                    featuredImage: URL(string: "https://picsum.photos/500"),
+                    featuredImageThumbnail: URL(string: "https://picsum.photos/200"),
+                    level3URL: URL(string: "https://www.example.com"),
                     memberRolesAndStatus: memberRolesAndStatus
                 )
             )
