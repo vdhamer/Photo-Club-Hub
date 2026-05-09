@@ -24,7 +24,7 @@ struct PhotographersListView2626: View {
     var searchText: Binding<String>
     let wkWebView: WKWebView
 
-    @StateObject var model = PreferencesViewModel()
+    @StateObject var model = PreferencesViewModel.shared
     private var navigationTitle = String(localized: "Photographers",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
