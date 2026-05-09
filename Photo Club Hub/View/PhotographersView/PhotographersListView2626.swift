@@ -14,7 +14,7 @@ import WebKit // for wkWebView
 //     * searchbar to filter on photographer's name,
 //     * vertical (smart) scrolling photographer cards,
 //     * help text at bottom. One of these footnotes shows the Expertise stats.
-// Preview unfortunately doesn't work.
+// See Preview below.
 
 @available(iOS 26.0, *)
 struct PhotographersListView2626: View {
@@ -140,16 +140,12 @@ struct PhotographersListView2626: View {
 
 // MARK: - Previews
 
-// No preview yet.
-
-// struct PhotographersListView2626_Previews: PreviewProvider {
-//    @State static var searchText = "D'Eau1"
-//    static var previews: some View {
-//        NavigationStack {
-//            PhotographersListView2626(searchText: $searchText,
-//                                      organizationLabel: String("PhotographerListView")
-//                )
-//                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-//        }
-//    }
-// }
+// Believe it or not, the following Previews actually works.
+@available(iOS 26.0, *)
+#Preview {
+    @Previewable @State var searchText = "D' Eau1"
+    NavigationStack {
+        PhotographersListView2626(searchText: $searchText)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}
