@@ -24,7 +24,7 @@ struct PhotographersListView1718: View {
     var searchText: Binding<String>
     let wkWebView: WKWebView
 
-    @StateObject var model = PreferencesViewModel()
+    @StateObject var model = PreferencesViewModel.shared
     private var navigationTitle = String(localized: "Photographers",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
@@ -137,14 +137,15 @@ struct PhotographersListView1718: View {
 
 }
 
-// struct PhotographersListView1718_Previews: PreviewProvider {
-//    @State static var searchText = "D'Eau1"
-//    static var previews: some View {
-//        NavigationStack {
-//            PhotographersListView1718(searchText: $searchText,
-//                                      organizationLabel: String("PhotographerListView")
-//                )
-//                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-//        }
-//    }
-// }
+// MARK: - Previews
+
+// Believe it or not, the following Previews actually works. But Canvas needs to target iOS 17 or 18.
+@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
+#Preview {
+    @Previewable @State var searchText = "D' Eau1" // carefull with the space in the name
+    NavigationView {
+        PhotographersListView1718(searchText: $searchText)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .navigationTitle("PhotographersListView1718")
+    }
+}
