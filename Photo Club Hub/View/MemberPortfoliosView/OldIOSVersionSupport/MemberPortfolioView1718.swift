@@ -160,11 +160,12 @@ struct MemberPortfolioView1718: View {
 
 // MARK: - Previews
 
-// Unfortunately, the following Preview doesn't work yet.
+// I think this preview doesn't work. Something to do with iOS @availability
 @available(iOS, obsoleted: 19.0, message: "Please use 'MemberListView2626_Previews' for versions above iOS 18.x")
-struct MemberListView1718_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
+    NavigationStack {
         MemberPortfolioView1718()
-			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .navigationTitle("MemberPortfolioView1718")
     }
 }

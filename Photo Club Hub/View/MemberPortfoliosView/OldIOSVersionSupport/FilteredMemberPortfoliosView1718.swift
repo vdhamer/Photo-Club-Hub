@@ -241,7 +241,7 @@ struct FilteredMemberPortfoliosView1718: View {
 
 // MARK: - Previews
 
-// Believe it or not, this preview actually works.
+// Believe it or not, this preview actually works. But only if you put Canvas on automatic or an iOS 26 device
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView_Previews2626' for versions > iOS 18.x")
 struct FilteredMemberPortfolios1718_Previews: PreviewProvider {
     static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
