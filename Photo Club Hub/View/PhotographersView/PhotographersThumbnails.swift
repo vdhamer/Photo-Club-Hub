@@ -15,14 +15,17 @@ import CoreData // for NSFetchRequest
 // No preview because it didn't work.
 
 struct PhotographersThumbnails: View {
-    var photographer: Photographer // who is this about?
-    var wkWebView: WKWebView // reusable WKWebView
+    let photographer: Photographer // who is this about?
+    let wkWebView: WKWebView // reusable WKWebView
+    @StateObject var preferencesModel = PreferencesViewModel.shared
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) { // 2nd row with images in photographer's "card"
             HStack { // to support multiple portfolio previews in one row
                 ForEach(photographer.memberships.sorted(), id: \.id) { membership in
-                    PhotographersThumbnail(member: membership, wkWebView: wkWebView)
+                    PhotographersThumbnail(member: membership,
+                                           wkWebView: wkWebView,
+                                           preferences: preferencesModel.preferences)
                 } // ForEach
             } // HStack to support multiple portfolio previews in one row
             .scrollTargetLayout() // unit of horizontal "smart" scrolling, iOS smart scrolling
@@ -40,16 +43,17 @@ struct PhotographersThumbnails: View {
 // No preview because it didn't work.
 
 struct PhotographersThumbnail: View {
-    var member: MemberPortfolio // who is this about?
-    var wkWebView: WKWebView // reusable WKWebView
+    let member: MemberPortfolio // who is this about?
+    let wkWebView: WKWebView // reusable WKWebView
+    let preferences: PreferencesStruct
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
 
     var body: some View {
         VStack { // to combine image and caption
             AsyncImage(url: ImageChoice(member: member,
-                                        isImageFlipped: flipImageFlag,
-                                        preferenceForFeaturedImage: true).url) { phase in // TODO replace `true`
+                            isImageFlipped: flipImageFlag,
+                            preferenceForFeaturedImage: preferences.preferenceForFeaturedImage).url) { phase in
                 if let image = phase.image {
                     ZStack(alignment: .bottom) {
                         image // Displays the loaded image
@@ -109,9 +113,11 @@ struct PhotographersThumbnail: View {
 
 // Believe it or not, these 3 previews actually works.
 #Preview("Single Portfolio Thumbnail") {
+    @Previewable @StateObject var preferencesModel = PreferencesViewModel()
     let controller = PersistenceController.preview
     let context = controller.container.viewContext
     let wkWebView = WKWebView()
+    let preferences = preferencesModel.preferences
 
     // Get first membership from preview data
     let fetchRequest = MemberPortfolio.fetchRequest()
@@ -123,7 +129,7 @@ struct PhotographersThumbnail: View {
                 .font(.headline)
             Divider()
 
-            PhotographersThumbnail(member: membership, wkWebView: wkWebView)
+            PhotographersThumbnail(member: membership, wkWebView: wkWebView, preferences: preferences)
                 .border(Color.gray.opacity(0.3), width: 1)
         }
         .padding()
@@ -144,6 +150,7 @@ extension PhotographersThumbnail {
 
 }
 
+// Believe it or not, these 3 previews actually works.
 #Preview("Photographer with Multiple Memberships") {
     let wkWebView = WKWebView()
     let controller = PersistenceController.preview
@@ -163,6 +170,7 @@ extension PhotographersThumbnail {
             VStack(alignment: .leading, spacing: 20) {
                 Text(verbatim: "Photographer: \(photographer.fullNameFirstLast)")
                     .font(.headline)
+                Divider()
 
                 PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView) // wkWebView needed?
                     .border(Color.gray.opacity(0.7), width: 1)
