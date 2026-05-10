@@ -35,3 +35,19 @@ struct MemberListSectionHeader: View {
         }
     }
 }
+
+// MARK: - Previews
+
+struct MemberListSectionHeader_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            MemberListSectionHeader(title: "Fotogroep de Gender (Eindhoven)")
+                .previewDisplayName("Normal club name")
+            MemberListSectionHeader(title: "A Very Long Photo Club Name That Might Overflow The Capsule Width")
+                .previewDisplayName("Long name (truncation)")
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
+        .frame(height: 40)
+    }
+}

@@ -64,10 +64,9 @@ struct FilteredMemberPortfoliosView1718: View {
             } header: {
                 MemberListSectionHeader(title: section.id) // String used to group the elements into Sections
             } footer: {
-                Footer(filtCount: filterMemberPortfolios(unFilteredPortfolios: section).count,
-                       unfiltCount: section.endIndex,
-                       listName: section.id,
-                       organization: section.first?.organization
+                MemberListSectionFooter(filtCount: filterMemberPortfolios(unFilteredPortfolios: section).count,
+                                        unfiltCount: section.endIndex,
+                                        organization: section.first?.organization
                 )
             }
             .listRowSeparator(.hidden) // prevents a separator below the footer.
@@ -92,62 +91,6 @@ struct FilteredMemberPortfoliosView1718: View {
                  """,
                  tableName: "PhotoClubHub.SwiftUI",
                  comment: "Hint to the user if the database returns zero Members with empty Search filter.")
-        }
-    }
-
-    /// Footer showing how many members are visible (filtered vs. total) and the section's data-source URL.
-    /// Data-source URL is currently just a (less useful) placeholder. Not really useful for anybody/anything yet.
-    private struct Footer: View {
-        var filtCount: Int // number of items in filtered list
-        var unfiltCount: Int // number of items in unfiltered list
-        var listName: String
-        var organization: Organization? // optional because we copy this from first member in the photoClub collection
-        let member = String(localized: "member_",
-                            table: "PhotoClubHub.SwiftUI",
-                            comment: "Statistics at end of section of FilteredMemberPortfoliosView")
-        let members = String(localized: "members",
-                             table: "PhotoClubHub.SwiftUI",
-                             comment: "Statistics at end of section of FilteredMemberPortfoliosView")
-        let shown = String(localized: "shown",
-                           table: "PhotoClubHub.SwiftUI",
-                           comment: "X member(s) shown (due to various forms of filtering)")
-        let of1 = String(localized: "of1",
-                         table: "PhotoClubHub.SwiftUI",
-                         comment: "X of Y portfolio(s) shown (due to various forms of filtering)")
-
-        var body: some View {
-            HStack {
-                Spacer()
-                VStack {
-                    if filtCount < unfiltCount {
-                        Text(verbatim: // verbatim keeps these pretty empty strings out of the String Catalogue
-                             "\(filtCount) \(filtCount==1 ? member : members) (\(of1) \(unfiltCount)) \(shown).")
-                    } else {
-                        Text(verbatim:
-                             "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown).")
-                    }
-                    if organization != nil,
-                       organization!.level2URL != nil,
-                       organization!.level2URL!.host != nil,
-                       organization!.level2URL!.scheme != nil {
-                            Text(String(localized: """
-                                                   Data source: \(organization!.level2URL!.scheme!)://\
-                                                   \(organization!.level2URL!.host!)\
-                                                   \(organization!.level2URL!.path)/
-                                                   """,
-                                table: "PhotoClubHub.SwiftUI",
-                                comment: "Section footer text Portfolios screen"))
-                            .lineLimit(1)
-                            .truncationMode(.tail)
-                    }
-                }
-                    .font(.subheadline)
-                    .dynamicTypeSize( // constrain impact of large dynamic type
-                        ...DynamicTypeSize.large) // this is just supposed to be a footer, so don't want it too big
-                    .lineLimit(2)
-                    .foregroundColor(.secondary)
-                Spacer()
-            }
         }
     }
 
