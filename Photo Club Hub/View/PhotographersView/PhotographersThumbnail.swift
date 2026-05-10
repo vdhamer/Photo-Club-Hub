@@ -83,7 +83,7 @@ struct PhotographersThumbnail: View {
 
 // MARK: - Previews
 
-/// Helper (for previews only) to circumvent a Swift #Preview type-checking limitation.
+// Helper (for previews only) to circumvent a Swift #Preview type-checking limitation.
 // Believe it or not, these 3 previews actually work.
 extension PhotographersThumbnail {
 
