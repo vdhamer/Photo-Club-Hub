@@ -8,8 +8,9 @@
 import SwiftUI
 import WebKit // for wkWebView
 
-/// Renders `MemberPortfolioRow` views grouped by Club, driven by a Core Data sectioned fetch request.
-/// Sections are labeled by Club name+town and include member-count footers.
+/// Renders `MemberPortfolioRow` views grouped by Club, driven a sectioned fetch request to Core Data.
+/// Sections contain all the Members in a particular club.
+/// This is shown in a header (club name+town). Footers show member-count.
 /// Accepts an `NSPredicate` and a search-text binding for two-level runtime filtering.
 @available(iOS 26.0, *)
 struct FilteredMemberPortfoliosView2626: View {
@@ -52,6 +53,8 @@ struct FilteredMemberPortfoliosView2626: View {
         self.searchText = searchText
     }
 
+    // MARK: - body
+
     var body: some View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
         ForEach(sectionedPortfoliosResults) {section in
@@ -62,7 +65,7 @@ struct FilteredMemberPortfoliosView2626: View {
                 }
                 .accentColor(.memberPortfolioColor)
             } header: {
-                Header(title: section.id) // String used to group the elements into Sections
+                MemberListSectionHeader(title: section.id) // String used to group the elements into Sections
             } footer: {
                 Footer(filtCount: filterMemberPortfolios(unFilteredPortfolios: section).count,
                        unfiltCount: section.endIndex,
@@ -92,32 +95,6 @@ struct FilteredMemberPortfoliosView2626: View {
                  """,
                  tableName: "PhotoClubHub.SwiftUI",
                  comment: "Hint to the user if the database returns zero Members with empty Search filter.")
-        }
-    }
-
-    /// Centered capsule label showing the section's Club name.
-    private struct Header: View {
-        @Environment(\.colorScheme) private var colorScheme // to detect dark mode
-        var title: String
-
-        var body: some View {
-            HStack {
-                Spacer()
-                ZStack {
-                    Capsule(style: .continuous)
-                        .fill(Gradient(colors: [.gray.opacity(0.5),
-                                                .gray.opacity(0.1),
-                                                .gray.opacity(0.2),
-                                                .gray.opacity(0.5)]))
-                        .frame(maxWidth: 400, alignment: .center)
-                    Text(title) // String used to group the elements into Sections
-                        .font(.title2)
-                        .lineLimit(1)
-                        .foregroundColor(.secondary)
-                        .padding(.horizontal)
-                 }
-                Spacer()
-            }
         }
     }
 
