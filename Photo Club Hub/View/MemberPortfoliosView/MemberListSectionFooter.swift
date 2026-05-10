@@ -67,6 +67,7 @@ struct MemberListSectionFooter: View {
 
 // MARK: - Previews
 
+// Believe it or not, the following Previews actually work
 struct MemberListSectionFooter_Previews: PreviewProvider {
     static var previews: some View {
         let viewContext = PersistenceController.shared.container.viewContext

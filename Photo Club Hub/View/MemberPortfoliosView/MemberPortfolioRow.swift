@@ -86,54 +86,10 @@ struct MemberPortfolioRow: View {
 
             Spacer()
 
-            let pref: Bool = preferencesModel.preferences.preferenceForFeaturedImage
-            let imageChoice: ImageChoice = ImageChoice(member: member,
-                                                       isImageFlipped: flipImageFlag,
-                                                       preferenceForFeaturedImage: pref)
-            let url = imageChoice.url
-            AsyncImage(url: url) { phase in
-                if let image = phase.image {
-                    image // Displays the loaded image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } else if phase.error != nil {
-                    Image("Question-mark") // Displays image indicating an error occurred
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } else {
-                    ZStack {
-                        Image("Tortoise") // Displays placeholder while loading
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .opacity(0.4)
-                        ProgressView()
-                            .scaleEffect(x: 2, y: 2, anchor: .center)
-                            .blendMode(BlendMode.difference)
-                    }
-                }
-            }
-            .frame(width: 80, height: 80)
-            .border(chooseColor(defaultColor: .accentColor, isDeceased: member.photographer.isDeceased))
-            .clipped()
-            .contentShape(Rectangle())
-            .onTapGesture(perform: {
-                if isThumbnailFlippable(member: member) {
-                    flipImageFlag.toggle()
-                }
-            })
-
-            VStack {
-                SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {EmptyView()}
-                Spacer()
-                if isThumbnailFlippable(member: member) {
-                    Text(imageFlippedIndicator())
-                        .onTapGesture(perform: {
-                            flipImageFlag.toggle()
-                        })
-                        .foregroundStyle(Color.accentColor)
-                }
-            }
-            .frame(width: 20, height: 80)
+            MemberImageMicroToolbar(member: member,
+                                   wkWebView: wkWebView,
+                                   flipImageFlag: $flipImageFlag,
+                                   preferenceForFeaturedImage: preferencesModel.preferences.preferenceForFeaturedImage)
 
         } // HStack
     } // body of View
@@ -149,16 +105,6 @@ struct MemberPortfolioRow: View {
         } else {
             return defaultColor // .primary
         }
-    }
-
-    private func imageFlippedIndicator() -> String {
-        flipImageFlag ? "↺" : "↻"
-    }
-
-    private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
-        return
-            member.photographer.photographerImage != nil && // there are two images defined for this member
-            member.photographer.photographerImage != member.featuredImage // and the two images are different
     }
 
 }
