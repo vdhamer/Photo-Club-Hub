@@ -8,29 +8,36 @@
 import SwiftUI
 import WebKit // for wkWebView
 
+/// Renders `MemberPortfolioRow` views grouped by Club, driven by a Core Data sectioned fetch request.
+/// Sections are labeled by Club name+town and include member-count footers.
+/// Accepts an `NSPredicate` and a search-text binding for two-level runtime filtering.
 @available(iOS 26.0, *)
-/// View that creates `MemberPortfolioRow` views for each MemberPortfolio returned by a CoreData sectioned fetchrequest.
-/// The sectioning is done per Club.
 struct FilteredMemberPortfoliosView2626: View {
+
+    /// Would return nothing — safe initial state before the real predicate is injected via `init`.
     private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
     @Environment(\.managedObjectContext) private var viewContext
 
+    /// Sectioned fetch results keyed per Club by `fullNameTown`
+    /// Replaced within `init` with actuall request predicate and sort order.
     @SectionedFetchRequest<String, MemberPortfolio>(
         sectionIdentifier: \.organization_!.fullNameTown,
         sortDescriptors: [],
         predicate: predicateNone
-    ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
+    ) private var sectionedMemberPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
+    /// Bound to the parent's search field; changes here trigger re-filtering without a new fetch.
     private let searchText: Binding<String>
+
+    /// Creates a single instance that can be used throughout this view
     private let wkWebView = WKWebView()
 
-    // regenerate Section using current FetchRequest with current filters and sorting
+    /// Replaces `predicateNone` with `memberPredicate` and applies the standard sort order.
     init(memberPredicate: NSPredicate, searchText: Binding<String>) {
     // https://developer.apple.com/documentation/SwiftUI/SectionedFetchRequest
     // When you need to dynamically change the section identifier, predicate, or sort descriptors,
     // access the request’s SectionedFetchRequest.Configuration structure, either directly or with a binding.
-
         let sortDescriptors = [ // XCode had problems parsing this array
             SortDescriptor(\MemberPortfolio.organization_!.pinned, order: .reverse),
             SortDescriptor(\MemberPortfolio.organization_!.fullName_, order: .forward),
@@ -38,7 +45,7 @@ struct FilteredMemberPortfoliosView2626: View {
             SortDescriptor(\MemberPortfolio.photographer_!.givenName_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)
         ]
-        _sectionedPortfolios = SectionedFetchRequest(
+        _sectionedMemberPortfolios = SectionedFetchRequest(
             sectionIdentifier: \.organization_!.fullNameTown,
             sortDescriptors: sortDescriptors,
             predicate: memberPredicate,
@@ -47,10 +54,10 @@ struct FilteredMemberPortfoliosView2626: View {
     }
 
     var body: some View {
-        let sectionedPortfoliosResults = sectionedPortfolios // copy results to avoid recomputation
+        let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
         ForEach(sectionedPortfoliosResults) {section in
             Section {
-                ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
+                ForEach(filterMemberPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
                     MemberPortfolioRow(member: filteredMember, wkWebView: wkWebView)
                         .listRowSeparator(.visible)
                 }
@@ -58,7 +65,7 @@ struct FilteredMemberPortfoliosView2626: View {
             } header: {
                 Header(title: section.id) // String used to group the elements into Sections
             } footer: {
-                Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
+                Footer(filtCount: filterMemberPortfolios(unFilteredPortfolios: section).count,
                        unfiltCount: section.endIndex,
                        listName: section.id,
                        organization: section.first?.organization
@@ -89,6 +96,7 @@ struct FilteredMemberPortfoliosView2626: View {
         }
     }
 
+    /// Centered capsule label showing the section's Club name.
     private struct Header: View {
         @Environment(\.colorScheme) private var colorScheme // to detect dark mode
         var title: String
@@ -114,8 +122,10 @@ struct FilteredMemberPortfoliosView2626: View {
         }
     }
 
+    /// Footer showing how many members are visible (filtered vs. total) and the section's data-source URL.
+    /// Data-source URL is currently just a (less useful) placeholder. Not really useful for anybody/anything yet.
     private struct Footer: View {
-        var filtCount: Int // // number of items in filtered list
+        var filtCount: Int // number of items in filtered list
         var unfiltCount: Int // number of items in unfiltered list
         var listName: String
         var organization: Organization? // optional because we copy this from first member in the photoClub collection
@@ -137,7 +147,7 @@ struct FilteredMemberPortfoliosView2626: View {
                 Spacer()
                 VStack {
                     if filtCount < unfiltCount {
-                        Text(verbatim: // verbatim keeps these pretty empty strings out of the localized Strings
+                        Text(verbatim: // verbatim keeps these pretty empty strings out of the String Catalogue
                              "\(filtCount) \(filtCount==1 ? member : members) (\(of1) \(unfiltCount)) \(shown).")
                     } else {
                         Text(verbatim:
@@ -168,6 +178,8 @@ struct FilteredMemberPortfoliosView2626: View {
         }
     }
 
+    /// Returns the first `Photographer` that appears multiple times in `memberPortfolios` or `nil` if all are distinct.
+    /// The `findFirstNonDistinct()`function is not currently used. Not sure why it was created.
     private func findFirstNonDistinct(memberPortfolios: [MemberPortfolio]) -> Photographer? {
         let members = memberPortfolios.sorted()
         var previousMemberPortfolio: MemberPortfolio?
@@ -183,9 +195,11 @@ struct FilteredMemberPortfoliosView2626: View {
         return nil
     }
 
+    /// Deletes the `MemberPortfolio` entries at `indexSet` from `section` and saves the context.
+    /// Deletion is temporary — the next data reload restores them.
+    /// Not currently called; superseded by pull-to-refresh, but retained for possible future use.
     @MainActor
-    private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) { // only temporarily deletes member
-        // This function is no longer called (replaced by pull-down-to-reload data) but is kept for possible future use.
+    private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) {
 
         for index in indexSet {
             let memberPortfolio = section[index] // could use map()
@@ -205,11 +219,11 @@ struct FilteredMemberPortfoliosView2626: View {
         }
     }
 
-    // dynamically filter a sectionedFetchResult based on the bound searchText
-    // The input type and output type differ: .filter returns a different data type (why?)
-    // But the output type is simpler, and also works in a SwiftUI ForEach.
-    private func filterPortfolios(unFilteredPortfolios: SectionedFetchResults<String, MemberPortfolio>.Element)
-                                  -> [MemberPortfolio] {
+    /// Filters one section's portfolios by `searchText` (name or expertise), converting the opaque
+    /// `SectionedFetchResults.Element` to a plain `[MemberPortfolio]` that SwiftUI `ForEach` can consume.
+    private func filterMemberPortfolios(unFilteredPortfolios: SectionedFetchResults<String,
+                                        MemberPortfolio>.Element)
+                                    -> [MemberPortfolio] {
         let filteredPortfolios: [MemberPortfolio]
 
         if searchText.wrappedValue.isEmpty {
@@ -227,6 +241,7 @@ struct FilteredMemberPortfoliosView2626: View {
         return filteredPortfolios
     }
 
+    /// Returns `true` if any of the photographer's expertise names contain `searchText` (case-insensitive).
     private func comparePhotographerExpertisesToSearchText(photographerExpertises: Set<PhotographerExpertise>) -> Bool {
         for photographerExpertise in photographerExpertises where
             photographerExpertise.expertise // check every Expertise
@@ -240,10 +255,11 @@ struct FilteredMemberPortfoliosView2626: View {
 }
 
 // Believe it or not, this preview actually works.
+// Note that it filters on `searchText`, but `searchText` is not shown in this child View.
 @available(iOS 26.0, *)
 struct FilteredMemberPortfolios2626_Previews: PreviewProvider {
     static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
-    @State static var searchText: String = ""
+    @State static var searchText: String = "8"
 
     static var previews: some View {
         List { // lists are "Lazy" automatically
