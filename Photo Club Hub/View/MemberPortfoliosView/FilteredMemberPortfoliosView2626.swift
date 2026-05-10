@@ -19,7 +19,7 @@ struct FilteredMemberPortfoliosView2626: View {
 
     @Environment(\.managedObjectContext) private var viewContext
 
-    /// Sectioned fetch results keyed per Club by `fullNameTown`
+    /// Sectioned fetch results keyed per Club by `fullNameTown`.
     /// Replaced within `init` with actuall request predicate and sort order.
     @SectionedFetchRequest<String, MemberPortfolio>(
         sectionIdentifier: \.organization_!.fullNameTown,
@@ -29,8 +29,7 @@ struct FilteredMemberPortfoliosView2626: View {
 
     /// Bound to the parent's search field; changes here trigger re-filtering without a new fetch.
     private let searchText: Binding<String>
-
-    /// Creates a single instance that can be used throughout this view
+    /// Single instance reused across all rows to avoid repeated WKWebView allocation.
     private let wkWebView = WKWebView()
 
     /// Replaces `predicateNone` with `memberPredicate` and applies the standard sort order.
@@ -254,7 +253,9 @@ struct FilteredMemberPortfoliosView2626: View {
 
 }
 
-// Believe it or not, this preview actually works.
+// MARK: - Previews
+
+// Believe it or not, this preview actually works. But only if you put Canvas on iOS 17/18 device
 // Note that it filters on `searchText`, but `searchText` is not shown in this child View.
 @available(iOS 26.0, *)
 struct FilteredMemberPortfolios2626_Previews: PreviewProvider {
@@ -268,6 +269,6 @@ struct FilteredMemberPortfolios2626_Previews: PreviewProvider {
         }
         .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
         .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
-        .searchToolbarBehavior(.minimize)
+        .searchToolbarBehavior(.minimize) // <<<< iOS 26+
     }
 }
