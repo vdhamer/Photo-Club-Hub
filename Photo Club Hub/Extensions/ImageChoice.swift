@@ -14,7 +14,7 @@ import Foundation // for URL
 struct ImageChoice {
 
     /// Identifies the two candidate image types that can be selected.
-    enum ImageContentType {
+    enum ImageContentType: String {
         case featured
         case photographer
     }
