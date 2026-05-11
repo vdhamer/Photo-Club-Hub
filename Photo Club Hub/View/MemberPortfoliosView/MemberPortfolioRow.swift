@@ -86,7 +86,7 @@ struct MemberPortfolioRow: View {
 
             Spacer()
 
-            DualImageMicroToolbar(member: member,
+            DualImageWithCaptionAndControls(member: member,
                                    wkWebView: wkWebView,
                                    flipImageFlag: $flipImageFlag,
                                    preferenceForFeaturedImage: preferencesModel.preferences.preferenceForFeaturedImage)

@@ -1,5 +1,5 @@
 //
-//  DualImageMicroToolbar.swift
+//  DualImageWithCaptionAndControls.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 10/05/2026.
@@ -12,7 +12,7 @@ import WebKit // for WKWebView
 /// The toolbar contains a portfolio link button and, when two images are available, a flip indicator
 /// that toggles between the featured image and the photographer's own image.
 /// `flipImageFlag` is a binding so taps here propagate back to the parent row.
-struct DualImageMicroToolbar: View {
+struct DualImageWithCaptionAndControls: View {
     var member: MemberPortfolio
     let wkWebView: WKWebView
     @Binding var flipImageFlag: Bool
@@ -95,7 +95,7 @@ struct MemberImageMiniToolbar_Previews: PreviewProvider {
         @State var flipImageFlag = false
 
         var body: some View {
-            DualImageMicroToolbar(member: member,
+            DualImageWithCaptionAndControls(member: member,
                                    wkWebView: WKWebView(),
                                    flipImageFlag: $flipImageFlag,
                                    preferenceForFeaturedImage: true)
