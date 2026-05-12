@@ -59,7 +59,6 @@ struct DualImageWithCaptionAndControls: View {
                 .frame(width: squareSize, height: squareSize)
                 .clipShape(RoundedRectangle(cornerRadius: squareSize * 0.15))
                 .shadow(color: .accentColor.opacity(0.5), radius: 3)
-//                .clipped() // TODO needed?
                 .contentShape(Rectangle())
                 .onTapGesture(perform: {
                     if isThumbnailFlippable(member: member) {
