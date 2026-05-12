@@ -111,7 +111,7 @@ struct MemberPortfolioRow: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Preview actually works
+// Believe it or not, the following Preview actually works.
 struct MemberPortfolioRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {

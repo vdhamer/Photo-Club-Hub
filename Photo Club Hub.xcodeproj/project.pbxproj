@@ -846,9 +846,9 @@
 				37A57AA52EFCA74100ED13CE /* OldIOSVersionSupport */,
 				D0AE1B772788A19500E0100E /* PhotographersListView2626.swift */,
 				D0831A1C277F72270049AB84 /* FilteredPhotographerView2626.swift */,
+				D05840172E3C18B00013E438 /* PhotographersTextInfo.swift */,
 				D087540B2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift */,
 				37641D962FAFF177005D84F6 /* PhotographersThumbnail.swift */,
-				D05840172E3C18B00013E438 /* PhotographersTextInfo.swift */,
 			);
 			path = PhotographersView;
 			sourceTree = "<group>";

@@ -39,7 +39,7 @@ struct PreferencesViewThumbnail: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Preview actually works
+// Believe it or not, the following Preview actually works.
 #Preview("PreferencesViewThumbnail", traits: .portrait) {
     struct Container: View {
         @State private var prefs = PreferencesStruct.defaultValue

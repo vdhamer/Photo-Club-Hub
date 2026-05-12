@@ -44,7 +44,7 @@ struct PhotographersListView2626: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredPhotographerView2626(predicate: model.preferences.photographerPredicate,
+                FilteredPhotographerView2626(predicate: model.preferences.photographerPredicate, // Here's the action
                                          searchText: searchText,
                                          wkWebView: wkWebView)
             }

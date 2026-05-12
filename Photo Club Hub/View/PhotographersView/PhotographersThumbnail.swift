@@ -20,58 +20,66 @@ struct PhotographersThumbnail: View {
     let preferences: PreferencesStruct
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
+    @StateObject var preferencesModel = PreferencesViewModel.shared
 
     var body: some View {
-        VStack { // to combine image and caption
-            AsyncImage(url: ImageChoice(member: member,
-                            isImageFlipped: flipImageFlag,
-                            preferenceForFeaturedImage: preferences.preferenceForFeaturedImage).url) { phase in
-                if let image = phase.image {
-                    ZStack(alignment: .bottom) {
-                        image // Displays the loaded image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: 160)
-                    }
-                } else if phase.error != nil ||
-                            member.featuredImage == nil {
-                    Image("Question-mark") // image indicates an error occurred
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } else {
-                    ZStack {
-                        Image("Tortoise") // placeholder while loading
+        HStack {
+            VStack { // to combine image and caption
+                AsyncImage(url: ImageChoice(member: member,
+                                            isImageFlipped: flipImageFlag,
+                                            preferenceForFeaturedImage:
+                                                preferences.preferenceForFeaturedImage).url) { phase in
+                    if let image = phase.image {
+                        ZStack(alignment: .bottom) {
+                            image // Displays the loaded image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(height: 160)
+                        }
+                    } else if phase.error != nil ||
+                                member.featuredImage == nil {
+                        Image("Question-mark") // image indicates an error occurred
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .opacity(0.4)
-                        ProgressView()
-                            .scaleEffect(x: 2, y: 2, anchor: .center)
-                            .blendMode(BlendMode.difference)
+                    } else {
+                        ZStack {
+                            Image("Tortoise") // placeholder while loading
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .opacity(0.4)
+                            ProgressView()
+                                .scaleEffect(x: 2, y: 2, anchor: .center)
+                                .blendMode(BlendMode.difference)
+                        }
                     }
                 }
-            }
-            .frame(width: 160, height: 160) // square
-            .clipShape(RoundedRectangle(cornerRadius: 25))
-            .shadow(color: .accentColor.opacity(0.5), radius: 3)
-            .contentShape(Rectangle())
-            .onTapGesture(perform: {
-                if isThumbnailFlippable(member: member) {
-                    flipImageFlag.toggle()
+                                            .frame(width: 160, height: 160) // square
+                                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                                            .shadow(color: .accentColor.opacity(0.5), radius: 3)
+                                            .contentShape(Rectangle())
+                                            .onTapGesture(perform: {
+                                                if isThumbnailFlippable(member: member) {
+                                                    flipImageFlag.toggle()
+                                                }
+                                            })
+
+                SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
+                    Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                        .frame(width: 160, height: 35)
+                        .font(.caption)
+                        .lineLimit(2)
+                        .truncationMode(.middle)
+                        .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
+                            ...DynamicTypeSize.large)
                 }
-            })
+                .buttonStyle(.borderless)
+            } // VStack to combine image and caption
 
-            SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
-                Text(verbatim: "\(member.roleDescriptionOfClubTown)")
-                    .frame(width: 160, height: 35)
-                    .font(.caption)
-                    .lineLimit(2)
-                    .truncationMode(.middle)
-                    .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
-                        ...DynamicTypeSize.large)
-            }
-            .buttonStyle(.borderless)
-
-        } // VStack to combine image and caption
+            DualImageWithCaptionAndControls(member: member,
+                                   wkWebView: wkWebView,
+                                   flipImageFlag: $flipImageFlag,
+                                   preferenceForFeaturedImage: preferencesModel.preferences.preferenceForFeaturedImage)
+        }
     }
 
     private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
@@ -114,32 +122,6 @@ extension PhotographersThumbnail {
             Divider()
 
             PhotographersThumbnail(member: membership, wkWebView: wkWebView, preferences: preferences)
-                .border(Color.gray.opacity(0.3), width: 1)
-        }
-        .padding()
-    } else {
-        Text("No membership data available")
-            .foregroundStyle(.secondary)
-    }
-}
-
-#Preview("Single Portfolio Thumbnail (live data)") {
-    let controller = PersistenceController.shared
-    let context = controller.container.viewContext
-    let wkWebView = WKWebView()
-    let preferences = PreferencesViewModel.shared.preferences
-
-    // Get first membership from live data
-    let fetchRequest = MemberPortfolio.fetchRequest()
-    let memberships = (try? context.fetch(fetchRequest)) ?? []
-
-    if let member = memberships.first {
-        VStack(spacing: 20) {
-            Text(verbatim: "Portfolio for: \(member.photographer.fullNameFirstLast)")
-                .font(.headline)
-            Divider()
-
-            PhotographersThumbnail(member: member, wkWebView: wkWebView, preferences: preferences)
                 .border(Color.gray.opacity(0.3), width: 1)
         }
         .padding()

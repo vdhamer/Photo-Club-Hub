@@ -1,5 +1,5 @@
 //
-//  DualImageWithCaptionAndControls.swift
+//  DualImageMicroToolbar.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 10/05/2026.
@@ -85,7 +85,7 @@ struct DualImageWithCaptionAndControls: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Preview actually works
+// Believe it or not, the following Preview actually works.
 struct MemberImageMiniToolbar_Previews: PreviewProvider {
 
     // Wrapper is required so @State is an instance property, which SwiftUI needs
