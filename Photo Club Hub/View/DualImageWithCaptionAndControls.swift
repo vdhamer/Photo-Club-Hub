@@ -96,9 +96,9 @@ struct MemberImageMiniToolbar_Previews: PreviewProvider {
 
         var body: some View {
             DualImageWithCaptionAndControls(member: member,
-                                   wkWebView: WKWebView(),
-                                   flipImageFlag: $flipImageFlag,
-                                   preferenceForFeaturedImage: true)
+                                            wkWebView: WKWebView(),
+                                            flipImageFlag: $flipImageFlag,
+                                            preferenceForFeaturedImage: true)
                 .padding()
         }
     }
