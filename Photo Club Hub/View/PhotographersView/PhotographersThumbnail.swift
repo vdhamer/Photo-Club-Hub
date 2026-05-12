@@ -24,61 +24,14 @@ struct PhotographersThumbnail: View {
 
     var body: some View {
         HStack {
-            VStack { // to combine image and caption
-                AsyncImage(url: ImageChoice(member: member,
-                                            isImageFlipped: flipImageFlag,
-                                            preferenceForFeaturedImage:
-                                                preferences.preferenceForFeaturedImage).url) { phase in
-                    if let image = phase.image {
-                        ZStack(alignment: .bottom) {
-                            image // Displays the loaded image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(height: 160)
-                        }
-                    } else if phase.error != nil ||
-                                member.featuredImage == nil {
-                        Image("Question-mark") // image indicates an error occurred
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    } else {
-                        ZStack {
-                            Image("Tortoise") // placeholder while loading
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .opacity(0.4)
-                            ProgressView()
-                                .scaleEffect(x: 2, y: 2, anchor: .center)
-                                .blendMode(BlendMode.difference)
-                        }
-                    }
-                }
-                                            .frame(width: 160, height: 160) // square
-                                            .clipShape(RoundedRectangle(cornerRadius: 25))
-                                            .shadow(color: .accentColor.opacity(0.5), radius: 3)
-                                            .contentShape(Rectangle())
-                                            .onTapGesture(perform: {
-                                                if isThumbnailFlippable(member: member) {
-                                                    flipImageFlag.toggle()
-                                                }
-                                            })
-
-                SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
-                    Text(verbatim: "\(member.roleDescriptionOfClubTown)")
-                        .frame(width: 160, height: 35)
-                        .font(.caption)
-                        .lineLimit(2)
-                        .truncationMode(.middle)
-                        .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
-                            ...DynamicTypeSize.large)
-                }
-                .buttonStyle(.borderless)
-            } // VStack to combine image and caption
-
             DualImageWithCaptionAndControls(member: member,
-                                   wkWebView: wkWebView,
-                                   flipImageFlag: $flipImageFlag,
-                                   preferenceForFeaturedImage: preferencesModel.preferences.preferenceForFeaturedImage)
+                                            wkWebView: wkWebView,
+                                            preferences: preferencesModel.preferences,
+                                            squareSize: 160,
+                                            caption: true,
+                                            flipImageFlag: $flipImageFlag,
+                                            preferenceForFeaturedImage:
+                                                                preferencesModel.preferences.preferenceForFeaturedImage)
         }
     }
 

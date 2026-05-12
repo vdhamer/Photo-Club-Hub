@@ -87,9 +87,13 @@ struct MemberPortfolioRow: View {
             Spacer()
 
             DualImageWithCaptionAndControls(member: member,
-                                   wkWebView: wkWebView,
-                                   flipImageFlag: $flipImageFlag,
-                                   preferenceForFeaturedImage: preferencesModel.preferences.preferenceForFeaturedImage)
+                                            wkWebView: wkWebView,
+                                            preferences: preferencesModel.preferences,
+                                            squareSize: 80,
+                                            caption: false,
+                                            flipImageFlag: $flipImageFlag,
+                                            preferenceForFeaturedImage:
+                                                                preferencesModel.preferences.preferenceForFeaturedImage)
 
         } // HStack
     } // body of View
