@@ -5,7 +5,7 @@
 //  Created by Peter van den Hamer on 10/05/2026.
 //
 
-import AudioToolbox // for AudioServicesPlaySystemSound
+import AudioToolbox // for AudioServicesPlayAlertSound
 import SwiftUI // for View
 import UIKit // for UINotificationFeedbackGenerator, UIDevice
 import WebKit // for WKWebView
@@ -16,7 +16,7 @@ import WebKit // for WKWebView
 /// `flipImageFlag` is a binding so taps here propagate back to the parent view/row.
 struct DualImageWithCaptionAndControls: View {
     /// who is this about?
-    var member: MemberPortfolio
+    let member: MemberPortfolio
     /// shared across many instances of DualImageWithCaptionAndControls
     let wkWebView: WKWebView
     let preferences: PreferencesStruct
@@ -26,8 +26,6 @@ struct DualImageWithCaptionAndControls: View {
     let caption: Bool
     /// current state of whether alternative image should be used
     @Binding var flipImageFlag: Bool
-    /// from settings
-    var preferenceForFeaturedImage: Bool
 
     var body: some View {
         let imageChoice = ImageChoice(member: member,
@@ -37,12 +35,10 @@ struct DualImageWithCaptionAndControls: View {
             VStack { // combines Image and Caption
                 AsyncImage(url: imageChoice.url) { phase in
                     if let image = phase.image {
-                        ZStack(alignment: .bottom) {
-                            image // Displays the loaded image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(height: squareSize)
-                        }
+                        image // Displays the loaded image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: squareSize)
                     } else if phase.error != nil  ||
                                 member.featuredImage == nil {
                         Image("Question-mark") // Displays image indicating an error occurred
@@ -98,7 +94,6 @@ struct DualImageWithCaptionAndControls: View {
                 SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
                     Image(systemName: "chevron.right")
                         .foregroundStyle(Color.accentColor)
-                        .symbolRenderingMode(.palette)
                 }
                 .tint(.primary)
                 Spacer()
@@ -114,10 +109,6 @@ struct DualImageWithCaptionAndControls: View {
             .frame(width: 20, height: squareSize)
             .contentShape(Rectangle())
         }
-    }
-
-    private func chooseColor(defaultColor: Color, isDeceased: Bool) -> Color {
-        isDeceased ? .deceasedColor : defaultColor
     }
 
     private func imageFlippedIndicator() -> Image {
@@ -146,16 +137,16 @@ struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
         @State var flipImageFlag = false
         let squareSize: CGFloat
         let caption: Bool
+        let wkWebView = WKWebView() // initialize only once (although this is merely a preview)
 
         var body: some View {
             NavigationStack {
                 DualImageWithCaptionAndControls(member: member,
-                                                wkWebView: WKWebView(),
+                                                wkWebView: wkWebView,
                                                 preferences: PreferencesStruct.defaultValue,
                                                 squareSize: squareSize,
                                                 caption: caption,
-                                                flipImageFlag: $flipImageFlag,
-                                                preferenceForFeaturedImage: true)
+                                                flipImageFlag: $flipImageFlag)
                 .padding()
             }
         }

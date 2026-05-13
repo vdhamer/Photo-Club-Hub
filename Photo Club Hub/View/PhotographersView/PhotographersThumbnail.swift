@@ -29,9 +29,7 @@ struct PhotographersThumbnail: View {
                                             preferences: preferencesModel.preferences,
                                             squareSize: 160,
                                             caption: true,
-                                            flipImageFlag: $flipImageFlag,
-                                            preferenceForFeaturedImage:
-                                                                preferencesModel.preferences.preferenceForFeaturedImage)
+                                            flipImageFlag: $flipImageFlag)
         }
     }
 

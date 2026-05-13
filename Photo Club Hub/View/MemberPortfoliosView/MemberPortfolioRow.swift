@@ -91,9 +91,7 @@ struct MemberPortfolioRow: View {
                                             preferences: preferencesModel.preferences,
                                             squareSize: 80,
                                             caption: false,
-                                            flipImageFlag: $flipImageFlag,
-                                            preferenceForFeaturedImage:
-                                                                preferencesModel.preferences.preferenceForFeaturedImage)
+                                            flipImageFlag: $flipImageFlag)
 
         } // HStack
     } // body of View
