@@ -5,7 +5,9 @@
 //  Created by Peter van den Hamer on 10/05/2026.
 //
 
+import AudioToolbox // for AudioServicesPlaySystemSound
 import SwiftUI // for View
+import UIKit // for UINotificationFeedbackGenerator, UIDevice
 import WebKit // for WKWebView
 
 /// Trailing-edge widget in a member row: an sizable thumbnail backed by a 20-wide toolbar strip.
@@ -59,27 +61,43 @@ struct DualImageWithCaptionAndControls: View {
                 .frame(width: squareSize, height: squareSize)
                 .clipShape(RoundedRectangle(cornerRadius: squareSize * 0.15))
                 .shadow(color: .accentColor.opacity(0.5), radius: 3)
-                .contentShape(Rectangle())
-                .onTapGesture(perform: {
-                    if isThumbnailFlippable(member: member) {
-                        flipImageFlag.toggle()
-                    }
-                })
+                .allowsHitTesting(false)
+                .overlay {
+                    // Color.clear is skipped by hit-testing; a near-invisible fill keeps the shape tappable
+                    // while naturally restricting the tap area to the rounded-rectangle path.
+                    Rectangle()
+                        .fill(Color.white.opacity(0.001))
+                        .onTapGesture {
+                            if isThumbnailFlippable(member: member) {
+                                flipImageFlag.toggle()
+                            } else if UIDevice.isIPad {
+                                AudioServicesPlaySystemSound(SystemSoundID(1521)) // "not allowed" tock on iPad
+                            } else {
+                                UINotificationFeedbackGenerator().notificationOccurred(.error)
+                            }
+                        }
+                }
                 if caption {
-                    Text(verbatim: "\(member.roleDescriptionOfClubTown)")
-                        .frame(width: squareSize, height: 35)
-                        .multilineTextAlignment(.center)
-                        .font(.caption)
-                        .lineLimit(2)
-                        .truncationMode(.middle)
-                        .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
-                            ...DynamicTypeSize.large)
+                    SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
+                        Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                            .frame(width: squareSize, height: 35)
+                            .multilineTextAlignment(.center)
+                            .font(.caption)
+                            .lineLimit(2)
+                            .truncationMode(.middle)
+                            .dynamicTypeSize( // block xLarge (etc) dynamic type size for layout reasons
+                                ...DynamicTypeSize.large)
+                    }
+                    .tint(.primary)
                 }
             }
             VStack {
                 SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
-                    Text(verbatim: "→")
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(Color.accentColor)
+                        .symbolRenderingMode(.palette)
                 }
+                .tint(.primary)
                 Spacer()
                 if isThumbnailFlippable(member: member) {
                     Text(imageFlippedIndicator())
@@ -89,7 +107,9 @@ struct DualImageWithCaptionAndControls: View {
                         .foregroundStyle(Color.accentColor)
                 }
             }
+            .padding(0)
             .frame(width: 20, height: squareSize)
+            .contentShape(Rectangle())
         }
     }
 
@@ -97,8 +117,12 @@ struct DualImageWithCaptionAndControls: View {
         isDeceased ? .deceasedColor : defaultColor
     }
 
-    private func imageFlippedIndicator() -> String {
-        flipImageFlag ? "↺" : "↻"
+    private func imageFlippedIndicator() -> Image {
+        if flipImageFlag {
+            return Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
+        } else {
+            return Image(systemName: "arrow.trianglehead.2.counterclockwise.rotate.90")
+        }
     }
 
     private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
@@ -121,14 +145,16 @@ struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
         let caption: Bool
 
         var body: some View {
-            DualImageWithCaptionAndControls(member: member,
-                                            wkWebView: WKWebView(),
-                                            preferences: PreferencesStruct.defaultValue,
-                                            squareSize: squareSize,
-                                            caption: caption,
-                                            flipImageFlag: $flipImageFlag,
-                                            preferenceForFeaturedImage: true)
-            .padding()
+            NavigationStack {
+                DualImageWithCaptionAndControls(member: member,
+                                                wkWebView: WKWebView(),
+                                                preferences: PreferencesStruct.defaultValue,
+                                                squareSize: squareSize,
+                                                caption: caption,
+                                                flipImageFlag: $flipImageFlag,
+                                                preferenceForFeaturedImage: true)
+                .padding()
+            }
         }
     }
 

@@ -16,21 +16,23 @@ struct SinglePortfolioLinkView<Content: View>: View {
     let content: () -> Content // what to show for this link
 
     @Environment(\.horizontalSizeClass) private var horSizeClass
-    var organization: Organization { destPortfolio.organization }
+    var club: Organization { destPortfolio.organization } // is never used for a museum
+    @State private var isActive = false
 
     var body: some View {
-        NavigationLink(destination: SinglePortfolioView(url: destPortfolio.level3URL, webView: wkWebView)
-            .navigationTitle(destPortfolio.photographer.fullNameFirstLast +
-                             " @ " + fullNameOrNickName(horSizeClass: horSizeClass))
-            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
-                content()
+        Button { isActive = true } label: { content() }
+            .navigationDestination(isPresented: $isActive) {
+                SinglePortfolioView(url: destPortfolio.level3URL, webView: wkWebView)
+                    .navigationTitle(destPortfolio.photographer.fullNameFirstLast +
+                                     " @ " + fullNameOrNickName(horSizeClass: horSizeClass))
+                    .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
             }
     }
 
     private func fullNameOrNickName(horSizeClass: UserInterfaceSizeClass?) -> String {
         // full photo club name on iPad and iPhone 14 Plus or Pro Max only
-        guard horSizeClass != nil else { return organization.nickName } // don't know size of display
-        return (horSizeClass! == UserInterfaceSizeClass.compact) ? organization.nickName : organization.fullName
+        guard horSizeClass != nil else { return club.nickName } // don't know size of display
+        return (horSizeClass! == UserInterfaceSizeClass.compact) ? club.nickName : club.fullName
     }
 }
 
@@ -62,7 +64,7 @@ struct SinglePortfolioLinkView<Content: View>: View {
                                                          optionalFields: MemberOptionalFields())
 
     let wkWebView = WKWebView()
-    NavigationView {
+    NavigationStack {
         SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
             Text(verbatim: "This is a test Link, so click me!")
         }

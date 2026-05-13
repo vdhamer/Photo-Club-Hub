@@ -632,11 +632,11 @@
 		D081655C278612470078AB16 /* MemberPortfoliosView */ = {
 			isa = PBXGroup;
 			children = (
+				37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */,
 				37E134BC2E6F7A7100C61714 /* OldIOSVersionSupport */,
 				37E134AE2E6F63D100C61714 /* MemberPortfolioView2626.swift */,
 				D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift */,
 				37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */,
-				37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */,
 				37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */,
 			);
 			path = MemberPortfoliosView;
