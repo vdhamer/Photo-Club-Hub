@@ -53,19 +53,19 @@ struct PhotographersListView2626: View {
             VStack(alignment: .leading) {
                 Text("Photographers_Caption_1",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Photographers page (1/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (1/4).")
                 Divider()
                 Text("Photographers_Caption_2",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Photographers page (2/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (2/4).")
                 Divider()
                 Text("Photographers_Caption_3",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Photographers page (3/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (3/4).")
                 Divider()
                 Text("Photographers_Caption_4",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Photographers page (3/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (3/4).")
                 ForEach(Expertise.getAll(context: viewContext)
                     .filter { !$0.id.contains("expertise") }  // Block "Too many expertises" entry
                     .sorted(by: sortExpertisesLocalized),
