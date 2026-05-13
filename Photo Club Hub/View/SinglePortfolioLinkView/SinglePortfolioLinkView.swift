@@ -21,6 +21,7 @@ struct SinglePortfolioLinkView<Content: View>: View {
 
     var body: some View {
         Button { isActive = true } label: { content() }
+            .buttonStyle(.plain)
             .navigationDestination(isPresented: $isActive) {
                 SinglePortfolioView(url: destPortfolio.level3URL, webView: wkWebView)
                     .navigationTitle(destPortfolio.photographer.fullNameFirstLast +
