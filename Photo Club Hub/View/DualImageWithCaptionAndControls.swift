@@ -74,9 +74,9 @@ struct DualImageWithCaptionAndControls: View {
                             if isThumbnailFlippable(member: member) {
                                 flipImageFlag.toggle()
                             } else if UIDevice.isIPad {
-                                AudioServicesPlaySystemSound(SystemSoundID(1521)) // "not allowed" tock on iPad
+                                AudioServicesPlayAlertSound(SystemSoundID(1104)) // tock sound on iPad
                             } else {
-                                UINotificationFeedbackGenerator().notificationOccurred(.error)
+                                UINotificationFeedbackGenerator().notificationOccurred(.warning)
                             }
                         }
                 }
