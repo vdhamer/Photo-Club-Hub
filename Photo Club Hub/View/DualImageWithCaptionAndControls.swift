@@ -24,7 +24,9 @@ struct DualImageWithCaptionAndControls: View {
     let squareSize: CGFloat
     /// whether to show a caption below the image
     let caption: Bool
+    /// current state of whether alternative image should be used
     @Binding var flipImageFlag: Bool
+    /// from settings
     var preferenceForFeaturedImage: Bool
 
     var body: some View {
@@ -32,7 +34,7 @@ struct DualImageWithCaptionAndControls: View {
                                       isImageFlipped: flipImageFlag,
                                       preferenceForFeaturedImage: preferences.preferenceForFeaturedImage)
         HStack(alignment: .top) {
-            VStack { // to combine image and caption
+            VStack { // combines Image and Caption
                 AsyncImage(url: imageChoice.url) { phase in
                     if let image = phase.image {
                         ZStack(alignment: .bottom) {
@@ -63,6 +65,7 @@ struct DualImageWithCaptionAndControls: View {
                 .shadow(color: .accentColor.opacity(0.5), radius: 3)
                 .allowsHitTesting(false)
                 .overlay {
+                    // elaborate code was a (failed) attempt to prevent reacting to taps slightly outside Image
                     // Color.clear is skipped by hit-testing; a near-invisible fill keeps the shape tappable
                     // while naturally restricting the tap area to the rounded-rectangle path.
                     Rectangle()
@@ -107,7 +110,7 @@ struct DualImageWithCaptionAndControls: View {
                         .foregroundStyle(Color.accentColor)
                 }
             }
-            .padding(0)
+            .padding(.vertical, 5) // to align chevron with photographer name in MemberPortfolioRow
             .frame(width: 20, height: squareSize)
             .contentShape(Rectangle())
         }
