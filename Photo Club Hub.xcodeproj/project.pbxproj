@@ -83,7 +83,7 @@
 		37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B42E6F709500C61714 /* PreferencesView1718.swift */; };
 		37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */; };
 		37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */; };
-		37EA14EB2FB0CCD6000D8EDF /* DualImageMicroToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14EA2FB0CCD6000D8EDF /* DualImageMicroToolbar.swift */; };
+		37EA14EB2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */; };
 		37EEEB9D2FA0B3A3001463BA /* PreferencesViewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEEB9C2FA0B3A3001463BA /* PreferencesViewThumbnail.swift */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */; };
@@ -279,7 +279,7 @@
 		37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitHub_bestandsbeheer_NL.md; sourceTree = "<group>"; };
 		37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListSectionHeader.swift; sourceTree = "<group>"; };
 		37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListSectionFooter.swift; sourceTree = "<group>"; };
-		37EA14EA2FB0CCD6000D8EDF /* DualImageMicroToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualImageMicroToolbar.swift; sourceTree = "<group>"; };
+		37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualImageWithCaptionAndControls.swift; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
 		37EEEB9C2FA0B3A3001463BA /* PreferencesViewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewThumbnail.swift; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
@@ -632,11 +632,11 @@
 		D081655C278612470078AB16 /* MemberPortfoliosView */ = {
 			isa = PBXGroup;
 			children = (
+				37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */,
 				37E134BC2E6F7A7100C61714 /* OldIOSVersionSupport */,
 				37E134AE2E6F63D100C61714 /* MemberPortfolioView2626.swift */,
 				D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift */,
 				37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */,
-				37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */,
 				37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */,
 			);
 			path = MemberPortfoliosView;
@@ -695,7 +695,7 @@
 		D0831A18277F72110049AB84 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				37EA14EA2FB0CCD6000D8EDF /* DualImageMicroToolbar.swift */,
+				37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */,
 				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
 				D081655C278612470078AB16 /* MemberPortfoliosView */,
 				D0AE1B7327889D6700E0100E /* OrganizationsView */,
@@ -846,9 +846,9 @@
 				37A57AA52EFCA74100ED13CE /* OldIOSVersionSupport */,
 				D0AE1B772788A19500E0100E /* PhotographersListView2626.swift */,
 				D0831A1C277F72270049AB84 /* FilteredPhotographerView2626.swift */,
+				D05840172E3C18B00013E438 /* PhotographersTextInfo.swift */,
 				D087540B2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift */,
 				37641D962FAFF177005D84F6 /* PhotographersThumbnail.swift */,
-				D05840172E3C18B00013E438 /* PhotographersTextInfo.swift */,
 			);
 			path = PhotographersView;
 			sourceTree = "<group>";
@@ -1269,7 +1269,7 @@
 				37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */,
 				37C014442EDA564B003B3901 /* Organization+Count.swift in Sources */,
 				D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */,
-				37EA14EB2FB0CCD6000D8EDF /* DualImageMicroToolbar.swift in Sources */,
+				37EA14EB2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift in Sources */,
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				37D9840B2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift in Sources */,
 				37CA632F2FA63EFA00C92F30 /* MemberPortfolioRow.swift in Sources */,

@@ -38,7 +38,7 @@ struct MemberListSectionHeader: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Preview actually works
+// Believe it or not, the following Preview actually works.
 struct MemberListSectionHeader_Previews: PreviewProvider {
     static var previews: some View {
         Group {

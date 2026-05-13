@@ -86,10 +86,12 @@ struct MemberPortfolioRow: View {
 
             Spacer()
 
-            DualImageMicroToolbar(member: member,
-                                   wkWebView: wkWebView,
-                                   flipImageFlag: $flipImageFlag,
-                                   preferenceForFeaturedImage: preferencesModel.preferences.preferenceForFeaturedImage)
+            DualImageWithCaptionAndControls(member: member,
+                                            wkWebView: wkWebView,
+                                            preferences: preferencesModel.preferences,
+                                            squareSize: 80,
+                                            caption: false,
+                                            flipImageFlag: $flipImageFlag)
 
         } // HStack
     } // body of View
@@ -111,7 +113,7 @@ struct MemberPortfolioRow: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Preview actually works
+// Believe it or not, the following Preview actually works.
 struct MemberPortfolioRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
