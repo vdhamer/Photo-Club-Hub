@@ -330,6 +330,7 @@
 		D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaarverslag 2024 Website.docx"; sourceTree = "<group>"; };
 		D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Persoonlijk16.level2.json; sourceTree = "<group>"; };
 		D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2JsonReader.swift; sourceTree = "<group>"; };
+		D05326532FB49BA3008567FC /* Photo_Club_Hub_2_9_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_4.xcdatamodel; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05840172E3C18B00013E438 /* PhotographersTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersTextInfo.swift; sourceTree = "<group>"; };
 		D06061EC28A05D4600A675A7 /* String+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Paths.swift"; sourceTree = "<group>"; };
@@ -1510,7 +1511,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4660;
+				CURRENT_PROJECT_VERSION = 4661;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1552,7 +1553,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4660;
+				CURRENT_PROJECT_VERSION = 4661;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_APP_SANDBOX = YES;
@@ -1701,6 +1702,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D05326532FB49BA3008567FC /* Photo_Club_Hub_2_9_4.xcdatamodel */,
 				37922A512F50ECAF00E596B8 /* Photo_Club_Hub_2_9_3.xcdatamodel */,
 				D0B7D2602F427B9400BBCC5F /* Photo_Club_Hub_2_9_2.xcdatamodel */,
 				D0F7CF262F165B8F0016D7FC /* Photo_Club_Hub_2_9_1.xcdatamodel */,
@@ -1733,7 +1735,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = 37922A512F50ECAF00E596B8 /* Photo_Club_Hub_2_9_3.xcdatamodel */;
+			currentVersion = D05326532FB49BA3008567FC /* Photo_Club_Hub_2_9_4.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
