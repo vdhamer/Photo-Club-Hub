@@ -33,6 +33,7 @@ struct DualImageWithCaptionAndControls: View {
                                       preferenceForFeaturedImage: preferences.preferenceForFeaturedImage)
         HStack(alignment: .top) {
             VStack { // combines Image and Caption
+                // image
                 AsyncImage(url: imageChoice.url) { phase in
                     if let image = phase.image {
                         image // Displays the loaded image
@@ -76,6 +77,8 @@ struct DualImageWithCaptionAndControls: View {
                             }
                         }
                 }
+
+                // caption
                 if caption {
                     SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
                         Text(verbatim: "\(member.roleDescriptionOfClubTown)")
@@ -90,6 +93,8 @@ struct DualImageWithCaptionAndControls: View {
                     .tint(.primary)
                 }
             }
+
+            // vertical list of controls
             VStack {
                 SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
                     Image(systemName: "chevron.right")

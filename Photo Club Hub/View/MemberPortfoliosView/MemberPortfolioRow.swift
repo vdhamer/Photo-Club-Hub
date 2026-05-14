@@ -34,10 +34,12 @@ struct MemberPortfolioRow: View {
 
             HStack(alignment: .top) { // everything to left of Image: icon + several lines of Text
 
+                // icon showing any special role
                 RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus) // icon
                     .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
                     .imageScale(.large)
 
+                // name of photographer
                 VStack(alignment: .leading) {
                     Text(verbatim: "\(member.photographer.fullNameFirstLast)") // photographer's name
                         .font(UIDevice.isIPad ? .title : .title2)
@@ -48,6 +50,7 @@ struct MemberPortfolioRow: View {
                             isDeceased: member.photographer.isDeceased
                         ))
 
+                    // expertises
                     let localizedExpertiseResultLists = LocalizedExpertiseResultLists(moc: moc,
                                                                             member.photographer.photographerExpertises)
                     Group {
@@ -75,6 +78,7 @@ struct MemberPortfolioRow: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
 
+                    // roles
                     Text(verbatim: "\(member.roleDescriptionOfClubTown)")
                         .truncationMode(.tail)
                         .lineLimit(2)
