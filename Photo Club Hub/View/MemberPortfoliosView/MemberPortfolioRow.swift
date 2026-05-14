@@ -26,66 +26,82 @@ struct MemberPortfolioRow: View {
     let moc = PersistenceController.shared.container.viewContext
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
+    /// Controls navigation to the member's portfolio page when the text/icon area is tapped.
+    @State private var isPortfolioActive = false
+    /// Provides access to user preferences (e.g. preferences.preferenceForFeaturedImage) to this view and descendants.
     @StateObject var preferencesModel = PreferencesViewModel.shared
+    /// Used to choose between full club name (regular/iPad) and nickname (compact/iPhone) in the navigation title.
+    @Environment(\.horizontalSizeClass) private var horSizeClass
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     var body: some View {
         HStack(alignment: .top) { // total view content
 
-            HStack(alignment: .top) { // everything to left of Image: icon + several lines of Text
+            Button { isPortfolioActive = true } label: { // Button used here to avoid a `disclosureIndicator` (chevron)
+                HStack(alignment: .top) { // everything to left of Image: icon + several lines of Text
 
-                // icon showing any special role
-                RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus) // icon
-                    .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
-                    .imageScale(.large)
+                    // icon showing any special role
+                    RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus) // icon
+                        .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
+                        .imageScale(.large)
 
-                // name of photographer
-                VStack(alignment: .leading) {
-                    Text(verbatim: "\(member.photographer.fullNameFirstLast)") // photographer's name
-                        .font(UIDevice.isIPad ? .title : .title2)
-                        .tracking(1)
-                        .allowsTightening(true)
-                        .foregroundColor(chooseColor(
-                            defaultColor: .accentColor,
-                            isDeceased: member.photographer.isDeceased
-                        ))
+                    // name of photographer
+                    VStack(alignment: .leading) {
+                        Text(verbatim: "\(member.photographer.fullNameFirstLast)") // photographer's name
+                            .font(UIDevice.isIPad ? .title : .title2)
+                            .tracking(1)
+                            .allowsTightening(true)
+                            .foregroundColor(chooseColor(
+                                defaultColor: .accentColor,
+                                isDeceased: member.photographer.isDeceased
+                            ))
 
-                    // expertises
-                    let localizedExpertiseResultLists = LocalizedExpertiseResultLists(moc: moc,
-                                                                            member.photographer.photographerExpertises)
-                    Group {
-                        if !localizedExpertiseResultLists.supported.list.isEmpty { // list any supported expertises
-                            HStack(spacing: 3) {
-                                Text(localizedExpertiseResultLists.supported.icon)
-                                    .font(.footnote)
-                                ForEach(localizedExpertiseResultLists.supported.list) { supportedLER in
-                                    Text(supportedLER.localizedExpertise!.name + supportedLER.delimiterToAppend)
+                        // expertises
+                        let localizedExpertiseResultLists =
+                            LocalizedExpertiseResultLists(moc: moc,
+                                                          member.photographer.photographerExpertises)
+                        Group {
+                            if !localizedExpertiseResultLists.supported.list.isEmpty { // list any supported expertises
+                                HStack(spacing: 3) {
+                                    Text(localizedExpertiseResultLists.supported.icon)
+                                        .font(.footnote)
+                                    ForEach(localizedExpertiseResultLists.supported.list) { supportedLER in
+                                        Text(supportedLER.localizedExpertise!.name + supportedLER.delimiterToAppend)
+                                    }
+                                }
+                            }
+
+                            if !localizedExpertiseResultLists.temporary.list.isEmpty { // list any temporary expertises
+                                HStack(spacing: 3) {
+                                    Text(localizedExpertiseResultLists.temporary.icon)
+                                        .font(.footnote)
+                                    ForEach(localizedExpertiseResultLists.temporary.list) { temporaryLKR in
+                                        Text(temporaryLKR.id + temporaryLKR.delimiterToAppend)
+                                    }
                                 }
                             }
                         }
-
-                        if !localizedExpertiseResultLists.temporary.list.isEmpty { // list  any "temporary" expertises
-                            HStack(spacing: 3) {
-                                Text(localizedExpertiseResultLists.temporary.icon)
-                                    .font(.footnote)
-                                ForEach(localizedExpertiseResultLists.temporary.list) { temporaryLKR in
-                                    Text(temporaryLKR.id + temporaryLKR.delimiterToAppend)
-                                }
-                            }
-                        }
-                    }
-                    .font(.subheadline)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-
-                    // roles
-                    Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                        .font(.subheadline)
+                        .lineLimit(1)
                         .truncationMode(.tail)
-                        .lineLimit(2)
-                        .font(UIDevice.isIPad ? .subheadline : .caption)
-                        .foregroundColor(member.photographer.isDeceased ?
-                            .deceasedColor : .primary)
+
+                        // roles
+                        Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                            .truncationMode(.tail)
+                            .lineLimit(2)
+                            .font(UIDevice.isIPad ? .subheadline : .caption)
+                            .foregroundColor(member.photographer.isDeceased ?
+                                .deceasedColor : .primary)
+                    }
                 }
+            }
+            .buttonStyle(.plain)
+            .navigationDestination(isPresented: $isPortfolioActive) {
+                SinglePortfolioView(url: member.level3URL, webView: wkWebView)
+                    .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
+                                     (horSizeClass == .compact ? member.organization.nickName :
+                                                                 member.organization.fullName))
+                    .navigationBarTitleDisplayMode(.inline)
             }
 
             Spacer()
