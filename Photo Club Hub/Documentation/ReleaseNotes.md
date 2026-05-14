@@ -1,4 +1,4 @@
-### 2.9.4 (GitHub commit ???????) ??-05-2026
+### 2.9.4 (GitHub commit ???????) ??-06-2026
 
 USER-FACING
 
@@ -9,17 +9,19 @@ USER-FACING
 STRUCTURAL
 
 * TODO: add test for Include feature
+* TODO: more code merging between 2626 and 1718 versions
+* TODO: adapt to existence of iOS 27: 2626 becomes 2627 (bit of renaming)
 
-This build #4658 was made using Xcode 26.4 and is intended for the App Store.
+This build #4661 was made using Xcode 26.4 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
 
 ---------------------------------------------------------------------------
 
-### 2.9.3 (GitHub commit b42b5fd) 13-05-2026
+### 2.9.3 (GitHub commit eb0baaf) 14-05-2026
 
 PREFERENCES SCREEN
 
-* User can switch between seeing FeaturedImage and PhotographerImage as thumbnails for club members.
+* User can switch between seeing FeaturedImage and PhotographerImage in the thumbnails of club members.
 * New titlebar on Preferences screen with options to discard changes and revert to factory defaults.
 * Fixed bug (in b4658, not provided via App Store): Thumbnail toggle state for Photographers was incorrect.
 
@@ -62,9 +64,9 @@ DOCUMENTATION MAINTENANCE
 * Updated Level2_aanmaken_NL.md
 * Updated README.md
 
-This build #4659 was made using Xcode 26.5 and is intended for distribution via the app store.
+This build #4660 was made using Xcode 26.5 and is intended for distribution via the app store.
 Amount of code and data lines changed since previous release: 4,996 additions and 3,160 deletions in 544 files.
-GitHub's change statistics seem too high - likely multiple changes to same file are counted double.
+GitHub's change statistics is too high - likely because multiple succesive changes to same file are counted double.
 
 ---------------------------------------------------------------------------
 
