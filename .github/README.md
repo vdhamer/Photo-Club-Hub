@@ -123,7 +123,7 @@ This ensures that photo clubs, club members and their portfolio's can be added a
 In addition, this also allows the clubs to manage their own data.</p>
 
 There is a <a href="#adding-photo-clubs-to-the-app">chapter</a> below on how to add a club's data in 
-3 distict "`Levels`" (steps).
+3 distinct "`Levels`" (steps).
 
 ### Photo Clubs
 
@@ -142,7 +142,7 @@ This screen puts the photo club first, and then allows you to select club member
 
 * photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
   * member __Bill__
-    * photos by Bill as a a member the Clickers
+    * photos by Bill as a member the Clickers
   * member __John__
     * photos John as a member of the Clickers
 
@@ -159,13 +159,13 @@ This screen puts the photographer first, thus allowing you to find a photographe
 know the name of the club (or clubs) the photographer is associated with:
 
 * photographer __Bill__
-  * photo club _Clickers_ (hosted on `www.PhotoClubclickers.com`)
+  * photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
       * photos by Bill as a member of the Clickers
 
 * photographer __John__
   * photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
       * photos by John as a member of the Clickers
-  * photo club _Zoomers_ (hosted on `www.photoclubzoomers.com`)
+  * photo club _Zoomers_ (hosted on `www.PhotoClubZoomers.com`)
       * photos by John as a member of the Zoomers 
 
 * photographer __Sean__
@@ -206,7 +206,7 @@ You could even consider yourself a one-person club and put your images in a sing
 Or you could use the club level to group a few individual photographers (by region or interest) as long as the members
 of this non-club are willing to align (e.g. maintain the list of portfolios=photographers who are then a member of a loosely-knit club).
 <a/></p></ul>
-</detail></ul></detail>
+</details></ul></details>
 
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -221,7 +221,7 @@ Usage of the various screens in the user interface:
 The `Portfolios` screen lists all the photo clubs featured by the app.
 It allows you to first select a photo club and then select the portfolio of one of its members.
 The `Search` bar filters the lists of club members using the photographer's full name.
-Swiping left deletes an entry, but this is not normally needed and is not permanent (yet)).
+Swiping left deletes an entry, but this is not normally needed and is not permanent (yet).
 
 ![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
 
@@ -229,7 +229,7 @@ Swiping left deletes an entry, but this is not normally needed and is not perman
 
 The `Organizations` screen lists all photo clubs that are known to the app.
 Each entry predominantly contains a map showing where the club is located and optionally your current location.
-A button with a lock icon toggles whether the map is can be controlled interactively (scroll, zoom, rotate, 3D).
+A button with a lock icon toggles whether the map can be controlled interactively (scroll, zoom, rotate, 3D).
 By default, the maps are not interactive. This mode helps scroll through the list of clubs rather than scrolling within a map.
 A _purple_ pin on the map shows where the selected club is based (e.g., a school or municipal building).
 A _blue_ pin shows the location of any other photo club that happens to be in the displayed region.
@@ -240,14 +240,14 @@ The plan is that the screen can switch between listing all photo clubs and listi
 
 ### The `Images` Screen
 
-The `Images` screen displays one portfolio (of one photographer associated with one club.
+The `Images` screen displays one portfolio (of one photographer associated with one club).
 It can be reached by tapping on a `portfolio` in either the `Portfolios` or the `Photographers` screen.
 The title at the top of the screen shows the selected photographer and selected club affiliation:
 "Jane Doe @ Club F/8".
 
 ![Images Screen](images/imagesScreen.png "Images Screen")
 
-Images are shown in present-to-past order, based on the images's _capture_ date.
+Images are shown in present-to-past order, based on the image's _capture_ date.
 For Fotogroep Waalre, the year the image was made is shown in the caption.
 
 You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
@@ -293,8 +293,8 @@ Tapping on the icon turns it into an interactive image illustrating how most dig
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
 > that filters the light reaching each photocell or pixel.
 > In a 24 MPixel camera, the image sensor typically consist of an array of 4000 by 6000 photocells.
-> Each photocell on the chip itself is not color-sensitive. But by placing a miniscule red, green of blue color filter on
-> cop, it because best at seeing one specific color range. Thus in most cameras, only one color is measured per
+> Each photocell on the chip itself is not color-sensitive. But by placing a miniscule red, green or blue color filter on
+> on the chip, it because best at seeing one specific color range. Thus in most cameras, only one color is measured per
 > pixel: the two missing color channels for that pixel are estimated using color information from surrounding pixels.
 
 Tapping *inside* the image allows you to zoom in or out to your heart's content.
@@ -332,20 +332,19 @@ same input data used by this app to generate (static) HTML web pages. The compan
 static webpages _per club_ that list each club's members and has links to their portfolios.
 
 The webpages per club are collectively equivalent to the Portfolio page in iOS app.
-There is no central index page yet to locate the club HTML pages, but this is will be added at some point.
 The individual club pages can be easily integrated into existing (e.g. Wordpress), websites maintained by
 the individual clubs.
 
 Apart from keeping websites up to date using the available Photo Club Hub data, the HTML version provides an alternative
 for "the rest of us" who don't own an iPhone or an iPad.
-The HTML version also covers the cases where someone wants to view the  the information or photos on a laptop or desktop computer.
+The HTML version also covers the cases where someone wants to view the information or photos on a laptop or desktop computer.
 
 ### Searchable Lists
 
 The three screens with long lists (`Portfolios`, `Organizations`, `Photographers`) each have a Search Bar
 where you can enter what you are looking for. This reduces the list to items that match that filter criterion.</p>
 
-<details><summary>Details on the Search Bar(click to expand)</summary></p>
+<details><summary>Details on the Search Bar (click to expand)</summary></p>
 
 On an iPad, the search bar is always visible and at the top of the screen. 
 On an iPhone, scroll up rapidly until you hit the top of the list.
@@ -390,7 +389,7 @@ the explanations about adding `Level 2` data and maintaining `Level 0` data resp
 <details><summary>Details on Museums (click to expand)</summary></p>
 
 A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
-Techncially, the app doesn't allow museums to have "members" that share images with the museum.</p>
+Technically, the app doesn't allow museums to have "members" that share images with the museum.</p>
 
 Consider the showing of museums a bonus that may interest some users.
 You are welcome to add a favorite photo museum via a GitHub Pull Request. It only requires extending a JSON file.
@@ -399,7 +398,8 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Pull down to Refresh
 
-The top of the `Portfolios` screen as well as two other screens can be dragged down to force a refresh of all app data.
+The top of the `Members` screen as well as the `Organizations` and `Photographer` screens
+can be dragged down to force a refresh of all app data.
 Refreshing is usually not needed, but can be used to remove database records
 that were downloaded earlier but are no longer in use.
 The feature is a fast alternative to uninstalling and reinstalling the app:
@@ -418,11 +418,11 @@ The app's user interface is immediately updated whenever the database is updated
 A problem could occur when a club (or museum or member) is deleted in the online version of the information.
 Let's say, for example, that the club's identifying name or town got edited in the `Level` 1 list.
 This means that the online list now contains a "different" club: one with another identifying name/town combination.
-Unfortunately the app has now way of knowing that this "new" club is actually the same as the club that seemingly vanished.
+Unfortunately the app has no way of knowing that this "new" club is actually the same as the club that seemingly vanished.
 So, from the app's perspective, the original club vanished and a new club appeared as two separate events.
-The new club simply need to be loaded. But the app currently doesn't detect the disappearance of the orignal club.</p>
+The new club simply needs to be loaded. But the app currently doesn't detect the disappearance of the original club.</p>
 
-There is a GitHub ticker to add future automatic detection of "disappeared" or renamed clubs. </p>
+There is a GitHub ticket to add future automatic detection of "disappeared" or renamed clubs. </p>
 
 A temporary workaround is to use the _pull down to refresh_ feature: 
 it simply deletes the entire content of the database and then reloads.
@@ -462,7 +462,7 @@ So we had to choose between removing segmentation or not providing fancy scrolli
 and maintained by the clubs themselves. 
 
 This is important because this allows the app to **support many clubs**.
-But is also also necessary in order to give clubs **control** over their data:
+But is also necessary in order to give clubs **control** over their data:
 a club knows best what to mention regarding the club, who the current members are,
 who the club officials are, and which images the members want in their portfolios.
 <ul>
@@ -656,9 +656,9 @@ Here is an example of the format of the `root.level1.json` file containing only 
 ```
 
 The actual `root.level1.json` file contains many club and museum records within their respective sections (delimited using `[{},{},{}}]` syntax).
-Note the comma's delimiting the array elements - the JSON data format is very picky about missing or extra comma's 
+Note the comma's delimiting the array elements - the JSON data format is very picky about missing or extra commas 
 because JSON files are often generated by software rather than by hand.
-You can indentally check the basic syntax of JSON files using online JSON validators such as
+You can incidentally check the basic syntax of JSON files using online JSON validators such as
 [JSONLint](https://jsonlint.com).
 </details></ul>
 
@@ -671,21 +671,21 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 - `maintainerEmail` is who to contact if there is a technical issue with the content of this file. 
 - `level1URLIncludes` contains a list of Level 1 files that are automatically loaded by the software whenever this Level 1 file is loaded.
     - The list can be empty if this Level 1 file holds a modest number of clubs, but if the list logically contains say dozens or hundreds of clubs, it is better to split the list into 2 or more smaller included files.
-    - A Level 1 file that is "included" can itself contain  its own include files. There is no limit to how deep include files can be nested, but there is a safety mechanism that automatically protects agains accidental endless loops.
-    - `level1URLIncludes` empowers the owner of of a Level 1 file to determine the names and scope of its Include files (if any are needed).
+    - A Level 1 file that is "included" can itself contain  its own include files. There is no limit to how deep include files can be nested, but there is a safety mechanism that automatically protects against accidental endless loops.
+    - `level1URLIncludes` empowers the owner of a Level 1 file to determine the names and scope of its Include files (if any are needed).
     - Keep the filename globally unique so that a file can be moved to another location in the future. But mainly to use the filename to represent the Include nesting hierarchy. Example: `clubsNL` contains clubs in the Netherlands. We decided to adhere to the way the photo clubs in the Netherlands have been organized into regions: `clubsNL01` to `clubsNL17`. A potential `clubsUS` file may, alternatively, want to have include files named after states like `clubsUSca`. And the owner of `clubsUSca` is empowered to define up a next level decomposition for California if needed.
 - `clubs` and `museums` are required to distinguish photo clubs from photo museums.
-  - Syntactially either can be omitted, but then you wouldn't have photo clubs or museums in the app.
+  - Syntactically either can be omitted, but then you wouldn't have photo clubs or museums in the app.
     - When loaded into the app's internal database, `clubs` and `museums` determine the `OrganizationType` (`club` or `museum`) of each `Organization` object. This is among others used to determine which marker type to display on a map.
 - `town` can be a city (London) or smaller locality (Land's End)
-  - `town` is _not_ directy visible in the user interface, although it may look that way. The user interface displays a language-localized name generated using the `coordinates`. This co-called `localizedTown` may contain the same string as `town`, or be a translation of `town`, or may even hold larger or smaller administrative entity. The file's `town` field is used to ensure that there is a unique ID for a club or museum. So `Fotoclub Lucifer` in `Vessem` would be considered unrelated to a `Fotoclub Lucifer` in `Eersel`. The `town` field also serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say just "Victoria and Albert Museum" and leave you to determine the location using its `coordinates`.
+  - `town` is _not_ directy visible in the user interface, although it may look that way. The user interface displays a language-localized name generated using the `coordinates`. This so-called `localizedTown` may contain the same string as `town`, or be a translation of `town`, or may even hold larger or smaller administrative entity. The file's `town` field is used to ensure that there is a unique ID for a club or museum. So `Fotoclub Lucifer` in `Vessem` would be considered unrelated to a `Fotoclub Lucifer` in `Eersel`. The `town` field also serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say just "Victoria and Albert Museum" and leave you to determine the location using its `coordinates`.
     - Similarly, the user interface can display a computed `localizedCountry` name that is automatically generated using the provided `coordinates`. The Level 1 data thus does not need or include a `country` attribute. This is convenient because country names commonly get translated into local languages (`Italia`, `Italy`, `İtalya`, etc.).
 - `town` and `fullName` together serve to identify clubs or museums.
   - It is thus possible to have two clubs with the same name in different cities. Two separate clubs or museums with an identical name in the same town would be confusing, and would be treated as a single entity by the app until the data about the original `town` /` fullname` combination is removed from the in-device database. Removal of obsolete `Organization` records is unfortunately not done automatically yet.
   - Try to avoid changing either string. Because the app doesn't associate the new ID with the original ID, this results in the app displaying two different clubs or museums when the 
 - `nickName` is a short version of `fullName` that is displayed in confined spaces such as on maps. It can be any string, but please keep it short.
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of the names of towns and countries.
-- `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Sounthern hemisphere (e.g., Australia).
+- `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Southern hemisphere (e.g., Australia).
 - `longitude` should be in the range [-180.0, +180.0] where negative values are used for the Western hemisphere (e.g., USA).</p>
 </details></ul>
 
@@ -709,7 +709,7 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 A club's `Level 2` data shows up in the Portfolios screen as a list of club members per club.
 Each `Level 2` JSON file lists the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
-`Level 2` lists also includes the URL of an image used as thumbnail for that member.
+`Level 2` lists also include the URL of an image used as thumbnail for that member.
 </p>
 
 _Fotogroep de Gender_ and _Fotogroep Waalre_ in the Netherlands have `.level2.json` files with membership data.
@@ -723,7 +723,7 @@ You can check the basic syntax of JSON files using online JSON validators such a
 [JSONLint](https://jsonlint.com).
 </p>
 
-A `Level 2` file can be located anywhere online, but is by default stored on the a club's existing website.
+A `Level 2` file can be located anywhere online, but is by default stored on a club's existing website.
 You could, for example, store it inside an existing _Wordpress_ site using
 _Wordpress'_ built-in features for uploading files (called `media` or `library`).
 </p>
@@ -731,7 +731,7 @@ _Wordpress'_ built-in features for uploading files (called `media` or `library`)
 The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
 </p>
     
-The `Level 2` data is loaded in the app's CoreData database on app startup, so that the data is can be displayed even before the
+The `Level 2` data is loaded in the app's CoreData database on app startup, so that the data can be displayed even before the
 data has been downloaded and the database content has been updated.
 </p>
 
@@ -818,7 +818,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
   - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
 - `coordinates` is used to draw the club on the map and to generate localized versions of the names of towns and countries.
   - `coordinates` in the Level 2 file overrule the club's coordinates in the Level 1 file. This allows a club to change the coordinates without any outside help.
-  - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Sounthern hemisphere (e.g., Australia).
+  - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Southern hemisphere (e.g., Australia).
   - `longitude` should be in the range [-180.0, +180.0] where negative values are used for the Western hemisphere (e.g., USA).
 - `members` is a list with the club's current and optionally former members.</p>
 
@@ -827,17 +827,17 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 <ul><details><Summary>Optional Level 2 fields (click to expand)</Summary></p>
 
 - **Optional** fields (that are ignored)
-    - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
+    - the `level2URL` field can be included, but its value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
 - **Optional** fields (that are used)
     - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding `root.level1.json` fields if needed.
       This allows a club to _correct_ the centrally-provided information with club-provided information.
       Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
-    - `maintainerEmail` is who to contact who to reach out to if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
+    - `maintainerEmail` is who to contact if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
     - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _Photographers_ screen.
         - An omitted "infixName" is interpreted as "infixName" = "".
     - the `level3URL` field allows the app to find the Level 3 information with the selected images for this member.</p>
-    - the `roles` field indicates whether a member fullfills a role as a club officer (e.g. chairman).
+    - the `roles` field indicates whether a member fulfills a role as a club officer (e.g. chairman).
       If a given `role` is not mentioned, a default value of `false` is assumed.
       Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
     - the `status` entries indicate a member's status in the club. If a given `status` is not mentioned, a default value of `false` is assumed.
@@ -850,7 +850,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
       If deceased members are not removed from the level2.json list, this allows the user interface to indicate this.
       By default (see Preferences) former and deceased members are not shown.
       When shown, users see "Deceased former member of <club>" and the text is shown in a different color.
-    - `isHonaryMember` can be used if the person is no longer an active member, but is still treated as a member (e.g., after retiring) because of past achievements. Most clubs won't need this feature.
+    - `isHonoraryMember` can be used if the person is no longer an active member, but is still treated as a member (e.g., after retiring) because of past achievements. Most clubs won't need this feature.
     - `isMentor` is for coaches who coach or previously (`isFormerMember` to `true`) coached the club.
       They can have a Portfolio (e.g. with pictures of them or pictures of their own work).
     - `isProspectiveMember` is a possible future member who is currently participating in some of the club activities, but isn't formally a member yet. Most clubs won't need this feature.
@@ -865,7 +865,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 The list of strings at `Level 2` is used to define the applicable expertises.
 It doesn't define how they are displayed because multi-language versions of expertises are defined in `Level 0`.
 Example: the input identifier "Landscape" that can be associated with a given photographer in the `Level 2` file
-can be translated (using Level 0 data) to "Landschaft" in German or "Landscape" in "English".
+can be translated (using Level 0 data) to "Landschaft" in German or "Landscape" in English.
 The identifier should preferably match the English translation for practical reasons but, technically speaking, doesn't need be.
 Question: so what happens if an expertise string in a `Level2.json` file does _not_ occur in the list of expertises in the `Level0.json` file?
 Answer: it is shown as an error (gray?) in the user interface, thus prompting the user to fix the issue.
@@ -894,7 +894,7 @@ But it also signals a temporary tag (e.g., using "Scenery" or "Desert" instead o
 
 `Level 3` provides links to the online images in member portfolios. 
 Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the Portfolios screen.
-Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios 
+Because a club with, for example, 20 members will have hundreds of images, we have a way to automatically generate portfolios 
 using Lightroom (instructions on how this works will be provided later).
 
 <ul><details><Summary>Level 3 example (click to expand)</Summary>
@@ -913,7 +913,7 @@ To do
 
 ## Installation</p>
 
-If you simly want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
+If you simply want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
 
 ### Built-With
 
@@ -983,7 +983,7 @@ Before investing effort in designing, coding testing, and refining features, it 
 the idea or functional change within a new or existing GitHub `Issue`.
 That allows for some upfront discussion and prevents wasted effort due to overlapping initiatives.</p>
 
-You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
+You can submit an `Issue` with a tag like ”enhancement” or “bug” without committing to make the code changes yourself.
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
 
 ### Developer contributions
@@ -996,7 +996,7 @@ specifications, and possibly even a dedicated backend server.
 
 ### Other contributions
 
-<ul><details><summary>Details(click to expand)</summary></p>
+<ul><details><summary>Details (click to expand)</summary></p>
 
 Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
 translations, and icon design improvements.
@@ -1049,7 +1049,7 @@ can already display the content of the on-device database.</p>
 This implies showing the state of the data as it was at the end of the previous session.
 That data might be a bit outdated, but should be accurate enough to start off with.</p>
 
-To handle any data updates, asynchrous calls fetch fresher data over the network. 
+To handle any data updates, asynchronous calls fetch fresher data over the network. 
 And the MVVM architecture uses this to update the user interface `Views` as soon as the requested data arrives.
 So occasionally, maybe one or two seconds after the app launches, the user may see the `Portfolios` screen update. 
 This can happen, for example if a club's online member list changed since the previous session.</p>
@@ -1065,7 +1065,7 @@ but because it usually works well enough, a user typically won't notice:
    database. This requires a bit more administration, because these individuals don't show up
    iterates through the online membership list. This is simply because those names/records are
    _not_ on the online list anymore!
-4. in the case of Fotogoep Waalre, some member data is not yet available online in a machine-readable
+4. in the case of Fotogroep Waalre, some member data is not yet available online in a machine-readable
    form and is thus added programmatically instead. This is done in [this file](https://GitHub.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
    This hardcoded data include the member's formal roles (e.g. chairman, treasurer).
 5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.</p>
@@ -1148,7 +1148,7 @@ multiple `PhotoClubs`.</p>
 we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` joined.
 And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it still contains zero images.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
-modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
+modelled using one concept (aka table) instead of two. We named that `MemberPortfolio`.
 </details></ul>
 
 #### OrganizationType
@@ -1202,7 +1202,7 @@ The `Expertise` table holds predefined tags that can be attached to `Photographe
 Examples: `black and white`, `landscape`, `portrait`.
 Like Xcode's string catalogs, the item has a string identifier which can then be translated for every supported `Language`.</p>
 Supported `expertise` tags and their representation in Dutch and English are stored in the `root.level0.json` file.
-These "supporteed expertises" are meant for general use. If an unknown expertise shows up in a Level 2 file,
+These "supported expertises" are meant for general use. If an unknown expertise shows up in a Level 2 file,
 it is shown in the user interface, but considered a "temporary expertise". It might be a typing error.
 But it can also be a valid (or less valid) proposal to add a new "supported expertise".
 <p>
@@ -1238,15 +1238,15 @@ The app will store the union of both sets in the `PhotographerExpertise` table.<
 <ul><details><summary>Details (click to expand)</summary></p>
 
 The app currently uses a software module per club. This means a club can
-concievably store their online list of members (`MemberPortfolios`) in any format.
+conceivably store their online list of members (`MemberPortfolios`) in any format.
 It is then up to the software module to convert it to the app's internal data representation.
 Similarly, a club could store their list of `Images` per member (`MemberPortfolio`) in any
 conceivable format as long as the software module does the conversion.</p>
 
 Thus, the software module per photo club loads membership and portfolio data across the network.
-The data will likely be stored on the club’s website somewhere, presumable in a simple file format.
-That data is then loaded into the in-app database, but also used to updated the database.
-This updating is done (on a background thread) whenever the app lauches,
+The data will likely be stored on the club’s website somewhere, presumably in a simple file format.
+That data is then loaded into the in-app database, but also used to update the database.
+This updating is done (on a background thread) whenever the app launches,
 and thus takes care of changed membership lists as well as changed image portfolios.</p>
 
 For Photo Club Waalre, the __membership list__ is read from an HTML table on a
@@ -1274,7 +1274,7 @@ choice of directory) only need to be configured once per portfolio (=member).
 
 A major design goal for the near future is to provide a clean,
 standardized interface to retrieve data per photo club.
-This data is then loaded into into the in-app CoreData database.
+This data is then loaded into the in-app CoreData database.
 It is also needed to keep the CoreData database up to date whenever
 clubs, members or images are added.
 The old approach is essentially a plug-in design with an adaptor per photo club.</p>
@@ -1342,7 +1342,7 @@ This means that background loading of membership data already starts while the P
 It also means that slow background threads might complete after the list of members is displayed in
 the Portfolio View. This may cause an update of the membership lists in the Portfolio View.
 This will be rarely noticed because the Portfolio View displays data from the Core Data database,
-and thus usually arleady contains data persisted from a preceding run. But you might see updates
+and thus usually already contains data persisted from a preceding run. But you might see updates
 found within the online data or updates when the app is run for the first time.
 </details></ul>
 
@@ -1350,7 +1350,7 @@ found within the online data or updates when the app is run for the first time.
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-Each thread is associated with a Core Data `NSManagedObjectContext]`.
+Each thread is associated with a Core Data `NSManagedObjectContext`.
 In fact, the thread is started using `myContext.perform()`.
 The trick to using Core Data in a multi-threaded app is to ensure that all database fetches/inserts/updates 
 are performed using the Core Data `NSManagedObjectContext` while running the associated thread. Schematically:</p>
