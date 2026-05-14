@@ -692,7 +692,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
 <ul><details><Summary>Optional Level 1 fields (click to expand)</Summary></p>
 
 - `website` holds a URL to the club's general purpose website. It can be opened by the app in a separate browser window.
-- `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (April 2024).
+- `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (May 2026).
 - `wikipedia` contains a URL to a Wikipedia page for a museum. It _could_ be used for photo clubs - but Wikipedia pages for photo clubs probably don't/won't exist.
 - `remark` contains a brief note with something worth mentioning about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
   - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
@@ -1066,7 +1066,7 @@ but because it usually works well enough, a user typically won't notice:
    iterates through the online membership list. This is simply because those names/records are
    _not_ on the online list anymore!
 4. in the case of Fotogroep Waalre, some member data is not yet available online in a machine-readable
-   form and is thus added programmatically instead. This is done in [this file](https://GitHub.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
+   form and is thus added programmatically instead. This is done in [this file](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/IndividualClubs/FotogroepWaalreMembersProvider.swift).
    This hardcoded data include the member's formal roles (e.g. chairman, treasurer).
 5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.</p>
 
@@ -1331,7 +1331,7 @@ a few predefined lower priority threads, plus 10 temporary background threads (o
 Each background thread reads optional data stored inside the app itself, and then reads optional online data.
 A club's background thread disappears as soon as the club’s membership data is fully loaded.
 
-These threads start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
+These threads start immediately once the app is launched (in `PhotoClubHubApp.swift`).
 This means that background loading of membership data already starts while the Prelude View is displayed.
 </details></ul>
 
