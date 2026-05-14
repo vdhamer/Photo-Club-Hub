@@ -64,7 +64,7 @@ DOCUMENTATION MAINTENANCE
 
 This build #4659 was made using Xcode 26.5 and is intended for distribution via the app store.
 Amount of code and data lines changed since previous release: 4,996 additions and 3,160 deletions in 544 files.
-GitHub's change statistics seem too high. Will see if they look ok in the next release.
+GitHub's change statistics seem too high - likely multiple changes to same file are counted double.
 
 ---------------------------------------------------------------------------
 
