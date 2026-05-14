@@ -15,7 +15,7 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 ---------------------------------------------------------------------------
 
-### 2.9.3 (GitHub commit 1ad9fa2) 03-05-2026
+### 2.9.3 (GitHub commit b42b5fd) 13-05-2026
 
 PREFERENCES SCREEN
 
@@ -62,8 +62,9 @@ DOCUMENTATION MAINTENANCE
 * Updated Level2_aanmaken_NL.md
 * Updated README.md
 
-This build #4659 was made using Xcode 26.5 RC1 and is intended for testing only.
-Amount of code and data lines changed since previous release: 1497 additions and 615 deletions in unknown # of files.
+This build #4659 was made using Xcode 26.5 and is intended for distribution via the app store.
+Amount of code and data lines changed since previous release: 4,996 additions and 3,160 deletions in 544 files.
+GitHub's change statistics seem too high. Will see if they look ok in the next release.
 
 ---------------------------------------------------------------------------
 
