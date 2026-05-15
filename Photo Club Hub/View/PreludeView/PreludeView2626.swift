@@ -66,7 +66,7 @@ struct PreludeView2626: View {
                         willMoveToNextScreen = true
                     }
                 }
-                .navigate(to: MemberPortfolioView2626()
+                .navigate(to: MemberPortfolioView()
                     .navigationBarTitle(String(localized: "Members",
                                                table: "PhotoClubHub.SwiftUI",
                                                comment: "Title of page showing member portfolios")),

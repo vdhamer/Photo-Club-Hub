@@ -9,11 +9,11 @@ USER-FACING
 STRUCTURAL
 
 * TODO: add test for Include feature
-* TODO: more code merging between 2626 and 1718 versions
+* Merging of 2626 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
 * TODO: adapt to existence of iOS 27: 2626 becomes 2627 (bit of renaming)
 
 This build #4661 was made using Xcode 26.4 and is intended for the App Store.
-Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
+Amount of code and data lines changed since previous release: ? additions and ? deletions in ? files.
 
 ---------------------------------------------------------------------------
 

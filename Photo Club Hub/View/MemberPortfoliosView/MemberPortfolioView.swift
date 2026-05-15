@@ -1,5 +1,5 @@
 //
-//  MemberPortfoliosView2626.swift
+//  MemberPortfolioView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 20/06/2021.
@@ -8,18 +8,15 @@
 import SwiftUI
 
 /// A list-based view that displays member portfolios with search and toolbar actions.
-/// This particular "2626" version of the view requires iOS 26 or higher.
 ///
-/// - Presents a `FilteredMemberPortfoliosView2626` inside a SwiftUI `List`.
+/// - Presents a `FilteredMemberPortfoliosView` inside a SwiftUI `List`.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
 /// - Provides toolbar buttons to open Preferences and Readme documentation in sheets, and
 ///   to navigate to Organizations and Photographers lists.
 /// - Uses a search field to filter members by name or by expertise..
 ///
-/// This particular "2626" view targets iOS 26 for Liquid Glass APIs and
-/// depends somewhat on whether the device is iPad or iPhone.
-@available(iOS 26.0, *)
-struct MemberPortfolioView2626: View {
+/// Uses iOS 26 Liquid Glass APIs where available, falling back to standard styling on iOS 17/18.
+struct MemberPortfolioView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// Available sheet detents shared by Preferences and Readme sheets.
@@ -92,12 +89,21 @@ struct MemberPortfolioView2626: View {
                 }
                 // Preferences sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingPreferences, content: {
-                    PreferencesView2626(preferences: $preferencesModel.preferences)
-                    // the detents don't do anything on an iPad
-                        .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
-                        .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
-                        .presentationCornerRadius(40)
-                        .presentationDragIndicator(.visible) // show drag indicator
+                    if #available(iOS 26, *) {
+                        PreferencesView2626(preferences: $preferencesModel.preferences)
+                        // the detents don't do anything on an iPad
+                            .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
+                            .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
+                            .presentationCornerRadius(40)
+                            .presentationDragIndicator(.visible) // show drag indicator
+                    } else {
+                        PreferencesView1718(preferences: $preferencesModel.preferences)
+                        // the detents don't do anything on an iPad
+                            .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
+                            .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
+                            .presentationCornerRadius(40)
+                            .presentationDragIndicator(.visible) // show drag indicator
+                    }
                 })
 
                 Button {
@@ -131,7 +137,11 @@ struct MemberPortfolioView2626: View {
                 .offset(x: 5)
 
                 NavigationLink(destination: {
-                    PhotographersListView2626(searchText: $searchText)
+                    if #available(iOS 26, *) {
+                        PhotographersListView2626(searchText: $searchText)
+                    } else {
+                        PhotographersListView1718(searchText: $searchText)
+                    }
                 }, label: {
                     Image("person.text.rectangle.custom")
                         .font(.title)
@@ -154,18 +164,28 @@ struct MemberPortfolioView2626: View {
                                           """
                                 ))
         .disableAutocorrection(true)
-        .searchToolbarBehavior(.minimize)
+        .searchToolbarBehaviorIfAvailable()
     }
 
 }
 
+private extension View {
+    /// Applies `.searchToolbarBehavior(.minimize)` on iOS 26+; no-op on earlier versions.
+    @ViewBuilder
+    func searchToolbarBehaviorIfAvailable() -> some View {
+        if #available(iOS 26, *) {
+            self.searchToolbarBehavior(.minimize)
+        } else {
+            self
+        }
+    }
+}
+
 // MARK: - Previews
 
-// Believe it or not, this preview actually works.
-@available(iOS 26.0, *)
 #Preview {
     NavigationStack {
-        MemberPortfolioView2626()
+        MemberPortfolioView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
