@@ -10,7 +10,7 @@ import SwiftUI
 /// A list-based view that displays member portfolios with search and toolbar actions.
 /// This particular "1718" version of the view is only used with iOS 18 or lower.
 ///
-/// - Presents a `FilteredMemberPortfoliosView2626` inside a SwiftUI `List`.
+/// - Presents a `FilteredMemberPortfoliosView` inside a SwiftUI `List`.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
 /// - Provides toolbar buttons to open Preferences and Readme documentation in sheets, and
 ///   to navigate to Organizations and Photographers lists.
@@ -61,8 +61,8 @@ struct MemberPortfolioView1718: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView1718(memberPredicate: preferencesModel.preferences.memberPredicate,
-                                             searchText: $searchText)
+            FilteredMemberPortfoliosView(memberPredicate: preferencesModel.preferences.memberPredicate,
+                                         searchText: $searchText)
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh

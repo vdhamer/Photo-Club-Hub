@@ -53,7 +53,6 @@
 		37A2A0E22FAA973400EF39A1 /* OrganizationViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */; };
 		37A2A0E42FAA9EA100EF39A1 /* OrganizationViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */; };
 		37A2A0E62FAAA53400EF39A1 /* OrganizationViewRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */; };
-		37A57B1D2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */; };
 		37A74C032F145202003DCD06 /* museumsCN.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37A74C022F1451F6003DCD06 /* museumsCN.level1.json */; };
 		37B1A3EB2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */; };
 		37B1A43E2F0B0E8500854FBD /* recursionA.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A43C2F0B0E8500854FBD /* recursionA.level1.json */; };
@@ -79,6 +78,7 @@
 		37DA3E0B2F06B17F00AB7993 /* clubsNL16.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */; };
 		37DA3E0F2F06B42600AB7993 /* museums.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E0E2F06B40A00AB7993 /* museums.level1.json */; };
 		37DA3E112F06B63200AB7993 /* museumsNL.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E102F06B62600AB7993 /* museumsNL.level1.json */; };
+		37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */; };
 		37E134AF2E6F63D100C61714 /* MemberPortfolioView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134AE2E6F63D100C61714 /* MemberPortfolioView2626.swift */; };
 		37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B42E6F709500C61714 /* PreferencesView1718.swift */; };
 		37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */; };
@@ -125,7 +125,6 @@
 		D082BE912957806800FF0812 /* LogoPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082BE902957806800FF0812 /* LogoPath.swift */; };
 		D08319E7277F70A30049AB84 /* PhotoClubHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */; };
 		D0831A1E277F72270049AB84 /* PreferencesView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A19277F72270049AB84 /* PreferencesView2626.swift */; };
-		D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift */; };
 		D0831A21277F72270049AB84 /* FilteredPhotographerView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1C277F72270049AB84 /* FilteredPhotographerView2626.swift */; };
 		D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A24277F72590049AB84 /* MemberPortfolio.swift */; };
 		D0831A32277F72590049AB84 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A25277F72590049AB84 /* Photographer.swift */; };
@@ -244,7 +243,6 @@
 		37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewInfo.swift; sourceTree = "<group>"; };
 		37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewMap.swift; sourceTree = "<group>"; };
 		37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewRemark.swift; sourceTree = "<group>"; };
-		37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView1718.swift; sourceTree = "<group>"; };
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
 		37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level2JsonReaders+Helpers.swift"; sourceTree = "<group>"; };
 		37B1A43C2F0B0E8500854FBD /* recursionA.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recursionA.level1.json; sourceTree = "<group>"; };
@@ -273,6 +271,7 @@
 		37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL16.level1.json; sourceTree = "<group>"; };
 		37DA3E0E2F06B40A00AB7993 /* museums.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museums.level1.json; sourceTree = "<group>"; };
 		37DA3E102F06B62600AB7993 /* museumsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsNL.level1.json; sourceTree = "<group>"; };
+		37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView.swift; sourceTree = "<group>"; };
 		37E134AE2E6F63D100C61714 /* MemberPortfolioView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioView2626.swift; sourceTree = "<group>"; };
 		37E134B42E6F709500C61714 /* PreferencesView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView1718.swift; sourceTree = "<group>"; };
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
@@ -363,7 +362,6 @@
 		D08319EA277F70A40049AB84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo-Club-Hub-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D0831A19277F72270049AB84 /* PreferencesView2626.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesView2626.swift; sourceTree = "<group>"; };
-		D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView2626.swift; sourceTree = "<group>"; };
 		D0831A1C277F72270049AB84 /* FilteredPhotographerView2626.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredPhotographerView2626.swift; sourceTree = "<group>"; };
 		D0831A24277F72590049AB84 /* MemberPortfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPortfolio.swift; sourceTree = "<group>"; };
 		D0831A25277F72590049AB84 /* Photographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
@@ -482,7 +480,6 @@
 			isa = PBXGroup;
 			children = (
 				37641C442FAFD7E5005D84F6 /* MemberPortfolioView1718.swift */,
-				37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */,
 			);
 			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
@@ -636,9 +633,9 @@
 				37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */,
 				37E134BC2E6F7A7100C61714 /* OldIOSVersionSupport */,
 				37E134AE2E6F63D100C61714 /* MemberPortfolioView2626.swift */,
-				D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift */,
 				37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */,
 				37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */,
+				37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */,
 			);
 			path = MemberPortfoliosView;
 			sourceTree = "<group>";
@@ -1245,7 +1242,6 @@
 				37641C452FAFD7E5005D84F6 /* MemberPortfolioView1718.swift in Sources */,
 				D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */,
 				37A2A0B22FAA7DD200EF39A1 /* FilteredOrganizationView.swift in Sources */,
-				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift in Sources */,
 				37A2A0E62FAAA53400EF39A1 /* OrganizationViewRemark.swift in Sources */,
 				37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */,
 				37B5349B2F243171000EA5BB /* FFCShot71MembersProvider.swift in Sources */,
@@ -1257,6 +1253,7 @@
 				D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */,
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
 				37D984232F904B8B00C30EE5 /* PreferencesViewPhotographersSection.swift in Sources */,
+				37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D0447C882BA510AF00982A1E /* Language.swift in Sources */,
 				376855692F2BA418002590F6 /* FEGGemertMembersProvider.swift in Sources */,
 				D0273F632DEE555C00C4F5E1 /* FetchAndProcessFile.swift in Sources */,
@@ -1300,7 +1297,6 @@
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
 				D016DF992DF6D1850018B526 /* LocalizedExpertiseResultLists.swift in Sources */,
-				37A57B1D2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs2626.swift in Sources */,
 				D0CA9B392D6B7739005428C0 /* LocalizedRemark.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,

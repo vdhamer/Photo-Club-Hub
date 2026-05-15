@@ -1,5 +1,5 @@
 //
-//  FilteredMemberPortfoliosView1718.swift
+//  FilteredMemberPortfoliosView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 29/12/2021.
@@ -11,8 +11,8 @@ import WebKit // for wkWebView
 /// Renders `MemberPortfolioRow` views grouped by Club, driven by a Core Data sectioned fetch request.
 /// Sections are labeled by Club name+town and include member-count footers.
 /// Accepts an `NSPredicate` and a search-text binding for two-level runtime filtering.
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView_Previews2626' for versions > iOS 18.x")
-struct FilteredMemberPortfoliosView1718: View {
+struct FilteredMemberPortfoliosView: View {
+
     /// Would return nothing — safe initial state before the real predicate is injected via `init`.
     private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
@@ -28,7 +28,6 @@ struct FilteredMemberPortfoliosView1718: View {
 
     /// Bound to the parent's search field; changes here trigger re-filtering without a new fetch.
     private let searchText: Binding<String>
-
     /// Single instance reused across all rows to avoid repeated WKWebView allocation.
     private let wkWebView = WKWebView()
 
@@ -36,7 +35,7 @@ struct FilteredMemberPortfoliosView1718: View {
     init(memberPredicate: NSPredicate, searchText: Binding<String>) {
     // https://developer.apple.com/documentation/SwiftUI/SectionedFetchRequest
     // When you need to dynamically change the section identifier, predicate, or sort descriptors,
-    // access the request’s SectionedFetchRequest.Configuration structure, either directly or with a binding.
+    // access the request's SectionedFetchRequest.Configuration structure, either directly or with a binding.
         let sortDescriptors = [ // XCode had problems parsing this array
             SortDescriptor(\MemberPortfolio.organization_!.pinned, order: .reverse),
             SortDescriptor(\MemberPortfolio.organization_!.fullName_, order: .forward),
@@ -51,6 +50,8 @@ struct FilteredMemberPortfoliosView1718: View {
             animation: .default)
         self.searchText = searchText
     }
+
+    // MARK: - body
 
     var body: some View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
@@ -172,20 +173,26 @@ struct FilteredMemberPortfoliosView1718: View {
 
 // MARK: - Previews
 
-// Believe it or not, this preview actually works. But only if you put Canvas on automatic or an iOS 26 device
-// Note that it filters on `searchText`, but `searchText` is not shown in this child View.
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView_Previews2626' for versions > iOS 18.x")
-struct FilteredMemberPortfolios1718_Previews: PreviewProvider {
-    static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
-    @State static var searchText: String = "8"
-
-    static var previews: some View {
-        List { // lists are "Lazy" automatically
-            FilteredMemberPortfoliosView1718(memberPredicate: memberPredicate, searchText: $searchText)
-                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+// Note that the preview filters on `searchText`, but `searchText` is not shown in this child View.
+// @Previewable @State (Xcode 16+) wires up state directly in the #Preview closure without a wrapper view.
+#Preview {
+    @Previewable @State var searchText: String = "8"
+    let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
+    NavigationStack {
+        if #available(iOS 26, *) {
+            List { // lists are "Lazy" automatically
+                FilteredMemberPortfoliosView(memberPredicate: memberPredicate, searchText: $searchText)
+            }
+            .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
+            .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
+            .searchToolbarBehavior(.minimize) // iOS 26+
+        } else {
+            List { // lists are "Lazy" automatically
+                FilteredMemberPortfoliosView(memberPredicate: memberPredicate, searchText: $searchText)
+            }
+            .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
+            .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
         }
-        .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
-        .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
-        // .searchToolbarBehavior(.minimize) // <<<< iOS 26+
     }
+    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

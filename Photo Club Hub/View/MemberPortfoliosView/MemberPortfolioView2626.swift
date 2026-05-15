@@ -60,8 +60,8 @@ struct MemberPortfolioView2626: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView2626(memberPredicate: preferencesModel.preferences.memberPredicate,
-                                             searchText: $searchText)
+            FilteredMemberPortfoliosView(memberPredicate: preferencesModel.preferences.memberPredicate,
+                                         searchText: $searchText)
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
