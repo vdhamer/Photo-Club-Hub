@@ -6,6 +6,10 @@ USER-FACING
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
 
+README SCREEN
+
+* Fixed typos in EN and NL versions (with help of Claude).
+
 STRUCTURAL
 
 * TODO: add test for Include feature

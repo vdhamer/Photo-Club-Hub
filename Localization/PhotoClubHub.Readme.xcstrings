@@ -25,7 +25,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De _Fotoclub Hub_ app toont geselecteerde foto’s van leden van fotoclubleden."
+            "value" : "De _Fotoclub Hub_ app toont geselecteerde foto’s van leden van fotoclubs."
           }
         }
       }
@@ -93,7 +93,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het ondersteunen van tientallen of zelfs honderden clubs vereist dat de clubs _zelf_ hun gegevens beheren. Het gaat hier om het aanleveren van een lijsten met clubleden en links naar portfolio foto’s. Momenteel gaat dit door het aanleveren van gestandaardiseerd formulier-achtig bestanden. Hiervoor is geen specifieke softwarekennis nodig. Hier komen we verderop in meer detail op terug."
+            "value" : "Het ondersteunen van tientallen of zelfs honderden clubs vereist dat de clubs _zelf_ hun gegevens beheren. Het gaat hier om het aanleveren van een lijst met clubleden en links naar portfolio foto’s. Momenteel gaat dit door het aanleveren van gestandaardiseerd formulier-achtig bestanden. Hiervoor is geen specifieke softwarekennis nodig. Hier komen we verderop in meer detail op terug."
           }
         }
       }
@@ -144,7 +144,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De app toon direct na opstarten een lijst van _clubs_ met hun _leden_. Elk clublid heeft een (optionele) link naar diens _portfolio_: een verzameling zorgvuldig geselecteerde _foto’s_ die het werk van dat clublid vertegenwoordigen."
+            "value" : "De app toont direct na opstarten een lijst van _clubs_ met hun _leden_. Elk clublid heeft een (optionele) link naar diens _portfolio_: een verzameling zorgvuldig geselecteerde _foto’s_ die het werk van dat clublid vertegenwoordigen."
           }
         }
       }
@@ -155,13 +155,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A photographer may have multiple portfolios in the app if case the photographer is (or was) associated with more than one photo club."
+            "value" : "A photographer may have multiple portfolios in the app in case the photographer is (or was) associated with more than one photo club."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Een portfolio vertegenwoordigt dus het werk van één fotograaf binnen één club. Fotografen die gelijktijdig lid zijn van meerdere fotoclubs hebben in de app ook meerdere portfolio’s. Dit kan ook voorkomen als fotografen na verloop van tijd overgestapen van één club naar een andere."
+            "value" : "Een portfolio vertegenwoordigt dus het werk van één fotograaf binnen één club. Fotografen die gelijktijdig lid zijn van meerdere fotoclubs hebben in de app ook meerdere portfolio’s. Dit kan ook voorkomen als fotografen na verloop van tijd overgestapt zijn van één club naar een andere."
           }
         }
       }
@@ -223,7 +223,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entering part of person’s name in the Search bar (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Organizations_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
+            "value" : "Entering part of a person’s name in the Search bar (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Organizations_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
           }
         },
         "nl" : {
@@ -274,7 +274,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Photographers can choose to display one or two genres (e.g. “Street”) for which they are relatively well-known. More details [here](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo$20Club%20Hub/Documentation/Level2_expertise_EN.md)."
+            "value" : "Photographers can choose to display one or two genres (e.g. “Street”) for which they are relatively well-known. More details [here](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_EN.md)."
           }
         },
         "nl" : {
@@ -325,7 +325,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > Photo Club Hub > Language_. Alternatively you can change your device’s preference across all apps using _Settings > General > Language & Region > Preferred Language Order_."
+            "value" : "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > Photo Club Hub > Language_. Alternatively, you can change your device’s preference across all apps using _Settings > General > Language & Region > Preferred Language Order_."
           }
         },
         "nl" : {
@@ -450,7 +450,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Momenteel kent de app %lld fotoclubs, vooral in regio Brabant Oost. Velen hiervan zijn aangesloten by de Koninklijke Fotobond. De app is overigens ook geschikt voor clubs in het buitenland."
+            "value" : "Momenteel kent de app %lld fotoclubs, vooral in regio Brabant Oost. Velen hiervan zijn aangesloten bij de Koninklijke Fotobond. De app is overigens ook geschikt voor clubs in het buitenland."
           }
         }
       }
@@ -467,7 +467,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om een club te ondersteunen, heeft de app informatie nodig over de naam en locatie van de club (“_Niveau 1_” gegevens), de een lijst met de clubleden (“_Niveau 2_” gegevens) en de portfolio’s met foto’s (“_Niveau 3_”). We komen later op deze niveaus terug."
+            "value" : "Om een club te ondersteunen, heeft de app informatie nodig over de naam en locatie van de club (“_Niveau 1_” gegevens), een lijst met de clubleden (“_Niveau 2_” gegevens) en de portfolio’s met foto’s (“_Niveau 3_”). We komen later op deze niveaus terug."
           }
         }
       }
@@ -518,7 +518,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De landkaarten tonen ook een aantal fotomusea en galerijen die gespecialiseerd zijn in fotografie. De app dekt in principe alle fotomusea in Nederland af. De app kent ook bekende fotomusea in het buitenland (b.v. Antwerpen, Londen, New York, Tokyo). Om ze te zien moet het slot icoon bij de kaart open zijn zodat men zoomen en vegen."
+            "value" : "De landkaarten tonen ook een aantal fotomusea en galerijen die gespecialiseerd zijn in fotografie. De app dekt in principe alle fotomusea in Nederland af. De app kent ook bekende fotomusea in het buitenland (b.v. Antwerpen, Londen, New York, Tokyo). Om ze te zien moet het slot icoon bij de kaart open zijn zodat men kan zoomen en vegen."
           }
         }
       }
@@ -569,7 +569,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het _Organisaties_ scherm and het _Fotografen_ scherm ondersteunen zogenaamde __smart scrolling__. Dit verkleint de kans dat de app een halve foto of halve landkaart laat zien."
+            "value" : "Het _Organisaties_ scherm en het _Fotografen_ scherm ondersteunen zogenaamde __smart scrolling__. Dit verkleint de kans dat de app een halve foto of halve landkaart laat zien."
           }
         }
       }
@@ -597,7 +597,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This app is complimentary to your club’s web site. Because web sites serve more purposes than just presenting photos, _Photo Club Hub_ includes clickable links that lead to club- and photographer web sites."
+            "value" : "This app is complementary to your club’s web site. Because web sites serve more purposes than just presenting photos, _Photo Club Hub_ includes clickable links that lead to club- and photographer web sites."
           }
         },
         "nl" : {
@@ -818,7 +818,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Many of the clubs in the Netherlands are federated under the umbrella of a national [Fotobond](www.fotobond.nl) organization for amateur photography. By default all clubs are shown in the same color. In the __Preferences__ screen you can choose to highlight Fotobond or non-Fotobond clubs using a selectable color."
+            "value" : "Many of the clubs in the Netherlands are federated under the umbrella of a national [Fotobond](www.fotobond.nl) organization for amateur photography. By default, all clubs are shown in the same color. In the __Preferences__ screen you can choose to highlight Fotobond or non-Fotobond clubs using a selectable color."
           }
         },
         "nl" : {
@@ -835,7 +835,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This feature won’t be of interest for clubs outside the Netherlands."
+            "value" : "This feature won’t be of interest to clubs outside the Netherlands."
           }
         },
         "nl" : {
@@ -886,7 +886,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we made a companion app that automatically generates website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms (including Android, Windows, MacOS and Linux)."
+            "value" : "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we made a companion app that automatically generates website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in web browsers on a wide range of platforms (including Android, Windows, MacOS and Linux)."
           }
         },
         "nl" : {
@@ -920,7 +920,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The app needs information in order to cover your local photo club(s). This involves three so-called _Levels_. A club can stay at any level for a while before proceeding to a next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details."
+            "value" : "The app needs information in order to cover your local photo club(s). This involves three so-called _Levels_. A club can stay at any level for a while before proceeding to the next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details."
           }
         },
         "nl" : {
@@ -937,7 +937,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Organizations_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors."
+            "value" : "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Organizations_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form of a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors."
           }
         },
         "nl" : {
@@ -971,7 +971,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)"
+            "value" : "Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)."
           }
         },
         "nl" : {
