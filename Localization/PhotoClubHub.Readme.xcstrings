@@ -1050,7 +1050,7 @@
         }
       }
     },
-    "Clubs, their Members, and their Portfolios" : {
+    "Clubs, their Members, and their Photos" : {
       "comment" : "Caption for image on Readme page",
       "localizations" : {
         "en" : {
@@ -1062,7 +1062,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clubs, Leden, en Foto’s."
+            "value" : "Clubs, Leden, en Foto’s"
           }
         }
       }

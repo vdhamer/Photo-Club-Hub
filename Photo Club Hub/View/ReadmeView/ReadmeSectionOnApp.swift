@@ -37,7 +37,7 @@ public struct ReadmeSectionOnApp: View {
 
             ReadmeCaptionedImage("app_screenshots_EN",
                                  imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 500 : 250),
-                                 caption: LocalizedStringResource("Clubs, their Members, and their Portfolios",
+                                 caption: LocalizedStringResource("Clubs, their Members, and their Photos",
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment: "Caption for image on Readme page"))
 
