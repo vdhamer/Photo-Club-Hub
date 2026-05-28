@@ -15,6 +15,7 @@ STRUCTURAL
 * TODO: add test for Include feature
 * Merging of 2626 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
 * TODO: adapt to existence of iOS 27: 2626 becomes 2627 (bit of renaming)
+* Tested with SwiftLint 0.63.3
 
 This build #4661 was made using Xcode 26.4 and is intended for the App Store.
 Amount of code and data lines changed since previous release: ? additions and ? deletions in ? files.
