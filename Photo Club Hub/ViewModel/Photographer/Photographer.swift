@@ -26,7 +26,7 @@ extension Photographer {
         (photographerExpertises_ as? Set<PhotographerExpertise>) ?? []
     }
 
-	var memberships: Set<MemberPortfolio> {
+	public var memberships: Set<MemberPortfolio> {
 		(memberships_ as? Set<MemberPortfolio>) ?? []
 	}
 
@@ -45,7 +45,7 @@ extension Photographer {
 		set { familyName_ = newValue }
 	}
 
-    var fullNameFirstLast: String { // "John Doe" or "Jan van Doesburg"
+    public var fullNameFirstLast: String { // "John Doe" or "Jan van Doesburg"
         let infixName = self.infixName.isEmpty ? " " : " \(self.infixName) " // " van " in names like "Jan van Doesburg"
         return givenName + infixName + familyName
     }

@@ -27,7 +27,7 @@ extension PhotographerExpertise {
         }
     }
 
-    var photographer: Photographer {
+    public var photographer: Photographer {
         get {
             if let photographer = photographer_ {
                 return photographer

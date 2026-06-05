@@ -16,6 +16,7 @@ STRUCTURAL
 * Merging of 2626 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
 * TODO: adapt to existence of iOS 27: 2626 becomes 2627 (bit of renaming)
 * Tested with MacOS 26.5.1 and SwiftLint 0.63.3
+* Synchonized code with Photo Club Hub HTML (adding `public` in 5 spots)
 
 This build #4661 was made using Xcode 26.4 and is intended for the App Store.
 Amount of code and data lines changed since previous release: ? additions and ? deletions in ? files.

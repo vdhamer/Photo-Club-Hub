@@ -39,7 +39,7 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         }
     }
 
-    var organization: Organization {
+    public var organization: Organization {
         if let organization = organization_ {
             return organization
         } else {
