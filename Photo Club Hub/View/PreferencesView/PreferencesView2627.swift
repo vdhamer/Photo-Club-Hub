@@ -1,5 +1,5 @@
 //
-//  PreferencesView2626.swift
+//  PreferencesView2627.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 11/12/2021.
@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(iOS 26.0, *)
 @MainActor
-struct PreferencesView2626: View {
+struct PreferencesView2627: View {
 
     @Binding var preferences: PreferencesStruct // parameters for various Toggles and Pickers
     @State var localPreferences: PreferencesStruct // in case the view gets a Cancel option
@@ -30,12 +30,12 @@ struct PreferencesView2626: View {
 
 // Believe it or not, the following Preview actually works. (but needs to run on a simulator with iOS 26+)
 @available(iOS 26.0, *)
-struct PreferencesView2626_Previews: PreviewProvider {
+struct PreferencesView2627_Previews: PreviewProvider {
     @State static private var title = "PreferencesView Preview"
     @State static var preferences = PreferencesStruct.defaultValue
 
     static var previews: some View {
-        PreferencesView2626(preferences: $preferences)
+        PreferencesView2627(preferences: $preferences)
             .navigationTitle(title)
     }
 

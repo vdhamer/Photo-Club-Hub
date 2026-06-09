@@ -91,7 +91,7 @@ struct MemberPortfolioView: View {
                 // Preferences sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingPreferences, content: {
                     if #available(iOS 26, *) {
-                        PreferencesView2626(preferences: $preferencesModel.preferences)
+                        PreferencesView2627(preferences: $preferencesModel.preferences)
                         // the detents don't do anything on an iPad
                             .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
                             .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
@@ -139,7 +139,7 @@ struct MemberPortfolioView: View {
 
                 NavigationLink(destination: {
                     if #available(iOS 26, *) {
-                        PhotographersListView2626(searchText: $searchText)
+                        PhotographersListView2627(searchText: $searchText)
                     } else {
                         PhotographersListView1718(searchText: $searchText)
                     }

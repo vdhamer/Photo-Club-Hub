@@ -50,7 +50,7 @@ struct PhotoClubHubApp: App {
                         }
                     }
             } else {
-                PreludeView2626()
+                PreludeView2627()
                     .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                     .onAppear {
                         if !Settings.manualDataLoading {

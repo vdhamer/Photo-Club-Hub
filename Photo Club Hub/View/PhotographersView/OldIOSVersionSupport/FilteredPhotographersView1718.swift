@@ -19,7 +19,7 @@ import WebKit // for WKWebView
 //          - some textual information
 //          - a horizontally scrolling list of thumbnails representing portfolios
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2627' for versions above iOS 18.x")
 struct FilteredPhotographerView1718: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
@@ -117,7 +117,7 @@ struct FilteredPhotographerView1718: View {
 
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2627' for versions above iOS 18.x")
 private struct PhotographerIconView1718: View {
     let isDeceased: Bool
 
@@ -132,8 +132,8 @@ private struct PhotographerIconView1718: View {
 
 // MARK: - Previews
 
-// The following Previews actually works for FilteredPrhotographersView2626 - but they don't work here yet ;-(
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+// The following Previews actually works for FilteredPrhotographersView2627 - but they don't work here yet ;-(
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2627' for versions above iOS 18.x")
 #Preview("FilteredPhotographerView1718") {
     NavigationStack {
         List {
@@ -145,7 +145,7 @@ private struct PhotographerIconView1718: View {
     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2627' for versions above iOS 18.x")
 #Preview("PhotographerIconView1718") {
     NavigationStack {
         VStack(spacing: 20) {

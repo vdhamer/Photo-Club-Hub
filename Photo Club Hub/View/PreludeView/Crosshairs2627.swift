@@ -11,7 +11,7 @@ import SwiftUI
 // with a circle around the central point, aka cell (0,0).
 // This was used to tune the Prelude screen graphics.
 @available(iOS 26.0, *)
-struct CrossHairs2626: Shape {
+struct CrossHairs2627: Shape {
 
     let hidden: Bool // provided when instantiating CrossHairs
     let circleScaling: Double
@@ -46,12 +46,12 @@ struct CrossHairs2626: Shape {
 
 // Believe it or not, this preview actually works.
 @available(iOS 26.0, *)
-struct Crosshairs2626_Previews: PreviewProvider {
+struct Crosshairs2627_Previews: PreviewProvider {
     static let crossHairsWidth: CGFloat = 2
     static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
     static var previews: some View {
-        CrossHairs2626(hidden: false, circleScaling: 0.5)
+        CrossHairs2627(hidden: false, circleScaling: 0.5)
             .stroke(crossHairsColor, lineWidth: crossHairsWidth)
             .blendMode(.normal)
     }

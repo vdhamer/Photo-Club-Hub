@@ -11,7 +11,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
     let geo: GeometryProxy
     public init(geo: GeometryProxy) { self.geo = geo }
     // Minor differences between the iOS 26 and 17/18 versions are handled by logic rather than having 2 file copies
-    private var iOS2626: Bool { if #available(iOS 26, *) { true } else { false } }
+    private var iOS2627: Bool { if #available(iOS 26, *) { true } else { false } }
 
     var body: some View {
         Group {
@@ -30,7 +30,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo, bottomPaddingAmount: 0)
 
-            if iOS2626 {
+            if iOS2627 {
                 ReadmeCaptionedImage("Search-bar-bottom",
                                      imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
                                      caption: LocalizedStringResource(

@@ -63,7 +63,7 @@ public struct ReadmeSectionOnApp: View {
 // MARK: - Previews
 
 // Believe it or not, this preview actually works.
-struct ReadmeSectionOnApp2626_Previews: PreviewProvider {
+struct ReadmeSectionOnApp2627_Previews: PreviewProvider {
     @State static private var title = "Readme/App Preview"
 
     static var previews: some View {

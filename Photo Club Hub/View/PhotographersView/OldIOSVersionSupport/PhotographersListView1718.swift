@@ -16,7 +16,7 @@ import WebKit // for wkWebView
 //     * help text at bottom. One of these footnotes shows the Expertise stats.
 // Preview unfortunately doesn't work.
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2627' for versions above iOS 18.x")
 struct PhotographersListView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
@@ -140,7 +140,7 @@ struct PhotographersListView1718: View {
 // MARK: - Previews
 
 // Believe it or not, the following Previews actually works. But Canvas needs to target iOS 17 or 18.
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2627' for versions above iOS 18.x")
 #Preview {
     @Previewable @State var searchText = "D' Eau1" // carefull with the space in the name
     NavigationView {

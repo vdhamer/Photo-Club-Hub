@@ -1,5 +1,5 @@
 //
-//  PreludeImageStore2626.swift
+//  PreludeImageStore2627.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 11/11/2025.
@@ -8,9 +8,9 @@
 import SwiftUI
 
 @available(iOS 26.0, *)
-actor PreludeImageStore2626 {
-    private var storage = [PreludeImage2626]() // holds images that are loaded by init()
-    private var sessionPreludeImage: PreludeImage2626? // initializes to `nil`, cache of image for this session
+actor PreludeImageStore2627 {
+    private var storage = [PreludeImage2627]() // holds images that are loaded by init()
+    private var sessionPreludeImage: PreludeImage2627? // initializes to `nil`, cache of image for this session
 
     // Requirements for these images:
     // 0. there should be at least one image (else fatalerror is triggered). Covered by init().
@@ -18,32 +18,32 @@ actor PreludeImageStore2626 {
     // 2. image should preferably be colorful (to demonstrate color handling)
     // 3. each image needs to contain an area of pure white (for the initial zoomed-in state)
     init() {
-        storage.append(PreludeImage2626(assetName: "2021_FotogroepWaalre_058_square",
+        storage.append(PreludeImage2627(assetName: "2021_FotogroepWaalre_058_square",
                                         copyright: "© Greetje van Son",
                                         copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 8, y: 6)))
 
-        storage.append(PreludeImage2626(assetName: "2005_Pimpernel_076_rot_crop_square",
+        storage.append(PreludeImage2627(assetName: "2005_Pimpernel_076_rot_crop_square",
                                         copyright: "© Peter van den Hamer",
                                         copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 3, y: 8)))
 
-        storage.append(PreludeImage2626(assetName: "2023_Cornwall_R5_316_square",
+        storage.append(PreludeImage2627(assetName: "2023_Cornwall_R5_316_square",
                                         copyright: "© Peter van den Hamer",
                                         copyrightAlignment: PreludeAlignment.bottomTrailing,
                                         whiteCoordinates: .init(x: 7, y: 0)))
 
-        storage.append(PreludeImage2626(assetName: "2024_California_R5_340-3-Edit_square",
+        storage.append(PreludeImage2627(assetName: "2024_California_R5_340-3-Edit_square",
                                         copyright: "© Peter van den Hamer",
                                         copyrightAlignment: PreludeAlignment.bottomTrailing,
                                         whiteCoordinates: .init(x: -2, y: -6)))
 
-        storage.append(PreludeImage2626(assetName: "2025_fgDeGenderExpo_064_square",
+        storage.append(PreludeImage2627(assetName: "2025_fgDeGenderExpo_064_square",
                                         copyright: "© Bert Zantingh",
                                         copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 4, y: 1)))
 
-        storage.append(PreludeImage2626(assetName: "2025_Texel_R5_025_square",
+        storage.append(PreludeImage2627(assetName: "2025_Texel_R5_025_square",
                                         copyright: "© Peter van den Hamer",
                                         copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 4, y: 12)))
@@ -65,14 +65,14 @@ actor PreludeImageStore2626 {
     ///     the cached image is returned and the persisted index is not advanced. When `false`, the
     ///     method computes and selects a new image according to `increment`.
     ///
-    /// - Returns: The selected `PreludeImage2626`.
+    /// - Returns: The selected `PreludeImage2627`.
     ///
     /// - Important: If `storage` is empty, this method triggers a `fatalError`. Under normal
     ///   operation, `storage` is populated in `init()` and should contain at least one image.
     ///
     /// - Note: The persisted index stored in `UserDefaults` is zero-based and constrained to the
     ///   range `0..<storage.count`. The modulo operation ensures rollover in both directions.
-    func selectNextImage(increment: Int, sticky: Bool) -> PreludeImage2626 {
+    func selectNextImage(increment: Int, sticky: Bool) -> PreludeImage2627 {
         guard !storage.isEmpty else {
             fatalError("PreludeImageStore array is empty") // should be covered by init()
         }

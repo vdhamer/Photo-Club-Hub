@@ -1,5 +1,5 @@
 //
-//  PreludeView2626.swift
+//  PreludeView2627.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 05/03/2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 26.0, *)
-struct PreludeView2626: View {
+struct PreludeView2627: View {
 
     // MARK: - Constants
     enum Const {
@@ -19,14 +19,14 @@ struct PreludeView2626: View {
         static let crossHairsWidth: CGFloat = 2
         static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
     }
-    private let preludeImageStore = PreludeImageStore2626()
-    @State private var preludeImage = PreludeImage2626(assetName: "2024_California_R5_340-3-Edit_square",
+    private let preludeImageStore = PreludeImageStore2627()
+    @State private var preludeImage = PreludeImage2627(assetName: "2024_California_R5_340-3-Edit_square",
                                                        copyright: "🙈 You shouldn't be seeing this! 🙈",
                                                        copyrightAlignment: .centerCentered,
                                                        whiteCoordinates: .init(x: 8, y: 6)) // temporary value only
 
     // MARK: - State variables
-    @State private var offsetInCells = OffsetVectorInCells2626(x: 8, y: 8) // # of cell units left/above imagecenter
+    @State private var offsetInCells = OffsetVectorInCells2627(x: 8, y: 8) // # of cell units left/above imagecenter
     @State private var logScale = Const.log2CellRepeat // value driving the animation
     private var isZoomedOut: Bool { abs(logScale) < 0.0001 }
     @State private var willMoveToNextScreen = false // used to navigate to next screen
@@ -43,7 +43,7 @@ struct PreludeView2626: View {
                 logScale = log2(Const.maxCellRepeat) // zoom in
                 offsetInCells = intOffset(rect: geo.size, location: location)
             } else {
-                offsetInCells = OffsetVectorInCells2626(x: 0, y: 0)
+                offsetInCells = OffsetVectorInCells2627(x: 0, y: 0)
                 logScale = 0.0 // zoom out
             }
         }
@@ -156,7 +156,7 @@ struct PreludeView2626: View {
                         }
                     }
 
-                    CrossHairs2626(hidden: !crosshairsVisible)
+                    CrossHairs2627(hidden: !crosshairsVisible)
                         .stroke(Const.crossHairsColor, lineWidth: Const.crossHairsWidth)
                         .blendMode(.normal)
                         .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
@@ -205,12 +205,12 @@ struct PreludeView2626: View {
     }
 
     private func intOffset(rect: CGSize, location: CGPoint)
-            -> OffsetVectorInCells2626 { // to translate tap to selected cell
-        guard isZoomedOut == false else { return OffsetVectorInCells2626(x: 0, y: 0) }
+            -> OffsetVectorInCells2627 { // to translate tap to selected cell
+        guard isZoomedOut == false else { return OffsetVectorInCells2627(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
         let cellPitchInPixels = shortFrameDimension/Const.maxCellRepeat
-        return OffsetVectorInCells2626(x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
+        return OffsetVectorInCells2627(x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
                                        y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()))
     }
 
@@ -232,7 +232,7 @@ struct PreludeView2626: View {
 
     private struct EscapeHatch: View {
         let willMoveToNextScreen: Binding<Bool>
-        let offset: Binding<OffsetVectorInCells2626>
+        let offset: Binding<OffsetVectorInCells2627>
         let location: Binding<CGPoint>
         var size: CGSize
         @Binding var debugPanelVisible: Bool
@@ -242,7 +242,7 @@ struct PreludeView2626: View {
             VStack {
                 Spacer()
                 HStack(alignment: .bottom) {
-                    DebugPanel2626(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
+                    DebugPanel2627(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
                     Image(systemName: "arrowshape.turn.up.forward.circle")
                         .accessibilityLabel(Text(String(localized: "Next",
@@ -291,7 +291,7 @@ struct PreludeView2626: View {
 // MARK: - Previews
 
 @available(iOS 26.0, *)
-struct OffsetVectorInCells2626 {
+struct OffsetVectorInCells2627 {
     // swiftlint:disable:next identifier_name
     var x, y: Int
 }
@@ -300,16 +300,16 @@ struct OffsetVectorInCells2626 {
 
 @available(iOS 26.0, *)
 #Preview("Prelude – Portrait", traits: .portrait) {
-    PreludeView2626()
+    PreludeView2627()
 }
 
 @available(iOS 26.0, *)
 #Preview("Prelude – Landscape", traits: .landscapeLeft) {
-    PreludeView2626()
+    PreludeView2627()
 }
 
 @available(iOS 26.0, *)
 #Preview("Prelude – Dark Mode") {
-    PreludeView2626()
+    PreludeView2627()
         .preferredColorScheme(.dark)
 }

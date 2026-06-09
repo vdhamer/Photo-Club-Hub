@@ -1,5 +1,5 @@
 //
-//  FilteredPhotographerView2626.swift
+//  FilteredPhotographerView2627.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -20,7 +20,7 @@ import WebKit // for WKWebView
 //          - a horizontally scrolling list of thumbnails representing portfolios
 
 @available(iOS 26.0, *)
-struct FilteredPhotographerView2626: View {
+struct FilteredPhotographerView2627: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
@@ -48,7 +48,7 @@ struct FilteredPhotographerView2626: View {
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
 
-                    PhotographerIconView2626(isDeceased: photographer.isDeceased)
+                    PhotographerIconView2627(isDeceased: photographer.isDeceased)
                         .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
                         .font(.title3)
                         .frame(width: 35)
@@ -118,7 +118,7 @@ struct FilteredPhotographerView2626: View {
 }
 
 @available(iOS 26.0, *)
-private struct PhotographerIconView2626: View {
+private struct PhotographerIconView2627: View {
     let isDeceased: Bool
 
     var body: some View {
@@ -136,10 +136,10 @@ private struct PhotographerIconView2626: View {
 // The first one was generated in a lengthy session by Claude Code (Opus 4.7).
 // The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS 26.0, *)
-#Preview("FilteredPhotographerView2626") {
+#Preview("FilteredPhotographerView2627") {
     NavigationStack {
         List {
-            FilteredPhotographerView2626(predicate: NSPredicate(value: true),
+            FilteredPhotographerView2627(predicate: NSPredicate(value: true),
                                          searchText: .constant(""),
                                          wkWebView: WKWebView())
         }
@@ -148,15 +148,15 @@ private struct PhotographerIconView2626: View {
 }
 
 @available(iOS 26.0, *)
-#Preview("PhotographerIconView2626") {
+#Preview("PhotographerIconView2627") {
     NavigationStack {
         VStack(spacing: 20) {
             HStack {
-                PhotographerIconView2626(isDeceased: false)
+                PhotographerIconView2627(isDeceased: false)
                 Text(verbatim: "isDeceased: false")
             }
             HStack {
-                PhotographerIconView2626(isDeceased: true)
+                PhotographerIconView2627(isDeceased: true)
                 Text(verbatim: "isDeceased: true")
             }
         }

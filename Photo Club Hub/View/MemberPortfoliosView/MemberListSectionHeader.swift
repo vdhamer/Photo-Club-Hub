@@ -9,7 +9,7 @@ import SwiftUI
 
 /// Centered capsule label used as a section header in the Members list.
 /// Displays the club name inside a pill-shaped gradient capsule, centered and capped at 400 pt wide.
-/// Used by both `FilteredMemberPortfoliosView2626` and `FilteredMemberPortfoliosView1718`.
+/// Used by both `FilteredMemberPortfoliosView2627` and `FilteredMemberPortfoliosView1718`.
 struct MemberListSectionHeader: View {
     @Environment(\.colorScheme) private var colorScheme // to detect dark mode
 

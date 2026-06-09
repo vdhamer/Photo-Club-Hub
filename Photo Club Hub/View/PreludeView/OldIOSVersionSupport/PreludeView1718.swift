@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'PreludeView2626' for versions about iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreludeView2627' for versions about iOS 18.x")
 struct PreludeView1718: View {
 
     // MARK: - Constants
@@ -239,13 +239,13 @@ struct PreludeView1718: View {
 
 // MARK: - Previews
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'OffsetVectorInCells2626' for versions about iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'OffsetVectorInCells2627' for versions about iOS 18.x")
 struct OffsetVectorInCells1718 {
     // swiftlint:disable:next identifier_name
     var x, y: Int
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'PreviewProvider2626' for versions about iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreviewProvider2627' for versions about iOS 18.x")
 struct Prelude1718_Previews: PreviewProvider {
     static var previews: some View {
         Group {

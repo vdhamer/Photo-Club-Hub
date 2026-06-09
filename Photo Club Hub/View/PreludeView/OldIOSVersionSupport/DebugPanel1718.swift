@@ -9,7 +9,7 @@ import SwiftUI
 
 // Displays some numbers related to the Prelude screen graphics.
 // The numbers update (via @Binding) when the screen is tapped.
-@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2627' for versions above iOS 18.x")
 struct DebugPanel1718: View {
     var size: CGSize
     @Binding var offset: OffsetVectorInCells1718
@@ -42,7 +42,7 @@ struct DebugPanel1718: View {
 // MARK: - Previews
 
 // Believe it or not, this preview actually works.
-@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2627_Previews' for versions above iOS 18.x")
 struct DebugPanel1718_Previews: PreviewProvider {
     @State private static var debugLocation = CGPoint(x: 0, y: 0)
     @State private static var logScale: Double = 32 // value driving the animation

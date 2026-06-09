@@ -1,5 +1,5 @@
 //
-//  PhotographersListView2626.swift
+//  PhotographersListView2627.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -17,7 +17,7 @@ import WebKit // for wkWebView
 // See Preview below.
 
 @available(iOS 26.0, *)
-struct PhotographersListView2626: View {
+struct PhotographersListView2627: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
@@ -44,7 +44,7 @@ struct PhotographersListView2626: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredPhotographerView2626(predicate: model.preferences.photographerPredicate, // Here's the action
+                FilteredPhotographerView2627(predicate: model.preferences.photographerPredicate, // Here's the action
                                          searchText: searchText,
                                          wkWebView: wkWebView)
             }
@@ -172,7 +172,7 @@ private extension View {
 #Preview {
     @Previewable @State var searchText = "D' Eau1"
     NavigationStack {
-        PhotographersListView2626(searchText: $searchText)
+        PhotographersListView2627(searchText: $searchText)
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

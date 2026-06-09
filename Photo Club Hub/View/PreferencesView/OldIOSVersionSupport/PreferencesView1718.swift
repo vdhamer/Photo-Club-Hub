@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2627' for versions above iOS 18.x")
 @MainActor
 struct PreferencesView1718: View {
 
@@ -28,7 +28,7 @@ struct PreferencesView1718: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works.
-@available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626_Previews' for versions above iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2627_Previews' for versions above iOS 18.x")
 struct PreferencesView1718_Previews: PreviewProvider {
     @State static private var title = "PreferencesView Preview"
     @State static var preferences = PreferencesStruct.defaultValue

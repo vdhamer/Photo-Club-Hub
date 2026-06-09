@@ -11,7 +11,7 @@ import CoreLocation // for CLLocationCoordinate2D in preview
 /// Section footer for the Members list showing how many members are visible after filtering.
 /// Displays "N member(s) shown" or "N of M member(s) shown" when a search filter reduces the count,
 /// followed by the club's data-source URL (host + path only).
-/// Used by both `FilteredMemberPortfoliosView2626` and `FilteredMemberPortfoliosView1718`.
+/// Used by both `FilteredMemberPortfoliosView2627` and `FilteredMemberPortfoliosView1718`.
 struct MemberListSectionFooter: View {
     var filtCount: Int // number of items in filtered list
     var unfiltCount: Int // number of items in unfiltered list
