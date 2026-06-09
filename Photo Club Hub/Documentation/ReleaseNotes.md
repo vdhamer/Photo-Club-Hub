@@ -5,6 +5,7 @@ USER-FACING
 * TODO: display expertises on Photographers screen
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
+- TODO: there are 2 search buttons under iOS 27.0 beta
 
 README SCREEN
 
@@ -15,10 +16,10 @@ STRUCTURAL
 * TODO: add test for Include feature
 * Merging of 2626 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
 * TODO: adapt to existence of iOS 27: 2626 becomes 2627 (bit of renaming)
-* Tested with MacOS 26.5.1 and SwiftLint 0.63.3
+* Tested with MacOS 26.5.1, Xcode 27.0 beta (27A5194q), Xcode 26.6 (17F109), iOS 27.0 beta (24A5355p) and  SwiftLint 0.63.3
 * Synchonized code with Photo Club Hub HTML (adding `public` in 5 spots)
 
-This build #4661 was made using Xcode 26.4 and is intended for the App Store.
+This build #4661 was made using Xcode 26.6 and is intended for the App Store.
 Amount of code and data lines changed since previous release: ? additions and ? deletions in ? files.
 
 ---------------------------------------------------------------------------
