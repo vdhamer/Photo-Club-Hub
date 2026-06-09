@@ -15,7 +15,7 @@ STRUCTURAL
 
 * TODO: add test for Include feature
 * Merging of 2627 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
-* TODO: adapt to existence of iOS 27: 2627 becomes 2627 (bit of renaming)
+* Renaming of filenames and symbols ending on 2626 to 2627 (iOS 27.0 betas are now available)
 * Tested with MacOS 26.5.1, Xcode 27.0 beta (27A5194q), Xcode 26.6 (17F109), iOS 27.0 beta (24A5355p) and  SwiftLint 0.63.3
 * Synchonized code with Photo Club Hub HTML (adding `public` in 5 spots)
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
