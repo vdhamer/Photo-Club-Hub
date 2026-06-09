@@ -5,6 +5,7 @@
 //  Created by Peter van den Hamer on 30/12/2021.
 //
 
+import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI // for View
 import WebKit // for WKWebView
 

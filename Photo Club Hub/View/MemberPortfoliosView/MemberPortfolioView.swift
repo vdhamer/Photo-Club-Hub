@@ -5,6 +5,7 @@
 //  Created by Peter van den Hamer on 20/06/2021.
 //
 
+import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI
 
 /// A list-based view that displays member portfolios with search and toolbar actions.

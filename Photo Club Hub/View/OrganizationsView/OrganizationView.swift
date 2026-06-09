@@ -5,6 +5,7 @@
 //  Created by Peter van den Hamer on 07/01/2022.
 //
 
+import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI // for View
 
 /// A scroll-based view that displays photo clubs and museums with a search field
