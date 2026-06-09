@@ -5,6 +5,7 @@
 //  Created by Peter van den Hamer on 07/01/2022.
 //
 
+import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI // for View
 
 /// A scroll-based view that displays photo clubs and museums with a search field
@@ -86,7 +87,7 @@ struct OrganizationView: View {
             // remember that nothing will run here until the for try await loop finishes
         }
         .navigationTitle(modelToHoldPreferences.preferences.organizationLabel())
-        .searchable(text: $searchText, placement: .automatic,
+        .searchable(text: $searchText, placement: searchPlacement,
                     // .automatic
                     // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust
                     // .sidebar The search field is placed in the sidebar of a navigation view. not on iPad
@@ -98,7 +99,7 @@ struct OrganizationView: View {
                                           filter the members based on a fragment of the organization name or town.
                                           """
                                 ))
-        // .searchToolbarBehavior(.minimize) // requires iOS 26+
+        .searchToolbarBehaviorIfAvailable()
         .autocapitalization(.sentences)
         .disableAutocorrection(true)
     }
@@ -115,6 +116,34 @@ struct NoClubsText: View {
              """,
              tableName: "PhotoClubHub.SwiftUI",
              comment: "Hint to the user if the database returns zero Organizations.")
+    }
+}
+
+// MARK: - Controlling search bar placement
+
+/// On iOS 27, `.automatic` + `.minimize` adds a duplicate nav-bar icon.
+/// While `.toolbar` + no `.minimize` suppresses it and gives the same single compact bottom button as iOS 26.
+private var searchPlacement: SearchFieldPlacement {
+    if #available(iOS 27, *) {
+        return .toolbar
+    } else {
+        return .automatic
+    }
+}
+
+private extension View {
+    /// Applies `.searchToolbarBehavior(.minimize)` on iOS 26 only.
+    /// On iOS 27+, `.minimize` adds a duplicate nav-bar icon in addition to the compact bottom button;
+    /// using `.toolbar` placement without `.minimize` reproduces the iOS 26 single-button behavior instead.
+    @ViewBuilder
+    func searchToolbarBehaviorIfAvailable() -> some View {
+        if #available(iOS 27, *) {
+            self // Swift UI bug (FB23003932): .minimize displays 2 search icons
+        } else if #available(iOS 26, *) {
+            self.searchToolbarBehavior(.minimize)
+        } else {
+            self
+        }
     }
 }
 
