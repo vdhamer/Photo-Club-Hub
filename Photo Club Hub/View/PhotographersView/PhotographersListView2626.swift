@@ -114,7 +114,7 @@ struct PhotographersListView2626: View {
         .autocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .navigationTitle(navigationTitle)
-        .searchable(text: searchText, placement: .automatic,
+        .searchable(text: searchText, placement: searchPlacement,
                     prompt: Text("Search_names_p",
                                  tableName: "PhotoClubHub.SwiftUI",
                                  comment: """
@@ -122,7 +122,7 @@ struct PhotographersListView2626: View {
                                           filter the photographers based on either given- and family name.
                                           """)
         )
-        .searchToolbarBehavior(.minimize)
+        .searchToolbarBehaviorIfAvailable()
         .disableAutocorrection(true)
     }
 
@@ -136,6 +136,33 @@ struct PhotographersListView2626: View {
         return isSupported ? Self.iconExamples.supported.icon : Self.iconExamples.temporary.icon
     }
 
+}
+
+// MARK: - Controlling search bar placement
+
+/// On iOS 27, `.automatic` + `.minimize` adds a duplicate nav-bar icon.
+/// While `.toolbar` + no `.minimize` suppresses it and gives the same single compact bottom button as iOS 26.
+private var searchPlacement: SearchFieldPlacement {
+    if #available(iOS 27, *) {
+        return .toolbar
+    } else {
+        return .automatic
+    }
+}
+
+@available(iOS 26.0, *)
+private extension View {
+    /// Applies `.searchToolbarBehavior(.minimize)` on iOS 26 only.
+    /// On iOS 27+, `.minimize` adds a duplicate nav-bar icon on top of the compact bottom button;
+    /// using `.toolbar` placement without `.minimize` reproduces the iOS 26 single-button behavior instead.
+    @ViewBuilder
+    func searchToolbarBehaviorIfAvailable() -> some View {
+        if #available(iOS 27, *) {
+            self
+        } else {
+            self.searchToolbarBehavior(.minimize)
+        }
+    }
 }
 
 // MARK: - Previews
