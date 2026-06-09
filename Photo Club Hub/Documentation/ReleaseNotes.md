@@ -5,7 +5,7 @@ USER-FACING
 * TODO: display expertises on Photographers screen
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
-- TODO: there are 2 search buttons under iOS 27.0 beta
+- Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple)
 
 README SCREEN
 
