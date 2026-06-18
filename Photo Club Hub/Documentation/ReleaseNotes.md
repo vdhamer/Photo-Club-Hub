@@ -21,6 +21,9 @@ STRUCTURAL
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
 * Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
 
+DOCUMENTATION MAINTENANCE
+- Updated data model in README.md
+
 This build #4662 was made using Xcode 26.6 and is intended for the App Store.
 Amount of code and data lines changed since previous release: ? additions and ? deletions in ? files.
 
