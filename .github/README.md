@@ -1186,15 +1186,24 @@ Currently there are two features in the app that display Strings from the databa
 
 #### LocalizedAddress
 
-The `LocalizedAddress` table is a utility table to support displaying locations of Organizations (Clubs or Museums)
-in the required language. In the iOS app, it hasn't been enabled yet because the app is only in one language at any one time.
-The Photo Club Hub HTML has a tougher requirement: apart from its user interface being in one language at any one time,
-it needs to generate web pages like /nl/clubs/club123/ and /en/clubs/club123/ at the push fo one buton.
+<ul><details><summary>Details (click to expand)</summary></p>
 
-To this end, LocalizedAddress stores translations of the location (Country, Town) per language. It fetches this
-data via a reverse geolocation call to an Apple server. And it caches the returned strings to avoid having to call
+The `LocalizedAddress` table is a utility table for displaying locations of Organizations (meaning Clubs or Museums)
+in whatever language is required. 
+In the iOS app, it hasn't been enabled yet because the app is only in one language at any one time. 
+So, in the iOS app the translations can be stored in fields (`localizedCountryDepr`) in the `Organization` table.
+The Photo Club Hub HTML has more complex requirements: 
+apart from its user interface also being in one language at any one time,
+it also needs to generate translated web pages like `/nl/clubs/myClub/` and `/en/clubs/myClub/` at the push fo one buton.
+
+To this end, LocalizedAddress stores translated names of Countries and Towns in multiple supported language. 
+It fetches this data via a reverse geolocation call to an Apple server. 
+And it caches the returned strings to avoid having to call
 that API organizations x languages (e.g. 100 x 3) times during each app run. For efficiency reasons, it only 
-does such API calls if the organizations latitude/longitude have change since the previous API call for that organization/language.
+does such API calls if the organizations latitude/longitude changed since the last call to that API.
+This means that usually the API is called only once for an organization/language combination: it only
+calls the API again if it sees that its cached answer might be outdated (e.g. latitude 4.123 became 5.678).
+</details></ul>
 
 #### LocalizedRemark
 
