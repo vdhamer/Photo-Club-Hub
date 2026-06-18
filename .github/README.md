@@ -74,6 +74,7 @@
                      <li>MemberPortfolio</li>
                      <li>OrganizationType</li>
                      <li>Language</li>
+                     <li>LocalizedAddress</li>
                      <li>LocalizedRemark</li>
                      <li>Expertise</li>
                      <li>LocalizedExpertise</li>
@@ -1182,6 +1183,18 @@ Currently there are two features in the app that display Strings from the databa
 1. max one `localizedRemark` attached to an `organization` (club, museum) and
 2. multiple `localizedExpertise`s attached (indirectly via `Expertise`) to a `photographer`.</p>
 </details></ul>
+
+#### LocalizedAddress
+
+The `LocalizedAddress` table is a utility table to support displaying locations of Organizations (Clubs or Museums)
+in the required language. In the iOS app, it hasn't been enabled yet because the app is only in one language at any one time.
+The Photo Club Hub HTML has a tougher requirement: apart from its user interface being in one language at any one time,
+it needs to generate web pages like /nl/clubs/club123/ and /en/clubs/club123/ at the push fo one buton.
+
+To this end, LocalizedAddress stores translations of the location (Country, Town) per language. It fetches this
+data via a reverse geolocation call to an Apple server. And it caches the returned strings to avoid having to call
+that API organizations x languages (e.g. 100 x 3) times during each app run. For efficiency reasons, it only 
+does such API calls if the organizations latitude/longitude have change since the previous API call for that organization/language.
 
 #### LocalizedRemark
 
