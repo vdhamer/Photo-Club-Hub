@@ -36,20 +36,6 @@ struct MemberPortfolioView: View {
     /// The text bound to the search field used to filter member portfolios.
     @State private var searchText: String = ""
 
-    /// Photographers fetched for cross-page needs; sorting is intentionally atypical.
-    @FetchRequest( // is this used? It is replaced by a fetchRequest in Photographers page
-        sortDescriptors: [SortDescriptor(\.familyName_, order: .forward)], // deliberately in strange order
-        animation: .default)
-    private var photographers: FetchedResults<Photographer>
-
-    /// Organizations fetched and sorted with pinned items first, then by name and town.
-    @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.pinned, order: .reverse),
-                          SortDescriptor(\.fullName_, order: .forward),
-                          SortDescriptor(\.town_, order: .forward)],
-        animation: .default)
-    private var organizations: FetchedResults<Organization>
-
     @StateObject var preferencesModel = PreferencesViewModel.shared
 
     /// Toolbar placement that adapts: iPad shows search in the toolbar, iPhone in the drawer.
