@@ -113,30 +113,6 @@ struct FilteredMemberPortfoliosView: View {
         return nil
     }
 
-    /// Deletes the `MemberPortfolio` entries at `indexSet` from `section` and saves the context.
-    /// Deletion is temporary — the next data reload restores them.
-    /// Not currently called; superseded by pull-to-refresh, but retained for possible future use.
-    @MainActor
-    private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) {
-
-        for index in indexSet {
-            let memberPortfolio = section[index] // could use map()
-            viewContext.delete(memberPortfolio)
-        }
-
-        do {
-            if viewContext.hasChanges {
-                try viewContext.save() // persist deleted members (on main thread)
-                print("Deleted member")
-            }
-        } catch {
-            let nsError = error as NSError
-            ifDebugFatalError("Unresolved error deleting members \(nsError), \(nsError.userInfo)",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, the failed deletion is only logged. App doesn't stop.
-        }
-    }
-
     /// Filters one section's portfolios by `searchText` (name or expertise), converting the opaque
     /// `SectionedFetchResults.Element` to a plain `[MemberPortfolio]` that SwiftUI `ForEach` can consume.
     private func filterMemberPortfolios(unFilteredPortfolios: SectionedFetchResults<String,
