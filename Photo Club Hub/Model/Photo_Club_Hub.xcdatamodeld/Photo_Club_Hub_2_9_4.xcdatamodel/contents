@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="25C56" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="25185.6" systemVersion="25F80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expertise" representedClassName="Expertise" elementID="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="id_" attributeType="String" defaultValueString="ID is missing"/>
         <attribute name="isSupported" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -14,6 +14,7 @@
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="languageNameEN_" optional="YES" attributeType="String"/>
+        <relationship name="localizedAddresses_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalizedAddress" inverseName="language_" inverseEntity="LocalizedAddress"/>
         <relationship name="localizedExpertises_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedExpertise" inverseName="language_" inverseEntity="LocalizedExpertise" elementID="localizedKeywords_"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="language_" inverseEntity="LocalizedRemark"/>
         <uniquenessConstraints>
@@ -33,6 +34,20 @@
     </entity>
     <entity name="Level3">
         <userInfo/>
+    </entity>
+    <entity name="LocalizedAddress" representedClassName="LocalizedAddress" syncable="YES" codeGenerationType="class">
+        <attribute name="localizedCountry_" attributeType="String" defaultValueString="Country?"/>
+        <attribute name="localizedTown_" attributeType="String" defaultValueString="Town?"/>
+        <attribute name="prevLatitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="prevLongitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedAddresses_" inverseEntity="Language"/>
+        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="localizedAddresses_" inverseEntity="Organization"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="language_"/>
+                <constraint value="organization_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="LocalizedExpertise" representedClassName="LocalizedExpertise" elementID="LocalizedKeyword" syncable="YES" codeGenerationType="class">
         <attribute name="name_" attributeType="String" elementID="name"/>
@@ -85,9 +100,9 @@
         <attribute name="isMapScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" elementID="isScrollLocked"/>
         <attribute name="latitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="level2URL_" optional="YES" attributeType="URI" elementID="memberListURL_"/>
-        <attribute name="localizedCountry_" attributeType="String" defaultValueString="Country?"/>
-        <attribute name="localizedTown_" attributeType="String" defaultValueString="Town?"/>
-        <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="localizedCountryDepr_" attributeType="String" defaultValueString="Country?" renamingIdentifier="localizedCountry_"/>
+        <attribute name="localizedTownDepr_" attributeType="String" defaultValueString="Town?" renamingIdentifier="localizedTown_"/>
+        <attribute name="longitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="maintainerEmail_" optional="YES" attributeType="String" elementID="contactEmail"/>
         <attribute name="nickName_" optional="YES" attributeType="String" elementID="shortName_"/>
         <attribute name="organizationWebsite" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
@@ -95,6 +110,7 @@
         <attribute name="removeOrganization" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
+        <relationship name="localizedAddresses_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalizedAddress" inverseName="organization_" inverseEntity="LocalizedAddress"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="organization_" inverseEntity="LocalizedRemark"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="organization_" inverseEntity="MemberPortfolio"/>
         <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="organizations_" inverseEntity="OrganizationType"/>
@@ -154,6 +170,7 @@
         <memberEntity name="Organization"/>
         <memberEntity name="LocalizedRemark"/>
         <memberEntity name="Level1"/>
+        <memberEntity name="LocalizedAddress"/>
     </configuration>
     <configuration name="Level2">
         <memberEntity name="MemberPortfolio"/>
