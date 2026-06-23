@@ -132,20 +132,6 @@ struct FilteredOrganizationView: View {
         }
     }
 
-    // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
-    private func toMapItems(organizations: FetchedResults<Organization>) -> [MKMapItem] {
-        var mapItems: [MKMapItem] = []
-        for organization in organizations {
-            let coordinates = CLLocationCoordinate2D(latitude: organization.latitude_,
-                                                     longitude: organization.longitude_)
-            let placemark = MKPlacemark(coordinate: coordinates)
-            let mapItem = MKMapItem(placemark: placemark)
-            mapItem.name = organization.fullName
-            mapItems.append(mapItem)
-        }
-        return mapItems
-    }
-
     private var filteredOrganizations: [Organization] {
         if searchText.wrappedValue.isEmpty {
             return fetchedOrganizations.filter { _ in
