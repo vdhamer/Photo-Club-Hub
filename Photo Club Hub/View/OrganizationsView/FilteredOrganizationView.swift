@@ -146,27 +146,6 @@ struct FilteredOrganizationView: View {
         return mapItems
     }
 
-    @MainActor
-    private func deleteOrganizations(indexSet: IndexSet) {
-        // Normally deletes just one organization, but this is how .onDelete works.
-        // This function is no longer called (replaced by pull-down-to-reload data) but is kept for possible future use.
-
-        if let organization = (indexSet.map {filteredOrganizations[$0]}.first) { // unwrap first PhotoClub to be deleted
-            viewContext.delete(organization)
-
-            do {
-                if viewContext.hasChanges {
-                    try viewContext.save() // persist deletion of organization (on main thread)
-                }
-            } catch {
-                let nsError = error as NSError
-                ifDebugFatalError("Unresolved error \(nsError), \(nsError.userInfo)",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, the failed deletion is only logged. App doesn't stop.
-            }
-        }
-    }
-
     private var filteredOrganizations: [Organization] {
         if searchText.wrappedValue.isEmpty {
             return fetchedOrganizations.filter { _ in
