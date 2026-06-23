@@ -10,9 +10,9 @@ import Foundation // for Bundle
 
 // MARK: - MemberRole
 
-/// A role a club member can hold within their photo club.
+/// A role a club member can hold within a photo club.
 ///
-/// A member can have zero or more roles concurrently.
+/// A member can have zero or more roles within one club simultaneously (e.g. Vice-chairman and Admin).
 /// - The enum's `rawValue` serves as a  stable identifier.
 /// - Use`displayName` for localized presentation.
 public enum MemberRole: String {
@@ -30,6 +30,11 @@ public enum MemberRole: String {
     case other
 }
 
+/// Localized display names for `MemberRole`.
+///
+/// Two variants are provided so a role can be rendered either in the system locale
+/// (for normal app UI) or in a caller-supplied bundle (for generating multilingual HTML
+/// pages, where each page needs its own language regardless of the system locale).
 extension MemberRole {
     public var displayName: String { // localized
         let localizationTable: String = "PhotoClubHubData"

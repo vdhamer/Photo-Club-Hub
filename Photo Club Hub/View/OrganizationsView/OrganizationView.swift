@@ -77,7 +77,7 @@ struct OrganizationView: View {
             if Settings.dataResetPending {
                 print("dataResetPending flag toggled from true to false")
             }
-            Model.deleteAllCoreDataObjects(viewContext: viewContext)
+            Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .task { // will be aborted when ScrollView disappears

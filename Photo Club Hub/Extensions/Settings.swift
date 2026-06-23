@@ -53,14 +53,14 @@ struct Settings {
         // Setting this to true clears the existing database and skips loading any data on app startup.
         // It displays "Manual loading" in the Prelude startup screen as a warning that the mode is set.
         // The missing club/museum/member data can be loaded manually by swiping down on e.g., the Portfolio screen.
-        UserDefaults.standard.bool(forKey: "manualDataLoading") // here we are happy with missing key -> false
+        UserDefaults.standard.bool(forKey: "manualDataLoading") // here we are happy with missing key → false
     }
 
     static var extraCoreDataSaves: Bool { // controlled by toggle in Settings
         // Important setting that should normally be kept false.
         // It adds extra ManagedObjectContext.save() transactions to the minimal set of save's.
         // It is needed for testing purposes only.
-        UserDefaults.standard.bool(forKey: "extraCoreDataSaves") // here we are happy with missing key -> false
+        UserDefaults.standard.bool(forKey: "extraCoreDataSaves") // here we are happy with missing key → false
     }
 
     static var showTemplateClubs: Bool { // controlled by toggle in Settings

@@ -25,7 +25,7 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataExpertisesAndLanguages(viewContext: bgContext) // This test doesn't have Expertises
+        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club TemplateMin may already be loaded
@@ -71,7 +71,7 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataExpertisesAndLanguages(viewContext: bgContext) // This test does have Expertises
+        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club TemplateMax may already be loaded
@@ -115,7 +115,8 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataExpertisesAndLanguages(viewContext: bgContext)
+        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club fgDeGender may already be loaded
         // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
@@ -160,7 +161,7 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataExpertisesAndLanguages(viewContext: bgContext) // This test does have Expertises
+        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly) // remove Expertises
         #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club fgDeGender may already be loaded

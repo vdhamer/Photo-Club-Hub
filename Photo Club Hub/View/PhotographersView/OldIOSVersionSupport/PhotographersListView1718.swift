@@ -107,7 +107,7 @@ struct PhotographersListView1718: View {
             if Settings.dataResetPending {
                 print("dataResetPending2 flag toggled from true to false")
             }
-            Model.deleteAllCoreDataObjects(viewContext: viewContext)
+            Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)

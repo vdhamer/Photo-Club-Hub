@@ -33,10 +33,10 @@ public struct PersonName {
 
     @available(macOS 13.0, *)
     private func removeParenthesizedRole(fullNameWithParenthesizedRole: String) -> String {
-        // "José Daniëls" -> "José Daniëls" - former member
-        // "Bart van Stekelenburg (lid)" -> "Bart van Stekelenburg" - member
-        // "Zoë Aspirant (aspirantlid)" -> "Zoë Aspirant" - aspiring member
-        // "Hans Zoete (mentor)" -> "Hans Zoete" - coach
+        // "José Daniëls" → "José Daniëls" - former member
+        // "Bart van Stekelenburg (lid)" → "Bart van Stekelenburg" - member
+        // "Zoë Aspirant (aspirantlid)" → "Zoë Aspirant" - aspiring member
+        // "Hans Zoete (mentor)" → "Hans Zoete" - coach
         let regex = Regex {
             Capture {
                 OneOrMore(.any, .reluctant)

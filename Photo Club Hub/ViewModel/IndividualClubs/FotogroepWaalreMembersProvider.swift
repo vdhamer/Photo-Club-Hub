@@ -74,10 +74,10 @@ extension FotogroepWaalreMembersProvider { // private utitity functions
     }
 
     func isCurrentMember(name: String, includeProspectiveMembers: Bool) -> Bool {
-        // "Guido Steger" -> false
-        // "Bart van Stekelenburg (lid)" -> true
-        // "Zoë Aspirant (aspirantlid)" -> depends on includeCandidates param
-        // "Hans Zoete (mentor)" -> false
+        // "Guido Steger" → false
+        // "Bart van Stekelenburg (lid)" → true
+        // "Zoë Aspirant (aspirantlid)" → depends on includeCandidates param
+        // "Hans Zoete (mentor)" → false
         let regex = Regex {
             ZeroOrMore(.any)
             OneOrMore(.horizontalWhitespace)
@@ -94,14 +94,14 @@ extension FotogroepWaalreMembersProvider { // private utitity functions
         } else if includeProspectiveMembers {
             return isProspectiveMember(name: name) // "Zoë Aspirant (aspirantlid)"
         }
-        return false // "Guido Steger" and "Hans Zoete (mentor)" -> false
+        return false // "Guido Steger" and "Hans Zoete (mentor)" → false
     }
 
     func isMentor(name: String) -> Bool {
-        // "Guido Steger" -> false
-        // "Bart van Stekelenburg (lid)" -> false
-        // "Zoë Aspirant (aspirantlid)" -> false
-        // "Hans Zoete (mentor)" -> true
+        // "Guido Steger" → false
+        // "Bart van Stekelenburg (lid)" → false
+        // "Zoë Aspirant (aspirantlid)" → false
+        // "Hans Zoete (mentor)" → true
         let regex = Regex {
             ZeroOrMore(.any)
             OneOrMore(.horizontalWhitespace)
@@ -121,10 +121,10 @@ extension FotogroepWaalreMembersProvider { // private utitity functions
     }
 
     func isProspectiveMember(name: String) -> Bool {
-        // "Bart van Stekelenburg (lid)" -> false
-        // "Zoë Aspirant (aspirantlid)" -> true
-        // "Guido Steger" -> false
-        // "Hans Zoete (mentor)" -> false
+        // "Bart van Stekelenburg (lid)" → false
+        // "Zoë Aspirant (aspirantlid)" → true
+        // "Guido Steger" → false
+        // "Hans Zoete (mentor)" → false
         let regex = Regex {
             ZeroOrMore(.any)
             OneOrMore(.horizontalWhitespace)

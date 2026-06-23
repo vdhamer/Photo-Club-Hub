@@ -20,8 +20,8 @@ public struct FotobondClubNumber: Equatable {
     }
 
     // format is DD.CC where D="department" and C=club and both are padded with leading 0
-    // example: 1610 -> 16.10
-    // example: 300 -> 03.Pers
+    // example: 1610 → 16.10
+    // example: 300 → 03.Pers
     public var display: String {
         guard let id else { return "-" }
         let afdelingNr = String(format: "%02d", (id - (id % 100)) / 100)
@@ -46,9 +46,9 @@ public struct FotobondMemberNumber: Equatable {
     }
 
     // format is DD.CC.MMM where D="department" and C=club and M=member and all are padded with leading 0's
-    // example: 3004321 -> "Pers.4321" (weird exception handled by 2nd guard statement)
-    // example: 1610123 -> "16.10.123" (Brabant Oost) This is used in comments below
-    // example:  304123 -> "03.04.123" (Drenthe - Vechtdal)
+    // example: 3004321 → "Pers.4321" (weird exception handled by 2nd guard statement)
+    // example: 1610123 → "16.10.123" (Brabant Oost) This is used in comments below
+    // example:  304123 → "03.04.123" (Drenthe - Vechtdal)
     public var display: String {
         guard let id else { return "N/A" } // unwrap id
         guard (id - (id % 10_000)) != 3_000_000 else { return "Pers.\(id.description.suffix(4))" }
