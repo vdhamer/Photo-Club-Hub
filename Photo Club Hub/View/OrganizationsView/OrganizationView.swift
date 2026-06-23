@@ -35,8 +35,6 @@ struct OrganizationView: View {
         animation: .default)
     private var organizations: FetchedResults<Organization>
 
-    private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
 
