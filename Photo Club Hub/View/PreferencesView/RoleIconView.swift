@@ -93,7 +93,7 @@ struct RoleStatusIconView_Previews: PreviewProvider {
                             HStack {
                                 RoleStatusIconView(memberRole: memberRole)
                                 Text(memberRole
-                                    .displayName
+                                    .displayNameForAppUI
                                     .capitalizingFirstLetter())
                                     .lineLimit(1)
                                     .truncationMode(.middle)
@@ -114,7 +114,7 @@ struct RoleStatusIconView_Previews: PreviewProvider {
                         ForEach(MemberStatus.allCases.sorted(by: <)) { memberStatus in
                             HStack {
                                 RoleStatusIconView(memberStatus: memberStatus)
-                                Text(memberStatus.displayName.capitalizingFirstLetter())
+                                Text(memberStatus.displayNameForAppUI.capitalizingFirstLetter())
                                 Spacer()
                             }
                             .foregroundStyle(.memberPortfolioColor, .gray, .red) // red tertiary color is not used
