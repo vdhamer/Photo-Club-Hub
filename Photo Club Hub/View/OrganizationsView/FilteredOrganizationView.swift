@@ -18,7 +18,6 @@ struct FilteredOrganizationView: View {
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
 
     private let searchText: Binding<String>
-    private let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate, searchText: Binding<String>) {
