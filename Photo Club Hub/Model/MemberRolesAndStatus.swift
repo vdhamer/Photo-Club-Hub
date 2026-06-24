@@ -36,40 +36,77 @@ public enum MemberRole: String {
 /// (for normal app UI) or in a caller-supplied bundle (for generating multilingual HTML
 /// pages, where each page needs its own language regardless of the system locale).
 extension MemberRole {
-    public var displayName: String { // localized
-        let localizationTable: String = "PhotoClubHubData"
-        let localizationBundle: Bundle = Bundle.photoClubHubDataModule
+    /// The role's localized display name in the system locale. Set using e.g. Settings or `Edit Scheme...`.
+    ///
+    /// Resolves strings against the `PhotoClubHubData` table in the package's own
+    /// resource bundle. Use this for in-app UI; use `displayName(bundle:)` when generating
+    /// content for a specific target language.
+    public var displayNameForAppUI: String { displayNameForHTML(languageBundle: .photoClubHubDataModule) }
 
+    /// The role's localized display name in the language of the supplied bundle.
+    ///
+    /// Pass a language-specific `.lproj` sub-bundle (typically obtained via
+    /// `Bundle.photoClubHubDataModuleForLanguage(_:)`) to render the role in a chosen
+    /// language rather than the system locale.
+    /// - Parameter bundle: The bundle to resolve `PhotoClubHubData` strings against.
+    /// - Returns: The role's localized display name.
+    public func displayNameForHTML(languageBundle: Bundle) -> String {
         switch self {
         case .admin:
-            return String(localized: "admin", table: localizationTable, bundle: localizationBundle,
+            return String(localized: "admin",
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Administrative role of member within a club.")
         case .chairman:
-            return String(localized: "chairman", table: localizationTable, bundle: localizationBundle,
+            return String(localized: "chairman",
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Administrative role of member within a club.")
         case .other:  // some clubs like fgDeGender use this
-            return String(localized: "other", table: localizationTable, bundle: localizationBundle,
+            return String(localized: "other",
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Administrative role of member within a club.")
         case .secretary:
-            return String(localized: "secretary", table: localizationTable, bundle: localizationBundle,
+            return String(localized: "secretary",
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Administrative role of member within a club.")
         case .treasurer:
-            return String(localized: "treasurer", table: localizationTable, bundle: localizationBundle,
+            return String(localized: "treasurer",
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Administrative role of member within a club.")
         case .viceChairman: // some clubs like fgWaalre use this
-            return String(localized: "vice-chairman", table: localizationTable, bundle: localizationBundle,
+            return String(localized: "vice-chairman",
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Administrative role of member within a club.")
         }
     }
 }
 
+/// Standard collection / identity / serialization conformances for `MemberRole`.
+///
+/// - `CaseIterable` lets UI code (e.g. pickers) iterate all defined roles.
+/// - `Identifiable` lets `MemberRole` be used directly in SwiftUI lists and `ForEach`.
+/// - `Codable` enables JSON round-tripping through the enum's `rawValue`.
 extension MemberRole: CaseIterable, Identifiable, Codable {
-    public var id: String { rawValue } // stable, locale-independent identifier
+    /// Stable, locale-independent identifier using the enum's `rawValue`.
+    ///
+    /// Safe to persist or send over the wire: it does not change when the user's
+    /// locale changes, unlike `displayNameForAppUI`.
+    public var id: String { rawValue }
 }
 
+/// Ordering for `MemberRole`, used (in iOS app) when rendering sorted lists of roles.
+///
+/// Roles are compared by their localized `displayNameForAppUI` rather than by `rawValue`,
+/// so a sorted list reads naturally in the user's current language. Note that this
+/// means the sort order is locale-dependent and not stable across languages.
 extension MemberRole: Comparable {
     public static func < (lhs: MemberRole, rhs: MemberRole) -> Bool {
-        return lhs.displayName < rhs.displayName // is sorted based on locale's displayName, not on rawValue
+        return lhs.displayNameForAppUI < rhs.displayNameForAppUI
     }
 }
 
@@ -95,47 +132,83 @@ public enum MemberStatus: String {
     case prospective
 }
 
+/// Localized display names for `MemberStatus`.
+///
+/// Two variants are provided so a status can be rendered either in the system locale
+/// (for normal app UI) or in a caller-supplied bundle (for generating multilingual HTML
+/// pages, where each page needs its own language regardless of the system locale).
 extension MemberStatus {
-    public var displayName: String {
-        let table: String = "PhotoClubHubData"
-        let localizationBundle: Bundle = Bundle.photoClubHubDataModule
+    /// The status's localized display name in the system locale. Set using e.g. Settings or `Edit Scheme...`.
+    ///
+    /// Resolves strings against the `PhotoClubHubData` table in the package's own resource bundle.
+    /// Use this for in-app UI.
+    /// Use `displayNameForHTML(languageBundle:)` when generating content for a specific target language.
+    public var displayNameForAppUI: String { displayNameForHTML(languageBundle: .photoClubHubDataModule) }
 
+    /// The status's localized display name in the language of the supplied bundle.
+    ///
+    /// Pass a language-specific `.lproj` sub-bundle (typically obtained via
+    /// `Bundle.photoClubHubDataModuleForLanguage(_:)`) to render the status in a chosen
+    /// language rather than the system locale.
+    /// - Parameter languageBundle: The bundle to resolve `PhotoClubHubData` strings against.
+    /// - Returns: The status's localized display name.
+    public func displayNameForHTML(languageBundle: Bundle) -> String {
         switch self {
         case .coach:
             return String(localized: "external coach",
-                          table: table, bundle: localizationBundle,
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Relationship status of member within a club.")
         case .deceased:
             return String(localized: "deceased",
-                          table: table, bundle: localizationBundle,
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Relationship status of member within a club. Used as prefix.")
         case .former:
             return String(localized: "former",
-                          table: table, bundle: localizationBundle,
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Relationship status of member within a club. Used as prefex.")
         case .honorary:
             return String(localized: "honorary member",
-                          table: table, bundle: localizationBundle,
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Relationship status of member within a club.")
         case .current:
             return String(localized: "member",
-                          table: table, bundle: localizationBundle,
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Default status of member within a club.")
         case .prospective:
             return String(localized: "prospective member",
-                          table: table, bundle: localizationBundle,
+                          table: "PhotoClubHubData",
+                          bundle: languageBundle,
                           comment: "Relationship status of member within a club.")
         }
     }
 }
 
+/// Standard collection / identity / serialization conformances for `MemberStatus`.
+///
+/// - `CaseIterable` lets UI code (e.g. pickers) iterate all defined statuses.
+/// - `Identifiable` lets `MemberStatus` be used directly in SwiftUI lists and `ForEach`.
+/// - `Codable` enables JSON round-tripping through the enum's `rawValue`.
 extension MemberStatus: CaseIterable, Identifiable, Codable {
-    public var id: String { rawValue } // stable, locale-independent identifier
+    /// Stable, locale-independent identifier using the enum's `rawValue`.
+    ///
+    /// Safe to persist or send over the wire: it does not change when the user's
+    /// locale changes, unlike `displayNameForAppUI`.
+    public var id: String { rawValue }
 }
 
+/// Ordering for `MemberStatus`, used (in iOS app) when rendering sorted lists of statuses.
+///
+/// Statuses are compared by their localized `displayNameForAppUI` rather than by `rawValue`,
+/// so a sorted list reads naturally in the user's current language. Note that this
+/// means the sort order is locale-dependent and not stable across languages.
 extension MemberStatus: Comparable {
     public static func < (lhs: MemberStatus, rhs: MemberStatus) -> Bool {
-            return lhs.displayName < rhs.displayName // is sorted based on locale's displayName, not on rawValue
+        return lhs.displayNameForAppUI < rhs.displayNameForAppUI
     }
 }
 
@@ -150,8 +223,22 @@ extension Bundle {
         return Bundle(for: _PhotoClubHubDataBundleToken.self)
         #endif
     }
+
+    /// Returns the language-specific sub-bundle of the PhotoClubHubData module bundle.
+    ///
+    /// Use this when generating multilingual HTML pages so that strings from the `PhotoClubHubData`
+    /// table (e.g. member status/role display names) are resolved in the target language rather than
+    /// the system locale. Falls back to `photoClubHubDataModule` if no matching `.lproj` is found.
+    public static func photoClubHubDataModuleForLanguage(_ languageID: String) -> Bundle {
+        if let path = Bundle.photoClubHubDataModule.path(forResource: languageID, ofType: "lproj"),
+           let bundle = Bundle(path: path) {
+            return bundle
+        }
+        return Bundle.photoClubHubDataModule
+    }
 }
-private final class _PhotoClubHubDataBundleToken {} // dummy class, only used to determine what current bundle is
+
+private final class _PhotoClubHubDataBundleToken {} // used only to determine what the current bundle is
 
 // MARK: - MemberRoleAndStatus
 
