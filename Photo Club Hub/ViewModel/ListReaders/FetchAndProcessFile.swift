@@ -60,8 +60,8 @@ struct FetchAndProcessFile {
         bgContext.perform { [self] in // run on requested background thread
             let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level1"
 
-            // bundle is overwritten by Test Bundle if fileSelector.isBeingTested
-            var bundle: Bundle = Bundle(for: Dummy.self) // was Bundle.module, but .main works at app level
+            // Bundle.main works at app level (Bundle.module only exists in an SPM target that owns resources)
+            var bundle: Bundle = Bundle.main // overwritten by Test Bundle if fileSelector.isBeingTested
 
             if fileSelector.isBeingTested {
                 let testUrl = bundle.bundleURL.deletingLastPathComponent().appending( // propagate to PCH HTML
@@ -93,14 +93,12 @@ struct FetchAndProcessFile {
                 remoteFileURL: URL(string: Self.dataSourcePath + fileName // e.g., "fgDeGender" or "root"
                                    + "." + fileSubType // e.g., ".level0" or ".level1" or ".level2"
                                    + "." + fileType)!, // ".json"
-                fileInBundleURL: fileInBundleURL!, // forced unwrap is safe (due to aobve guard statement)
+                fileInBundleURL: fileInBundleURL!, // forced unwrap is safe (due to guard statement above)
                 useOnlyInBundleFile: useOnlyInBundleFile
             )
             fileContentProcessor(bgContext, data, fileSelector, useOnlyInBundleFile, isBeingTested, includeFilePath)
         }
     }
-
-    private class Dummy {} // target for Bundle(for:). This has to be a class, so we can't use FetchAndProcessFile.self
 
     /// Attempts to read the file from the remote URL (unless `useOnlyInBundleFile` is true),
     /// falling back to the bundled resource if the network read fails.
