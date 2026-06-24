@@ -5,35 +5,38 @@
 //  Created by Peter van den Hamer on 20/10/2023.
 //
 
+import Foundation // for Bundle
+
 extension MemberPortfolio { // computed properties related to roles of members in their club
 
-    // typicala value: "Member" or "Secretary and member"
-    var roleDescription: String {
+    /// A localized string describing the member's roles and status within the club.
+    ///
+    /// Builds a natural-language phrase such as `"Member"`, `"Secretary and member"`, or
+    /// `"Former treasurer and admin"` by combining any status prefixes (e.g. deceased, former)
+    /// with role suffixes (e.g. chairman, secretary) and a trailing membership status word.
+    /// Items within each group are joined with the localized word for "and".
+    ///
+    /// - Parameter languageBundle: The bundle used to resolve all localized strings, allowing the result
+    ///   to be rendered in a language other than the system locale.
+    /// - Returns: A capitalized, trimmed phrase describing the member's roles and status.
+    private func roleDescription(languageBundle: Bundle) -> String {
         var prefixList = [String]()
-        var suffixList = [String]()
         var result: String = ""
-        let andLocalized = String(localized: "and", table: "PhotoClubHubData",
+        let andLocalized = String(localized: "and",
+                                  table: "PhotoClubHubData",
+                                  bundle: languageBundle,
                                   comment: "To generate strings like \"secretary and admin\"")
 
-        if photographer.isDeceased {
-            prefixList.append(MemberStatus.deceased.displayName)
+        if photographer.isDeceased { // deceased?
+            prefixList.append(MemberStatus.deceased.displayNameForHTML(languageBundle: languageBundle))
         }
-        if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.displayName) }
 
-        if isChairman { suffixList.append(MemberRole.chairman.displayName) }
-        if isViceChairman { suffixList.append(MemberRole.viceChairman.displayName) }
-        if isTreasurer { suffixList.append(MemberRole.treasurer.displayName) }
-        if isSecretary { suffixList.append(MemberRole.secretary.displayName) }
-        if isAdmin { suffixList.append(MemberRole.admin.displayName) }
-        if isOther { suffixList.append(MemberRole.other.displayName) }
-
-        if isProspectiveMember { suffixList.append(MemberStatus.prospective.displayName) } else {
-            if isHonoraryMember { suffixList.append(MemberStatus.honorary.displayName) } else {
-                if isMentor { suffixList.append(MemberStatus.coach.displayName) } else {
-                    suffixList.append(MemberStatus.current.displayName)
-                }
-            }
+        if isFormerMember && !isHonoraryMember { // former?
+            prefixList.append(MemberStatus.former.displayNameForHTML(languageBundle: languageBundle))
         }
+
+        let suffixList = activeRolesList(languageBundle: languageBundle)
+                       + [membershipStatusLabel(languageBundle: languageBundle)]
 
         for prefix in prefixList {
             result.append(prefix + " ")
@@ -48,9 +51,53 @@ extension MemberPortfolio { // computed properties related to roles of members i
         return result.trimmingCharacters(in: .whitespacesAndNewlines).capitalizingFirstLetter()
     }
 
-    var roleDescriptionOfClubTown: String {
-        let of2 = String(localized: "of2", table: "PhotoClubHubData", comment: "<person> of <photo club>")
-        return "\(roleDescription) \(of2) \(self.organization.fullNameTown)"
+    /// Returns the localized display names of all roles this member currently holds, in declaration order.
+    /// - Parameter languageBundle: The bundle used to resolve localized strings.
+    private func activeRolesList(languageBundle: Bundle) -> [String] {
+        var roles = [String]()
+
+        if isChairman { roles.append(MemberRole.chairman.displayNameForHTML(languageBundle: languageBundle)) }
+        if isViceChairman { roles.append(MemberRole.viceChairman.displayNameForHTML(languageBundle: languageBundle)) }
+        if isTreasurer { roles.append(MemberRole.treasurer.displayNameForHTML(languageBundle: languageBundle)) }
+        if isSecretary { roles.append(MemberRole.secretary.displayNameForHTML(languageBundle: languageBundle)) }
+        if isAdmin { roles.append(MemberRole.admin.displayNameForHTML(languageBundle: languageBundle)) }
+        if isOther { roles.append(MemberRole.other.displayNameForHTML(languageBundle: languageBundle)) }
+
+        return roles
+    }
+
+    /// Returns the single localized word or phrase that describes the member's primary membership status.
+    ///
+    /// The statuses are mutually exclusive and checked in priority order:
+    /// prospective → honorary → coach → current (default).
+    /// - Parameter languageBundle: The bundle used to resolve localized strings.
+    private func membershipStatusLabel(languageBundle: Bundle) -> String {
+        if isProspectiveMember {
+            return MemberStatus.prospective.displayNameForHTML(languageBundle: languageBundle)
+        }
+
+        if isHonoraryMember {
+            return MemberStatus.honorary.displayNameForHTML(languageBundle: languageBundle)
+        }
+
+        if isMentor {
+            return MemberStatus.coach.displayNameForHTML(languageBundle: languageBundle)
+        }
+
+        return MemberStatus.current.displayNameForHTML(languageBundle: languageBundle)
+    }
+
+    // Backward-compatible property; uses the system locale via the default module bundle.
+    public var roleDescriptionOfClubTown: String { // is or was used in MemberPortfolio, check for dead code later
+        roleDescriptionOfClubTown(languageBundle: .photoClubHubDataModule)
+    }
+
+    public func roleDescriptionOfClubTown(languageBundle: Bundle) -> String {
+        let of2 = String(localized: "of2",
+                         table: "PhotoClubHubData",
+                         bundle: languageBundle,
+                         comment: "<person> of <photo club>")
+        return "\(roleDescription(languageBundle: languageBundle)) \(of2) \(self.organization.fullNameTown)"
     }
 
     public var memberRolesAndStatus: MemberRolesAndStatus {
