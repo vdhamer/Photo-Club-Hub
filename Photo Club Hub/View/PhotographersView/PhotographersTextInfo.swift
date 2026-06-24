@@ -38,7 +38,7 @@ struct PhotographersTextInfo: View {
         VStack(alignment: .leading) { // lines of text with different pieces of information
             // first green line with icon and name of photographer
             let alive: String = photographer.isDeceased ? // generate name suffix
-                (" - " + MemberStatus.deceased.displayName) : ""
+                (" - " + MemberStatus.deceased.displayNameForAppUI) : ""
             let websiteLabelText = Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
                 .font(.title3)
                 .tracking(1)
