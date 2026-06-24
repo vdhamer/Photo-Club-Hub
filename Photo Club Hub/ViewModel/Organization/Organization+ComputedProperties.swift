@@ -124,7 +124,7 @@ extension Organization {
             During this reverseGeolocation, the string is automatically adapted to the current locale.
             Example: Paris returns localizedTown="Paris" if the device is set to Dutch.
             The value of Town is not localized and is the original value provided by the user.
-            Localization may return a slightly different town: Tokyo -> suburb of Tokyo (because "Tokyo" is not used).
+            Localization may return a slightly different town: Tokyo → suburb of Tokyo (because "Tokyo" is not used).
         */
         get { return localizedTown_ ?? "ErrorTown" }
         set { localizedTown_ = newValue}

@@ -73,7 +73,7 @@ struct PhotographersListView2627: View {
                     HStack {
                         Text(verbatim: """
                                        \(getIconString(isSupported: expertise.isSupported)) \
-                                       \(expertise.selectedLocalizedExpertise.name)
+                                       \(expertise.selectedLocalizedExpertise().name)
                                        """)
                         Text(PhotographerExpertise.count(context: viewContext,
                                                          expertiseID: expertise.id).description+"x")
@@ -127,7 +127,7 @@ struct PhotographersListView2627: View {
     }
 
     private func sortExpertisesLocalized(lhs: Expertise, rhs: Expertise) -> Bool {
-        return lhs.selectedLocalizedExpertise.name < rhs.selectedLocalizedExpertise.name
+        return lhs.selectedLocalizedExpertise().name < rhs.selectedLocalizedExpertise().name
     }
 
     static let iconExamples = LocalizedExpertiseResultLists(supportedList: [], temporaryList: [])

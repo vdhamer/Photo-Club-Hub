@@ -28,7 +28,7 @@ public struct LocalizedExpertiseResultLists {
         // Step 1. Translate expertises to appropriate language
         var translated: [LocalizedExpertiseResult] = [] // start with empty array
         for photographerExpertise in photographerExpertises {
-            translated.append(photographerExpertise.expertise.selectedLocalizedExpertise) // choose a suitable language
+            translated.append(photographerExpertise.expertise.selectedLocalizedExpertise()) // choose required language
         }
 
         // Step 2. Sort based on selected language.  Has special behavior for expertises without translation
@@ -61,7 +61,7 @@ public struct LocalizedExpertiseResultLists {
                                                      comment: "Shown when too many expertises are found"),
                                           names: [],
                                           usages: [] )
-            let moreLocalizedExpertise: LocalizedExpertiseResult = moreExpertise.selectedLocalizedExpertise
+            let moreLocalizedExpertise: LocalizedExpertiseResult = moreExpertise.selectedLocalizedExpertise()
             resultLERLs.temporary.list.append(LocalizedExpertiseResult(
                                                     localizedExpertise: moreLocalizedExpertise.localizedExpertise,
                                                     id: moreExpertise.id,
