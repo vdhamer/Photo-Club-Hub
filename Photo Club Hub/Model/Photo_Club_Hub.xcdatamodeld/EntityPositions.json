@@ -1,67 +1,84 @@
 {
+  "information" : {
+    "currentColorMode" : "configurations",
+    "selectedModelKey" : "Photo_Club_Hub_2_9_4.xcdatamodel"
+  },
   "entitiesPositions" : {
-    "Level2" : [
+    "Level1" : [
       945,
-      1111
+      1086
     ],
-    "Organization" : [
-      948,
-      505
+    "LocalizedExpertise" : [
+      -140.035000000001,
+      794.9700000000003
     ],
     "Keyword" : [
       -121,
       556
     ],
-    "Level1" : [
-      944,
-      1089
+    "Organization" : [
+      948,
+      505
+    ],
+    "Language" : [
+      405,
+      442
+    ],
+    "Canvas...Position" : [
+      -393.035000000001,
+      68.97000000000025
     ],
     "MemberPortfolio" : [
       404,
       725
     ],
-    "Photographer" : [
-      140,
-      554
-    ],
-    "LocalizedRemark" : [
-      673,
-      727
-    ],
-    "Level3" : [
-      945,
-      1133
+    "PhotographerExpertise" : [
+      126.96499999999901,
+      838.9700000000003
     ],
     "LocalizedDescription" : [
       981,
       688
     ],
-    "OrganizationType" : [
-      950,
-      373
+    "PhotographerKeyword" : [
+      136,
+      810
+    ],
+    "Expertise" : [
+      -134.035000000001,
+      598.9700000000003
+    ],
+    "Photographer" : [
+      128,
+      601
+    ],
+    "Level3" : [
+      945,
+      1130
     ],
     "LocalizedKeyword" : [
       -125,
       787
     ],
-    "Canvas...Position" : [
-      -431.035000000001,
-      72.97000000000025
+    "LocalizedAddress" : [
+      680.964999999999,
+      732.9700000000003
+    ],
+    "OrganizationType" : [
+      949,
+      395
+    ],
+    "LocalizedRemark" : [
+      683,
+      589
+    ],
+    "Level2" : [
+      945,
+      1108
     ],
     "Level0" : [
-      944,
-      1067
-    ],
-    "PhotographerKeyword" : [
-      136,
-      810
-    ],
-    "Language" : [
-      405,
-      442
+      945,
+      1064
     ]
-  },
-  "information" : {
-    "selectedModelKey" : "Photo_Club_Hub_2_7_2.xcdatamodel"
   }
 }
