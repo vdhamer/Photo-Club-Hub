@@ -200,8 +200,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld of these %2$lld expertise tags are temporary."
+            "state" : "translated",
+            "value" : "%lld of these %lld expertise tags are temporary."
           }
         },
         "nl" : {
