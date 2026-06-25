@@ -21,7 +21,6 @@ extension MemberPortfolio { // computed properties related to roles of members i
     /// - Returns: A capitalized, trimmed phrase describing the member's roles and status.
     private func roleDescription(languageBundle: Bundle) -> String {
         var prefixList = [String]()
-        var result: String = ""
         let andLocalized = String(localized: "and",
                                   table: "PhotoClubHubData",
                                   bundle: languageBundle,
@@ -38,16 +37,9 @@ extension MemberPortfolio { // computed properties related to roles of members i
         let suffixList = activeRolesList(languageBundle: languageBundle)
                        + [membershipStatusLabel(languageBundle: languageBundle)]
 
-        for prefix in prefixList {
-            result.append(prefix + " ")
-        }
-
-        for (index, element) in suffixList.enumerated() {
-            result.append(element + " ") // example "secretary "
-            if index < suffixList.count-1 {
-                result.append(andLocalized + " ") // example "secretary and " unless there are no elements left
-            }
-        }
+        let prefixPhrase = prefixList.joined(separator: " ") // example "former"
+        let suffixPhrase = suffixList.joined(separator: " \(andLocalized) ") // example "secretary and admin"
+        let result = "\(prefixPhrase) \(suffixPhrase)"
         return result.trimmingCharacters(in: .whitespacesAndNewlines).capitalizingFirstLetter()
     }
 
