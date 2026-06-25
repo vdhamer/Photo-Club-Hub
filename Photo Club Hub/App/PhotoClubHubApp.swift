@@ -171,7 +171,7 @@ extension PhotoClubHubApp {
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
 
-        // load current/former members of container for FFC Shot71 (in region 16)
+        // load current/former members of container for FGG Gemert (in region 16)
         _ = FEGGemertMembersProvider(
             bgContext: makeBgContext(ctxName: "Level 2 loader fegGemert"),
             isBeingTested: isBeingTested,
