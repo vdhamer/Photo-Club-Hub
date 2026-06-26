@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="25185.6" systemVersion="25F80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="25201" systemVersion="25F80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expertise" representedClassName="Expertise" elementID="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="id_" attributeType="String" defaultValueString="ID is missing"/>
         <attribute name="isSupported" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -54,6 +54,12 @@
         <attribute name="usage" optional="YES" attributeType="String"/>
         <relationship name="expertise_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expertise" inverseName="localizedExpertises_" inverseEntity="Expertise" elementID="keyword_"/>
         <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedExpertises_" inverseEntity="Language"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="language_"/>
+                <constraint value="expertise_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="LocalizedRemark" representedClassName="LocalizedRemark" syncable="YES" codeGenerationType="class">
         <attribute name="localizedString" attributeType="String"/>
