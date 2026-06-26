@@ -20,6 +20,7 @@ STRUCTURAL
 * Synchonized code with Photo Club Hub HTML
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
 * Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
+- Added missing uniqueness constraint
 
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
