@@ -64,16 +64,14 @@ struct FetchAndProcessFile {
             var bundle: Bundle = Bundle.main // overwritten by Test Bundle if fileSelector.isBeingTested
 
             if fileSelector.isBeingTested {
-                let testUrl = bundle.bundleURL.deletingLastPathComponent().appending( // propagate to PCH HTML
+                // In the SwiftPM package (Photo Club Hub HTML) the test resources live in a separate
+                // `<Package>_<Target>.bundle`. In this Xcode app project they are bundled in Bundle.main instead,
+                // so fall back to Bundle.main when that SPM test bundle isn't present.
+                let testUrl = bundle.bundleURL.deletingLastPathComponent().appending(
                     path: "Photo Club Hub Data_Photo Club Hub DataTests.bundle")
-                let testBundle: Bundle? = Bundle(url: testUrl)
-                guard testBundle != nil else {
-                    fatalError("""
-                               Failed to find URL to test bundle \
-                               \(fileSelector.fileName).\(fileSubType).\(fileType) because testBundle is nil.
-                               """)
+                if let testBundle = Bundle(url: testUrl) {
+                    bundle = testBundle
                 }
-                bundle = testBundle!
             }
 
             let fileInBundleURL: URL? = bundle.url(forResource: nameWithSubtype, withExtension: fileType)
