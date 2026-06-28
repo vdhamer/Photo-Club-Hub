@@ -13,7 +13,7 @@ import CoreData // for NSMergePolicy
 
     let imageForUnknownClub: String = "http://www.vdHamer.com/fgWaalre/Empty_Website/config.xml"
 
-    @Test("Refresh featured image") func urlOfImageIndex_unknownClub() {
+    @Test("Refresh featured image") func urlOfImageIndex_unknownClub() async {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "RefreshFeaturedImageTests"
@@ -30,17 +30,24 @@ import CoreData // for NSMergePolicy
                                         town: randomTownForTesting, // new town to distinguish from normal club data
                                         nickname: "TemplateMin")
 
-        let club = Organization.findCreateUpdate(context: bgContext, organizationTypeEnum: .club, idPlus: idPlus)
+        // All access to the private-queue bgContext must run on that context's own queue. Both the
+        // findCreateUpdate() calls and the urlOfImageIndex property read (via level3URL) touch bgContext,
+        // so wrap them in bgContext.perform { } to avoid a Core Data multi-threaded access trap (issue #708).
+        let result: URL? = await bgContext.perform {
+            let club = Organization.findCreateUpdate(context: bgContext, organizationTypeEnum: .club, idPlus: idPlus)
 
-        let photographer = Photographer.findCreateUpdate(context: bgContext, personName: PersonName(givenName: "John",
-                                                                                                    infixName: "",
-                                                                                                    familyName: "Doe"))
+            let photographer = Photographer.findCreateUpdate(context: bgContext,
+                                                             personName: PersonName(givenName: "John",
+                                                                                    infixName: "",
+                                                                                    familyName: "Doe"))
 
-        let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                                               organization: club,
-                                                               photographer: photographer)
+            let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                                                   organization: club,
+                                                                   photographer: photographer)
 
-        let result: URL? = memberPortfolio.urlOfImageIndex
+            return memberPortfolio.urlOfImageIndex
+        }
+
         #expect(result?.absoluteString == imageForUnknownClub)
     }
 
