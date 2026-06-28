@@ -60,21 +60,11 @@ struct FetchAndProcessFile {
         bgContext.perform { [self] in // run on requested background thread
             let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level1"
 
-            // Bundle.main works at app level (Bundle.module only exists in an SPM target that owns resources)
-            var bundle: Bundle = Bundle.main // overwritten by Test Bundle if fileSelector.isBeingTested
-
-            if fileSelector.isBeingTested {
-                // In the SwiftPM package (temp inside Photo Club Hub HTML), the test resources live in a separate
-                // `<Package>_<Target>.bundle`. In this Photo Club Hub app they are instead (temp) bundled in
-                // Bundle.main, so fall back here to Bundle.main when that SPM test bundle isn't present.
-                let testUrl = bundle.bundleURL.deletingLastPathComponent().appending(
-                    path: "Photo Club Hub Data_Photo Club Hub DataTests.bundle")
-                if let testBundle = Bundle(url: testUrl) {
-                    bundle = testBundle
-                }
-            }
-
-            let fileInBundleURL: URL? = bundle.url(forResource: nameWithSubtype, withExtension: fileType)
+            // The same source is shared by Photo Club Hub (where this compiles into the app target, so the
+            // JSON sits directly in Bundle.main and Bundle.module does not exist) and Photo Club Hub HTML
+            // (where this compiles into the Photo Club Hub Data SwiftPM package, so the JSON sits in a nested
+            // `<Package>_<Target>.bundle`). Resolve at runtime across both layouts so both repos use the same code.
+            let fileInBundleURL: URL? = Self.urlForBundledResource(nameWithSubtype, withExtension: fileType)
 
             guard fileInBundleURL != nil else {
                 ifDebugFatalError("""
@@ -96,6 +86,41 @@ struct FetchAndProcessFile {
             )
             fileContentProcessor(bgContext, data, fileSelector, useOnlyInBundleFile, isBeingTested, includeFilePath)
         }
+    }
+
+    /// Locates a bundled resource regardless of whether it was packaged directly into the main
+    /// bundle (app target) or into a nested/sibling SwiftPM resource bundle (package target).
+    ///
+    /// Search order:
+    /// 1. `Bundle.main` itself — the Photo Club Hub app target adds the JSON files as app resources.
+    /// 2. Any `*.bundle` nested inside `Bundle.main` — the Photo Club Hub HTML build embeds the
+    ///    package's generated `Photo Club Hub Data_Photo Club Hub Data.bundle` here.
+    /// 3. Any `*.bundle` sibling of `Bundle.main` — covers the separate test resource bundle when
+    ///    running unit tests via SwiftPM.
+    ///
+    /// Returning the first match keeps a single source compatible with both repos without `#if`.
+    private static func urlForBundledResource(_ name: String, // root.level0
+                                              withExtension ext: String) -> URL? { // json as real extension
+        if let url = Bundle.main.url(forResource: name, withExtension: ext) {
+            return url // Search oder #1
+        }
+
+        let searchDirs = [Bundle.main.resourceURL, // "../Build/Products/Debug/Photo%20Club%20Hub%20HTML.app"
+                          Bundle.main.bundleURL.deletingLastPathComponent()]
+                         .compactMap { $0 } // ..Build/Products/Debug"
+        for dir in searchDirs {
+            guard let entries = try? FileManager.default.contentsOfDirectory( at: dir,
+                                                                              includingPropertiesForKeys: nil)
+                else { continue }
+
+            for entry in entries where entry.pathExtension == "bundle" {
+                if let bundle = Bundle(url: entry),
+                   let url = bundle.url(forResource: name, withExtension: ext) {
+                    return url
+                }
+            }
+        }
+        return nil
     }
 
     /// Attempts to read the file from the remote URL (unless `useOnlyInBundleFile` is true),
