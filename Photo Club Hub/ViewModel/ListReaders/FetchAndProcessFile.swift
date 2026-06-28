@@ -1,5 +1,5 @@
 //
-//  SomeJsonReader.swift
+//  FetchAndProcessFile.swift
 //  Photo Club Hub Data
 //
 //  Created by Peter van den Hamer on 17/05/2025.
@@ -64,9 +64,9 @@ struct FetchAndProcessFile {
             var bundle: Bundle = Bundle.main // overwritten by Test Bundle if fileSelector.isBeingTested
 
             if fileSelector.isBeingTested {
-                // In the SwiftPM package (Photo Club Hub HTML) the test resources live in a separate
-                // `<Package>_<Target>.bundle`. In this Xcode app project they are bundled in Bundle.main instead,
-                // so fall back to Bundle.main when that SPM test bundle isn't present.
+                // In the SwiftPM package (temp inside Photo Club Hub HTML), the test resources live in a separate
+                // `<Package>_<Target>.bundle`. In this Photo Club Hub app they are instead (temp) bundled in
+                // Bundle.main, so fall back here to Bundle.main when that SPM test bundle isn't present.
                 let testUrl = bundle.bundleURL.deletingLastPathComponent().appending(
                     path: "Photo Club Hub Data_Photo Club Hub DataTests.bundle")
                 if let testBundle = Bundle(url: testUrl) {
