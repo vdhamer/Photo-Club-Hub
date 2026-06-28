@@ -31,7 +31,8 @@ public struct Model {
             try deleteEntitiesOfOneType("Expertise", viewContext: viewContext)
             if deletionScope == .expertisesOnly {
                 try viewContext.save()
-                return }
+                return
+            }
 
             try deleteEntitiesOfOneType("LocalizedRemark", viewContext: viewContext)
             try deleteEntitiesOfOneType("MemberPortfolio", viewContext: viewContext)
