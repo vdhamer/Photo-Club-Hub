@@ -44,10 +44,20 @@ extension PhotographerExpertise {
 
     // Find existing PhotographerExpertise object or create a new one.
     // Update existing attributes or fill the new object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  photographer: Photographer,
                                  expertise: Expertise
                                 ) -> PhotographerExpertise {
+        context.performAndWait {
+            findCreateUpdate_(context: context, photographer: photographer, expertise: expertise)
+        }
+    }
+
+    private static func findCreateUpdate_(context: NSManagedObjectContext, // can be foreground or background context
+                                          photographer: Photographer,
+                                          expertise: Expertise
+                                         ) -> PhotographerExpertise {
 
         // execute fetchRequest to get expertise object for id=id. Query could return multiple - but shouldn't.
         let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
