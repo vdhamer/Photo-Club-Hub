@@ -79,7 +79,10 @@ extension Photographer {
                                         personName: PersonName,
                                         optionalFields: PhotographerOptionalFields = PhotographerOptionalFields()
                                        ) -> Photographer {
-        context.performAndWait {
+        // Safe: performAndWait runs synchronously on the context's queue; nothing actually escapes.
+        nonisolated(unsafe) let personName = personName
+        nonisolated(unsafe) let optionalFields = optionalFields
+        return context.performAndWait {
             findCreateUpdate_(context: context, personName: personName, optionalFields: optionalFields)
         }
     }

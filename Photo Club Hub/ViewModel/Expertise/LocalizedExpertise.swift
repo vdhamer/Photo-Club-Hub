@@ -63,7 +63,12 @@ extension LocalizedExpertise {
                                  localizedName: String?, // nil used if no update to LocalizedExpertise.name is desired
                                  localizedUsage: String? // nil used if no value of LocalizedExpertise.usage available
                                 ) -> LocalizedExpertise {
-        context.performAndWait {
+        // Safe: performAndWait runs synchronously on the context's queue; nothing actually escapes.
+        // performAndWait is synchronous and reentrant on this context's queue,
+        // so findCreateUpdate_() is never called concurrently or after return.
+        nonisolated(unsafe) let expertise = expertise
+        nonisolated(unsafe) let language = language
+        return context.performAndWait {
             findCreateUpdate_(context: context,
                               expertise: expertise,
                               language: language,
@@ -76,7 +81,7 @@ extension LocalizedExpertise {
                                           expertise: Expertise,
                                           language: Language,
                                           localizedName: String?, // nil if no update to LocalizedExpertise.name desired
-                                          localizedUsage: String? // no value of LocalizedExpertise.usage available -> nil
+                                          localizedUsage: String? // nil if no LocalizedExpertise.usage value
                                          ) -> LocalizedExpertise {
 
         // execute fetchRequest to get Expertise for id=id. Query could return multiple expertises - but shouldn't.

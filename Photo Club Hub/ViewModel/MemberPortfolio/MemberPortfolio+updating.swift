@@ -26,7 +26,13 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                         // non-identifying attributes of a Member:
                                         optionalFields: MemberOptionalFields = MemberOptionalFields() // empty default
     ) -> MemberPortfolio {
-        bgContext.performAndWait {
+        // Safe: performAndWait runs synchronously on the context's queue; nothing actually escapes.
+        // performAndWait is synchronous and reentrant on this context's queue,
+        // so findCreateUpdate_() is never called concurrently or after return.
+        nonisolated(unsafe) let organization = organization
+        nonisolated(unsafe) let photographer = photographer
+        nonisolated(unsafe) let optionalFields = optionalFields
+        return bgContext.performAndWait {
             findCreateUpdate_(bgContext: bgContext,
                               organization: organization,
                               photographer: photographer,

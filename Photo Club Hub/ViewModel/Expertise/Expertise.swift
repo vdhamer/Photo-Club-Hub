@@ -59,7 +59,12 @@ extension Expertise {
                                          names: [JSON], // JSON equivalent of a dictionary with localized names
                                          usage: [JSON]
                                         ) -> Expertise {
-        context.performAndWait {
+        // Safe: performAndWait runs synchronously on the context's queue; nothing actually escapes.
+        // performAndWait is synchronous and reentrant on this context's queue,
+        // so findCreateUpdate_() is never called concurrently or after return.
+        nonisolated(unsafe) let names = names
+        nonisolated(unsafe) let usage = usage
+        return context.performAndWait {
             findCreateUpdate_(context: context, id: id, isSupported: isSupported, names: names, usage: usage)
         }
     }

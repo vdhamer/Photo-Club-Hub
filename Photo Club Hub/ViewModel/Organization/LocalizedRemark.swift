@@ -41,7 +41,10 @@ extension LocalizedRemark { // expose computed properties (some related to handl
                                  language: Language,
                                  localizedString: String
                                 ) -> Bool { // true if something got updated
-        bgContext.performAndWait {
+        // Safe: performAndWait runs synchronously on the context's queue; nothing actually escapes.
+        nonisolated(unsafe) let organization = organization
+        nonisolated(unsafe) let language = language
+        return bgContext.performAndWait {
             findCreateUpdate_(bgContext: bgContext,
                               organization: organization,
                               language: language,

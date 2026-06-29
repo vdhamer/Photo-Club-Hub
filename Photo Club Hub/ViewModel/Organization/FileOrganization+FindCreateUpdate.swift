@@ -25,7 +25,11 @@ extension Organization {
                                         removeOrganization: Bool = false, // can remove records for removed org's
                                         optionalFields: OrganizationOptionalFields = OrganizationOptionalFields(),
                                         pinned: Bool = false) -> Organization {
-        context.performAndWait {
+        // Safe: performAndWait runs synchronously on the context's queue; nothing actually escapes.
+        // performAndWait is synchronous and reentrant on this context's queue,
+        // so findCreateUpdate_() is never called concurrently or after return.
+        nonisolated(unsafe) let optionalFields = optionalFields
+        return context.performAndWait {
             findCreateUpdate_(context: context,
                               organizationTypeEnum: organizationTypeEnum,
                               idPlus: idPlus,
