@@ -187,7 +187,7 @@ import CoreData // for NSManagedObjectContext
                                            randomTownForTesting: randomTownForTestingW)
 
         #expect(Expertise.count(context: bgContext) == 22)
-        #expect(PhotographerExpertise.count(context: bgContext) == 50 + 44 - 2)
+        #expect(PhotographerExpertise.count(context: bgContext) == 50 + 44 - 2) // DeGender + Waalre - overlap
     }
 
 }
