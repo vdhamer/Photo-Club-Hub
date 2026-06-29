@@ -79,6 +79,15 @@ extension Photographer {
                                         personName: PersonName,
                                         optionalFields: PhotographerOptionalFields = PhotographerOptionalFields()
                                        ) -> Photographer {
+        context.performAndWait {
+            findCreateUpdate_(context: context, personName: personName, optionalFields: optionalFields)
+        }
+    }
+
+    private static func findCreateUpdate_(context: NSManagedObjectContext, // foreground or background context
+                                          personName: PersonName,
+                                          optionalFields: PhotographerOptionalFields = PhotographerOptionalFields()
+                                         ) -> Photographer {
         let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [
             personName.givenName, personName.infixName, personName.familyName ])

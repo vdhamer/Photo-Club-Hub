@@ -26,6 +26,24 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                         // non-identifying attributes of a Member:
                                         optionalFields: MemberOptionalFields = MemberOptionalFields() // empty default
     ) -> MemberPortfolio {
+        bgContext.performAndWait {
+            findCreateUpdate_(bgContext: bgContext,
+                              organization: organization,
+                              photographer: photographer,
+                              removeMember: removeMember,
+                              optionalFields: optionalFields)
+        }
+    }
+
+    private static func findCreateUpdate_(bgContext: NSManagedObjectContext,
+                                          // identifying attributes of a Member:
+                                          organization: Organization,
+                                          photographer: Photographer,
+                                          // remove records for members that disappeared from lists:
+                                          removeMember: Bool = false,
+                                          // non-identifying attributes of a Member:
+                                          optionalFields: MemberOptionalFields = MemberOptionalFields() // empty default
+    ) -> MemberPortfolio {
 
         let predicateFormat: String = "organization_ = %@ AND photographer_ = %@" // avoid localization of query string
         let predicate = NSPredicate(format: predicateFormat,

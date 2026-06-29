@@ -39,6 +39,15 @@ public extension OrganizationType {
                                  orgTypeName: String,
                                  unusedProperty: String = "foobar"
                                 ) -> OrganizationType {
+        context.performAndWait {
+            findCreateUpdate_(context: context, orgTypeName: orgTypeName, unusedProperty: unusedProperty)
+        }
+    }
+
+    private static func findCreateUpdate_(context: NSManagedObjectContext, // can be foreground or background context
+                                          orgTypeName: String,
+                                          unusedProperty: String = "foobar"
+                                         ) -> OrganizationType {
 
         let predicateFormat: String = "organizationTypeName_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [orgTypeName])

@@ -25,6 +25,24 @@ extension Organization {
                                         removeOrganization: Bool = false, // can remove records for removed org's
                                         optionalFields: OrganizationOptionalFields = OrganizationOptionalFields(),
                                         pinned: Bool = false) -> Organization {
+        context.performAndWait {
+            findCreateUpdate_(context: context,
+                              organizationTypeEnum: organizationTypeEnum,
+                              idPlus: idPlus,
+                              coordinates: coordinates,
+                              removeOrganization: removeOrganization,
+                              optionalFields: optionalFields,
+                              pinned: pinned)
+        }
+    }
+
+    private static func findCreateUpdate_(context: NSManagedObjectContext, // can be foreground or background context
+                                          organizationTypeEnum: OrganizationTypeEnum,
+                                          idPlus: OrganizationIdPlus,
+                                          coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0),
+                                          removeOrganization: Bool = false, // can remove records for removed org's
+                                          optionalFields: OrganizationOptionalFields = OrganizationOptionalFields(),
+                                          pinned: Bool = false) -> Organization {
 
         let predicateFormat: String = "fullName_ = %@ AND town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -165,8 +183,16 @@ extension Organization {
         return modified
     }
 
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     public static func find(context: NSManagedObjectContext, // can be foreground or background context
                             organizationID: OrganizationID) throws -> Organization {
+        try context.performAndWait {
+            try find_(context: context, organizationID: organizationID)
+        }
+    }
+
+    private static func find_(context: NSManagedObjectContext, // can be foreground or background context
+                              organizationID: OrganizationID) throws -> Organization {
 
         let predicateFormat: String = "fullName_ = %@ AND town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -195,6 +221,13 @@ extension Organization {
     // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     public static func find(context: NSManagedObjectContext, // can be foreground or background context
                             nickname: String) throws -> Organization {
+        try context.performAndWait {
+            try find_(context: context, nickname: nickname)
+        }
+    }
+
+    private static func find_(context: NSManagedObjectContext, // can be foreground or background context
+                              nickname: String) throws -> Organization {
 
         let predicateFormat: String = "nickName_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [nickname] )

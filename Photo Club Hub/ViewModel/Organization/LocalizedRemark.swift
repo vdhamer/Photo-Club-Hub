@@ -41,6 +41,19 @@ extension LocalizedRemark { // expose computed properties (some related to handl
                                  language: Language,
                                  localizedString: String
                                 ) -> Bool { // true if something got updated
+        bgContext.performAndWait {
+            findCreateUpdate_(bgContext: bgContext,
+                              organization: organization,
+                              language: language,
+                              localizedString: localizedString)
+        }
+    }
+
+    private static func findCreateUpdate_(bgContext: NSManagedObjectContext,
+                                          organization: Organization,
+                                          language: Language,
+                                          localizedString: String
+                                         ) -> Bool { // true if something got updated
 
         // get remark if it is already in the database
         let predicateFormat: String = "organization_ = %@ AND language_ = %@" // avoid localization

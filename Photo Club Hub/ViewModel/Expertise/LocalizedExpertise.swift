@@ -72,7 +72,7 @@ extension LocalizedExpertise {
         }
     }
 
-    private static func _findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
+    private static func findCreateUpdate_(context: NSManagedObjectContext, // can be foreground or background context
                                           expertise: Expertise,
                                           language: Language,
                                           localizedName: String?, // nil if no update to LocalizedExpertise.name desired

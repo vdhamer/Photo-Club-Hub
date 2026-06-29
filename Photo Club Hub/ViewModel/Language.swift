@@ -72,6 +72,15 @@ extension Language {
                                  isoCode: String,
                                  nameENOptional: String? = nil
                                 ) -> Language {
+        context.performAndWait {
+            findCreateUpdate_(context: context, isoCode: isoCode, nameENOptional: nameENOptional)
+        }
+    }
+
+    private static func findCreateUpdate_(context: NSManagedObjectContext, // can be foreground or background thread
+                                          isoCode: String,
+                                          nameENOptional: String? = nil
+                                         ) -> Language {
         let isoCode = isoCode.uppercased() // "en" -> "EN" in case we don't receive uppercase input
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
