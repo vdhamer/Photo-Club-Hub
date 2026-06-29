@@ -48,7 +48,7 @@ import CoreData // for NSManagedObjectContext
 
         let idPlus = OrganizationIdPlus(fullName: "Template Club With Minimal Data",
                                         town: randomTownForTesting, // town to keep this separate from normal club data
-                                        nickname: "TemplateMinTest")
+                                        nickname: "TemplateMin")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -90,7 +90,7 @@ import CoreData // for NSManagedObjectContext
 
         let idPlus = OrganizationIdPlus(fullName: "Template Club With Maximal Data",
                                         town: randomTownForTesting, // town to distinguish this from normal club data
-                                        nickname: "TemplateMaxTest")
+                                        nickname: "TemplateMax")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -114,10 +114,9 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "fgDeGenderTest"
+        bgContext.name = "fgDeGender"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
@@ -126,8 +125,6 @@ import CoreData // for NSManagedObjectContext
         Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
-        // note that club fgDeGender may already be loaded
-        // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
         let randomTownForTesting = String.random(length: 10)
         _ = FotogroepDeGenderMembersProvider(bgContext: bgContext, // The club has Expertises
                                              isBeingTested: true,
@@ -153,19 +150,18 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
             #expect(organizations[0].nickName == idPlus.nickname)
-            #expect(organizations[0].fotobondClubNumber?.id == 1620)
+            #expect(organizations[0].fotobondClubNumber?.id == nil) // club in randomTown -> no fotobondNumber
         }
 
         #expect(Expertise.count(context: bgContext) == 21)
-        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Minimal") == 3)
-        #expect(PhotographerExpertise.count(context: bgContext) == 14)
+        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Minimal") == 2)
+        #expect(PhotographerExpertise.count(context: bgContext) == 50)
     }
 
     // Read and check for expertise merging
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Load 2 clubs with expertise data for same photographer") func fgWaalreFgDeGender() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "fgDeGenderTest"
+        bgContext.name = "fgDeGender"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
@@ -182,7 +178,7 @@ import CoreData // for NSManagedObjectContext
                                              useOnlyInBundleFile: true,
                                              randomTownForTesting: randomTownForTestingG)
         #expect(Expertise.count(context: bgContext) == 21)
-        #expect(PhotographerExpertise.count(context: bgContext) == 14)
+        #expect(PhotographerExpertise.count(context: bgContext) == 50)
 
         let randomTownForTestingW = String.random(length: 10)
         _ = FotogroepWaalreMembersProvider(bgContext: bgContext,
@@ -190,8 +186,8 @@ import CoreData // for NSManagedObjectContext
                                            useOnlyInBundleFile: true,
                                            randomTownForTesting: randomTownForTestingW)
 
-        #expect(Expertise.count(context: bgContext) == 21)
-        #expect(PhotographerExpertise.count(context: bgContext) == 42)
+        #expect(Expertise.count(context: bgContext) == 22)
+        #expect(PhotographerExpertise.count(context: bgContext) == 50 + 44 - 2)
     }
 
 }
