@@ -5,7 +5,7 @@
 //  Created by Peter van den Hamer on 29/06/2026.
 //
 //  Covers Organization.findCreateUpdate idempotency and the throwing Organization.find(...) lookups.
-//  The existing OrganizationTest.swift covers the fullNameTown computed property instead.
+//  The other test file OrganizationTest.swift covers the fullNameTown computed property.
 //
 
 import Testing // for macros like `expect`
