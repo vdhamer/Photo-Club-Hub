@@ -11,16 +11,29 @@ import CoreData // for NSManagedObjectContext
 
 @MainActor @Suite("Tests the Level 2 JSON reader") struct Level2JsonReaderTests {
 
+    private let testPersistenceController: PersistenceController
     private let viewContext: NSManagedObjectContext
 
     init () {
-        viewContext = PersistenceController.shared.container.viewContext
+        // Each test gets its own private in-memory store, so the app's concurrent background
+        // data-loading into PersistenceController.shared can't pollute the Expertise/PhotographerExpertise
+        // counts below. Swift Testing creates a fresh suite instance (and thus a fresh init) per test, so
+        // the store is effectively per-test — no deletion or cross-test isolation needed.
+        testPersistenceController = PersistenceController(inMemory: true)
+        viewContext = testPersistenceController.container.viewContext
+        viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+
+        // The empty store lacks several constant records the app seeds at launch; seed them here.
+        // Providers create .club organizations that reference OrganizationType, so both are needed.
+        // Must run on the main-queue viewContext (initConstants does a bare `save()`). See #749.
+        Language.initConstants(context: viewContext)
+        OrganizationType.initConstants(context: viewContext)
     }
 
     // Read TemplateMin.level2.json and check for parsing errors.
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMin.level2.json") func templateMinParse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "TemplateMin"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
@@ -68,7 +81,7 @@ import CoreData // for NSManagedObjectContext
     // Read TemplateMax.level2.json and check for parsing errors
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMax.level2.json") func templateMaxParse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "TemplateMax"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
@@ -114,7 +127,7 @@ import CoreData // for NSManagedObjectContext
     // Read fgDeGender.level2.json and check for parsing errors
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
@@ -162,7 +175,7 @@ import CoreData // for NSManagedObjectContext
     // Read and check for expertise merging
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Load 2 clubs with expertise data for same photographer") func fgWaalreFgDeGender() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true

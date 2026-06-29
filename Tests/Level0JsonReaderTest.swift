@@ -13,16 +13,28 @@ private let isBeingTested = true
 
 @MainActor @Suite("Tests the Level 0 JSON reader") struct Level0JsonReaderTests {
 
+    private let testPersistenceController: PersistenceController
     private let viewContext: NSManagedObjectContext
 
     init () {
-        viewContext = PersistenceController.shared.container.viewContext
+        // Each test gets its own private in-memory store, so the app's concurrent background
+        // data-loading into PersistenceController.shared can't pollute the Expertise/PhotographerExpertise
+        // counts below. Swift Testing creates a fresh suite instance (and thus a fresh init) per test, so
+        // the store is effectively per-test — no deletion or cross-test isolation needed.
+        testPersistenceController = PersistenceController(inMemory: true)
+        viewContext = testPersistenceController.container.viewContext
+        viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+
+        // The empty store lacks the constant records the app seeds at launch; seed them here.
+        // Must run on the main-queue viewContext (initConstants does a bare save()). See #749.
+        Language.initConstants(context: viewContext)
+        OrganizationType.initConstants(context: viewContext)
     }
 
     // Read root.level0.json and check for parsing errors.
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse empty.level0.json") func emptyLevel0Parse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "EmptyLevel0"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
@@ -46,7 +58,7 @@ private let isBeingTested = true
     // Read abstract.level0.json.
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse abstractExpertise.level0.json") func abstractExpertiseLevel0Parse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "AbstractExpertiseLevel0"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
@@ -54,9 +66,9 @@ private let isBeingTested = true
         // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
         // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
         Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
-        #expect(Expertise.count(context: bgContext) == 0) // returns 3 instead of zero, why??
+        #expect(Expertise.count(context: bgContext) == 0)
         #expect(LocalizedExpertise.count(context: bgContext) == 0)
-        #expect(PhotographerExpertise.count(context: bgContext) == 0) // returns 3 instead of zero, why??
+        #expect(PhotographerExpertise.count(context: bgContext) == 0)
 
         bgContext.performAndWait {
             _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
@@ -73,7 +85,7 @@ private let isBeingTested = true
     // Read root.level0.json and check for parsing errors.
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse root.level0.json") func rootLevel0Parse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "RootLevel0"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
@@ -92,7 +104,7 @@ private let isBeingTested = true
     // Read language.level0.json.
     // Clears all CoreData languages. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse language.level0.json") func languageLevel0Parse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "LanguageLevel0"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
@@ -117,7 +129,7 @@ private let isBeingTested = true
     // Read language.level0.json.
     // Clears all CoreData languages. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse languages.level0.json") func languagesLevel0Parse() async {
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "LanguagesLevel0"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
