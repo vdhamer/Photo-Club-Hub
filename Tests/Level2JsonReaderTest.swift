@@ -19,7 +19,7 @@ import CoreData // for NSManagedObjectContext
         // data-loading into PersistenceController.shared can't pollute the Expertise/PhotographerExpertise
         // counts below. Swift Testing creates a fresh suite instance (and thus a fresh init) per test, so
         // the store is effectively per-test — no deletion or cross-test isolation needed.
-        testPersistenceController = PersistenceController(inMemory: true)
+        testPersistenceController = PersistenceController(inMemory: true) // inMemory is important for isolation
         viewContext = testPersistenceController.container.viewContext
         viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 
@@ -31,21 +31,15 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read TemplateMin.level2.json and check for parsing errors.
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMin.level2.json") func templateMinParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "TemplateMinTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
-        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
-        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
-        #expect(Expertise.count(context: bgContext) == 0)
+        #expect(Expertise.count(context: bgContext) == 0) // clearing is handled via "inMemory: true"
 
-        // note that club TemplateMin may already be loaded
-        // note that TemplateMinMembersProvider runs asynchronously (via bgContext.perform {})
-        let randomTownForTesting = String.random(length: 10)
+        let randomTownForTesting = String.random(length: 10) // e.g. "s8H2bEU3C6"
 
         _ = TemplateMinMembersProvider(bgContext: bgContext,
                                        isBeingTested: true,
@@ -65,7 +59,7 @@ import CoreData // for NSManagedObjectContext
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? viewContext.fetch(fetchRequest)) ?? []
 
-        #expect(Expertise.count(context: bgContext) == 0)
+        #expect(Expertise.count(context: bgContext) == 0) // this particular club has no expertises (it is "minimal")
         #expect(PhotographerExpertise.count(context: bgContext) == 0)  // A club without PhotographerExpertises
 
         #expect(organizations.count == 1)
