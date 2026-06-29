@@ -19,7 +19,7 @@ import CoreData // for NSManagedObjectContext
         // data-loading into PersistenceController.shared can't pollute the Expertise/PhotographerExpertise
         // counts below. Swift Testing creates a fresh suite instance (and thus a fresh init) per test, so
         // the store is effectively per-test — no deletion or cross-test isolation needed.
-        testPersistenceController = PersistenceController(inMemory: true)
+        testPersistenceController = PersistenceController(inMemory: true) // inMemory is important for isolation
         viewContext = testPersistenceController.container.viewContext
         viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 
@@ -31,21 +31,15 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read TemplateMin.level2.json and check for parsing errors.
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMin.level2.json") func templateMinParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "TemplateMin"
+        bgContext.name = "TemplateMinTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
-        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
-        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
-        #expect(Expertise.count(context: bgContext) == 0)
+        #expect(Expertise.count(context: bgContext) == 0) // clearing is handled via "inMemory: true"
 
-        // note that club TemplateMin may already be loaded
-        // note that TemplateMinMembersProvider runs asynchronously (via bgContext.perform {})
-        let randomTownForTesting = String.random(length: 10)
+        let randomTownForTesting = String.random(length: 10) // e.g. "s8H2bEU3C6"
 
         _ = TemplateMinMembersProvider(bgContext: bgContext,
                                        isBeingTested: true,
@@ -65,7 +59,7 @@ import CoreData // for NSManagedObjectContext
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? viewContext.fetch(fetchRequest)) ?? []
 
-        #expect(Expertise.count(context: bgContext) == 0)
+        #expect(Expertise.count(context: bgContext) == 0) // this particular club has no expertises (it is "minimal")
         #expect(PhotographerExpertise.count(context: bgContext) == 0)  // A club without PhotographerExpertises
 
         #expect(organizations.count == 1)
@@ -79,21 +73,16 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read TemplateMax.level2.json and check for parsing errors
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMax.level2.json") func templateMaxParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "TemplateMax"
+        bgContext.name = "TemplateMaxTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
-        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
-        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
-        // note that club TemplateMax may already be loaded
-        // note that TemplateMaxMembersProvider runs asynchronously (via bgContext.perform {})
         let randomTownForTesting = String.random(length: 10)
+
         _ = TemplateMaxMembersProvider(bgContext: bgContext,
                                        isBeingTested: true,
                                        useOnlyInBundleFile: true,
@@ -112,8 +101,8 @@ import CoreData // for NSManagedObjectContext
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? viewContext.fetch(fetchRequest)) ?? []
 
-        #expect(Expertise.count(context: bgContext) == 5)
-        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Landscape") == 1)
+        #expect(Expertise.count(context: bgContext) == 5) // Mien's 2 + Mike's 5
+        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Landscape") == 1) // that would be Mike
 
         #expect(organizations.count == 1)
         if organizations.isEmpty == false {
@@ -125,7 +114,6 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
@@ -137,8 +125,6 @@ import CoreData // for NSManagedObjectContext
         Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
-        // note that club fgDeGender may already be loaded
-        // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
         let randomTownForTesting = String.random(length: 10)
         _ = FotogroepDeGenderMembersProvider(bgContext: bgContext, // The club has Expertises
                                              isBeingTested: true,
@@ -164,16 +150,15 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
             #expect(organizations[0].nickName == idPlus.nickname)
-            #expect(organizations[0].fotobondClubNumber?.id == 1620)
+            #expect(organizations[0].fotobondClubNumber?.id == nil) // club in randomTown -> no fotobondNumber
         }
 
         #expect(Expertise.count(context: bgContext) == 21)
-        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Minimal") == 3)
-        #expect(PhotographerExpertise.count(context: bgContext) == 14)
+        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Minimal") == 2)
+        #expect(PhotographerExpertise.count(context: bgContext) == 50)
     }
 
     // Read and check for expertise merging
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Load 2 clubs with expertise data for same photographer") func fgWaalreFgDeGender() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
@@ -193,7 +178,7 @@ import CoreData // for NSManagedObjectContext
                                              useOnlyInBundleFile: true,
                                              randomTownForTesting: randomTownForTestingG)
         #expect(Expertise.count(context: bgContext) == 21)
-        #expect(PhotographerExpertise.count(context: bgContext) == 14)
+        #expect(PhotographerExpertise.count(context: bgContext) == 50)
 
         let randomTownForTestingW = String.random(length: 10)
         _ = FotogroepWaalreMembersProvider(bgContext: bgContext,
@@ -201,8 +186,8 @@ import CoreData // for NSManagedObjectContext
                                            useOnlyInBundleFile: true,
                                            randomTownForTesting: randomTownForTestingW)
 
-        #expect(Expertise.count(context: bgContext) == 21)
-        #expect(PhotographerExpertise.count(context: bgContext) == 42)
+        #expect(Expertise.count(context: bgContext) == 22)
+        #expect(PhotographerExpertise.count(context: bgContext) == 50 + 44 - 2) // DeGender + Waalre - overlap
     }
 
 }
