@@ -38,23 +38,38 @@ extension Expertise {
 
     // Returns existing Expertise object for a given canonical identifier. Returns `nil` if not found.
     // Unlike `findCreateUpdate`, this does not create a new entity for unknown identifiers.
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     public static func find(context: NSManagedObjectContext, expertiseIdString: String) -> Expertise? {
-        let idString = expertiseIdString.capitalizingFirstLetter()
-        let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id_ = %@", argumentArray: [idString])
-        return try? context.fetch(fetchRequest).first
+        context.performAndWait {
+            let idString = expertiseIdString.capitalizingFirstLetter()
+            let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id_ = %@", argumentArray: [idString])
+            return try? context.fetch(fetchRequest).first
+        }
     }
 
     // MARK: - find, create or update
 
     // Find existing Expertise object or create a new one.
     // Update existing attributes or fill the new object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     private static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                          id: String,
                                          isSupported: Bool?, // nil means don't change existing value
                                          names: [JSON], // JSON equivalent of a dictionary with localized names
                                          usage: [JSON]
                                         ) -> Expertise {
+        context.performAndWait {
+            findCreateUpdate_(context: context, id: id, isSupported: isSupported, names: names, usage: usage)
+        }
+    }
+
+    private static func findCreateUpdate_(context: NSManagedObjectContext, // can be foreground or background context
+                                          id: String,
+                                          isSupported: Bool?, // nil means don't change existing value
+                                          names: [JSON], // JSON equivalent of a dictionary with localized names
+                                          usage: [JSON]
+                                         ) -> Expertise {
 
         // execute fetchRequest to get expertise object for id=id. Query could return multiple - but shouldn't.
         let id = id.canonicalCase
