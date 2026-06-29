@@ -48,7 +48,7 @@ import CoreData // for NSManagedObjectContext
 
         let idPlus = OrganizationIdPlus(fullName: "Template Club With Minimal Data",
                                         town: randomTownForTesting, // town to keep this separate from normal club data
-                                        nickname: "TemplateMin")
+                                        nickname: "TemplateMinTest")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -73,21 +73,16 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read TemplateMax.level2.json and check for parsing errors
-    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMax.level2.json") func templateMaxParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "TemplateMaxTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
-        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
-        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
-        // note that club TemplateMax may already be loaded
-        // note that TemplateMaxMembersProvider runs asynchronously (via bgContext.perform {})
         let randomTownForTesting = String.random(length: 10)
+
         _ = TemplateMaxMembersProvider(bgContext: bgContext,
                                        isBeingTested: true,
                                        useOnlyInBundleFile: true,
@@ -95,7 +90,7 @@ import CoreData // for NSManagedObjectContext
 
         let idPlus = OrganizationIdPlus(fullName: "Template Club With Maximal Data",
                                         town: randomTownForTesting, // town to distinguish this from normal club data
-                                        nickname: "TemplateMax")
+                                        nickname: "TemplateMaxTest")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -106,8 +101,8 @@ import CoreData // for NSManagedObjectContext
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? viewContext.fetch(fetchRequest)) ?? []
 
-        #expect(Expertise.count(context: bgContext) == 5)
-        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Landscape") == 1)
+        #expect(Expertise.count(context: bgContext) == 5) // Mien's 2 + Mike's 5
+        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Landscape") == 1) // that would be Mike
 
         #expect(organizations.count == 1)
         if organizations.isEmpty == false {
