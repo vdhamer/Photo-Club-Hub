@@ -74,6 +74,7 @@ extension Photographer {
 
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     public static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                         personName: PersonName,
                                         optionalFields: PhotographerOptionalFields = PhotographerOptionalFields()

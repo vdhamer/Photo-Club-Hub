@@ -35,6 +35,7 @@ extension LocalizedRemark { // expose computed properties (some related to handl
     // MARK: - find (if it exits) or create (if it doesn't exist) a LocalizedRemark
 
     // Find existing LocalizedRemark object or create a new LocalizedRemark object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
                                  organization: Organization,
                                  language: Language,

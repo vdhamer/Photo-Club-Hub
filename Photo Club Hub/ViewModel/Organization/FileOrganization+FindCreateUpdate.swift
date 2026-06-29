@@ -17,6 +17,7 @@ extension Organization {
 
     // Find existing organization or create a new one
     // Update new or existing organization's attributes
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     public static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                         organizationTypeEnum: OrganizationTypeEnum,
                                         idPlus: OrganizationIdPlus,
@@ -191,6 +192,7 @@ extension Organization {
         }
     }
 
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     public static func find(context: NSManagedObjectContext, // can be foreground or background context
                             nickname: String) throws -> Organization {
 

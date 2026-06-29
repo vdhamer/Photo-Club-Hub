@@ -34,6 +34,7 @@ public extension OrganizationType {
 
     // Find OrganizationType object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  orgTypeName: String,
                                  unusedProperty: String = "foobar"

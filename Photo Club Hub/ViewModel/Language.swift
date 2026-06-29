@@ -67,6 +67,7 @@ extension Language {
 
     // Find existing Language object or create a new one.
     // Update existing attributes or fill the new object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background thread
                                  isoCode: String,
                                  nameENOptional: String? = nil

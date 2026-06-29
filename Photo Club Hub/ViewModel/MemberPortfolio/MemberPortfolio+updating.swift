@@ -16,6 +16,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
     // Find existing object or create a new object
     // Update existing attributes or fill the new object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     public static func findCreateUpdate(bgContext: NSManagedObjectContext,
                                         // identifying attributes of a Member:
                                         organization: Organization,
