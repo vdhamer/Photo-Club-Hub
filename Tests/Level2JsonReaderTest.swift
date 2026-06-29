@@ -11,10 +11,10 @@ import CoreData // for NSManagedObjectContext
 
 @MainActor @Suite("Tests the Level 2 JSON reader") struct Level2JsonReaderTests {
 
-    private let context: NSManagedObjectContext
+    private let viewContext: NSManagedObjectContext
 
     init () {
-        context = PersistenceController.shared.container.viewContext
+        viewContext = PersistenceController.shared.container.viewContext
     }
 
     // Read TemplateMin.level2.json and check for parsing errors.
@@ -25,7 +25,9 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club TemplateMin may already be loaded
@@ -48,7 +50,7 @@ import CoreData // for NSManagedObjectContext
                                     argumentArray: [ randomTownForTesting ] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
-        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+        let organizations: [Organization] = (try? viewContext.fetch(fetchRequest)) ?? []
 
         #expect(Expertise.count(context: bgContext) == 0)
         #expect(PhotographerExpertise.count(context: bgContext) == 0)  // A club without PhotographerExpertises
@@ -71,7 +73,9 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club TemplateMax may already be loaded
@@ -93,7 +97,7 @@ import CoreData // for NSManagedObjectContext
                                     argumentArray: [ randomTownForTesting ] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
-        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+        let organizations: [Organization] = (try? viewContext.fetch(fetchRequest)) ?? []
 
         #expect(Expertise.count(context: bgContext) == 5)
         #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Landscape") == 1)
@@ -115,7 +119,9 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club fgDeGender may already be loaded
@@ -133,7 +139,7 @@ import CoreData // for NSManagedObjectContext
                                     argumentArray: [ randomTownForTesting ] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
-        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+        let organizations: [Organization] = (try? viewContext.fetch(fetchRequest)) ?? []
 
         let idPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
                                         town: randomTownForTesting, // town to distinguish this from normal club data
@@ -161,7 +167,9 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly) // remove Expertises
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly) // remove Expertises
         #expect(Expertise.count(context: bgContext) == 0)
 
         // note that club fgDeGender may already be loaded

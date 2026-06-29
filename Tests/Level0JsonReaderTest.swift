@@ -13,10 +13,10 @@ private let isBeingTested = true
 
 @MainActor @Suite("Tests the Level 0 JSON reader") struct Level0JsonReaderTests {
 
-    private let context: NSManagedObjectContext
+    private let viewContext: NSManagedObjectContext
 
     init () {
-        context = PersistenceController.shared.container.viewContext
+        viewContext = PersistenceController.shared.container.viewContext
     }
 
     // Read root.level0.json and check for parsing errors.
@@ -27,7 +27,9 @@ private let isBeingTested = true
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0)
         #expect(LocalizedExpertise.count(context: bgContext) == 0)
         #expect(PhotographerExpertise.count(context: bgContext) == 0)
@@ -49,7 +51,9 @@ private let isBeingTested = true
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Expertise.count(context: bgContext) == 0) // returns 3 instead of zero, why??
         #expect(LocalizedExpertise.count(context: bgContext) == 0)
         #expect(PhotographerExpertise.count(context: bgContext) == 0) // returns 3 instead of zero, why??
@@ -74,7 +78,9 @@ private let isBeingTested = true
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
 
         _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
                              fileName: "root",
@@ -91,7 +97,9 @@ private let isBeingTested = true
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Language.count(context: bgContext, isoCode: "UR") == 0)
         #expect(LocalizedRemark.count(context: bgContext) == 0)
         #expect(LocalizedExpertise.count(context: bgContext) == 0)
@@ -114,7 +122,9 @@ private let isBeingTested = true
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataObjects(viewContext: bgContext, deletionScope: .expertisesOnly)
+        // Deletion must run on the main-queue viewContext: deleteCoreDataObjects is a @MainActor
+        // main-thread API (its bare save() would trip _PFAssertSafeMultiThreadedAccess off-queue). See #749.
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .expertisesOnly)
         #expect(Language.count(context: bgContext, isoCode: "UR") == 0)
         #expect(LocalizedRemark.count(context: bgContext) == 0)
         #expect(LocalizedExpertise.count(context: bgContext) == 0)
