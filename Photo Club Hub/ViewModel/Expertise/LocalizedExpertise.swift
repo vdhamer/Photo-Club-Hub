@@ -56,12 +56,28 @@ extension LocalizedExpertise {
 
     // Find existing Expertise object or create a new one.
     // Update existing attributes or fill the new object
+    // Thin wrapper that hops onto the context's own queue, so this is safe to call from any thread.
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  expertise: Expertise,
                                  language: Language,
                                  localizedName: String?, // nil used if no update to LocalizedExpertise.name is desired
                                  localizedUsage: String? // nil used if no value of LocalizedExpertise.usage available
                                 ) -> LocalizedExpertise {
+        context.performAndWait {
+            findCreateUpdate_(context: context,
+                              expertise: expertise,
+                              language: language,
+                              localizedName: localizedName,
+                              localizedUsage: localizedUsage)
+        }
+    }
+
+    private static func _findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
+                                          expertise: Expertise,
+                                          language: Language,
+                                          localizedName: String?, // nil if no update to LocalizedExpertise.name desired
+                                          localizedUsage: String? // no value of LocalizedExpertise.usage available -> nil
+                                         ) -> LocalizedExpertise {
 
         // execute fetchRequest to get Expertise for id=id. Query could return multiple expertises - but shouldn't.
         let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
