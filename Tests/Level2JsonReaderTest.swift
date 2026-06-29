@@ -34,7 +34,7 @@ import CoreData // for NSManagedObjectContext
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMin.level2.json") func templateMinParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "TemplateMin"
+        bgContext.name = "TemplateMinTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
@@ -82,7 +82,7 @@ import CoreData // for NSManagedObjectContext
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse TemplateMax.level2.json") func templateMaxParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "TemplateMax"
+        bgContext.name = "TemplateMaxTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
@@ -128,7 +128,7 @@ import CoreData // for NSManagedObjectContext
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "fgDeGender"
+        bgContext.name = "fgDeGenderTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
@@ -176,7 +176,7 @@ import CoreData // for NSManagedObjectContext
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Load 2 clubs with expertise data for same photographer") func fgWaalreFgDeGender() async {
         let bgContext = testPersistenceController.container.newBackgroundContext()
-        bgContext.name = "fgDeGender"
+        bgContext.name = "fgDeGenderTest"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
