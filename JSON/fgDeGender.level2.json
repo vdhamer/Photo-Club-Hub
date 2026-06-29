@@ -147,6 +147,18 @@
 
         {
             "name": {
+                "givenName": "Erik",
+                "infixName": "",
+                "familyName": "Magnée"
+            },
+            "optional": {
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Erik-Magnee/",
+                "membershipStartDate": "2026-06-29"
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Francien",
                 "infixName": "van",
                 "familyName": "Mil"
