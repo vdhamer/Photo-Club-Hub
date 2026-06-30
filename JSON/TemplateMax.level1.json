@@ -3,7 +3,7 @@
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMax.level1.json",
         "level1URLIncludes": [ ],
         "maintainerEmail": "vdhamer@msn.com"
-    }
+    },
 
     "clubs": [
 
@@ -37,7 +37,7 @@
                 }
             }
         },
-        
+
         {
             "idPlus": {
                 "town": "Wetzlar",
@@ -62,7 +62,7 @@
                         "value": "A hypothetical exclusive photography club for Leica rangefinder owners."
                     }
                 ],
-                "maintainerEmail": "admin@leicaROC.de",
+                "maintainerEmail": "admin@leicaROC.de"
             }
         }
     ],
@@ -93,3 +93,4 @@
     ]
 
 }
+
