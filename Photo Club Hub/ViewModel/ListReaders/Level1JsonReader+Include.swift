@@ -26,7 +26,10 @@ extension Level1JsonReader {
         from jsonRoot: JSON,
         isBeingTested: Bool,
         useOnlyInBundleFile: Bool,
-        includeFilePath: [String]
+        /// used to detect loops for error checking/
+        includeFilePath: [String],
+        /// tests can inject a private in-memory store for isolation, particularly to ensure all included files use the same store, tricky story ;-(
+        usedContainer: NSPersistentContainer = PersistenceController.shared.container
     ) {
         let includeJSONs: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
         for includeJSON in includeJSONs {
@@ -48,7 +51,7 @@ extension Level1JsonReader {
             }
             print("Will load included file \(includeName).level1.json on a new background thread")
 
-            let bgContext = PersistenceController.shared.container.newBackgroundContext()
+            let bgContext = usedContainer.newBackgroundContext()
             bgContext.name = "Level 1 loader for \(includeName)"
             if isDebug && Settings.errorOnCoreDataMerge {
                 bgContext.mergePolicy = NSMergePolicy.error // to force detection of Core Data merge issues
@@ -58,12 +61,13 @@ extension Level1JsonReader {
             bgContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
             bgContext.undoManager = nil // no undo manager (for speed)
 
-            _ = Level1JsonReader(
+            _ = Level1JsonReader( // recurse through Include tree
                 bgContext: bgContext,
                 fileName: includeName,
                 isBeingTested: isBeingTested,
                 useOnlyInBundleFile: useOnlyInBundleFile,
-                includeFilePath: includeFilePath)
+                includeFilePath: includeFilePath,
+                usedContainer: usedContainer) // propagate so the whole Include tree shares one store
         }
     }
 

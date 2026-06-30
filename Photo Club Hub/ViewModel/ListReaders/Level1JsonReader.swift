@@ -17,17 +17,32 @@ public class Level1JsonReader {
                 fileName: String = "root",  // can overrule the name in tests or in top-level app code
                 isBeingTested: Bool,
                 useOnlyInBundleFile: Bool, // true can be used to avoid publishing a test file to GitHub
-                includeFilePath: [String] = [] // captures recursion path like ["root","museums","museumsNL"]
+                includeFilePath: [String] = [], // captures recursion path like ["root","museums","museumsNL"]
+                usedContainer: NSPersistentContainer = PersistenceController.shared.container
+                // ^ container whose background contexts `Included` files load into; defaults to the app's
+                //   shared store, but tests can inject a private in-memory store for isolation.
                ) {
         var extendedIncludeFilePath: [String] = includeFilePath // copy because parameter itself is `let`
         extendedIncludeFilePath.append(fileName) // extend with extra name
+
+        // The @Sendable processor closure captures `usedContainer` so it can forward downward during Include
+        // handling. NSPersistentContainer is not Sendable, but region-based isolation proves this capture
+        // is safe because the value isn't used elsewhere. So no non-isolated(unsafe) shadow is needed.
         _ = FetchAndProcessFile(bgContext: bgContext,
                                 fileSelector: FileSelector(fileName: fileName, isBeingTested: isBeingTested),
                                 fileType: "json", fileSubType: "level1", // "root.level1.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
                                 isBeingTested: isBeingTested,
                                 includeFilePath: extendedIncludeFilePath,
-                                fileContentProcessor: Level1JsonReader.readRootLevel1Json
+                                fileContentProcessor: {
+                                    Level1JsonReader.readRootLevel1Json(bgContext: $0,
+                                                                        jsonData: $1,
+                                                                        fileSelector: $2,
+                                                                        useOnlyInBundleFile: $3,
+                                                                        isBeingTested: $4,
+                                                                        includeFilePath: $5,
+                                                                        usedContainer: usedContainer)
+                                }
         )
     }
 
@@ -36,7 +51,9 @@ public class Level1JsonReader {
                                                      fileSelector: FileSelector,
                                                      useOnlyInBundleFile: Bool,
                                                      isBeingTested: Bool = false,
-                                                     includeFilePath: [String]) {
+                                                     includeFilePath: [String],
+                                                     usedContainer: NSPersistentContainer
+                                                        = PersistenceController.shared.container) {
 
         let fileName = fileSelector.fileName
         if #available(iOS 18, macOS 15, *) {
@@ -61,7 +78,8 @@ public class Level1JsonReader {
         triggerProcessingOfLevel1URLIncludes(from: jsonRoot,
                                              isBeingTested: isBeingTested,
                                              useOnlyInBundleFile: useOnlyInBundleFile,
-                                             includeFilePath: includeFilePath)
+                                             includeFilePath: includeFilePath,
+                                             usedContainer: usedContainer)
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypesToLoad {
