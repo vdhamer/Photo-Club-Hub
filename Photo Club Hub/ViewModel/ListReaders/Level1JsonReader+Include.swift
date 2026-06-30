@@ -17,8 +17,8 @@ extension Level1JsonReader {
     /// Loads any files listed in the `level1URLIncludes` array in the Header of a level1.json file.
     ///
     /// Loading is done on a new NSManagedObjectContext.
-    /// If an entry is not a valid URL, the function emits a debug fatal error if the app has been built in Debug mode.
-    /// When the app is built in Release mode, invalid URL errors cause the array element to be silently ignored.
+    /// If the app has been built in Debug mode, an entry that isn't a valid URL emits a debug fatal error.
+    /// If the app has been built in Release mode, invalid URL -> array element is silently ignored.
     ///
     /// - Parameter jsonRoot: The parsed SwiftyJSON root object for a Level 1 JSON file.
 
