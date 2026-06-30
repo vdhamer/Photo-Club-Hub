@@ -84,6 +84,8 @@
 		37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */; };
 		37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */; };
 		37EA14EB2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */; };
+		37EE709E2FF3F97D002DDE38 /* IncludeParent.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37EE709D2FF3F97D002DDE38 /* IncludeParent.level1.json */; };
+		37EE70A02FF3F97F002DDE38 /* IncludeChild.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37EE709F2FF3F97F002DDE38 /* IncludeChild.level1.json */; };
 		37EEEB9D2FA0B3A3001463BA /* PreferencesViewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEEB9C2FA0B3A3001463BA /* PreferencesViewThumbnail.swift */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */; };
@@ -278,6 +280,8 @@
 		37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListSectionFooter.swift; sourceTree = "<group>"; };
 		37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualImageWithCaptionAndControls.swift; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
+		37EE709D2FF3F97D002DDE38 /* IncludeParent.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IncludeParent.level1.json; sourceTree = "<group>"; };
+		37EE709F2FF3F97F002DDE38 /* IncludeChild.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IncludeChild.level1.json; sourceTree = "<group>"; };
 		37EEEB9C2FA0B3A3001463BA /* PreferencesViewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewThumbnail.swift; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
@@ -970,6 +974,8 @@
 				D0F8718F2D403D1700530D10 /* XampleMin.level1.json */,
 				D0F871902D403D1700530D10 /* XampleMin.level2.json */,
 				3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */,
+				37EE709D2FF3F97D002DDE38 /* IncludeParent.level1.json */,
+				37EE709F2FF3F97F002DDE38 /* IncludeChild.level1.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -1099,6 +1105,7 @@
 				D0ACCFD72DEFAD690002FACC /* XampleMax.level2.json in Resources */,
 				37989A022F4A25D80039FABF /* clubsXamples.level1.json in Resources */,
 				3768E6CB2F0DC0D600E12F6F /* museumsJP.level1.json in Resources */,
+				37EE709E2FF3F97D002DDE38 /* IncludeParent.level1.json in Resources */,
 				3768E6CC2F0DC0D600E12F6F /* museumsDE.level1.json in Resources */,
 				3768E6CE2F0DC72800E12F6F /* museumsGB.level1.json in Resources */,
 				D0ACCFD82DEFAD690002FACC /* XampleMin.level2.json in Resources */,
@@ -1123,6 +1130,7 @@
 				37B534992F242F2A000EA5BB /* ffcShot71.level2.json in Resources */,
 				D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
+				37EE70A02FF3F97F002DDE38 /* IncludeChild.level1.json in Resources */,
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
 				D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */,
 				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
