@@ -28,7 +28,8 @@ extension Level1JsonReader {
         useOnlyInBundleFile: Bool,
         /// used to detect loops for error checking/
         includeFilePath: [String],
-        /// tests can inject a private in-memory store for isolation, particularly to ensure all included files use the same store, tricky story ;-(
+        /// Tests can inject a private in-memory store for isolation,
+        /// particularly to ensure all included files use the same store, tricky story ;-(
         usedContainer: NSPersistentContainer = PersistenceController.shared.container
     ) {
         let includeJSONs: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
