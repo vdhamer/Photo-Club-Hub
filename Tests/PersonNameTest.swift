@@ -8,18 +8,18 @@
 import Testing
 @testable import Photo_Club_Hub
 
-@Suite("Tests the PersonName value type") struct PersonNameTests {
+@Suite("Tests the PersonName struct") struct PersonNameTests {
 
     // MARK: - Synthesizing the full name when none is supplied
 
-    // Without an infix, the full name is simply "given family".
+    // Without an infix, the full name is simply "<given> <family>".
     @Test("Full name synthesized without infix") func synthesizeWithoutInfix() {
         let name = PersonName(givenName: "John", infixName: "", familyName: "Doe")
         #expect(name.fullNameWithParenthesizedRole == "John Doe")
         #expect(name.fullNameWithoutParenthesizedRole == "John Doe")
     }
 
-    // With an infix, it is inserted between the given and family names.
+    // With an infix, it is inserted between the <given> and <family> names.
     @Test("Full name synthesized with infix") func synthesizeWithInfix() {
         let name = PersonName(givenName: "Jan", infixName: "van", familyName: "Doesburg")
         #expect(name.fullNameWithParenthesizedRole == "Jan van Doesburg")
