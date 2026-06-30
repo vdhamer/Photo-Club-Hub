@@ -29,7 +29,7 @@ public struct FotobondClubNumber: Equatable {
         if (id % 100) == 0 {
             clubNr = "Pers"
         }
-        return String(afdelingNr + "." + clubNr) // represent club 301 as "0301"
+        return String(afdelingNr + "." + clubNr) // represent club 301 as "03.01"
     }
 }
 
