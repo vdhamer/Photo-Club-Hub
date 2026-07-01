@@ -97,6 +97,9 @@ struct FetchAndProcessFile {
     ///    package's generated `Photo Club Hub Data_Photo Club Hub Data.bundle` here.
     /// 3. Any `*.bundle` sibling of `Bundle.main` — covers the separate test resource bundle when
     ///    running unit tests via SwiftPM.
+    /// 4. The hosted unit-test `*.xctest` bundle in `Bundle.main`'s PlugIns — covers test-only
+    ///    JSON files (e.g. IncludeParent/IncludeChild.level1.json) that are members of the test
+    ///    target rather than the app target, so they aren't shipped in the production app.
     ///
     /// Returning the first match keeps a single source compatible with both repos without `#if`.
     private static func urlForBundledResource(_ name: String, // root.level0
@@ -106,14 +109,16 @@ struct FetchAndProcessFile {
         }
 
         let searchDirs = [Bundle.main.resourceURL, // "../Build/Products/Debug/Photo%20Club%20Hub%20HTML.app"
-                          Bundle.main.bundleURL.deletingLastPathComponent()]
-                         .compactMap { $0 } // ..Build/Products/Debug"
+                          Bundle.main.bundleURL.deletingLastPathComponent(), // ..Build/Products/Debug"
+                          Bundle.main.builtInPlugInsURL] // "../Photo Club Hub.app/PlugIns" (hosted tests)
+                         .compactMap { $0 }
         for dir in searchDirs {
             guard let entries = try? FileManager.default.contentsOfDirectory( at: dir,
                                                                               includingPropertiesForKeys: nil)
                 else { continue }
 
-            for entry in entries where entry.pathExtension == "bundle" {
+            // *.bundle: SwiftPM resource bundle. *.xctest: hosted unit-test bundle (see search order #4).
+            for entry in entries where entry.pathExtension == "bundle" || entry.pathExtension == "xctest" {
                 if let bundle = Bundle(url: entry),
                    let url = bundle.url(forResource: name, withExtension: ext) {
                     return url
