@@ -150,7 +150,7 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
             #expect(organizations[0].nickName == idPlus.nickname)
-            #expect(organizations[0].fotobondClubNumber?.id == nil) // club in randomTown -> no fotobondNumber
+            #expect(organizations[0].fotobondClubNumber?.id == nil) // club in randomTown → no fotobondNumber
         }
 
         #expect(Expertise.count(context: bgContext) == 21)
