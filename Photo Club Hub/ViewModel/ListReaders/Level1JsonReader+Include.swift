@@ -12,7 +12,7 @@ import Synchronization // for Mutex (only used on iOS 18 or above)
 extension Level1JsonReader {
 
     @available(iOS 18, macOS 15, *)
-    static let level1History = Level1History() // singleton to tack Level 1 loading across all Level 1 reader threads
+    static let level1History = Level1History() // singleton to track Level 1 loading across all Level 1 reader threads
 
     /// Loads any files listed in the `level1URLIncludes` array in the Header of a level1.json file.
     ///
@@ -33,6 +33,7 @@ extension Level1JsonReader {
         usedContainer: NSPersistentContainer = PersistenceController.shared.container
     ) {
         let includeJSONs: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
+
         for includeJSON in includeJSONs {
             let includeURLoptional: URL? = URL(string: includeJSON.stringValue)
             guard let includeURL: URL = includeURLoptional else {
@@ -40,10 +41,10 @@ extension Level1JsonReader {
                 continue
             }
             let includeNameSegments: [Substring] = includeURL.lastPathComponent.split(separator: ".")
-            guard !includeNameSegments.isEmpty else {
+            guard includeNameSegments.isEmpty == false else {
                 ifDebugFatalError("level1URLIncludes contains an empty string")
                 continue
-            } // if it is empty string, just ignore
+            } // if it is an empty string, just ignore
             let includeName: String = String(includeNameSegments[0]) // there has to be an element [0]
             guard includeNameSegments[1].lowercased() == "level1",
                   includeNameSegments[2].lowercased() == "json" else {
@@ -68,7 +69,7 @@ extension Level1JsonReader {
                 isBeingTested: isBeingTested,
                 useOnlyInBundleFile: useOnlyInBundleFile,
                 includeFilePath: includeFilePath,
-                usedContainer: usedContainer) // propagate so the whole Include tree shares one store
+                usedContainer: usedContainer) // propagate so the whole Include tree shares one storage container
         }
     }
 
@@ -78,16 +79,13 @@ extension Level1JsonReader {
 final public class Level1History: Sendable {
 
     // https://www.avanderlee.com/concurrency/modern-swift-lock-mutex-the-synchronization-framework/
-    private let level1History = Mutex<[String]>([])
+    // A Set suffices because we only need membership (not order): Set.insert reports whether the
+    // element was already present, collapsing the old contains()/append() into one operation.
+    private let level1History = Mutex<Set<String>>([])
 
-    func isVisited(fileName: String) -> Bool {
+    func isVisitedBefore(fileName: String) -> Bool {
         level1History.withLock { level1History in
-            if level1History.contains(fileName) {
-                return true
-            } else {
-                level1History.append(fileName)
-                return false
-            }
+            !level1History.insert(fileName).inserted // false the first time, true on later calls
         }
     }
 
