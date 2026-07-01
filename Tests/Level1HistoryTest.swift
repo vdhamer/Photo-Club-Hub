@@ -36,8 +36,8 @@ private let level1HistoryAvailable: Bool = {
         guard #available(iOS 18, macOS 15, *) else { return } // compiler-only; unreachable when enabled
 
         let history = Level1History()
-        #expect(history.isVisited(fileName: "root") == false) // first encounter
-        #expect(history.isVisited(fileName: "root") == true)  // already recorded
+        #expect(history.isVisitedBefore(fileName: "root") == false) // first encounter
+        #expect(history.isVisitedBefore(fileName: "root") == true)  // already recorded
     }
 
     // Distinct file names are tracked independently — visiting one does not affect another.
@@ -47,10 +47,10 @@ private let level1HistoryAvailable: Bool = {
         guard #available(iOS 18, macOS 15, *) else { return } // compiler-only; unreachable when enabled
 
         let history = Level1History()
-        #expect(history.isVisited(fileName: "fileA") == false)
-        #expect(history.isVisited(fileName: "fileB") == false) // not affected by fileA
-        #expect(history.isVisited(fileName: "fileA") == true)  // fileA is now known
-        #expect(history.isVisited(fileName: "fileB") == true)  // fileB is now known
+        #expect(history.isVisitedBefore(fileName: "fileA") == false)
+        #expect(history.isVisitedBefore(fileName: "fileB") == false) // not affected by fileA
+        #expect(history.isVisitedBefore(fileName: "fileA") == true)  // fileA is now known
+        #expect(history.isVisitedBefore(fileName: "fileB") == true)  // fileB is now known
     }
 
     // clear() resets the guard: a previously visited file is considered unvisited again.
@@ -60,12 +60,12 @@ private let level1HistoryAvailable: Bool = {
         guard #available(iOS 18, macOS 15, *) else { return } // compiler-only; unreachable when enabled
 
         let history = Level1History()
-        #expect(history.isVisited(fileName: "museums") == false)
-        #expect(history.isVisited(fileName: "museums") == true)
+        #expect(history.isVisitedBefore(fileName: "museums") == false)
+        #expect(history.isVisitedBefore(fileName: "museums") == true)
 
         history.clear()
 
-        #expect(history.isVisited(fileName: "museums") == false) // all previous visits are cleared by clear()
+        #expect(history.isVisitedBefore(fileName: "museums") == false) // all previous visits are cleared by clear()
     }
 
     // Matching is case-sensitive: names differing only in case are treated as different files.
@@ -76,8 +76,8 @@ private let level1HistoryAvailable: Bool = {
         guard #available(iOS 18, macOS 15, *) else { return } // compiler-only; unreachable when enabled
 
         let history = Level1History()
-        #expect(history.isVisited(fileName: "Museums") == false)
-        #expect(history.isVisited(fileName: "museums") == false) // different case → different file
+        #expect(history.isVisitedBefore(fileName: "Museums") == false)
+        #expect(history.isVisitedBefore(fileName: "museums") == false) // different case → different file
     }
 
 }

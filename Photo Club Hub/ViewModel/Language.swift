@@ -81,7 +81,7 @@ extension Language {
                                           isoCode: String,
                                           nameENOptional: String? = nil
                                          ) -> Language {
-        let isoCode = isoCode.uppercased() // "en" -> "EN" in case we don't receive uppercase input
+        let isoCode = isoCode.uppercased() // "en" → "EN" in case we don't receive uppercase input
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()

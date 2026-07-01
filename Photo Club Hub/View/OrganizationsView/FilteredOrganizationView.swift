@@ -70,7 +70,7 @@ struct FilteredOrganizationView: View {
                     do {
                         let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
                             try await reverseGeocode(coordinates: coordinates)
-                        localizedTown = locality ?? town // unlocalized as fallback for localized -> String
+                        localizedTown = locality ?? town // unlocalized as fallback for localized → String
                         localizedCountry = nation // optional String
                         await updateTownCountry(clubName: clubName, town: town,
                                                 localizedTown: localizedTown, localizedCountry: localizedCountry)
