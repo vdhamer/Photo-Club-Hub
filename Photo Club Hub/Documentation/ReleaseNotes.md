@@ -21,6 +21,8 @@ STRUCTURAL
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
 * Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
 - Added missing uniqueness constraint
+- Significantly increased number of tests
+- JSON files used only for testing are no longer shipped inside the app
 
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
