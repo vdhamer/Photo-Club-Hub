@@ -180,6 +180,12 @@ private let level1HistoryAvailable: Bool = {
     // Included files load asynchronously on a context this test doesn't own, so rather than a timing
     // hack we await the included context's save via NSManagedObjectContextDidSave (the event-driven
     // pattern recommended for async events in tests).
+    //
+    // SKIPPED IN THE TEST PLAN PENDING #760. The Task + global NSManagedObjectContextDidSave wait below is a
+    // fragile stand-in for a real completion handle: under a parallel run the one-shot notification can fire
+    // before this observer subscribes, so the await never returns and the whole run hangs. The fix is to make
+    // the Level 1 include-loader awaitable (Task -> TaskGroup) so this test can `await` the load directly;
+    // once #760 lands, remove the skippedTests entry in Photo Club Hub.xctestplan.
     @Test("An included file is loaded into the injected store",
           .enabled(if: level1HistoryAvailable, "Level1History requires iOS 18 / macOS 15"))
     func includeLoadsIntoInjectedStore() async {
