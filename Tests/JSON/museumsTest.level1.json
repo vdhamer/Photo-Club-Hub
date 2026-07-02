@@ -1,6 +1,6 @@
 {
     "level1Header": {
-        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsGB.level1.json",
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsTest.level1.json",
         "level1URLIncludes": [ ],
         "maintainerEmail": "vdhamer@msn.com"
     },

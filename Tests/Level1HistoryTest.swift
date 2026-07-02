@@ -16,9 +16,8 @@ import Testing
 // These tests construct their OWN Level1History instances rather than touching the process-wide
 // Level1JsonReader.level1History singleton, so they are fully isolated and deterministic.
 //
-// Level1History is annotated with @available(iOS 18, macOS 15, *). These tests are shared with the
-// macOS-only Photo Club Hub HTML repo (which runs on a recent macOS release), but they also build for
-// iOS, where the app supports iOS 17.x — an OS on which Level1History is unavailable. Each test is
+// Level1History is annotated with @available(iOS 18, macOS 15, *). The app supports iOS 17.x — an OS on
+// which Level1History is unavailable — and the test target matches that deployment target. Each test is
 // therefore gated with an `.enabled(if:)` condition trait so that on iOS 17 it is reported as
 // *skipped* rather than as a silent pass. (Swift Testing's @Test/@Suite macros cannot be attached to
 // @available declarations, so a trait is used instead.) The in-body `#available` guard is also needed to
