@@ -2,7 +2,7 @@
     "level1Header": {
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMin.level1.json",
         "maintainerEmail": "vdhamer@msn.com"
-    }
+    },
 
     "clubs": [
 
@@ -30,7 +30,7 @@
             "coordinates": {
                 "latitude": 50.55221,
                 "longitude": 8.53346
-            }
+            },
             "optional": {
             }
         }
