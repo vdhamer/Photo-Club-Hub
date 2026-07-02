@@ -11,11 +11,17 @@ import CoreData // for NSManagedObjectContext
 
 @MainActor @Suite("Tests the Core Data PhotographerExpertise class") struct PhotographerExpertiseTest {
 
+    private let testPersistenceController: PersistenceController
     private let context: NSManagedObjectContext
     private let photographer: Photographer
 
     init () {
-        context = PersistenceController.shared.container.viewContext
+        // Use a private in-memory store rather than PersistenceController.shared. Sharing the singleton
+        // coordinator across parallel suites deadlocks (main-queue performAndWait fetches contending with
+        // background-context saves) and lets suites pollute each other's records. See issue #756.
+        testPersistenceController = PersistenceController(inMemory: true)
+        context = testPersistenceController.container.viewContext
+        context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 
         let personName = PersonName(givenName: String.random(length: 10), infixName: "", familyName: "UnitTestDummy")
         let optionalFields = PhotographerOptionalFields()

@@ -13,9 +13,24 @@ import CoreData // for NSMergePolicy
 
     let imageForUnknownClub: String = "http://www.vdHamer.com/fgWaalre/Empty_Website/config.xml"
 
+    private let testPersistenceController: PersistenceController
+
+    init () {
+        // Use a private in-memory store rather than PersistenceController.shared. Sharing the singleton
+        // coordinator across parallel suites deadlocks (background-context saves contending with other
+        // suites' main-queue performAndWait fetches) and lets suites pollute each other's records. See #756.
+        testPersistenceController = PersistenceController(inMemory: true)
+        let viewContext = testPersistenceController.container.viewContext
+        viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        // Seed constants used by the provider and Organization creation. Must run on the main-queue
+        // viewContext (initConstants does a bare save()). See #749.
+        Language.initConstants(context: viewContext)
+        OrganizationType.initConstants(context: viewContext)
+    }
+
     @Test("Refresh featured image") func urlOfImageIndex_unknownClub() async {
 
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        let bgContext = testPersistenceController.container.newBackgroundContext()
         bgContext.name = "RefreshFeaturedImageTests"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
