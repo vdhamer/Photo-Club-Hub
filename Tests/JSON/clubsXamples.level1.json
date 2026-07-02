@@ -1,0 +1,57 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsXamples.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "clubs": [
+        
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Xample Club With Minimal Data",
+                "nickName": "XampleMin"
+            },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/XampleMin.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Xample Club With Maximal Data",
+                "nickName": "XampleMax"
+            },
+            "coordinates": {
+                "latitude": 51.92275,
+                "longitude": 4.47972
+            },
+            "optional": {
+                "website": "https://www.xamplemax.nl",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
+                "level2URL": "https://www.xamplemax.nl/XampleMax.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Deze clubbeschrijving kan overschreven worden door een remark veld in club.level2.json"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "A remark here about the club can be overruled by a remark in club's level2.json file."
+                    }
+                ],
+                "maintainerEmail": "admin@xamplemax.nl",
+                "nlSpecific": {
+                    "fotobondNumber": 9999
+                }
+            }
+        }
+        
+    ]
+}

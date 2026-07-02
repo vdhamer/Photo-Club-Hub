@@ -23,6 +23,8 @@ STRUCTURAL
 - Added missing uniqueness constraint
 - Significantly increased number of tests
 - JSON files used only for testing are no longer shipped inside the app
+- Tests didn't support iOS 17 (was accidentally set to 18+)
+- Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
 
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md

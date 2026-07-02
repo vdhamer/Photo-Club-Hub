@@ -1,0 +1,48 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/hierarchyDemo.level1.json",
+        "level1URLIncludes": [
+            "https://www.fcDeGender.nl/clubs/childA.level1.url",
+            "https://www.fcDeGender.nl/clubs/childB.level1.url"
+        ],
+        "maintainerEmail": "john@fcDeGender.nl"
+    },
+    
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Template Club With Minimal Data",
+                "nickName": "TemplateMin"
+            },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/TemplateMin.level2.json"
+            }
+        }
+        
+    ],
+    
+    "museums": [
+
+        {
+            "idPlus": {
+                "town": "Wetzlar",
+                "fullName": "Ernst Leitz Museum",
+                "nickName": "LeicaMuseum"
+            },
+            "coordinates": {
+                "latitude": 50.55230,
+                "longitude": 8.53335
+            },
+            "optional": {
+            }
+        }
+
+    ]
+}
+
