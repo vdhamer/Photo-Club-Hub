@@ -13,6 +13,13 @@ struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
 
+    // True while the unit-test bundle is running. Set via IS_RUNNING_TESTS in Photo Club Hub.xctestplan.
+    // Used to skip the production auto-load so tests don't race the app loader into PersistenceController.shared.
+    // This is a self-defined signal, so it works for Swift Testing, XCTest, and `swift test` alike (see issue #756).
+    var isRunningTests: Bool {
+        ProcessInfo.processInfo.environment["IS_RUNNING_TESTS"] == "1"
+    }
+
     init() {
 
         // Skip heavy app init when running under Xcode Previews to keep #Preview rendering alive.
@@ -45,7 +52,7 @@ struct PhotoClubHubApp: App {
                 PreludeView1718()
                     .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                     .onAppear {
-                        if !Settings.manualDataLoading {
+                        if !Settings.manualDataLoading && !isRunningTests {
                             PhotoClubHubApp.loadClubsAndMembers()
                         }
                     }
@@ -53,7 +60,7 @@ struct PhotoClubHubApp: App {
                 PreludeView2627()
                     .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                     .onAppear {
-                        if !Settings.manualDataLoading {
+                        if !Settings.manualDataLoading && !isRunningTests {
                             PhotoClubHubApp.loadClubsAndMembers()
                         }
                     }

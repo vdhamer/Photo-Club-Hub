@@ -20,6 +20,10 @@
     ],
     "environmentVariableEntries" : [
       {
+        "key" : "IS_RUNNING_TESTS",
+        "value" : "1"
+      },
+      {
         "key" : "SQLITE_ENABLE_THREAD_ASSERTIONS",
         "value" : "1"
       },
