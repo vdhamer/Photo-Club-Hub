@@ -13,7 +13,6 @@ README SCREEN
 
 STRUCTURAL
 
-* TODO: add test for Include feature
 * Merging of 2627 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
 * Renaming of filenames and symbols ending on 2626 to 2627 (iOS 27.0 betas are now available)
 * Tested with MacOS 26.5.1, Xcode 27.0 beta (27A5209h), Xcode 26.6 (17F113), iOS 27.0 beta (24A5370g), iOS 26.5.2 and  SwiftLint 0.65
@@ -25,6 +24,7 @@ STRUCTURAL
 - JSON files used only for testing are no longer shipped inside the app
 - Tests didn't support iOS 17 (was accidentally set to 18+)
 - Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
+- Running automated testing has become more robust.
 
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
