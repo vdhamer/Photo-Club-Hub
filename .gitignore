@@ -147,3 +147,6 @@ iOSInjectionProject/
 
 ~$*.xlsx
 *.xlsx
+
+# Claude Code personal (per-project) settings
+.claude/settings.local.json
