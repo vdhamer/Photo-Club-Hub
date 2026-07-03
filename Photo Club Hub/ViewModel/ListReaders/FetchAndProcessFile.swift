@@ -7,6 +7,16 @@
 
 import CoreData // for NSManagedObjectContext
 
+/// Groups the file-description + fetch-behavior parameters shared by every FetchAndProcessFile
+/// entry point (issue #760 left these as a 5-way parameter spread across three signatures).
+struct FileFetchOptions: Sendable {
+    let fileType: String          // file extension to load, e.g. "json"
+    let fileSubType: String       // name component between base and extension, e.g. "level1"
+    let useOnlyInBundleFile: Bool // if true, skip the remote fetch and only read from the bundle
+    let isBeingTested: Bool       // forwarded to the processor to adjust behavior during tests
+    let includeFilePath: [String] // recursion path like ["root","museums"]; used to detect loops
+}
+
 /// Retrieves a data file from a remote source with a local bundle fallback and
 /// forwards the raw text to a caller-supplied processor (to allow reuse for Level 0, 1, and 2).
 ///
