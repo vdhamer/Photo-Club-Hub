@@ -91,12 +91,16 @@ extension PhotoClubHubApp {
 
         // MARK: - Level 1
 
-        // load list of organizations from root.Level1.json file
-        _ = Level1JsonReader(
-            bgContext: makeBgContext(ctxName: "Level 1 loader for root"),
-            fileName: "root_",
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
+        // Load list of organizations from root_.Level1.json file (which Includes additional Level 1 child files).
+        // `load()` is `awaitable` so tests can await the loading of both `root_` and all its Includes(issue #760);
+        // the app itslef doesn't need that, so it launches load() from a Task and sticks to fire-and-forget behavior.
+        Task {
+            await Level1JsonReader.load(
+                bgContext: makeBgContext(ctxName: "Level 1 loader for root_"),
+                fileName: "root_",
+                isBeingTested: isBeingTested,
+                useOnlyInBundleFile: useOnlyInBundleFile)
+        }
 
         // MARK: - Level 2
 
