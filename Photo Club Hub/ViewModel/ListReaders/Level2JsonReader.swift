@@ -23,11 +23,11 @@ public class Level2JsonReader { // normally running on a background thread
                                 bgContext: bgContext,
                                 fileSelector: FileSelector(organizationIdPlus: organizationIdPlus,
                                                            isBeingTested: isBeingTested),
-                                fileType: "json",
-                                fileSubType: "level2", // "fgDeGender.level2.json"
-                                useOnlyInBundleFile: useOnlyInBundleFile,
-                                isBeingTested: isBeingTested,
-                                includeFilePath: includeFilePath,
+                                fileFetchOptions: FileFetchOptions(fileType: "json",
+                                                                   fileSubType: "level2", // "fgDeGender.level2.json"
+                                                                   useOnlyInBundleFile: useOnlyInBundleFile,
+                                                                   isBeingTested: isBeingTested,
+                                                                   includeFilePath: includeFilePath),
                                 fileContentProcessor: Level2JsonReader.readRootLevel2Json
         )
     }

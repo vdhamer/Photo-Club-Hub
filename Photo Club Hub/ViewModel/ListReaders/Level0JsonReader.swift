@@ -21,10 +21,11 @@ public class Level0JsonReader {
         _ = FetchAndProcessFile(
             bgContext: bgContext,
             fileSelector: FileSelector(fileName: fileName, isBeingTested: isBeingTested),
-            fileType: "json", fileSubType: "level0", // "root.level0.json"
-            useOnlyInBundleFile: useOnlyInBundleFile,
-            isBeingTested: isBeingTested,
-            includeFilePath: includeFilePath,
+            fileFetchOptions: FileFetchOptions(fileType: "json",
+                                               fileSubType: "level0", // "root.level0.json"
+                                               useOnlyInBundleFile: useOnlyInBundleFile,
+                                               isBeingTested: isBeingTested,
+                                               includeFilePath: includeFilePath),
             fileContentProcessor: Level0JsonReader.readRootLevel0Json
         )
     }
