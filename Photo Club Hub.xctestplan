@@ -46,16 +46,6 @@
   "testTargets" : [
     {
       "parallelizable" : true,
-      "skippedTests" : {
-        "suites" : [
-          {
-            "name" : "Level1JsonReaderTests",
-            "testFunctions" : [
-              "includeLoadsIntoInjectedStore()"
-            ]
-          }
-        ]
-      },
       "target" : {
         "containerPath" : "container:Photo Club Hub.xcodeproj",
         "identifier" : "D0E868992D693A3600F2A03A",
