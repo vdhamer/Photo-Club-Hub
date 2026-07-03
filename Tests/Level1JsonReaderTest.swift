@@ -20,10 +20,14 @@ private let level1HistoryAvailable: Bool = {
     if #available(iOS 18, macOS 15, *) { true } else { false }
 }()
 
-// The suite is @MainActor and its synchronous tests never suspend, to prevent them from interleaving with
-// each other (no need to rely on the .serialized trait, which per Swift Testing only orders parameterized
-// cases anyway). Isolation from the app's concurrent background loading comes from the use of a per-test
-// IN-MEMORY store, not from execution order.
+// The suite is @MainActor and its first three tests are synchronous (they never suspend), which prevents
+// their bodies from interleaving. That is load-bearing beyond Core Data isolation: those tests share the
+// process-global Level1JsonReader.level1History, and two of them load the same file ("clubTemplates") —
+// if their bodies could interleave, one test's load could mark the file "visited" mid-way through the
+// other's, firing the duplicate-file ifDebugFatalError. So do NOT migrate them to `await load(...)` until
+// level1History is injectable (follow-up in #760). includeLoadsIntoInjectedStore() does suspend, but its
+// data files are unique to that test, so it cannot collide. Isolation from the app's concurrent background
+// loading comes from the use of a per-test IN-MEMORY store, not from execution order.
 @MainActor @Suite("Tests the Level 1 JSON reader") struct Level1JsonReaderTests {
 
     // MARK: - Init
@@ -69,8 +73,8 @@ private let level1HistoryAvailable: Bool = {
     // For a file without Includes the entire parse-and-save runs inside that single block
     // on the context's serial queue, so enqueueing an empty `performAndWait` afterwards acts as a barrier:
     // it cannot run until the load block has finished.
-    // (Files WITH includes spawn further work on other contexts — those are
-    // awaited via NSManagedObjectContextDidSave in includeLoadsIntoInjectedStore() below.)
+    // (Files WITH includes spawn further work on other contexts — includeLoadsIntoInjectedStore()
+    // below covers that case by awaiting Level1JsonReader.load(...) instead.)
     private func waitForLoad(on bgContext: NSManagedObjectContext) {
         bgContext.performAndWait { }
     }
@@ -177,41 +181,24 @@ private let level1HistoryAvailable: Bool = {
     //     background loading in the shared (global) level1History — a collision there also triggers a fatalError
     //     as a "duplicate file in Include tree".
     //
-    // Included files load asynchronously on a context this test doesn't own, so rather than a timing
-    // hack we await the included context's save via NSManagedObjectContextDidSave (the event-driven
-    // pattern recommended for async events in tests).
-    //
-    // SKIPPED IN THE TEST PLAN PENDING #760. The Task + global NSManagedObjectContextDidSave wait below is a
-    // fragile stand-in for a real completion handle: under a parallel run the one-shot notification can fire
-    // before this observer subscribes, so the await never returns and the whole run hangs. The fix is to make
-    // the Level 1 include-loader awaitable (Task -> TaskGroup) so this test can `await` the load directly;
-    // once #760 lands, remove the skippedTests entry in Photo Club Hub.xctestplan.
+    // Included files load asynchronously on contexts this test doesn't own, so the test awaits
+    // Level1JsonReader.load(...), which returns only after the whole Include tree — including the
+    // IncludeChild save — has completed (issue #760). The `await` IS the happens-before guarantee; no
+    // NotificationCenter spying, no unstructured Task {}, no Task.yield() timing hacks.
     @Test("An included file is loaded into the injected store",
           .enabled(if: level1HistoryAvailable, "Level1History requires iOS 18 / macOS 15"))
     func includeLoadsIntoInjectedStore() async {
         guard #available(iOS 18, macOS 15, *) else { return } // compiler-only; unreachable when enabled
         clearVisitedHistory()
 
-        let container = testPersistenceController.container
         let bgContext = makeBackgroundContext(named: "IncludeParentTest")
 
-        // Await the save of the included IncludeChild context. Start observing BEFORE triggering the load
-        // so the notification can't be missed; the yield lets the observer register before the
-        // (asynchronous) include load fires. The context name is unique to this test's data files — the app
-        // never loads IncludeChild — so it alone identifies the save we care about.
-        let childSaved = Task {
-            // Discard the matched Notification (it is not Sendable) so this Task's result is Void.
-            _ = await NotificationCenter.default.notifications(named: .NSManagedObjectContextDidSave)
-                .first { ($0.object as? NSManagedObjectContext)?.name == "Level 1 loader for IncludeChild" }
-        }
-        await Task.yield()
-
-        _ = Level1JsonReader(bgContext: bgContext,
-                             fileName: "IncludeParent",
-                             isBeingTested: isBeingTested,
-                             useOnlyInBundleFile: true,
-                             usedContainer: container) // includes load into the test store
-        _ = await childSaved.value
+        await Level1JsonReader.load(bgContext: bgContext,
+                                    fileName: "IncludeParent",
+                                    isBeingTested: isBeingTested,
+                                    useOnlyInBundleFile: true,
+                                    usedContainer: testPersistenceController.container)
+        // ^ usedContainer routes the included files' loads into the test's in-memory store
 
         // The club from the *included* IncludeChild.level1.json must now be in the injected store.
         let club = allOrganizations().first { $0.nickName == "IncludeChild" }
