@@ -25,9 +25,10 @@ private let level1HistoryAvailable: Bool = {
 // process-global Level1JsonReader.level1History, and two of them load the same file ("clubTemplates") —
 // if their bodies could interleave, one test's load could mark the file "visited" mid-way through the
 // other's, firing the duplicate-file ifDebugFatalError. So do NOT migrate them to `await load(...)` until
-// level1History is injectable (follow-up in #760). includeLoadsIntoInjectedStore() does suspend, but its
-// data files are unique to that test, so it cannot collide. Isolation from the app's concurrent background
-// loading comes from the use of a per-test IN-MEMORY store, not from execution order.
+// level1History is injectable (follow-up in #760). includeLoadsIntoInjectedStore() and
+// cyclicIncludeTerminates() do suspend, but their data files are unique to those tests,
+// so they cannot collide. Isolation from the app's concurrent background loading
+// comes from the use of a per-test IN-MEMORY store, not from execution order.
 @MainActor @Suite("Tests the Level 1 JSON reader") struct Level1JsonReaderTests {
 
     // MARK: - Init
@@ -174,9 +175,9 @@ private let level1HistoryAvailable: Bool = {
     // `usedContainer:` seam routes an included file's load into this test's in-memory store.
     //
     // These two test data files exist only for this test. That matters:
-    //   * The include tree is ACYCLIC — the recursion test data files  (recursionA/recursionB) form a
-    //     deliberate cycle, and the loop guard must handle the cycle with ifDebugFatalError, i.e. a hard
-    //     `fatalError` in DEBUG (test) builds. Cycle *detection* is covered safely by Level1HistoryTests.
+    //   * The include tree is ACYCLIC — the cyclic case (recursionA ⇄ recursionB) is exercised end-to-end
+    //     by cyclicIncludeTerminates() below, which installs an IfDebugFatalErrorSpy so the loop guard's
+    //     DEBUG-mode fatalError is recorded instead of crashing the test run.
     //   * The file names are ones the APP never loads, so they can't collide with the app's concurrent
     //     background loading in the shared (global) level1History — a collision there also triggers a fatalError
     //     as a "duplicate file in Include tree".
@@ -205,6 +206,43 @@ private let level1HistoryAvailable: Bool = {
         #expect(club != nil)
         #expect(club?.fullName == "Include Child Club")
         #expect(club?.town == "Test Valley")
+    }
+
+    // Read recursionA.level1.json, which Includes recursionB.level1.json, which in turn Includes
+    // recursionA.level1.json again — a deliberate A ⇄ B cycle. The level1History guard must detect
+    // the revisit of recursionA and cut the recursion short instead of looping forever.
+    //
+    // In a DEBUG (test) build, this guard reacts with ifDebugFatalError, a hard fatalError that would
+    // kill the test run. So this test installs an IfDebugFatalErrorSpy: while installed,
+    // ifDebugFatalError records its message and returns (the RELEASE-mode path) instead of crashing.
+    // As a bonus, the spy lets the test assert that the loop guard actually fired.
+    //
+    // The .timeLimit is the "terminates" assertion: if the loop guard ever regresses, the include
+    // recursion would otherwise hang the test and run indefinitely rather than fail.
+    @Test("A cyclic Include (recursionA ⇄ recursionB) terminates",
+          .enabled(if: level1HistoryAvailable, "Level1History requires iOS 18 / macOS 15"),
+          .timeLimit(.minutes(1)))
+    func cyclicIncludeTerminates() async {
+        guard #available(iOS 18, macOS 15, *) else { return } // compiler-only; unreachable when enabled
+        clearVisitedHistory()
+
+        let spy = makeIfDebugFatalErrorSpy() // keeps the loop guard's fatalError from killing the test run
+        installIfDebugFatalErrorSpy(spy)
+        defer { removeIfDebugFatalErrorSpy() } // spy is process-global, so remove it promptly
+
+        let bgContext = makeBackgroundContext(named: "recursionATest")
+        await Level1JsonReader.load(bgContext: bgContext,
+                                    fileName: "recursionA",
+                                    isBeingTested: isBeingTested,
+                                    useOnlyInBundleFile: true,
+                                    usedContainer: testPersistenceController.container)
+
+        // Reaching this line at all means the A → B → A recursion terminated (the await returned).
+        // The loop guard must have fired when recursionA was revisited:
+        #expect(spy.messages.contains { $0.contains("Infinite loop or duplicate file") })
+
+        // recursionB itself was still processed normally — exactly once: its lone club is in the store.
+        #expect(allOrganizations().filter { $0.nickName == "Antartica" }.count == 1)
     }
 
 }
