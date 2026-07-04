@@ -30,6 +30,9 @@
 		375B99212F9E287A002EAD0F /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B99202F9E287A002EAD0F /* ReadmeView.swift */; };
 		3761E2AC2FEB223D003D4514 /* String+CapitalizeFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A41277F731C0049AB84 /* String+CapitalizeFirstLetter.swift */; };
 		376275872FF93C0D0047E77C /* IfDebugFatalErrorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376275862FF93C0D0047E77C /* IfDebugFatalErrorSpy.swift */; };
+		3762771B2FF955470047E77C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771A2FF955470047E77C /* MainTabView.swift */; };
+		3762771E2FF9560B0047E77C /* MainTabView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771D2FF9560B0047E77C /* MainTabView1718.swift */; };
+		376277202FF956140047E77C /* MainTabView2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771F2FF956140047E77C /* MainTabView2627.swift */; };
 		37641D972FAFF177005D84F6 /* PhotographersThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37641D962FAFF177005D84F6 /* PhotographersThumbnail.swift */; };
 		376855672F2BA327002590F6 /* fegGemert.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 376855662F2BA327002590F6 /* fegGemert.level2.json */; };
 		376855692F2BA418002590F6 /* FEGGemertMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */; };
@@ -210,6 +213,9 @@
 		375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SemanticColor+palette.swift"; sourceTree = "<group>"; };
 		375B99202F9E287A002EAD0F /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
 		376275862FF93C0D0047E77C /* IfDebugFatalErrorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfDebugFatalErrorSpy.swift; sourceTree = "<group>"; };
+		3762771A2FF955470047E77C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		3762771D2FF9560B0047E77C /* MainTabView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView1718.swift; sourceTree = "<group>"; };
+		3762771F2FF956140047E77C /* MainTabView2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView2627.swift; sourceTree = "<group>"; };
 		37641D962FAFF177005D84F6 /* PhotographersThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersThumbnail.swift; sourceTree = "<group>"; };
 		376855662F2BA327002590F6 /* fegGemert.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fegGemert.level2.json; sourceTree = "<group>"; };
 		376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEGGemertMembersProvider.swift; sourceTree = "<group>"; };
@@ -468,6 +474,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3762771C2FF9560B0047E77C /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				3762771D2FF9560B0047E77C /* MainTabView1718.swift */,
+				3762771F2FF956140047E77C /* MainTabView2627.swift */,
+				3762771A2FF955470047E77C /* MainTabView.swift */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
 		37BBBB342FE9DCA500DFD59E /* Expertise */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,6 +704,7 @@
 		D0831A18277F72110049AB84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3762771C2FF9560B0047E77C /* MainTabView */,
 				37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */,
 				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
 				D081655C278612470078AB16 /* MemberPortfoliosView */,
@@ -1209,6 +1226,7 @@
 				37C61B8F2E72091000C5BAEF /* FotokringSintMichielsgestel.swift in Sources */,
 				D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */,
 				D0C6E95529577921001E5CE9 /* DebugPanel1718.swift in Sources */,
+				3762771B2FF955470047E77C /* MainTabView.swift in Sources */,
 				37415B222F9D5E96004B4647 /* ReadmeSectionOnConcept.swift in Sources */,
 				D087540C2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift in Sources */,
 				37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */,
@@ -1310,10 +1328,12 @@
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				3722DCA02F98CE9000F2851C /* ImageChoice.swift in Sources */,
 				370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */,
+				3762771E2FF9560B0047E77C /* MainTabView1718.swift in Sources */,
 				37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */,
 				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */,
+				376277202FF956140047E77C /* MainTabView2627.swift in Sources */,
 				37A2A0E22FAA973400EF39A1 /* OrganizationViewInfo.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */,
 				37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */,
