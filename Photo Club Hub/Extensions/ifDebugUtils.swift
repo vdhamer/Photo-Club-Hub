@@ -5,8 +5,7 @@
 //  Created by Peter van den Hamer on 22/03/2023.
 //
 
-import Foundation       // for NSLock (only used on iOS 17)
-import Synchronization  // for Mutex (only used on iOS 18+)
+import Foundation       // for NSLock
 
 // MARK: - ifDebugPrint
 
@@ -57,4 +56,32 @@ public var inDebugMode: Bool {
     #else
         false
     #endif
+}
+
+// MARK: - test spy for ifDebugFatalError fatalError handling during testing
+
+// The installed spy is process-global: while it is installed, EVERY ifDebugFatalError — including one from
+// unrelated code running in parallel — is recorded rather than crashing. Tests should therefore install a
+// spy only briefly, and remove it in a `defer`.
+// NSLock (not Mutex) because ifDebugFatalError itself must be able to run on iOS 17.
+private let installedSpyLock = NSLock()
+// swiftlint:disable:next identifier_name
+nonisolated(unsafe) private var installedSpy_: (any IfDebugFatalErrorSpying)? // only touch under installedSpyLock
+
+public func installIfDebugFatalErrorSpy(_ ifDebugFatalErrorSpy: any IfDebugFatalErrorSpying) {
+    installedSpyLock.lock()
+    defer { installedSpyLock.unlock() }
+    installedSpy_ = ifDebugFatalErrorSpy
+}
+
+public func removeIfDebugFatalErrorSpy() {
+    installedSpyLock.lock()
+    defer { installedSpyLock.unlock() }
+    installedSpy_ = nil
+}
+
+private func installedIfDebugFatalErrorSpy() -> (any IfDebugFatalErrorSpying)? {
+    installedSpyLock.lock()
+    defer { installedSpyLock.unlock() }
+    return installedSpy_
 }
