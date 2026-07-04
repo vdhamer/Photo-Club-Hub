@@ -477,11 +477,19 @@
 		3762771C2FF9560B0047E77C /* MainTabView */ = {
 			isa = PBXGroup;
 			children = (
-				3762771D2FF9560B0047E77C /* MainTabView1718.swift */,
+				376277EA2FF97EC40047E77C /* OldIOSVersionSupport */,
 				3762771F2FF956140047E77C /* MainTabView2627.swift */,
 				3762771A2FF955470047E77C /* MainTabView.swift */,
 			);
 			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		376277EA2FF97EC40047E77C /* OldIOSVersionSupport */ = {
+			isa = PBXGroup;
+			children = (
+				3762771D2FF9560B0047E77C /* MainTabView1718.swift */,
+			);
+			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
 		};
 		37BBBB342FE9DCA500DFD59E /* Expertise */ = {
