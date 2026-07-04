@@ -219,7 +219,7 @@ struct PreludeView2627: View {
             String(localized: "Manual loading",
                    table: "PhotoClubHub.SwiftUI",
                    comment: "Shown instead of app name in PreludeView when app is started")
-        } else if isDebug {
+        } else if inDebugMode {
             String(localized: "In debug mode",
                    table: "PhotoClubHub.SwiftUI",
                    comment: "Shown instead of app name in PreludeView when app is started")
