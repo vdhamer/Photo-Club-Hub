@@ -5,11 +5,18 @@
 //  Created by Peter van den Hamer on 22/03/2023.
 //
 
+import Foundation       // for NSLock (only used on iOS 17)
+import Synchronization  // for Mutex (only used on iOS 18+)
+
+// MARK: - ifDebugPrint
+
 public func ifDebugPrint(_ string: String) {
     #if DEBUG
         print(string)
     #endif
 }
+
+// MARK: - ifDebugFatalError
 
 public func ifDebugFatalError(_ string: String) {
     #if DEBUG
@@ -32,7 +39,9 @@ public func ifDebugFatalError(_ string: String, file: StaticString, line: UInt) 
     #endif
 }
 
-public var isDebug: Bool {
+// MARK: - inDebugMode
+
+public var inDebugMode: Bool {
     #if DEBUG
         true
     #else

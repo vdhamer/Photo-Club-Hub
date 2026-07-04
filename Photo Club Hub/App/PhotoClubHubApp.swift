@@ -193,7 +193,7 @@ extension PhotoClubHubApp {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = ctxName
-        if isDebug && Settings.errorOnCoreDataMerge {
+        if inDebugMode && Settings.errorOnCoreDataMerge {
             bgContext.mergePolicy = NSMergePolicy.error // to force detection of Core Data merge issues
         } else {
             bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // is .mergeByPropertyObjectTrump better?
