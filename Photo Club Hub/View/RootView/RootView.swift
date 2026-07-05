@@ -8,9 +8,9 @@
 import SwiftUI
 import CoreData // for NSManagedObjectContext
 
-// RootView is the app's single WindowGroup root.
+// RootView is the app's single WindowGroup root and is activated in PhotoClubHubApp.swift.
 // MainTabView is the permanent root content; PreludeView is layered on top until the user dismisses it.
-// A ZStack (rather than .fullScreenCover) is used so the prelude is part of the very first rendered
+// A ZStack (rather than .fullScreenCover) is used so the PreludeView is part of the very first rendered
 // frame — a fullScreenCover is a presentation transaction, which briefly exposes the view behind it at launch.
 struct RootView: View {
 
@@ -18,7 +18,7 @@ struct RootView: View {
 
     // Read the managed object context from the environment so it can be explicitly re-passed to MainTabView.
     // Re-passing is required because SwiftUI previews don't always propagate environment values reliably
-    // through intermediate view boundaries — explicit injection guarantees Core Data reaches @FetchRequest views.
+    // through intermediate view boundaries — explicit injection guarantees Core Data used it for @FetchRequests.
     @Environment(\.managedObjectContext) private var viewContext
 
     // True while the unit-test bundle is running. Set via IS_RUNNING_TESTS in Photo Club Hub.xctestplan.
@@ -28,19 +28,28 @@ struct RootView: View {
         ProcessInfo.processInfo.environment["IS_RUNNING_TESTS"] == "1"
     }
 
+    // True when rendering inside an Xcode #Preview. loadClubsAndMembers() must not run there:
+    // it uses PersistenceController.shared while previews inject PersistenceController.preview,
+    // and loading the Core Data model twice makes entity resolution ambiguous (@FetchRequest crashes
+    // with "A fetch request must have an entity"). PhotoClubHubApp.init has the same guard.
+    private var isRunningInPreviews: Bool {
+        ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1"
+    }
+
     var body: some View {
         ZStack {
             MainTabView()
                 .environment(\.managedObjectContext, viewContext)
-            if showPrelude {
-                preludeView
-                    .transition(.opacity) // cross-fade driven by the withAnimation in finish()
-            }
+            preludeView
+                // animated in finish(); .transition(.opacity) doesn't work because...
+                // ...PreludeView uses .compositingGroup(), a separate render layer
+                .opacity(showPrelude ? 1 : 0)
+                .allowsHitTesting(showPrelude) // stop reacting to taps and gestures
         }
         .onAppear {
-            if !Settings.manualDataLoading && !isRunningTests {
+            if !Settings.manualDataLoading && !isRunningTests && !isRunningInPreviews {
                 PhotoClubHubApp.loadClubsAndMembers()
-                print("Loading clubs and members")
+                print("Loading clubs and members in background")
             }
         }
     }
@@ -57,12 +66,16 @@ struct RootView: View {
 
     // Called by the active PreludeView when the user exits the splash screen.
     private func finish() {
-        withAnimation {
+        withAnimation(.spring(duration: 0.6)) {
             showPrelude = false
         }
     }
 
 }
+
+// MARK: - Preview
+
+// Believe it or not, this preview works.
 
 #Preview {
     RootView()
