@@ -17,137 +17,124 @@ struct PreludeView1718: View {
     private let crossHairsWidth: CGFloat = 2
     private let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
+    let onFinished: () -> Void
+
     // MARK: - State variables
     @State private var offsetInCells = OffsetVectorInCells1718(x: 8, y: 6) // # of cell units left/above imagecenter
     @State private var logScale = log2CellRepeat // value driving the animation
-    @State private var willMoveToNextScreen = false // used to navigate to next screen
     @State private var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
     @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
     @State private var debugLocation = CGPoint(x: 0, y: 0)
-    @Environment(\.horizontalSizeClass) var horSizeClass
 
     var body: some View {
-        NavigationStack { // defines navigation structure of entire app, even though you don't see navigation bar yet
-            ZStack {
-                AngularGradient(gradient: Gradient(colors: [.white, .fgwGreen,
-                                                            .white, .fgwBlue,
-                                                            .white, .fgwGreen,
-                                                            .white, .fgwRed,
-                                                            .white]
-                ), center: .center)
-                .saturation(0.5)
-                .brightness(0.05)
-                .ignoresSafeArea()
-                .onTapGesture { // if user taps background, exit animation loop
-                    withAnimation(.easeInOut(duration: 7)) {
-                        willMoveToNextScreen = true
-                    }
-                }
-                .navigate(to: MemberPortfolioView()
-                                .navigationBarTitle(String(localized: "Members",
-                                                           table: "PhotoClubHub.SwiftUI",
-                                                           comment: "Title of page showing member portfolios")),
-                          when: $willMoveToNextScreen,
-                          horSizeClass: horSizeClass)
-
-                GeometryReader { geo in
-                    ZStack(alignment: .center) {
-                        ZStack {
-                            Image("2021_FotogroepWaalre_058_square")
-                                .resizable()
-                                .scaledToFit()
-                                .brightness(logScale == 0  ? 0.1 : 0.2)
-                            Group {
-                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // upper left part of logo
-                                         relPixelSize: PreludeView1718.squareSize,
-                                         offsetPoint: .zero)
-                                .fill(.fgwGreen)
-                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // upper right part of logo
-                                         relPixelSize: PreludeView1718.squareSize,
-                                         offsetPoint: .top)
-                                .fill(.fgwBlue)
-                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // lower left part of logo
-                                         relPixelSize: PreludeView1718.squareSize,
-                                         offsetPoint: .leading)
-                                .fill(.fgwRed)
-                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // lower righ part of logo
-                                         relPixelSize: PreludeView1718.squareSize,
-                                         offsetPoint: .center)
-                                .fill(.fgwGreen)
-                            }
-                            .blendMode(.multiply)
-                            .opacity(logScale == 0  ? 0.5 : 1)
-                        }
-                        .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
-                        .offset(offset(frame: geo.size)) // does the panning
-                        .frame(width: min(geo.size.width, geo.size.height),
-                               height: min(geo.size.width, geo.size.height))
-                        .overlay(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
-                                                                                geo.size.height) * 0.15)),
-                                                  style: .continuous)
-                            .stroke(.black, lineWidth: 2))
-                        .clipShape(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
-                                                                                  geo.size.height) * 0.15)),
-                                                    style: .continuous)) // approximate iOS app icon rounding
-                        .contentShape(Rectangle())
-                        .onTapGesture { location in
-                            debugLocation = location
-                            withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                                if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(PreludeView1718.maxCellRepeat) // zoom in
-                                    offsetInCells = intOffset(rect: geo.size, location: location)
-                                } else {
-                                    offsetInCells = OffsetVectorInCells1718(x: 0, y: 0)
-                                    logScale = 0.0 // zoom out
-                                }
-                            }
-                        }
-                        .frame(width: geo.size.width, height: geo.size.height)
-                    }
-
-                    CrossHairs1718(hidden: !crosshairsVisible)
-                        .stroke(crossHairsColor, lineWidth: crossHairsWidth)
-                        .blendMode(.normal)
-
-                    EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
-                                offset: $offsetInCells,
-                                location: $debugLocation,
-                                size: geo.size,
-                                debugPanelVisible: $debugPanelVisible,
-                                crosshairsVisible: $crosshairsVisible)
-
-                    Text(preludeText)
-                        .foregroundColor(.black)
-                        .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
-                        .kerning((0/3)*(min(geo.size.width, geo.size.height)/800)) // was 140/3
-                        .offset(x: (0/3)*(min(geo.size.width, geo.size.height)/800)) // was 60/3
-                        .opacity(logScale == 0  ? 0 : 1)
-                        .frame(width: geo.size.width, height: geo.size.height)
-                        .onTapGesture { location in
-                            debugLocation = location // for debugging only
-                            ifDebugPrint("Tap location: (\(location.x),\(location.y))")
-                            withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                                if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(PreludeView1718.maxCellRepeat) // zoom in
-                                    offsetInCells = intOffset(rect: geo.size, location: location)
-                                } else {
-                                    offsetInCells = OffsetVectorInCells1718(x: 0, y: 0)
-                                    logScale = 0.0 // zoom out
-                                }
-                            }
-                        }
-                        .dynamicTypeSize(DynamicTypeSize.large ...
-                                         DynamicTypeSize.large) // don't let DynamicType change WAALRE size
-
-                } // GeometryReader
-                .compositingGroup() // This triggers use of Metal framework
-                // .drawingGroup() would also trigger use of Metal framework but gives fopen() warnings on first run
-                .padding()
-
+        ZStack {
+            AngularGradient(gradient: Gradient(colors: [.white, .fgwGreen,
+                                                        .white, .fgwBlue,
+                                                        .white, .fgwGreen,
+                                                        .white, .fgwRed,
+                                                        .white]
+            ), center: .center)
+            .saturation(0.5)
+            .brightness(0.05)
+            .ignoresSafeArea()
+            .onTapGesture { // if user taps background, exit to main tabs
+                onFinished()
             }
-            .navigationBarTitle(String(localized: "Prelude",
-                                       table: "PhotoClubHub.SwiftUI",
-                                       comment: "Title of the opening animation screen"))
+
+            GeometryReader { geo in
+                ZStack(alignment: .center) {
+                    ZStack {
+                        Image("2021_FotogroepWaalre_058_square")
+                            .resizable()
+                            .scaledToFit()
+                            .brightness(logScale == 0  ? 0.1 : 0.2)
+                        Group {
+                            LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // upper left part of logo
+                                     relPixelSize: PreludeView1718.squareSize,
+                                     offsetPoint: .zero)
+                            .fill(.fgwGreen)
+                            LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // upper right part of logo
+                                     relPixelSize: PreludeView1718.squareSize,
+                                     offsetPoint: .top)
+                            .fill(.fgwBlue)
+                            LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // lower left part of logo
+                                     relPixelSize: PreludeView1718.squareSize,
+                                     offsetPoint: .leading)
+                            .fill(.fgwRed)
+                            LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // lower righ part of logo
+                                     relPixelSize: PreludeView1718.squareSize,
+                                     offsetPoint: .center)
+                            .fill(.fgwGreen)
+                        }
+                        .blendMode(.multiply)
+                        .opacity(logScale == 0  ? 0.5 : 1)
+                    }
+                    .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
+                    .offset(offset(frame: geo.size)) // does the panning
+                    .frame(width: min(geo.size.width, geo.size.height),
+                           height: min(geo.size.width, geo.size.height))
+                    .overlay(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
+                                                                            geo.size.height) * 0.15)),
+                                              style: .continuous)
+                        .stroke(.black, lineWidth: 2))
+                    .clipShape(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
+                                                                              geo.size.height) * 0.15)),
+                                                style: .continuous)) // approximate iOS app icon rounding
+                    .contentShape(Rectangle())
+                    .onTapGesture { location in
+                        debugLocation = location
+                        withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
+                            if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
+                                logScale = log2(PreludeView1718.maxCellRepeat) // zoom in
+                                offsetInCells = intOffset(rect: geo.size, location: location)
+                            } else {
+                                offsetInCells = OffsetVectorInCells1718(x: 0, y: 0)
+                                logScale = 0.0 // zoom out
+                            }
+                        }
+                    }
+                    .frame(width: geo.size.width, height: geo.size.height)
+                }
+
+                CrossHairs1718(hidden: !crosshairsVisible)
+                    .stroke(crossHairsColor, lineWidth: crossHairsWidth)
+                    .blendMode(.normal)
+
+                EscapeHatch(onFinished: onFinished,
+                            offset: $offsetInCells,
+                            location: $debugLocation,
+                            size: geo.size,
+                            debugPanelVisible: $debugPanelVisible,
+                            crosshairsVisible: $crosshairsVisible)
+
+                Text(preludeText)
+                    .foregroundColor(.black)
+                    .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
+                    .kerning((0/3)*(min(geo.size.width, geo.size.height)/800)) // was 140/3
+                    .offset(x: (0/3)*(min(geo.size.width, geo.size.height)/800)) // was 60/3
+                    .opacity(logScale == 0  ? 0 : 1)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .onTapGesture { location in
+                        debugLocation = location // for debugging only
+                        ifDebugPrint("Tap location: (\(location.x),\(location.y))")
+                        withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
+                            if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
+                                logScale = log2(PreludeView1718.maxCellRepeat) // zoom in
+                                offsetInCells = intOffset(rect: geo.size, location: location)
+                            } else {
+                                offsetInCells = OffsetVectorInCells1718(x: 0, y: 0)
+                                logScale = 0.0 // zoom out
+                            }
+                        }
+                    }
+                    .dynamicTypeSize(DynamicTypeSize.large ...
+                                     DynamicTypeSize.large) // don't let DynamicType change WAALRE size
+
+            } // GeometryReader
+            .compositingGroup() // This triggers use of Metal framework
+            // .drawingGroup() would also trigger use of Metal framework but gives fopen() warnings on first run
+            .padding()
+
         }
 
     }
@@ -187,7 +174,7 @@ struct PreludeView1718: View {
     }
 
     struct EscapeHatch: View {
-        let willMoveToNextScreen: Binding<Bool>
+        let onFinished: () -> Void
         let offset: Binding<OffsetVectorInCells1718>
         let location: Binding<CGPoint>
         var size: CGSize
@@ -201,7 +188,7 @@ struct PreludeView1718: View {
                     DebugPanel1718(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
                     Button {
-                        willMoveToNextScreen.wrappedValue = true
+                        onFinished()
                     } label: {
                         Image(systemName: "arrowshape.turn.up.forward.circle")
                             .font(.largeTitle)
@@ -210,12 +197,12 @@ struct PreludeView1718: View {
                     .buttonStyle(.bordered)
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
-                        willMoveToNextScreen.wrappedValue = true
+                        onFinished()
                     } label: { EmptyView() }
                     .keyboardShortcut(" ", modifiers: []) // cannot support more than one shortcut
 
                     Button {
-                        willMoveToNextScreen.wrappedValue = true
+                        onFinished()
                     } label: { EmptyView() }
                     .keyboardShortcut(.cancelAction) // Esc key
 
@@ -249,11 +236,11 @@ struct OffsetVectorInCells1718 {
 struct Prelude1718_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PreludeView1718()
+            PreludeView1718(onFinished: {})
                 .previewInterfaceOrientation(.portrait)
-            PreludeView1718()
+            PreludeView1718(onFinished: {})
                 .previewInterfaceOrientation(.landscapeLeft)
-            PreludeView1718()
+            PreludeView1718(onFinished: {})
                 .environment(\.colorScheme, .dark)
         }
     }

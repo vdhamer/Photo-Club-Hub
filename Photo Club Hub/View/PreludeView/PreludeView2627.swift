@@ -19,6 +19,7 @@ struct PreludeView2627: View {
         static let crossHairsWidth: CGFloat = 2
         static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
     }
+    let onFinished: () -> Void
     private let preludeImageStore = PreludeImageStore2627()
     @State private var preludeImage = PreludeImage2627(assetName: "2024_California_R5_340-3-Edit_square",
                                                        copyright: "🙈 You shouldn't be seeing this! 🙈",
@@ -29,11 +30,9 @@ struct PreludeView2627: View {
     @State private var offsetInCells = OffsetVectorInCells2627(x: 8, y: 8) // # of cell units left/above imagecenter
     @State private var logScale = Const.log2CellRepeat // value driving the animation
     private var isZoomedOut: Bool { abs(logScale) < 0.0001 }
-    @State private var willMoveToNextScreen = false // used to navigate to next screen
     @State private var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
     @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
     @State private var debugLocation = CGPoint(x: 0, y: 0)
-    @Environment(\.horizontalSizeClass) var horSizeClass
     @Environment(\.colorScheme) var colorScheme: ColorScheme // to distinguish .light and .dark modes
 
     private func zoomInOutAnimated(_ location: CGPoint, geo: GeometryProxy) {
@@ -50,147 +49,134 @@ struct PreludeView2627: View {
     }
 
     var body: some View {
-        NavigationStack { // defines navigation structure of entire app, even though you don't see navigation bar yet
-            ZStack {
-                AngularGradient(gradient: Gradient(colors: [.white, .fgwGreen,
-                                                            .white, .fgwBlue,
-                                                            .white, .fgwGreen,
-                                                            .white, .fgwRed,
-                                                            .white]
-                ), center: .center)
-                .saturation(0.5)
-                .brightness(colorScheme == .light ? 0.05 : -0.15)
-                .ignoresSafeArea()
-                .onTapGesture { // if user taps background, exit animation loop
-                    withAnimation(.easeInOut(duration: Const.animationIntervalSeconds)) {
-                        willMoveToNextScreen = true
+        ZStack {
+            AngularGradient(gradient: Gradient(colors: [.white, .fgwGreen,
+                                                        .white, .fgwBlue,
+                                                        .white, .fgwGreen,
+                                                        .white, .fgwRed,
+                                                        .white]
+            ), center: .center)
+            .saturation(0.5)
+            .brightness(colorScheme == .light ? 0.05 : -0.15)
+            .ignoresSafeArea()
+            .onTapGesture { // if user taps background, exit to main tabs
+                onFinished()
+            }
+
+            GeometryReader { geo in
+                let side = min(geo.size.width, geo.size.height)
+                let cornerRadius = side * (UIDevice.isIPad ? 0.035 : 0.15)
+                let shape = RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+
+                ZStack(alignment: .center) {
+                    ZStack {
+
+                        Image(preludeImage.assetName)
+                            .resizable()
+                            .scaledToFit()
+                            .brightness(isZoomedOut ? 0.1 : 0.2)
+
+                        Group {
+                            LogoPath(logCellRepeat: Const.log2CellRepeat, // upper left part of logo
+                                     relPixelSize: Const.squareSize,
+                                     offsetPoint: .zero)
+                            .fill(.fgwGreen)
+                            LogoPath(logCellRepeat: Const.log2CellRepeat, // upper right part of logo
+                                     relPixelSize: Const.squareSize,
+                                     offsetPoint: .top)
+                            .fill(.fgwBlue)
+                            LogoPath(logCellRepeat: Const.log2CellRepeat, // lower left part of logo
+                                     relPixelSize: Const.squareSize,
+                                     offsetPoint: .leading)
+                            .fill(.fgwRed)
+                            LogoPath(logCellRepeat: Const.log2CellRepeat, // lower righ part of logo
+                                     relPixelSize: Const.squareSize,
+                                     offsetPoint: .center)
+                            .fill(.fgwGreen)
+                        }
+                        .blendMode(.multiply)
+                        .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
+
+                        VStack { // copyright message for image
+                            if preludeImage.copyrightAlignment.isBottom { Spacer() } // push to bottom
+                            HStack {
+                                if preludeImage.copyrightAlignment.isTrailing { Spacer() } // push to trailing
+                                Button {
+                                    // not a real button because it does nothing
+                                } label: {
+                                    Text(preludeImage.copyright)
+                                        .font(.caption)
+                                }
+                                .buttonStyle(.glass)
+                                .opacity(isZoomedOut ? 1 : -5) // hack to influence animation timing
+                                .padding(UIDevice.isIPad ? cornerRadius*0.25 : cornerRadius*0.08)
+                                if preludeImage.copyrightAlignment.isLeading { Spacer() } // push to leading
+                            }
+                            if preludeImage.copyrightAlignment.isTop { Spacer() } // push to top
+                        }
+                    }
+                    .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
+                    .offset(offset(frame: geo.size)) // does the panning
+                    .frame(width: min(geo.size.width, geo.size.height),
+                           height: min(geo.size.width, geo.size.height))
+                    .overlay(shape.stroke(.secondary, lineWidth: 2)) // border of rounded square
+                    .clipShape(shape)
+                    .contentShape(Rectangle())
+                    .highPriorityGesture( // swipe right moves to left (prev) image
+                        DragGesture(minimumDistance: 30, coordinateSpace: .local)
+                            .onEnded { value in
+                                // Rightward swipe: previous image
+                                if abs(value.translation.width) > 40 && abs(value.translation.height) < 60 {
+                                    Task {
+                                        let increment = (value.translation.width) > 0 ? -1 : 1
+                                        let img = await preludeImageStore.selectNextImage(increment: increment,
+                                                                                          sticky: false)
+                                        preludeImage = img
+                                        offsetInCells = img.whiteCoordinates
+                                    }
+                                }
+                            }
+                    )
+                    .onTapGesture { location in
+                        zoomInOutAnimated(location, geo: geo)
+                    }                        .frame(width: geo.size.width, height: geo.size.height)
+                    .task {
+                        preludeImage = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
+                        offsetInCells = preludeImage.whiteCoordinates
                     }
                 }
-                .navigate(to: MemberPortfolioView()
-                    .navigationBarTitle(String(localized: "Members",
-                                               table: "PhotoClubHub.SwiftUI",
-                                               comment: "Title of page showing member portfolios")),
-                          when: $willMoveToNextScreen,
-                          horSizeClass: horSizeClass)
 
-                GeometryReader { geo in
-                    let side = min(geo.size.width, geo.size.height)
-                    let cornerRadius = side * (UIDevice.isIPad ? 0.035 : 0.15)
-                    let shape = RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                CrossHairs2627(hidden: !crosshairsVisible)
+                    .stroke(Const.crossHairsColor, lineWidth: Const.crossHairsWidth)
+                    .blendMode(.normal)
+                    .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
+                    .accessibilityHidden(true)
 
-                    ZStack(alignment: .center) {
-                        ZStack {
+                EscapeHatch(onFinished: onFinished,
+                            offset: $offsetInCells,
+                            location: $debugLocation,
+                            size: geo.size,
+                            debugPanelVisible: $debugPanelVisible,
+                            crosshairsVisible: $crosshairsVisible)
 
-                            Image(preludeImage.assetName)
-                                .resizable()
-                                .scaledToFit()
-                                .brightness(isZoomedOut ? 0.1 : 0.2)
-
-                            Group {
-                                LogoPath(logCellRepeat: Const.log2CellRepeat, // upper left part of logo
-                                         relPixelSize: Const.squareSize,
-                                         offsetPoint: .zero)
-                                .fill(.fgwGreen)
-                                LogoPath(logCellRepeat: Const.log2CellRepeat, // upper right part of logo
-                                         relPixelSize: Const.squareSize,
-                                         offsetPoint: .top)
-                                .fill(.fgwBlue)
-                                LogoPath(logCellRepeat: Const.log2CellRepeat, // lower left part of logo
-                                         relPixelSize: Const.squareSize,
-                                         offsetPoint: .leading)
-                                .fill(.fgwRed)
-                                LogoPath(logCellRepeat: Const.log2CellRepeat, // lower righ part of logo
-                                         relPixelSize: Const.squareSize,
-                                         offsetPoint: .center)
-                                .fill(.fgwGreen)
-                            }
-                            .blendMode(.multiply)
-                            .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
-
-                            VStack { // copyright message for image
-                                if preludeImage.copyrightAlignment.isBottom { Spacer() } // push to bottom
-                                HStack {
-                                    if preludeImage.copyrightAlignment.isTrailing { Spacer() } // push to trailing
-                                    Button {
-                                        // not a real button because it does nothing
-                                    } label: {
-                                        Text(preludeImage.copyright)
-                                            .font(.caption)
-                                    }
-                                    .buttonStyle(.glass)
-                                    .opacity(isZoomedOut ? 1 : -5) // hack to influence animation timing
-                                    .padding(UIDevice.isIPad ? cornerRadius*0.25 : cornerRadius*0.08)
-                                    if preludeImage.copyrightAlignment.isLeading { Spacer() } // push to leading
-                                }
-                                if preludeImage.copyrightAlignment.isTop { Spacer() } // push to top
-                            }
-                        }
-                        .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
-                        .offset(offset(frame: geo.size)) // does the panning
-                        .frame(width: min(geo.size.width, geo.size.height),
-                               height: min(geo.size.width, geo.size.height))
-                        .overlay(shape.stroke(.secondary, lineWidth: 2)) // border of rounded square
-                        .clipShape(shape)
-                        .contentShape(Rectangle())
-                        .highPriorityGesture( // swipe right moves to left (prev) image
-                            DragGesture(minimumDistance: 30, coordinateSpace: .local)
-                                .onEnded { value in
-                                    // Rightward swipe: previous image
-                                    if abs(value.translation.width) > 40 && abs(value.translation.height) < 60 {
-                                        Task {
-                                            let increment = (value.translation.width) > 0 ? -1 : 1
-                                            let img = await preludeImageStore.selectNextImage(increment: increment,
-                                                                                              sticky: false)
-                                            preludeImage = img
-                                            offsetInCells = img.whiteCoordinates
-                                        }
-                                    }
-                                }
-                        )
-                        .onTapGesture { location in
-                            zoomInOutAnimated(location, geo: geo)
-                        }                        .frame(width: geo.size.width, height: geo.size.height)
-                        .task {
-                            preludeImage = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
-                            offsetInCells = preludeImage.whiteCoordinates
-                        }
+                Text(preludeText)
+                    .foregroundColor(.black)
+                    .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
+                    .kerning((0/3)*(min(geo.size.width, geo.size.height)/800)) // was 140/3
+                    .offset(x: (0/3)*(min(geo.size.width, geo.size.height)/800)) // was 60/3
+                    .opacity(isZoomedOut ? 0 : 1)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .onTapGesture { location in
+                        zoomInOutAnimated(location, geo: geo)
                     }
+                    .dynamicTypeSize(DynamicTypeSize.large ...
+                                     DynamicTypeSize.large) // don't let DynamicType change WAALRE size
 
-                    CrossHairs2627(hidden: !crosshairsVisible)
-                        .stroke(Const.crossHairsColor, lineWidth: Const.crossHairsWidth)
-                        .blendMode(.normal)
-                        .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
-                        .accessibilityHidden(true)
+            } // GeometryReader
+            .compositingGroup() // This triggers use of Metal framework
+            // .drawingGroup() would also trigger use of Metal framework but gives fopen() warnings on first run
+            .padding()
 
-                    EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
-                                offset: $offsetInCells,
-                                location: $debugLocation,
-                                size: geo.size,
-                                debugPanelVisible: $debugPanelVisible,
-                                crosshairsVisible: $crosshairsVisible)
-
-                    Text(preludeText)
-                        .foregroundColor(.black)
-                        .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
-                        .kerning((0/3)*(min(geo.size.width, geo.size.height)/800)) // was 140/3
-                        .offset(x: (0/3)*(min(geo.size.width, geo.size.height)/800)) // was 60/3
-                        .opacity(isZoomedOut ? 0 : 1)
-                        .frame(width: geo.size.width, height: geo.size.height)
-                        .onTapGesture { location in
-                            zoomInOutAnimated(location, geo: geo)
-                        }
-                        .dynamicTypeSize(DynamicTypeSize.large ...
-                                         DynamicTypeSize.large) // don't let DynamicType change WAALRE size
-
-                } // GeometryReader
-                .compositingGroup() // This triggers use of Metal framework
-                // .drawingGroup() would also trigger use of Metal framework but gives fopen() warnings on first run
-                .padding()
-
-            }
-            .navigationBarTitle(String(localized: "Prelude",
-                                       table: "PhotoClubHub.SwiftUI",
-                                       comment: "Title of the opening animation screen"))
         }
 
     }
@@ -231,7 +217,7 @@ struct PreludeView2627: View {
     }
 
     private struct EscapeHatch: View {
-        let willMoveToNextScreen: Binding<Bool>
+        let onFinished: () -> Void
         let offset: Binding<OffsetVectorInCells2627>
         let location: Binding<CGPoint>
         var size: CGSize
@@ -256,17 +242,17 @@ struct PreludeView2627: View {
                         .frame(width: 65, height: 65)
                         .glassEffect(.regular.interactive().tint(.blue))
                         .onTapGesture {
-                            willMoveToNextScreen.wrappedValue = true
+                            onFinished()
                         }
                         .keyboardShortcut(.defaultAction) // return key
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
-                        willMoveToNextScreen.wrappedValue = true
+                        onFinished()
                     } label: { EmptyView() }
                     .keyboardShortcut(" ", modifiers: []) // cannot support more than one shortcut
 
                     Button {
-                        willMoveToNextScreen.wrappedValue = true
+                        onFinished()
                     } label: { EmptyView() }
                     .keyboardShortcut(.cancelAction) // Esc key
 
@@ -298,16 +284,16 @@ struct OffsetVectorInCells2627 {
 
 @available(iOS 26.0, *)
 #Preview("Prelude – Portrait", traits: .portrait) {
-    PreludeView2627()
+    PreludeView2627(onFinished: {})
 }
 
 @available(iOS 26.0, *)
 #Preview("Prelude – Landscape", traits: .landscapeLeft) {
-    PreludeView2627()
+    PreludeView2627(onFinished: {})
 }
 
 @available(iOS 26.0, *)
 #Preview("Prelude – Dark Mode") {
-    PreludeView2627()
+    PreludeView2627(onFinished: {})
         .preferredColorScheme(.dark)
 }

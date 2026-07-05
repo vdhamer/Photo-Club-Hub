@@ -13,13 +13,6 @@ struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
 
-    // True while the unit-test bundle is running. Set via IS_RUNNING_TESTS in Photo Club Hub.xctestplan.
-    // Used to skip the production auto-load so tests don't race the app loader into PersistenceController.shared.
-    // This is a self-defined signal, so it works for Swift Testing, XCTest, and `swift test` alike (see issue #756).
-    var isRunningTests: Bool {
-        ProcessInfo.processInfo.environment["IS_RUNNING_TESTS"] == "1"
-    }
-
     init() {
 
         // Skip heavy app init when running under Xcode Previews to keep #Preview rendering alive.
@@ -47,24 +40,8 @@ struct PhotoClubHubApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // Here we switch between the pre-Liquid Glass view versions and post-Liquid Glass view versions
-            if #unavailable(iOS 26.0) { // iOS 17.6 ...  (mandated by app min requirement) or 18
-                PreludeView1718()
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                    .onAppear {
-                        if !Settings.manualDataLoading && !isRunningTests {
-                            PhotoClubHubApp.loadClubsAndMembers()
-                        }
-                    }
-            } else {
-                PreludeView2627()
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                    .onAppear {
-                        if !Settings.manualDataLoading && !isRunningTests {
-                            PhotoClubHubApp.loadClubsAndMembers()
-                        }
-                    }
-            }
+            RootView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
             PersistenceController.shared.save() // persist data when app moves to background (may not be needed)

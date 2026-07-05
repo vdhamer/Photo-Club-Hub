@@ -18,12 +18,6 @@ struct MainTabView1718: View {
             NavigationStack {
                 MemberPortfolioView()
             }
-            .tabItem {
-                Label(String(localized: "Members",
-                             table: "PhotoClubHub.SwiftUI",
-                             comment: "Tab bar label for the member portfolios list"),
-                      systemImage: "person.2")
-            }
 
             NavigationStack {
                 PhotographersListView1718(searchText: $photographersSearchText)
@@ -33,6 +27,13 @@ struct MainTabView1718: View {
                              table: "PhotoClubHub.SwiftUI",
                              comment: "Tab bar label for the photographers list"),
                       systemImage: "person.text.rectangle")
+            }
+
+            .tabItem {
+                Label(String(localized: "Members",
+                             table: "PhotoClubHub.SwiftUI",
+                             comment: "Tab bar label for the member portfolios list"),
+                      systemImage: "person.2")
             }
 
             NavigationStack {
