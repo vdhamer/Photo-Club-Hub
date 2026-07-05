@@ -21,6 +21,8 @@ struct MainTabView: View {
 
 // MARK: - Preview
 
+// Believe it or not, this preview actually works.
+
 #Preview {
     MainTabView()
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

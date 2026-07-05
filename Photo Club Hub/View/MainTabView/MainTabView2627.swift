@@ -56,6 +56,8 @@ struct MainTabView2627: View { // uses Tab (iOS 18) and .tabBarMinimizeBehavior 
 
 // MARK: - Preview
 
+// Believe it or not, this preview actually works.
+
 @available(iOS 26.0, *)
 #Preview {
     MainTabView2627()

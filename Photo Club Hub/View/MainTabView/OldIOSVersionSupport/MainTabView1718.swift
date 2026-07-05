@@ -59,6 +59,8 @@ struct MainTabView1718: View {
 
 // MARK: - Preview
 
+// Believe it or not, this preview actually works.
+
 @available(iOS, obsoleted: 26.0)
 #Preview {
     MainTabView1718()
