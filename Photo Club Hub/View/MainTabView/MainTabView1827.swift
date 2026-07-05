@@ -1,5 +1,5 @@
 //
-//  MainTabView2627.swift
+//  MainTabView1827.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 04/07/2026.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-@available(iOS 26.0, *)
-struct MainTabView2627: View { // uses Tab (iOS 18) and .tabBarMinimizeBehavior (iOS 26)
+@available(iOS 18.0, *)
+struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior & PhotographersListView2627 need iOS 26
 
     @StateObject private var preferencesModel = PreferencesViewModel.shared
     @State private var photographersSearchText = ""
@@ -20,7 +20,11 @@ struct MainTabView2627: View { // uses Tab (iOS 18) and .tabBarMinimizeBehavior 
                        comment: "Tab bar label for the photographers list"),
                 systemImage: "person.text.rectangle") {
                 NavigationStack {
-                    PhotographersListView2627(searchText: $photographersSearchText)
+                    if #available(iOS 26, *) {
+                        PhotographersListView2627(searchText: $photographersSearchText)
+                    } else {
+                        PhotographersListView1718(searchText: $photographersSearchText)
+                    }
                 }
             }
 
@@ -49,17 +53,28 @@ struct MainTabView2627: View { // uses Tab (iOS 18) and .tabBarMinimizeBehavior 
                 PreferencesView(preferences: $preferencesModel.preferences)
             }
         }
-        .tabBarMinimizeBehavior(.onScrollDown)
+        .tabBarMinimizeBehaviorIfAvailable()
     }
 
+}
+
+private extension View {
+    @ViewBuilder
+    func tabBarMinimizeBehaviorIfAvailable() -> some View {
+        if #available(iOS 26, *) {
+            self.tabBarMinimizeBehavior(.onScrollDown)
+        } else {
+            self
+        }
+    }
 }
 
 // MARK: - Preview
 
 // Believe it or not, this preview actually works.
 
-@available(iOS 26.0, *)
+@available(iOS 18.0, *)
 #Preview {
-    MainTabView2627()
+    MainTabView1827()
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

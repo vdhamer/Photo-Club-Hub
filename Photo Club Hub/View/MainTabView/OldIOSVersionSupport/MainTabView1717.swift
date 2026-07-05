@@ -1,5 +1,5 @@
 //
-//  MainTabView1718.swift
+//  MainTabView1717.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 04/07/2026.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-@available(iOS, obsoleted: 26.0)
-struct MainTabView1718: View {
+@available(iOS, obsoleted: 18.0)
+struct MainTabView1717: View {
 
     @StateObject private var preferencesModel = PreferencesViewModel.shared
     @State private var photographersSearchText = ""
@@ -17,6 +17,12 @@ struct MainTabView1718: View {
         TabView {
             NavigationStack {
                 MemberPortfolioView()
+            }
+            .tabItem {
+                Label(String(localized: "Members",
+                             table: "PhotoClubHub.SwiftUI",
+                             comment: "Tab bar label for the member portfolios list"),
+                      systemImage: "person.2")
             }
 
             NavigationStack {
@@ -27,13 +33,6 @@ struct MainTabView1718: View {
                              table: "PhotoClubHub.SwiftUI",
                              comment: "Tab bar label for the photographers list"),
                       systemImage: "person.text.rectangle")
-            }
-
-            .tabItem {
-                Label(String(localized: "Members",
-                             table: "PhotoClubHub.SwiftUI",
-                             comment: "Tab bar label for the member portfolios list"),
-                      systemImage: "person.2")
             }
 
             NavigationStack {
@@ -62,8 +61,8 @@ struct MainTabView1718: View {
 
 // Believe it or not, this preview actually works.
 
-@available(iOS, obsoleted: 26.0)
+@available(iOS, obsoleted: 18.0)
 #Preview {
-    MainTabView1718()
+    MainTabView1717()
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-/// Thin dispatcher: shows `MainTabView2627` on iOS 26+ and `MainTabView1718` on older versions.
+/// Thin dispatcher: shows `MainTabView1827` on iOS 18+ and `MainTabView1717` on iOS 17.
 /// Matches the pattern used by `PhotoClubHubApp` to dispatch between `PreludeView1718`/`2627`.
 struct MainTabView: View {
     var body: some View {
-        if #unavailable(iOS 26) {
-            MainTabView1718()
+        if #unavailable(iOS 18) {
+            MainTabView1717() // App doesn't support versions before iOS 17
         } else {
-            MainTabView2627()
+            MainTabView1827()
         }
     }
 }

@@ -31,8 +31,8 @@
 		3761E2AC2FEB223D003D4514 /* String+CapitalizeFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A41277F731C0049AB84 /* String+CapitalizeFirstLetter.swift */; };
 		376275872FF93C0D0047E77C /* IfDebugFatalErrorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376275862FF93C0D0047E77C /* IfDebugFatalErrorSpy.swift */; };
 		3762771B2FF955470047E77C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771A2FF955470047E77C /* MainTabView.swift */; };
-		3762771E2FF9560B0047E77C /* MainTabView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771D2FF9560B0047E77C /* MainTabView1718.swift */; };
-		376277202FF956140047E77C /* MainTabView2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771F2FF956140047E77C /* MainTabView2627.swift */; };
+		3762771E2FF9560B0047E77C /* MainTabView1717.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771D2FF9560B0047E77C /* MainTabView1717.swift */; };
+		376277202FF956140047E77C /* MainTabView1827.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762771F2FF956140047E77C /* MainTabView1827.swift */; };
 		37641D972FAFF177005D84F6 /* PhotographersThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37641D962FAFF177005D84F6 /* PhotographersThumbnail.swift */; };
 		376855672F2BA327002590F6 /* fegGemert.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 376855662F2BA327002590F6 /* fegGemert.level2.json */; };
 		376855692F2BA418002590F6 /* FEGGemertMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */; };
@@ -215,8 +215,8 @@
 		375B99202F9E287A002EAD0F /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
 		376275862FF93C0D0047E77C /* IfDebugFatalErrorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfDebugFatalErrorSpy.swift; sourceTree = "<group>"; };
 		3762771A2FF955470047E77C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		3762771D2FF9560B0047E77C /* MainTabView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView1718.swift; sourceTree = "<group>"; };
-		3762771F2FF956140047E77C /* MainTabView2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView2627.swift; sourceTree = "<group>"; };
+		3762771D2FF9560B0047E77C /* MainTabView1717.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView1717.swift; sourceTree = "<group>"; };
+		3762771F2FF956140047E77C /* MainTabView1827.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView1827.swift; sourceTree = "<group>"; };
 		37641D962FAFF177005D84F6 /* PhotographersThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersThumbnail.swift; sourceTree = "<group>"; };
 		376855662F2BA327002590F6 /* fegGemert.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fegGemert.level2.json; sourceTree = "<group>"; };
 		376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEGGemertMembersProvider.swift; sourceTree = "<group>"; };
@@ -480,7 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				376277EA2FF97EC40047E77C /* OldIOSVersionSupport */,
-				3762771F2FF956140047E77C /* MainTabView2627.swift */,
+				3762771F2FF956140047E77C /* MainTabView1827.swift */,
 				3762771A2FF955470047E77C /* MainTabView.swift */,
 			);
 			path = MainTabView;
@@ -489,7 +489,7 @@
 		376277EA2FF97EC40047E77C /* OldIOSVersionSupport */ = {
 			isa = PBXGroup;
 			children = (
-				3762771D2FF9560B0047E77C /* MainTabView1718.swift */,
+				3762771D2FF9560B0047E77C /* MainTabView1717.swift */,
 			);
 			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
@@ -1348,12 +1348,12 @@
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				3722DCA02F98CE9000F2851C /* ImageChoice.swift in Sources */,
 				370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */,
-				3762771E2FF9560B0047E77C /* MainTabView1718.swift in Sources */,
+				3762771E2FF9560B0047E77C /* MainTabView1717.swift in Sources */,
 				37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */,
 				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */,
-				376277202FF956140047E77C /* MainTabView2627.swift in Sources */,
+				376277202FF956140047E77C /* MainTabView1827.swift in Sources */,
 				37A2A0E22FAA973400EF39A1 /* OrganizationViewInfo.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */,
 				37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */,
