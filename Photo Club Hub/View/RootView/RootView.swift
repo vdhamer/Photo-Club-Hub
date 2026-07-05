@@ -5,13 +5,19 @@
 //  Created by Peter van den Hamer on 05/07/2026.
 //
 
-import SwiftUI // RootView is a SwiftUI view
+import SwiftUI
+import CoreData // for NSManagedObjectContext
 
-// RootView is the app's single WindowGroup root. It owns the splash-to-tabs transition:
-// show PreludeView until the user exits it, then replace it with MainTabView.
+// RootView is the app's single WindowGroup root.
+// MainTabView is always the permanent root content; PreludeView is presented as a full-screen cover on top.
 struct RootView: View {
 
     @State private var showPrelude = true
+
+    // Read the managed object context from the environment so it can be explicitly re-passed to MainTabView.
+    // Re-passing is required because SwiftUI previews don't always propagate environment values reliably
+    // through intermediate view boundaries — explicit injection guarantees Core Data reaches @FetchRequest views.
+    @Environment(\.managedObjectContext) private var viewContext
 
     // True while the unit-test bundle is running. Set via IS_RUNNING_TESTS in Photo Club Hub.xctestplan.
     // Used to skip the production auto-load so tests don't race the app loader into PersistenceController.shared.
@@ -21,18 +27,19 @@ struct RootView: View {
     }
 
     var body: some View {
-        if showPrelude {
-            preludeView
-                // .onAppear is placed here (not on MainTabView) so loadClubsAndMembers() fires exactly once at launch.
-                .onAppear {
-                    if !Settings.manualDataLoading && !isRunningTests {
-                        PhotoClubHubApp.loadClubsAndMembers()
-                        print("Loading clubs and members")
-                    }
+        MainTabView()
+            .environment(\.managedObjectContext, viewContext)
+            // PreludeView is a full-screen cover so MainTabView is always in the hierarchy and its
+            // environment (Core Data context, @FetchRequests) is fully set up before the cover is shown.
+            .fullScreenCover(isPresented: $showPrelude) {
+                preludeView
+            }
+            .onAppear {
+                if !Settings.manualDataLoading && !isRunningTests {
+                    PhotoClubHubApp.loadClubsAndMembers()
+                    print("Loading clubs and members")
                 }
-        } else {
-            MainTabView()
-        }
+            }
     }
 
     // Separate @ViewBuilder property so body stays readable despite the #unavailable availability check.
@@ -47,9 +54,7 @@ struct RootView: View {
 
     // Called by the active PreludeView when the user exits the splash screen.
     private func finish() {
-        withAnimation {
-            showPrelude = false
-        }
+        showPrelude = false
     }
 
 }
