@@ -17,7 +17,7 @@ struct PreludeView1718: View {
     private let crossHairsWidth: CGFloat = 2
     private let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
-    let onFinished: () -> Void
+    let onFinished: @MainActor () -> Void // @MainActor because callers pass MainActor-isolated methods
 
     // MARK: - State variables
     @State private var offsetInCells = OffsetVectorInCells1718(x: 8, y: 6) // # of cell units left/above imagecenter
@@ -173,11 +173,11 @@ struct PreludeView1718: View {
         }
     }
 
-    struct EscapeHatch: View {
-        let onFinished: () -> Void
-        let offset: Binding<OffsetVectorInCells1718>
-        let location: Binding<CGPoint>
-        var size: CGSize
+    private struct EscapeHatch: View {
+        let onFinished: @MainActor () -> Void
+        let size: CGSize
+        @Binding var offset: OffsetVectorInCells1718
+        @Binding var location: CGPoint
         @Binding var debugPanelVisible: Bool
         @Binding var crosshairsVisible: Bool
 
@@ -185,7 +185,7 @@ struct PreludeView1718: View {
             VStack {
                 Spacer()
                 HStack(alignment: .bottom) {
-                    DebugPanel1718(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
+                    DebugPanel1718(size: size, offset: $offset, location: $location, hidden: !debugPanelVisible)
                     Spacer()
                     Button {
                         onFinished()
@@ -195,8 +195,14 @@ struct PreludeView1718: View {
                     }
                     .keyboardShortcut(.defaultAction) // return key
                     .buttonStyle(.bordered)
+                    .accessibilityLabel(Text(String(localized: "Next",
+                                                    table: "PhotoClubHub.SwiftUI",
+                                                    comment: "Button text")))
+                    .accessibilityHint(Text(String(localized: "Go to Portfolios screen",
+                                                   table: "PhotoClubHub.SwiftUI",
+                                                   comment: "Button hint")))
 
-                    Button { // can't add multiple .keyboarShortcuts to same Button
+                    Button { // can't add multiple .keyboardShortcuts to same Button
                         onFinished()
                     } label: { EmptyView() }
                     .keyboardShortcut(" ", modifiers: []) // cannot support more than one shortcut
