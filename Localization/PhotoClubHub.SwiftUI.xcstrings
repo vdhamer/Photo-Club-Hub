@@ -1031,23 +1031,6 @@
         }
       }
     },
-    "Prelude" : {
-      "comment" : "Title of the opening animation screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prelude"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prelude"
-          }
-        }
-      }
-    },
     "Reset to defaults" : {
       "comment" : "Button to reset preferences to original settings",
       "localizations" : {
