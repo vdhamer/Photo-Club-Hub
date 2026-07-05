@@ -9,7 +9,9 @@ import SwiftUI
 import CoreData // for NSManagedObjectContext
 
 // RootView is the app's single WindowGroup root.
-// MainTabView is always the permanent root content; PreludeView is presented as a full-screen cover on top.
+// MainTabView is the permanent root content; PreludeView is layered on top until the user dismisses it.
+// A ZStack (rather than .fullScreenCover) is used so the prelude is part of the very first rendered
+// frame — a fullScreenCover is a presentation transaction, which briefly exposes the view behind it at launch.
 struct RootView: View {
 
     @State private var showPrelude = true
@@ -27,19 +29,20 @@ struct RootView: View {
     }
 
     var body: some View {
-        MainTabView()
-            .environment(\.managedObjectContext, viewContext)
-            // PreludeView is a full-screen cover so MainTabView is always in the hierarchy and its
-            // environment (Core Data context, @FetchRequests) is fully set up before the cover is shown.
-            .fullScreenCover(isPresented: $showPrelude) {
+        ZStack {
+            MainTabView()
+                .environment(\.managedObjectContext, viewContext)
+            if showPrelude {
                 preludeView
+                    .transition(.opacity) // cross-fade driven by the withAnimation in finish()
             }
-            .onAppear {
-                if !Settings.manualDataLoading && !isRunningTests {
-                    PhotoClubHubApp.loadClubsAndMembers()
-                    print("Loading clubs and members")
-                }
+        }
+        .onAppear {
+            if !Settings.manualDataLoading && !isRunningTests {
+                PhotoClubHubApp.loadClubsAndMembers()
+                print("Loading clubs and members")
             }
+        }
     }
 
     // Separate @ViewBuilder property so body stays readable despite the #unavailable availability check.
@@ -54,7 +57,9 @@ struct RootView: View {
 
     // Called by the active PreludeView when the user exits the splash screen.
     private func finish() {
-        showPrelude = false
+        withAnimation {
+            showPrelude = false
+        }
     }
 
 }

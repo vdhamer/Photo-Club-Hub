@@ -44,7 +44,7 @@ struct PhotoClubHubApp: App {
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
         .onChange(of: scenePhase) { // zero-param closure is the iOS 17+ form; pre-iOS 17 the closure took (newValue)
-            PersistenceController.shared.save() // Core Data won't auto-save on scene background
+            PersistenceController.shared.save() // Core Data will not automatically save on when scene -> background
         }
     }
 
