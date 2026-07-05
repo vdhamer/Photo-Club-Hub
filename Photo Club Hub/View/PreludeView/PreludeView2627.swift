@@ -19,7 +19,10 @@ struct PreludeView2627: View {
         static let crossHairsWidth: CGFloat = 2
         static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
     }
-    let onFinished: () -> Void
+
+    // filled during init(); @MainActor because callers pass MainActor-isolated methods
+    let onFinished: @MainActor () -> Void
+
     private let preludeImageStore = PreludeImageStore2627()
     @State private var preludeImage = PreludeImage2627(assetName: "2024_California_R5_340-3-Edit_square",
                                                        copyright: "🙈 You shouldn't be seeing this! 🙈",
@@ -153,9 +156,9 @@ struct PreludeView2627: View {
                     .accessibilityHidden(true)
 
                 EscapeHatch(onFinished: onFinished,
+                            size: geo.size,
                             offset: $offsetInCells,
                             location: $debugLocation,
-                            size: geo.size,
                             debugPanelVisible: $debugPanelVisible,
                             crosshairsVisible: $crosshairsVisible)
 
@@ -217,10 +220,10 @@ struct PreludeView2627: View {
     }
 
     private struct EscapeHatch: View {
-        let onFinished: () -> Void
-        let offset: Binding<OffsetVectorInCells2627>
-        let location: Binding<CGPoint>
-        var size: CGSize
+        let onFinished: @MainActor () -> Void
+        let size: CGSize
+        @Binding var offset: OffsetVectorInCells2627
+        @Binding var location: CGPoint
         @Binding var debugPanelVisible: Bool
         @Binding var crosshairsVisible: Bool
 
@@ -228,7 +231,7 @@ struct PreludeView2627: View {
             VStack {
                 Spacer()
                 HStack(alignment: .bottom) {
-                    DebugPanel2627(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
+                    DebugPanel2627(size: size, offset: $offset, location: $location, hidden: !debugPanelVisible)
                     Spacer()
                     Image(systemName: "arrowshape.turn.up.forward.circle")
                         .accessibilityLabel(Text(String(localized: "Next",
@@ -246,7 +249,7 @@ struct PreludeView2627: View {
                         }
                         .keyboardShortcut(.defaultAction) // return key
 
-                    Button { // can't add multiple .keyboarShortcuts to same Button
+                    Button { // can't add multiple .keyboardShortcuts to same Button
                         onFinished()
                     } label: { EmptyView() }
                     .keyboardShortcut(" ", modifiers: []) // cannot support more than one shortcut

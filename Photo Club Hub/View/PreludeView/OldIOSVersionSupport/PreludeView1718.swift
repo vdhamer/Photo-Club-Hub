@@ -101,9 +101,9 @@ struct PreludeView1718: View {
                     .blendMode(.normal)
 
                 EscapeHatch(onFinished: onFinished,
+                            size: geo.size,
                             offset: $offsetInCells,
                             location: $debugLocation,
-                            size: geo.size,
                             debugPanelVisible: $debugPanelVisible,
                             crosshairsVisible: $crosshairsVisible)
 
