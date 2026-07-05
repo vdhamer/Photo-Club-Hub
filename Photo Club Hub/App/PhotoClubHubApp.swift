@@ -40,11 +40,11 @@ struct PhotoClubHubApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView() // replaced the old inline #unavailable(iOS 26) PreludeView fork; see RootView.swift
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
-        .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
-            PersistenceController.shared.save() // persist data when app moves to background (may not be needed)
+        .onChange(of: scenePhase) { // zero-param closure is the iOS 17+ form; pre-iOS 17 the closure took (newValue)
+            PersistenceController.shared.save() // guards against data loss: Core Data won't auto-save on scene background
         }
     }
 
