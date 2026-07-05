@@ -27,7 +27,7 @@ struct RootView: View {
                 .onAppear {
                     if !Settings.manualDataLoading && !isRunningTests {
                         PhotoClubHubApp.loadClubsAndMembers()
-                        print("Loading Level 1 and Level 2 JSON data")
+                        print("Loading clubs and members")
                     }
                 }
         } else {

@@ -524,6 +524,14 @@
 			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
 		};
+		37EBBCBF2FFA997900C95FDA /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				37EBBC372FFA451F00C95FDA /* RootView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
 		37EE61E02F3E221500DC1223 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,11 +730,11 @@
 				D05E451B27EF286B00D31327 /* PreferencesView */,
 				D0E2235227DE9139002A8600 /* PreludeView */,
 				D05E451C27EF297100D31327 /* ReadmeView */,
+				37EBBCBF2FFA997900C95FDA /* RootView */,
 				D08DC6042AE57222008DBD68 /* SinglePortfolioLinkView */,
 				D081655D278616710078AB16 /* SinglePortFolioView */,
 				D0FCF2E429B558B500F31442 /* VoteOnRoadmapView */,
 				D0AE1B762788A14500E0100E /* PhotographersView */,
-				37EBBC372FFA451F00C95FDA /* RootView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
