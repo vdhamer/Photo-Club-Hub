@@ -15,21 +15,21 @@ struct MainTabView2627: View { // uses Tab (iOS 18) and .tabBarMinimizeBehavior 
 
     var body: some View {
         TabView {
-            Tab(String(localized: "Members",
-                       table: "PhotoClubHub.SwiftUI",
-                       comment: "Tab bar label for the member portfolios list"),
-                systemImage: "person.2") {
-                NavigationStack {
-                    MemberPortfolioView()
-                }
-            }
-
             Tab(String(localized: "Photographers",
                        table: "PhotoClubHub.SwiftUI",
                        comment: "Tab bar label for the photographers list"),
                 systemImage: "person.text.rectangle") {
                 NavigationStack {
                     PhotographersListView2627(searchText: $photographersSearchText)
+                }
+            }
+
+            Tab(String(localized: "Members",
+                       table: "PhotoClubHub.SwiftUI",
+                       comment: "Tab bar label for the member portfolios list"),
+                systemImage: "person.2") {
+                NavigationStack {
+                    MemberPortfolioView()
                 }
             }
 
