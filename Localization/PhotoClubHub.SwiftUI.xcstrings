@@ -330,6 +330,17 @@
         }
       }
     },
+    "Built-in Readme" : {
+      "comment" : "Toolbar button (info icon) that opens the built-in Readme sheet",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Over de app"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "comment" : "Dismiss preferences without applying changes",
       "localizations" : {
