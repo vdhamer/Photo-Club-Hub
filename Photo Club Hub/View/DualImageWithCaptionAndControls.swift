@@ -8,7 +8,6 @@
 import AudioToolbox // for AudioServicesPlayAlertSound
 import SwiftUI // for View
 import UIKit // for UINotificationFeedbackGenerator, UIDevice
-import WebKit // for WKWebView
 
 /// Trailing-edge widget in a member row: an sizable thumbnail backed by a 20-wide toolbar strip.
 /// The toolbar contains a portfolio link button and, when a second image is available, a flip control
@@ -17,8 +16,6 @@ import WebKit // for WKWebView
 struct DualImageWithCaptionAndControls: View {
     /// who is this about?
     let member: MemberPortfolio
-    /// shared across many instances of DualImageWithCaptionAndControls
-    let wkWebView: WKWebView
     let preferences: PreferencesStruct
     /// size of  square image
     let squareSize: CGFloat
@@ -26,6 +23,9 @@ struct DualImageWithCaptionAndControls: View {
     let caption: Bool
     /// current state of whether alternative image should be used
     @Binding var flipImageFlag: Bool
+    /// Set by tapping the caption or chevron; the screen-level view owns the navigationDestination(item:).
+    /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
+    @Binding var selectedPortfolio: MemberPortfolio?
 
     var body: some View {
         let imageChoice = ImageChoice(member: member,
@@ -80,7 +80,9 @@ struct DualImageWithCaptionAndControls: View {
 
                 // caption
                 if caption {
-                    SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
+                    // Button sets selectedPortfolio; the screen-level navigationDestination(item:) handles navigation.
+                    // Navigation destinations may not live inside lazy containers (List rows, LazyVStack).
+                    Button { selectedPortfolio = member } label: {
                         Text(verbatim: "\(member.roleDescriptionOfClubTown)")
                             .frame(width: squareSize, height: 35)
                             .multilineTextAlignment(.center)
@@ -90,16 +92,20 @@ struct DualImageWithCaptionAndControls: View {
                             .dynamicTypeSize( // block xLarge (etc) dynamic type size for layout reasons
                                 ...DynamicTypeSize.large)
                     }
+                    .buttonStyle(.plain)
                     .tint(.primary)
                 }
             }
 
             // vertical list of controls
             VStack {
-                SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
+                // Button sets selectedPortfolio; the screen-level navigationDestination(item:) handles navigation.
+                // Navigation destinations may not live inside lazy containers (List rows, LazyVStack).
+                Button { selectedPortfolio = member } label: {
                     Image(systemName: "chevron.right")
                         .foregroundStyle(Color.accentColor)
                 }
+                .buttonStyle(.plain)
                 .tint(.primary)
                 Spacer()
                 if isThumbnailFlippable(member: member) {
@@ -132,7 +138,8 @@ struct DualImageWithCaptionAndControls: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Previews actually works.
+// Believe it or not, the following Previews actually work.
+
 struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
 
     // Wrapper is required so @State is an instance property, which SwiftUI needs
@@ -140,18 +147,18 @@ struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
     struct Wrapper: View {
         var member: MemberPortfolio
         @State var flipImageFlag = false
+        @State var selectedPortfolio: MemberPortfolio?
         let squareSize: CGFloat
         let caption: Bool
-        let wkWebView = WKWebView() // initialize only once (although this is merely a preview)
 
         var body: some View {
             NavigationStack {
                 DualImageWithCaptionAndControls(member: member,
-                                                wkWebView: wkWebView,
                                                 preferences: PreferencesStruct.defaultValue,
                                                 squareSize: squareSize,
                                                 caption: caption,
-                                                flipImageFlag: $flipImageFlag)
+                                                flipImageFlag: $flipImageFlag,
+                                                selectedPortfolio: $selectedPortfolio)
                 .padding()
             }
         }
