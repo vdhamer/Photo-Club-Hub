@@ -19,10 +19,16 @@ import WebKit // for wkWebView
 @available(iOS 26.0, *)
 struct PhotographersListView2627: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.horizontalSizeClass) private var horSizeClass
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
+    /// The member whose portfolio is shown; setting it (from a thumbnail) triggers navigation via
+    /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy LazyVStack.
+    @State private var selectedPortfolio: MemberPortfolio?
     var searchText: Binding<String>
-    let wkWebView: WKWebView
+    /// Single instance shared by all thumbnails and the portfolio destination to avoid repeated WKWebView allocation.
+    /// Stored in @State so it survives re-initialization of this view struct.
+    @State private var wkWebView = WKWebView()
 
     @StateObject var model = PreferencesViewModel.shared
     private var navigationTitle = String(localized: "Photographers",
@@ -37,7 +43,6 @@ struct PhotographersListView2627: View {
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
-        self.wkWebView = WKWebView()
     }
 
     var body: some View {
@@ -46,7 +51,8 @@ struct PhotographersListView2627: View {
             LazyVStack {
                 FilteredPhotographerView2627(predicate: model.preferences.photographerPredicate, // Here's the action
                                          searchText: searchText,
-                                         wkWebView: wkWebView)
+                                         wkWebView: wkWebView,
+                                         selectedPortfolio: $selectedPortfolio)
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
@@ -102,6 +108,13 @@ struct PhotographersListView2627: View {
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
+        .navigationDestination(item: $selectedPortfolio) { member in
+            SinglePortfolioView(url: member.level3URL, webView: wkWebView)
+                .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
+                                 (horSizeClass == .compact ? member.organization.nickName :
+                                                             member.organization.fullName))
+                .navigationBarTitleDisplayMode(.inline)
+        }
         .refreshable { // for pull-to-refresh
             // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
             if Settings.dataResetPending {
