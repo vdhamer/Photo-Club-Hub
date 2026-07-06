@@ -8,28 +8,23 @@
 import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI
 
-/// A list-based view that displays member portfolios with search and toolbar actions.
+/// A list-based view that displays member portfolios with search and a Readme toolbar button.
 ///
 /// - Presents a `FilteredMemberPortfoliosView` inside a SwiftUI `List`.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
-/// - Provides toolbar buttons to open Preferences and Readme documentation in sheets, and
-///   to navigate to Organizations and Photographers lists.
-/// - Uses a search field to filter members by name or by expertise..
+/// - Provides a toolbar button to open Readme documentation in a sheet.
+/// - Uses a search field to filter members by name or by expertise.
 ///
 /// Uses iOS 26 Liquid Glass APIs where available, falling back to standard styling on iOS 17/18.
 struct MemberPortfolioView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    /// Available sheet detents shared by Preferences and Readme sheets.
+    /// Available sheet detents for the Readme sheet.
     private var detentsList: Set<PresentationDetent> = [ .large, .fraction(0.70) ]
 
-    /// Controls visibility of the Preferences sheet.
-    @State private var showingPreferences = false
     /// Controls visibility of the Readme sheet.
     @State private var showingReadme = false
 
-    /// The currently selected detent for the Preferences sheet; must be contained in `detentsList`.
-    @State private var selectedPreferencesDetent = PresentationDetent.large
     /// The currently selected detent for the Readme sheet; must be contained in `detentsList`.
     @State private var selectedReadmeDetent = PresentationDetent.fraction(0.70)
 
@@ -37,10 +32,6 @@ struct MemberPortfolioView: View {
     @State private var searchText: String = ""
 
     @StateObject var preferencesModel = PreferencesViewModel.shared
-
-    /// Toolbar placement that adapts: iPad shows search in the toolbar, iPhone in the drawer.
-    private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
-        .destructiveAction : .navigationBarTrailing
 
     var body: some View {
         List { // lists are automatically "Lazy"
@@ -65,42 +56,13 @@ struct MemberPortfolioView: View {
                                 table: "PhotoClubHub.SwiftUI",
                                 comment: "Title of page showing member portfolios"))
         .toolbar {
-            ToolbarItemGroup(placement: .navigationBarLeading) {
-
+            ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    if !showingReadme { // actually currently can't press Preferences button while showingReadme
-                        showingPreferences = true
-                    }
+                    showingReadme = true
                 } label: {
-                    PreferencesIcon()
-                }
-                // Preferences sheet with shared detents and visual presentation options.
-                .sheet(isPresented: $showingPreferences, content: {
-                    if #available(iOS 26, *) {
-                        PreferencesView2627(preferences: $preferencesModel.preferences)
-                        // the detents don't do anything on an iPad
-                            .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
-                            .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
-                            .presentationCornerRadius(40)
-                            .presentationDragIndicator(.visible) // show drag indicator
-                    } else {
-                        PreferencesView1718(preferences: $preferencesModel.preferences)
-                        // the detents don't do anything on an iPad
-                            .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
-                            .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
-                            .presentationCornerRadius(40)
-                            .presentationDragIndicator(.visible) // show drag indicator
-                    }
-                })
-
-                Button {
-                    if !showingPreferences { // actually currently can't press Preferences button while showingReadme
-                        showingReadme = true
-                    }
-                } label: {
-                    Image("info.rectangle")
+                    Image(systemName: "info.circle")
                         .font(.title)
-                        .foregroundStyle(.linkColor, .gray, .white)
+                        .foregroundStyle(.linkColor)
                 }
                 // Readme sheet with shared detents and visual presentation options.
                 .sheet(isPresented: $showingReadme, content: {
@@ -111,31 +73,6 @@ struct MemberPortfolioView: View {
                         .presentationCornerRadius(40) // compiler can't handle this yet
                         .presentationDragIndicator(.visible) // show drag indicator
                 })
-            }
-            ToolbarItemGroup(placement: toolbarItemPlacement) {
-
-                NavigationLink(destination: {
-                    OrganizationView()
-                }, label: {
-                    Image("mappin.ellipse.rectangle")
-                        .font(.title)
-                        .foregroundStyle(.organizationColor, .gray, .red)
-                })
-                .offset(x: 5)
-
-                NavigationLink(destination: {
-                    if #available(iOS 26, *) {
-                        PhotographersListView2627(searchText: $searchText)
-                    } else {
-                        PhotographersListView1718(searchText: $searchText)
-                    }
-                }, label: {
-                    Image("person.text.rectangle.custom")
-                        .font(.title)
-                        .foregroundStyle(.photographerColor, .gray, .red)
-                })
-                .padding(0)
-
             }
         }
         .searchable(text: $searchText, placement: searchPlacement,
@@ -185,6 +122,8 @@ private extension View {
 }
 
 // MARK: - Previews
+
+// Believe it or not, this preview works.
 
 #Preview {
     NavigationStack {
