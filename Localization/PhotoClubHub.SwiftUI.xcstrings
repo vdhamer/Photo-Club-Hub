@@ -333,6 +333,12 @@
     "Built-in Readme" : {
       "comment" : "Toolbar button (info icon) that opens the built-in Readme sheet",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Built-in Readme"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -650,6 +656,23 @@
         }
       }
     },
+    "Maps" : {
+      "comment" : "Tab bar label for the maps showing organizations",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maps"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Kaarten"
+          }
+        }
+      }
+    },
     "member_" : {
       "comment" : "Statistics at end of section of FilteredMemberPortfoliosView",
       "localizations" : {
@@ -839,7 +862,7 @@
       }
     },
     "Organizations" : {
-      "comment" : "In Preferences, section title\nTab bar label for the organizations list\nTitle of page with maps for Organizations",
+      "comment" : "In Preferences, section title\nTitle of page with maps for Organizations",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1453,5 +1476,5 @@
       }
     }
   },
-  "version" : "1.1"
+  "version" : "1.3"
 }
