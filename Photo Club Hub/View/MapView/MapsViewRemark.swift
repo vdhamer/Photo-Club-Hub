@@ -1,5 +1,5 @@
 //
-//  OrganizationViewRemark.swift
+//  MapsViewRemark.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -9,7 +9,7 @@ import SwiftUI // for View
 
 /// Remark describing club or museum (is a bit tricky due to unpredictable length).
 @MainActor
-struct OrganizationViewRemark: View {
+struct MapsViewRemark: View {
 
     let localizedRemark: String
 
@@ -45,15 +45,15 @@ struct OrganizationViewRemark: View {
 #Preview {
     VStack(alignment: .leading, spacing: 12) {
         Divider()
-        OrganizationViewRemark(localizedRemark:
+        MapsViewRemark(localizedRemark:
             "Fotogroep Waalre is a small photography club based in the south of the Netherlands.")
         Divider()
-        OrganizationViewRemark(localizedRemark: """
+        MapsViewRemark(localizedRemark: """
             A long remark that exercises the lineLimit and minimumScaleFactor modifiers, \
             useful for checking how the layout behaves when the text doesn't fit on a single line.
             """)
         Divider()
-        OrganizationViewRemark(localizedRemark: "")
+        MapsViewRemark(localizedRemark: "")
         Divider()
         HStack {
             Spacer()
