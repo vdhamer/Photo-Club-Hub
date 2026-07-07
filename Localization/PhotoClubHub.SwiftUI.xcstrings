@@ -401,7 +401,7 @@
       }
     },
     "Clubs" : {
-      "comment" : "Title of page with maps for Clubs",
+      "comment" : "In Preferences, above toggles like \"Show former members\"\nTab bar label for the club member portfolios list\nTitle of page showing member portfolios\nTitle of page with maps for Clubs",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -639,6 +639,40 @@
         }
       }
     },
+    "iPad Settings" : {
+      "comment" : "Link to Photo Club Hub section in iPad Settings app",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad Settings"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad Instellingen"
+          }
+        }
+      }
+    },
+    "iPhone Settings" : {
+      "comment" : "Link to Photo Club Hub section in iPhone Settings app",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone Settings"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone Instellingen"
+          }
+        }
+      }
+    },
     "Manual loading" : {
       "comment" : "Shown instead of app name in PreludeView when app is started",
       "localizations" : {
@@ -657,7 +691,7 @@
       }
     },
     "Maps" : {
-      "comment" : "Tab bar label for the maps showing organizations",
+      "comment" : "In Settings, section title above map-related toggles\nTab bar label for the maps showing organizations",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -703,23 +737,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "leden"
-          }
-        }
-      }
-    },
-    "Members" : {
-      "comment" : "In Preferences, above toggles like \"Show former members\"\nTab bar label for the member portfolios list\nTitle of page showing member portfolios",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Members"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leden"
           }
         }
       }
@@ -844,25 +861,8 @@
         }
       }
     },
-    "Options in Settings" : {
-      "comment" : "Link to Photo Club Hub section in Settings",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Options in Settings"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opties bij Instellingen"
-          }
-        }
-      }
-    },
     "Organizations" : {
-      "comment" : "In Preferences, section title\nTitle of page with maps for Organizations",
+      "comment" : "Title of page with maps for Organizations",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -929,6 +929,23 @@
         }
       }
     },
+    "People" : {
+      "comment" : "In Preferences, section title\nTab bar label for the list of people (photographers)\nTitle of page with list of photographers",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "People"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personen"
+          }
+        }
+      }
+    },
     "Photo Club Hub" : {
       "comment" : "Name of the app shown in PreludeView when app is started",
       "localizations" : {
@@ -959,23 +976,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotograaf"
-          }
-        }
-      }
-    },
-    "Photographers" : {
-      "comment" : "In Preferences, section title\nTab bar label for the photographers list\nTitle of page with list of photographers",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photographers"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotografen"
           }
         }
       }
@@ -1044,23 +1044,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "④ Fotografische expertise tags"
-          }
-        }
-      }
-    },
-    "Preferences" : {
-      "comment" : "Tab bar label for preferences\nTitle of screen with toggles to adjust preferences",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preferences"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Instellingen"
           }
         }
       }
@@ -1146,6 +1129,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zoek op naam"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "comment" : "Tab bar label for settings\nTitle of the in-app Settings tab",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
           }
         }
       }

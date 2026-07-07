@@ -10,15 +10,21 @@ import SwiftUI
 @available(iOS 18.0, *)
 struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior & PhotographersListView2627 need iOS 26
 
+    private enum TabID { // identifies the 4 tabs, so app can choose which tab to show at startup
+        case photographers, members, maps, settings
+    }
+
     @StateObject private var preferencesModel = PreferencesViewModel.shared
     @State private var photographersSearchText = ""
+    @State private var selectedTab: TabID = .members
 
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             Tab(String(localized: "Photographers",
                        table: "PhotoClubHub.SwiftUI",
                        comment: "Tab bar label for the photographers list"),
-                systemImage: "person.text.rectangle") {
+                systemImage: "person.text.rectangle",
+                value: .photographers) {
                 NavigationStack {
                     if #available(iOS 26, *) {
                         PhotographersListView2627(searchText: $photographersSearchText)
@@ -31,28 +37,32 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
             Tab(String(localized: "Members",
                        table: "PhotoClubHub.SwiftUI",
                        comment: "Tab bar label for the member portfolios list"),
-                systemImage: "person.2") {
+                systemImage: "person.2",
+                value: .members) {
                 NavigationStack {
                     MemberPortfolioView()
                 }
             }
 
-            Tab(String(localized: "Organizations",
+            Tab(String(localized: "Maps",
                        table: "PhotoClubHub.SwiftUI",
-                       comment: "Tab bar label for the organizations list"),
-                systemImage: "mappin.and.ellipse") {
+                       comment: "Tab bar label for the maps showing organizations"),
+                systemImage: "mappin.and.ellipse",
+                value: .maps) {
                 NavigationStack {
                     OrganizationView()
                 }
             }
 
-            Tab(String(localized: "Preferences",
+            Tab(String(localized: "Settings",
                        table: "PhotoClubHub.SwiftUI",
-                       comment: "Tab bar label for preferences"),
-                systemImage: "gearshape") {
+                       comment: "Tab bar label for settings"),
+                systemImage: "gearshape",
+                value: .settings) {
                 PreferencesView(preferences: $preferencesModel.preferences)
             }
         }
+        .tabViewStyle(.sidebarAdaptable)
         .tabBarMinimizeBehaviorIfAvailable()
     }
 
