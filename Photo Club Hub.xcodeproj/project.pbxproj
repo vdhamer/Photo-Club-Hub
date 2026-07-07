@@ -707,7 +707,7 @@
 				37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */,
 				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
 				D081655C278612470078AB16 /* MemberPortfoliosView */,
-				D0AE1B7327889D6700E0100E /* OrganizationsView */,
+				D0AE1B7327889D6700E0100E /* MapView */,
 				D05E451B27EF286B00D31327 /* SettingsView */,
 				D0E2235227DE9139002A8600 /* PreludeView */,
 				D05E451C27EF297100D31327 /* ReadmeView */,
@@ -836,7 +836,7 @@
 			path = Website_Status_PPT;
 			sourceTree = "<group>";
 		};
-		D0AE1B7327889D6700E0100E /* OrganizationsView */ = {
+		D0AE1B7327889D6700E0100E /* MapView */ = {
 			isa = PBXGroup;
 			children = (
 				37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */,
@@ -848,7 +848,7 @@
 				37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */,
 				37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */,
 			);
-			path = OrganizationsView;
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		D0AE1B762788A14500E0100E /* PhotographersView */ = {

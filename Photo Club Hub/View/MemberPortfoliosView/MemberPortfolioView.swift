@@ -7,6 +7,7 @@
 
 import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI
+import WebKit // for WKWebView
 
 /// A list-based view that displays member portfolios with search and a Readme toolbar button.
 ///
@@ -19,60 +20,49 @@ import SwiftUI
 struct MemberPortfolioView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    /// Available sheet detents for the Readme sheet.
-    private var detentsList: Set<PresentationDetent> = [ .large, .fraction(0.70) ]
-
-    /// Controls visibility of the Readme sheet.
-    @State private var showingReadme = false
-
-    /// The currently selected detent for the Readme sheet; must be contained in `detentsList`.
-    @State private var selectedReadmeDetent = PresentationDetent.fraction(0.70)
-
     /// The text bound to the search field used to filter member portfolios.
     @State private var searchText: String = ""
 
-    @StateObject var preferencesModel = PreferencesViewModel.shared
+    /// The member whose portfolio is shown; setting it (from a row) triggers navigation via
+    /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy `List` row.
+    @State private var selectedPortfolio: MemberPortfolio?
+
+    /// Single instance shared by all rows and the portfolio destination to avoid repeated WKWebView allocation.
+    /// Stored in @State so it survives re-initialization of this view struct.
+    @State private var wkWebView = WKWebView()
+
+    /// Used to choose between full club name (regular/iPad) and nickname (compact/iPhone) in the navigation title.
+    @Environment(\.horizontalSizeClass) private var horSizeClass
+
+    @ObservedObject private var settingsModel = SettingsViewModel.shared
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView(memberPredicate: preferencesModel.preferences.memberPredicate,
-                                         searchText: $searchText)
+            FilteredMemberPortfoliosView(memberPredicate: settingsModel.settings.memberPredicate,
+                                         searchText: $searchText,
+                                         selectedPortfolio: $selectedPortfolio)
         }
         .listStyle(.plain)
+        .navigationDestination(item: $selectedPortfolio) { member in
+            SinglePortfolioView(url: member.level3URL, webView: wkWebView)
+                .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
+                                 (horSizeClass == .compact ? member.organization.nickName :
+                                                             member.organization.fullName))
+                .navigationBarTitleDisplayMode(.inline)
+        }
         .refreshable { // for pull-to-refresh
-            // Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
-            // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
-            if Settings.dataResetPending {
-                print("dataResetPending flag toggled from true to false")
-            }
-            Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
-            PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
+            resetAndReloadData()
         }
         .keyboardType(.namePhonePad)
-        .autocapitalization(.sentences)
+        .textInputAutocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
-        .disableAutocorrection(true)
-        .navigationTitle(String(localized: "Members",
+        .autocorrectionDisabled()
+        .navigationTitle(String(localized: "Clubs",
                                 table: "PhotoClubHub.SwiftUI",
                                 comment: "Title of page showing member portfolios"))
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    showingReadme = true
-                } label: {
-                    Image(systemName: "info.circle")
-                        .font(.title)
-                        .foregroundStyle(.linkColor)
-                }
-                // Readme sheet with shared detents and visual presentation options.
-                .sheet(isPresented: $showingReadme, content: {
-                    ReadmeView()
-                    // the detents don't do anything on an iPad
-                        .presentationDetents(detentsList, selection: $selectedReadmeDetent)
-                        .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
-                        .presentationCornerRadius(40) // compiler can't handle this yet
-                        .presentationDragIndicator(.visible) // show drag indicator
-                })
+            ToolbarItem(placement: .topBarTrailing) {
+                ReadmeButton()
             }
         }
         .searchable(text: $searchText, placement: searchPlacement,
@@ -88,7 +78,16 @@ struct MemberPortfolioView: View {
                                           """
                                 ))
         .searchToolbarBehaviorIfAvailable()
-        .disableAutocorrection(true)
+    }
+
+    /// Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
+    private func resetAndReloadData() {
+        // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
+        if Settings.dataResetPending {
+            print("dataResetPending flag toggled from true to false")
+        }
+        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
+        PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
     }
 
 }
