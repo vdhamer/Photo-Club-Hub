@@ -11,7 +11,6 @@
 		370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */; };
 		370D38202F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */; };
 		370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */; };
-		371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371414B62F12FF460032EF21 /* PreferencesIcon.swift */; };
 		37174DAA2F8F93E100E58B6E /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37174DA92F8F93E100E58B6E /* PreferencesView.swift */; };
 		372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
 		3722DCA02F98CE9000F2851C /* ImageChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722DC9F2F98CE9000F2851C /* ImageChoice.swift */; };
@@ -66,6 +65,7 @@
 		37C014462EDA575B003B3901 /* Organization+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014452EDA575B003B3901 /* Organization+Comparable.swift */; };
 		37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */; };
 		37C61B8F2E72091000C5BAEF /* FotokringSintMichielsgestel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */; };
+		37C9BEBA2FFC5F120075F6DE /* ReadmeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9BEB92FFC5F120075F6DE /* ReadmeButton.swift */; };
 		37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */; };
 		37CA632F2FA63EFA00C92F30 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */; };
 		37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */; };
@@ -80,7 +80,6 @@
 		37DA3E112F06B63200AB7993 /* museumsNL.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E102F06B62600AB7993 /* museumsNL.level1.json */; };
 		37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */; };
 		37DB783A2FB74854007AC405 /* MemberPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB78392FB74854007AC405 /* MemberPortfolioView.swift */; };
-		37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B42E6F709500C61714 /* PreferencesView1718.swift */; };
 		37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */; };
 		37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */; };
 		37EA14EB2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */; };
@@ -124,7 +123,6 @@
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D082BE912957806800FF0812 /* LogoPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082BE902957806800FF0812 /* LogoPath.swift */; };
 		D08319E7277F70A30049AB84 /* PhotoClubHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */; };
-		D0831A1E277F72270049AB84 /* PreferencesView2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A19277F72270049AB84 /* PreferencesView2627.swift */; };
 		D0831A21277F72270049AB84 /* FilteredPhotographerView2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1C277F72270049AB84 /* FilteredPhotographerView2627.swift */; };
 		D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A24277F72590049AB84 /* MemberPortfolio.swift */; };
 		D0831A32277F72590049AB84 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A25277F72590049AB84 /* Photographer.swift */; };
@@ -193,7 +191,6 @@
 		370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips.swift; sourceTree = "<group>"; };
 		370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms.swift; sourceTree = "<group>"; };
 		370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp.swift; sourceTree = "<group>"; };
-		371414B62F12FF460032EF21 /* PreferencesIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesIcon.swift; sourceTree = "<group>"; };
 		37174DA92F8F93E100E58B6E /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		3722DC9F2F98CE9000F2851C /* ImageChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChoice.swift; sourceTree = "<group>"; };
@@ -249,6 +246,7 @@
 		37C014452EDA575B003B3901 /* Organization+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Comparable.swift"; sourceTree = "<group>"; };
 		37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileOrganization+FindCreateUpdate.swift"; sourceTree = "<group>"; };
 		37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotokringSintMichielsgestel.swift; sourceTree = "<group>"; };
+		37C9BEB92FFC5F120075F6DE /* ReadmeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeButton.swift; sourceTree = "<group>"; };
 		37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+canonicalCase.swift"; sourceTree = "<group>"; };
 		37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 		37DA3E102F06B62600AB7993 /* museumsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsNL.level1.json; sourceTree = "<group>"; };
 		37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView.swift; sourceTree = "<group>"; };
 		37DB78392FB74854007AC405 /* MemberPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioView.swift; sourceTree = "<group>"; };
-		37E134B42E6F709500C61714 /* PreferencesView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView1718.swift; sourceTree = "<group>"; };
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
 		37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitHub_bestandsbeheer_NL.md; sourceTree = "<group>"; };
 		37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListSectionHeader.swift; sourceTree = "<group>"; };
@@ -352,7 +349,6 @@
 		D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubHubApp.swift; sourceTree = "<group>"; };
 		D08319EA277F70A40049AB84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo-Club-Hub-Info.plist"; sourceTree = SOURCE_ROOT; };
-		D0831A19277F72270049AB84 /* PreferencesView2627.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesView2627.swift; sourceTree = "<group>"; };
 		D0831A1C277F72270049AB84 /* FilteredPhotographerView2627.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredPhotographerView2627.swift; sourceTree = "<group>"; };
 		D0831A24277F72590049AB84 /* MemberPortfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPortfolio.swift; sourceTree = "<group>"; };
 		D0831A25277F72590049AB84 /* Photographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
@@ -502,14 +498,6 @@
 			path = Expertise;
 			sourceTree = "<group>";
 		};
-		37E134BE2E6F7AC300C61714 /* OldIOSVersionSupport */ = {
-			isa = PBXGroup;
-			children = (
-				37E134B42E6F709500C61714 /* PreferencesView1718.swift */,
-			);
-			path = OldIOSVersionSupport;
-			sourceTree = "<group>";
-		};
 		37E134BF2E6F7AD600C61714 /* OldIOSVersionSupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,10 +557,7 @@
 		D05E451B27EF286B00D31327 /* PreferencesView */ = {
 			isa = PBXGroup;
 			children = (
-				37E134BE2E6F7AC300C61714 /* OldIOSVersionSupport */,
-				D0831A19277F72270049AB84 /* PreferencesView2627.swift */,
 				D0DE02762789D1B30062738C /* RoleIconView.swift */,
-				371414B62F12FF460032EF21 /* PreferencesIcon.swift */,
 				37174DA92F8F93E100E58B6E /* PreferencesView.swift */,
 				37D984082F90406200C30EE5 /* PreferencesViewMembersSection.swift */,
 				37D9840A2F9042F600C30EE5 /* PreferencesViewOrganizationsSection.swift */,
@@ -595,6 +580,7 @@
 				370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */,
 				370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */,
 				370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */,
+				37C9BEB92FFC5F120075F6DE /* ReadmeButton.swift */,
 			);
 			path = ReadmeView;
 			sourceTree = "<group>";
@@ -1241,7 +1227,6 @@
 				3762771B2FF955470047E77C /* MainTabView.swift in Sources */,
 				37415B222F9D5E96004B4647 /* ReadmeSectionOnConcept.swift in Sources */,
 				D087540C2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift in Sources */,
-				37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */,
 				D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */,
 				37A2A0B22FAA7DD200EF39A1 /* FilteredOrganizationView.swift in Sources */,
 				37A2A0E62FAAA53400EF39A1 /* OrganizationViewRemark.swift in Sources */,
@@ -1307,7 +1292,6 @@
 				D06B70E42D5FE9A700B0DECB /* Model.swift in Sources */,
 				376D14FA2E6DE83A00A1403B /* DebugPanel2627.swift in Sources */,
 				D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */,
-				371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */,
 				37A2A0E02FAA959F00EF39A1 /* OrganizationViewTitle.swift in Sources */,
 				3761E2AC2FEB223D003D4514 /* String+CapitalizeFirstLetter.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */,
@@ -1322,6 +1306,7 @@
 				D0FB52912E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift in Sources */,
 				D0831A21277F72270049AB84 /* FilteredPhotographerView2627.swift in Sources */,
 				D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */,
+				37C9BEBA2FFC5F120075F6DE /* ReadmeButton.swift in Sources */,
 				D0ACCEE12DEF9B070002FACC /* FotogroepWaalreMembersProvider.swift in Sources */,
 				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,
 				370D38202F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift in Sources */,
@@ -1332,7 +1317,6 @@
 				37B39FAD2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift in Sources */,
 				D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */,
 				37A2A0AF2FAA587F00EF39A1 /* OrganizationView.swift in Sources */,
-				D0831A1E277F72270049AB84 /* PreferencesView2627.swift in Sources */,
 				D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */,
 				D0DD2B7D2EF8A14F002210DA /* Persoonlijk03MembersProvider.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
