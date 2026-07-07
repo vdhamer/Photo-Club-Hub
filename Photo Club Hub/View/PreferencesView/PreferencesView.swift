@@ -11,6 +11,7 @@ import SemanticColorPicker // for SemanticColor and SemanticColorPicker itself
 struct PreferencesView: View {
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.isPresented) private var isSheet // false when hosted in a tab, true when hosted in a sheet
 
     @Binding var preferences: PreferencesStruct // parameters for various Toggles()
     @State private var localPreferences: PreferencesStruct
