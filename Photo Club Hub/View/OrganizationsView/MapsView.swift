@@ -1,5 +1,5 @@
 //
-//  OrganizationListView.swift
+//  MapsView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -19,7 +19,7 @@ import SwiftUI // for View
 ///
 /// The code has one location where the code for iOS 27 and iOS 17/18 deviate from each other.
 ///
-struct OrganizationView: View {
+struct MapsView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// A wrapper that mainly holds a Preferences struct
@@ -42,7 +42,7 @@ struct OrganizationView: View {
                 /// This is where the List of Photographers is generated.
                 /// So the most relevant stuff happens in FilteredOrganizationView
                 FilteredOrganizationView(
-                    predicate: modelToHoldSettings.preferences.organizationPredicate,
+                    predicate: modelToHoldSettings.settings.organizationPredicate,
                     searchText: $searchText)
             }
             .scrollTargetLayout()
@@ -84,7 +84,7 @@ struct OrganizationView: View {
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes
         }
-        .navigationTitle(modelToHoldSettings.preferences.organizationLabel())
+        .navigationTitle(modelToHoldSettings.settings.organizationLabel())
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 ReadmeButton()
@@ -155,7 +155,7 @@ private extension View {
 // Believe it or not, the following Preview actually works.
 #Preview {
     NavigationStack {
-        OrganizationView()
+        MapsView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
