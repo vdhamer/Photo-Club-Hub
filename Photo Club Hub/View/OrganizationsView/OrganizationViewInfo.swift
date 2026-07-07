@@ -107,7 +107,7 @@ struct OrganizationViewInfo: View {
             .buttonStyle(.plain) // to avoid entire List element to be clickable
         }
         .padding(.all, 0)
-        .accentColor(.organizationColor)
+        .accentColor(.mapsColor)
     }
 }
 

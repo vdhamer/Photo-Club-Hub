@@ -34,7 +34,7 @@ struct OrganizationViewTitle: View {
                 .tracking(1)
                 .lineLimit(3)
                 .truncationMode(.tail)
-                .foregroundColor(.organizationColor)
+                .foregroundColor(.mapsColor)
             Spacer()
             if let wikipedia { // optional Wikipedia logo (right aligned)
                 Link(destination: wikipedia, label: {
