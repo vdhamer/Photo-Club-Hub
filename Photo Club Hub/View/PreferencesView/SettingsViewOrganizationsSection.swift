@@ -1,5 +1,5 @@
 //
-//  PreferencesViewOrganizationsSection.swift
+//  SettingsViewMapsSection.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 16/04/2026.
@@ -8,65 +8,65 @@
 import SwiftUI
 import SemanticColorPicker // for SemanticColor and SemanticColorPicker
 
-struct PreferencesViewOrganizationsSection: View {
-    @Binding var localPreferences: PreferencesStruct
+struct SettingsViewMapsSection: View {
+    @Binding var localSettings: SettingsStruct
 
     var body: some View {
-        Section(header: Text("Organizations",
+        Section(header: Text("Maps",
                              tableName: "PhotoClubHub.SwiftUI",
-                             comment: "In Preferences, section title"),
+                             comment: "In Settings, section title above map-related toggles"),
                 content: {
 
             HStack { // SHOW CLUBS
                 Image(systemName: "mappin.square")
                     .font(.title2)
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.organizationColor, .gray, .red)
+                    .foregroundStyle(.mapsColor, .gray, .red)
                 Toggle(String(localized: "Show clubs",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showClubs.animation())
+                       isOn: $localSettings.showClubs.animation())
             }
 
             HStack { // SHOW TEMPLATE CLUBS
                 Image(systemName: "mappin.square")
                     .font(.title2)
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.organizationColor, .gray, .red)
+                    .foregroundStyle(.mapsColor, .gray, .red)
                 Toggle(String(localized: "Show template clubs",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showTemplateClubs.animation())
+                       isOn: $localSettings.showTemplateClubs.animation())
             }
 
             HStack { // SHOW MUSEUMS
                 Image(systemName: "mappin.square")
                     .font(.title2)
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.organizationColor, .gray, .red)
+                    .foregroundStyle(.mapsColor, .gray, .red)
                 Toggle(String(localized: "Show museums",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showMuseums.animation())
+                       isOn: $localSettings.showMuseums.animation())
             }
 
-            if localPreferences.highlightNonFotobondNL == false {
+            if localSettings.highlightNonFotobondNL == false {
                 HStack { // HIGHLIGHT FOTOBOND
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.organizationColor, .gray, .red)
+                        .foregroundStyle(.mapsColor, .gray, .red)
                     Toggle(String(localized: "Highlight Dutch Fotobond NL clubs",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localPreferences.highlightFotobondNL.animation())
+                           isOn: $localSettings.highlightFotobondNL.animation())
                 }
             } else {
                 HStack {
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.organizationColor, .gray, .red)
+                        .foregroundStyle(.mapsColor, .gray, .red)
                     Text(
                         "Highlighting of non-Fotobond clubs already enabled",
                         tableName: "PhotoClubHub.SwiftUI",
@@ -75,23 +75,23 @@ struct PreferencesViewOrganizationsSection: View {
                 }
             }
 
-            if localPreferences.highlightFotobondNL == false {
+            if localSettings.highlightFotobondNL == false {
                 HStack { // HIGHLIGHT NON-FOTOBOND
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.organizationColor, .gray, .red)
+                        .foregroundStyle(.mapsColor, .gray, .red)
                     Toggle(String(localized: "Highlight non-Fotobond NL clubs",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localPreferences.highlightNonFotobondNL.animation())
+                           isOn: $localSettings.highlightNonFotobondNL.animation())
                 }
             } else {
                 HStack {
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.organizationColor, .gray, .red)
+                        .foregroundStyle(.mapsColor, .gray, .red)
                     Text(
                         "Highlighting of Fotobond clubs already enabled",
                         tableName: "PhotoClubHub.SwiftUI",
@@ -100,20 +100,20 @@ struct PreferencesViewOrganizationsSection: View {
                 }
             }
 
-            let highlightIsUsed = localPreferences.highlightFotobondNL ||
-                                  localPreferences.highlightNonFotobondNL
+            let highlightIsUsed = localSettings.highlightFotobondNL ||
+                                  localSettings.highlightNonFotobondNL
             if highlightIsUsed {
                 HStack {
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.organizationColor, .gray, .red)
+                        .foregroundStyle(.mapsColor, .gray, .red)
                     SemanticColorPicker(
                         String(localized: "Highlighting color",
                                table: "PhotoClubHub.SwiftUI",
                                comment: "Label of color picker in Preferences"),
                         data: SemanticColor.palette,
-                        selection: $localPreferences.highlightColor)
+                        selection: $localSettings.highlightColor)
                 }
             }
         }) // end of section
@@ -123,13 +123,13 @@ struct PreferencesViewOrganizationsSection: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works.
-private struct PreferencesViewOrgSectionPreviewHost: View {
-    @StateObject var model = PreferencesViewModel()
+private struct SettingsViewMapSectionPreviewHost: View {
+    @StateObject var model = SettingsViewModel()
 
     var body: some View {
         NavigationStack {
             List {
-                PreferencesViewOrganizationsSection(localPreferences: $model.preferences)
+                SettingsViewMapsSection(localSettings: $model.settings)
             }
         }
     }
@@ -137,5 +137,5 @@ private struct PreferencesViewOrgSectionPreviewHost: View {
 
 // Believe it or not, the following Preview actually works.
 #Preview {
-    PreferencesViewOrgSectionPreviewHost()
+    SettingsViewMapSectionPreviewHost()
 }
