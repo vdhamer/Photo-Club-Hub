@@ -1,5 +1,5 @@
 //
-//  OrganizationViewTitle.swift
+//  MapsViewTitle.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -7,9 +7,9 @@
 
 import SwiftUI // for View
 
-/// First line of Text: club/museum name plus optional Wikipedia icon. Used in FilteredOrganizationView.
+/// First line of Text: club/museum name plus optional Wikipedia icon. Used in FilteredMapsView.
 @MainActor
-struct OrganizationViewTitle: View {
+struct MapsViewTitle: View {
 
     let filteredOrganization: Organization?
     let fullName: String
@@ -53,18 +53,19 @@ struct OrganizationViewTitle: View {
 
 // MARK: - Previews
 
-// Believe it or not, these previews actually works.
+// Believe it or not, these 3 previews actually work.
+
 #Preview {
     VStack(alignment: .leading) {
-        OrganizationViewTitle(organizationFullName: "Fotogroep Waalre",
+        MapsViewTitle(organizationFullName: "Fotogroep Waalre",
                               wikipediaURL: URL(string: "https://en.wikipedia.org/wiki/Waalre"))
 
         Divider()
-        OrganizationViewTitle(organizationFullName: "Fotoclub Den Dungen",
+        MapsViewTitle(organizationFullName: "Fotoclub Den Dungen",
                               wikipediaURL: nil)
 
         Divider()
-        OrganizationViewTitle(organizationFullName: "A Very Long Photo Club Name That Must Truncate Eventually",
+        MapsViewTitle(organizationFullName: "A Very Long Photo Club Name That Must Truncate Eventually",
                               wikipediaURL: nil)
     }
     .padding()

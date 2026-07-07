@@ -40,8 +40,8 @@ struct MapsView: View {
 
             LazyVStack(alignment: .leading, spacing: 12) {
                 /// This is where the List of Photographers is generated.
-                /// So the most relevant stuff happens in FilteredOrganizationView
-                FilteredOrganizationView(
+                /// So the most relevant stuff happens in FilteredMapsView
+                FilteredMapsView(
                     predicate: modelToHoldSettings.settings.organizationPredicate,
                     searchText: $searchText)
             }

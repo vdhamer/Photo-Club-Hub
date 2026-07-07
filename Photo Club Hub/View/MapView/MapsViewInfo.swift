@@ -1,5 +1,5 @@
 //
-//  OrganizationViewInfo.swift
+//  MapsViewInfo.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -7,9 +7,9 @@
 
 import SwiftUI // for View
 
-/// Type-icon on the left, few rows of text on the right, tapable lock symbol. Called from FilteredOrganizationView.
+/// Type-icon on the left, few rows of text on the right, tapable lock symbol. Called from FilteredMapsView.
 @MainActor
-struct OrganizationViewInfo: View {
+struct MapsViewInfo: View {
 
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
@@ -120,7 +120,7 @@ struct OrganizationViewInfo: View {
 
     VStack(alignment: .leading, spacing: 20) {
         Divider()
-        OrganizationViewInfo(iconSystemName: "camera.circle.fill",
+        MapsViewInfo(iconSystemName: "camera.circle.fill",
                              isUnknownType: false,
                              localizedTown: "Waalre",
                              localizedCountry: "Netherlands",
@@ -128,7 +128,7 @@ struct OrganizationViewInfo: View {
                              organizationWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
                              isMapScrollLocked: $lockedWaalre)
         Divider()
-        OrganizationViewInfo(iconSystemName: "questionmark.circle.fill",
+        MapsViewInfo(iconSystemName: "questionmark.circle.fill",
                              isUnknownType: true,
                              localizedTown: "Nieuw Amsterdam",
                              localizedCountry: "Verenigde Staten",

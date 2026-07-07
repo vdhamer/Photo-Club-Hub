@@ -49,9 +49,9 @@
 		37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */; };
 		37913A312F452C01009B5D8A /* TemplateMinMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */; };
 		37A2A0AF2FAA587F00EF39A1 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */; };
-		37A2A0B22FAA7DD200EF39A1 /* FilteredOrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0B12FAA7DD200EF39A1 /* FilteredOrganizationView.swift */; };
-		37A2A0E02FAA959F00EF39A1 /* OrganizationViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0DF2FAA959F00EF39A1 /* OrganizationViewTitle.swift */; };
-		37A2A0E22FAA973400EF39A1 /* OrganizationViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */; };
+		37A2A0B22FAA7DD200EF39A1 /* FilteredMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */; };
+		37A2A0E02FAA959F00EF39A1 /* MapsViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */; };
+		37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */; };
 		37A2A0E42FAA9EA100EF39A1 /* OrganizationViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */; };
 		37A2A0E62FAAA53400EF39A1 /* OrganizationViewRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */; };
 		37A74C032F145202003DCD06 /* museumsCN.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37A74C022F1451F6003DCD06 /* museumsCN.level1.json */; };
@@ -229,9 +229,9 @@
 		37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMinMembersProvider.swift; sourceTree = "<group>"; };
 		37922A512F50ECAF00E596B8 /* Photo_Club_Hub_2_9_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_3.xcdatamodel; sourceTree = "<group>"; };
 		37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
-		37A2A0B12FAA7DD200EF39A1 /* FilteredOrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredOrganizationView.swift; sourceTree = "<group>"; };
-		37A2A0DF2FAA959F00EF39A1 /* OrganizationViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewTitle.swift; sourceTree = "<group>"; };
-		37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewInfo.swift; sourceTree = "<group>"; };
+		37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMapsView.swift; sourceTree = "<group>"; };
+		37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewTitle.swift; sourceTree = "<group>"; };
+		37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewInfo.swift; sourceTree = "<group>"; };
 		37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewMap.swift; sourceTree = "<group>"; };
 		37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewRemark.swift; sourceTree = "<group>"; };
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
@@ -840,11 +840,11 @@
 			isa = PBXGroup;
 			children = (
 				37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */,
-				37A2A0B12FAA7DD200EF39A1 /* FilteredOrganizationView.swift */,
+				37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
 				37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */,
-				37A2A0DF2FAA959F00EF39A1 /* OrganizationViewTitle.swift */,
-				37A2A0E12FAA973400EF39A1 /* OrganizationViewInfo.swift */,
+				37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */,
+				37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */,
 				37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */,
 				37A2A0E52FAAA53400EF39A1 /* OrganizationViewRemark.swift */,
 			);
@@ -1228,7 +1228,7 @@
 				37415B222F9D5E96004B4647 /* ReadmeSectionOnConcept.swift in Sources */,
 				D087540C2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift in Sources */,
 				D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */,
-				37A2A0B22FAA7DD200EF39A1 /* FilteredOrganizationView.swift in Sources */,
+				37A2A0B22FAA7DD200EF39A1 /* FilteredMapsView.swift in Sources */,
 				37A2A0E62FAAA53400EF39A1 /* OrganizationViewRemark.swift in Sources */,
 				37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */,
 				37B5349B2F243171000EA5BB /* FFCShot71MembersProvider.swift in Sources */,
@@ -1292,7 +1292,7 @@
 				D06B70E42D5FE9A700B0DECB /* Model.swift in Sources */,
 				376D14FA2E6DE83A00A1403B /* DebugPanel2627.swift in Sources */,
 				D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */,
-				37A2A0E02FAA959F00EF39A1 /* OrganizationViewTitle.swift in Sources */,
+				37A2A0E02FAA959F00EF39A1 /* MapsViewTitle.swift in Sources */,
 				3761E2AC2FEB223D003D4514 /* String+CapitalizeFirstLetter.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */,
 				D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */,
@@ -1331,7 +1331,7 @@
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */,
 				376277202FF956140047E77C /* MainTabView1827.swift in Sources */,
-				37A2A0E22FAA973400EF39A1 /* OrganizationViewInfo.swift in Sources */,
+				37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */,
 				37913A302F452C01009B5D8A /* TemplateMaxMembersProvider.swift in Sources */,
 				37913A312F452C01009B5D8A /* TemplateMinMembersProvider.swift in Sources */,

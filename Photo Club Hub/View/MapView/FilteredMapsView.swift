@@ -1,5 +1,5 @@
 //
-//  FilteredOrganizationView.swift
+//  FilteredMapsView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -10,7 +10,7 @@ import MapKit // for MKMapItem
 import CoreData // for NSFetchRequest
 
 @MainActor
-struct FilteredOrganizationView: View {
+struct FilteredMapsView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
@@ -47,9 +47,9 @@ struct FilteredOrganizationView: View {
 
             VStack(alignment: .leading) {
 
-                OrganizationViewTitle(organization: filteredOrganization)
+                MapsViewTitle(organization: filteredOrganization)
 
-                OrganizationViewInfo(organization: filteredOrganization)
+                MapsViewInfo(organization: filteredOrganization)
 
                 OrganizationViewMap(filteredOrganization: filteredOrganization,
                                     fetchedOrganizations: fetchedOrganizations) // to show all markers within map scope
@@ -144,7 +144,7 @@ struct FilteredOrganizationView: View {
 
 }
 
-extension FilteredOrganizationView { // reverse GeoCoding
+extension FilteredMapsView { // reverse GeoCoding
 
     private func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
@@ -174,7 +174,7 @@ struct FilteredOrganizationView_Previews: PreviewProvider {
         NavigationStack {
             if #available(iOS 26, *) {
                 List { // lists are "Lazy" automatically
-                    FilteredOrganizationView(predicate: organizationPredicate, searchText: $searchText)
+                    FilteredMapsView(predicate: organizationPredicate, searchText: $searchText)
                         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
                 }
                 .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
@@ -182,7 +182,7 @@ struct FilteredOrganizationView_Previews: PreviewProvider {
                 .searchToolbarBehavior(.minimize)
             } else {
                 List { // lists are "Lazy" automatically
-                    FilteredOrganizationView(predicate: organizationPredicate, searchText: $searchText)
+                    FilteredMapsView(predicate: organizationPredicate, searchText: $searchText)
                         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
                 }
                 .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
