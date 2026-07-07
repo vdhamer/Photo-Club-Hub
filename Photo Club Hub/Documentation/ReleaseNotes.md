@@ -1,22 +1,33 @@
-### 2.9.4 (GitHub commit ???????) ??-06-2026
+### 2.9.5 (GitHub commit ???????) ??-08-2026
 
 USER-FACING
 
 * TODO: display expertises on Photographers screen
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
-* Top-level navigation between screens now uses Tabs (instead of Buttons). Some tabs have also been renamed.
+
+This build is just a placeholder for the plans for 2.9.5.
+Work on this hasn't started yet.
+
+---------------------------------------------------------------------------
+
+### 2.9.4 (GitHub commit ???????) ??-07-2026
+
+USER-FACING
+
+* Top-level navigation between screens now uses Tabs (was: Buttons). 
+- Tabs have new names and icons:  Photographers > Persons, Members > Clubs, Organizations > Maps, Preferences > Settings
 - Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple)
 
 README SCREEN
 
-* Fixed typos in EN and NL versions.
+* Fixed typos in EN and NL versions and updates related to UI changes.
 
 STRUCTURAL
 
 * Merging of 2627 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
 * Renaming of filenames and symbols ending on 2626 to 2627 (iOS 27.0 betas are now available)
-* Tested with MacOS 26.5.2, Xcode 27.0 beta (27A5209h), Xcode 26.6 (17F113), iOS 27.0 beta (24A5370g), iOS 26.5.2 and  SwiftLint 0.65
+* Tested with MacOS 26.5.2, Xcode 27.0 beta (27A5218g), Xcode 26.6 (17F113), iOS 27.0 beta (24A5380g), iOS 26.5.2 and  SwiftLint 0.65
 * Synchonized code with Photo Club Hub HTML
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
 * Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
