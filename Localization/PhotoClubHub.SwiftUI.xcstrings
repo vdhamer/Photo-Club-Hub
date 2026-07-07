@@ -758,6 +758,17 @@
         }
       }
     },
+    "Navigation using tabs" : {
+      "comment" : "Title of one-time tip about Preferences having moved to the Settings tab",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigeren via tabbladen."
+          }
+        }
+      }
+    },
     "Next" : {
       "comment" : "Button text",
       "localizations" : {
@@ -1471,6 +1482,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg."
+          }
+        }
+      }
+    },
+    "We switched to tabs for navigating the screens. Tabs can save a few taps. Help is available via ⓘ," : {
+      "comment" : "Message of one-time tip about tabs replacing toolbar buttons",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wij gebruiken tegenwoordig tabbladen om van scherm te wisselen. Gebruik de ⓘ knop voor uitleg over de app."
           }
         }
       }

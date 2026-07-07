@@ -84,7 +84,7 @@
 		37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */; };
 		37EA14EB2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */; };
 		37EBBC382FFA451F00C95FDA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBBC372FFA451F00C95FDA /* RootView.swift */; };
-		37ECFBDD2FFDAD7600806590 /* SettingsMovedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECFBDC2FFDAD7600806590 /* SettingsMovedTip.swift */; };
+		37ECFBDD2FFDAD7600806590 /* TabNavigationTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */; };
 		37EEEB9D2FA0B3A3001463BA /* SettingsViewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */; };
@@ -271,7 +271,7 @@
 		37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualImageWithCaptionAndControls.swift; sourceTree = "<group>"; };
 		37EBBC372FFA451F00C95FDA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
-		37ECFBDC2FFDAD7600806590 /* SettingsMovedTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMovedTip.swift; sourceTree = "<group>"; };
+		37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationTip.swift; sourceTree = "<group>"; };
 		37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewThumbnail.swift; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
@@ -648,7 +648,7 @@
 				37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */,
 				37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */,
 				37DB78392FB74854007AC405 /* MemberPortfolioView.swift */,
-				37ECFBDC2FFDAD7600806590 /* SettingsMovedTip.swift */,
+				37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */,
 			);
 			path = MemberPortfoliosView;
 			sourceTree = "<group>";
@@ -1265,7 +1265,7 @@
 				D0839DAD2DFCDBEE004DC584 /* FotogroepDenDungenMembersProvider.swift in Sources */,
 				D08B8FCC2E04B01A00944B8E /* Expertise.swift in Sources */,
 				D08B8FCD2E04B01A00944B8E /* PhotographerExpertise.swift in Sources */,
-				37ECFBDD2FFDAD7600806590 /* SettingsMovedTip.swift in Sources */,
+				37ECFBDD2FFDAD7600806590 /* TabNavigationTip.swift in Sources */,
 				D08B8FCE2E04B01A00944B8E /* LocalizedExpertiseResult.swift in Sources */,
 				D08B8FCF2E04B01A00944B8E /* LocalizedExpertise.swift in Sources */,
 				D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */,
