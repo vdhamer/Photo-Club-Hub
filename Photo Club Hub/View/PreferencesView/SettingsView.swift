@@ -1,5 +1,5 @@
 //
-//  PreferencesViewBody.swift
+//  SettingsView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 15/04/2026.
@@ -8,31 +8,31 @@
 import SwiftUI
 import SemanticColorPicker // for SemanticColor and SemanticColorPicker itself
 
-struct PreferencesView: View {
+struct SettingsView: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.isPresented) private var isSheet // false when hosted in a tab, true when hosted in a sheet
 
-    @Binding var preferences: PreferencesStruct // parameters for various Toggles()
-    @State private var localPreferences: PreferencesStruct
+    @Binding var settings: SettingsStruct // parameters for various Toggles()
+    @State private var localSettings: SettingsStruct
     @State private var isDirty = false // for tracking changes to localPreferences
 
-    private let title = String(localized: "Preferences",
+    private let title = String(localized: "Settings",
                                table: "PhotoClubHub.SwiftUI",
-                               comment: "Title of screen with toggles to adjust preferences")
+                               comment: "Title of the in-app Settings tab")
 
-    init(preferences: Binding<PreferencesStruct>) {
-        _preferences = preferences // set binding
-        localPreferences = preferences.wrappedValue
+    init(settings: Binding<SettingsStruct>) {
+        _settings = settings // set binding
+        localSettings = settings.wrappedValue
     }
 
     var body: some View {
         NavigationStack {
             List {
-                PreferencesViewMembersSection(localPreferences: $localPreferences)
-                PreferencesViewOrganizationsSection(localPreferences: $localPreferences)
-                PreferencesViewPhotographersSection(localPreferences: $localPreferences)
-                PreferencesViewAdvancedSection(localPreferences: $localPreferences)
+                SettingsViewMembersSection(localPreferences: $localSettings)
+                SettingsViewOrganizationsSection(localPreferences: $localSettings)
+                SettingsViewPhotographersSection(localPreferences: $localSettings)
+                SettingsViewAdvancedSection(localPreferences: $localSettings)
             }
             .navigationTitle(title)
             .toolbar {
@@ -42,12 +42,13 @@ struct PreferencesView: View {
                                       table: "PhotoClubHub.SwiftUI",
                                       comment: "Apply preference changes and dismiss")
                         ) {
-                            preferences = localPreferences // this is where state of Preferences is persisted
+                            settings = localSettings // this is where state of Preferences is persisted
+                            localSettings = settings // sync back in case setter normalized prefs → isDirty clears
                             dismiss()
                         }
                         .buttonStyle(BorderedProminentButtonStyle())
                         .controlSize(.small)
-                    } else {
+                    } else if isSheet { // Done only dismisses, so it is pointless when hosted in a tab
                         Button(String(localized: "Done",
                                       table: "PhotoClubHub.SwiftUI",
                                       comment: "Apply preference changes and dismiss")
@@ -66,14 +67,14 @@ struct PreferencesView: View {
                                    table: "PhotoClubHub.SwiftUI",
                                    comment: "Explanation why Cancel buton is greyed out")
                     ) {
-                        // Discard local changes and dismiss
-                        dismiss()
+                        localSettings = settings // discard local changes
+                        dismiss() // no-op when hosted in a tab
                     }
-                    .onChange(of: localPreferences) { _, newValue in
-                        isDirty = newValue != preferences // PreferencesStruct is Equatable
+                    .onChange(of: localSettings) { _, newValue in
+                        isDirty = newValue != settings // SettingsStruct is Equatable
                     }
-                    .onChange(of: preferences) { _, newValue in
-                        isDirty = localPreferences != newValue
+                    .onChange(of: settings) { _, newValue in
+                        isDirty = localSettings != newValue
                     }
                     .disabled(isDirty == false)
                 }
@@ -83,8 +84,8 @@ struct PreferencesView: View {
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Button to reset preferences to original settings")
                     ) {
-                        preferences = PreferencesStruct.defaultValue
-                        dismiss()
+                        localSettings = SettingsStruct.defaultValue // update UI immediately
+                        settings = SettingsStruct.defaultValue // persist the defaults
                     }
                 }
             }
@@ -97,14 +98,14 @@ struct PreferencesView: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works.
-private struct PreferencesViewPreviewHost: View {
-    @StateObject var model = PreferencesViewModel()
+private struct SettingsViewPreviewHost: View {
+    @StateObject var model = SettingsViewModel()
 
     var body: some View {
-        PreferencesView(preferences: $model.preferences)
+        SettingsView(settings: $model.settings)
     }
 }
 
 #Preview {
-    PreferencesViewPreviewHost()
+    SettingsViewPreviewHost()
 }

@@ -59,11 +59,12 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                        comment: "Tab bar label for settings"),
                 systemImage: "gearshape",
                 value: .settings) {
-                PreferencesView(preferences: $preferencesModel.preferences)
+                SettingsView(preferences: $preferencesModel.settings)
             }
         }
         .tabViewStyle(.sidebarAdaptable)
         .tabBarMinimizeBehaviorIfAvailable()
+        .tint(selectedTab.tint) // colors the selected tab bar item to match its screen
     }
 
 }
