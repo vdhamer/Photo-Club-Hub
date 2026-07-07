@@ -22,7 +22,7 @@ struct PhotoClubHubApp: App {
 
         // Load persisted tip state (e.g. SettingsMovedTip); without this call no tips are shown.
         try? Tips.resetDatastore() // TEMPORARY (verification only): re-arms already-shown tips. REMOVE before commit.
-        try? Tips.configure() // is this needed? It doesn't do much.
+        try? Tips.configure()
 
         // Core Data settings
         let persistenceController = PersistenceController.shared // for Core Data

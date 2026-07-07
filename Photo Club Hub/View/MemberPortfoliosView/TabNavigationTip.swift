@@ -1,5 +1,5 @@
 //
-//  SettingsMovedTip.swift
+//  TabNavigationTip.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/07/2026.

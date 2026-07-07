@@ -6,8 +6,9 @@
 //
 
 import CoreData // for NSManagedObjectContext, FetchRequest
-import SwiftUI
-import WebKit // for WKWebView
+import SwiftUI  // for View
+import WebKit   // for WKWebView
+import TipKit   // for TipView
 
 /// A list-based view that displays member portfolios with search and a Readme toolbar button.
 ///
@@ -38,6 +39,11 @@ struct MemberPortfolioView: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
+            // Section prevents the List from adopting the tip as an implicit section header (all-caps styling).
+            Section {
+                TipView(TabNavigationTip()) // one-shot tip (toolbar → tabs migration); renders nothing once dismissed
+                    .shadow(color: Color("_MemberPortfolioColor"), radius: 10)
+            }
             FilteredMemberPortfoliosView(memberPredicate: settingsModel.settings.memberPredicate,
                                          searchText: $searchText,
                                          selectedPortfolio: $selectedPortfolio)
