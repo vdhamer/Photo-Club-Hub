@@ -72,7 +72,7 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                 systemImage: "mappin.and.ellipse",
                 value: .maps) {
                 NavigationStack {
-                    OrganizationView()
+                    MapsView()
                 }
             }
 

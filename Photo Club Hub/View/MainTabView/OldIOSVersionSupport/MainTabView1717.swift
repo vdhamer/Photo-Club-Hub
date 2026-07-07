@@ -65,7 +65,7 @@ struct MainTabView1717: View {
             }
 
             NavigationStack {
-                OrganizationView()
+                MapsView()
             }
             .tag(TabID.maps)
             .tabItem {
