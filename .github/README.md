@@ -21,12 +21,12 @@
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
-            <li><a href="#the-portfolios-screen">The Portfolios Screen</a></li>
-            <li><a href="#the-organizations-screen">The Organizations Screen</a></li>
+            <li><a href="#the-clubs-screen">The Clubs Screen</a></li>
+            <li><a href="#the-maps-screen">The Maps Screen</a></li>
             <li><a href="#the-images-screen">The Images Screen</a></li>
-            <li><a href="#the-preferences-screen">The Preferences Screen</a></li>
+            <li><a href="#the-settings-screen">The Settings Screen</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
-            <li><a href="#the-whos-who-screen">The Photographers Screen</a></li>
+            <li><a href="#the-people-screen">The People Screen</a></li>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
@@ -132,13 +132,13 @@ There is a <a href="#adding-photo-clubs-to-the-app">chapter</a> below on how to 
 
 Photo clubs are thus the distinguishing feature of this app.
 
-You can first look up a photo club and then find its members in the `Portfolio` screen. 
-Or you can alternatively look up a photographer and then the associated photo club in the `Photographers` screen.
+You can first look up a photo club and then find its members in the `Clubs` screen. 
+Or you can alternatively look up a photographer and then the associated photo club in the `People` screen.
 Either way, once you have chosen a photographer-and-club combination, you can view the photo portfolio of that club member.
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-Here is a schematic representation of the `Portfolios` screen.
+Here is a schematic representation of the `Clubs` screen.
 This screen puts the photo club first, and then allows you to select club members and their work:
 
 * photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
@@ -155,7 +155,7 @@ This screen puts the photo club first, and then allows you to select club member
 
 <a/></p>
 
-An alternative navigation path is provided by the `Photographers` screen.
+An alternative navigation path is provided by the `People` screen.
 This screen puts the photographer first, thus allowing you to find a photographer even if you don't
 know the name of the club (or clubs) the photographer is associated with:
 
@@ -214,21 +214,26 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
  
 ## The User Interface Screens
 
+The app has a tab bar at the bottom of the screen with four tabs: `People`, `Clubs`, `Maps`, and `Settings`.
+The remaining screens are reached from there: the `Images` screen opens when you tap a portfolio,
+the `Readme` screen opens via the Info (ⓘ) button available on most tabs,
+and the `Prelude` screen is shown when the app launches.</p>
+
 Usage of the various screens in the user interface:
 <ul>
 
-### The `Portfolios` Screen
+### The `Clubs` Screen
 
-The `Portfolios` screen lists all the photo clubs featured by the app.
+The `Clubs` screen lists all the photo clubs featured by the app.
 It allows you to first select a photo club and then select the portfolio of one of its members.
 The `Search` bar filters the lists of club members using the photographer's full name.
 Swiping left deletes an entry, but this is not normally needed and is not permanent (yet).
 
-![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
+![Clubs Screen](images/portfoliosScreen.png "Clubs Screen")
 
-### The `Organizations` Screen
+### The `Maps` Screen
 
-The `Organizations` screen lists all photo clubs that are known to the app.
+The `Maps` screen lists all photo clubs that are known to the app.
 Each entry predominantly contains a map showing where the club is located and optionally your current location.
 A button with a lock icon toggles whether the map can be controlled interactively (scroll, zoom, rotate, 3D).
 By default, the maps are not interactive. This mode helps scroll through the list of clubs rather than scrolling within a map.
@@ -237,12 +242,12 @@ A _blue_ pin shows the location of any other photo club that happens to be in th
 The screen can also show any photo museums that happen to be in sight. These have different markers than the photo clubs.
 The plan is that the screen can switch between listing all photo clubs and listing all photo museums.
 
-![Organizations Screen](images/clubsMuseumsScreen.png "Organizations Screen")
+![Maps Screen](images/clubsMuseumsScreen.png "Maps Screen")
 
 ### The `Images` Screen
 
 The `Images` screen displays one portfolio (of one photographer associated with one club).
-It can be reached by tapping on a `portfolio` in either the `Portfolios` or the `Photographers` screen.
+It can be reached by tapping on a `portfolio` in either the `Clubs` or the `People` screen.
 The title at the top of the screen shows the selected photographer and selected club affiliation:
 "Jane Doe @ Club F/8".
 
@@ -255,33 +260,34 @@ You can _swipe_ left or right to manually move backwards or forwards through the
 There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
 currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
 
-### The `Preferences` Screen
+### The `Settings` Screen
 
-The `Preferences` screen allows you to configure which types of portfolios you want to include in the
-`Portfolios` screen. You can, for example, choose whether to show former members.
-The `Preferences` screen probably should also filter the `Photographers` screen - but it doesn't yet.
+The `Settings` screen allows you to configure which types of portfolios you want to include in the
+`Clubs` screen. You can, for example, choose whether to show former members.
+The `Settings` screen probably should also filter the `People` screen - but it doesn't yet.
 
-![Preferences Screen](images/preferencesScreen.png "Preferences Screen")
+![Settings Screen](images/preferencesScreen.png "Settings Screen")
 
 ### The `Readme` Screen
 
 The `Readme` screen contains background information on the app and info on app usage.
+It opens as a sheet via the Info (ⓘ) button in the toolbar of the `People`, `Clubs`, and `Maps` tabs.
 
 ![Readme Screen](images/readmeScreen.png "Readme Screen")
 
-### The `Photographers` Screen
+### The `People` Screen
 
-The `Photographers` screen lists all the photographers known to the app.
+The `People` screen lists all the photographers known to the app.
 It allows you to first select the photographer and then select that person's club-specific portfolio.
 If available, club-independent information (like birthdays) for that photographer is displayed here.
 The `Search` bar filters on photographer names.
 
-![Photographers Screen](images/whosWhoScreen.png "Photographers Screen")
+![People Screen](images/whosWhoScreen.png "People Screen")
 
 ### The `Prelude` Screen
 
 The `Prelude` screen shows an opening animation.
-Clicking outside the central image brings you to the central `Portfolios` screen.
+Clicking outside the central image dismisses the Prelude and reveals the app's main interface (starting on the `Clubs` tab).
 
 ![Prelude Screen](images/preludeScreen.png "Prelude Screen")
 
@@ -299,10 +305,9 @@ Tapping on the icon turns it into an interactive image illustrating how most dig
 > pixel: the two missing color channels for that pixel are estimated using color information from surrounding pixels.
 
 Tapping *inside* the image allows you to zoom in or out to your heart's content.
-Tapping *outside* the image brings you to the central screen of the app: the `Portfolios` screen.
+Tapping *outside* the image dismisses the Prelude and reveals the app's main interface.
 
-You will see the Prelude animation after you shut down and restart the app.
-On wide screens (iPad, iPhone Pro Max) you can see the animation again using an extra navigation button at the top of the screen.
+You will see the Prelude animation again after you shut down and restart the app.
 
 Why provide such a fancy opening screen? Well, it was partly a nice challenge to make (it actually runs
 on your device's GPU cores). But it also helps explain the app's logo: the Bayer filter array indeed consists of an array of repeated
@@ -342,23 +347,24 @@ The HTML version also covers the cases where someone wants to view the informati
 
 ### Searchable Lists
 
-The three screens with long lists (`Portfolios`, `Organizations`, `Photographers`) each have a Search Bar
+The three screens with long lists (`Clubs`, `Maps`, `People`) each have a Search Bar
 where you can enter what you are looking for. This reduces the list to items that match that filter criterion.</p>
 
 <details><summary>Details on the Search Bar (click to expand)</summary></p>
 
-On an iPad, the search bar is always visible and at the top of the screen. 
-On an iPhone, scroll up rapidly until you hit the top of the list.
+The positioning of the Search Bar differs per device: iPads show it at the top of the screen,
+newer iPhones show it at the bottom of the screen (just above the tab bar),
+and older iPhones show it at the top of the list (scroll up rapidly until you hit the top).
 
 The text you type inside the search bar is matched against key fields for the records shown in the list.
 
-- In the `Portfolios` screen, a search scans photographers' full names.
+- In the `Clubs` screen, a search scans photographers' full names.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
-  If you need to search on club names, go to the `Organizations` screen.
-- In the `Organizations` screen, searches try to match against the organization names and towns.
+  If you need to search on club names, go to the `Maps` screen.
+- In the `Maps` screen, searches try to match against the organization names and towns.
   Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
   Note that the town is the location specified in the `root.level1.json` file and _not_ its translated version, which can be different.
-- In the `Photographers` screen, searches try to match the photographer's full name.
+- In the `People` screen, searches try to match the photographer's full name.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
 
 Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
@@ -399,7 +405,7 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Pull down to Refresh
 
-The top of the `Members` screen as well as the `Organizations` and `Photographer` screens
+The top of the `Clubs`, `Maps`, and `People` screens
 can be dragged down to force a refresh of all app data.
 Refreshing is usually not needed, but can be used to remove database records
 that were downloaded earlier but are no longer in use.
@@ -435,7 +441,7 @@ Another application of _pull down to refresh_ is to force a reload of online dat
 
 ### Fancy scrolling
 
-The _Organizations_ and _Photographers_ screens try to prevent showing partial maps or partial photographer info.
+The _Maps_ and _People_ screens try to prevent showing partial maps or partial photographer info.
 </p>
 
 <details><summary>Details about smart scrolling</summary></p>
@@ -450,9 +456,9 @@ Because iOS 18 can apparently handle list items with varying height,
 the app's fancy scrolling content looks slightly better under iOS 18.
 </p>
 
-Unfortunately, the _Portfolios_ screen doesn't provide this fancy scrolling feature 
-because it relies on a "segmented List" view rather than on `ScrollView`.
-So we had to choose between removing segmentation or not providing fancy scrolling for the `Portfolios` screen.
+Unfortunately, the _Clubs_ screen doesn't provide this fancy scrolling feature 
+because internally it relies on a "segmented List view" rather than on `ScrollView`.
+So we had to choose between removing segmentation or not providing fancy scrolling for the `Clubs` screen.
 </details>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -502,7 +508,7 @@ When a club is at `Level 1`, it shows up as a marker on the maps (leftmost scree
 This is because the app knows the club's name and the latitude/longitude where it is based.
 
 For clubs at `Level 2`, the app also knows the names and optional roles of club members.
-As illustrated in the center screenshot, the club and its members are now shown on the `Portfolio` and `Photographers` screens.
+As illustrated in the center screenshot, the club and its members are now shown on the `Clubs` and `People` screens.
 Clubs with zero members (as far as the app is concerned) are _not_ shown on either screens.
 
 For clubs at `Level 3`, the app is aware of the image portfolios of club members (rightmost screenshot), 
@@ -589,7 +595,7 @@ The optional `usage` text can be defined in multiple languages (preferably at le
 ### Level 1. Adding Clubs
 
 Adding photo clubs (or museums) to get to `Level 1` requires providing a name, location and a few optional URLs. 
-This enables the app to list the items on the `Organizations` screen and display them using location markers on the maps.
+This enables the app to list the items on the `Maps` screen and display them using location markers on the maps.
 
 `Level 1` data is technically stored in a _single_ `root.level1.json`
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json)
@@ -707,7 +713,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
 ### Level 2. Adding Members
 
 `Level 2` support requires providing a list of the members as a file per club.
-A club's `Level 2` data shows up in the Portfolios screen as a list of club members per club.
+A club's `Level 2` data shows up in the `Clubs` screen as a list of club members per club.
 Each `Level 2` JSON file lists the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also include the URL of an image used as thumbnail for that member.
@@ -835,7 +841,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
       Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
     - `maintainerEmail` is who to contact if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
-    - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _Photographers_ screen.
+    - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _People_ screen.
         - An omitted "infixName" is interpreted as "infixName" = "".
     - the `level3URL` field allows the app to find the Level 3 information with the selected images for this member.</p>
     - the `roles` field indicates whether a member fulfills a role as a club officer (e.g. chairman).
@@ -845,11 +851,11 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
       Many `members` have an empty or even absent `status` section. Some `members` may have multiple special statuses (e.g., `former` and `honorary`).
     - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible.
       The user interface will state `former member` where applicable. 
-      By default (see Preferences) former members are shown. When shown, users see "Former member of <clubname>".
+      By default (see Settings) former members are shown. When shown, users see "Former member of <clubname>".
       The user interface can generate text for more complex cases like "Former honorary member of <clubname>".
     - `isDeceased` is a special variant of `isFormerMember`.
       If deceased members are not removed from the level2.json list, this allows the user interface to indicate this.
-      By default (see Preferences) former and deceased members are not shown.
+      By default (see Settings) former and deceased members are not shown.
       When shown, users see "Deceased former member of <club>" and the text is shown in a different color.
     - `isHonoraryMember` can be used if the person is no longer an active member, but is still treated as a member (e.g., after retiring) because of past achievements. Most clubs won't need this feature.
     - `isMentor` is for coaches who coach or previously (`isFormerMember` to `true`) coached the club.
@@ -857,8 +863,8 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `isProspectiveMember` is a possible future member who is currently participating in some of the club activities, but isn't formally a member yet. Most clubs won't need this feature.
     - `birthday` can be the full date of birth but currently only the month and date are shown in the user interface. So you can provide a dummy year (like `9999`) if that is preferred.
     - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
-    - `photographerImage` is a depiction of the photographer. The app displays either this photo of the photographer or a featured image made by the photographer, depending on the current Preferences.
-    - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Photographers` screen.
+    - `photographerImage` is a depiction of the photographer. The app displays either this photo of the photographer or a featured image made by the photographer, depending on the current Settings.
+    - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Clubs` screen and the `People` screen.
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
     - `membershipStartDate` is the date when the member joined the club.
     - `membershipEndDate` is the date when the member left the club. If the member is a current member, it is best to omit this date.
@@ -894,7 +900,7 @@ But it also signals a temporary tag (e.g., using "Scenery" or "Desert" instead o
 ### Level 3. Adding Images
 
 `Level 3` provides links to the online images in member portfolios. 
-Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the Portfolios screen.
+Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the `Clubs` screen.
 Because a club with, for example, 20 members will have hundreds of images, we have a way to automatically generate portfolios 
 using Lightroom (instructions on how this works will be provided later).
 
@@ -1052,7 +1058,7 @@ That data might be a bit outdated, but should be accurate enough to start off wi
 
 To handle any data updates, asynchronous calls fetch fresher data over the network. 
 And the MVVM architecture uses this to update the user interface `Views` as soon as the requested data arrives.
-So occasionally, maybe one or two seconds after the app launches, the user may see the `Portfolios` screen update. 
+So occasionally, a few seconds after the app launches, the user may see the `Clubs` screen update. 
 This can happen, for example if a club's online member list changed since the previous session.</p>
 
 To be precise, the above is the target architecture. Right now there are still a few gaps -
