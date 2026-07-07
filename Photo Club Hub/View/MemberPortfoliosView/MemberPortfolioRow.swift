@@ -26,7 +26,7 @@ struct MemberPortfolioRow: View {
     @Binding var selectedPortfolio: MemberPortfolio?
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
-    /// Provides access to user preferences (e.g. preferences.preferenceForFeaturedImage) to this view and descendants.
+    /// Provides access to user preferences (e.g. settings.preferenceForFeaturedImage) to this view and descendants.
     @StateObject var settingsModel = SettingsViewModel.shared
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
