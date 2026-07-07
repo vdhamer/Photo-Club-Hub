@@ -30,8 +30,8 @@ struct PhotographersListView1718: View {
     /// Stored in @State so it survives re-initialization of this view struct.
     @State private var wkWebView = WKWebView()
 
-    @StateObject var model = PreferencesViewModel.shared
-    private var navigationTitle = String(localized: "Photographers",
+    @StateObject var model = SettingsViewModel.shared
+    private var navigationTitle = String(localized: "People",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
     private let temporary = String(localized: "Temporary",
@@ -49,7 +49,7 @@ struct PhotographersListView1718: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredPhotographerView1718(predicate: model.preferences.photographerPredicate,
+                FilteredPhotographerView1718(predicate: model.settings.photographerPredicate,
                                          searchText: searchText,
                                          wkWebView: wkWebView,
                                          selectedPortfolio: $selectedPortfolio)
@@ -127,6 +127,11 @@ struct PhotographersListView1718: View {
         .autocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .navigationTitle(navigationTitle)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ReadmeButton()
+            }
+        }
         .searchable(text: searchText, placement: .automatic,
                     prompt: Text("Search_names_p",
                                  tableName: "PhotoClubHub.SwiftUI",
