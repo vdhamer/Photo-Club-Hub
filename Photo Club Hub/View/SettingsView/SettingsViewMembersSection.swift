@@ -1,5 +1,5 @@
 //
-//  PreferencesViewMembersSection.swift
+//  SettingsViewMembersSection.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 15/04/2026.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct PreferencesViewMembersSection: View {
-    @Binding var localPreferences: PreferencesStruct
+struct SettingsViewMembersSection: View {
+    @Binding var localSettings: SettingsStruct
 
     var body: some View {
-        Section(header: Text("Members",
+        Section(header: Text("Clubs",
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Preferences, above toggles like \"Show former members\""),
                 content: {
@@ -21,16 +21,16 @@ struct PreferencesViewMembersSection: View {
                 Toggle(String(localized: "Show current members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showCurrentMembers.animation())
+                       isOn: $localSettings.showCurrentMembers.animation())
             }
-            if localPreferences.showCurrentMembers == false {
+            if localSettings.showCurrentMembers == false {
                 HStack {
                     RoleStatusIconView(memberRole: .viceChairman)
                         .foregroundColor(.deceasedColor)
                     Toggle(String(localized: "Show club officers",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localPreferences.showOfficers)
+                           isOn: $localSettings.showOfficers)
                 }
             } else {
                 HStack {
@@ -48,7 +48,7 @@ struct PreferencesViewMembersSection: View {
                 Toggle(String(localized: "Show aspiring members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showAspiringMembers)
+                       isOn: $localSettings.showAspiringMembers)
             }
             HStack {
                 RoleStatusIconView(memberStatus: .honorary)
@@ -56,7 +56,7 @@ struct PreferencesViewMembersSection: View {
                 Toggle(String(localized: "Show honorary members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showHonoraryMembers)
+                       isOn: $localSettings.showHonoraryMembers)
             }
             HStack {
                 RoleStatusIconView(memberStatus: .former)
@@ -64,16 +64,16 @@ struct PreferencesViewMembersSection: View {
                 Toggle(String(localized: "Show former members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showFormerMembers.animation())
+                       isOn: $localSettings.showFormerMembers.animation())
             }
-            if localPreferences.showFormerMembers == false {
+            if localSettings.showFormerMembers == false {
                 HStack { // moving this outside the if() works but gives a boring animation
                     RoleStatusIconView(memberStatus: .deceased)
                         .foregroundColor(.deceasedColor)
                     Toggle(String(localized: "Show deceased members",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localPreferences.showDeceasedMembers)
+                           isOn: $localSettings.showDeceasedMembers)
                 }
             } else {
                 HStack {
@@ -92,9 +92,9 @@ struct PreferencesViewMembersSection: View {
                 Toggle(String(localized: "Show external coaches",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localPreferences.showExternalCoaches)
+                       isOn: $localSettings.showExternalCoaches)
             }
-            PreferencesViewThumbnail(localPreferences: $localPreferences)
+            SettingsViewThumbnail(localSettings: $localSettings)
         }) // end of section
     } // end of body
 }
@@ -102,18 +102,18 @@ struct PreferencesViewMembersSection: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works.
-private struct PreferencesViewMembersSectionPreviewHost: View {
-    @StateObject var model = PreferencesViewModel()
+private struct SettingsViewMembersSectionPreviewHost: View {
+    @StateObject var model = SettingsViewModel()
 
     var body: some View {
         NavigationStack {
             List {
-                PreferencesViewMembersSection(localPreferences: $model.preferences)
+                SettingsViewMembersSection(localSettings: $model.settings)
             }
         }
     }
 }
 
 #Preview {
-    PreferencesViewMembersSectionPreviewHost()
+    SettingsViewMembersSectionPreviewHost()
 }

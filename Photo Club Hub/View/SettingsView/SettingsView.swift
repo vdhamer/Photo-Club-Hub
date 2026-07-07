@@ -15,7 +15,7 @@ struct SettingsView: View {
 
     @Binding var settings: SettingsStruct // parameters for various Toggles()
     @State private var localSettings: SettingsStruct
-    @State private var isDirty = false // for tracking changes to localPreferences
+    @State private var isDirty = false // for tracking changes to localSettings
 
     private let title = String(localized: "Settings",
                                table: "PhotoClubHub.SwiftUI",
@@ -29,10 +29,10 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
-                SettingsViewMembersSection(localPreferences: $localSettings)
-                SettingsViewOrganizationsSection(localPreferences: $localSettings)
-                SettingsViewPhotographersSection(localPreferences: $localSettings)
-                SettingsViewAdvancedSection(localPreferences: $localSettings)
+                SettingsViewMembersSection(localSettings: $localSettings)
+                SettingsViewMapsSection(localSettings: $localSettings)
+                SettingsViewPhotographersSection(localSettings: $localSettings)
+                SettingsViewAdvancedSection(localSettings: $localSettings)
             }
             .navigationTitle(title)
             .toolbar {

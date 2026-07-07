@@ -1,5 +1,5 @@
 //
-//  PreferencesViewAdvancedSection.swift
+//  SettingsViewAdvancedSection.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 16/04/2026.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct PreferencesViewAdvancedSection: View {
-    @Binding var localPreferences: PreferencesStruct
+struct SettingsViewAdvancedSection: View {
+    @Binding var localSettings: SettingsStruct
 
     var body: some View {
         Section(header: Text("Advanced",
@@ -23,21 +23,25 @@ struct PreferencesViewAdvancedSection: View {
                             }
                         }
                     } label: {
-                        Text("Options in Settings",
-                             tableName: "PhotoClubHub.SwiftUI",
-                             comment: "Link to Photo Club Hub section in Settings")
+                        Text(UIDevice.isIPad
+                             ? String(localized: "iPad Settings",
+                                      table: "PhotoClubHub.SwiftUI",
+                                      comment: "Link to Photo Club Hub section in iPad Settings app")
+                             : String(localized: "iPhone Settings",
+                                      table: "PhotoClubHub.SwiftUI",
+                                      comment: "Link to Photo Club Hub section in iPhone Settings app"))
                     }
         })
     }
 }
 
-private struct PreferencesViewAdvSectionPreviewHost: View {
-    @StateObject var model = PreferencesViewModel()
+private struct SettingsViewAdvSectionPreviewHost: View {
+    @StateObject var model = SettingsViewModel()
 
     var body: some View {
         NavigationStack {
             List {
-                PreferencesViewAdvancedSection(localPreferences: $model.preferences)
+                SettingsViewAdvancedSection(localSettings: $model.settings)
             }
         }
     }
@@ -47,5 +51,5 @@ private struct PreferencesViewAdvSectionPreviewHost: View {
 
 // Believe it or not, the following Preview actually works.
 #Preview {
-    PreferencesViewAdvSectionPreviewHost()
+    SettingsViewAdvSectionPreviewHost()
 }

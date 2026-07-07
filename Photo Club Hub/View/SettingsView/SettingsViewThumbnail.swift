@@ -1,5 +1,5 @@
 //
-//  PreferencesViewThumbnail.swift
+//  SettingsViewThumbnail.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 28/04/2026.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct PreferencesViewThumbnail: View {
-    let localPreferences: Binding<PreferencesStruct>
+struct SettingsViewThumbnail: View {
+    let localSettings: Binding<SettingsStruct>
 
     private var featuredBinding: Binding<Bool> {
         Binding<Bool>(
-            get: { localPreferences.wrappedValue.preferenceForFeaturedImage },
-            set: { localPreferences.wrappedValue.preferenceForFeaturedImage = $0 } // unused
+            get: { localSettings.wrappedValue.preferenceForFeaturedImage },
+            set: { localSettings.wrappedValue.preferenceForFeaturedImage = $0 } // unused
         )
     }
 
@@ -40,11 +40,11 @@ struct PreferencesViewThumbnail: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works.
-#Preview("PreferencesViewThumbnail", traits: .portrait) {
+#Preview("SettingsViewThumbnail", traits: .portrait) {
     struct Container: View {
-        @State private var prefs = PreferencesStruct.defaultValue
+        @State private var prefs = SettingsStruct.defaultValue
         var body: some View {
-            PreferencesViewThumbnail(localPreferences: $prefs)
+            SettingsViewThumbnail(localSettings: $prefs)
                 .padding()
         }
     }

@@ -80,7 +80,7 @@ struct FilteredOrganizationView: View {
                 }
             }
             .onDisappear(perform: { try? viewContext.save() }) // persist map scroll-lock states when leaving page
-            .accentColor(.organizationColor)
+            .accentColor(.mapsColor)
             .listRowSeparator(.hidden)
             .padding()
             .border(Color(.darkGray), width: 0.5)
