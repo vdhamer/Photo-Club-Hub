@@ -222,7 +222,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                           geo: geo)
-            ReadmeCaptionedImage("Preferences",
+            ReadmeCaptionedImage("Settings",
                                  imageSize: CGSize(width: geo.size.width * 0.8, height: 400),
                                  caption: LocalizedStringResource("The Settings screen.",
                                                                   table: "PhotoClubHub.Readme",
