@@ -16,8 +16,9 @@ Work on this hasn't started yet.
 USER-FACING
 
 * Top-level navigation between screens now uses Tabs (was: Buttons). 
-- Tabs have new names and icons:  Photographers > Persons, Members > Clubs, Organizations > Maps, Preferences > Settings
-- Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple)
+- Tabs have new names and icons:  Photographers > Persons, Members > Clubs, Organizations > Maps, Preferences > Settings.
+- Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
+- First use of TipKit for onboarding new users.
 
 README SCREEN
 

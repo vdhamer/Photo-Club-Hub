@@ -84,6 +84,7 @@
 		37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */; };
 		37EA14EB2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */; };
 		37EBBC382FFA451F00C95FDA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBBC372FFA451F00C95FDA /* RootView.swift */; };
+		37ECFBDD2FFDAD7600806590 /* SettingsMovedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECFBDC2FFDAD7600806590 /* SettingsMovedTip.swift */; };
 		37EEEB9D2FA0B3A3001463BA /* SettingsViewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */; };

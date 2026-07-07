@@ -5,8 +5,8 @@
 //  Created by Peter van den Hamer on 20/06/2021.
 //
 
-import SwiftUI
 import CoreData // for NSManagedObjectContext
+import TipKit   // for Tips.configure
 
 @main
 struct PhotoClubHubApp: App {
@@ -19,6 +19,10 @@ struct PhotoClubHubApp: App {
         if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
             return
         }
+
+        // Load persisted tip state (e.g. SettingsMovedTip); without this call no tips are shown.
+        try? Tips.resetDatastore() // TEMPORARY (verification only): re-arms already-shown tips. REMOVE before commit.
+        try? Tips.configure() // is this needed? It doesn't do much.
 
         // Core Data settings
         let persistenceController = PersistenceController.shared // for Core Data
