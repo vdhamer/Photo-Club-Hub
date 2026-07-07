@@ -5,10 +5,9 @@
 //  Created by Peter van den Hamer on 17/02/2023.
 //
 
-import SwiftUI
-import WebKit // for wkWebView
+import SwiftUI      // for View, etc.
 import CoreLocation // for CLLocationCoordinate2D
-import CoreData // for NSManagedObjectContext
+import CoreData     // for NSManagedObjectContext
 
 /// A single row representing a MemberPortfolio (aka Photographer in the context of a particular Club).
 ///
@@ -18,26 +17,25 @@ import CoreData // for NSManagedObjectContext
 struct MemberPortfolioRow: View {
     /// The member portfolio model used to populate this row.
     var member: MemberPortfolio
-    /// Shared `WKWebView` instance passed to downstream views that render web content.
-    let wkWebView: WKWebView
     /// Localized connector text used as '<person> of <photo club>'.
     private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
     /// Core Data context used to resolve localized expertise lists.
     let moc = PersistenceController.shared.container.viewContext
+    /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
+    /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
+    @Binding var selectedPortfolio: MemberPortfolio?
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
-    /// Controls navigation to the member's portfolio page when the text/icon area is tapped.
-    @State private var isPortfolioActive = false
     /// Provides access to user preferences (e.g. preferences.preferenceForFeaturedImage) to this view and descendants.
-    @StateObject var preferencesModel = PreferencesViewModel.shared
-    /// Used to choose between full club name (regular/iPad) and nickname (compact/iPhone) in the navigation title.
-    @Environment(\.horizontalSizeClass) private var horSizeClass
+    @StateObject var settingsModel = SettingsViewModel.shared
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     var body: some View {
         HStack(alignment: .top) { // total view content
 
-            Button { isPortfolioActive = true } label: { // Button used here to avoid a `disclosureIndicator` (chevron)
+            Button {
+                selectedPortfolio = member
+            } label: { // Button (not NavigationLink) avoids a chevron
                 HStack(alignment: .top) { // everything to left of Image: icon + several lines of Text
 
                     // icon showing any special role
@@ -51,7 +49,7 @@ struct MemberPortfolioRow: View {
                             .font(UIDevice.isIPad ? .title : .title2)
                             .tracking(1)
                             .allowsTightening(true)
-                            .foregroundColor(chooseColor(
+                            .foregroundStyle(chooseColor(
                                 defaultColor: .accentColor,
                                 isDeceased: member.photographer.isDeceased
                             ))
@@ -90,28 +88,21 @@ struct MemberPortfolioRow: View {
                             .truncationMode(.tail)
                             .lineLimit(2)
                             .font(UIDevice.isIPad ? .subheadline : .caption)
-                            .foregroundColor(member.photographer.isDeceased ?
+                            .foregroundStyle(member.photographer.isDeceased ?
                                 .deceasedColor : .primary)
                     }
                 }
             }
             .buttonStyle(.plain)
-            .navigationDestination(isPresented: $isPortfolioActive) {
-                SinglePortfolioView(url: member.level3URL, webView: wkWebView)
-                    .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
-                                     (horSizeClass == .compact ? member.organization.nickName :
-                                                                 member.organization.fullName))
-                    .navigationBarTitleDisplayMode(.inline)
-            }
 
             Spacer()
 
             DualImageWithCaptionAndControls(member: member,
-                                            wkWebView: wkWebView,
-                                            preferences: preferencesModel.preferences,
+                                            settings: settingsModel.settings,
                                             squareSize: 80,
                                             caption: false,
-                                            flipImageFlag: $flipImageFlag)
+                                            flipImageFlag: $flipImageFlag,
+                                            selectedPortfolio: $selectedPortfolio)
 
         } // HStack
     } // body of View
@@ -134,49 +125,47 @@ struct MemberPortfolioRow: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works.
-struct MemberPortfolioRow_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            let persistenceController = PersistenceController.shared // for Core Data
-            let viewContext = persistenceController.container.viewContext
 
-            let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
-            let photographerOptionalFields = PhotographerOptionalFields(
-                isDeceased: true,
-                photographerImage: URL(string: "https://thispersondoesnotexist.com")
-                )
-            let photographer = Photographer.findCreateUpdate(
-                context: viewContext,
-                personName: personName,
-                optionalFields: photographerOptionalFields
-            )
+#Preview {
+    let persistenceController = PersistenceController.shared // for Core Data
+    let viewContext = persistenceController.container.viewContext
 
-            let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub",
-                                                        town: "SomeLocation",
-                                                        nickname: "IgnoreMe")
-            let organization = Organization.findCreateUpdate(
-                context: viewContext,
-                organizationTypeEnum: OrganizationTypeEnum.club,
-                idPlus: organizationIdPlus,
-                coordinates: CLLocationCoordinate2D(
-                    latitude: 0.0, longitude: 0.0),
-                optionalFields: OrganizationOptionalFields()
-            )
+    let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
+    let photographerOptionalFields = PhotographerOptionalFields(
+        isDeceased: true,
+        photographerImage: URL(string: "https://thispersondoesnotexist.com")
+        )
+    let photographer = Photographer.findCreateUpdate(
+        context: viewContext,
+        personName: personName,
+        optionalFields: photographerOptionalFields
+    )
 
-            let memberRolesAndStatus = MemberRolesAndStatus(roles: [.treasurer: true],
-                                                            status: [.former: true])
-            let member = MemberPortfolio.findCreateUpdate(
-                bgContext: viewContext,
-                organization: organization,
-                photographer: photographer,
-                optionalFields: MemberOptionalFields(
-                    featuredImage: URL(string: "https://picsum.photos/500"),
-                    featuredImageThumbnail: URL(string: "https://picsum.photos/200"),
-                    level3URL: URL(string: "https://www.example.com"),
-                    memberRolesAndStatus: memberRolesAndStatus
-                )
-            )
-            MemberPortfolioRow(member: member, wkWebView: WKWebView())
-        } .border(.blue, width: 1) .padding([.horizontal], 10)
-    }
+    let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub",
+                                                town: "SomeLocation",
+                                                nickname: "IgnoreMe")
+    let organization = Organization.findCreateUpdate(
+        context: viewContext,
+        organizationTypeEnum: OrganizationTypeEnum.club,
+        idPlus: organizationIdPlus,
+        coordinates: CLLocationCoordinate2D(
+            latitude: 0.0, longitude: 0.0),
+        optionalFields: OrganizationOptionalFields()
+    )
+
+    let memberRolesAndStatus = MemberRolesAndStatus(roles: [.treasurer: true],
+                                                    status: [.former: true])
+    let member = MemberPortfolio.findCreateUpdate(
+        bgContext: viewContext,
+        organization: organization,
+        photographer: photographer,
+        optionalFields: MemberOptionalFields(
+            featuredImage: URL(string: "https://picsum.photos/500"),
+            featuredImageThumbnail: URL(string: "https://picsum.photos/200"),
+            level3URL: URL(string: "https://www.example.com"),
+            memberRolesAndStatus: memberRolesAndStatus
+        )
+    )
+    MemberPortfolioRow(member: member, selectedPortfolio: .constant(nil))
+        .border(.blue, width: 1) .padding([.horizontal], 10)
 }
