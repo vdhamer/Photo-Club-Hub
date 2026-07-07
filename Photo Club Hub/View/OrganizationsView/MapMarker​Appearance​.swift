@@ -22,7 +22,7 @@ public func selectMarkerTint(organization: Organization, selectedOrganization: O
 
     /// The marker for `selectedOrganization` gets a special color. It is usually at the center of the map.
     if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
-        return .organizationColor
+        return .mapsColor
     }
 
     if organization.organizationType.isMuseum {
@@ -36,7 +36,7 @@ public func selectMarkerTint(organization: Organization, selectedOrganization: O
 
     if organization.organizationType.isClub {
 
-        let appSettings = PreferencesViewModel().preferences /// PreferencesViewModel is marked as `@Published`
+        let appSettings = SettingsViewModel().settings /// SettingsViewModel is marked as `@Published`
 
         guard !(appSettings.highlightNonFotobondNL == true && appSettings.highlightFotobondNL == true) else {
             ifDebugFatalError("Fotobond and non-Fotobond toggle are both enabled. That shouldn't happen.")
