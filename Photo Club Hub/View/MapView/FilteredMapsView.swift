@@ -51,8 +51,8 @@ struct FilteredMapsView: View {
 
                 MapsViewInfo(organization: filteredOrganization)
 
-                OrganizationViewMap(filteredOrganization: filteredOrganization,
-                                    fetchedOrganizations: fetchedOrganizations) // to show all markers within map scope
+                MapView(filteredOrganization: filteredOrganization,
+                        fetchedOrganizations: fetchedOrganizations) // to show all markers within map scope
 
                 MapsViewRemark(organization: filteredOrganization)
 

@@ -1,5 +1,5 @@
 //
-//  OrganizationViewMap.swift
+//  MapView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -13,7 +13,7 @@ import CoreData // for FetchedResults
 /// Includes the standard map controls (compass, pitch toggle, scale, user-location button)
 /// which are hidden when the map's pan/zoom interaction is locked.
 @MainActor
-struct OrganizationViewMap: View {
+struct MapView: View {
 
     @ObservedObject var filteredOrganization: Organization // observes isMapScrollLocked toggle
     var fetchedOrganizations: FetchedResults<Organization> // all organizations, used to draw all markers
@@ -70,7 +70,7 @@ struct OrganizationViewMap: View {
 
 // Preview only partially works: it doesn't show markers
 @MainActor
-struct OrganizationViewMapPreviews: View {
+struct MapViewPreviews: View {
 
     let context: NSManagedObjectContext
     @ObservedObject var organization: Organization
@@ -128,7 +128,7 @@ struct OrganizationViewMapPreviews: View {
     }
 
     var body: some View {
-        OrganizationViewMap(filteredOrganization: organization, fetchedOrganizations: fetchedOrganizations)
+        MapView(filteredOrganization: organization, fetchedOrganizations: fetchedOrganizations)
             .onAppear {
                 organization.isMapScrollLocked = false
             }
@@ -139,7 +139,7 @@ struct OrganizationViewMapPreviews: View {
 #Preview {
     VStack(alignment: .leading) {
         Divider()
-        OrganizationViewMapPreviews()
+        MapViewPreviews()
         Divider()
     }
     .padding(30)
