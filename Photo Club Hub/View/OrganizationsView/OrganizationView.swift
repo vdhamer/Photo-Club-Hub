@@ -23,7 +23,7 @@ struct OrganizationView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// A wrapper that mainly holds a Preferences struct
-    @StateObject var modelToHoldPreferences = PreferencesViewModel.shared
+    @StateObject var modelToHoldSettings = SettingsViewModel.shared
     /// Tracks user location to enable the user-location annotation on the map.
     @State private var locationManager = LocationManager()
     /// The text bound to the search field used to filter organizations by name or town.
@@ -42,7 +42,7 @@ struct OrganizationView: View {
                 /// This is where the List of Photographers is generated.
                 /// So the most relevant stuff happens in FilteredOrganizationView
                 FilteredOrganizationView(
-                    predicate: modelToHoldPreferences.preferences.organizationPredicate,
+                    predicate: modelToHoldSettings.preferences.organizationPredicate,
                     searchText: $searchText)
             }
             .scrollTargetLayout()
@@ -84,7 +84,12 @@ struct OrganizationView: View {
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes
         }
-        .navigationTitle(modelToHoldPreferences.preferences.organizationLabel())
+        .navigationTitle(modelToHoldSettings.preferences.organizationLabel())
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ReadmeButton()
+            }
+        }
         .searchable(text: $searchText, placement: searchPlacement,
                     // .automatic
                     // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust
