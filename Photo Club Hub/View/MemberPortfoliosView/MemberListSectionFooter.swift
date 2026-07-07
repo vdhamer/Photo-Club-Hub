@@ -59,7 +59,7 @@ struct MemberListSectionFooter: View {
                 .dynamicTypeSize( // constrain impact of large dynamic type
                     ...DynamicTypeSize.large) // this is just supposed to be a footer, so don't want it too big
                 .lineLimit(2)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
             Spacer()
         }
     }
@@ -67,31 +67,32 @@ struct MemberListSectionFooter: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Previews actually work
-struct MemberListSectionFooter_Previews: PreviewProvider {
-    static var previews: some View {
-        let viewContext = PersistenceController.shared.container.viewContext
-        let organization = Organization.findCreateUpdate(
-            context: viewContext,
-            organizationTypeEnum: OrganizationTypeEnum.club,
-            idPlus: OrganizationIdPlus(fullName: "Test Photo Club", town: "Eindhoven", nickname: "TestClub"),
-            coordinates: CLLocationCoordinate2D(latitude: 51.4, longitude: 5.5),
-            optionalFields: OrganizationOptionalFields(
-                level2URL: URL(string: "https://www.example.com/members/")
-            )
-        )
+// Believe it or not, the following Previews actually work.
 
-        Group {
-            MemberListSectionFooter(filtCount: 7, unfiltCount: 7,
-                                    organization: nil)
-                .previewDisplayName("All shown, no URL")
-            MemberListSectionFooter(filtCount: 3, unfiltCount: 7,
-                                    organization: nil)
-                .previewDisplayName("Filtered, no URL")
-            MemberListSectionFooter(filtCount: 7, unfiltCount: 7,
-                                    organization: organization)
-                .previewDisplayName("All shown, with data-source URL")
-        }
+#Preview("All shown, no URL") {
+    MemberListSectionFooter(filtCount: 7, unfiltCount: 7,
+                            organization: nil)
         .padding()
-    }
+}
+
+#Preview("Filtered, no URL") {
+    MemberListSectionFooter(filtCount: 3, unfiltCount: 7,
+                            organization: nil)
+        .padding()
+}
+
+#Preview("All shown, with data-source URL") {
+    let viewContext = PersistenceController.shared.container.viewContext
+    let organization = Organization.findCreateUpdate(
+        context: viewContext,
+        organizationTypeEnum: OrganizationTypeEnum.club,
+        idPlus: OrganizationIdPlus(fullName: "Test Photo Club", town: "Eindhoven", nickname: "TestClub"),
+        coordinates: CLLocationCoordinate2D(latitude: 51.4, longitude: 5.5),
+        optionalFields: OrganizationOptionalFields(
+            level2URL: URL(string: "https://www.example.com/members/")
+        )
+    )
+    MemberListSectionFooter(filtCount: 7, unfiltCount: 7,
+                            organization: organization)
+        .padding()
 }
