@@ -34,7 +34,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                 ReadmeCaptionedImage("Search-bar-bottom",
                                      imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
                                      caption: LocalizedStringResource(
-                                        "Search bar of _Portfolios_ screen (for iOS 26 and up)",
+                                        "Search bar of _Clubs_ screen (for iOS 26 and up)",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Figure caption about Search Bar on the Readme page"
                                      )
@@ -224,7 +224,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                           geo: geo)
             ReadmeCaptionedImage("Preferences",
                                  imageSize: CGSize(width: geo.size.width * 0.8, height: 400),
-                                 caption: LocalizedStringResource("The Preferences screen.",
+                                 caption: LocalizedStringResource("The Settings screen.",
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment: "Caption of an image on the Readme page"))
             Text(verbatim: "")
