@@ -16,7 +16,7 @@ import UIKit // for UINotificationFeedbackGenerator, UIDevice
 struct DualImageWithCaptionAndControls: View {
     /// who is this about?
     let member: MemberPortfolio
-    let preferences: PreferencesStruct
+    let settings: SettingsStruct
     /// size of  square image
     let squareSize: CGFloat
     /// whether to show a caption below the image
@@ -30,7 +30,7 @@ struct DualImageWithCaptionAndControls: View {
     var body: some View {
         let imageChoice = ImageChoice(member: member,
                                       isImageFlipped: flipImageFlag,
-                                      preferenceForFeaturedImage: preferences.preferenceForFeaturedImage)
+                                      settingsForFeaturedImage: settings.preferenceForFeaturedImage)
         HStack(alignment: .top) {
             VStack { // combines Image and Caption
                 // image
@@ -154,7 +154,7 @@ struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
         var body: some View {
             NavigationStack {
                 DualImageWithCaptionAndControls(member: member,
-                                                preferences: PreferencesStruct.defaultValue,
+                                                settings: SettingsStruct.defaultValue,
                                                 squareSize: squareSize,
                                                 caption: caption,
                                                 flipImageFlag: $flipImageFlag,

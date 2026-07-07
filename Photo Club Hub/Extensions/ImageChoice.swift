@@ -29,12 +29,12 @@ struct ImageChoice {
     ///   - member: The portfolio supplying the candidate image URLs.
     ///   - isImageFlipped: When `true`, swaps the preferred and fallback choices (e.g. after a tap-to-toggle).
     ///   - preferenceForFeaturedImage: When `true`, the featured image is preferred over the photographer portrait.
-    init(member: MemberPortfolio, isImageFlipped: Bool, preferenceForFeaturedImage: Bool) {
+    init(member: MemberPortfolio, isImageFlipped: Bool, settingsForFeaturedImage: Bool) {
         // Determine the preferred order based on the setting in Preferences and the flip state
         let preference: ImageContentType
         let alternative: ImageContentType
 
-        if preferenceForFeaturedImage {
+        if settingsForFeaturedImage {
             preference = isImageFlipped ? .photographer : .featured
             alternative = isImageFlipped ? .featured : .photographer
         } else {
