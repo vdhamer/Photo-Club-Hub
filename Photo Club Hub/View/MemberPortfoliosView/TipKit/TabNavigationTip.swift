@@ -12,6 +12,10 @@ import TipKit // for Tip, MaxDisplayCount
 /// Shown on the Clubs screen because that screen hosted the old toolbar buttons and is the tab shown at app startup.
 struct TabNavigationTip: Tip {
 
+    /// Becomes true once this tip is invalidated; used as a gate to sequence ReadmeTip after this one.
+    @Parameter
+    static var isInvalidated: Bool = false // used in a rule for ReadmeTip
+
     var title: Text {
         Text("Navigation using tabs",
              tableName: "PhotoClubHub.SwiftUI",

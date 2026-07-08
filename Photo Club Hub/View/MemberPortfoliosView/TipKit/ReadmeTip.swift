@@ -28,6 +28,10 @@ struct ReadmeTip: Tip {
         Image(systemName: "info.circle") // matches the icon of the button
     }
 
+    var rules: [Rule] {
+        #Rule(TabNavigationTip.$isInvalidated) { $0 == true }
+    }
+
     var options: [any TipOption] {
         MaxDisplayCount(2) // stop showing the tip after displaying it 2 times
         if #available(iOS 18.0, *) {

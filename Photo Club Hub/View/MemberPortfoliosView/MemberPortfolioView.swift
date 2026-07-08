@@ -79,6 +79,18 @@ struct MemberPortfolioView: View {
         .textInputAutocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .autocorrectionDisabled()
+        .task { // hmmmm. Pretty obscure parts of Swift language added here by Claude Code
+            let tip = TabNavigationTip()
+            // Handle the case where TabNavigationTip was already invalidated before this task runs.
+            if case .invalidated = tip.status {
+                TabNavigationTip.isInvalidated = true
+            }
+            for await status in tip.statusUpdates {
+                if case .invalidated = status {
+                    TabNavigationTip.isInvalidated = true
+                }
+            }
+        }
         .navigationTitle(String(localized: "Clubs",
                                 table: "PhotoClubHub.SwiftUI",
                                 comment: "Title of page showing member portfolios"))
