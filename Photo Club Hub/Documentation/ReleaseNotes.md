@@ -37,6 +37,7 @@ STRUCTURAL
 - JSON files used only for testing are no longer shipped inside the app
 - Tests didn't support iOS 17 (was accidentally set to 18+)
 - Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
+- Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
 - Running automated testing has become more robust.
 
 DOCUMENTATION MAINTENANCE
