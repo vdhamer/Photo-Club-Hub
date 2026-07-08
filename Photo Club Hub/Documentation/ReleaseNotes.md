@@ -7,7 +7,7 @@ USER-FACING
 * TODO: more search functionality on Portfolio screen
 
 This build is just a placeholder for the plans for 2.9.5.
-Work on this hasn't started yet.
+Work on 2.9.5 hasn't started yet.
 
 ---------------------------------------------------------------------------
 
@@ -17,6 +17,7 @@ USER-FACING
 
 * Top-level navigation between screens now uses Tabs (was: Buttons). 
 - Tabs have new names and icons:  Photographers > Persons, Members > Clubs, Organizations > Maps, Preferences > Settings.
+- Detailed behavior of the Search bar has changed. Search text is now shared across screens.
 - Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
 - First use of TipKit for onboarding new users.
 - Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
