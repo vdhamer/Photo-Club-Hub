@@ -331,7 +331,7 @@
       }
     },
     "Built-in Readme" : {
-      "comment" : "Toolbar button (info icon) that opens the built-in Readme sheet",
+      "comment" : "Title of one-time tip about the Readme button\nToolbar button (info icon) that opens the built-in Readme sheet",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -342,7 +342,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Over de app"
+            "value" : "Over Photo Club Hub"
           }
         }
       }
@@ -1059,6 +1059,23 @@
         }
       }
     },
+    "Readme button key" : {
+      "comment" : "Message of one-time tip about the Readme button",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The ⓘ button display an overview (“readme”) of the app. You can adjust the size by dragging the horizontal bar at the top edge."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Het ⓘ knopje geeft een overzicht van deze app. Je kunt het venster groter maken door aan het bovenbalkje te trekken."
+          }
+        }
+      }
+    },
     "Reset to defaults" : {
       "comment" : "Button to reset preferences to original settings",
       "localizations" : {
@@ -1348,6 +1365,23 @@
         }
       }
     },
+    "Tab-based navigation key" : {
+      "comment" : "Message of one-time tip about tabs replacing toolbar buttons",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We switched to tab-based navigation. This allows you  to directly go from any screen to 3 other screens in a single tap. It also simplifies knowing where you are and where you want to go."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuw!: Wij zijn overgestapt naar __tabbladen__ voor het navigeren tussen de schermen. Vanuit een scherm kan je nu naar een ander scherm gaat met één aanraking. Het maakt tegelijk de bediening van de app meer inzichtelijk."
+          }
+        }
+      }
+    },
     "Temporary" : {
       "comment" : "Expertise description at bottom of Photographers screen",
       "localizations" : {
@@ -1482,17 +1516,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg."
-          }
-        }
-      }
-    },
-    "We switched to tabs for navigating the screens. Tabs can save a few taps. Help is available via ⓘ," : {
-      "comment" : "Message of one-time tip about tabs replacing toolbar buttons",
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wij gebruiken tegenwoordig tabbladen om van scherm te wisselen. Gebruik de ⓘ knop voor uitleg over de app."
           }
         }
       }

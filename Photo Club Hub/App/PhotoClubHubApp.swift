@@ -20,9 +20,9 @@ struct PhotoClubHubApp: App {
             return
         }
 
-        // Load persisted tip state (e.g. SettingsMovedTip); without this call no tips are shown.
-        try? Tips.resetDatastore() // TEMPORARY (verification only): re-arms already-shown tips. REMOVE before commit.
-        try? Tips.configure()
+        // Load persisted tip state (e.g. TabNavigationTip); without this call no tips are shown.
+        // try? Tips.resetDatastore() /* used during manual testing only */
+        try? Tips.configure([.displayFrequency(.daily)]) // show at most one tip per day
 
         // Core Data settings
         let persistenceController = PersistenceController.shared // for Core Data
