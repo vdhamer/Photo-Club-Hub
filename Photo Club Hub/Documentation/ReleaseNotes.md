@@ -19,10 +19,12 @@ USER-FACING
 - Tabs have new names and icons:  Photographers > Persons, Members > Clubs, Organizations > Maps, Preferences > Settings.
 - Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
 - First use of TipKit for onboarding new users.
+- Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
 
 README SCREEN
 
 * Fixed typos in EN and NL versions and updates related to UI changes.
+- TODO: updated 4 screenshots in the Readme screen <<<<<
 
 STRUCTURAL
 
@@ -43,8 +45,8 @@ STRUCTURAL
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
 
-This build #4662 was made using Xcode 26.6 and is intended for the App Store.
-Amount of code and data lines changed since previous release: ? additions and ? deletions in ? files.
+This build #4662 was made using Xcode 26.6 RC and is intended for the App Store.
+Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
 
 ---------------------------------------------------------------------------
 
