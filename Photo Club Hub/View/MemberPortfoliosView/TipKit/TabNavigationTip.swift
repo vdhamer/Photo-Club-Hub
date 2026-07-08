@@ -13,8 +13,10 @@ import TipKit // for Tip, MaxDisplayCount
 struct TabNavigationTip: Tip {
 
     /// Becomes true once this tip is invalidated; used as a gate to sequence ReadmeTip after this one.
+    /// Note: no trailing comment allowed on the next line — the @Parameter macro copies the
+    /// initializer expression into a function call, and a `//` comment there currently breaks the expansion.
     @Parameter
-    static var isInvalidated: Bool = false // used in a rule for ReadmeTip
+    static var isInvalidated: Bool = false
 
     var title: Text {
         Text("Navigation using tabs",
