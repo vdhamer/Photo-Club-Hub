@@ -24,13 +24,10 @@ struct PreludeView2627: View {
     let onFinished: @MainActor () -> Void
 
     private let preludeImageStore = PreludeImageStore2627()
-    @State private var preludeImage = PreludeImage2627(assetName: "2024_California_R5_340-3-Edit_square",
-                                                       copyright: "🙈 You shouldn't be seeing this! 🙈",
-                                                       copyrightAlignment: .centerCentered,
-                                                       whiteCoordinates: .init(x: 8, y: 6)) // temporary value only
+    @State private var preludeImage: PreludeImage2627? // set by .task; initial nil shows white until task runs
 
     // MARK: - State variables
-    @State private var offsetInCells = OffsetVectorInCells2627(x: 8, y: 8) // # of cell units left/above imagecenter
+    @State private var offsetInCells = OffsetVectorInCells2627(x: 0, y: 0) // # of cell units left/above imagecenter
     @State private var logScale = Const.log2CellRepeat // value driving the animation
     private var isZoomedOut: Bool { abs(logScale) < 0.0001 }
     @State private var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
@@ -74,10 +71,14 @@ struct PreludeView2627: View {
                 ZStack(alignment: .center) {
                     ZStack {
 
-                        Image(preludeImage.assetName)
-                            .resizable()
-                            .scaledToFit()
-                            .brightness(isZoomedOut ? 0.1 : 0.2)
+                        if let img = preludeImage {
+                            Image(img.assetName)
+                                .resizable()
+                                .scaledToFit()
+                                .brightness(isZoomedOut ? 0.1 : 0.2)
+                        } else {
+                            Color.white // shown for the one frame before the .task sets the real image
+                        }
 
                         Group {
                             LogoPath(logCellRepeat: Const.log2CellRepeat, // upper left part of logo
@@ -100,22 +101,24 @@ struct PreludeView2627: View {
                         .blendMode(.multiply)
                         .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
 
-                        VStack { // copyright message for image
-                            if preludeImage.copyrightAlignment.isBottom { Spacer() } // push to bottom
-                            HStack {
-                                if preludeImage.copyrightAlignment.isTrailing { Spacer() } // push to trailing
-                                Button {
-                                    // not a real button because it does nothing
-                                } label: {
-                                    Text(preludeImage.copyright)
-                                        .font(.caption)
+                        if let img = preludeImage { // hide copyright until real image is known
+                            VStack { // copyright message for image
+                                if img.copyrightAlignment.isBottom { Spacer() } // push to bottom
+                                HStack {
+                                    if img.copyrightAlignment.isTrailing { Spacer() } // push to trailing
+                                    Button {
+                                        // not a real button because it does nothing
+                                    } label: {
+                                        Text(img.copyright)
+                                            .font(.caption)
+                                    }
+                                    .buttonStyle(.glass)
+                                    .opacity(isZoomedOut ? 1 : -5) // hack to influence animation timing
+                                    .padding(UIDevice.isIPad ? cornerRadius*0.25 : cornerRadius*0.08)
+                                    if img.copyrightAlignment.isLeading { Spacer() } // push to leading
                                 }
-                                .buttonStyle(.glass)
-                                .opacity(isZoomedOut ? 1 : -5) // hack to influence animation timing
-                                .padding(UIDevice.isIPad ? cornerRadius*0.25 : cornerRadius*0.08)
-                                if preludeImage.copyrightAlignment.isLeading { Spacer() } // push to leading
+                                if img.copyrightAlignment.isTop { Spacer() } // push to top
                             }
-                            if preludeImage.copyrightAlignment.isTop { Spacer() } // push to top
                         }
                     }
                     .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
@@ -144,8 +147,9 @@ struct PreludeView2627: View {
                         zoomInOutAnimated(location, geo: geo)
                     }                        .frame(width: geo.size.width, height: geo.size.height)
                     .task {
-                        preludeImage = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
-                        offsetInCells = preludeImage.whiteCoordinates
+                        let img = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
+                        preludeImage = img
+                        offsetInCells = img.whiteCoordinates
                     }
                 }
 
