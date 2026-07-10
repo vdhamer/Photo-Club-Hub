@@ -1,21 +1,37 @@
-### 2.9.4 (GitHub commit ???????) ??-06-2026
+### 2.9.5 (GitHub commit ???????) ??-08-2026
 
 USER-FACING
 
 * TODO: display expertises on Photographers screen
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
-* Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple)
+
+This build is just a placeholder for the plans for 2.9.5.
+Work on 2.9.5 hasn't started yet.
+
+---------------------------------------------------------------------------
+
+### 2.9.4 (GitHub commit ???????) ??-07-2026
+
+USER-FACING
+
+* Top-level navigation between screens now uses Tabs (was: Buttons). 
+- Tabs have new icons and new names:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
+- Detailed behavior of the Search bar has changed. Search text is now shared across screens.
+- Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
+- First use of TipKit for onboarding new users.
+- Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
 
 README SCREEN
 
-* Fixed typos in EN and NL versions.
+* Fixed typos in EN and NL versions and updates related to UI changes.
+- TODO: updated 4 screenshots in the Readme screen <<<<<
 
 STRUCTURAL
 
 * Merging of 2627 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
 * Renaming of filenames and symbols ending on 2626 to 2627 (iOS 27.0 betas are now available)
-* Tested with MacOS 26.5.2, Xcode 27.0 beta (27A5209h), Xcode 26.6 (17F113), iOS 27.0 beta (24A5370g), iOS 26.5.2 and  SwiftLint 0.65
+* Tested with MacOS 26.5.2, Xcode 27.0 beta (27A5218g), Xcode 26.6 (17F113), iOS 27.0 beta (24A5380g), iOS 26.5.2 and  SwiftLint 0.65
 * Synchonized code with Photo Club Hub HTML
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
 * Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
@@ -24,13 +40,15 @@ STRUCTURAL
 - JSON files used only for testing are no longer shipped inside the app
 - Tests didn't support iOS 17 (was accidentally set to 18+)
 - Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
+- Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
 - Running automated testing has become more robust.
+- For practical reasons we support iOS 17.5 (was 17.6) and newer. Not sure 17.5 works. <<<<
 
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
 
-This build #4662 was made using Xcode 26.6 and is intended for the App Store.
-Amount of code and data lines changed since previous release: ? additions and ? deletions in ? files.
+This build #4662 was made using Xcode 26.6 RC and is intended for the App Store.
+Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
 
 ---------------------------------------------------------------------------
 
@@ -1706,7 +1724,7 @@ This is build #3974 in Apple's App Store.
 * new Search feature to search the lists of names
 * the web addresses of club-external websites are now displayed (when the info is available)
 * minor user interface improvements: Preferences page size, lilac theme color for Photo Clubs
-* added club-internal websites for two persons as demo within the Easter egg
+* added club-internal websites for two people as demo within the Easter egg
 * internal improvements: SwiftUI previews, full set of localization comments, colors stored in Assets
 * internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
 

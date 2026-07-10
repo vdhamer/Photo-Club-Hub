@@ -28,9 +28,13 @@ struct FilteredPhotographerView2627: View {
     private let isDeletePhotographersPermitted = true // enable/disable .onDelete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
+    /// Set by tapping a caption or chevron; the screen-level view owns the navigationDestination(item:).
+    /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
+    let selectedPortfolio: Binding<MemberPortfolio?>
 
     // regenerate Section using current FetchRequest with current filters and sorting
-    init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView) {
+    init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView,
+         selectedPortfolio: Binding<MemberPortfolio?>) {
         _fetchedPhotographers = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchedPhotographers
                                                         SortDescriptor(\.familyName_, order: .forward),
                                                         SortDescriptor(\.givenName_, order: .forward)],
@@ -38,6 +42,7 @@ struct FilteredPhotographerView2627: View {
                                                    animation: .default)
         self.searchText = searchText
         self.wkWebView = wkWebView
+        self.selectedPortfolio = selectedPortfolio
     }
 
     var body: some View {
@@ -68,7 +73,7 @@ struct FilteredPhotographerView2627: View {
 
                 } // HStack
 
-                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView)
+                PhotographersThumbnails(photographer: photographer, selectedPortfolio: selectedPortfolio)
 
             } // VStack
             .accentColor(.photographerColor)
@@ -137,11 +142,13 @@ private struct PhotographerIconView2627: View {
 // The List { } thing was likely needed to fix a bug somewhere.
 @available(iOS 26.0, *)
 #Preview("FilteredPhotographerView2627") {
+    @Previewable @State var selectedPortfolio: MemberPortfolio?
     NavigationStack {
         List {
             FilteredPhotographerView2627(predicate: NSPredicate(value: true),
                                          searchText: .constant(""),
-                                         wkWebView: WKWebView())
+                                         wkWebView: WKWebView(),
+                                         selectedPortfolio: $selectedPortfolio)
         }
     }
     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

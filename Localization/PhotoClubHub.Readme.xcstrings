@@ -121,7 +121,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Photo clubs play a key role in the app. The central _Portfolios_ screen shows a list of photo clubs."
+            "value" : "Photo clubs play a key role in the app. The central _Clubs_ screen shows a list of photo clubs."
           }
         },
         "nl" : {
@@ -223,13 +223,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entering part of a person’s name in the Search bar (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Organizations_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
+            "value" : "Entering part of a person’s name in the Search bar (on the _Clubs_ and _People_ screens) will find people with that name. The _Clubs_ screen also allows to search on Expertise. The _Maps_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "In het _Portfolio's_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied gebied zoeken. In het _Clubs_ en _Musea_ scherm kan men op de clubnaam of op gemeente zoeken."
+            "state" : "needs_review",
+            "value" : "In het _Clubs_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied zoeken. In het _Personen_ scherm kan men op naam van de fotograaf zoeken. In het _Kaarten_ scherm kan men op de clubnaam of op gemeente zoeken."
           }
         }
       }
@@ -393,13 +393,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The image next to a photographer’s name on the Members screen and the Photographers screen can be toggled between two different images, if both are provided. One is what the photographer looks like (“photographerImage”); the other is what the photographer’s work looks like (“featuredImage”). You can set a preference in the Preferences screen. It is really a “preference” in the sense that the app will try to show the image you chose, but will switch to the alternative if the preferred image is not available."
+            "value" : "The image next to a photographer’s name on the Clubs screen and the People screen can be toggled between two different images, if both are provided. One is what the photographer looks like (“photographerImage”); the other is what the photographer’s work looks like (“featuredImage”). You can set a preference in the Settings screen. It is really a “preference” in the sense that the app will try to show the image you chose, but will switch to the alternative if the preferred image is not available."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Op de Leden en Fotografen schermen kan je instellen of je het gezichten van fotografen in de “thumbnail” wilt zien. Het alternatief is een foto gemaakt door die fotograaf. Een gebruiker kan zijn voorkeur aangeven onder Instellingen. Indien gezicht (_photographerImage_) gekozen is, wordt het gezicht getoond als dat plaatje voor de app beschikbaar is. Anders toont de app een foto (_featuredImage_) uit de portfolio van  de fotograaf."
+            "value" : "Op de Clubs en Personen schermen kan je instellen of je het gezichten van fotografen in de “thumbnail” wilt zien. Het alternatief is een foto gemaakt door die fotograaf. Een gebruiker kan zijn voorkeur aangeven onder Instellingen. Indien gezicht (_photographerImage_) gekozen is, wordt het gezicht getoond als dat plaatje voor de app beschikbaar is. Anders toont de app een foto (_featuredImage_) uit de portfolio van  de fotograaf."
           }
         }
       }
@@ -563,13 +563,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The _Organizations_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Portfolios_ screen does not currently support smart scrolling for technical reasons."
+            "value" : "The _Maps_ screen and the _People_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Clubs_ screen does not currently support smart scrolling for technical reasons."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het _Organisaties_ scherm en het _Fotografen_ scherm ondersteunen zogenaamde __smart scrolling__. Dit verkleint de kans dat de app een halve foto of halve landkaart laat zien."
+            "value" : "Het _Kaarten_ scherm en het _Personen_ scherm ondersteunen zogenaamde __smart scrolling__. Dit verkleint de kans dat de app een halve foto of halve landkaart laat zien."
           }
         }
       }
@@ -716,7 +716,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "By default, former club members and their work are not shown, but this can be enabled on the _Preferences_ screen."
+            "value" : "By default, former club members and their work are not shown, but this can be enabled on the _Settings_ screen."
           }
         },
         "nl" : {
@@ -818,7 +818,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Many of the clubs in the Netherlands are federated under the umbrella of a national [Fotobond](www.fotobond.nl) organization for amateur photography. By default, all clubs are shown in the same color. In the __Preferences__ screen you can choose to highlight Fotobond or non-Fotobond clubs using a selectable color."
+            "value" : "Many of the clubs in the Netherlands are federated under the umbrella of a national [Fotobond](www.fotobond.nl) organization for amateur photography. By default, all clubs are shown in the same color. In the __Settings__ screen you can choose to highlight Fotobond or non-Fotobond clubs using a selectable color."
           }
         },
         "nl" : {
@@ -937,7 +937,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Organizations_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form of a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors."
+            "value" : "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Maps_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form of a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors."
           }
         },
         "nl" : {
@@ -954,13 +954,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Level 2__ requires providing a list of the names of current (and optionally former) club members as a text file with a specific format. This file can be stored anywhere as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. At Level 2, the membership lists show up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface."
+            "value" : "__Level 2__ requires providing a list of the names of current (and optionally former) club members as a text file with a specific format. This file can be stored anywhere as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. At Level 2, the membership lists show up on the _Clubs_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Niveau 2__ bestaat uit een lijst met leden in de vorm van een JSON tekstbestand. De app haalt het bestand op via een webadres. De huidige voorkeur is om het bestand te stallen op Github ([instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md)). _Fotoclub den Dungen_ is een voorbeeld van een club op Niveau 2: de naam en locatie zijn bekend (Niveau 1), het _Leden_ scherm laat alle clubleden zien (Niveau 2), maar er zijn nog geen online portfolio’s via de app beschikbaar (Niveau 3)."
+            "value" : "__Niveau 2__ bestaat uit een lijst met leden in de vorm van een JSON tekstbestand. De app haalt het bestand op via een webadres. De huidige voorkeur is om het bestand te stallen op Github ([instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md)). _Fotoclub den Dungen_ is een voorbeeld van een club op Niveau 2: de naam en locatie zijn bekend (Niveau 1), het _Clubs_ scherm laat alle clubleden zien (Niveau 2), maar er zijn nog geen online portfolio’s via de app beschikbaar (Niveau 3)."
           }
         }
       }
@@ -971,13 +971,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)."
+            "value" : "Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Clubs_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Niveau 3__ bestaat uit de eigenlijke portfolio’s met foto’s. Een goed voorbeeld is _Fotogroep de Gender_: de portfolio’s van leden en recente ex-leden zijn via het _Leden_ of _Fotografen_ scherm te bereiken. Omdat een club met tientallen leden vaak honderden foto’s wil tonen, is het genereren van online portfolio's via een _Lightroom_ plug-in geautomatiseerd. Gedetailleerde instructies hiervoor staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md)."
+            "value" : "__Niveau 3__ bestaat uit de eigenlijke portfolio’s met foto’s. Een goed voorbeeld is _Fotogroep de Gender_: de portfolio’s van leden en recente ex-leden zijn via het _Clubs_ of _Personen_ scherm te bereiken. Omdat een club met tientallen leden vaak honderden foto’s wil tonen, is het genereren van online portfolio's via een _Lightroom_ plug-in geautomatiseerd. Gedetailleerde instructies hiervoor staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md)."
           }
         }
       }
@@ -1208,13 +1208,13 @@
         }
       }
     },
-    "Search bar of _Portfolios_ screen (for iOS 26 and up)" : {
+    "Search bar of _Clubs_ screen (for iOS 26 and up)" : {
       "comment" : "Figure caption about Search Bar on the Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search bar of _Portfolios_ screen for iOS/iPadOS versions supporting Liquid Glass."
+            "value" : "Search bar of _Clubs_ screen for iOS/iPadOS versions supporting Liquid Glass."
           }
         },
         "nl" : {
@@ -1293,23 +1293,6 @@
         }
       }
     },
-    "The Preferences screen." : {
-      "comment" : "Caption of an image on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The Preferences screen."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Het Instellingen scherm in de app."
-          }
-        }
-      }
-    },
     "The search bar is at the top of the screen (for iOS versions up to 18)." : {
       "comment" : "Figure caption about Search Bar on the Readme page",
       "localizations" : {
@@ -1323,6 +1306,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De zoekfunctie zit bij een iPhone met iOS 17 of 18 bovenaan het scherm."
+          }
+        }
+      }
+    },
+    "The Settings screen." : {
+      "comment" : "Caption of an image on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Settings screen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het Instellingen scherm in de app."
           }
         }
       }

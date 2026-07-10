@@ -28,7 +28,7 @@ struct MemberListSectionHeader: View {
                 Text(title) // String used to group the elements into Sections
                     .font(.title2)
                     .lineLimit(1)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
                     .padding(.horizontal)
              }
             Spacer()
@@ -38,17 +38,16 @@ struct MemberListSectionHeader: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Preview actually works.
-struct MemberListSectionHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MemberListSectionHeader(title: "Fotogroep de Gender (Eindhoven)")
-                .previewDisplayName("Normal club name")
-            MemberListSectionHeader(title: "A Very Long Photo Club Name That Might Overflow The Capsule Width")
-                .previewDisplayName("Long name (truncation)")
-        }
+// Believe it or not, the following Previews actually work.
+
+#Preview("Normal club name", traits: .sizeThatFitsLayout) {
+    MemberListSectionHeader(title: "Fotogroep de Gender (Eindhoven)")
         .padding()
-        .previewLayout(.sizeThatFits)
         .frame(height: 40)
-    }
+}
+
+#Preview("Long name (truncation)", traits: .sizeThatFitsLayout) {
+    MemberListSectionHeader(title: "A Very Long Photo Club Name That Might Overflow The Capsule Width")
+        .padding()
+        .frame(height: 40)
 }

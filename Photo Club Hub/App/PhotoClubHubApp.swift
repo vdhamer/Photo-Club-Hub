@@ -5,20 +5,13 @@
 //  Created by Peter van den Hamer on 20/06/2021.
 //
 
-import SwiftUI
 import CoreData // for NSManagedObjectContext
+import TipKit   // for Tips.configure
 
 @main
 struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
-
-    // True while the unit-test bundle is running. Set via IS_RUNNING_TESTS in Photo Club Hub.xctestplan.
-    // Used to skip the production auto-load so tests don't race the app loader into PersistenceController.shared.
-    // This is a self-defined signal, so it works for Swift Testing, XCTest, and `swift test` alike (see issue #756).
-    var isRunningTests: Bool {
-        ProcessInfo.processInfo.environment["IS_RUNNING_TESTS"] == "1"
-    }
 
     init() {
 
@@ -26,6 +19,10 @@ struct PhotoClubHubApp: App {
         if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
             return
         }
+
+        // Load persisted tip state (e.g. TabNavigationTip); without this call no tips are shown.
+        // try? Tips.resetDatastore() /* used during manual testing only */
+        try? Tips.configure([.displayFrequency(.daily)]) // show at most one tip per day
 
         // Core Data settings
         let persistenceController = PersistenceController.shared // for Core Data
@@ -47,27 +44,11 @@ struct PhotoClubHubApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // Here we switch between the pre-Liquid Glass view versions and post-Liquid Glass view versions
-            if #unavailable(iOS 26.0) { // iOS 17.6 ...  (mandated by app min requirement) or 18
-                PreludeView1718()
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                    .onAppear {
-                        if !Settings.manualDataLoading && !isRunningTests {
-                            PhotoClubHubApp.loadClubsAndMembers()
-                        }
-                    }
-            } else {
-                PreludeView2627()
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                    .onAppear {
-                        if !Settings.manualDataLoading && !isRunningTests {
-                            PhotoClubHubApp.loadClubsAndMembers()
-                        }
-                    }
-            }
+            RootView() // replaced the old inline #unavailable(iOS 26) PreludeView fork; see RootView.swift
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
-        .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
-            PersistenceController.shared.save() // persist data when app moves to background (may not be needed)
+        .onChange(of: scenePhase) { // zero-param closure is the iOS 17+ form; pre-iOS 17 the closure took (newValue)
+            PersistenceController.shared.save() // Core Data will not automatically save on when scene -> background
         }
     }
 

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI // for View
-import WebKit // for wkWebView
 import CoreData // for NSFetchRequest
 
 // Shows horizontally scrolling thumbnails (normally 1 or 2) for photographer portfolios, each containing:
@@ -16,16 +15,18 @@ import CoreData // for NSFetchRequest
 
 struct PhotographersThumbnails: View {
     let photographer: Photographer // who is this about?
-    let wkWebView: WKWebView // reusable WKWebView
-    @StateObject var preferencesModel = PreferencesViewModel.shared
+    /// Set by tapping a caption or chevron; the screen-level view owns the navigationDestination(item:).
+    /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
+    @Binding var selectedPortfolio: MemberPortfolio?
+    @StateObject var settingsModel = SettingsViewModel.shared
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) { // 2nd row with images in photographer's "card"
             HStack { // to support multiple portfolio previews in one row
                 ForEach(photographer.memberships.sorted(), id: \.id) { membership in
                     PhotographersThumbnail(member: membership,
-                                           wkWebView: wkWebView,
-                                           preferences: preferencesModel.preferences)
+                                           settings: settingsModel.settings,
+                                           selectedPortfolio: $selectedPortfolio)
                 } // ForEach
             } // HStack to support multiple portfolio previews in one row
             .scrollTargetLayout() // unit of horizontal "smart" scrolling, iOS smart scrolling
@@ -39,9 +40,10 @@ struct PhotographersThumbnails: View {
 
 // MARK: - Previews
 
-// Believe it or not, these 3 previews actually work.
+// Believe it or not, these 2 previews actually work.
+
 #Preview("Photographer with Multiple Memberships") {
-    let wkWebView = WKWebView()
+    @Previewable @State var selectedPortfolio: MemberPortfolio?
     let controller = PersistenceController.preview
     let context = controller.container.viewContext
 
@@ -61,7 +63,8 @@ struct PhotographersThumbnails: View {
                     .font(.headline)
                 Divider()
 
-                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView)
+                PhotographersThumbnails(photographer: photographer,
+                                        selectedPortfolio: $selectedPortfolio)
                     .border(Color.gray.opacity(0.7), width: 1)
 
                 Divider()
@@ -84,9 +87,8 @@ struct PhotographersThumbnails: View {
     }
 }
 
-// Believe it or not, these 3 previews actually work.
 #Preview("Photographer with Multiple Memberships (live data)") {
-    let wkWebView = WKWebView()
+    @Previewable @State var selectedPortfolio: MemberPortfolio?
     let controller = PersistenceController.shared
     let context = controller.container.viewContext
 
@@ -105,7 +107,8 @@ struct PhotographersThumbnails: View {
                 Text(verbatim: "Photographer: \(photographer.fullNameFirstLast)")
                     .font(.headline)
 
-                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView)
+                PhotographersThumbnails(photographer: photographer,
+                                        selectedPortfolio: $selectedPortfolio)
                     .border(Color.gray.opacity(0.7), width: 1)
 
                 Text(verbatim: "Preview: Horizontal scrolling thumbnails")

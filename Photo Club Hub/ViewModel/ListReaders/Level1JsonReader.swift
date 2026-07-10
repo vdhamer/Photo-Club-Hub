@@ -14,7 +14,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum] /
 public class Level1JsonReader {
 
     /// Fire-and-forget entry point for callers that don't need to know when loading completes
-    /// (the sync Level 1 tests and the OrganizationViewMap preview). The app and the Include
+    /// (the sync Level 1 tests and the MapView preview). The app and the Include
     /// recursion use the awaitable `load(...)` instead (issue #760).
     ///
     /// Deliberately enqueues on `bgContext` directly (rather than `Task { await load(...) }`):

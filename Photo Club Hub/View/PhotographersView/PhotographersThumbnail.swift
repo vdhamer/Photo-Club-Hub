@@ -6,7 +6,6 @@
 //
 
 import SwiftUI // for View
-import WebKit // for wkWebView
 import CoreData // for NSFetchRequest
 
 // Shows a single photographer portfolio thumbnail containing:
@@ -16,20 +15,21 @@ import CoreData // for NSFetchRequest
 
 struct PhotographersThumbnail: View {
     let member: MemberPortfolio // who is this about?
-    let wkWebView: WKWebView // reusable WKWebView
-    let preferences: PreferencesStruct
+    let settings: SettingsStruct
+    /// Set by tapping the caption or chevron; the screen-level view owns the navigationDestination(item:).
+    /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
+    @Binding var selectedPortfolio: MemberPortfolio?
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
-    @StateObject var preferencesModel = PreferencesViewModel.shared
 
     var body: some View {
         HStack {
             DualImageWithCaptionAndControls(member: member,
-                                            wkWebView: wkWebView,
-                                            preferences: preferencesModel.preferences,
+                                            settings: settings,
                                             squareSize: 160,
                                             caption: true,
-                                            flipImageFlag: $flipImageFlag)
+                                            flipImageFlag: $flipImageFlag,
+                                            selectedPortfolio: $selectedPortfolio)
         }
     }
 
@@ -55,12 +55,13 @@ extension PhotographersThumbnail {
 }
 
 // Believe it or not, these 3 previews actually work.
+
 #Preview("Single Portfolio Thumbnail") {
-    @Previewable @StateObject var preferencesModel = PreferencesViewModel()
+    @Previewable @StateObject var settingsModel = SettingsViewModel()
+    @Previewable @State var selectedPortfolio: MemberPortfolio?
     let controller = PersistenceController.preview
     let context = controller.container.viewContext
-    let wkWebView = WKWebView()
-    let preferences = preferencesModel.preferences
+    let settings = settingsModel.settings
 
     // Get first membership from preview data
     let fetchRequest = MemberPortfolio.fetchRequest()
@@ -72,7 +73,9 @@ extension PhotographersThumbnail {
                 .font(.headline)
             Divider()
 
-            PhotographersThumbnail(member: membership, wkWebView: wkWebView, preferences: preferences)
+            PhotographersThumbnail(member: membership,
+                                   settings: settings,
+                                   selectedPortfolio: $selectedPortfolio)
                 .border(Color.gray.opacity(0.3), width: 1)
         }
         .padding()

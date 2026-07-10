@@ -28,9 +28,13 @@ struct FilteredPhotographerView1718: View {
     private let isDeletePhotographersPermitted = true // enable/disable .onDelete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
+    /// Set by tapping a caption or chevron; the screen-level view owns the navigationDestination(item:).
+    /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
+    let selectedPortfolio: Binding<MemberPortfolio?>
 
     // regenerate Section using current FetchRequest with current filters and sorting
-    init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView) {
+    init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView,
+         selectedPortfolio: Binding<MemberPortfolio?>) {
         _fetchedPhotographers = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchedPhotographers
                                                         SortDescriptor(\.familyName_, order: .forward),
                                                         SortDescriptor(\.givenName_, order: .forward)],
@@ -38,6 +42,7 @@ struct FilteredPhotographerView1718: View {
                                                    animation: .default)
         self.searchText = searchText
         self.wkWebView = wkWebView
+        self.selectedPortfolio = selectedPortfolio
     }
 
     var body: some View {
@@ -68,7 +73,7 @@ struct FilteredPhotographerView1718: View {
 
                 } // HStack
 
-                PhotographersThumbnails(photographer: photographer, wkWebView: wkWebView)
+                PhotographersThumbnails(photographer: photographer, selectedPortfolio: selectedPortfolio)
 
             } // VStack
             .accentColor(.photographerColor)
@@ -133,13 +138,16 @@ private struct PhotographerIconView1718: View {
 // MARK: - Previews
 
 // The following Previews actually works for FilteredPrhotographersView2627 - but they don't work here yet ;-(
+
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2627' for versions above iOS 18.x")
 #Preview("FilteredPhotographerView1718") {
+    @Previewable @State var selectedPortfolio: MemberPortfolio?
     NavigationStack {
         List {
             FilteredPhotographerView1718(predicate: NSPredicate(value: true),
                                          searchText: .constant(""),
-                                         wkWebView: WKWebView())
+                                         wkWebView: WKWebView(),
+                                         selectedPortfolio: $selectedPortfolio)
         }
     }
     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

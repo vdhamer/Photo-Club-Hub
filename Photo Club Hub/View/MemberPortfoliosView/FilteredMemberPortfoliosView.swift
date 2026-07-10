@@ -7,7 +7,6 @@
 
 import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI
-import WebKit // for wkWebView
 
 /// Renders `MemberPortfolioRow` views grouped by Club, driven by a Core Data sectioned fetch request.
 /// Sections are labeled by Club name+town and include member-count footers.
@@ -29,11 +28,14 @@ struct FilteredMemberPortfoliosView: View {
 
     /// Bound to the parent's search field; changes here trigger re-filtering without a new fetch.
     private let searchText: Binding<String>
-    /// Single instance reused across all rows to avoid repeated WKWebView allocation.
-    private let wkWebView = WKWebView()
+    /// Parent-owned selection: a row sets it to trigger navigation via the parent's `navigationDestination(item:)`,
+    /// which must be registered outside this lazy `List` content.
+    private let selectedPortfolio: Binding<MemberPortfolio?>
 
     /// Replaces `predicateNone` with `memberPredicate` and applies the standard sort order.
-    init(memberPredicate: NSPredicate, searchText: Binding<String>) {
+    init(memberPredicate: NSPredicate,
+         searchText: Binding<String>,
+         selectedPortfolio: Binding<MemberPortfolio?>) {
     // https://developer.apple.com/documentation/SwiftUI/SectionedFetchRequest
     // When you need to dynamically change the section identifier, predicate, or sort descriptors,
     // access the request's SectionedFetchRequest.Configuration structure, either directly or with a binding.
@@ -50,23 +52,26 @@ struct FilteredMemberPortfoliosView: View {
             predicate: memberPredicate,
             animation: .default)
         self.searchText = searchText
+        self.selectedPortfolio = selectedPortfolio
     }
 
     // MARK: - body
 
     var body: some View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
-        ForEach(sectionedPortfoliosResults) {section in
+        ForEach(sectionedPortfoliosResults) { section in
+            let filteredPortfolios = filterMemberPortfolios(unFilteredPortfolios: section)
             Section {
-                ForEach(filterMemberPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
-                    MemberPortfolioRow(member: filteredMember, wkWebView: wkWebView)
+                ForEach(filteredPortfolios, id: \.id) { filteredMember in
+                    MemberPortfolioRow(member: filteredMember,
+                                       selectedPortfolio: selectedPortfolio)
                         .listRowSeparator(.visible)
                 }
-                .accentColor(.memberPortfolioColor)
+                .tint(.memberPortfolioColor)
             } header: {
                 MemberListSectionHeader(title: section.id) // String used to group the elements into Sections
             } footer: {
-                MemberListSectionFooter(filtCount: filterMemberPortfolios(unFilteredPortfolios: section).count,
+                MemberListSectionFooter(filtCount: filteredPortfolios.count,
                                         unfiltCount: section.endIndex,
                                         organization: section.first?.organization
                 )
@@ -150,24 +155,33 @@ struct FilteredMemberPortfoliosView: View {
 
 // MARK: - Previews
 
+// Believe it or not, the following preview works.
+
 // Note that the preview filters on `searchText`, but `searchText` is not shown in this child View.
 // @Previewable @State (Xcode 16+) wires up state directly in the #Preview closure without a wrapper view.
 #Preview {
     @Previewable @State var searchText: String = "8"
+    // Tapping a row does not navigate in this preview: the matching `navigationDestination(item:)`
+    // is registered by the parent view (MemberPortfolioView), which is not part of this preview.
+    @Previewable @State var selectedPortfolio: MemberPortfolio?
     let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
     NavigationStack {
         if #available(iOS 26, *) {
             List { // lists are "Lazy" automatically
-                FilteredMemberPortfoliosView(memberPredicate: memberPredicate, searchText: $searchText)
+                FilteredMemberPortfoliosView(memberPredicate: memberPredicate,
+                                             searchText: $searchText,
+                                             selectedPortfolio: $selectedPortfolio)
             }
-            .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
+            .navigationTitle(Text(verbatim: "FilteredMemberPortfoliosView")) // no localization (only used for preview)
             .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
             .searchToolbarBehavior(.minimize) // iOS 26+
         } else {
             List { // lists are "Lazy" automatically
-                FilteredMemberPortfoliosView(memberPredicate: memberPredicate, searchText: $searchText)
+                FilteredMemberPortfoliosView(memberPredicate: memberPredicate,
+                                             searchText: $searchText,
+                                             selectedPortfolio: $selectedPortfolio)
             }
-            .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
+            .navigationTitle(Text(verbatim: "FilteredMemberPortfoliosView")) // no localization (only used for preview)
             .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
         }
     }

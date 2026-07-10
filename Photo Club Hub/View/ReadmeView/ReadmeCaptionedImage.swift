@@ -47,7 +47,7 @@ struct ReadmeCaptionedImage: View {
                                              comment: "Caption under example image in Features and Tips section")
         )
         ReadmeCaptionedImage(
-            "Preferences",
+            "Settings",
             imageSize: CGSize(width: 260, height: 180),
             caption: LocalizedStringResource("This is the second caption.",
                                              table: "PhotoClubHub.Readme",

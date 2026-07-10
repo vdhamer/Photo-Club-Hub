@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-import WebKit // for wkWebView
+import WebKit // for WKWebView used in navigationDestination
 
 // Implements entire Photographers screen including
 //     * providing the navigation title,
@@ -19,13 +19,20 @@ import WebKit // for wkWebView
 @available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2627' for versions above iOS 18.x")
 struct PhotographersListView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.horizontalSizeClass) private var horSizeClass
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
+    /// The member whose portfolio is shown; setting it (from a thumbnail) triggers navigation via
+    /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy LazyVStack.
+    @State private var selectedPortfolio: MemberPortfolio?
     var searchText: Binding<String>
-    let wkWebView: WKWebView
+    @State private var isSearchPresented = false
+    /// Single instance shared by all thumbnails and the portfolio destination to avoid repeated WKWebView allocation.
+    /// Stored in @State so it survives re-initialization of this view struct.
+    @State private var wkWebView = WKWebView()
 
-    @StateObject var model = PreferencesViewModel.shared
-    private var navigationTitle = String(localized: "Photographers",
+    @StateObject var model = SettingsViewModel.shared
+    private var navigationTitle = String(localized: "People",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
     private let temporary = String(localized: "Temporary",
@@ -37,16 +44,16 @@ struct PhotographersListView1718: View {
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
-        self.wkWebView = WKWebView()
     }
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredPhotographerView1718(predicate: model.preferences.photographerPredicate,
+                FilteredPhotographerView1718(predicate: model.settings.photographerPredicate,
                                          searchText: searchText,
-                                         wkWebView: wkWebView)
+                                         wkWebView: wkWebView,
+                                         selectedPortfolio: $selectedPortfolio)
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
@@ -102,6 +109,23 @@ struct PhotographersListView1718: View {
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
+        .searchable(text: searchText,
+                    isPresented: $isSearchPresented,
+                    placement: .navigationBarDrawer(displayMode: .automatic),
+                    prompt: String(localized: "Search prompt people",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   bundle: Bundle.main,
+                                   comment: """
+                                            Field at top of Photographers page that allows the user to filter the \
+                                            photographers based on either given- and family name.
+                                            """))
+        .navigationDestination(item: $selectedPortfolio) { member in
+            SinglePortfolioView(url: member.level3URL, webView: wkWebView)
+                .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
+                                 (horSizeClass == .compact ? member.organization.nickName :
+                                                             member.organization.fullName))
+                .navigationBarTitleDisplayMode(.inline)
+        }
         .refreshable { // for pull-to-refresh
             // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
             if Settings.dataResetPending {
@@ -114,14 +138,16 @@ struct PhotographersListView1718: View {
         .autocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .navigationTitle(navigationTitle)
-        .searchable(text: searchText, placement: .automatic,
-                    prompt: Text("Search_names_p",
-                                 tableName: "PhotoClubHub.SwiftUI",
-                                 comment: """
-                                          Field at top of Photographers page that allows the user to \
-                                          filter the photographers based on either given- and family name.
-                                          """)
-        )
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ReadmeButton()
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { isSearchPresented = true } label: {
+                    Image(systemName: "magnifyingglass")
+                }
+            }
+        }
         .disableAutocorrection(true)
     }
 
@@ -139,13 +165,20 @@ struct PhotographersListView1718: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Previews actually works. But Canvas needs to target iOS 17 or 18.
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2627' for versions above iOS 18.x")
-#Preview {
-    @Previewable @State var searchText = "D' Eau1" // carefull with the space in the name
-    NavigationView {
-        PhotographersListView1718(searchText: $searchText)
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-            .navigationTitle("PhotographersListView1718")
+// Believe it or not, the following Preview actually works. But Canvas needs to target iOS 17 or 18.
+
+@available(iOS, obsoleted: 19.0, message: "Please use 'PhotographersListView2627' for versions above iOS 18.x")
+private struct PhotographersListView1718Preview: View {
+    @State var searchText = "D' Eau1" // carefull with the space in the name
+    var body: some View {
+        NavigationView {
+            PhotographersListView1718(searchText: $searchText)
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+                .navigationTitle("PhotographersListView1718")
+        }
     }
+}
+
+#Preview {
+    PhotographersListView1718Preview()
 }

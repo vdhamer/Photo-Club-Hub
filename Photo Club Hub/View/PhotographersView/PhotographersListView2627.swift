@@ -19,13 +19,20 @@ import WebKit // for wkWebView
 @available(iOS 26.0, *)
 struct PhotographersListView2627: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.horizontalSizeClass) private var horSizeClass
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
+    /// The member whose portfolio is shown; setting it (from a thumbnail) triggers navigation via
+    /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy LazyVStack.
+    @State private var selectedPortfolio: MemberPortfolio?
     var searchText: Binding<String>
-    let wkWebView: WKWebView
+    @State private var isSearchPresented = false
+    /// Single instance shared by all thumbnails and the portfolio destination to avoid repeated WKWebView allocation.
+    /// Stored in @State so it survives re-initialization of this view struct.
+    @State private var wkWebView = WKWebView()
 
-    @StateObject var model = PreferencesViewModel.shared
-    private var navigationTitle = String(localized: "Photographers",
+    @StateObject var model = SettingsViewModel.shared
+    private var navigationTitle = String(localized: "People",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
     private let temporary = String(localized: "Temporary",
@@ -37,16 +44,16 @@ struct PhotographersListView2627: View {
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
-        self.wkWebView = WKWebView()
     }
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredPhotographerView2627(predicate: model.preferences.photographerPredicate, // Here's the action
+                FilteredPhotographerView2627(predicate: model.settings.photographerPredicate, // Here's the action
                                          searchText: searchText,
-                                         wkWebView: wkWebView)
+                                         wkWebView: wkWebView,
+                                         selectedPortfolio: $selectedPortfolio)
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
@@ -102,6 +109,23 @@ struct PhotographersListView2627: View {
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
+        .searchable(text: searchText,
+                    isPresented: $isSearchPresented,
+                    placement: .navigationBarDrawer(displayMode: .automatic),
+                    prompt: String(localized: "Search prompt people",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   bundle: Bundle.main,
+                                   comment: """
+                                            Field at top of Photographers page that allows the user to filter the \
+                                            photographers based on either given- and family name.
+                                            """))
+        .navigationDestination(item: $selectedPortfolio) { member in
+            SinglePortfolioView(url: member.level3URL, webView: wkWebView)
+                .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
+                                 (horSizeClass == .compact ? member.organization.nickName :
+                                                             member.organization.fullName))
+                .navigationBarTitleDisplayMode(.inline)
+        }
         .refreshable { // for pull-to-refresh
             // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
             if Settings.dataResetPending {
@@ -114,15 +138,16 @@ struct PhotographersListView2627: View {
         .autocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .navigationTitle(navigationTitle)
-        .searchable(text: searchText, placement: searchPlacement,
-                    prompt: Text("Search_names_p",
-                                 tableName: "PhotoClubHub.SwiftUI",
-                                 comment: """
-                                          Field at top of Photographers page that allows the user to \
-                                          filter the photographers based on either given- and family name.
-                                          """)
-        )
-        .searchToolbarBehaviorIfAvailable()
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ReadmeButton()
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { isSearchPresented = true } label: {
+                    Image(systemName: "magnifyingglass")
+                }
+            }
+        }
         .disableAutocorrection(true)
     }
 
@@ -136,33 +161,6 @@ struct PhotographersListView2627: View {
         return isSupported ? Self.iconExamples.supported.icon : Self.iconExamples.temporary.icon
     }
 
-}
-
-// MARK: - Controlling search bar placement
-
-/// On iOS 27, `.automatic` + `.minimize` adds a duplicate nav-bar icon.
-/// While `.toolbar` + no `.minimize` suppresses it and gives the same single compact bottom button as iOS 26.
-private var searchPlacement: SearchFieldPlacement {
-    if #available(iOS 27, *) {
-        return .toolbar
-    } else {
-        return .automatic
-    }
-}
-
-@available(iOS 26.0, *)
-private extension View {
-    /// Applies `.searchToolbarBehavior(.minimize)` on iOS 26 only.
-    /// On iOS 27+, `.minimize` adds a duplicate nav-bar icon on top of the compact bottom button;
-    /// using `.toolbar` placement without `.minimize` reproduces the iOS 26 single-button behavior instead.
-    @ViewBuilder
-    func searchToolbarBehaviorIfAvailable() -> some View {
-        if #available(iOS 27, *) {
-            self
-        } else {
-            self.searchToolbarBehavior(.minimize)
-        }
-    }
 }
 
 // MARK: - Previews

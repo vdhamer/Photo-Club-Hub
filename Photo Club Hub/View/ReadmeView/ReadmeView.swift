@@ -48,7 +48,6 @@ struct ReadmeView: View {
                         ) {
                             dismiss()
                         }
-                        .buttonStyle(BorderedButtonStyle()) // ternary operator doesn't work here
                     }
                 }
             }
