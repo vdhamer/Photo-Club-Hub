@@ -83,6 +83,7 @@ struct MainTabView1717: View {
                                  comment: "Tab bar label for settings"),
                           systemImage: "gearshape")
                 }
+
         }
         .tint(selectedTab.tint) // colors the selected tab bar item to match its screen
     }

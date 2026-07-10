@@ -24,10 +24,10 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
     }
 
     @StateObject private var settingsModel = SettingsViewModel.shared
-    @State private var peopleSearchText = ""
+    @State private var personSearchText = ""
     @State private var selectedTab: TabID = .clubs // which tab is selected when the app is launched
 
-    // Updates selectedTab with animations disabled, so the tab bar tint
+    // Updates selectedTab with animations disabled so the tab bar's selected-icon tint
     // switches instantly instead of briefly crossfading from the previous tab's color.
     private var selectedTabBinding: Binding<TabID> {
         Binding(
@@ -54,6 +54,7 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                         PhotographersListView1718(searchText: $personSearchText)
                     }
                 }
+                .tint(TabID.people.tint)
             }
 
             Tab(String(localized: "Clubs",
@@ -64,6 +65,7 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                 NavigationStack {
                     MemberPortfolioView()
                 }
+                .tint(TabID.clubs.tint)
             }
 
             Tab(String(localized: "Maps",
@@ -74,6 +76,7 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                 NavigationStack {
                     MapsView()
                 }
+                .tint(TabID.maps.tint)
             }
 
             Tab(String(localized: "Settings",
@@ -82,11 +85,13 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                 systemImage: "gearshape",
                 value: .settings) {
                 SettingsView(settings: $settingsModel.settings)
+                    .tint(TabID.settings.tint)
             }
+
         }
         .tabViewStyle(.sidebarAdaptable)
         .tabBarMinimizeBehaviorIfAvailable()
-        .tint(selectedTab.tint) // colors the selected tab bar item to match its screen
+        .tint(selectedTab.tint) // colors selected tab bar item; sidebar ignores this for its background (Liquid Glass)
     }
 
 }
@@ -100,6 +105,7 @@ private extension View {
             self
         }
     }
+
 }
 
 // MARK: - Preview
