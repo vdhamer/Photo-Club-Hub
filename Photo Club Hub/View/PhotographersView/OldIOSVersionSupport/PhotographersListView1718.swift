@@ -26,6 +26,7 @@ struct PhotographersListView1718: View {
     /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy LazyVStack.
     @State private var selectedPortfolio: MemberPortfolio?
     var searchText: Binding<String>
+    @State private var isSearchPresented = false
     /// Single instance shared by all thumbnails and the portfolio destination to avoid repeated WKWebView allocation.
     /// Stored in @State so it survives re-initialization of this view struct.
     @State private var wkWebView = WKWebView()
@@ -141,15 +142,12 @@ struct PhotographersListView1718: View {
             ToolbarItem(placement: .topBarTrailing) {
                 ReadmeButton()
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { isSearchPresented = true } label: {
+                    Image(systemName: "magnifyingglass")
+                }
+            }
         }
-        .searchable(text: searchText, placement: .automatic,
-                    prompt: Text("Search_names_p",
-                                 tableName: "PhotoClubHub.SwiftUI",
-                                 comment: """
-                                          Field at top of Photographers page that allows the user to \
-                                          filter the photographers based on either given- and family name.
-                                          """)
-        )
         .disableAutocorrection(true)
     }
 

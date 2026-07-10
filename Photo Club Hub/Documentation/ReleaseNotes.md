@@ -42,6 +42,7 @@ STRUCTURAL
 - Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
 - Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
 - Running automated testing has become more robust.
+- For practical reasons we support iOS 17.5 (was 17.6) and newer. Not sure 17.5 works. <<<<
 
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
