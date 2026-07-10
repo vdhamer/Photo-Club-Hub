@@ -226,7 +226,7 @@ Usage of the various screens in the user interface:
 
 The `Clubs` screen lists all the photo clubs featured by the app.
 It allows you to first select a photo club and then select the portfolio of one of its members.
-The `Search` bar filters the lists of club members using the photographer's full name.
+The `Search` bar filters the lists of club members using the photographer's full name or expertise tags.
 Swiping left deletes an entry, but this is not normally needed and is not permanent (yet).
 
 ![Clubs Screen](images/portfoliosScreen.png "Clubs Screen")
@@ -358,7 +358,7 @@ and older iPhones show it at the top of the list (scroll up rapidly until you hi
 
 The text you type inside the search bar is matched against key fields for the records shown in the list.
 
-- In the `Clubs` screen, a search scans photographers' full names.
+- In the `Clubs` screen, a search filters on the photographers' names and on their expertises.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
   If you need to search on club names, go to the `Maps` screen.
 - In the `Maps` screen, searches try to match against the organization names and towns.
