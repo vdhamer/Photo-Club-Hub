@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Photo Club Hub";
+/* Bundle name */
+"CFBundleName" = "Photo Club Hub";
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "User's location is shown on the maps.";

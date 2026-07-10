@@ -8,26 +8,22 @@
 import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI // for View
 
-/// A scroll-based view that displays photo clubs and museums with a search field
-/// and maps with markers showing club/museum locations.
+/// A scroll-based view that displays photo clubs and museums with maps and markers showing their locations.
 ///
 /// - Presents a `FilteredOrganizationView` inside a SwiftUI `ScrollView` with a `LazyVStack`.
 /// - Shows a fallback `NoClubsText` hint when no organizations (= clubs or museums) are loaded.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
 /// - Requests location authorization (once) and starts location updates while the view is visible.
-/// - Uses a search field to filter organizations by name or town.
-///
-/// The code has one location where the code for iOS 27 and iOS 17/18 deviate from each other.
 ///
 struct MapsView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// A wrapper that mainly holds a Preferences struct
     @StateObject var modelToHoldSettings = SettingsViewModel.shared
+    @State private var searchText: String = ""
+    @State private var isSearchPresented = false
     /// Tracks user location to enable the user-location annotation on the map.
     @State private var locationManager = LocationManager()
-    /// The text bound to the search field used to filter organizations by name or town.
-    @State private var searchText: String = "" // bindable String
 
     /// Organizations fetched only to detect the empty state; sorting is irrelevant for counting.
     @FetchRequest(
@@ -69,6 +65,16 @@ struct MapsView: View {
         } // ScrollView
 
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
+        .searchable(text: $searchText,
+                    isPresented: $isSearchPresented,
+                    placement: .navigationBarDrawer,
+                    prompt: String(localized: "Search prompt maps",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   bundle: Bundle.main,
+                                   comment: """
+                                            Field on the Organizations page that allows the user to filter the members \
+                                            based on a fragment of the organization name or town.
+                                            """))
         .refreshable { // for pull-to-refresh
             // Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
             // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
@@ -89,20 +95,12 @@ struct MapsView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 ReadmeButton()
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { isSearchPresented = true } label: {
+                    Image(systemName: "magnifyingglass")
+                }
+            }
         }
-        .searchable(text: $searchText, placement: searchPlacement,
-                    // .automatic
-                    // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust
-                    // .sidebar The search field is placed in the sidebar of a navigation view. not on iPad
-                    // .navigationBarDrawer The search field is placed in an drawer of the navigation bar. OK
-                    prompt: Text("Search names and towns",
-                                 tableName: "PhotoClubHub.SwiftUI",
-                                 comment: """
-                                          Field on the Organizations page that allows the user to \
-                                          filter the members based on a fragment of the organization name or town.
-                                          """
-                                ))
-        .searchToolbarBehaviorIfAvailable()
         .autocapitalization(.sentences)
         .disableAutocorrection(true)
     }
@@ -119,34 +117,6 @@ struct NoClubsText: View {
              """,
              tableName: "PhotoClubHub.SwiftUI",
              comment: "Hint to the user if the database returns zero Organizations.")
-    }
-}
-
-// MARK: - Controlling search bar placement
-
-/// On iOS 27, `.automatic` + `.minimize` adds a duplicate nav-bar icon.
-/// While `.toolbar` + no `.minimize` suppresses it and gives the same single compact bottom button as iOS 26.
-private var searchPlacement: SearchFieldPlacement {
-    if #available(iOS 27, *) {
-        return .toolbar
-    } else {
-        return .automatic
-    }
-}
-
-private extension View {
-    /// Applies `.searchToolbarBehavior(.minimize)` on iOS 26 only.
-    /// On iOS 27+, `.minimize` adds a duplicate nav-bar icon in addition to the compact bottom button;
-    /// using `.toolbar` placement without `.minimize` reproduces the iOS 26 single-button behavior instead.
-    @ViewBuilder
-    func searchToolbarBehaviorIfAvailable() -> some View {
-        if #available(iOS 27, *) {
-            self // Swift UI bug (FB23003932): .minimize displays 2 search icons
-        } else if #available(iOS 26, *) {
-            self.searchToolbarBehavior(.minimize)
-        } else {
-            self
-        }
     }
 }
 
