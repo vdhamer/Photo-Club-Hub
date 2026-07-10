@@ -61,22 +61,24 @@ struct FilteredMemberPortfoliosView: View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
         ForEach(sectionedPortfoliosResults) { section in
             let filteredPortfolios = filterMemberPortfolios(unFilteredPortfolios: section)
-            Section {
-                ForEach(filteredPortfolios, id: \.id) { filteredMember in
-                    MemberPortfolioRow(member: filteredMember,
-                                       selectedPortfolio: selectedPortfolio)
-                        .listRowSeparator(.visible)
+            if !filteredPortfolios.isEmpty { // suppress section if Search filter leaves it without any members
+                Section {
+                    ForEach(filteredPortfolios, id: \.id) { filteredMember in
+                        MemberPortfolioRow(member: filteredMember,
+                                           selectedPortfolio: selectedPortfolio)
+                            .listRowSeparator(.visible)
+                    }
+                    .tint(.memberPortfolioColor)
+                } header: {
+                    MemberListSectionHeader(title: section.id) // String used to group the elements into Sections
+                } footer: {
+                    MemberListSectionFooter(filtCount: filteredPortfolios.count,
+                                            unfiltCount: section.endIndex,
+                                            organization: section.first?.organization
+                    )
                 }
-                .tint(.memberPortfolioColor)
-            } header: {
-                MemberListSectionHeader(title: section.id) // String used to group the elements into Sections
-            } footer: {
-                MemberListSectionFooter(filtCount: filteredPortfolios.count,
-                                        unfiltCount: section.endIndex,
-                                        organization: section.first?.organization
-                )
+                .listRowSeparator(.hidden) // prevents a separator below the footer.
             }
-            .listRowSeparator(.hidden) // prevents a separator below the footer.
         }
         if sectionedPortfoliosResults.nsPredicate == Self.predicateNone {
             Text("""
@@ -85,13 +87,13 @@ struct FilteredMemberPortfoliosView: View {
                  """,
                  tableName: "PhotoClubHub.SwiftUI",
                  comment: "Hint to the user if all of the Preference toggles are disabled.")
-        } else if searchText.wrappedValue != "" && sectionedPortfoliosResults.isEmpty {
+        } else if searchText.wrappedValue != "" && allSectionsFilterToZero(sectionedPortfoliosResults) {
             Text("""
                  To see names here, please adapt the Search filter \
                  or enable additional categories on the Preferences page.
                  """,
                  tableName: "PhotoClubHub.SwiftUI",
-                 comment: "Hint to the user if the database returns zero Members with Search filter in use.")
+                 comment: "Hint to the user if zero Members remain visible with Search filter in use.")
         } else if searchText.wrappedValue == "" && sectionedPortfoliosResults.isEmpty {
             Text("""
                  To see names here, please enable additional categories on the Preferences page.
@@ -116,6 +118,13 @@ struct FilteredMemberPortfoliosView: View {
             previousMemberPortfolio = member
         }
         return nil
+    }
+
+    /// Returns `true` if nothing remains to display: every fetched section (possibly none at all)
+    /// filters down to zero members. Used to decide whether to show the "adapt the Search filter" hint,
+    /// because with empty sections suppressed the user would otherwise see a blank list without explanation.
+    private func allSectionsFilterToZero(_ sections: SectionedFetchResults<String, MemberPortfolio>) -> Bool {
+        sections.allSatisfy { filterMemberPortfolios(unFilteredPortfolios: $0).isEmpty }
     }
 
     /// Filters one section's portfolios by `searchText` (name or expertise), converting the opaque
