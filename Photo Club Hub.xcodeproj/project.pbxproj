@@ -704,6 +704,7 @@
 			children = (
 				D03DE5CC2C28439800130680 /* App */,
 				D0831A18277F72110049AB84 /* View */,
+				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
 				D0831A23277F72340049AB84 /* ViewModel */,
 				D0831A3B277F727E0049AB84 /* Model */,
 				D0831A48277F736C0049AB84 /* Documentation */,
@@ -717,19 +718,17 @@
 		D0831A18277F72110049AB84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37EBBCBF2FFA997900C95FDA /* RootView */,
 				3762771C2FF9560B0047E77C /* MainTabView */,
 				37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */,
-				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
-				D081655C278612470078AB16 /* MemberPortfoliosView */,
-				D0AE1B7327889D6700E0100E /* MapView */,
-				D05E451B27EF286B00D31327 /* SettingsView */,
 				D0E2235227DE9139002A8600 /* PreludeView */,
+				D0AE1B762788A14500E0100E /* PhotographersView */,
+				D081655C278612470078AB16 /* MemberPortfoliosView */,
+				D0AE1B7327889D6700E0100E /* MapsView */,
+				D05E451B27EF286B00D31327 /* SettingsView */,
 				D05E451C27EF297100D31327 /* ReadmeView */,
-				37EBBCBF2FFA997900C95FDA /* RootView */,
-				D08DC6042AE57222008DBD68 /* SinglePortfolioLinkView */,
 				D081655D278616710078AB16 /* SinglePortFolioView */,
 				D0FCF2E429B558B500F31442 /* VoteOnRoadmapView */,
-				D0AE1B762788A14500E0100E /* PhotographersView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -834,13 +833,6 @@
 			path = ListReaders;
 			sourceTree = "<group>";
 		};
-		D08DC6042AE57222008DBD68 /* SinglePortfolioLinkView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SinglePortfolioLinkView;
-			sourceTree = "<group>";
-		};
 		D0A958632D596C3300658373 /* Website_Status_PPT */ = {
 			isa = PBXGroup;
 			children = (
@@ -850,7 +842,7 @@
 			path = Website_Status_PPT;
 			sourceTree = "<group>";
 		};
-		D0AE1B7327889D6700E0100E /* MapView */ = {
+		D0AE1B7327889D6700E0100E /* MapsView */ = {
 			isa = PBXGroup;
 			children = (
 				37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */,
@@ -862,7 +854,7 @@
 				37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */,
 				37A2A0E52FAAA53400EF39A1 /* MapsViewRemark.swift */,
 			);
-			path = MapView;
+			path = MapsView;
 			sourceTree = "<group>";
 		};
 		D0AE1B762788A14500E0100E /* PhotographersView */ = {
