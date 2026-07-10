@@ -18,7 +18,7 @@ struct MainTabView1717: View {
             case .people:   .photographerColor
             case .clubs:    .memberPortfolioColor
             case .maps:     .mapsColor
-            case .settings: Color(.systemBlue) // the default iOS tab-selection blue
+            case .settings: .settingsColor // sepia; distinct from other tabs, gray toggles, and selection blue
             }
         }
     }

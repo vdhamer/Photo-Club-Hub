@@ -21,6 +21,10 @@ extension ShapeStyle where Self == Color {
         Color("_OrganizationColor") // from asset catalog
     }
 
+    static var settingsColor: Color {
+        Color("_SettingsColor") // from asset catalog (sepia brown; lighter tan in dark mode)
+    }
+
     static var deceasedColor: Color {
         Color("_DeceasedColor") // from asset catalog
     }

@@ -18,7 +18,7 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
             case .people:   .photographerColor
             case .clubs:    .memberPortfolioColor
             case .maps:     .mapsColor
-            case .settings: .gray // distinct from people (green), clubs (orange), maps (purple), and blue (system)
+            case .settings: .settingsColor // sepia; distinct from other tabs, gray toggles, and selection blue
             }
         }
     }
