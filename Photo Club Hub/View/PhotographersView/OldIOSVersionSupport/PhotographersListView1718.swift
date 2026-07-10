@@ -165,13 +165,20 @@ struct PhotographersListView1718: View {
 
 // MARK: - Previews
 
-// Believe it or not, the following Previews actually works. But Canvas needs to target iOS 17 or 18.
-@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2627' for versions above iOS 18.x")
-#Preview {
-    @Previewable @State var searchText = "D' Eau1" // carefull with the space in the name
-    NavigationView {
-        PhotographersListView1718(searchText: $searchText)
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-            .navigationTitle("PhotographersListView1718")
+// Believe it or not, the following Preview actually works. But Canvas needs to target iOS 17 or 18.
+
+@available(iOS, obsoleted: 19.0, message: "Please use 'PhotographersListView2627' for versions above iOS 18.x")
+private struct PhotographersListView1718Preview: View {
+    @State var searchText = "D' Eau1" // carefull with the space in the name
+    var body: some View {
+        NavigationView {
+            PhotographersListView1718(searchText: $searchText)
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+                .navigationTitle("PhotographersListView1718")
+        }
     }
+}
+
+#Preview {
+    PhotographersListView1718Preview()
 }
