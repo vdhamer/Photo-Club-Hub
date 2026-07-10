@@ -401,7 +401,7 @@
       }
     },
     "Clubs" : {
-      "comment" : "In Preferences, above toggles like \"Show former members\"\nTab bar label for the club member portfolios list\nTitle of page showing member portfolios\nTitle of page with maps for Clubs",
+      "comment" : "Tab bar label for the club member portfolios list\nTitle of page showing member portfolios\nTitle of page with maps for Clubs",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -413,6 +413,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clubs"
+          }
+        }
+      }
+    },
+    "Clubs screen" : {
+      "comment" : "In Preferences, above toggles like \"Show former members\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs screen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs scherm"
           }
         }
       }
@@ -691,7 +708,7 @@
       }
     },
     "Maps" : {
-      "comment" : "In Settings, section title above map-related toggles\nTab bar label for the maps showing organizations",
+      "comment" : "Tab bar label for the maps showing organizations",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -703,6 +720,23 @@
           "stringUnit" : {
             "state" : "machine_translated",
             "value" : "Kaarten"
+          }
+        }
+      }
+    },
+    "Maps screen" : {
+      "comment" : "In Settings, section title above map-related toggles",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maps screen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaarten scherm"
           }
         }
       }
@@ -941,7 +975,7 @@
       }
     },
     "People" : {
-      "comment" : "In Preferences, section title\nTab bar label for the list of people (photographers)\nTitle of page with list of photographers",
+      "comment" : "Tab bar label for the list of people (photographers)\nTitle of page with list of photographers",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -953,6 +987,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Personen"
+          }
+        }
+      }
+    },
+    "People screen" : {
+      "comment" : "In Preferences, section title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "People screen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personen scherm"
           }
         }
       }
@@ -1070,7 +1121,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Het ⓘ knopje geeft een overzicht van deze app. Je kunt het venster groter maken door aan het bovenbalkje te trekken."
           }
         }
@@ -1110,53 +1161,53 @@
         }
       }
     },
-    "Search names and towns" : {
+    "Search prompt clubs" : {
+      "comment" : "Field at top of Clubs page that allows the user to filter the members based on a person's FullName or Expertise.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Person’s name or expertise"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persoonsnaam of expertise"
+          }
+        }
+      }
+    },
+    "Search prompt maps" : {
       "comment" : "Field on the Organizations page that allows the user to filter the members based on a fragment of the organization name or town.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search names and towns"
+            "value" : "Club name or town"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zoek op naam of gemeente"
+            "value" : "Clubnaam of gemeente"
           }
         }
       }
     },
-    "Search_names_m" : {
-      "comment" : "Field at top of MemberPortfolios page that allows the user to filter the members based on either given- and family name.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search on name or expertise"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zoek op naam of expertise"
-          }
-        }
-      }
-    },
-    "Search_names_p" : {
+    "Search prompt people" : {
       "comment" : "Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search names"
+            "value" : "Person’s name"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zoek op naam"
+            "value" : "Persoonsnaam"
           }
         }
       }

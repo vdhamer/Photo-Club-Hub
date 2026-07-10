@@ -223,13 +223,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entering part of a person’s name in the Search bar (on the _Clubs_ and _People_ screens) will find people with that name. The _Maps_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
+            "value" : "Entering part of a person’s name in the Search bar (on the _Clubs_ and _People_ screens) will find people with that name. The _Clubs_ screen also allows to search on Expertise. The _Maps_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "In het _Clubs_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied zoeken. In het _Kaarten_ scherm kan men op de clubnaam of op gemeente zoeken."
+            "state" : "needs_review",
+            "value" : "In het _Clubs_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied zoeken. In het _Personen_ scherm kan men op naam van de fotograaf zoeken. In het _Kaarten_ scherm kan men op de clubnaam of op gemeente zoeken."
           }
         }
       }
@@ -1293,23 +1293,6 @@
         }
       }
     },
-    "The Settings screen." : {
-      "comment" : "Caption of an image on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The Settings screen."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Het Instellingen scherm in de app."
-          }
-        }
-      }
-    },
     "The search bar is at the top of the screen (for iOS versions up to 18)." : {
       "comment" : "Figure caption about Search Bar on the Readme page",
       "localizations" : {
@@ -1323,6 +1306,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De zoekfunctie zit bij een iPhone met iOS 17 of 18 bovenaan het scherm."
+          }
+        }
+      }
+    },
+    "The Settings screen." : {
+      "comment" : "Caption of an image on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Settings screen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het Instellingen scherm in de app."
           }
         }
       }
