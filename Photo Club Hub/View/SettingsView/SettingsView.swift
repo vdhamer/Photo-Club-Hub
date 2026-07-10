@@ -29,9 +29,9 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
+                SettingsViewPhotographersSection(localSettings: $localSettings)
                 SettingsViewMembersSection(localSettings: $localSettings)
                 SettingsViewMapsSection(localSettings: $localSettings)
-                SettingsViewPhotographersSection(localSettings: $localSettings)
                 SettingsViewAdvancedSection(localSettings: $localSettings)
             }
             .navigationTitle(title)
@@ -98,6 +98,7 @@ struct SettingsView: View {
 // MARK: - Previews
 
 // Believe it or not, the following Preview actually works.
+
 private struct SettingsViewPreviewHost: View {
     @StateObject var model = SettingsViewModel()
 

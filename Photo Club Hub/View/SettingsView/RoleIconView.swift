@@ -80,6 +80,7 @@ struct RoleStatusIconView: View {
 // MARK: - Previews
 
 // Believe it or not, this preview actually works.
+
 struct RoleStatusIconView_Previews: PreviewProvider {
     static let layout: [GridItem] = [GridItem(.adaptive(minimum: 200, maximum: .infinity))]
 
