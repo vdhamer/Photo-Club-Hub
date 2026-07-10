@@ -16,7 +16,7 @@ Work on 2.9.5 hasn't started yet.
 USER-FACING
 
 * Top-level navigation between screens now uses Tabs (was: Buttons). 
-- Tabs have new names and icons:  Photographers > Persons, Members > Clubs, Organizations > Maps, Preferences > Settings.
+- Tabs have new names and icons:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
 - Detailed behavior of the Search bar has changed. Search text is now shared across screens.
 - Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
 - First use of TipKit for onboarding new users.
@@ -1723,7 +1723,7 @@ This is build #3974 in Apple's App Store.
 * new Search feature to search the lists of names
 * the web addresses of club-external websites are now displayed (when the info is available)
 * minor user interface improvements: Preferences page size, lilac theme color for Photo Clubs
-* added club-internal websites for two persons as demo within the Easter egg
+* added club-internal websites for two people as demo within the Easter egg
 * internal improvements: SwiftUI previews, full set of localization comments, colors stored in Assets
 * internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
 
