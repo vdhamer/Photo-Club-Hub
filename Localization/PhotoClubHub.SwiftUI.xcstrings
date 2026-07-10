@@ -1521,7 +1521,7 @@
       }
     },
     "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." : {
-      "comment" : "Hint to the user if the database returns zero Members with Search filter in use.",
+      "comment" : "Hint to the user if zero Members remain visible with Search filter in use.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1532,7 +1532,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deze lijst is leeg doordat de Zoek filter niets vindt in de gekozen ledencategorieën. Pas dus de Zoek filter aan of voeg categorieën toe (bij Instellingen)."
+            "value" : "Deze lijst is leeg doordat de Zoekfilter niets vindt binnen de gekozen ledencategorieën. Pas dus de Zoekfilter aan of voeg bij Instellingen ledencategorieën toe."
           }
         }
       }
