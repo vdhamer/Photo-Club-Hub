@@ -197,7 +197,7 @@ extension Organization {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
         // first choice: accomodate user's language preferences according to Apple's Locale API
         for lang in Locale.preferredLanguages {
-            let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
+            let langID = lang.split(separator: "-").first?.lowercased() ?? "en"
             // now check if one of the user's preferences is available for this Remark
             for localRemark in localizedRemarks where localRemark.language.isoCode == langID {
                 if localRemark.localizedString != nil {
@@ -207,7 +207,7 @@ extension Organization {
         }
 
         // second choice: most people speak English, at least let's pretend that is the case ;-)
-        for localizedRemark in localizedRemarks where localizedRemark.language.isoCode == "EN" {
+        for localizedRemark in localizedRemarks where localizedRemark.language.isoCode == "en" {
             if localizedRemark.localizedString != nil {
                 return localizedRemark.localizedString!
             }

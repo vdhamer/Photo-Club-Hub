@@ -155,7 +155,7 @@ extension Organization {
             modified = true }
 
         for localizedRemark in optionalFields.localizedRemarks { // load JSON localizedRemarks for provided languages
-            let isoCode: String? = localizedRemark["language"].stringValue.uppercased() // e.g. "NL", "DE" or "PDC"
+            let isoCode: String? = localizedRemark["language"].stringValue.lowercased() // e.g. "nl", "de" or "pdc"
             let localizedRemarkNewValue: String? = localizedRemark["value"].stringValue
 
             if isoCode != nil && localizedRemarkNewValue != nil { // nil could occur if JSON file isn't schema compliant

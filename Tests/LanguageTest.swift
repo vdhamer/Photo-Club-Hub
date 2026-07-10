@@ -34,7 +34,7 @@ import CoreData // for NSManagedObjectContext
         #expect(Language.count(context: viewContext, isoCode: isoCode) == 1) // exactly one record for this code
     }
 
-    // The documented contract is that ISO codes are matched case-insensitively ("en" → "EN").
+    // The documented contract is that ISO codes are matched case-insensitively.
     @Test("ISO code is matched case-insensitively") func languageIDMatchedCaseInsensitively() {
         let isoCode = "qx" + String.random(length: 6) // "qx" guarantees lower/upper actually differ
 
@@ -42,7 +42,7 @@ import CoreData // for NSManagedObjectContext
         let upper = Language.findCreateUpdate(context: viewContext, isoCode: isoCode.uppercased())
 
         #expect(lower === upper) // both resolve to the same object
-        #expect(lower.isoCode == isoCode.uppercased()) // stored code is normalised to uppercase
+        #expect(lower.isoCode == isoCode.lowercased()) // stored code is normalised to lowercase
         #expect(Language.count(context: viewContext, isoCode: isoCode) == 1) // still only one record
     }
 
