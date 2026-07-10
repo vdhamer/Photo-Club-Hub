@@ -24,7 +24,7 @@ struct MainTabView1717: View {
     }
 
     @StateObject private var settingsModel = SettingsViewModel.shared
-    @State private var photographersSearchText = ""
+    @State private var personSearchText = ""
     @State private var selectedTab: TabID = .clubs
 
     // Updates selectedTab with animations disabled, so the tab bar tint
@@ -43,7 +43,7 @@ struct MainTabView1717: View {
     var body: some View {
         TabView(selection: selectedTabBinding) {
             NavigationStack {
-                PhotographersListView1718(searchText: $photographersSearchText)
+                PhotographersListView1718(searchText: $personSearchText)
             }
             .tag(TabID.people)
             .tabItem {

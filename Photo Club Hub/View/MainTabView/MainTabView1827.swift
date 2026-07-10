@@ -18,13 +18,13 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
             case .people:   .photographerColor
             case .clubs:    .memberPortfolioColor
             case .maps:     .mapsColor
-            case .settings: Color(.systemBlue) // the default iOS tab-selection blue
+            case .settings: .gray // distinct from people (green), clubs (orange), maps (purple), and blue (system)
             }
         }
     }
 
     @StateObject private var settingsModel = SettingsViewModel.shared
-    @State private var photographersSearchText = ""
+    @State private var peopleSearchText = ""
     @State private var selectedTab: TabID = .clubs // which tab is selected when the app is launched
 
     // Updates selectedTab with animations disabled, so the tab bar tint
@@ -49,9 +49,9 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                 value: .people) {
                 NavigationStack {
                     if #available(iOS 26, *) {
-                        PhotographersListView2627(searchText: $photographersSearchText)
+                        PhotographersListView2627(searchText: $personSearchText)
                     } else {
-                        PhotographersListView1718(searchText: $photographersSearchText)
+                        PhotographersListView1718(searchText: $personSearchText)
                     }
                 }
             }
