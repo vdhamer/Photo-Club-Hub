@@ -16,12 +16,12 @@ extension Language {
 
     private static var code2Name: [String: String] {
         [
-            "DE": "German",
-            "EN": "English",
-            "ES": "Spanish",
-            "FR": "French",
-            "NL": "Dutch",
-            "PL": "Polish"
+            "de": "German",
+            "en": "English",
+            "es": "Spanish",
+            "fr": "French",
+            "nl": "Dutch",
+            "pl": "Polish"
         ]
     }
 
@@ -30,7 +30,7 @@ extension Language {
         for language in code2Name {
             _ = Language.findCreateUpdate(
                 context: context, // requires @MainActor
-                isoCode: language.key, // converted to all caps within findCreateUpdate
+                isoCode: language.key, // converted to lowercase within findCreateUpdate
                 nameENOptional: language.value // e.g. "English"
             )
         }
@@ -48,13 +48,13 @@ extension Language {
 
     var isoCode: String {
         get {
-            let result = isoCode_?.uppercased() ?? "??"
+            let result = isoCode_?.lowercased() ?? "??"
             if result != isoCode_ {
-                isoCode_ = result // update version in CoreData
+                isoCode_ = result // migrate any old uppercase records
             }
             return result
         } set {
-            isoCode_ = newValue.uppercased()
+            isoCode_ = newValue.lowercased()
         }
     }
 
@@ -81,8 +81,8 @@ extension Language {
                                           isoCode: String,
                                           nameENOptional: String? = nil
                                          ) -> Language {
-        let isoCode = isoCode.uppercased() // "en" → "EN" in case we don't receive uppercase input
-        let predicateFormat: String = "isoCode_ = %@" // avoid localization
+        let isoCode = isoCode.lowercased() // "EN" → "en" in case we receive uppercase input
+        let predicateFormat: String = "isoCode_ =[c] %@" // case-insensitive for migration; avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
         fetchRequest.predicate = predicate
@@ -171,16 +171,16 @@ extension Language {
 
         let languageCount: Int = context.performAndWait {
 
-            let isoCodeAllCaps = isoCode.uppercased()
+            let isoCodeLower = isoCode.lowercased()
             let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
-            let predicateFormat: String = "isoCode_ = %@" // avoid localization
-            let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
+            let predicateFormat: String = "isoCode_ =[c] %@" // case-insensitive for migration; avoid localization
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeLower])
             fetchRequest.predicate = predicate
 
             do {
                 return try context.fetch(fetchRequest).count
             } catch {
-                ifDebugFatalError("Failed to fetch Language \(isoCodeAllCaps): \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch Language \(isoCodeLower): \(error)", file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `languages` array
                 return 0
             }

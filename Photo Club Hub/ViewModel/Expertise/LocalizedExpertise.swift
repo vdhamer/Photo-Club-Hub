@@ -111,7 +111,7 @@ extension LocalizedExpertise {
             if localizedExpertise.update(context: context,
                                          localizedName: localizedName, localizedUsage: localizedUsage) {
                 print("""
-                      Updated translation of expertise \"\(expertise.id)\" into \
+                      Updated translation of expertise "\(expertise.id)" into \
                       \(language.isoCode) as \(localizedName ?? "nil")
                       """)
                 LocalizedExpertise.save(context: context, errorText:
@@ -133,7 +133,7 @@ extension LocalizedExpertise {
                                           localizedName: localizedName, localizedUsage: localizedUsage)
             LocalizedExpertise.save(context: context, errorText:
                                     """
-                                    Could not create LocalizedExpertise for \"\(localizedExpertise.expertise.id)\" \
+                                    Could not create LocalizedExpertise for "\(localizedExpertise.expertise.id)" \
                                     for language \(localizedExpertise.language.isoCode)
                                     """,
                                     if: Settings.extraCoreDataSaves)
@@ -227,7 +227,7 @@ extension LocalizedExpertise {
         context.performAndWait {
             let expertiseIDCanonical = expertiseID.canonicalCase
             let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
-            let predicateFormat: String = "expertise_.id_ = %@ && language_.isoCode_ = %@" // avoid localization
+            let predicateFormat: String = "expertise_.id_ = %@ && language_.isoCode_ =[c] %@" // avoid localization
             fetchRequest.predicate = NSPredicate(format: predicateFormat,
                                                  argumentArray: [expertiseIDCanonical, languageIsoCode])
             do {
@@ -257,7 +257,7 @@ extension LocalizedExpertise {
     private static func count(context: NSManagedObjectContext, languageIsoCode: String) -> Int {
         context.performAndWait {
             let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
-            let predicateFormat: String = "language_.isoCode_ = %@" // avoid localization
+            let predicateFormat: String = "language_.isoCode_ =[c] %@" // case-insensitive; avoid localization
             fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [languageIsoCode])
             do {
                 return try context.count(for: fetchRequest)

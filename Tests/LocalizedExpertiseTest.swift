@@ -62,7 +62,7 @@ import CoreData // for NSManagedObjectContext
                                                                       localizedUsage: localizedUsage)
         LocalizedExpertise.save(context: context) // probably not needed, but sloppy not to commit this change
 
-        #expect(localizedExpertise.language.isoCode == "EN")
+        #expect(localizedExpertise.language.isoCode == "en")
         #expect(localizedExpertise.language.nameEN == "English")
     }
 
@@ -107,6 +107,34 @@ import CoreData // for NSManagedObjectContext
         #expect(LocalizedExpertise.count(context: context,
                                          expertiseID: expertise.id,
                                          languageIsoCode: language.isoCode) == 1)
+    }
+
+    // Pins the case-handling contract of selectedLocalizedExpertise(isoCode:):
+    // lowercase "nl", uppercase "NL", and lowercase "en" must all resolve correctly.
+    @Test("selectedLocalizedExpertise resolves lowercase, uppercase, and English isoCode")
+    func selectedLocalizedExpertiseIsoCodeCaseHandling() {
+        let nlName = String.random(length: 10)
+        let enName = String.random(length: 10)
+
+        let expertise = Expertise.findCreateUpdateTemporary(context: context,
+                                                            id: String.random(length: 8),
+                                                            names: [], usages: [])
+        let langNL = Language.findCreateUpdate(context: context, isoCode: "nl")
+        let langEN = Language.findCreateUpdate(context: context, isoCode: "en")
+        _ = LocalizedExpertise.findCreateUpdate(context: context, expertise: expertise,
+                                                language: langNL, localizedName: nlName, localizedUsage: nil)
+        _ = LocalizedExpertise.findCreateUpdate(context: context, expertise: expertise,
+                                                language: langEN, localizedName: enName, localizedUsage: nil)
+        LocalizedExpertise.save(context: context)
+
+        let resultNlLower = expertise.selectedLocalizedExpertise(isoCode: "nl")
+        #expect(resultNlLower.name == nlName)
+
+        let resultNlUpper = expertise.selectedLocalizedExpertise(isoCode: "NL")
+        #expect(resultNlUpper.name == nlName)
+
+        let resultEn = expertise.selectedLocalizedExpertise(isoCode: "en")
+        #expect(resultEn.name == enName)
     }
 
 }
