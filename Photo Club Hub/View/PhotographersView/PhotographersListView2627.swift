@@ -26,6 +26,7 @@ struct PhotographersListView2627: View {
     /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy LazyVStack.
     @State private var selectedPortfolio: MemberPortfolio?
     var searchText: Binding<String>
+    @State private var isSearchPresented = false
     /// Single instance shared by all thumbnails and the portfolio destination to avoid repeated WKWebView allocation.
     /// Stored in @State so it survives re-initialization of this view struct.
     @State private var wkWebView = WKWebView()
@@ -141,16 +142,12 @@ struct PhotographersListView2627: View {
             ToolbarItem(placement: .topBarTrailing) {
                 ReadmeButton()
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { isSearchPresented = true } label: {
+                    Image(systemName: "magnifyingglass")
+                }
+            }
         }
-        .searchable(text: searchText, placement: searchPlacement,
-                    prompt: Text("Search_names_p",
-                                 tableName: "PhotoClubHub.SwiftUI",
-                                 comment: """
-                                          Field at top of Photographers page that allows the user to \
-                                          filter the photographers based on either given- and family name.
-                                          """)
-        )
-        .searchToolbarBehaviorIfAvailable()
         .disableAutocorrection(true)
     }
 
@@ -164,33 +161,6 @@ struct PhotographersListView2627: View {
         return isSupported ? Self.iconExamples.supported.icon : Self.iconExamples.temporary.icon
     }
 
-}
-
-// MARK: - Controlling search bar placement
-
-/// On iOS 27, `.automatic` + `.minimize` adds a duplicate nav-bar icon.
-/// While `.toolbar` + no `.minimize` suppresses it and gives the same single compact bottom button as iOS 26.
-private var searchPlacement: SearchFieldPlacement {
-    if #available(iOS 27, *) {
-        return .toolbar
-    } else {
-        return .automatic
-    }
-}
-
-@available(iOS 26.0, *)
-private extension View {
-    /// Applies `.searchToolbarBehavior(.minimize)` on iOS 26 only.
-    /// On iOS 27+, `.minimize` adds a duplicate nav-bar icon on top of the compact bottom button;
-    /// using `.toolbar` placement without `.minimize` reproduces the iOS 26 single-button behavior instead.
-    @ViewBuilder
-    func searchToolbarBehaviorIfAvailable() -> some View {
-        if #available(iOS 27, *) {
-            self
-        } else {
-            self.searchToolbarBehavior(.minimize)
-        }
-    }
 }
 
 // MARK: - Previews
