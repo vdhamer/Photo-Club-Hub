@@ -64,6 +64,7 @@ struct MemberPortfolioView: View {
                                          selectedPortfolio: $selectedPortfolio)
         }
         .listStyle(.plain)
+        .animation(.default, value: searchText) // sections fade in/out as the Search text changes
         .searchable(text: $searchText,
                     isPresented: $isSearchPresented,
                     placement: .navigationBarDrawer(displayMode: .automatic),

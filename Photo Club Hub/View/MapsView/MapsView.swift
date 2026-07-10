@@ -65,6 +65,7 @@ struct MapsView: View {
         } // ScrollView
 
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
+        .animation(.default, value: searchText) // maps fade in/out as the Search text changes
         .searchable(text: $searchText,
                     isPresented: $isSearchPresented,
                     placement: .navigationBarDrawer(displayMode: .automatic),
