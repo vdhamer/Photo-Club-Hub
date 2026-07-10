@@ -20,9 +20,6 @@ import TipKit   // for TipView
 struct MemberPortfolioView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    /// The text bound to the search field used to filter member portfolios.
-    @State private var searchText: String = ""
-
     /// The member whose portfolio is shown; setting it (from a row) triggers navigation via
     /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy `List` row.
     @State private var selectedPortfolio: MemberPortfolio?
@@ -110,20 +107,12 @@ struct MemberPortfolioView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 ReadmeButton()
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { isSearchPresented = true } label: {
+                    Image(systemName: "magnifyingglass")
+                }
+            }
         }
-        .searchable(text: $searchText, placement: searchPlacement,
-                    // .automatic
-                    // .toolbar - The search field is placed in the toolbar. To right of person.text.rect.cust
-                    // .sidebar - The search field is placed in the sidebar of a navigation view. Not on iPad
-                    // .navigationBarDrawer - The search field is placed in an drawer of the navigation bar. OK
-                    prompt: Text("Search_names_m",
-                                 tableName: "PhotoClubHub.SwiftUI",
-                                 comment: """
-                                          Field at top of MemberPortfolios page that allows the user to \
-                                          filter the members based on either given- and family name.
-                                          """
-                                ))
-        .searchToolbarBehaviorIfAvailable()
     }
 
     /// Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
@@ -136,34 +125,6 @@ struct MemberPortfolioView: View {
         PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
     }
 
-}
-
-// MARK: - Controlling search bar placement
-
-/// On iOS 27, `.automatic` + `.minimize` adds a duplicate nav-bar icon.
-/// While `.toolbar` + no `.minimize` suppresses it and gives the same single compact bottom button as iOS 26.
-private var searchPlacement: SearchFieldPlacement {
-    if #available(iOS 27, *) {
-        return .toolbar
-    } else {
-        return .automatic
-    }
-}
-
-private extension View {
-    /// Applies `.searchToolbarBehavior(.minimize)` on iOS 26 only.
-    /// On iOS 27+, `.minimize` adds a duplicate nav-bar icon in addition to the compact bottom button;
-    /// using `.toolbar` placement without `.minimize` reproduces the iOS 26 single-button behavior instead.
-    @ViewBuilder
-    func searchToolbarBehaviorIfAvailable() -> some View {
-        if #available(iOS 27, *) {
-            self // Swift UI bug (FB23003932): .minimize displays 2 search icons
-        } else if #available(iOS 26, *) {
-            self.searchToolbarBehavior(.minimize)
-        } else {
-            self
-        }
-    }
 }
 
 // MARK: - Previews
