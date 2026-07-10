@@ -108,6 +108,16 @@ struct PhotographersListView2627: View {
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
+        .searchable(text: searchText,
+                    isPresented: $isSearchPresented,
+                    placement: .navigationBarDrawer(displayMode: .automatic),
+                    prompt: String(localized: "Search prompt people",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   bundle: Bundle.main,
+                                   comment: """
+                                            Field at top of Photographers page that allows the user to filter the \
+                                            photographers based on either given- and family name.
+                                            """))
         .navigationDestination(item: $selectedPortfolio) { member in
             SinglePortfolioView(url: member.level3URL, webView: wkWebView)
                 .navigationTitle(member.photographer.fullNameFirstLast + " @ " +

@@ -10,12 +10,11 @@ import SwiftUI  // for View
 import WebKit   // for WKWebView
 import TipKit   // for TipView
 
-/// A list-based view that displays member portfolios with search and a Readme toolbar button.
+/// A list-based view that displays member portfolios with Readme and Search toolbar buttons.
 ///
 /// - Presents a `FilteredMemberPortfoliosView` inside a SwiftUI `List`.
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
 /// - Provides a toolbar button to open Readme documentation in a sheet.
-/// - Uses a search field to filter members by name or by expertise.
 ///
 /// Uses iOS 26 Liquid Glass APIs where available, falling back to standard styling on iOS 17/18.
 struct MemberPortfolioView: View {
@@ -36,6 +35,9 @@ struct MemberPortfolioView: View {
     @Environment(\.horizontalSizeClass) private var horSizeClass
 
     @ObservedObject private var settingsModel = SettingsViewModel.shared
+    /// The text bound to the search field used to filter the (section) list of members
+    @State private var searchText: String = ""
+    @State private var isSearchPresented = false
 
     var body: some View {
         List { // lists are automatically "Lazy"
@@ -65,6 +67,16 @@ struct MemberPortfolioView: View {
                                          selectedPortfolio: $selectedPortfolio)
         }
         .listStyle(.plain)
+        .searchable(text: $searchText,
+                    isPresented: $isSearchPresented,
+                    placement: .navigationBarDrawer(displayMode: .automatic),
+                    prompt: String(localized: "Search prompt clubs",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   bundle: Bundle.main,
+                                   comment: """
+                                            Field at top of Clubs page that allows the user to filter \
+                                            the members based on a person's FullName or Expertise.
+                                            """))
         .navigationDestination(item: $selectedPortfolio) { member in
             SinglePortfolioView(url: member.level3URL, webView: wkWebView)
                 .navigationTitle(member.photographer.fullNameFirstLast + " @ " +

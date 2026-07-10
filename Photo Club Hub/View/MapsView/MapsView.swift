@@ -67,7 +67,7 @@ struct MapsView: View {
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .searchable(text: $searchText,
                     isPresented: $isSearchPresented,
-                    placement: .navigationBarDrawer,
+                    placement: .navigationBarDrawer(displayMode: .automatic),
                     prompt: String(localized: "Search prompt maps",
                                    table: "PhotoClubHub.SwiftUI",
                                    bundle: Bundle.main,
