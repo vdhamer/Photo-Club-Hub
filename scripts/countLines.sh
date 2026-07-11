@@ -2,11 +2,13 @@
 #
 # countLines.sh — append today's Swift line-count metrics to LineCount.csv
 #
-# Produces one CSV row: date,files,code,comments,blanks,tests
+# Produces one CSV row: date,files,code,comments,blanks,tests,openIssues,closedIssues
 #   files/code/comments/blanks : from `cloc` over all Swift in the repo
 #                                (app sources + tests), matching the historical
 #                                LineCount.xlsx "SwiftUI version" columns.
 #   tests                      : number of Swift Testing @Test macros.
+#   openIssues/closedIssues    : GitHub issue counts (excluding PRs) via `gh`;
+#                                left empty if gh is unavailable or offline.
 #
 # The CSV (documentation/LineCount.csv) is the version-controlled source of
 # truth. LineCount.xlsx is only a viewer that loads this CSV via Power Query.
@@ -14,6 +16,7 @@
 # Usage:  ./scripts/countLines.sh
 #
 # Requires: cloc  (install with: brew install cloc)
+#           gh    (optional, for issue counts: brew install gh)
 #
 # Behaviour:
 #   - Today's row is always replaced by this fresh recount (idempotent), even if
@@ -34,6 +37,9 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 CSV="$REPO_ROOT/Photo Club Hub/Documentation/LineCount.csv"
 TESTS_DIR="$REPO_ROOT/Tests"                       # where @Test macros live
 EXCLUDE_DIRS=".build,DerivedData,Pods,.git"        # cloc --exclude-dir list
+GH="/opt/homebrew/bin/gh"                          # GitHub CLI (optional)
+GH_OWNER="vdhamer"
+GH_REPO="Photo-Club-Hub"
 
 # --- preconditions -----------------------------------------------------------
 if ! command -v cloc >/dev/null 2>&1; then
@@ -68,8 +74,30 @@ else
     tests=""
 fi
 
+# GitHub issue counts (issues only, no PRs). One GraphQL call returns both.
+# Non-fatal: on any failure (gh missing, offline, auth expired) both stay empty.
+openIssues=""
+closedIssues=""
+if [[ -x "$GH" ]]; then
+    read -r openIssues closedIssues < <(
+        "$GH" api graphql \
+            -f query="{ repository(owner:\"$GH_OWNER\", name:\"$GH_REPO\") {
+                open: issues(states:OPEN) { totalCount }
+                closed: issues(states:CLOSED) { totalCount } } }" \
+            --jq '"\(.data.repository.open.totalCount) \(.data.repository.closed.totalCount)"' \
+            2>/dev/null
+    ) || true
+    if [[ -z "$openIssues" || -z "$closedIssues" ]]; then
+        echo "warning: could not fetch GitHub issue counts; leaving columns empty" >&2
+        openIssues=""
+        closedIssues=""
+    fi
+else
+    echo "warning: gh not found at $GH; leaving issue columns empty" >&2
+fi
+
 DATE="$(date +%F)"                                  # YYYY-MM-DD
-NEW_ROW="$DATE,$files,$code,$comments,$blanks,$tests"
+NEW_ROW="$DATE,$files,$code,$comments,$blanks,$tests,$openIssues,$closedIssues"
 
 # --- write row (dedupe by date, keep sorted) ---------------------------------
 # Drop any pre-existing row for today so this fresh recount is authoritative,
@@ -78,6 +106,11 @@ NEW_ROW="$DATE,$files,$code,$comments,$blanks,$tests"
 # order-independent rule. Today's date is now unique, so it is unaffected by the
 # highest-code rule and always reflects this recount.
 HEADER="$(head -n 1 "$CSV")"
+# One-time header upgrade: add the issue-count columns. Older data rows keep
+# 6 fields; CSV readers (incl. Power Query) treat the missing cells as empty.
+if [[ "$HEADER" != *",openIssues,closedIssues" ]]; then
+    HEADER="$HEADER,openIssues,closedIssues"
+fi
 TMP="$(mktemp)"
 {
     printf '%s\n' "$HEADER"
