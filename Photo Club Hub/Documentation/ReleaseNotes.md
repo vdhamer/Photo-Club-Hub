@@ -1,4 +1,4 @@
-### 2.9.5 (GitHub commit ???????) ??-08-2026
+### 2.10.1 (GitHub commit ???????) ??-08-2026
 
 USER-FACING
 
@@ -6,21 +6,21 @@ USER-FACING
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
 
-This build is just a placeholder for the plans for 2.9.5.
-Work on 2.9.5 hasn't started yet.
+This build is just a placeholder for the plans for 2.10.1
+Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible changes.
 
 ---------------------------------------------------------------------------
 
-### 2.9.4 (GitHub commit ???????) ??-07-2026
+### 2.10.0 (GitHub commit ???????) ??-07-2026
 
 USER-FACING
 
 * Top-level navigation between screens now uses Tabs (was: Buttons). 
 - Tabs have new icons and new names:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
-- Detailed behavior of the Search bar has changed. Search text is now shared across screens.
-- Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
+- Detailed behavior of the Search bar has changed. Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
 - First use of TipKit for onboarding new users.
 - Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
+- People screen: when using Search, only relevant (non-empty) clubs are shown.
 
 README SCREEN
 
