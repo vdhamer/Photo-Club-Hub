@@ -852,13 +852,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "_Photo Club Hub_ generally requires the latest version of iOS. This allows us to keep the app technically up to date. The latest app version can thus run on devices released in the last 6 or 7 years."
+            "value" : "_Photo Club Hub_ requires at least iOS 17.5. In practical terms this means that iPhones and iPads from 2018 onwards can run the latest version of this app. As of iOS 26.0, the app adopts Apple’s new “Liquid Glass” design."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "_Fotoclub Hub_ vereist minimaal iOS 17. In de praktijk betekent dit dat iPhone en iPads vanaf 2018 ondersteund worden. Bij iOS versies vanaf 26.0 is de app aangepast aan de nieuwe “Liquid Glass” stijl van Apple."
+            "value" : "_Fotoclub Hub_ vereist minimaal iOS 17.5. In de praktijk betekent dit dat iPhone en iPads vanaf 2018 nog steeds ondersteund worden. Bij iOS versies vanaf 26.0 is de app aangepast aan de nieuwe “Liquid Glass” stijl van Apple."
           }
         }
       }
