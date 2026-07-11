@@ -227,6 +227,8 @@
 		376D14F92E6DE83A00A1403B /* DebugPanel2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2627.swift; sourceTree = "<group>"; };
 		376DC9512EC3A98900FB429B /* PreludeImageStore2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2627.swift; sourceTree = "<group>"; };
 		376DC9732EC3F33200FB429B /* Crosshairs1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs1718.swift; sourceTree = "<group>"; };
+		377D8036300294A000E04A04 /* LineCount.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = LineCount.csv; sourceTree = "<group>"; };
+		377D8037300294A000E04A04 /* LineCount_old.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount_old.xlsx; sourceTree = "<group>"; };
 		378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeTip.swift; sourceTree = "<group>"; };
 		37913A2E2F452C01009B5D8A /* TemplateMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMaxMembersProvider.swift; sourceTree = "<group>"; };
 		37913A2F2F452C01009B5D8A /* TemplateMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMinMembersProvider.swift; sourceTree = "<group>"; };
@@ -488,6 +490,14 @@
 				3762771D2FF9560B0047E77C /* MainTabView1717.swift */,
 			);
 			path = OldIOSVersionSupport;
+			sourceTree = "<group>";
+		};
+		377D8038300294CF00E04A04 /* Old stuff just for safety */ = {
+			isa = PBXGroup;
+			children = (
+				377D8037300294A000E04A04 /* LineCount_old.xlsx */,
+			);
+			path = "Old stuff just for safety";
 			sourceTree = "<group>";
 		};
 		378D4D4D2FFE571700A49F5A /* TipKit */ = {
@@ -788,6 +798,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				377D8038300294CF00E04A04 /* Old stuff just for safety */,
+				377D8036300294A000E04A04 /* LineCount.csv */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */,
 				37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */,
