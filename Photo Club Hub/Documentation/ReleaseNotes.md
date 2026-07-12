@@ -6,7 +6,7 @@ USER-FACING
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
 
-This build is just a placeholder for the plans for 2.10.1
+This build #4664 is a placeholder for the plans for 2.10.1
 Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible changes.
 
 ---------------------------------------------------------------------------
@@ -48,7 +48,7 @@ STRUCTURAL
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
 
-This build #4662 was made using Xcode 26.6 RC and is intended for the App Store.
+This build #4662 was made using Xcode 26.6 RC 3. Build #4663 is likely to go the App Store.
 Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
 
 ---------------------------------------------------------------------------
