@@ -718,7 +718,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "machine_translated",
+            "state" : "translated",
             "value" : "Kaarten"
           }
         }

@@ -223,13 +223,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entering part of a person’s name in the Search bar (on the _Clubs_ and _People_ screens) will find people with that name. The _Clubs_ screen also allows to search on Expertise. The _Maps_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
+            "value" : "Entering any part of a person’s name in the Search bar (on the _Clubs_ and _People_ screens) will find people with that name. The _Clubs_ screen also supports searching on Expertise. The _Maps_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "In het _Clubs_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied zoeken. In het _Personen_ scherm kan men op naam van de fotograaf zoeken. In het _Kaarten_ scherm kan men op de clubnaam of op gemeente zoeken."
+            "state" : "translated",
+            "value" : "In het _Clubs_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied zoeken. In het _Personen_ scherm kan men op naam van de fotograaf zoeken. In het _Kaarten_ scherm kan men zowel op de clubnaam als op gemeente zoeken."
           }
         }
       }
