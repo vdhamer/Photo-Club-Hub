@@ -11,7 +11,7 @@ Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible
 
 ---------------------------------------------------------------------------
 
-### 2.10.0 (GitHub commit ???????) ??-07-2026
+### 2.10.0 (GitHub commit 04488a0) 12-07-2026
 
 USER-FACING
 
