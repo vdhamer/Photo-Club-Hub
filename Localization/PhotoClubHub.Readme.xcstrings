@@ -14,7 +14,7 @@
       "shouldTranslate" : false
     },
     "§1.1" : {
-      "comment" : "The App section paragraph 1.1",
+      "comment" : "Preview sample from The App section\nThe App section paragraph 1.1",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -31,7 +31,7 @@
       }
     },
     "§1.2" : {
-      "comment" : "The App section paragraph 1.2",
+      "comment" : "Preview sample from The App section\nThe App section paragraph 1.2",
       "localizations" : {
         "en" : {
           "stringUnit" : {
