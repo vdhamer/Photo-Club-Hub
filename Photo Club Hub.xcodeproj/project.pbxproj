@@ -716,6 +716,7 @@
 			children = (
 				D03DE5CC2C28439800130680 /* App */,
 				D0831A18277F72110049AB84 /* View */,
+				37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */,
 				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
 				D0831A23277F72340049AB84 /* ViewModel */,
 				D0831A3B277F727E0049AB84 /* Model */,
@@ -732,7 +733,6 @@
 			children = (
 				37EBBCBF2FFA997900C95FDA /* RootView */,
 				3762771C2FF9560B0047E77C /* MainTabView */,
-				37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */,
 				D0E2235227DE9139002A8600 /* PreludeView */,
 				D0AE1B762788A14500E0100E /* PhotographersView */,
 				D081655C278612470078AB16 /* MemberPortfoliosView */,

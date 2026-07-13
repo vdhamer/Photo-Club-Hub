@@ -14,7 +14,7 @@
       "shouldTranslate" : false
     },
     "§1.1" : {
-      "comment" : "Preview sample from The App section\nThe App section paragraph 1.1",
+      "comment" : "The App section paragraph 1.1",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -31,7 +31,7 @@
       }
     },
     "§1.2" : {
-      "comment" : "Preview sample from The App section\nThe App section paragraph 1.2",
+      "comment" : "The App section paragraph 1.2",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1070,6 +1070,12 @@
     "Configuring Level 1 data for a Dutch photo club" : {
       "comment" : "Caption for image on Readme page",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuring Level 1 data for a Dutch photo club"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1132,6 +1138,12 @@
     "Highlighted clubs are part of the Fotobond" : {
       "comment" : "Caption about Fotobond clubs on Readme page",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlighted clubs are part of the Fotobond"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1208,23 +1220,6 @@
         }
       }
     },
-    "Search bar of _Clubs_ screen (for iOS 26 and up)" : {
-      "comment" : "Figure caption about Search Bar on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search bar of _Clubs_ screen for iOS/iPadOS versions supporting Liquid Glass."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De zoekfunctie zit bij een iPhone vanaf iOS 26 onderaan het scherm."
-          }
-        }
-      }
-    },
     "Supported (🏵) and temporary (🪲) expertise tags" : {
       "comment" : "Figure caption about Expertise on the Readme page",
       "localizations" : {
@@ -1259,6 +1254,23 @@
         }
       }
     },
+    "The _Clubs_ screen supports searching on name and expertise." : {
+      "comment" : "Figure caption about Search Bar on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The _Clubs_ screen supports searching on name and expertise."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je kunt op het Clubs scherm zowel op naam als expertise zoeken."
+          }
+        }
+      }
+    },
     "The App" : {
       "comment" : "Title of one section of Readme screen",
       "localizations" : {
@@ -1289,23 +1301,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Het Concept"
-          }
-        }
-      }
-    },
-    "The search bar is at the top of the screen (for iOS versions up to 18)." : {
-      "comment" : "Figure caption about Search Bar on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The search bar is at the top of the screen (for iOS versions up to 18)."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De zoekfunctie zit bij een iPhone met iOS 17 of 18 bovenaan het scherm."
           }
         }
       }

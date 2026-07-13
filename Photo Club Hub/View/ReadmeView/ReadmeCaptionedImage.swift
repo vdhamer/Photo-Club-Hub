@@ -11,11 +11,13 @@ struct ReadmeCaptionedImage: View {
     private let imageName: String
     private let imageSize: CGSize
     private let caption: LocalizedStringResource
+    private let topPadding: CGFloat
 
-    init(_ imageName: String, imageSize: CGSize, caption: LocalizedStringResource) {
+    init(_ imageName: String, imageSize: CGSize, caption: LocalizedStringResource, topPadding: CGFloat = 0) {
         self.imageName = imageName
         self.imageSize = imageSize
         self.caption = caption
+        self.topPadding = topPadding
     }
 
     var body: some View {
@@ -25,6 +27,7 @@ struct ReadmeCaptionedImage: View {
                 .scaledToFit()
                 .border(.gray, width: 1)
                 .frame(width: imageSize.width, height: imageSize.height, alignment: .center)
+                .padding(.top, topPadding)
             Text(caption)
                 .font(.callout.italic())
                 .frame(width: imageSize.width, alignment: .center)

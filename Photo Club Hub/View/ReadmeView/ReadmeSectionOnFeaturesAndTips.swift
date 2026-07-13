@@ -31,21 +31,24 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                           geo: geo, bottomPaddingAmount: 0)
 
             if iOS2627 {
-                ReadmeCaptionedImage("Search-bar-bottom",
-                                     imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
+                ReadmeCaptionedImage("Search-bar-26",
+                                     imageSize: CGSize(width: geo.size.width * 0.8, height: 350),
                                      caption: LocalizedStringResource(
-                                        "Search bar of _Clubs_ screen (for iOS 26 and up)",
+                                        "The _Clubs_ screen supports searching on name and expertise.",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Figure caption about Search Bar on the Readme page"
-                                     )
+                                     ),
+                                     topPadding: 6
                 )
             } else {
-                ReadmeCaptionedImage("Search-bar-top",
-                                     imageSize: CGSize(width: geo.size.width * 0.8, height: 260),
+                ReadmeCaptionedImage("Search-bar-18",
+                                     imageSize: CGSize(width: geo.size.width * 0.8, height: 350),
                                      caption: LocalizedStringResource(
-                                        "The search bar is at the top of the screen (for iOS versions up to 18).",
+                                        "The _Clubs_ screen supports searching on name and expertise.",
                                         table: "PhotoClubHub.Readme",
-                                        comment: "Figure caption about Search Bar on the Readme page")
+                                        comment: "Figure caption about Search Bar on the Readme page",
+                                     ),
+                                     topPadding: 6
                 )
             }
 
@@ -67,7 +70,8 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                                  caption: LocalizedStringResource("Supported (🏵) and temporary (🪲) expertise tags",
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment:
-                                                                   "Figure caption about Expertise on the Readme page"))
+                                                                   "Figure caption about Expertise on the Readme page"),
+                                 topPadding: 6)
 
             ReadmeSection(LocalizedStringResource("§3.02.c",
                                                   table: "PhotoClubHub.Readme",
@@ -243,7 +247,7 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                           geo: geo)
 
             ReadmeCaptionedImage("Play-button",
-                                 imageSize: CGSize(width: geo.size.width * 0.8, height: 300),
+                                 imageSize: CGSize(width: geo.size.width * 0.8, height: 200),
                                  caption: LocalizedStringResource("Buttons for the automatic slide show",
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment:
