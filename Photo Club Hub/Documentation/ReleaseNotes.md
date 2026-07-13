@@ -2,9 +2,9 @@
 
 USER-FACING
 
-* TODO: display expertises on Photographers screen
-* TODO: more search functionality on Photographers screen
-* TODO: more search functionality on Portfolio screen
+* TODO: display expertises on People screen
+* TODO: more search functionality on People screen
+* TODO: more search functionality on Clubs screen
 
 This build #4664 is a placeholder for the plans for 2.10.1
 Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible changes.
