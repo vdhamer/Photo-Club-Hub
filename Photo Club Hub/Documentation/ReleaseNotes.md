@@ -48,7 +48,7 @@ STRUCTURAL
 DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
 
-This build #4662 was made using Xcode 26.6 RC 3. Build #4663 is likely to go the App Store.
+This build #4662 was made using Xcode 26.6 RC 3. The next build is intended to go the App Store.
 Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
 
 ---------------------------------------------------------------------------
