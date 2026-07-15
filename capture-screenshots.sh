@@ -4,11 +4,8 @@
 # Photo Club Hub — documentation screenshot pipeline (GitHub issue #775, part of #774)
 #
 # Captures framed screenshots of the four tab screens (Maps / Clubs / People / Settings)
-# across the EN/NL x light/dark matrix. Navigation happens via the app's `-initialTab` /
-# `-skipPrelude` launch arguments (one launch per screen); the RocketSim CLI provides the
-# device-framed captures, and `xcrun simctl` a clean status bar and appearance.
-# NOTE: requires an app build that includes the launch-argument support from branch
-# 774-screenshot-pipeline (MainTabView1827.swift, RootView.swift) — use --build if unsure.
+# across the EN/NL x light/dark matrix, using the RocketSim CLI for tab navigation and
+# device-framed captures, plus `xcrun simctl` for a clean status bar and appearance.
 #
 # Output: PNGs named <Screen>_<lang>_<appearance>.png in the output folder (see OUT_DIR).
 #
@@ -54,14 +51,26 @@ UDID=""            # resolved below (or from --udid)
 LANGUAGES=(en nl)
 APPEARANCES=(light dark)
 
-# The four tab screens, in tab bar order (MainTabView1827.swift / issue #773).
-# Navigation does NOT tap the tab bar: RocketSim's element tree omits tab buttons when the
-# app runs in a non-English locale (https://github.com/AvdLee/RocketSimApp/issues/1083),
-# so the script relaunches the app
-# once per screen with the `-initialTab <Screen>` launch argument instead (canonical English
-# names, handled in MainTabView1827.swift). `-skipPrelude YES` suppresses the splash screen.
-# This is locale-independent and also more deterministic than tap choreography.
+# Tab labels per locale. Order matches MainTabView1827.swift and issue #773:
+#   maps, clubs, people, settings.
+# RocketSim taps by label text, so the NL run must use the Dutch labels from
+# Localization/PhotoClubHub.SwiftUI.xcstrings. Screen name (file prefix) stays English.
+# (Stock macOS bash is 3.2, which lacks associative arrays, so this is a small function
+#  mapping screen+locale -> the on-screen tab label.)
 TAB_SCREENS=(Maps Clubs People Settings)
+tab_label() {  # tab_label <Screen> <lang>
+    case "$1/$2" in
+        Maps/en)     echo "Maps" ;;
+        Maps/nl)     echo "Kaarten" ;;
+        Clubs/en)    echo "Clubs" ;;
+        Clubs/nl)    echo "Clubs" ;;
+        People/en)   echo "People" ;;
+        People/nl)   echo "Personen" ;;
+        Settings/en) echo "Settings" ;;
+        Settings/nl) echo "Instellingen" ;;
+        *) echo "ERROR: no label for $1/$2" >&2; return 1 ;;
+    esac
+}
 
 # Framing options for `rocketsim screenshot`.
 BEZEL="device"          # device frame style: none | simulator | device
@@ -69,7 +78,9 @@ BACKGROUND="#FFFFFF"    # background color behind the framed device
 DEVICE_SHADOW=1         # 1 = render a shadow behind the device frame
 
 # Simple placeholder waits (seconds). Replaced by content polling in #776.
-SLEEP_AFTER_LAUNCH=8    # app launch (Prelude skipped) + network content settling
+SLEEP_AFTER_LAUNCH=6    # app launch + Prelude appears
+SLEEP_AFTER_PRELUDE=3   # Prelude dismiss animation + first tab settles
+SLEEP_AFTER_TAB=3       # tab switch + content settle before capturing
 
 # Output directory (kept out of git — see the .gitignore note for Scripts/screenshots).
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -218,16 +229,25 @@ xcrun simctl privacy "${UDID}" grant location "${BUNDLE_ID}" 2>/dev/null || true
 SCREENSHOT_FLAGS=(--udid "${UDID}" --bezel "${BEZEL}" --background "${BACKGROUND}")
 [[ "${DEVICE_SHADOW}" -eq 1 ]] && SCREENSHOT_FLAGS+=(--device-shadow)
 
+# Dismiss the Prelude splash. The Prelude exits via a background tap (onFinished) or the
+# "Next" button. A center tap would trigger its zoom animation instead, so we tap the
+# "Next" button by its accessibility label, falling back to a near-corner background tap.
+dismiss_prelude() {
+    if ! "${RS}" interact tap --label "Next" --timeout 4 --udid "${UDID}" 2>/dev/null; then
+        echo "  (Prelude 'Next' not found — tapping background corner to dismiss)"
+        "${RS}" interact tap 30 90 --udid "${UDID}" 2>/dev/null || true
+    fi
+}
+
 # Best-effort dismissal of first-run interruptions that can sit over the tabs:
 #   - a leftover location permission alert (if the pre-grant above didn't take)
 #   - the built-in Readme sheet, which can auto-present on first run
 # Each tap is a no-op if the element isn't present. Thorough first-run/tip handling
 # (incl. TipKit) is ticket #776; this is only enough to unblock the four tab captures.
 dismiss_first_run_interruptions() {
-    # "element_not_found" is the normal case; suppress stdout too (the CLI prints errors as JSON there).
-    "${RS}" interact tap --label "Allow While Using App" --timeout 1 --udid "${UDID}" >/dev/null 2>&1 || true
-    "${RS}" interact tap --label "Sta toe tijdens gebruik" --timeout 1 --udid "${UDID}" >/dev/null 2>&1 || true
-    "${RS}" interact tap --label "Close" --type Button --timeout 1 --udid "${UDID}" >/dev/null 2>&1 || true
+    "${RS}" interact tap --label "Allow While Using App" --timeout 1 --udid "${UDID}" 2>/dev/null || true
+    "${RS}" interact tap --label "Sta toe tijdens gebruik" --timeout 1 --udid "${UDID}" 2>/dev/null || true
+    "${RS}" interact tap --label "Close" --type Button --timeout 1 --udid "${UDID}" 2>/dev/null || true
 }
 
 # Capture one framed screenshot to <Screen>_<lang>_<appearance>.png.
@@ -248,15 +268,22 @@ for lang in "${LANGUAGES[@]}"; do
         # Appearance is a device-level setting; apply before launch.
         xcrun simctl ui "${UDID}" appearance "${appearance}"
 
-        # One fresh launch per screen: locale, initial tab, and no Prelude via launch
-        # arguments (see the TAB_SCREENS comment above for why tabs are not tapped).
+        # Relaunch fresh each cell so the Prelude reappears and the locale takes effect.
+        xcrun simctl terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
+        xcrun simctl launch "${UDID}" "${BUNDLE_ID}" -AppleLanguages "(${lang})"
+        sleep "${SLEEP_AFTER_LAUNCH}"
+
+        dismiss_prelude
+        sleep "${SLEEP_AFTER_PRELUDE}"
+        dismiss_first_run_interruptions
+        sleep 1
+
         for screen in "${TAB_SCREENS[@]}"; do
-            echo "-- screen: ${screen}"
-            xcrun simctl terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
-            xcrun simctl launch "${UDID}" "${BUNDLE_ID}" \
-                -AppleLanguages "(${lang})" -initialTab "${screen}" -skipPrelude YES
-            sleep "${SLEEP_AFTER_LAUNCH}"
-            dismiss_first_run_interruptions
+            local_label="$(tab_label "${screen}" "${lang}")"
+            echo "-- tab: ${screen} (label='${local_label}')"
+            "${RS}" interact tap --label "${local_label}" --timeout 6 --udid "${UDID}" \
+                || echo "  WARNING: could not tap tab '${local_label}'"
+            sleep "${SLEEP_AFTER_TAB}"
             capture "${screen}" "${lang}" "${appearance}"
         done
     done

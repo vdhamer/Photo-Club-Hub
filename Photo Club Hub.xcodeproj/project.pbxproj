@@ -280,6 +280,8 @@
 		37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationTip.swift; sourceTree = "<group>"; };
 		37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewThumbnail.swift; sourceTree = "<group>"; };
 		37F36C1230078A2400BBDD60 /* App_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = App_EN_Light.jpg; sourceTree = "<group>"; };
+		37F36DB83007D34800BBDD60 /* capture-screenshots.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "capture-screenshots.sh"; sourceTree = "<group>"; };
+		37F36DB93007D34800BBDD60 /* countLines.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = countLines.sh; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -548,6 +550,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		37F36DBA3007D34800BBDD60 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
+				37F36DB93007D34800BBDD60 /* countLines.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		D029C4D02C54096200ABA977 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,6 +698,7 @@
 		D08319DA277F70A30049AB84 = {
 			isa = PBXGroup;
 			children = (
+				37F36DBA3007D34800BBDD60 /* scripts */,
 				D085D6EE2D6A411E0052AE5E /* Photo Club Hub.xctestplan */,
 				D08319E5277F70A30049AB84 /* Photo Club Hub */,
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,

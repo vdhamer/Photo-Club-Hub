@@ -21,11 +21,25 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
             case .settings: .settingsColor // sepia; distinct from other tabs, gray toggles, and selection blue
             }
         }
+
+        // Reads the `-initialTab <Maps|Clubs|People|Settings>` launch argument (canonical English
+        // names, case-insensitive). Used by the screenshot pipeline (#775/#776) to open the app
+        // directly on a given tab: RocketSim cannot tap localized tab bars (see #776), and a
+        // launch argument is deterministic across locales anyway. Returns nil in normal use.
+        static var launchArgument: TabID? {
+            switch UserDefaults.standard.string(forKey: "initialTab")?.lowercased() {
+            case "maps":     .maps
+            case "clubs":    .clubs
+            case "people":   .people
+            case "settings": .settings
+            default:         nil
+            }
+        }
     }
 
     @StateObject private var settingsModel = SettingsViewModel.shared
     @State private var personSearchText = ""
-    @State private var selectedTab: TabID = .clubs // which tab is selected when the app is launched
+    @State private var selectedTab: TabID = TabID.launchArgument ?? .clubs // tab shown when app is launched
 
     // Updates selectedTab with animations disabled so the tab bar's selected-icon tint
     // switches instantly instead of briefly crossfading from the previous tab's color.
