@@ -150,3 +150,6 @@ iOSInjectionProject/
 
 # Claude Code personal (per-project) settings
 .claude/settings.local.json
+
+# Generated documentation screenshots (Scripts/capture-screenshots.sh, issue #775)
+Scripts/screenshots/
