@@ -11,13 +11,13 @@ import SwiftUI
 struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior & PhotographersListView2627 need iOS 26
 
     private enum TabID { // identifies the 4 tabs, so app can choose which tab to show at startup
-        case people, clubs, maps, settings
+        case maps, clubs, people, settings // tab bar order matches how the Readme introduces the screens (#773)
 
         var tint: Color { // matches the accent color used on the corresponding screen
             switch self {
-            case .people:   .photographerColor
-            case .clubs:    .memberPortfolioColor
             case .maps:     .mapsColor
+            case .clubs:    .memberPortfolioColor
+            case .people:   .photographerColor
             case .settings: .settingsColor // sepia; distinct from other tabs, gray toggles, and selection blue
             }
         }
@@ -42,19 +42,15 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
 
     var body: some View {
         TabView(selection: selectedTabBinding) {
-            Tab(String(localized: "People",
+            Tab(String(localized: "Maps",
                        table: "PhotoClubHub.SwiftUI",
-                       comment: "Tab bar label for the list of people (photographers)"),
-                systemImage: "person.text.rectangle",
-                value: .people) {
+                       comment: "Tab bar label for the maps showing organizations"),
+                systemImage: "mappin.and.ellipse",
+                value: .maps) {
                 NavigationStack {
-                    if #available(iOS 26, *) {
-                        PhotographersListView2627(searchText: $personSearchText)
-                    } else {
-                        PhotographersListView1718(searchText: $personSearchText)
-                    }
+                    MapsView()
                 }
-                .tint(TabID.people.tint)
+                .tint(TabID.maps.tint)
             }
 
             Tab(String(localized: "Clubs",
@@ -68,15 +64,19 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
                 .tint(TabID.clubs.tint)
             }
 
-            Tab(String(localized: "Maps",
+            Tab(String(localized: "People",
                        table: "PhotoClubHub.SwiftUI",
-                       comment: "Tab bar label for the maps showing organizations"),
-                systemImage: "mappin.and.ellipse",
-                value: .maps) {
+                       comment: "Tab bar label for the list of people (photographers)"),
+                systemImage: "person.text.rectangle",
+                value: .people) {
                 NavigationStack {
-                    MapsView()
+                    if #available(iOS 26, *) {
+                        PhotographersListView2627(searchText: $personSearchText)
+                    } else {
+                        PhotographersListView1718(searchText: $personSearchText)
+                    }
                 }
-                .tint(TabID.maps.tint)
+                .tint(TabID.people.tint)
             }
 
             Tab(String(localized: "Settings",

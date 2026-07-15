@@ -11,6 +11,25 @@ Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible
 
 ---------------------------------------------------------------------------
 
+### 2.10.0 (GitHub commit ???????) ??-07-2026
+
+USER-FACING
+
+* Updated tab order
+
+README SCREEN
+
+* Updated screenshots used in built-in Readme
+
+DOCUMENTATION MAINTENANCE
+
+- Updated some of the diagrams in online/Github README
+
+This build #4663 was made using Xcode 26.6 and is intended to go the App Store.
+Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
+
+---------------------------------------------------------------------------
+
 ### 2.10.0 (GitHub commit 04488a0) 12-07-2026
 
 USER-FACING
@@ -46,6 +65,7 @@ STRUCTURAL
 - Switched from manual updating of the LineCount.xlsx spreadsheet to a scripted version, countLines.sh (with help from Claude).
 
 DOCUMENTATION MAINTENANCE
+
 - Updated data model in README.md
 
 This build #4662 was made using Xcode 26.6 RC 3. The next build is intended to go the App Store.

@@ -11,13 +11,13 @@ import SwiftUI
 struct MainTabView1717: View {
 
     private enum TabID { // identifies the 4 tabs, so app can choose which tab to show at startup
-        case people, clubs, maps, settings
+        case maps, clubs, people, settings // tab bar order matches how the Readme introduces the screens (#773)
 
         var tint: Color { // matches the accent color used on the corresponding screen
             switch self {
-            case .people:   .photographerColor
-            case .clubs:    .memberPortfolioColor
             case .maps:     .mapsColor
+            case .clubs:    .memberPortfolioColor
+            case .people:   .photographerColor
             case .settings: .settingsColor // sepia; distinct from other tabs, gray toggles, and selection blue
             }
         }
@@ -43,14 +43,14 @@ struct MainTabView1717: View {
     var body: some View {
         TabView(selection: selectedTabBinding) {
             NavigationStack {
-                PhotographersListView1718(searchText: $personSearchText)
+                MapsView()
             }
-            .tag(TabID.people)
+            .tag(TabID.maps)
             .tabItem {
-                Label(String(localized: "People",
+                Label(String(localized: "Maps",
                              table: "PhotoClubHub.SwiftUI",
-                             comment: "Tab bar label for the list of people (photographers)"),
-                      systemImage: "person.text.rectangle")
+                             comment: "Tab bar label for the maps showing organizations"),
+                      systemImage: "mappin.and.ellipse")
             }
 
             NavigationStack {
@@ -65,14 +65,14 @@ struct MainTabView1717: View {
             }
 
             NavigationStack {
-                MapsView()
+                PhotographersListView1718(searchText: $personSearchText)
             }
-            .tag(TabID.maps)
+            .tag(TabID.people)
             .tabItem {
-                Label(String(localized: "Maps",
+                Label(String(localized: "People",
                              table: "PhotoClubHub.SwiftUI",
-                             comment: "Tab bar label for the maps showing organizations"),
-                      systemImage: "mappin.and.ellipse")
+                             comment: "Tab bar label for the list of people (photographers)"),
+                      systemImage: "person.text.rectangle")
             }
 
             SettingsView(settings: $settingsModel.settings)
