@@ -35,9 +35,12 @@ public struct ReadmeSectionOnApp: View {
                            geo: geo
             )
 
-            ReadmeCaptionedImage("app_screenshots_EN",
-                                 imageSize: CGSize(width: geo.size.width * 0.9, height: UIDevice.isIPad ? 500 : 250),
-                                 caption: LocalizedStringResource("Clubs, their Members, and their Photos",
+            ReadmeCaptionedImage("app_screenshots",
+                                 // 0.61 is the image's height/width ratio, so on iPhone the image
+                                 // fills the available width in both portrait and landscape
+                                 imageSize: CGSize(width: geo.size.width,
+                                                   height: UIDevice.isIPad ? 500 : geo.size.width * 0.61),
+                                 caption: LocalizedStringResource("Rotate phone 90° to view larger",
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment: "Caption for image on Readme page"))
 

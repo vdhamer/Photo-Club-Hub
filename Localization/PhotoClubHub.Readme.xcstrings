@@ -1050,23 +1050,6 @@
         }
       }
     },
-    "Clubs, their Members, and their Photos" : {
-      "comment" : "Caption for image on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs, their Members, and their Photos"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs, Leden, en Foto’s"
-          }
-        }
-      }
-    },
     "Configuring Level 1 data for a Dutch photo club" : {
       "comment" : "Caption for image on Readme page",
       "localizations" : {
@@ -1216,6 +1199,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Over deze app"
+          }
+        }
+      }
+    },
+    "Rotate phone 90° to view larger" : {
+      "comment" : "Caption for image on Readme page",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " [Scherm  90° draaien geeft groter plaatje]"
           }
         }
       }
