@@ -2,7 +2,8 @@
 
 USER-FACING
 
-* TODO: display expertises on People screen
+* TODO: Ticket on automating screenshot capture & associated updates of both Readme files
+- TODO: display expertises on People screen
 * TODO: more search functionality on People screen
 * TODO: more search functionality on Clubs screen
 
