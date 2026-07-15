@@ -8,7 +8,7 @@
 [![Discussions][discussions-shield]][discussions-url]
 [![MIT License][license-shield]][license-url]
 
-![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
+![Screenshots of 3 screens](images/App_EN_light.jpg "Screenshots of app")
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
