@@ -502,7 +502,7 @@ Its main content is a list of supported expertises for photographers, plus trans
 
 ### Levels and Screens
 
-![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
+![Screenshots of 3 screens](images/App_EN_Light.jpg "Screenshots of app")
 
 When a club is at `Level 1`, it shows up as a marker on the maps (leftmost screenshot).
 This is because the app knows the club's name and the latitude/longitude where it is based.
