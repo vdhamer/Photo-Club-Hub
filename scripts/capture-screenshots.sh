@@ -15,7 +15,6 @@
 # ---------------------------------------------------------------------------
 # Scope (per #775):
 # ---------------------------------------------------------------------------
-#
 #   - The four TAB screens only. Non-tab screens (Portfolio detail, Readme sheet, Prelude
 #     capture) are ticket #777 and are NOT handled here.
 #   - Waits are simple `sleep`s. Content-readiness polling and TipKit tip suppression are
@@ -24,7 +23,6 @@
 # ---------------------------------------------------------------------------
 # Requirements:
 # ---------------------------------------------------------------------------
-#
 #   - RocketSim.app installed AND running (the CLI talks to the running app over IPC).
 #     The CLI binary ships inside the app bundle; this script locates it automatically.
 #   - Xcode command-line tools (`xcrun simctl`).
@@ -36,7 +34,6 @@
 # ---------------------------------------------------------------------------
 # Arguments:
 # ---------------------------------------------------------------------------
-#
 # App launch arguments (passed to `xcrun simctl launch`; `-key value` pairs become one-shot
 # UserDefaults overrides in the app — they are never persisted):
 #
@@ -62,7 +59,6 @@ set -euo pipefail
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-
 # App under test. Bundle id comes from the Xcode project's PRODUCT_BUNDLE_IDENTIFIER
 # (target "Photo Club Hub"): com.vdhamer.Fotogroep-Waalre
 BUNDLE_ID="com.vdhamer.Fotogroep-Waalre"
