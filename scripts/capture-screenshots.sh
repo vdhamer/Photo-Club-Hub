@@ -1,43 +1,66 @@
 #!/usr/bin/env bash
 #
 # capture-screenshots.sh
-# Photo Club Hub — documentation screenshot pipeline (GitHub issue #775, part of #774)
+# Photo Club Hub — documentation screenshot pipeline (GitHub issue #774 and subissues)
 #
 # Captures framed screenshots of the four tab screens (Maps / Clubs / People / Settings)
-# across the EN/NL x light/dark matrix. Navigation happens via the app's `-initialTab` /
-# `-skipPrelude` launch arguments (one launch per screen); the RocketSim CLI provides the
-# device-framed captures, and `xcrun simctl` a clean status bar and appearance.
-# NOTE: requires an app build that includes the launch-argument support from branch
-# 774-screenshot-pipeline (MainTabView1827.swift, RootView.swift) — use --build if unsure.
+# across the EN/NL x light/dark matrix.
+#
+# Navigation is done via the app's `-initialTab` / `-skipPrelude` launch arguments
+# (one launch per screen); the RocketSim CLI provides the device-framed captures,
+# and `xcrun simctl` a clean status bar and appearance.
 #
 # Output: PNGs named <Screen>_<lang>_<appearance>.png in the output folder (see OUT_DIR).
 #
+# ---------------------------------------------------------------------------
 # Scope (per #775):
+# ---------------------------------------------------------------------------
+#
 #   - The four TAB screens only. Non-tab screens (Portfolio detail, Readme sheet, Prelude
 #     capture) are ticket #777 and are NOT handled here.
 #   - Waits are simple `sleep`s. Content-readiness polling and TipKit tip suppression are
 #     ticket #776 and are deliberately NOT implemented here.
 #
+# ---------------------------------------------------------------------------
 # Requirements:
+# ---------------------------------------------------------------------------
+#
 #   - RocketSim.app installed AND running (the CLI talks to the running app over IPC).
 #     The CLI binary ships inside the app bundle; this script locates it automatically.
 #   - Xcode command-line tools (`xcrun simctl`).
 #   - The app already built & installed on the target simulator, OR pass --build to have
 #     this script build+install it for you.
 #   - Written for macOS's stock bash 3.2 (no associative arrays / namerefs / mapfile).
+#   - There is NO support for iOS 17 (some of the code resides in MainTabView1827).
+#
+# ---------------------------------------------------------------------------
+# Arguments:
+# ---------------------------------------------------------------------------
+#
+# App launch arguments (passed to `xcrun simctl launch`; `-key value` pairs become one-shot
+# UserDefaults overrides in the app — they are never persisted):
+#
+#   -AppleLanguages "(en)"|"(nl)"   iOS-defined: UI language for this launch
+#   -initialTab <Maps|Clubs|People|Settings>
+#                                   app-defined (MainTabView1827.swift): open directly on
+#                                   this tab, canonical English names in any locale
+#   -skipPrelude YES                app-defined (RootView.swift): start on the main tabs
+#                                   without the Prelude splash screen
+# Tip: the full list of keys the app responds to can be found with
+#   grep -rn 'UserDefaults.standard' --include='*.swift' 'Photo Club Hub' | grep forKey
 #
 # Usage:
-#   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--out <dir>] [--keep-booted]
 #
+#   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--out <dir>] [--keep-booted]
 #   --build         Build the app for the target simulator and (re)install it first.
 #   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
-#   --out <dir>     Override the output directory (default: <repo>/Scripts/screenshots).
+#   --out <dir>     Override the output directory (default: <repo>/scripts/screenshots).
 #   --keep-booted   Do not shut the simulator down when finished.
 #
 set -euo pipefail
 
 # ---------------------------------------------------------------------------
-# Configuration — clear, editable variables at the top.
+# Configuration
 # ---------------------------------------------------------------------------
 
 # App under test. Bundle id comes from the Xcode project's PRODUCT_BUNDLE_IDENTIFIER
