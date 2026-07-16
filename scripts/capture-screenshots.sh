@@ -4,7 +4,7 @@
 # Photo Club Hub — documentation screenshot pipeline (GitHub issue #774 and subissues)
 #
 # Captures framed screenshots of the four tab screens (Maps / Clubs / People / Settings)
-# across the EN/NL x light/dark matrix.
+# plus the pushed Portfolio screen (PortfolioViaClubs, #777) across the EN/NL x light/dark matrix.
 #
 # Navigation is done via the app's `-initialTab` / `-skipPrelude` launch arguments
 # (one launch per screen); the RocketSim CLI provides the device-framed captures,
@@ -15,8 +15,8 @@
 # ---------------------------------------------------------------------------
 # Scope (per #775):
 # ---------------------------------------------------------------------------
-#   - The four TAB screens only. Non-tab screens (Portfolio detail, Readme sheet, Prelude
-#     capture) are ticket #777 and are NOT handled here.
+#   - The four TAB screens (#775) plus the Portfolio detail screen (#777, see EXTRA_SCREENS).
+#     The remaining #777 screens (Readme sheet, Prelude capture) are NOT handled yet.
 #   - Waits are simple `sleep`s. Content-readiness polling and TipKit tip suppression are
 #     ticket #776 and are deliberately NOT implemented here.
 #
@@ -38,9 +38,11 @@
 # UserDefaults overrides in the app — they are never persisted):
 #
 #   -AppleLanguages "(en)"|"(nl)"   iOS-defined: UI language for this launch
-#   -initialTab <Maps|Clubs|People|Settings>
+#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs>
 #                                   app-defined (MainTabView1827.swift): open directly on
-#                                   this tab, canonical English names in any locale
+#                                   this tab, canonical English names in any locale.
+#                                   PortfolioViaClubs additionally pushes the app-hardcoded
+#                                   preset portfolio from the Clubs tab (#777)
 #   -skipPrelude YES                app-defined (RootView.swift): start on the main tabs
 #                                   without the Prelude splash screen
 # Tip: the full list of keys the app responds to can be found with
@@ -82,6 +84,13 @@ APPEARANCES=(light dark)
 # This is locale-independent and also more deterministic than tap choreography.
 TAB_SCREENS=(Maps Clubs People Settings)
 
+# Non-tab screens (#777). PortfolioViaClubs = Clubs tab + app-hardcoded push of the preset
+# member's portfolio (Fotogroep de Gender / Francien van Mil), with its gallery jumped to a
+# preset image when the site is a Juicebox-Pro gallery (handled app-side in MemberPortfolioView
+# and SinglePortfolioView; on a non-Juicebox site the jump is a no-op and the capture simply
+# shows that site's opening screen). Readme sheet and Prelude captures are still to be added.
+EXTRA_SCREENS=(PortfolioViaClubs)
+
 # Framing options for `rocketsim screenshot`.
 BEZEL="device"          # device frame style: none | simulator | device
 BACKGROUND="#FFFFFF"    # background color behind the framed device
@@ -90,6 +99,7 @@ JPEG_QUALITY=85         # JPEG quality 0–100 (RocketSim outputs PNG; sips conv
 
 # Simple placeholder waits (seconds). Replaced by content polling in #776.
 SLEEP_AFTER_LAUNCH=8    # app launch (Prelude skipped) + network content settling
+SLEEP_AFTER_LAUNCH_PORTFOLIO=16  # PortfolioViaClubs also loads the web gallery + jumps to its image
 
 # Output directory (kept out of git — see the .gitignore note for Scripts/screenshots).
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -299,12 +309,16 @@ for lang in "${LANGUAGES[@]}"; do
 
         # One fresh launch per screen: locale, initial tab, and no Prelude via launch
         # arguments (see the TAB_SCREENS comment above for why tabs are not tapped).
-        for screen in "${TAB_SCREENS[@]}"; do
+        for screen in "${TAB_SCREENS[@]}" "${EXTRA_SCREENS[@]}"; do
             echo "-- screen: ${screen}"
             "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
             "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
                 -AppleLanguages "(${lang})" -initialTab "${screen}" -skipPrelude YES
-            sleep "${SLEEP_AFTER_LAUNCH}"
+            if [[ "${screen}" == "PortfolioViaClubs" ]]; then
+                sleep "${SLEEP_AFTER_LAUNCH_PORTFOLIO}"
+            else
+                sleep "${SLEEP_AFTER_LAUNCH}"
+            fi
             dismiss_first_run_interruptions
             capture "${screen}" "${lang}" "${appearance}"
         done

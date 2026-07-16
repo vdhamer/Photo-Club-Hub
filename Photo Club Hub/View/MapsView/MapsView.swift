@@ -31,6 +31,25 @@ struct MapsView: View {
         animation: .default)
     private var organizations: FetchedResults<Organization>
 
+    @State private var didApplyPreset = false
+
+    // -initialTab Maps ⇒ open scrolled to this club for the screenshot pipeline (#776).
+    private var scrollPresetFullName: String? {
+        UserDefaults.standard.string(forKey: "initialTab")?.lowercased() == "maps"
+            ? "Fotogroep de Gender" : nil
+    }
+
+    @State private var scrollPositionID: OrganizationID?
+
+    private func applyScrollPresetIfReady() {
+        guard !didApplyPreset, let target = scrollPresetFullName,
+              let org = organizations.first(where: { $0.fullName == target }) else { return }
+        didApplyPreset = true
+        var transaction = Transaction()
+        transaction.disablesAnimations = true
+        withTransaction(transaction) { scrollPositionID = org.id }
+    }
+
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
 
@@ -73,8 +92,8 @@ struct MapsView: View {
                                    table: "PhotoClubHub.SwiftUI",
                                    bundle: Bundle.main,
                                    comment: """
-                                            Field on the Organizations page that allows the user to filter the members \
-                                            based on a fragment of the organization name or town.
+                                            Field on the Organizations page that allows the user to filter \
+                                            the members based on a fragment of the organization name or town.
                                             """))
         .refreshable { // for pull-to-refresh
             // Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
@@ -91,6 +110,9 @@ struct MapsView: View {
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes
         }
+        .scrollPosition(id: $scrollPositionID)
+        .onAppear { applyScrollPresetIfReady() }
+        .onChange(of: organizations.count) { _, _ in applyScrollPresetIfReady() }
         .navigationTitle(modelToHoldSettings.settings.organizationLabel())
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {

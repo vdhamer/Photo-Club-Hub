@@ -17,7 +17,7 @@ Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible
 USER-FACING
 
 * Updated tab order
-- Changed color for Settings tab
+- Changed color for Settings tab to bright blue
 
 README SCREEN
 

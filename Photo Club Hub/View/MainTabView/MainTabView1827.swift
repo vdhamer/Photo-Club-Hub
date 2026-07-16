@@ -22,17 +22,20 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
             }
         }
 
-        // Reads the `-initialTab <Maps|Clubs|People|Settings>` launch argument (canonical English
-        // names, case-insensitive). Used by the screenshot pipeline (#775/#776) to open the app
-        // directly on a given tab: RocketSim cannot tap localized tab bars (see #776), and a
-        // launch argument is deterministic across locales anyway. Returns nil in normal use.
+        // Reads the `-initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs>` launch argument
+        // (canonical English names, case-insensitive). Used by the screenshot pipeline (#775/#776/#777)
+        // to open the app directly on a given tab: RocketSim cannot tap localized tab bars (see #776),
+        // and a launch argument is deterministic across locales anyway. Returns nil in normal use.
+        // `PortfolioViaClubs` also opens the Clubs tab; MemberPortfolioView reacts to that value by
+        // pushing the preset member's portfolio (#777).
         static var launchArgument: TabID? {
             switch UserDefaults.standard.string(forKey: "initialTab")?.lowercased() {
-            case "maps":     .maps
-            case "clubs":    .clubs
-            case "people":   .people
-            case "settings": .settings
-            default:         nil
+            case "maps":              .maps
+            case "clubs":             .clubs
+            case "portfolioviaclubs": .clubs
+            case "people":            .people
+            case "settings":          .settings
+            default:                  nil
             }
         }
     }

@@ -118,12 +118,15 @@ extension Organization {
             self.nickName_ = nickName
             modified = true }
 
-        // allow small rouding differences in double (instead of using != for Doubles)
-        let deltaCoordinates = abs(self.latitude_ - coordinates.latitude) +
+        // (0,0) is the "no data" sentinel (Null Island); skip it to avoid clobbering real coordinates.
+        let coordinatesProvided = abs(coordinates.latitude)  > 0.000001 ||
+                                  abs(coordinates.longitude) > 0.000001
+        // allow small rounding differences in double (instead of using != for Doubles)
+        let deltaCoordinates = abs(self.latitude_  - coordinates.latitude) +
                                abs(self.longitude_ - coordinates.longitude)
-        if deltaCoordinates > 0.000001 {
+        if coordinatesProvided, deltaCoordinates > 0.000001 {
             self.longitude_ = coordinates.longitude
-            self.latitude_ = coordinates.latitude
+            self.latitude_  = coordinates.latitude
             modified = true }
 
         if self.removeOrganization != removeOrganization {
