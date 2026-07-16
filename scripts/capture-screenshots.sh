@@ -149,17 +149,23 @@ if [[ -z "${RS}" ]]; then
 fi
 echo "RocketSim CLI: ${RS}"
 
+# ipc_reachable_now: returns 0 if RocketSim's IPC channel is open.
+# Accepts both compact JSON ("ipc_reachable":true) and spaced ("ipc_reachable": true).
+ipc_reachable_now() {
+    "${RS}" status 2>/dev/null | grep -qE '"ipc_reachable"\s*:\s*true'
+}
+
 # The CLI needs the RocketSim app running (IPC). Nudge it, then verify.
-if ! "${RS}" status 2>/dev/null | grep -q '"ipc_reachable":true'; then
+if ! ipc_reachable_now; then
     echo "RocketSim app not reachable — launching it..."
     open -a RocketSim || true
     # Give the app a moment to come up and open its IPC channel.
     for _ in 1 2 3 4 5 6 7 8; do
         sleep 2
-        "${RS}" status 2>/dev/null | grep -q '"ipc_reachable":true' && break
+        ipc_reachable_now && break || true
     done
 fi
-if ! "${RS}" status 2>/dev/null | grep -q '"ipc_reachable":true'; then
+if ! ipc_reachable_now; then
     echo "ERROR: RocketSim app is installed but not reachable over IPC." >&2
     echo "       Open RocketSim.app manually and ensure its CLI is enabled." >&2
     exit 1
@@ -264,9 +270,17 @@ dismiss_first_run_interruptions() {
 capture() {
     local screen="$1" lang="$2" appearance="$3"
     local out="${OUT_DIR}/${screen}_${lang}_${appearance}.jpg"
-    local tmp
-    tmp="$(mktemp /tmp/screenshot_XXXXXX.png)"
-    "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}"
+    local tmp tmperr
+    tmp="$(mktemp /tmp/screenshot_XXXXXX)"
+    tmperr="$(mktemp /tmp/screenshot_err_XXXXXX)"
+    if ! "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}" 2>"${tmperr}"; then
+        echo "ERROR: 'rocketsim screenshot' failed for ${screen}/${lang}/${appearance}:" >&2
+        cat "${tmperr}" >&2
+        echo "       Make sure RocketSim.app is running and its CLI is enabled." >&2
+        rm -f "${tmp}" "${tmperr}"
+        exit 1
+    fi
+    rm -f "${tmperr}"
     /usr/bin/sips -s format jpeg -s formatOptions "${JPEG_QUALITY}" \
         "${tmp}" --out "${out}" >/dev/null
     rm -f "${tmp}"
