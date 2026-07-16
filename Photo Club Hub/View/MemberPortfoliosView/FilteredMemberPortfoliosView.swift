@@ -78,6 +78,7 @@ struct FilteredMemberPortfoliosView: View {
                     )
                 }
                 .listRowSeparator(.hidden) // prevents a separator below the footer.
+                .id(section.id)
             }
         }
         if sectionedPortfoliosResults.nsPredicate == Self.predicateNone {

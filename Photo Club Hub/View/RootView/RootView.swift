@@ -14,7 +14,9 @@ import CoreData // for NSManagedObjectContext
 // frame — a fullScreenCover is a presentation transaction, which briefly exposes the view behind it at launch.
 struct RootView: View {
 
-    @State private var showPrelude = true
+    // The `-skipPrelude YES` launch argument starts the app on the main tabs without the splash.
+    // Used by the screenshot pipeline (#775/#776); normal launches never pass it, so it stays true.
+    @State private var showPrelude = !UserDefaults.standard.bool(forKey: "skipPrelude")
 
     // Read the managed object context from the environment so it can be explicitly re-passed to MainTabView.
     // Re-passing is required because SwiftUI previews don't always propagate environment values reliably
