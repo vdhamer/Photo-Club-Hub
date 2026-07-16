@@ -86,6 +86,7 @@ TAB_SCREENS=(Maps Clubs People Settings)
 BEZEL="device"          # device frame style: none | simulator | device
 BACKGROUND="#FFFFFF"    # background color behind the framed device
 DEVICE_SHADOW=1         # 1 = render a shadow behind the device frame
+JPEG_QUALITY=85         # JPEG quality 0–100 (RocketSim outputs PNG; sips converts)
 
 # Simple placeholder waits (seconds). Replaced by content polling in #776.
 SLEEP_AFTER_LAUNCH=8    # app launch (Prelude skipped) + network content settling
@@ -131,6 +132,15 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+# Verify xcrun simctl is available (requires Xcode, not just the command-line tools).
+if ! /usr/bin/xcrun simctl help &>/dev/null; then
+    echo "ERROR: 'xcrun simctl' not available." >&2
+    echo "       Make sure Xcode is installed and run:" >&2
+    echo "         sudo xcode-select --switch /Applications/Xcode.app" >&2
+    exit 1
+fi
+SIMCTL=( /usr/bin/xcrun simctl )
+
 RS="$(find_rocketsim || true)"
 if [[ -z "${RS}" ]]; then
     echo "ERROR: RocketSim CLI not found." >&2
@@ -160,7 +170,7 @@ fi
 # ---------------------------------------------------------------------------
 if [[ -z "${UDID}" ]]; then
     # Grab the first available simulator whose name exactly matches PREFERRED_DEVICE.
-    UDID="$(xcrun simctl list devices available \
+    UDID="$("${SIMCTL[@]}" list devices available \
             | grep -E "^\s+${PREFERRED_DEVICE} \(" \
             | head -n1 \
             | sed -E 's/.*\(([0-9A-Fa-f-]{36})\).*/\1/')"
@@ -179,8 +189,8 @@ echo "Output folder: ${OUT_DIR}"
 # Boot the simulator.
 # ---------------------------------------------------------------------------
 echo "Booting simulator..."
-xcrun simctl boot "${UDID}" 2>/dev/null || true   # no-op if already booted
-xcrun simctl bootstatus "${UDID}" -b || true
+"${SIMCTL[@]}" boot "${UDID}" 2>/dev/null || true   # no-op if already booted
+"${SIMCTL[@]}" bootstatus "${UDID}" -b || true
 open -a Simulator --args -CurrentDeviceUDID "${UDID}" || true
 
 # ---------------------------------------------------------------------------
@@ -202,14 +212,14 @@ if [[ "${DO_BUILD}" -eq 1 ]]; then
         exit 1
     fi
     echo "Installing ${APP_PATH}"
-    xcrun simctl install "${UDID}" "${APP_PATH}"
+    "${SIMCTL[@]}" install "${UDID}" "${APP_PATH}"
 fi
 
 # ---------------------------------------------------------------------------
 # Clean status bar: 9:41, full battery, full signal (Apple marketing default).
 # ---------------------------------------------------------------------------
 echo "Applying clean status bar override..."
-xcrun simctl status_bar "${UDID}" override \
+"${SIMCTL[@]}" status_bar "${UDID}" override \
     --time "9:41" \
     --dataNetwork "wifi" \
     --wifiMode "active" \
@@ -227,7 +237,7 @@ xcrun simctl status_bar "${UDID}" override \
 # entirely. (This is first-run OS state, not a TipKit tip; TipKit suppression is #776.)
 # ---------------------------------------------------------------------------
 echo "Granting location permission to avoid the first-run system alert..."
-xcrun simctl privacy "${UDID}" grant location "${BUNDLE_ID}" 2>/dev/null || true
+"${SIMCTL[@]}" privacy "${UDID}" grant location "${BUNDLE_ID}" 2>/dev/null || true
 
 # ---------------------------------------------------------------------------
 # Helpers.
@@ -249,11 +259,17 @@ dismiss_first_run_interruptions() {
     "${RS}" interact tap --label "Close" --type Button --timeout 1 --udid "${UDID}" >/dev/null 2>&1 || true
 }
 
-# Capture one framed screenshot to <Screen>_<lang>_<appearance>.png.
+# Capture one framed screenshot to <Screen>_<lang>_<appearance>.jpg.
+# RocketSim always emits PNG bytes; sips converts to JPEG in-place.
 capture() {
     local screen="$1" lang="$2" appearance="$3"
-    local out="${OUT_DIR}/${screen}_${lang}_${appearance}.png"
-    "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${out}"
+    local out="${OUT_DIR}/${screen}_${lang}_${appearance}.jpg"
+    local tmp
+    tmp="$(mktemp /tmp/screenshot_XXXXXX.png)"
+    "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}"
+    /usr/bin/sips -s format jpeg -s formatOptions "${JPEG_QUALITY}" \
+        "${tmp}" --out "${out}" >/dev/null
+    rm -f "${tmp}"
     echo "  saved ${out}"
 }
 
@@ -265,14 +281,14 @@ for lang in "${LANGUAGES[@]}"; do
         echo "=== ${lang} / ${appearance} ==="
 
         # Appearance is a device-level setting; apply before launch.
-        xcrun simctl ui "${UDID}" appearance "${appearance}"
+        "${SIMCTL[@]}" ui "${UDID}" appearance "${appearance}"
 
         # One fresh launch per screen: locale, initial tab, and no Prelude via launch
         # arguments (see the TAB_SCREENS comment above for why tabs are not tapped).
         for screen in "${TAB_SCREENS[@]}"; do
             echo "-- screen: ${screen}"
-            xcrun simctl terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
-            xcrun simctl launch "${UDID}" "${BUNDLE_ID}" \
+            "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
+            "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
                 -AppleLanguages "(${lang})" -initialTab "${screen}" -skipPrelude YES
             sleep "${SLEEP_AFTER_LAUNCH}"
             dismiss_first_run_interruptions
@@ -285,11 +301,11 @@ done
 # Cleanup.
 # ---------------------------------------------------------------------------
 echo "Clearing status bar override..."
-xcrun simctl status_bar "${UDID}" clear || true
+"${SIMCTL[@]}" status_bar "${UDID}" clear || true
 
 if [[ "${KEEP_BOOTED}" -eq 0 ]]; then
     echo "Shutting simulator down..."
-    xcrun simctl shutdown "${UDID}" || true
+    "${SIMCTL[@]}" shutdown "${UDID}" || true
 fi
 
 echo "Done. Screenshots in: ${OUT_DIR}"
