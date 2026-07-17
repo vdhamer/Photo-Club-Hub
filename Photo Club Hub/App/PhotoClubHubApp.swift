@@ -20,6 +20,9 @@ struct PhotoClubHubApp: App {
             return
         }
 
+        // Automated screenshot functionality: stale-marker cleanup and handle -suppressTips CLI argument.
+        ScreenshotReadiness.configureAtStartup()
+
         // Load persisted tip state (e.g. TabNavigationTip); without this call no tips are shown.
         // try? Tips.resetDatastore() /* used during manual testing only */
         try? Tips.configure([.displayFrequency(.daily)]) // show at most one tip per day
