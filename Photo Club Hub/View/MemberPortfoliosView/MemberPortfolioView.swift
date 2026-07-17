@@ -49,7 +49,7 @@ struct MemberPortfolioView: View {
                   predicate: NSPredicate(format: "organization_.fullName_ = %@",
                                          ScreenshotReadiness.portfolioPresetClubName),
                   animation: .default)
-    var scrollPresetMembers: FetchedResults<MemberPortfolio>
+    var scrollPresetMembers: FetchedResults<MemberPortfolio> // could theoretically be multiple (in different Towns)
     @State var didApplyPreset = false
 
     var body: some View {
@@ -94,7 +94,8 @@ struct MemberPortfolioView: View {
                                             """))
             .navigationDestination(item: $selectedPortfolio) { member in
                 SinglePortfolioView(url: member.level3URL, webView: wkWebView,
-                                    presetImageIndex: portfolioPresetActive ? Self.portfolioPresetImageIndex : nil)
+                                    presetImageIndex: portfolioPresetActive ?
+                                        ScreenshotReadiness.portfolioPresetImageIndex : nil)
                 .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
                                  (horSizeClass == .compact ? member.organization.nickName :
                                     member.organization.fullName))

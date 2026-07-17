@@ -24,11 +24,10 @@ extension MemberPortfolioView {
         initialTabArgument == "clubs" ? "Fotogroep de Gender (Eindhoven)" : nil
     }
 
-    // -initialTab PortfolioViaClubs ⇒ push this member's portfolio (member of the club fetched
-    // by `scrollPresetMembers`) and jump its Juicebox-Pro gallery to this image (#777).
+    // -initialTab PortfolioViaClubs ⇒ push the shared preset member's portfolio and jump its
+    // Juicebox-Pro gallery to the preset image (#777). Member, club, and image number live in
+    // ScreenshotReadiness, shared with the PortfolioViaPeople twin (PhotographersListView2627).
     var portfolioPresetActive: Bool { initialTabArgument == "portfolioviaclubs" }
-    static let portfolioPresetMemberName = "Francien van Mil"
-    static let portfolioPresetImageIndex = 3 // 1-based, i.e. the third gallery image
 
     /// Applies the screenshot-pipeline preset (at most one is active per launch, keyed off `-initialTab`):
     /// - `Clubs`: scrolls the `List` to a target `Section` by its `.id()`. A `List` cannot use
@@ -38,18 +37,26 @@ extension MemberPortfolioView {
     /// - `PortfolioViaClubs`: pushes the preset member's SinglePortfolioView via `selectedPortfolio`,
     ///   latching only once that member's record has been imported (club members arrive progressively).
     func applyScrollPresetIfReady(proxy: ScrollViewProxy) {
-        guard !didApplyPreset, !scrollPresetMembers.isEmpty else { return }
+        guard didApplyPreset == false, scrollPresetMembers.isEmpty == false else {
+            return
+        }
         if let target = scrollPresetSectionID {
             didApplyPreset = true
             Task { @MainActor in // wait one runloop tick so the List has laid out the freshly inserted section
                 var transaction = Transaction()
                 transaction.disablesAnimations = true
                 withTransaction(transaction) { proxy.scrollTo(target, anchor: .top) }
+                // iOS 26's .sidebarAdaptable tab view plays a sidebar→tab-bar morph on first
+                // appearance that can outlast the standard 0.35 s SwiftUI animation budget.
+                // onAppear fires while that morph is still running, so signalling immediately
+                // would write the marker before the screen is visually settled. A 2 s pause
+                // ensures the morph is complete before the capture script sees the marker.
+                try? await Task.sleep(for: .seconds(2))
                 ScreenshotReadiness.signalReady(for: "Clubs") // #776: tells capture script to stop waiting
             }
         } else if portfolioPresetActive,
                   let member = scrollPresetMembers.first(where: {
-                      $0.photographer.fullNameFirstLast == Self.portfolioPresetMemberName
+                      $0.photographer.fullNameFirstLast == ScreenshotReadiness.portfolioPresetMemberName
                   }) {
             didApplyPreset = true
             var transaction = Transaction()
