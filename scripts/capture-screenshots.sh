@@ -4,7 +4,8 @@
 # Photo Club Hub — documentation screenshot pipeline (GitHub issue #774 and subissues)
 #
 # Captures framed screenshots of the four tab screens (Maps / Clubs / People / Settings)
-# plus the pushed Portfolio screen (PortfolioViaClubs, #777) across the EN/NL x light/dark matrix.
+# plus the pushed Portfolio screen via both routes (PortfolioViaClubs and PortfolioViaPeople,
+# #777) across the EN/NL x light/dark matrix.
 #
 # Navigation is done via the app's `-initialTab` / `-skipPrelude` launch arguments
 # (one launch per screen); the RocketSim CLI provides the device-framed captures,
@@ -17,8 +18,10 @@
 # ---------------------------------------------------------------------------
 #   - The four TAB screens (#775) plus the Portfolio detail screen (#777, see EXTRA_SCREENS).
 #     The remaining #777 screens (Readme sheet, Prelude capture) are NOT handled yet.
-#   - Waits are simple `sleep`s. Content-readiness polling and TipKit tip suppression are
-#     ticket #776 and are deliberately NOT implemented here.
+#   - Content readiness (#776): instead of fixed sleeps, the app writes a marker file
+#     (Documents/screenshot-ready) once the launched screen's preset content is on screen;
+#     wait_until_ready() polls for it and fails the run on a per-screen timeout.
+#   - Tips (#776): `-suppressTips YES` keeps TipKit tips out of the captures.
 #
 # ---------------------------------------------------------------------------
 # Requirements:
@@ -32,19 +35,22 @@
 #   - There is NO support for iOS 17 (some of the code resides in MainTabView1827).
 #
 # ---------------------------------------------------------------------------
-# Arguments:
+# Arguments of script:
 # ---------------------------------------------------------------------------
 # App launch arguments (passed to `xcrun simctl launch`; `-key value` pairs become one-shot
 # UserDefaults overrides in the app — they are never persisted):
 #
 #   -AppleLanguages "(en)"|"(nl)"   iOS-defined: UI language for this launch
-#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs>
+#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople>
 #                                   app-defined (MainTabView1827.swift): open directly on
 #                                   this tab, canonical English names in any locale.
-#                                   PortfolioViaClubs additionally pushes the app-hardcoded
-#                                   preset portfolio from the Clubs tab (#777)
+#                                   PortfolioViaClubs/PortfolioViaPeople additionally push the
+#                                   app-hardcoded preset portfolio from the Clubs resp. People
+#                                   tab (#777); both captures are near-identical by design
 #   -skipPrelude YES                app-defined (RootView.swift): start on the main tabs
 #                                   without the Prelude splash screen
+#   -suppressTips YES               app-defined (PhotoClubHubApp.swift): hide TipKit tips
+#                                   so they don't photobomb the captures (#776)
 # Tip: the full list of keys the app responds to can be found with
 #   grep -rn 'UserDefaults.standard' --include='*.swift' 'Photo Club Hub' | grep forKey
 #
@@ -55,6 +61,10 @@
 #   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
 #   --out <dir>     Override the output directory (default: <repo>/scripts/screenshots).
 #   --keep-booted   Do not shut the simulator down when finished.
+#
+# ---------------------------------------------------------------------------
+# Screenshot-related Arguments of app: (tbd <<<<<)
+# ---------------------------------------------------------------------------
 #
 set -euo pipefail
 
@@ -78,18 +88,19 @@ APPEARANCES=(light dark)
 # The four tab screens, in tab bar order (MainTabView1827.swift / issue #773).
 # Navigation does NOT tap the tab bar: RocketSim's element tree omits tab buttons when the
 # app runs in a non-English locale (https://github.com/AvdLee/RocketSimApp/issues/1083),
-# so the script relaunches the app
-# once per screen with the `-initialTab <Screen>` launch argument instead (canonical English
+# so the script relaunches the app once per screen
+# with the `-initialTab <Screen>` launch argument instead (canonical English
 # names, handled in MainTabView1827.swift). `-skipPrelude YES` suppresses the splash screen.
 # This is locale-independent and also more deterministic than tap choreography.
 TAB_SCREENS=(Maps Clubs People Settings)
 
-# Non-tab screens (#777). PortfolioViaClubs = Clubs tab + app-hardcoded push of the preset
+# Non-tab screens (#777). PortfolioViaClubs/PortfolioViaPeople = Clubs resp. People tab +
+# app-hardcoded push of the preset
 # member's portfolio (Fotogroep de Gender / Francien van Mil), with its gallery jumped to a
 # preset image when the site is a Juicebox-Pro gallery (handled app-side in MemberPortfolioView
 # and SinglePortfolioView; on a non-Juicebox site the jump is a no-op and the capture simply
 # shows that site's opening screen). Readme sheet and Prelude captures are still to be added.
-EXTRA_SCREENS=(PortfolioViaClubs)
+EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople)
 
 # Framing options for `rocketsim screenshot`.
 BEZEL="device"          # device frame style: none | simulator | device
@@ -97,9 +108,13 @@ BACKGROUND="#FFFFFF"    # background color behind the framed device
 DEVICE_SHADOW=1         # 1 = render a shadow behind the device frame
 JPEG_QUALITY=85         # JPEG quality 0–100 (RocketSim outputs PNG; sips converts)
 
-# Simple placeholder waits (seconds). Replaced by content polling in #776.
-SLEEP_AFTER_LAUNCH=8    # app launch (Prelude skipped) + network content settling
-SLEEP_AFTER_LAUNCH_PORTFOLIO=16  # PortfolioViaClubs also loads the web gallery + jumps to its image
+# Readiness polling (#776). The app (ScreenshotReadiness.swift) writes
+# Documents/screenshot-ready inside its data container once the launched screen's preset
+# content is on screen; wait_until_ready() polls for that marker. Generous timeouts cost
+# nothing on success — polling exits as soon as the marker appears.
+READY_TIMEOUT=60                 # per-screen readiness timeout (seconds)
+READY_TIMEOUT_PORTFOLIO=90       # PortfolioVia* also loads the web gallery + jumps to its image
+SLEEP_AFTER_READY=3              # visual settling after readiness: map tiles, thumbnails, scroll
 
 # Output directory (kept out of git — see the .gitignore note for Scripts/screenshots).
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -165,31 +180,57 @@ ipc_reachable_now() {
     "${RS}" status 2>/dev/null | grep -qE '"ipc_reachable"\s*:\s*true'
 }
 
-# The CLI needs the RocketSim app running (IPC). Nudge it, then verify.
-if ! ipc_reachable_now; then
-    echo "RocketSim app not reachable — launching it..."
+# ensure_rocketsim: make sure RocketSim.app is running and its IPC channel is open,
+# (re)launching it and waiting up to ROCKETSIM_STARTUP_TIMEOUT seconds if needed.
+# Called at startup AND again whenever a screenshot fails mid-run: a full run takes
+# minutes, and RocketSim can quit or lose its IPC channel in the meantime (e.g. when
+# simulators shut down or the app is closed between/during runs).
+ROCKETSIM_STARTUP_TIMEOUT=30
+ensure_rocketsim() {
+    ipc_reachable_now && return 0
+    echo "RocketSim app not reachable — (re)launching it..."
     open -a RocketSim || true
-    # Give the app a moment to come up and open its IPC channel.
-    for _ in 1 2 3 4 5 6 7 8; do
+    local waited=0
+    while [[ "${waited}" -lt "${ROCKETSIM_STARTUP_TIMEOUT}" ]]; do
         sleep 2
-        ipc_reachable_now && break || true
+        waited=$((waited + 2))
+        ipc_reachable_now && return 0
     done
-fi
-if ! ipc_reachable_now; then
-    echo "ERROR: RocketSim app is installed but not reachable over IPC." >&2
-    echo "       Open RocketSim.app manually and ensure its CLI is enabled." >&2
-    exit 1
+    return 1
+}
+
+# Once set to 1, rocketsim is no longer asked for screenshots and the unframed
+# `simctl io screenshot` fallback is used instead (see capture()). This keeps the run
+# going when RocketSim is broken — e.g. RocketSim 16.3 (build 323) crashes with a SIGTRAP
+# in FBSimulatorControl.inferSimulatorConfiguration on every CLI screenshot request.
+RS_BROKEN=0
+UNFRAMED_COUNT=0
+
+# The CLI needs the RocketSim app running (IPC). Nudge it, then verify.
+if ! ensure_rocketsim; then
+    echo "WARNING: RocketSim app is installed but not reachable over IPC." >&2
+    echo "         Continuing with the 'simctl io screenshot' fallback (no device bezels)." >&2
+    RS_BROKEN=1
 fi
 
 # ---------------------------------------------------------------------------
 # Resolve the target simulator UDID.
 # ---------------------------------------------------------------------------
 if [[ -z "${UDID}" ]]; then
-    # Grab the first available simulator whose name exactly matches PREFERRED_DEVICE.
-    UDID="$("${SIMCTL[@]}" list devices available \
+    # There can be several available simulators with this exact name (one per installed
+    # iOS runtime). Prefer one that already has the app installed (typically Xcode's run
+    # destination) — launching on a sibling without the app fails with
+    # FBSOpenApplicationServiceErrorDomain code=4. Fall back to the first match.
+    CANDIDATE_UDIDS="$("${SIMCTL[@]}" list devices available \
             | grep -E "^\s+${PREFERRED_DEVICE} \(" \
-            | head -n1 \
             | sed -E 's/.*\(([0-9A-Fa-f-]{36})\).*/\1/')"
+    for candidate in ${CANDIDATE_UDIDS}; do
+        [[ -z "${UDID}" ]] && UDID="${candidate}"    # fallback: first match
+        if "${SIMCTL[@]}" get_app_container "${candidate}" "${BUNDLE_ID}" app >/dev/null 2>&1; then
+            UDID="${candidate}"                      # preferred: app already installed here
+            break
+        fi
+    done
 fi
 if [[ -z "${UDID}" ]]; then
     echo "ERROR: could not find an available simulator named '${PREFERRED_DEVICE}'." >&2
@@ -231,6 +272,22 @@ if [[ "${DO_BUILD}" -eq 1 ]]; then
     "${SIMCTL[@]}" install "${UDID}" "${APP_PATH}"
 fi
 
+# Fail early (rather than at the first launch) if the app is not installed on the target.
+if ! "${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" app >/dev/null 2>&1; then
+    echo "ERROR: ${BUNDLE_ID} is not installed on simulator ${UDID}." >&2
+    echo "       Re-run with --build, install the app on this simulator from Xcode," >&2
+    echo "       or pass --udid <UDID> of a simulator that already has the app." >&2
+    exit 1
+fi
+
+# Resolve the readiness marker path once (the data container is stable per install).
+APP_DATA_CONTAINER="$("${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" data 2>/dev/null)"
+if [[ -z "${APP_DATA_CONTAINER}" ]]; then
+    echo "ERROR: cannot resolve the data container of ${BUNDLE_ID} on ${UDID}." >&2
+    exit 1
+fi
+READY_MARKER="${APP_DATA_CONTAINER}/Documents/screenshot-ready"
+
 # ---------------------------------------------------------------------------
 # Clean status bar: 9:41, full battery, full signal (Apple marketing default).
 # ---------------------------------------------------------------------------
@@ -263,6 +320,24 @@ echo "Granting location permission to avoid the first-run system alert..."
 SCREENSHOT_FLAGS=(--udid "${UDID}" --bezel "${BEZEL}" --background "${BACKGROUND}")
 [[ "${DEVICE_SHADOW}" -eq 1 ]] && SCREENSHOT_FLAGS+=(--device-shadow)
 
+# Poll for the app's readiness marker (#776): written by ScreenshotReadiness.signalReady()
+# once the launched screen's preset content is on screen. A hung or partial load therefore
+# fails the run (non-zero exit) instead of capturing a spinner. After readiness, a short
+# settling sleep lets purely visual work (map tiles, thumbnails) finish rendering.
+wait_until_ready() {
+    local screen="$1" timeout="$2"
+    local waited=0
+    while [[ ! -f "${READY_MARKER}" ]]; do
+        if [[ "${waited}" -ge "${timeout}" ]]; then
+            echo "ERROR: screen ${screen} not ready after ${timeout}s (no ${READY_MARKER})." >&2
+            exit 1
+        fi
+        sleep 1
+        waited=$((waited + 1))
+    done
+    sleep "${SLEEP_AFTER_READY}"
+}
+
 # Best-effort dismissal of first-run interruptions that can sit over the tabs:
 #   - a leftover location permission alert (if the pre-grant above didn't take)
 #   - the built-in Readme sheet, which can auto-present on first run
@@ -277,18 +352,39 @@ dismiss_first_run_interruptions() {
 
 # Capture one framed screenshot to <Screen>_<lang>_<appearance>.jpg.
 # RocketSim always emits PNG bytes; sips converts to JPEG in-place.
+# If the capture fails (RocketSim quit, lost its IPC channel, or crashes on the request),
+# revive RocketSim via ensure_rocketsim and retry once; if it fails again, mark RocketSim
+# as broken for the rest of the run and fall back to an unframed `simctl io screenshot`,
+# so a broken RocketSim degrades the output (no bezels) instead of aborting the run.
 capture() {
     local screen="$1" lang="$2" appearance="$3"
     local out="${OUT_DIR}/${screen}_${lang}_${appearance}.jpg"
-    local tmp tmperr
+    local tmp tmperr framed=0
     tmp="$(mktemp /tmp/screenshot_XXXXXX)"
     tmperr="$(mktemp /tmp/screenshot_err_XXXXXX)"
-    if ! "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}" 2>"${tmperr}"; then
-        echo "ERROR: 'rocketsim screenshot' failed for ${screen}/${lang}/${appearance}:" >&2
-        cat "${tmperr}" >&2
-        echo "       Make sure RocketSim.app is running and its CLI is enabled." >&2
-        rm -f "${tmp}" "${tmperr}"
-        exit 1
+    if [[ "${RS_BROKEN}" -eq 0 ]]; then
+        if "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}" 2>"${tmperr}"; then
+            framed=1
+        else
+            echo "WARNING: 'rocketsim screenshot' failed for ${screen}/${lang}/${appearance} — reviving RocketSim and retrying:" >&2
+            cat "${tmperr}" >&2
+            ensure_rocketsim || true
+            if "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}" 2>"${tmperr}"; then
+                framed=1
+            else
+                echo "WARNING: 'rocketsim screenshot' failed again — using the simctl fallback for the rest of this run:" >&2
+                cat "${tmperr}" >&2
+                RS_BROKEN=1
+            fi
+        fi
+    fi
+    if [[ "${framed}" -eq 0 ]]; then
+        if ! "${SIMCTL[@]}" io "${UDID}" screenshot "${tmp}" >/dev/null 2>&1; then
+            echo "ERROR: fallback 'simctl io screenshot' also failed for ${screen}/${lang}/${appearance}." >&2
+            rm -f "${tmp}" "${tmperr}"
+            exit 1
+        fi
+        UNFRAMED_COUNT=$((UNFRAMED_COUNT + 1))
     fi
     rm -f "${tmperr}"
     /usr/bin/sips -s format jpeg -s formatOptions "${JPEG_QUALITY}" \
@@ -312,12 +408,13 @@ for lang in "${LANGUAGES[@]}"; do
         for screen in "${TAB_SCREENS[@]}" "${EXTRA_SCREENS[@]}"; do
             echo "-- screen: ${screen}"
             "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
+            rm -f "${READY_MARKER}"   # the app also clears it at startup (belt and braces)
             "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
-                -AppleLanguages "(${lang})" -initialTab "${screen}" -skipPrelude YES
-            if [[ "${screen}" == "PortfolioViaClubs" ]]; then
-                sleep "${SLEEP_AFTER_LAUNCH_PORTFOLIO}"
+                -AppleLanguages "(${lang})" -initialTab "${screen}" -skipPrelude YES -suppressTips YES
+            if [[ "${screen}" == PortfolioVia* ]]; then
+                wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}"
             else
-                sleep "${SLEEP_AFTER_LAUNCH}"
+                wait_until_ready "${screen}" "${READY_TIMEOUT}"
             fi
             dismiss_first_run_interruptions
             capture "${screen}" "${lang}" "${appearance}"
@@ -336,4 +433,8 @@ if [[ "${KEEP_BOOTED}" -eq 0 ]]; then
     "${SIMCTL[@]}" shutdown "${UDID}" || true
 fi
 
+if [[ "${UNFRAMED_COUNT}" -gt 0 ]]; then
+    echo "WARNING: ${UNFRAMED_COUNT} screenshot(s) were captured WITHOUT a device bezel" >&2
+    echo "         (simctl fallback because RocketSim was not usable)." >&2
+fi
 echo "Done. Screenshots in: ${OUT_DIR}"
