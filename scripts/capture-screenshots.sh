@@ -56,7 +56,7 @@
 #
 #   -AppleLanguages "(en)"|"(nl)"   iOS-defined: UI language for this launch
 #
-#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople>
+#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople|Prelude>
 #                                   Open directly on this tab (canonical English names in any
 #                                   locale; case-insensitive). Read by MainTabView1827.swift
 #                                   for tab selection. Side effects per value, implemented in
@@ -71,6 +71,10 @@
 #                                     People tab and jump its Juicebox gallery to the preset
 #                                     image (#777); both captures are near-identical by design.
 #                                     Preset constants live in ScreenshotReadiness.swift.
+#                                   - Prelude: shows the splash screen (used WITHOUT
+#                                     -skipPrelude YES so the prelude is actually visible);
+#                                     signals readiness once the prelude image asset has loaded
+#                                     (PreludeView2627+Screenshot.swift).
 #                                   Presence of ANY -initialTab value also arms the readiness
 #                                   marker (Documents/screenshot-ready, see ScreenshotReadiness
 #                                   .swift) that wait_until_ready() polls for (#776).
@@ -118,13 +122,13 @@ APPEARANCES=(light dark)
 # This is locale-independent and also more deterministic than tap choreography.
 TAB_SCREENS=(Maps Clubs People Settings)
 
-# Non-tab screens (#777). PortfolioViaClubs/PortfolioViaPeople = Clubs resp. People tab +
-# app-hardcoded push of the preset
-# member's portfolio (Fotogroep de Gender / Francien van Mil), with its gallery jumped to a
-# preset image when the site is a Juicebox-Pro gallery (handled app-side in MemberPortfolioView
-# and SinglePortfolioView; on a non-Juicebox site the jump is a no-op and the capture simply
-# shows that site's opening screen). Readme sheet and Prelude captures are still to be added.
-EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople)
+# Non-tab screens. PortfolioViaClubs/PortfolioViaPeople (#777) = Clubs resp. People tab +
+# app-hardcoded push of the preset member's portfolio (Fotogroep de Gender / Francien van Mil),
+# with its gallery jumped to a preset image when the site is a Juicebox-Pro gallery (handled
+# app-side in MemberPortfolioView and SinglePortfolioView; on a non-Juicebox site the jump is a
+# no-op and the capture shows that site's opening screen). Prelude = the initial splash screen,
+# launched WITHOUT -skipPrelude so the view is visible. Readme sheet capture still to be added.
+EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople Prelude)
 
 # Framing options for `rocketsim screenshot`.
 BEZEL="device"          # device frame style: none | simulator | device
@@ -470,14 +474,17 @@ for lang in "${LANGUAGES[@]}"; do
         # Appearance is a device-level setting; apply before launch.
         "${SIMCTL[@]}" ui "${UDID}" appearance "${appearance}"
 
-        # One fresh launch per screen: locale, initial tab, and no Prelude via launch
-        # arguments (see the TAB_SCREENS comment above for why tabs are not tapped).
+        # One fresh launch per screen: locale, initial tab, and (for non-Prelude screens) no
+        # Prelude via launch arguments (see the TAB_SCREENS comment for why tabs are not tapped).
         for screen in "${TAB_SCREENS[@]}" "${EXTRA_SCREENS[@]}"; do
             echo "-- screen: ${screen}"
             "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
             rm -f "${READY_MARKER}"   # the app also clears it at startup (belt and braces)
+            # Prelude is the splash screen itself: launch it without -skipPrelude so it is visible.
+            SKIP_PRELUDE_ARG=(); [[ "${screen}" != Prelude ]] && SKIP_PRELUDE_ARG=(-skipPrelude YES)
             "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
-                -AppleLanguages "(${lang})" -initialTab "${screen}" -skipPrelude YES -suppressTips YES
+                -AppleLanguages "(${lang})" -initialTab "${screen}" \
+                ${SKIP_PRELUDE_ARG[@]+"${SKIP_PRELUDE_ARG[@]}"} -suppressTips YES
             if [[ "${screen}" == PortfolioVia* ]]; then
                 wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}" "${SLEEP_AFTER_READY_PORTFOLIO}"
             else

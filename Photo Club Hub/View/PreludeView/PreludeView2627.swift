@@ -150,6 +150,7 @@ struct PreludeView2627: View {
                         let img = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
                         preludeImage = img
                         offsetInCells = img.whiteCoordinates
+                        signalReadyIfInScreenshotMode() // screenshot pipeline (#776)
                     }
                 }
 
