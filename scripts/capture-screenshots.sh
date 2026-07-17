@@ -139,6 +139,7 @@ JPEG_QUALITY=85         # JPEG quality 0–100 (RocketSim outputs PNG; sips conv
 READY_TIMEOUT=60                 # per-screen readiness timeout (seconds)
 READY_TIMEOUT_PORTFOLIO=90       # PortfolioVia* also loads the web gallery + jumps to its image
 SLEEP_AFTER_READY=3              # visual settling after readiness: map tiles, thumbnails, scroll
+SLEEP_AFTER_READY_PORTFOLIO=8   # extra settling for Portfolio screens: Juicebox gallery image load
 
 # Output directory (kept out of git — see the .gitignore note for Scripts/screenshots).
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -231,13 +232,6 @@ ensure_rocketsim() {
 RS_BROKEN=0
 UNFRAMED_COUNT=0
 
-# The CLI needs the RocketSim app running (IPC). Nudge it, then verify.
-if ! ensure_rocketsim; then
-    echo "WARNING: RocketSim app is installed but not reachable over IPC." >&2
-    echo "         Continuing with the 'simctl io screenshot' fallback (no device bezels)." >&2
-    RS_BROKEN=1
-fi
-
 # ---------------------------------------------------------------------------
 # Auto-detect the latest available iOS runtime when PREFERRED_IOS_VERSION is empty.
 # ---------------------------------------------------------------------------
@@ -315,6 +309,14 @@ echo "Booting simulator..."
 "${SIMCTL[@]}" bootstatus "${UDID}" -b || true
 open -a Simulator --args -CurrentDeviceUDID "${UDID}" || true
 
+# Verify RocketSim's IPC channel after the simulator is running. Checking before boot can
+# give a false negative because RocketSim only detects the device once the simulator starts.
+if ! ensure_rocketsim; then
+    echo "WARNING: RocketSim app is installed but not reachable over IPC." >&2
+    echo "         Continuing with the 'simctl io screenshot' fallback (no device bezels)." >&2
+    RS_BROKEN=1
+fi
+
 # ---------------------------------------------------------------------------
 # Optionally build + install the app.
 # ---------------------------------------------------------------------------
@@ -390,7 +392,7 @@ SCREENSHOT_FLAGS=(--udid "${UDID}" --bezel "${BEZEL}" --background "${BACKGROUND
 # fails the run (non-zero exit) instead of capturing a spinner. After readiness, a short
 # settling sleep lets purely visual work (map tiles, thumbnails) finish rendering.
 wait_until_ready() {
-    local screen="$1" timeout="$2"
+    local screen="$1" timeout="$2" settle="${3:-${SLEEP_AFTER_READY}}"
     local waited=0
     while [[ ! -f "${READY_MARKER}" ]]; do
         if [[ "${waited}" -ge "${timeout}" ]]; then
@@ -400,7 +402,7 @@ wait_until_ready() {
         sleep 1
         waited=$((waited + 1))
     done
-    sleep "${SLEEP_AFTER_READY}"
+    sleep "${settle}"
 }
 
 # Best-effort dismissal of first-run interruptions that can sit over the tabs:
@@ -477,7 +479,7 @@ for lang in "${LANGUAGES[@]}"; do
             "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
                 -AppleLanguages "(${lang})" -initialTab "${screen}" -skipPrelude YES -suppressTips YES
             if [[ "${screen}" == PortfolioVia* ]]; then
-                wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}"
+                wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}" "${SLEEP_AFTER_READY_PORTFOLIO}"
             else
                 wait_until_ready "${screen}" "${READY_TIMEOUT}"
             fi
