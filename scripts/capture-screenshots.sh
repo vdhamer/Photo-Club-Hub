@@ -344,11 +344,24 @@ if [[ "${DO_BUILD}" -eq 1 ]]; then
 fi
 
 # Fail early (rather than at the first launch) if the app is not installed on the target.
-if ! "${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" app >/dev/null 2>&1; then
+APP_CONTAINER="$("${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" app 2>/dev/null)"
+if [[ -z "${APP_CONTAINER}" ]]; then
     echo "ERROR: ${BUNDLE_ID} is not installed on simulator ${UDID}." >&2
     echo "       Re-run with --build, install the app on this simulator from Xcode," >&2
     echo "       or pass --udid <UDID> of a simulator that already has the app." >&2
     exit 1
+fi
+
+# Warn when the installed binary is older than any Swift source in the repo.
+# Screens whose signaling code was added after the last build will time out silently otherwise.
+if [[ "${DO_BUILD}" -eq 0 ]]; then
+    STALE_SOURCE="$(/usr/bin/find "${REPO_ROOT}/Photo Club Hub" \
+        -name "*.swift" -newer "${APP_CONTAINER}" -print -quit 2>/dev/null)"
+    if [[ -n "${STALE_SOURCE}" ]]; then
+        echo "WARNING: Swift source(s) newer than the installed app (e.g. ${STALE_SOURCE##*/})." >&2
+        echo "         Screens whose readiness code was added since the last build will time out." >&2
+        echo "         Re-run with --build to rebuild and reinstall." >&2
+    fi
 fi
 
 # Resolve the readiness marker path once (the data container is stable per install).
