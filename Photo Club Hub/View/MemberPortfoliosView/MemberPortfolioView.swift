@@ -22,7 +22,8 @@ struct MemberPortfolioView: View {
 
     /// The member whose portfolio is shown; setting it (from a row) triggers navigation via
     /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy `List` row.
-    @State private var selectedPortfolio: MemberPortfolio?
+    /// Not `private`: also set by the PortfolioViaClubs preset in MemberPortfolioView+Screenshot.swift.
+    @State var selectedPortfolio: MemberPortfolio? // filled in MerberPortfolioView+Screenshot if in screenshot mode
 
     /// Single instance shared by all rows and the portfolio destination to avoid repeated WKWebView allocation.
     /// Stored in @State so it survives re-initialization of this view struct.
@@ -36,59 +37,20 @@ struct MemberPortfolioView: View {
     @State private var searchText: String = ""
     @State private var isSearchPresented = false
 
-    /// Member portfolios of the club targeted by `scrollPresetSectionID`. The scroll target is a
-    /// `Section` keyed by `organization.fullNameTown`, and that section only exists once the club's
-    /// members (Level 2) are imported — the `Organization` itself (Level 1) loads earlier and is
-    /// therefore not a sufficient readiness signal.
+    // Screenshot pipeline logic lives in MemberPortfolioView+Screenshot.swift.
+    // These stored properties must stay here (property wrappers can't be declared in extensions)
+    // and are not `private` so that the extension file can access them.
+    //
+    // Member portfolios of the club targeted by the presets: the Clubs scroll target is a `Section`
+    // keyed by `organization.fullNameTown`, and that section only exists once the club's members
+    // (Level 2) are imported — the `Organization` itself (Level 1) loads earlier and is therefore
+    // not a sufficient readiness signal.
     @FetchRequest(sortDescriptors: [],
-                  predicate: NSPredicate(format: "organization_.fullName_ = %@", "Fotogroep de Gender"),
+                  predicate: NSPredicate(format: "organization_.fullName_ = %@",
+                                         ScreenshotReadiness.portfolioPresetClubName),
                   animation: .default)
-    private var scrollPresetMembers: FetchedResults<MemberPortfolio>
-
-    @State private var didApplyPreset = false
-
-    /// The `-initialTab` launch argument (lowercased); drives the screenshot-pipeline presets (#776/#777).
-    private var initialTabArgument: String? {
-        UserDefaults.standard.string(forKey: "initialTab")?.lowercased()
-    }
-
-    // -initialTab Clubs ⇒ open scrolled to this section for the screenshot pipeline (#776).
-    private var scrollPresetSectionID: String? {
-        initialTabArgument == "clubs" ? "Fotogroep de Gender (Eindhoven)" : nil
-    }
-
-    // -initialTab PortfolioViaClubs ⇒ push this member's portfolio (member of the club fetched by
-    // `scrollPresetMembers`) and jump its Juicebox-Pro gallery to this image (#777).
-    private var portfolioPresetActive: Bool { initialTabArgument == "portfolioviaclubs" }
-    private static let portfolioPresetMemberName = "Francien van Mil"
-    private static let portfolioPresetImageIndex = 3 // 1-based, i.e. the third gallery image
-
-    /// Applies the screenshot-pipeline preset (at most one is active per launch, keyed off `-initialTab`):
-    /// - `Clubs`: scrolls the `List` to a target `Section` by its `.id()`. A `List` cannot use
-    ///   `.scrollPosition(id:)` because that modifier resolves IDs against a `.scrollTargetLayout()`,
-    ///   which only applies to a `LazyVStack`/`HStack` inside a `ScrollView` (see MapsView). `List`
-    ///   manages its own layout, so we drive it with `ScrollViewReader`'s `scrollTo(_:anchor:)` instead.
-    /// - `PortfolioViaClubs`: pushes the preset member's SinglePortfolioView via `selectedPortfolio`,
-    ///   latching only once that member's record has been imported (club members arrive progressively).
-    private func applyScrollPresetIfReady(proxy: ScrollViewProxy) {
-        guard !didApplyPreset, !scrollPresetMembers.isEmpty else { return }
-        if let target = scrollPresetSectionID {
-            didApplyPreset = true
-            Task { @MainActor in // wait one runloop tick so the List has laid out the freshly inserted section
-                var transaction = Transaction()
-                transaction.disablesAnimations = true
-                withTransaction(transaction) { proxy.scrollTo(target, anchor: .top) }
-            }
-        } else if portfolioPresetActive,
-                  let member = scrollPresetMembers.first(where: {
-                      $0.photographer.fullNameFirstLast == Self.portfolioPresetMemberName
-                  }) {
-            didApplyPreset = true
-            var transaction = Transaction()
-            transaction.disablesAnimations = true
-            withTransaction(transaction) { selectedPortfolio = member }
-        }
-    }
+    var scrollPresetMembers: FetchedResults<MemberPortfolio>
+    @State var didApplyPreset = false
 
     var body: some View {
         ScrollViewReader { proxy in // proxy variant supports programmatic scrolling
