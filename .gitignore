@@ -153,3 +153,5 @@ iOSInjectionProject/
 
 # Generated documentation screenshots (Scripts/capture-screenshots.sh, issue #775)
 Scripts/screenshots/
+# Temporary test images from verify-screenshots.sh (deleted on pass, kept on failure)
+Scripts/screenshots_verify/
