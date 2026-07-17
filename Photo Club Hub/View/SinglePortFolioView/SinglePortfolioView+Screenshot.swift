@@ -91,7 +91,7 @@ extension SinglePortfolioView {
             Task { @MainActor in
                 // Signal readiness (#776) both on success and after the timeout: on a
                 // non-Juicebox site the capture then simply shows that site's opening screen.
-                defer { ScreenshotReadiness.signalReady(for: "PortfolioViaClubs") }
+                defer { ScreenshotReadiness.signalReadyForPortfolioPreset() } // ViaClubs or ViaPeople
                 for _ in 0..<20 { // poll for up to ~10 s; times out harmlessly on non-Juicebox sites
                     let result = try? await webView.evaluateJavaScript(jumpScript)
                     if let index = result as? String, index == String(presetImageIndex) { return }
