@@ -37,34 +37,57 @@
 # ---------------------------------------------------------------------------
 # Arguments of script:
 # ---------------------------------------------------------------------------
-# App launch arguments (passed to `xcrun simctl launch`; `-key value` pairs become one-shot
-# UserDefaults overrides in the app — they are never persisted):
 #
-#   -AppleLanguages "(en)"|"(nl)"   iOS-defined: UI language for this launch
-#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople>
-#                                   app-defined (MainTabView1827.swift): open directly on
-#                                   this tab, canonical English names in any locale.
-#                                   PortfolioViaClubs/PortfolioViaPeople additionally push the
-#                                   app-hardcoded preset portfolio from the Clubs resp. People
-#                                   tab (#777); both captures are near-identical by design
-#   -skipPrelude YES                app-defined (RootView.swift): start on the main tabs
-#                                   without the Prelude splash screen
-#   -suppressTips YES               app-defined (PhotoClubHubApp.swift): hide TipKit tips
-#                                   so they don't photobomb the captures (#776)
-# Tip: the full list of keys the app responds to can be found with
-#   grep -rn 'UserDefaults.standard' --include='*.swift' 'Photo Club Hub' | grep forKey
-#
-# Usage:
-#
-#   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--out <dir>] [--keep-booted]
+#   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted]
 #   --build         Build the app for the target simulator and (re)install it first.
 #   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
+#   --ios-version <version>
+#                   Narrow the auto-pick to a specific iOS runtime (default: auto-detect
+#                   the latest installed runtime). Ignored when --udid is set.
 #   --out <dir>     Override the output directory (default: <repo>/scripts/screenshots).
 #   --keep-booted   Do not shut the simulator down when finished.
 #
 # ---------------------------------------------------------------------------
-# Screenshot-related Arguments of app: (tbd <<<<<)
+# Screenshot-related arguments of the app itself:
 # ---------------------------------------------------------------------------
+# These are launch arguments (passed via `xcrun simctl launch`); each `-key value` pair
+# becomes a one-shot UserDefaults override inside the app for that launch — nothing is
+# persisted. This is the authoritative list; the app has no other screenshot-mode switches.
+#
+#   -AppleLanguages "(en)"|"(nl)"   iOS-defined: UI language for this launch
+#
+#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople>
+#                                   Open directly on this tab (canonical English names in any
+#                                   locale; case-insensitive). Read by MainTabView1827.swift
+#                                   for tab selection. Side effects per value, implemented in
+#                                   the per-screen <View>+Screenshot.swift files:
+#                                   - Maps: scrolls to the preset club (MapsView+Screenshot)
+#                                   - Clubs: scrolls to the preset club section
+#                                     (MemberPortfolioView+Screenshot)
+#                                   - People: scrolls to the preset photographer card
+#                                     (PhotographersListView2627+Screenshot)
+#                                   - PortfolioViaClubs / PortfolioViaPeople: additionally
+#                                     push the preset member's portfolio from the Clubs resp.
+#                                     People tab and jump its Juicebox gallery to the preset
+#                                     image (#777); both captures are near-identical by design.
+#                                     Preset constants live in ScreenshotReadiness.swift.
+#                                   Presence of ANY -initialTab value also arms the readiness
+#                                   marker (Documents/screenshot-ready, see ScreenshotReadiness
+#                                   .swift) that wait_until_ready() polls for (#776).
+#
+#   -skipPrelude YES                Start on the main tabs without the Prelude splash screen.
+#                                   Read by RootView.swift.
+#
+#   -suppressTips YES               Hide all TipKit tips so they don't photobomb the captures
+#                                   (#776). Read by ScreenshotReadiness.configureAtStartup(),
+#                                   called from PhotoClubHubApp.init.
+#
+# Unrelated to screenshots: the app also reads a few persisted UserDefaults keys for debug
+# toggles on the Settings > Advanced screen (manualDataLoading, extraCoreDataSaves,
+# showTemplateClubs, errorOnCoreDataMerge — see Extensions/Settings.swift). They would accept
+# launch-argument overrides through the same mechanism, but this script does not use them.
+# To regenerate the full list of keys the app responds to:
+#   grep -rn 'UserDefaults.standard' --include='*.swift' 'Photo Club Hub' | grep forKey
 #
 set -euo pipefail
 
@@ -79,6 +102,7 @@ SCHEME="Photo Club Hub"
 # Preferred simulator model (the current iPhone "Pro"). Auto-discovered by name unless
 # an explicit --udid is supplied. Change PREFERRED_DEVICE to retarget.
 PREFERRED_DEVICE="iPhone 17 Pro"
+PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""            # resolved below (or from --udid)
 
 # Matrix.
@@ -150,6 +174,7 @@ while [[ $# -gt 0 ]]; do
     case "$1" in
         --build)       DO_BUILD=1; shift ;;
         --udid)        UDID="${2:?--udid needs a value}"; shift 2 ;;
+        --ios-version) PREFERRED_IOS_VERSION="${2?--ios-version needs a value}"; shift 2 ;;
         --out)         OUT_DIR="${2:?--out needs a value}"; shift 2 ;;
         --keep-booted) KEEP_BOOTED=1; shift ;;
         -h|--help)     grep -E '^# ' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
@@ -214,6 +239,26 @@ if ! ensure_rocketsim; then
 fi
 
 # ---------------------------------------------------------------------------
+# Auto-detect the latest available iOS runtime when PREFERRED_IOS_VERSION is empty.
+# ---------------------------------------------------------------------------
+# Uses awk to pick the highest major.minor from `simctl list runtimes available`, so the
+# script stays current when iOS 27.1 or 28.0 is installed without any configuration change.
+latest_ios_runtime() {
+    "${SIMCTL[@]}" list runtimes available \
+        | grep -E '^iOS [0-9]+\.[0-9]+' \
+        | awk '{
+              split($2, v, ".");
+              maj = v[1]+0; min = v[2]+0;
+              if (maj > bm || (maj == bm && min > bn)) { bm=maj; bn=min; best=$1" "$2 }
+          } END { print best }'
+}
+if [[ -z "${PREFERRED_IOS_VERSION}" ]]; then
+    PREFERRED_IOS_VERSION="$(latest_ios_runtime)"
+    [[ -z "${PREFERRED_IOS_VERSION}" ]] && { echo "ERROR: no iOS runtimes found." >&2; exit 1; }
+    echo "Auto-detected runtime: ${PREFERRED_IOS_VERSION}"
+fi
+
+# ---------------------------------------------------------------------------
 # Resolve the target simulator UDID.
 # ---------------------------------------------------------------------------
 if [[ -z "${UDID}" ]]; then
@@ -221,9 +266,21 @@ if [[ -z "${UDID}" ]]; then
     # iOS runtime). Prefer one that already has the app installed (typically Xcode's run
     # destination) — launching on a sibling without the app fails with
     # FBSOpenApplicationServiceErrorDomain code=4. Fall back to the first match.
-    CANDIDATE_UDIDS="$("${SIMCTL[@]}" list devices available \
-            | grep -E "^\s+${PREFERRED_DEVICE} \(" \
-            | sed -E 's/.*\(([0-9A-Fa-f-]{36})\).*/\1/')"
+    if [[ -n "${PREFERRED_IOS_VERSION}" ]]; then
+        # Filter by both device name and iOS runtime version.
+        # `simctl list devices` groups entries under section headers like "-- iOS 27.0 --";
+        # awk tracks which section we're in, then matches device lines within it.
+        CANDIDATE_UDIDS="$("${SIMCTL[@]}" list devices available \
+                | awk -v section="-- ${PREFERRED_IOS_VERSION} --" \
+                      -v device="${PREFERRED_DEVICE}" \
+                      '/^-- /{in_sec=(index($0,section)>0); next} in_sec&&index($0,device)' \
+                | sed -E 's/.*\(([0-9A-Fa-f-]{36})\).*/\1/')"
+    else
+        # Filter by device name only (any iOS runtime).
+        CANDIDATE_UDIDS="$("${SIMCTL[@]}" list devices available \
+                | grep -E "^\s+${PREFERRED_DEVICE} \(" \
+                | sed -E 's/.*\(([0-9A-Fa-f-]{36})\).*/\1/')"
+    fi
     for candidate in ${CANDIDATE_UDIDS}; do
         [[ -z "${UDID}" ]] && UDID="${candidate}"    # fallback: first match
         if "${SIMCTL[@]}" get_app_container "${candidate}" "${BUNDLE_ID}" app >/dev/null 2>&1; then
@@ -233,11 +290,19 @@ if [[ -z "${UDID}" ]]; then
     done
 fi
 if [[ -z "${UDID}" ]]; then
-    echo "ERROR: could not find an available simulator named '${PREFERRED_DEVICE}'." >&2
+    if [[ -n "${PREFERRED_IOS_VERSION}" ]]; then
+        echo "ERROR: could not find an available simulator named '${PREFERRED_DEVICE}' running ${PREFERRED_IOS_VERSION}." >&2
+    else
+        echo "ERROR: could not find an available simulator named '${PREFERRED_DEVICE}'." >&2
+    fi
     echo "       Pick one from 'xcrun simctl list devices available' and pass --udid." >&2
     exit 1
 fi
-echo "Target simulator: ${PREFERRED_DEVICE:-'(explicit)'} — ${UDID}"
+if [[ -n "${PREFERRED_IOS_VERSION}" ]]; then
+    echo "Target simulator: ${PREFERRED_DEVICE:-'(explicit)'} / ${PREFERRED_IOS_VERSION} — ${UDID}"
+else
+    echo "Target simulator: ${PREFERRED_DEVICE:-'(explicit)'} — ${UDID}"
+fi
 
 mkdir -p "${OUT_DIR}"
 echo "Output folder: ${OUT_DIR}"
