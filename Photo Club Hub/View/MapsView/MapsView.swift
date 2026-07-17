@@ -36,7 +36,7 @@ struct MapsView: View {
     // properties must stay here (property wrappers can't be declared in extensions) and are
     // not `private` so that the extension file can access them.
     @State var didApplyPreset = false
-    @State var scrollPositionID: OrganizationID?
+    @State var scrollPositionID: OrganizationID? // which club to show, set in MapsView+Screenshot
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
