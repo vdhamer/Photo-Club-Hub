@@ -3,7 +3,7 @@
 # verify-screenshots.sh
 # Photo Club Hub — screenshot-pipeline sanity check (issue #776/#777)
 #
-# Captures four test images and asserts that their JPEG file sizes agree within 1%:
+# Captures four test images and asserts that their JPEG file sizes agree within MAX_SIZE_RATIO (e.g. few %):
 #
 #   Test 1 – language parity
 #     Clubs_en_light.jpg  vs  Clubs_nl_light.jpg
