@@ -22,4 +22,10 @@ extension PreludeView2627 {
         ScreenshotReadiness.signalReady(for: "Prelude")
     }
 
+    // -initialTab ⇒ launched by capture-screenshots.sh, which always uses a Debug build.
+    // Used by `preludeText` to show the real app name instead of "In debug mode" (#776).
+    var isInScreenshotMode: Bool {
+        UserDefaults.standard.string(forKey: "initialTab") != nil // launch argument not persisted by UserDefaults
+    }
+
 }
