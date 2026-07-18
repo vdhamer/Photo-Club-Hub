@@ -16,8 +16,8 @@
 # ---------------------------------------------------------------------------
 # Scope (per #775):
 # ---------------------------------------------------------------------------
-#   - The four TAB screens (#775) plus the Portfolio detail screen (#777, see EXTRA_SCREENS).
-#     The remaining #777 screens (Readme sheet, Prelude capture) are NOT handled yet.
+#   - The four TAB screens (#775) plus the non-tab screens in EXTRA_SCREENS (#777):
+#     Portfolio (via Clubs and via People tabs), Prelude, and Readme sheet.
 #   - Content readiness (#776): instead of fixed sleeps, the app writes a marker file
 #     (Documents/screenshot-ready) once the launched screen's preset content is on screen;
 #     wait_until_ready() polls for it and fails the run on a per-screen timeout.
@@ -56,7 +56,7 @@
 #
 #   -AppleLanguages "(en)"|"(nl)"   iOS-defined: UI language for this launch
 #
-#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople|Prelude>
+#   -initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople|Prelude|Readme>
 #                                   Open directly on this tab (canonical English names in any
 #                                   locale; case-insensitive). Read by MainTabView1827.swift
 #                                   for tab selection. Side effects per value, implemented in
@@ -75,6 +75,9 @@
 #                                     -skipPrelude YES so the prelude is actually visible);
 #                                     signals readiness once the prelude image asset has loaded
 #                                     (PreludeView2627+Screenshot.swift).
+#                                   - Readme: opens the Clubs tab, auto-presents the Readme
+#                                     sheet, and signals readiness after a settle delay, all
+#                                     from MemberPortfolioView+Screenshot.swift (Clubs pattern).
 #                                   Presence of ANY -initialTab value also arms the readiness
 #                                   marker (Documents/screenshot-ready, see ScreenshotReadiness
 #                                   .swift) that wait_until_ready() polls for (#776).
@@ -127,8 +130,9 @@ TAB_SCREENS=(Maps Clubs People Settings)
 # with its gallery jumped to a preset image when the site is a Juicebox-Pro gallery (handled
 # app-side in MemberPortfolioView and SinglePortfolioView; on a non-Juicebox site the jump is a
 # no-op and the capture shows that site's opening screen). Prelude = the initial splash screen,
-# launched WITHOUT -skipPrelude so the view is visible. Readme sheet capture still to be added.
-EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople Prelude)
+# launched WITHOUT -skipPrelude so the view is visible. Readme = Clubs tab with the Readme
+# sheet auto-presented by ReadmeButton (ReadmeButton+Screenshot.swift).
+EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople Prelude Readme)
 
 # Framing options for `rocketsim screenshot`.
 BEZEL="device"          # device frame style: none | simulator | device
@@ -366,13 +370,40 @@ fi
 
 # Warn when the installed binary is older than any Swift source in the repo.
 # Screens whose signaling code was added after the last build will time out silently otherwise.
+#
+# NB: the comparison must use the EXECUTABLE inside the bundle, not APP_CONTAINER itself.
+# get_app_container returns the .app bundle DIRECTORY, and installing bumps the directory's
+# mtime to the install time (re-signing replaces entries inside it), so `-newer` against the
+# directory never matched sources edited after the build — the executable keeps its build mtime.
+find_app_binary() {
+    local exec_name
+    exec_name="$(/usr/bin/defaults read "${APP_CONTAINER}/Info" CFBundleExecutable 2>/dev/null || true)"
+    if [[ -n "${exec_name}" && -f "${APP_CONTAINER}/${exec_name}" ]]; then
+        echo "${APP_CONTAINER}/${exec_name}"
+        return 0
+    fi
+    # Fallback: the conventional executable named after the bundle (<Name>.app/<Name>).
+    # (Do NOT fall back to `find -perm +111`: bundled resources also carry exec bits.)
+    local bundle_name
+    bundle_name="$(basename "${APP_CONTAINER}" .app)"
+    if [[ -f "${APP_CONTAINER}/${bundle_name}" ]]; then
+        echo "${APP_CONTAINER}/${bundle_name}"
+        return 0
+    fi
+    return 1
+}
 if [[ "${DO_BUILD}" -eq 0 ]]; then
-    STALE_SOURCE="$(/usr/bin/find "${REPO_ROOT}/Photo Club Hub" \
-        -name "*.swift" -newer "${APP_CONTAINER}" -print -quit 2>/dev/null)"
-    if [[ -n "${STALE_SOURCE}" ]]; then
-        echo "WARNING: Swift source(s) newer than the installed app (e.g. ${STALE_SOURCE##*/})." >&2
-        echo "         Screens whose readiness code was added since the last build will time out." >&2
-        echo "         Re-run with --build to rebuild and reinstall." >&2
+    APP_BINARY="$(find_app_binary || true)"   # empty on failure; set -e must not abort here
+    if [[ -z "${APP_BINARY}" ]]; then
+        echo "WARNING: cannot locate the executable inside ${APP_CONTAINER}; skipping the stale-binary check." >&2
+    else
+        STALE_SOURCE="$(/usr/bin/find "${REPO_ROOT}/Photo Club Hub" \
+            -name "*.swift" -newer "${APP_BINARY}" -print -quit 2>/dev/null)"
+        if [[ -n "${STALE_SOURCE}" ]]; then
+            echo "WARNING: Swift source(s) newer than the installed app binary (e.g. ${STALE_SOURCE##*/})." >&2
+            echo "         Screens whose readiness code was added since the last build will time out." >&2
+            echo "         Re-run with --build to rebuild and reinstall." >&2
+        fi
     fi
 fi
 
