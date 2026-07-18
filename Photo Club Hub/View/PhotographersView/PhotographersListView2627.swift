@@ -24,7 +24,8 @@ struct PhotographersListView2627: View {
     @State private var showingMembers = false
     /// The member whose portfolio is shown; setting it (from a thumbnail) triggers navigation via
     /// `navigationDestination(item:)`. Registered here because destinations may not live inside a lazy LazyVStack.
-    @State private var selectedPortfolio: MemberPortfolio?
+    /// Not `private`: also set by the PortfolioViaPeople preset in PhotographersListView2627+Screenshot.swift.
+    @State var selectedPortfolio: MemberPortfolio? // target for automatic screenshot capture
     var searchText: Binding<String>
     @State private var isSearchPresented = false
     /// Single instance shared by all thumbnails and the portfolio destination to avoid repeated WKWebView allocation.
@@ -32,6 +33,16 @@ struct PhotographersListView2627: View {
     @State private var wkWebView = WKWebView()
 
     @StateObject var model = SettingsViewModel.shared
+
+    // Screenshot pipeline (#776) — the logic lives in PhotographersListView2627+Screenshot.swift.
+    // These stored properties must stay here (property wrappers can't be declared in extensions)
+    // and are not `private` so that the extension file can access them. `scrollPositionID`
+    // matches the card identity used by `ForEach(filteredPhotographers, id: \.id)` in
+    // FilteredPhotographerView2627 (NSObject's Identifiable = ObjectIdentifier).
+    @FetchRequest(sortDescriptors: [], animation: .default)
+    var photographers: FetchedResults<Photographer>
+    @State var didApplyPreset = false
+    @State var scrollPositionID: ObjectIdentifier?
     private var navigationTitle = String(localized: "People",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
@@ -106,6 +117,9 @@ struct PhotographersListView2627: View {
             .foregroundColor(Color.secondary)
 
         } // ScrollView
+        .scrollPosition(id: $scrollPositionID, anchor: .top)
+        .onAppear { applyScrollPresetIfReady() }
+        .onChange(of: photographers.count) { _, _ in applyScrollPresetIfReady() }
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
@@ -121,7 +135,9 @@ struct PhotographersListView2627: View {
                                             photographers based on either given- and family name.
                                             """))
         .navigationDestination(item: $selectedPortfolio) { member in
-            SinglePortfolioView(url: member.level3URL, webView: wkWebView)
+            SinglePortfolioView(url: member.level3URL, webView: wkWebView,
+                                presetImageIndex: portfolioPresetActive ?
+                                    ScreenshotReadiness.portfolioPresetImageIndex : nil)
                 .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
                                  (horSizeClass == .compact ? member.organization.nickName :
                                                              member.organization.fullName))

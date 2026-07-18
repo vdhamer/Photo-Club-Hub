@@ -26,29 +26,17 @@ struct MapsView: View {
     @State private var locationManager = LocationManager()
 
     /// Organizations fetched only to detect the empty state; sorting is irrelevant for counting.
+    /// Not `private`: also read by the screenshot preset in MapsView+Screenshot.swift.
     @FetchRequest(
         sortDescriptors: [], // organizations is only used for counting, so sorting doesn't matter
         animation: .default)
-    private var organizations: FetchedResults<Organization>
+    var organizations: FetchedResults<Organization>
 
-    @State private var didApplyPreset = false
-
-    // -initialTab Maps ⇒ open scrolled to this club for the screenshot pipeline (#776).
-    private var scrollPresetFullName: String? {
-        UserDefaults.standard.string(forKey: "initialTab")?.lowercased() == "maps"
-            ? "Fotogroep de Gender" : nil
-    }
-
-    @State private var scrollPositionID: OrganizationID?
-
-    private func applyScrollPresetIfReady() {
-        guard !didApplyPreset, let target = scrollPresetFullName,
-              let org = organizations.first(where: { $0.fullName == target }) else { return }
-        didApplyPreset = true
-        var transaction = Transaction()
-        transaction.disablesAnimations = true
-        withTransaction(transaction) { scrollPositionID = org.id }
-    }
+    // Screenshot pipeline (#776) — the logic lives in MapsView+Screenshot.swift. These stored
+    // properties must stay here (property wrappers can't be declared in extensions) and are
+    // not `private` so that the extension file can access them.
+    @State var didApplyPreset = false
+    @State var scrollPositionID: OrganizationID? // which club to show, set in MapsView+Screenshot
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {

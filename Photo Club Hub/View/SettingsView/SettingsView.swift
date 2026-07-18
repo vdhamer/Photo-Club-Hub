@@ -35,6 +35,8 @@ struct SettingsView: View {
                 SettingsViewAdvancedSection(localSettings: $localSettings)
             }
             .navigationTitle(title)
+            // #776: Settings has no async content, so it is capture-ready as soon as it appears.
+            .onAppear { ScreenshotReadiness.signalReady(for: "Settings") }
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     if isDirty {

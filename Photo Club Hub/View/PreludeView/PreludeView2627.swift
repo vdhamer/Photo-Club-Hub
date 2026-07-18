@@ -150,6 +150,7 @@ struct PreludeView2627: View {
                         let img = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
                         preludeImage = img
                         offsetInCells = img.whiteCoordinates
+                        signalReadyIfInScreenshotMode() // screenshot pipeline (#776)
                     }
                 }
 
@@ -212,7 +213,7 @@ struct PreludeView2627: View {
             String(localized: "Manual loading",
                    table: "PhotoClubHub.SwiftUI",
                    comment: "Shown instead of app name in PreludeView when app is started")
-        } else if inDebugMode {
+        } else if inDebugMode && isInScreenshotMode == false { // screenshot pipeline uses Debug builds (#776)
             String(localized: "In debug mode",
                    table: "PhotoClubHub.SwiftUI",
                    comment: "Shown instead of app name in PreludeView when app is started")
