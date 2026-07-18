@@ -236,6 +236,18 @@ ensure_rocketsim() {
 RS_BROKEN=0
 UNFRAMED_COUNT=0
 
+# Recovery window for a failed `rocketsim screenshot` (see capture()). RocketSim 16.2
+# (build 320) intermittently aborts on an uncaught NSException raised on a background
+# queue inside FBSimulatorControl (FBSimulatorAccessibilityCommands →
+# +[FBSimulatorLaunchCtlCommands commandsWithTarget:] assertion), triggered by the
+# `rocketsim interact tap` calls in dismiss_first_run_interruptions(). After
+# ensure_rocketsim relaunches the app, its IPC channel answers within ~1 second, but simulator
+# discovery takes another 25–50s ("No simulator found with UDID ...", then future
+# timeouts) — so a single immediate retry always fails. Retry within a bounded window
+# instead; only when RocketSim stays dead for the whole window is RS_BROKEN set.
+RS_RECOVERY_TIMEOUT=90   # seconds to keep retrying a failed rocketsim screenshot
+RS_RETRY_INTERVAL=3      # pause between retries within the recovery window
+
 # ---------------------------------------------------------------------------
 # Auto-detect the latest available iOS runtime when PREFERRED_IOS_VERSION is empty.
 # ---------------------------------------------------------------------------
@@ -423,10 +435,13 @@ wait_until_ready() {
 }
 
 # Best-effort dismissal of first-run interruptions that can sit over the tabs:
-#   - a leftover location permission alert (if the pre-grant above didn't take)
+#   - a leftover location permission alert (if the pre-grant above didn't work)
 #   - the built-in Readme sheet, which can auto-present on first run
 # Each tap is a no-op if the element isn't present. Thorough first-run/tip handling
 # (incl. TipKit) is ticket #776; this is only enough to unblock the four tab captures.
+# NB: these taps are also what intermittently CRASHES RocketSim 16.2 (uncaught
+# FBSimulatorControl exception on a background queue; see RS_RECOVERY_TIMEOUT above) —
+# the crash then surfaces as a failed screenshot in capture(), which recovers from it.
 dismiss_first_run_interruptions() {
     # "element_not_found" is the normal case; suppress stdout too (the CLI prints errors as JSON there).
     "${RS}" interact tap --label "Allow While Using App" --timeout 1 --udid "${UDID}" >/dev/null 2>&1 || true
@@ -436,30 +451,42 @@ dismiss_first_run_interruptions() {
 
 # Capture one framed screenshot to <Screen>_<lang>_<appearance>.jpg.
 # RocketSim always emits PNG bytes; sips converts to JPEG in-place.
-# If the capture fails (RocketSim quit, lost its IPC channel, or crashes on the request),
-# revive RocketSim via ensure_rocketsim and retry once; if it fails again, mark RocketSim
-# as broken for the rest of the run and fall back to an unframed `simctl io screenshot`,
-# so a broken RocketSim degrades the output (no bezels) instead of aborting the run.
+# If the capture fails (because RocketSim quit, lost its IPC channel, or crashed — see the
+# RS_RECOVERY_TIMEOUT comment for the known 16.2 FBSimulatorControl crash), revive
+# RocketSim via ensure_rocketsim and keep retrying for up to RS_RECOVERY_TIMEOUT seconds:
+# a relaunched RocketSim answers IPC almost immediately but needs another 25–50s before
+# it can see the simulator again. Only when the whole window elapses without success is
+# RocketSim marked broken for the rest of the run and the unframed `simctl io screenshot`
+# fallback used, so a truly broken RocketSim (e.g. the 16.3 crash-on-every-request bug)
+# degrades the output (no bezels) once instead of aborting the run.
 capture() {
     local screen="$1" lang="$2" appearance="$3"
     local out="${OUT_DIR}/${screen}_${lang}_${appearance}.jpg"
-    local tmp tmperr framed=0
+    local tmp tmperr framed=0 recovery_start
     tmp="$(mktemp /tmp/screenshot_XXXXXX)"
     tmperr="$(mktemp /tmp/screenshot_err_XXXXXX)"
     if [[ "${RS_BROKEN}" -eq 0 ]]; then
         if "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}" 2>"${tmperr}"; then
             framed=1
         else
-            echo "WARNING: 'rocketsim screenshot' failed for ${screen}/${lang}/${appearance} — reviving RocketSim and retrying:" >&2
+            echo "WARNING: 'rocketsim screenshot' failed for ${screen}/${lang}/${appearance} — reviving RocketSim and retrying for up to ${RS_RECOVERY_TIMEOUT}s:" >&2
             cat "${tmperr}" >&2
-            ensure_rocketsim || true
-            if "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}" 2>"${tmperr}"; then
-                framed=1
-            else
-                echo "WARNING: 'rocketsim screenshot' failed again — using the simctl fallback for the rest of this run:" >&2
-                cat "${tmperr}" >&2
-                RS_BROKEN=1
-            fi
+            recovery_start="$(date +%s)"
+            while :; do
+                ensure_rocketsim || true
+                if "${RS}" screenshot "${SCREENSHOT_FLAGS[@]}" > "${tmp}" 2>"${tmperr}"; then
+                    framed=1
+                    echo "  RocketSim recovered after $(( $(date +%s) - recovery_start ))s." >&2
+                    break
+                fi
+                if [[ $(( $(date +%s) - recovery_start )) -ge "${RS_RECOVERY_TIMEOUT}" ]]; then
+                    echo "WARNING: 'rocketsim screenshot' still failing after ${RS_RECOVERY_TIMEOUT}s — using the simctl fallback for the rest of this run:" >&2
+                    cat "${tmperr}" >&2
+                    RS_BROKEN=1
+                    break
+                fi
+                sleep "${RS_RETRY_INTERVAL}"
+            done
         fi
     fi
     if [[ "${framed}" -eq 0 ]]; then
