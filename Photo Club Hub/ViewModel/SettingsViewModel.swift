@@ -78,7 +78,7 @@ struct SettingsStruct { // order in which they are shown on Preferences page
         showFormerMembers: false, // was formerly true, but different clubs have different preferences
         showDeceasedMembers: false,
         showExternalCoaches: false,
-        preferenceForFeaturedImage: false,
+        preferenceForFeaturedImage: true,
 
         showClubs: true,
         showTemplateClubs: false,
