@@ -41,16 +41,18 @@ struct MemberPortfolioView: View {
     // These stored properties must stay here (property wrappers can't be declared in extensions)
     // and are not `private` so that the extension file can access them.
     //
-    // Member portfolios of the club targeted by the presets: the Clubs scroll target is a `Section`
-    // keyed by `organization.fullNameTown`, and that section only exists once the club's members
-    // (Level 2) are imported — the `Organization` itself (Level 1) loads earlier and is therefore
-    // not a sufficient readiness signal.
+    // `scrollPresetMembers`: member portfolios of the club targeted by the Clubs/Portfolio presets.
+    // The Clubs scroll target is a `Section` keyed by `organization.fullNameTown`, and that
+    // section only exists once the club's members (Level 2) are imported — the `Organization`
+    // itself (Level 1) loads earlier and is therefore not a sufficient readiness signal.
+    // `showingReadmeSheet`: set to true by the Readme preset to present the ReadmeView sheet (#777).
     @FetchRequest(sortDescriptors: [],
                   predicate: NSPredicate(format: "organization_.fullName_ = %@",
                                          ScreenshotReadiness.portfolioPresetClubName),
                   animation: .default)
     var scrollPresetMembers: FetchedResults<MemberPortfolio> // could theoretically be multiple (in different Towns)
     @State var didApplyPreset = false
+    @State var showingReadmeSheet = false
 
     var body: some View {
         ScrollViewReader { proxy in // proxy variant supports programmatic scrolling
@@ -135,6 +137,7 @@ struct MemberPortfolioView: View {
                     }
                 }
             }
+            .sheet(isPresented: $showingReadmeSheet, content: readmeSheetContent) // screenshot pipeline (#777)
         } // ScrollViewReader
     }
 

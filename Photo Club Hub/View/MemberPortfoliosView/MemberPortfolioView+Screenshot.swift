@@ -8,10 +8,10 @@
 import SwiftUI // for Transaction, withTransaction, ScrollViewProxy
 
 // Screenshot pipeline only (#776/#777) — no role in normal app use.
-// Kept out of MemberPortfolioView.swift so the mainstream code stays uncluttered. The
-// counterpart stored properties (`scrollPresetMembers`, `didApplyPreset`) must remain in
-// MemberPortfolioView itself because property wrappers cannot be declared in extensions.
-// See capture-screenshots.sh and ScreenshotReadiness.swift for the pipeline this serves.
+// Kept out of MemberPortfolioView.swift so the mainstream code stays uncluttered.
+// The counterpart stored properties (`scrollPresetMembers`, `didApplyPreset`, `showingReadmeSheet`)
+// must remain in MemberPortfolioView itself because property wrappers cannot be declared in
+// extensions. See capture-screenshots.sh and ScreenshotReadiness.swift for the pipeline this serves.
 extension MemberPortfolioView {
 
     /// The `-initialTab` launch argument (lowercased); drives the screenshot-pipeline presets.
@@ -36,10 +36,37 @@ extension MemberPortfolioView {
     ///   manages its own layout, so we drive it with `ScrollViewReader`'s `scrollTo(_:anchor:)` instead.
     /// - `PortfolioViaClubs`: pushes the preset member's SinglePortfolioView via `selectedPortfolio`,
     ///   latching only once that member's record has been imported (club members arrive progressively).
+    /// - `Readme`: presents `ReadmeView` as a sheet (#777); no data loading required so handled before
+    ///   the `scrollPresetMembers` guard below.
+    /// Content of the screenshot-pipeline Readme sheet (#777), referenced from
+    /// `MemberPortfolioView.body`'s `.sheet(isPresented: $showingReadmeSheet, content:)`.
+    @ViewBuilder func readmeSheetContent() -> some View {
+        ReadmeView()
+    }
+
     func applyScrollPresetIfReady(proxy: ScrollViewProxy) {
-        guard didApplyPreset == false, scrollPresetMembers.isEmpty == false else {
+        guard !didApplyPreset else { return }
+
+        // Readme preset needs no data (#777). Present the sheet and signal readiness from
+        // here (the presenter), mirroring the Clubs preset below: an `.onAppear` inside the
+        // sheet's nested GeometryReader → NavigationStack → ScrollView hierarchy proved
+        // unreliable as a readiness hook, so the sheet content carries no screenshot code.
+        if initialTabArgument == "readme" {
+            didApplyPreset = true
+            Task { @MainActor in
+                // Deferring one runloop tick avoids presenting the sheet while the enclosing
+                // tab view is still mid-transition (which can silently drop the presentation).
+                showingReadmeSheet = true
+                // Same 2 s settle delay as the Clubs preset: outlasts the iOS 26
+                // sidebar→tab-bar morph plus the sheet's slide-up animation.
+                try? await Task.sleep(for: .seconds(2))
+                ScreenshotReadiness.signalReady(for: "Readme") // tells capture script to stop waiting
+            }
             return
         }
+
+        guard scrollPresetMembers.isEmpty == false else { return }
+
         if let target = scrollPresetSectionID {
             didApplyPreset = true
             Task { @MainActor in // wait one runloop tick so the List has laid out the freshly inserted section
