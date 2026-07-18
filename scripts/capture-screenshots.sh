@@ -11,7 +11,9 @@
 # (one launch per screen); the RocketSim CLI provides the device-framed captures,
 # and `xcrun simctl` a clean status bar and appearance.
 #
-# Output: PNGs named <Screen>_<lang>_<appearance>.png in the output folder (see OUT_DIR).
+# Output: per screen a framed JPG named <Screen>_<lang>_<appearance>.jpg (background flattened
+# to white for light captures, black for dark ones) plus the original transparent-background
+# PNG (larger, but usable on any backdrop; suppress with --no-png), in OUT_DIR.
 #
 # ---------------------------------------------------------------------------
 # Scope (per #775):
@@ -38,7 +40,7 @@
 # Arguments of script:
 # ---------------------------------------------------------------------------
 #
-#   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted]
+#   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted] [--no-png]
 #   --build         Build the app for the target simulator and (re)install it first.
 #   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
 #   --ios-version <version>
@@ -46,6 +48,8 @@
 #                   the latest installed runtime). Ignored when --udid is set.
 #   --out <dir>     Override the output directory (default: <repo>/scripts/screenshots).
 #   --keep-booted   Do not shut the simulator down when finished.
+#   --no-png        Only keep the flattened JPGs; discard the transparent-background PNGs
+#                   (default: keep both).
 #
 # ---------------------------------------------------------------------------
 # Screenshot-related arguments of the app itself:
@@ -135,10 +139,17 @@ TAB_SCREENS=(Maps Clubs People Settings)
 EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople Prelude Readme)
 
 # Framing options for `rocketsim screenshot`.
-BEZEL="device"          # device frame style: none | simulator | device
-BACKGROUND="#FFFFFF"    # background color behind the framed device
-DEVICE_SHADOW=1         # 1 = render a shadow behind the device frame
-JPEG_QUALITY=85         # JPEG quality 0–100 (RocketSim outputs PNG; sips converts)
+BEZEL="device"            # device frame style: none | simulator | device
+BACKGROUND="transparent"  # PNG background (transparent | preset | #RRGGBB); keep transparent
+                          # so the saved PNGs can be used against any backdrop
+DEVICE_SHADOW=1           # 1 = render a shadow behind the device frame
+JPEG_QUALITY=85           # JPEG quality 0–100 (see flatten_png_to_jpg)
+
+# JPEG has no alpha channel, so converting the transparent PNG flattens its background onto
+# a solid color (flatten_png_to_jpg below). Match the matte to the captured appearance — a
+# white matte around a dark capture clashes on dark web pages (and vice versa). RRGGBB, no '#'.
+JPG_BACKGROUND_LIGHT="FFFFFF"
+JPG_BACKGROUND_DARK="000000"
 
 # Readiness polling (#776). The app (ScreenshotReadiness.swift) writes
 # Documents/screenshot-ready inside its data container once the launched screen's preset
@@ -156,6 +167,7 @@ OUT_DIR="${REPO_ROOT}/Scripts/screenshots"
 # Behaviour flags (set by args).
 DO_BUILD=0
 KEEP_BOOTED=0
+KEEP_PNG=1
 
 # ---------------------------------------------------------------------------
 # Locate the RocketSim CLI (may not be on PATH; ships inside the app bundle).
@@ -186,6 +198,7 @@ while [[ $# -gt 0 ]]; do
         --ios-version) PREFERRED_IOS_VERSION="${2?--ios-version needs a value}"; shift 2 ;;
         --out)         OUT_DIR="${2:?--out needs a value}"; shift 2 ;;
         --keep-booted) KEEP_BOOTED=1; shift ;;
+        --no-png)      KEEP_PNG=0; shift ;;
         -h|--help)     grep -E '^# ' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
         *)             echo "Unknown argument: $1" >&2; exit 2 ;;
     esac
@@ -480,8 +493,47 @@ dismiss_first_run_interruptions() {
     "${RS}" interact tap --label "Close" --type Button --timeout 1 --udid "${UDID}" >/dev/null 2>&1 || true
 }
 
-# Capture one framed screenshot to <Screen>_<lang>_<appearance>.jpg.
-# RocketSim always emits PNG bytes; sips converts to JPEG in-place.
+# Flatten a (possibly transparent) PNG onto a solid background color and encode as JPEG.
+# sips composites PNG transparency onto WHITE with no way to choose the matte color (its
+# --padColor only applies to added border pixels), so the flattening is done with a small
+# AppKit script instead — osascript/JXA ships with macOS, so no extra tools are needed.
+# It fills a bitmap with the matte color, composites the PNG over it (sourceOver — the
+# default drawInRect uses "copy", which would replace the fill), and encodes JPEG.
+# Opaque PNGs (the simctl fallback) pass through visually unchanged.
+# Usage: flatten_png_to_jpg <in.png> <out.jpg> <RRGGBB> <quality 0-100>
+flatten_png_to_jpg() {
+    /usr/bin/osascript -l JavaScript - "$1" "$2" "$3" "$4" <<'JXA' >/dev/null
+function run(argv) {
+    ObjC.import("AppKit");
+    const inPath = argv[0], outPath = argv[1], hex = argv[2], quality = argv[3];
+    const src = $.NSBitmapImageRep.imageRepWithData($.NSData.dataWithContentsOfFile(inPath));
+    if (src.isNil()) throw new Error("cannot read PNG: " + inPath);
+    const w = src.pixelsWide, h = src.pixelsHigh;
+    const dst = $.NSBitmapImageRep.alloc.initWithBitmapDataPlanesPixelsWidePixelsHighBitsPerSampleSamplesPerPixelHasAlphaIsPlanarColorSpaceNameBytesPerRowBitsPerPixel(
+        null, w, h, 8, 4, true, false, $.NSDeviceRGBColorSpace, 0, 0);
+    $.NSGraphicsContext.saveGraphicsState;
+    $.NSGraphicsContext.setCurrentContext($.NSGraphicsContext.graphicsContextWithBitmapImageRep(dst));
+    const r = parseInt(hex.slice(0, 2), 16) / 255;
+    const g = parseInt(hex.slice(2, 4), 16) / 255;
+    const b = parseInt(hex.slice(4, 6), 16) / 255;
+    $.NSColor.colorWithDeviceRedGreenBlueAlpha(r, g, b, 1).setFill;
+    $.NSRectFill($.NSMakeRect(0, 0, w, h));
+    src.drawInRectFromRectOperationFractionRespectFlippedHints(
+        $.NSMakeRect(0, 0, w, h), $.NSMakeRect(0, 0, 0, 0),
+        $.NSCompositingOperationSourceOver, 1.0, false, $());
+    $.NSGraphicsContext.restoreGraphicsState;
+    const jpeg = dst.representationUsingTypeProperties($.NSBitmapImageFileTypeJPEG,
+        $({NSImageCompressionFactor: quality / 100}));
+    if (jpeg.isNil() || !jpeg.writeToFileAtomically(outPath, true)) {
+        throw new Error("cannot write JPEG: " + outPath);
+    }
+}
+JXA
+}
+
+# Capture one framed screenshot to <Screen>_<lang>_<appearance>.jpg (plus the .png
+# unless --no-png). RocketSim always emits PNG bytes; flatten_png_to_jpg converts to JPEG
+# with a white (light mode) or black (dark mode) background.
 # If the capture fails (because RocketSim quit, lost its IPC channel, or crashed — see the
 # RS_RECOVERY_TIMEOUT comment for the known 16.2 FBSimulatorControl crash), revive
 # RocketSim via ensure_rocketsim and keep retrying for up to RS_RECOVERY_TIMEOUT seconds:
@@ -529,10 +581,23 @@ capture() {
         UNFRAMED_COUNT=$((UNFRAMED_COUNT + 1))
     fi
     rm -f "${tmperr}"
-    /usr/bin/sips -s format jpeg -s formatOptions "${JPEG_QUALITY}" \
-        "${tmp}" --out "${out}" >/dev/null
-    rm -f "${tmp}"
-    echo "  saved ${out}"
+    local bg
+    case "${appearance}" in
+        dark) bg="${JPG_BACKGROUND_DARK}" ;;
+        *)    bg="${JPG_BACKGROUND_LIGHT}" ;;
+    esac
+    if ! flatten_png_to_jpg "${tmp}" "${out}" "${bg}" "${JPEG_QUALITY}"; then
+        echo "ERROR: PNG->JPEG conversion failed for ${screen}/${lang}/${appearance}." >&2
+        rm -f "${tmp}"
+        exit 1
+    fi
+    if [[ "${KEEP_PNG}" -eq 1 ]]; then
+        mv -f "${tmp}" "${OUT_DIR}/${screen}_${lang}_${appearance}.png"
+        echo "  saved ${out} (+ .png)"
+    else
+        rm -f "${tmp}"
+        echo "  saved ${out}"
+    fi
 }
 
 # ---------------------------------------------------------------------------
