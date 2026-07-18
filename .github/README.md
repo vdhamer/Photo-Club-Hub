@@ -21,12 +21,12 @@
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
-            <li><a href="#the-clubs-screen">The Clubs Screen</a></li>
             <li><a href="#the-maps-screen">The Maps Screen</a></li>
-            <li><a href="#the-images-screen">The Images Screen</a></li>
-            <li><a href="#the-settings-screen">The Settings Screen</a></li>
-            <li><a href="#the-readme-screen">The Readme Screen</a></li>
+            <li><a href="#the-clubs-screen">The Clubs Screen</a></li>
             <li><a href="#the-people-screen">The People Screen</a></li>
+            <li><a href="#the-images-screen">The Images Screen</a></li>
+            <li><a href="#the-readme-screen">The Readme Screen</a></li>
+            <li><a href="#the-settings-screen">The Settings Screen</a></li>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
@@ -214,22 +214,13 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
  
 ## The User Interface Screens
 
-The app has a tab bar at the bottom of the screen with four tabs: `People`, `Clubs`, `Maps`, and `Settings`.
+The app has a tab bar at the bottom of the screen with four tabs: `Maps`, `Clubs`, `People`, and `Settings`.
 The remaining screens are reached from there: the `Images` screen opens when you tap a portfolio,
 the `Readme` screen opens via the Info (ⓘ) button available on most tabs,
 and the `Prelude` screen is shown when the app launches.</p>
 
 Usage of the various screens in the user interface:
 <ul>
-
-### The `Clubs` Screen
-
-The `Clubs` screen lists all the photo clubs featured by the app.
-It allows you to first select a photo club and then select the portfolio of one of its members.
-The `Search` bar filters the lists of club members using the photographer's full name or expertise tags.
-Swiping left deletes an entry, but this is not normally needed and is not permanent (yet).
-
-![Clubs Screen](images/portfoliosScreen.png "Clubs Screen")
 
 ### The `Maps` Screen
 
@@ -243,6 +234,24 @@ The screen can also show any photo museums that happen to be in sight. These hav
 The plan is that the screen can switch between listing all photo clubs and listing all photo museums.
 
 ![Maps Screen](images/clubsMuseumsScreen.png "Maps Screen")
+
+### The `Clubs` Screen
+
+The `Clubs` screen lists all the photo clubs featured by the app.
+It allows you to first select a photo club and then select the portfolio of one of its members.
+The `Search` bar filters the lists of club members using the photographer's full name or expertise tags.
+Swiping left deletes an entry, but this is not normally needed and is not permanent (yet).
+
+![Clubs Screen](images/portfoliosScreen.png "Clubs Screen")
+
+### The `People` Screen
+
+The `People` screen lists all the photographers known to the app.
+It allows you to first select the photographer and then select that person's club-specific portfolio.
+If available, club-independent information (like birthdays) for that photographer is displayed here.
+The `Search` bar filters on photographer names.
+
+![People Screen](images/whosWhoScreen.png "People Screen")
 
 ### The `Images` Screen
 
@@ -260,14 +269,6 @@ You can _swipe_ left or right to manually move backwards or forwards through the
 There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
 currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
 
-### The `Settings` Screen
-
-The `Settings` screen allows you to configure which types of portfolios you want to include in the
-`Clubs` screen. You can, for example, choose whether to show former members.
-The `Settings` screen probably should also filter the `People` screen - but it doesn't yet.
-
-![Settings Screen](images/preferencesScreen.png "Settings Screen")
-
 ### The `Readme` Screen
 
 The `Readme` screen contains background information on the app and info on app usage.
@@ -275,14 +276,13 @@ It opens as a sheet via the Info (ⓘ) button in the toolbar of the `People`, `C
 
 ![Readme Screen](images/readmeScreen.png "Readme Screen")
 
-### The `People` Screen
+### The `Settings` Screen
 
-The `People` screen lists all the photographers known to the app.
-It allows you to first select the photographer and then select that person's club-specific portfolio.
-If available, club-independent information (like birthdays) for that photographer is displayed here.
-The `Search` bar filters on photographer names.
+The `Settings` screen allows you to configure which types of portfolios you want to include in the
+`Clubs` screen. You can, for example, choose whether to show former members.
+The `Settings` screen probably should also filter the `People` screen - but it doesn't yet.
 
-![People Screen](images/whosWhoScreen.png "People Screen")
+![Settings Screen](images/preferencesScreen.png "Settings Screen")
 
 ### The `Prelude` Screen
 
