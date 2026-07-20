@@ -239,7 +239,6 @@
 		376DC9512EC3A98900FB429B /* PreludeImageStore2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2627.swift; sourceTree = "<group>"; };
 		376DC9732EC3F33200FB429B /* Crosshairs1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs1718.swift; sourceTree = "<group>"; };
 		377D8036300294A000E04A04 /* LineCount.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = LineCount.csv; sourceTree = "<group>"; };
-		377D8037300294A000E04A04 /* LineCount_old.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount_old.xlsx; sourceTree = "<group>"; };
 		377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FotoclubHub_flyer_nl.md; sourceTree = "<group>"; };
 		377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PhotoClubHub_flyer_en.md; sourceTree = "<group>"; };
 		378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeTip.swift; sourceTree = "<group>"; };
@@ -518,14 +517,6 @@
 			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
 		};
-		377D8038300294CF00E04A04 /* Old stuff just for safety */ = {
-			isa = PBXGroup;
-			children = (
-				377D8037300294A000E04A04 /* LineCount_old.xlsx */,
-			);
-			path = "Old stuff just for safety";
-			sourceTree = "<group>";
-		};
 		378D4D4D2FFE571700A49F5A /* TipKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +569,8 @@
 				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
 				37F36DB93007D34800BBDD60 /* countLines.sh */,
 				3769DF59300AB39F00D819FA /* verify-screenshots.sh */,
+				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
+				377D8036300294A000E04A04 /* LineCount.csv */,
 			);
 			path = scripts;
 			sourceTree = "<group>";
@@ -841,8 +834,6 @@
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */,
 				377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */,
-				377D8038300294CF00E04A04 /* Old stuff just for safety */,
-				377D8036300294A000E04A04 /* LineCount.csv */,
 				37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */,
 				37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
@@ -858,7 +849,6 @@
 				D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */,
 				D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */,
 				D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */,
-				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				D0A958632D596C3300658373 /* Website_Status_PPT */,
 				37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */,
 			);

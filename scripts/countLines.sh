@@ -13,7 +13,7 @@
 #   expertises                 : number of supported expertises, counted in
 #                                JSON/root.level0.json; empty if jq is missing.
 #
-# The CSV (documentation/LineCount.csv) is the version-controlled source of
+# The CSV (scripts/LineCount.csv) is the version-controlled source of
 # truth. LineCount.xlsx is only a viewer that loads this CSV via Power Query.
 #
 # Usage:  ./scripts/countLines.sh
@@ -37,7 +37,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # --- configuration -----------------------------------------------------------
-CSV="$REPO_ROOT/Photo Club Hub/Documentation/LineCount.csv"
+CSV="$REPO_ROOT/scripts/LineCount.csv"
 TESTS_DIR="$REPO_ROOT/Tests"                       # where @Test macros live
 EXCLUDE_DIRS=".build,DerivedData,Pods,.git"        # cloc --exclude-dir list
 GH="/opt/homebrew/bin/gh"                          # GitHub CLI (optional)
