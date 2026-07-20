@@ -654,6 +654,7 @@ Jazeker:
 | FAQ over `expertise` in level2.json bestanden | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) | ✓ | - |
 | FAQ about `expertise` in level2.json files | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_EN.md)  | - | ✓ |
 | Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | - | ✓ |
+| Readme Photo Club Hub - NL | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README_NL.md) | ✓ | - |
 | Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | - | ✓ |
 | Interne readme in Photo Club Hub app | ingebouwd in app | ✓ | ✓ |
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://tinyurl.com/fchPPTnl) | ✓ | komt |
