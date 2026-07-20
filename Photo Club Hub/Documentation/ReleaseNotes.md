@@ -26,6 +26,7 @@ README SCREEN
 DOCUMENTATION MAINTENANCE
 
 - Updated some of the diagrams in online/Github README
+- Translated GitHub README into README\_NL.md
 
 This build #4663 was made using Xcode 26.6 and is intended to go the App Store.
 Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
