@@ -8,7 +8,7 @@ USER-FACING
 * TODO: more search functionality on Clubs screen
 
 This build #4664 is a placeholder for the plans for 2.10.1
-Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible changes.
+This build is just a placeholder for possible changes.
 
 ---------------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ USER-FACING
 README SCREEN
 
 * Fixed typos in EN and NL versions and updates related to UI changes.
-- TODO: updated 4 screenshots in the Readme screen <<<<<
+- Updated 4 screenshots in the Readme screen
 
 STRUCTURAL
 
