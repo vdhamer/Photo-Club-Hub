@@ -255,6 +255,15 @@
 		37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewMap.swift; sourceTree = "<group>"; };
 		37A2A0E52FAAA53400EF39A1 /* MapsViewRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewRemark.swift; sourceTree = "<group>"; };
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
+		37A88B52300E1D1E00193829 /* App_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = App_NL_Light.jpg; sourceTree = "<group>"; };
+		37A88B53300E1D1E00193829 /* clubsMuseumsScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clubsMuseumsScreen_NL.png; sourceTree = "<group>"; };
+		37A88B54300E1D1E00193829 /* imagesScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesScreen_NL.png; sourceTree = "<group>"; };
+		37A88B55300E1D1E00193829 /* portfoliosScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfoliosScreen_NL.png; sourceTree = "<group>"; };
+		37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen_NL.png; sourceTree = "<group>"; };
+		37A88B57300E1D1E00193829 /* preludeScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preludeScreen_NL.png; sourceTree = "<group>"; };
+		37A88B58300E1D1E00193829 /* readmeScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readmeScreen_NL.png; sourceTree = "<group>"; };
+		37A88B59300E1D1E00193829 /* whosWhoScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whosWhoScreen_NL.png; sourceTree = "<group>"; };
+		37A88B5A300E1D3400193829 /* README_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_NL.md; sourceTree = "<group>"; };
 		37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level2JsonReaders+Helpers.swift"; sourceTree = "<group>"; };
 		37B1A4682F0B18A700854FBD /* museumsUS.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsUS.level1.json; sourceTree = "<group>"; };
 		37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoclubVeghelMembersProvider.swift; sourceTree = "<group>"; };
@@ -948,6 +957,7 @@
 			isa = PBXGroup;
 			children = (
 				D02C35F12880C3D6008C671A /* README.md */,
+				37A88B5A300E1D3400193829 /* README_NL.md */,
 				D02AB3EF28A702800021BF41 /* LICENSE.md */,
 				D0F2F2F32873A19F009DDD2A /* images */,
 			);
@@ -957,6 +967,14 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				37A88B52300E1D1E00193829 /* App_NL_Light.jpg */,
+				37A88B53300E1D1E00193829 /* clubsMuseumsScreen_NL.png */,
+				37A88B54300E1D1E00193829 /* imagesScreen_NL.png */,
+				37A88B55300E1D1E00193829 /* portfoliosScreen_NL.png */,
+				37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */,
+				37A88B57300E1D1E00193829 /* preludeScreen_NL.png */,
+				37A88B58300E1D1E00193829 /* readmeScreen_NL.png */,
+				37A88B59300E1D1E00193829 /* whosWhoScreen_NL.png */,
 				D0640F2F2E0609B7008EAE00 /* dataModel.png */,
 				D0DE6B6D2DB6DAE700841DBF /* packages.png */,
 				D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */,
