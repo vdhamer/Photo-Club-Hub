@@ -12,24 +12,48 @@ Work on 2.10.1 hasn't started yet. This build is just a placeholder for possible
 
 ---------------------------------------------------------------------------
 
-### 2.10.0 (GitHub commit ???????) ??-07-2026
+### 2.10.0 (GitHub commit 2bcbbf9) 20-07-2026
 
 USER-FACING
 
-* Updated tab order
-- Changed color for Settings tab to bright blue
+* Top-level navigation between screens now uses Tabs (was: Buttons). 
+- Tabs have new icons and new names:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
+- Detailed behavior of the Search bar has changed. Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
+- First use of TipKit for onboarding new users.
+- Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
+- People screen: when using Search, only relevant (non-empty) clubs are shown.
 
 README SCREEN
 
-* Updated screenshots used in built-in Readme
+* Fixed typos in EN and NL versions and updates related to UI changes.
+- TODO: updated 4 screenshots in the Readme screen <<<<<
+
+STRUCTURAL
+
+* Merging of 2627 and 1718 versions of [Filtered]MemberPortfoliosView into single source files.
+* Renaming of filenames and symbols ending on 2626 to 2627 (iOS 27.0 betas are now available)
+* Tested with MacOS 26.5.2, Xcode 27.0 beta (27A5218g), Xcode 26.6 (17F113), iOS 27.0 beta (24A5380g), iOS 26.5.2 and  SwiftLint 0.65
+* Synchonized code with Photo Club Hub HTML
+* Fixed missing CoreData import (gave warnings under Xcode 27.0)
+* Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
+- Added missing uniqueness constraint
+- Significantly increased number of tests
+- JSON files used only for testing are no longer shipped inside the app
+- Tests didn't support iOS 17 (was accidentally set to 18+)
+- Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
+- Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
+- Running automated testing has become more robust.
+- For practical reasons we support iOS 17.5 (was 17.6) and newer. Not sure 17.5 works because that simulator fails on Xcode beta.
+- Switched from manual updating of the LineCount.xlsx spreadsheet to a scripted version, countLines.sh (with help from Claude).
 
 DOCUMENTATION MAINTENANCE
 
-- Updated some of the diagrams in online/Github README
-- Translated GitHub README into README\_NL.md
+- Updated data model in README.md
+- Updated screen shots within in-app Readme
+- Translated GitHub README into README_NL.md
 
-This build #4663 was made using Xcode 26.6 and is intended to go the App Store.
-Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
+This build #4663 was made using Xcode 26.6 and is meant to be released via the App Store.
+Amount of code and data lines changed since previous release: 14,934 additions and 4,010 deletions across 467 files.
 
 ---------------------------------------------------------------------------
 
