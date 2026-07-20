@@ -653,7 +653,8 @@ Jazeker:
 | Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | - | ✓ |
 | FAQ over `expertise` in level2.json bestanden | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) | ✓ | - |
 | FAQ about `expertise` in level2.json files | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_EN.md)  | - | ✓ |
-| Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | - | ✓ |
+| Readme Photo Club Hub - Nederlands | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README_NL.md) | ✓ | - |
+| Readme Photo Club Hub - Engels| [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | - | ✓ |
 | Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | - | ✓ |
 | Interne readme in Photo Club Hub app | ingebouwd in app | ✓ | ✓ |
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://tinyurl.com/fchPPTnl) | ✓ | komt |
