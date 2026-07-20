@@ -41,6 +41,7 @@
 # ---------------------------------------------------------------------------
 #
 #   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted] [--no-png]
+#                                  [--jpg-background-light <color>] [--jpg-background-dark <color>]
 #   --build         Build the app for the target simulator and (re)install it first.
 #   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
 #   --ios-version <version>
@@ -50,6 +51,12 @@
 #   --keep-booted   Do not shut the simulator down when finished.
 #   --no-png        Only keep the flattened JPGs; discard the transparent-background PNGs
 #                   (default: keep both).
+#   --jpg-background-light <color>
+#                   Background color flattened into the *_light.jpg images, as RRGGBB or
+#                   #RRGGBB (default: FFFFFF, i.e. white).
+#   --jpg-background-dark <color>
+#                   Background color flattened into the *_dark.jpg images, as RRGGBB or
+#                   #RRGGBB (default: 000000, i.e. black).
 #
 # ---------------------------------------------------------------------------
 # Screenshot-related arguments of the app itself:
@@ -147,7 +154,8 @@ JPEG_QUALITY=85           # JPEG quality 0–100 (see flatten_png_to_jpg)
 
 # JPEG has no alpha channel, so converting the transparent PNG flattens its background onto
 # a solid color (flatten_png_to_jpg below). Match the matte to the captured appearance — a
-# white matte around a dark capture clashes on dark web pages (and vice versa). RRGGBB, no '#'.
+# white matte around a dark capture clashes on dark web pages (and vice versa).
+# Overridable per run via --jpg-background-light / --jpg-background-dark.
 JPG_BACKGROUND_LIGHT="FFFFFF"
 JPG_BACKGROUND_DARK="000000"
 
@@ -199,10 +207,24 @@ while [[ $# -gt 0 ]]; do
         --out)         OUT_DIR="${2:?--out needs a value}"; shift 2 ;;
         --keep-booted) KEEP_BOOTED=1; shift ;;
         --no-png)      KEEP_PNG=0; shift ;;
+        --jpg-background-light) JPG_BACKGROUND_LIGHT="${2:?--jpg-background-light needs a value}"; shift 2 ;;
+        --jpg-background-dark)  JPG_BACKGROUND_DARK="${2:?--jpg-background-dark needs a value}"; shift 2 ;;
         -h|--help)     grep -E '^# ' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
         *)             echo "Unknown argument: $1" >&2; exit 2 ;;
     esac
 done
+
+# Normalize and validate the JPG background colors up front. A leading '#' is stripped.
+JPG_BACKGROUND_LIGHT="${JPG_BACKGROUND_LIGHT#\#}"
+JPG_BACKGROUND_DARK="${JPG_BACKGROUND_DARK#\#}"
+if ! [[ "${JPG_BACKGROUND_LIGHT}" =~ ^[0-9A-Fa-f]{6}$ ]]; then
+    echo "ERROR: --jpg-background-light must be RRGGBB or #RRGGBB (got '${JPG_BACKGROUND_LIGHT}')." >&2
+    exit 2
+fi
+if ! [[ "${JPG_BACKGROUND_DARK}" =~ ^[0-9A-Fa-f]{6}$ ]]; then
+    echo "ERROR: --jpg-background-dark must be RRGGBB or #RRGGBB (got '${JPG_BACKGROUND_DARK}')." >&2
+    exit 2
+fi
 
 # Verify xcrun simctl is available (requires Xcode, not just the command-line tools).
 if ! /usr/bin/xcrun simctl help &>/dev/null; then
