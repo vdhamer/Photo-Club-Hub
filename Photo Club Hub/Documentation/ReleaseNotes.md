@@ -6,6 +6,9 @@ USER-FACING
 - TODO: display expertises on People screen
 * TODO: more search functionality on People screen
 * TODO: more search functionality on Clubs screen
+- 
+STRUCTURAL
+- Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)
 
 This build #4664 is a placeholder for the plans for 2.10.1
 This build is just a placeholder for possible changes.
@@ -51,8 +54,9 @@ DOCUMENTATION MAINTENANCE
 - Updated data model in README.md
 - Updated screen shots within in-app Readme
 - Translated GitHub README into README_NL.md
+- Most screenshots in App Store updated.
 
-This build #4663 was made using Xcode 26.6 and is meant to be released via the App Store.
+This build #4663 was made using Xcode 26.6 and was submitted to the App Store.
 Amount of code and data lines changed since previous release: 14,934 additions and 4,010 deletions across 467 files.
 
 ---------------------------------------------------------------------------

@@ -121,8 +121,8 @@ SCHEME="Photo Club Hub"
 
 # Preferred simulator model (the current iPhone "Pro"). Auto-discovered by name unless
 # an explicit --udid is supplied. Change PREFERRED_DEVICE to retarget.
-PREFERRED_DEVICE="iPad Air 13-inch (M4)"
-#PREFERRED_DEVICE="iPhone 17 Pro"
+#PREFERRED_DEVICE="iPad Air 13-inch (M4)"
+PREFERRED_DEVICE="iPhone 17 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""            # resolved below (or from --udid)
 
