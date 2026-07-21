@@ -373,7 +373,8 @@ if [[ "${KEEP_BOOTED}" -eq 0 ]]; then
 fi
 
 if [[ "${FAILURES}" -eq 0 ]]; then
-    echo "All tests passed. Deleting test images."
+    echo "All tests passed."
+    echo "Deleting test images."
     rm -rf "${OUT_DIR}"
     echo "Done."
 else
