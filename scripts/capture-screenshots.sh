@@ -35,6 +35,8 @@
 #     this script build+install it for you.
 #   - Written for macOS's stock bash 3.2 (no associative arrays / namerefs / mapfile).
 #   - There is NO support for iOS 17 (some of the code resides in MainTabView1827).
+#   - The script assumes the app is at its default setting. If the app would be configured
+#     to hide all clubs, the script cannot find the example its is looking for.
 #
 # ---------------------------------------------------------------------------
 # Arguments of script:
@@ -119,6 +121,7 @@ SCHEME="Photo Club Hub"
 
 # Preferred simulator model (the current iPhone "Pro"). Auto-discovered by name unless
 # an explicit --udid is supplied. Change PREFERRED_DEVICE to retarget.
+#PREFERRED_DEVICE="iPad Air 13-inch (M4)"
 PREFERRED_DEVICE="iPhone 17 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""            # resolved below (or from --udid)
@@ -147,6 +150,7 @@ EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople Prelude Readme)
 
 # Framing options for `rocketsim screenshot`.
 BEZEL="device"            # device frame style: none | simulator | device
+#BEZEL="simulator"
 BACKGROUND="transparent"  # PNG background (transparent | preset | #RRGGBB); keep transparent
                           # so the saved PNGs can be used against any backdrop
 DEVICE_SHADOW=1           # 1 = render a shadow behind the device frame
