@@ -121,8 +121,8 @@ SCHEME="Photo Club Hub"
 
 # Preferred simulator model (the current iPhone "Pro"). Auto-discovered by name unless
 # an explicit --udid is supplied. Change PREFERRED_DEVICE to retarget.
-#PREFERRED_DEVICE="iPad Air 13-inch (M4)"
-PREFERRED_DEVICE="iPhone 17 Pro"
+PREFERRED_DEVICE="iPad Air 13-inch (M4)"
+#PREFERRED_DEVICE="iPhone 17 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""            # resolved below (or from --udid)
 
@@ -171,6 +171,11 @@ READY_TIMEOUT=60                 # per-screen readiness timeout (seconds)
 READY_TIMEOUT_PORTFOLIO=90       # PortfolioVia* also loads the web gallery + jumps to its image
 SLEEP_AFTER_READY=3              # visual settling after readiness: map tiles, thumbnails, scroll
 SLEEP_AFTER_READY_PORTFOLIO=8   # extra settling for Portfolio screens: Juicebox gallery image load
+# Pause between screens after each capture. iPad captures push host CPU to ~100%; without
+# a gap the simulator watchdog kills background apps (0x8BADF00D) that can't complete their
+# launch within 30 s when the Mac scheduler is fully saturated. A few seconds costs nothing
+# on a successful run (readiness polling already dominates) but keeps the system breathing.
+SLEEP_BETWEEN_SCREENS=5
 
 # Output directory (kept out of git — see the .gitignore note for Scripts/screenshots).
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -654,6 +659,7 @@ for lang in "${LANGUAGES[@]}"; do
             fi
             dismiss_first_run_interruptions
             capture "${screen}" "${lang}" "${appearance}"
+            sleep "${SLEEP_BETWEEN_SCREENS}"
         done
     done
 done
