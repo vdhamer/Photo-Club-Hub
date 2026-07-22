@@ -261,12 +261,14 @@ The title at the top of the screen shows the selected photographer and selected 
 
 ![Portfolio Screen](images/Portfolio/PortfolioViaClubs_EN_Light.jpg "Portfolio Screen")
 
-Images are shown in present-to-past order, based on the image's _capture_ date.
-For Fotogroep Waalre, the year the image was made is shown in the caption.
+There are different ways to generate the pages of individual portfolios. The preferred way is shown for Fotogroep de Gender
+and uses a Lightroom plug-in (`Juicebox Pro`) to automatically generate web pages from LR collections.
 
-You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
-There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
-currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
+Using this plug-in images can be presented in present-to-past order, based on the image's _capture_ date.
+Optionally the year the image was made is shown in the caption.
+You can _swipe_ left or right to manually move backwards or forwards through the portfolio timeline.
+There is also an _autoplay_ mode that replaces the swiping by an automatic slide show. This screen is (for Fotogroep Waalre)
+currently based on a Javascript plug-in (`Juicebox Pro`) that is used to generate galleries for websites.
 
 ### The `People` Screen
 
