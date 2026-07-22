@@ -10,7 +10,7 @@
 [![Discussions][discussions-shield]][discussions-url]
 [![MIT License][license-shield]][license-url]
 
-![Schermafbeeldingen van 3 schermen](images/Levels_NL_Light.jpg "Schermafbeeldingen van de app")
+![Schermafbeeldingen van 3 schermen](images/Levels/Levels_NL_Light.jpg "Schermafbeeldingen van de app")
 
 <!-- INHOUDSOPGAVE -->
 ## Inhoudsopgave
@@ -504,7 +504,7 @@ De belangrijkste inhoud is een lijst van ondersteunde expertises voor fotografen
 
 ### Levels en schermen
 
-![Schermafbeeldingen van 3 schermen](images/App_NL_Light.jpg "Schermafbeeldingen van de app")
+![Schermafbeeldingen van 3 schermen](images/Levels/Levels_NL_Light.jpg "Schermafbeeldingen van de app")
 
 Wanneer een club op `Level 1` staat, verschijnt deze als markering op de kaarten (schermafbeelding links).
 De app kent immers de naam van de club en de breedte-/lengtegraad van de locatie.
