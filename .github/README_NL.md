@@ -244,7 +244,7 @@ Hier selecteer je eerst een fotoclub en daarna het portfolio van een van de lede
 De `Zoek`-balk filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
 Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig en is (nog) niet permanent.
 
-![Clubs-scherm](images/Clubs/Clubs_NL_light.jpg "Clubs-scherm")
+![Clubs-scherm](images/Clubs/Clubs_NL_Light.jpg "Clubs-scherm")
 
 ### Het `Personen`-scherm
 
