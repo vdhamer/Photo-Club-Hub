@@ -208,6 +208,8 @@
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
 		3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard.txt; sourceTree = "<group>"; };
 		3726AD293010BB3D00918B8D /* check-rocketsim-bug-1085.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "check-rocketsim-bug-1085.sh"; sourceTree = "<group>"; };
+		3726AD753010E6F500918B8D /* App_EN_Light 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "App_EN_Light 2.jpg"; sourceTree = "<group>"; };
+		3726AD763010E70A00918B8D /* App_NL_Light 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "App_NL_Light 2.jpg"; sourceTree = "<group>"; };
 		373EE0D02EED808700F311BE /* FotobondNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotobondNumbers.swift; sourceTree = "<group>"; };
 		37415B072F9D2DA3004B4647 /* ReadmeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSection.swift; sourceTree = "<group>"; };
 		37415B1F2F9D3733004B4647 /* ReadmeSectionOnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnApp.swift; sourceTree = "<group>"; };
@@ -979,6 +981,8 @@
 				D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D0B6B05B2DB27A3E00EAAF69 /* packages.key */,
+				3726AD753010E6F500918B8D /* App_EN_Light 2.jpg */,
+				3726AD763010E70A00918B8D /* App_NL_Light 2.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
