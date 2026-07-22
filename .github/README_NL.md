@@ -205,9 +205,14 @@ De app is dus niet bedoeld als vervanging van een persoonlijke website, maar kan
 Verder staat niets je in de weg om een online groep fotografievrienden te ondersteunen - ervan uitgaande
 dat zij dit samen willen organiseren.
 
+<ul><details>
+<summary>Details (klik om uit te vouwen)</summary></p>
+
 Je zou jezelf zelfs als eenpersoonsclub kunnen beschouwen en je beelden in één portfolio onder die club kunnen plaatsen.
 Of je gebruikt het clubniveau om een paar individuele fotografen te groeperen (per regio of interessegebied), zolang de leden
-van deze niet-club bereid zijn dit af te stemmen (bijvoorbeeld het bijhouden van de lijst van portfolio's=fotografen die dan lid zijn van een informele club).
+van deze niet-club bereid zijn dit af te stemmen (bijvoorbeeld het bijhouden van de lijst van 
+portfolio's=fotografen die dan lid zijn van een informele club).
+
 <a/></p></ul>
 </details></ul></details>
 
@@ -216,32 +221,42 @@ van deze niet-club bereid zijn dit af te stemmen (bijvoorbeeld het bijhouden van
  
 ## De schermen van de gebruikersinterface
 
-De app heeft onderaan het scherm een tabbalk met vier tabs: `Kaarten`, `Clubs`, `Personen` en `Instellingen`.
-De overige schermen zijn van daaruit bereikbaar: het `Afbeeldingen`-scherm opent wanneer je op een portfolio tikt,
-het `Readme`-scherm opent via de Info-knop (ⓘ) die op de meeste tabs beschikbaar is,
-en het `Prelude`-scherm verschijnt wanneer de app wordt gestart.</p>
+De app heeft onderaan het scherm een tabknop met vier tabs: `Kaarten`, `Clubs`, `Personen` en `Instellingen`.
+De overige schermen zijn van daaruit bereikbaar: 
+
+- het `Afbeeldingen`-scherm opent wanneer je op een portfolio tikt,
+- het `Readme`-scherm opent via de Info-knop (ⓘ) die op de meeste tabs beschikbaar is,
+- en het `Prelude`-scherm verschijnt wanneer de app wordt gestart.</p>
 
 Gebruik van de verschillende schermen in de gebruikersinterface:
 <ul>
 
 ### Het `Kaarten`-scherm
 
-Het `Kaarten`-scherm toont alle fotoclubs die bekend zijn bij de app.
-Elk item bestaat vooral uit een kaart die toont waar de club zich bevindt, en optioneel je huidige locatie.
+Het `Kaarten`-scherm toont alle fotoclubs die bekend zijn in de app.
+Elk item bestaat vooral uit een kaart die toont waar de club zich bevindt, en toont desgewenst jouw huidige locatie.
 Een knop met een slotje bepaalt of de kaart interactief bediend kan worden (scrollen, zoomen, roteren, 3D).
-Standaard zijn de kaarten niet interactief. Die stand helpt bij het scrollen door de lijst van clubs, in plaats van het scrollen binnen een kaart.
+Standaard zijn de kaarten "op slot". Die stand helpt bij het scrollen door de lijst van clubs, in plaats van het scrollen binnen een kaart.
+
+![Kaarten-scherm](images/Maps/Maps_NL_Light.jpg "Kaarten-scherm")
+
+<ul><details>
+<summary>Details (klik om uit te vouwen)</summary></p>
+    
 Een _paarse_ speld op de kaart toont waar de geselecteerde club is gevestigd (bijvoorbeeld een school of gemeentelijk gebouw).
 Een _blauwe_ speld toont de locatie van elke andere fotoclub die zich toevallig in het getoonde gebied bevindt.
 Het scherm kan ook fotomusea tonen die in beeld zijn. Deze hebben andere markeringen dan de fotoclubs.
-Het plan is dat het scherm kan wisselen tussen het tonen van alle fotoclubs en het tonen van alle fotomusea.
+Op het `Instellingen`-scherm kan je aangeven of je musea en/of clubs wilt verbergen.
+Er zijn ook instellingen om via kleur aan te geven of een Nederlandse club lid is van de Fotobond.
 
-![Kaarten-scherm](images/Maps/Maps_NL_Light.jpg "Kaarten-scherm")
+</details></ul>
 
 ### Het `Clubs`-scherm
 
 Het `Clubs`-scherm toont alle fotoclubs die in de app zijn opgenomen.
 Hier selecteer je eerst een fotoclub en daarna het portfolio van een van de leden.
-De `Zoek`-balk filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
+
+De `Zoek`-knop filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
 Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig en is (nog) niet permanent.
 
 ![Clubs-scherm](images/Clubs/Clubs_NL_Light.jpg "Clubs-scherm")
@@ -269,14 +284,14 @@ Er is ook een _autoplay_-stand voor het automatische doorlopen van de beelden ("
 Het `Personen`-scherm toont alle fotografen die bekend zijn bij de app.
 Hier selecteer je eerst de fotograaf en daarna het clubspecifieke portfolio van die persoon.
 Indien beschikbaar wordt hier ook clubonafhankelijke informatie (zoals verjaardagen) van de fotograaf getoond.
-De `Zoek`-balk filtert op de namen van fotografen.
+De `Zoek`-knop filtert op de namen van fotografen.
 
 ![Personen-scherm](images/whosWhoScreen_NL.png "Personen-scherm")
 
 ### Het `Readme`-scherm
 
 Het `Readme`-scherm (in de app getiteld "Over deze app") bevat achtergrondinformatie over de app en uitleg over het gebruik ervan.
-Het opent als een sheet via de Info-knop (ⓘ) in de werkbalk van de tabs `Personen`, `Clubs` en `Kaarten`.
+Het opent als een sheet via de Info-knop (ⓘ) in de werkknop van de tabs `Personen`, `Clubs` en `Kaarten`.
 
 ![Readme-scherm](images/readmeScreen_NL.png "Readme-scherm")
 
@@ -351,16 +366,16 @@ De HTML-versie dekt ook de gevallen waarin iemand de informatie of foto's op een
 
 ### Doorzoekbare lijsten
 
-De drie schermen met lange lijsten (`Clubs`, `Kaarten`, `Personen`) hebben elk een zoekbalk
+De drie schermen met lange lijsten (`Clubs`, `Kaarten`, `Personen`) hebben elk een zoekknop
 waarin je kunt invoeren wat je zoekt. Dit beperkt de lijst tot items die aan dat filtercriterium voldoen.</p>
 
-<details><summary>Details over de zoekbalk (klik om uit te vouwen)</summary></p>
+<details><summary>Details over de zoekknop (klik om uit te vouwen)</summary></p>
 
-De plaats van de zoekbalk verschilt per apparaat: iPads tonen deze bovenaan het scherm,
-nieuwere iPhones tonen deze onderaan het scherm (net boven de tabbalk),
+De plaats van de zoekknop verschilt per apparaat: iPads tonen deze bovenaan het scherm,
+nieuwere iPhones tonen deze onderaan het scherm (net boven de tabknop),
 en oudere iPhones tonen deze bovenaan de lijst (scroll snel omhoog tot je bovenaan bent).
 
-De tekst die je in de zoekbalk typt, wordt vergeleken met sleutelvelden van de records in de lijst.
+De tekst die je in de zoekknop typt, wordt vergeleken met sleutelvelden van de records in de lijst.
 
 - In het `Clubs`-scherm filtert een zoekopdracht op de namen van fotografen en op hun expertises.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
@@ -371,7 +386,7 @@ De tekst die je in de zoekbalk typt, wordt vergeleken met sleutelvelden van de r
 - In het `Personen`-scherm proberen zoekopdrachten te matchen op de volledige naam van de fotograaf.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
 
-Ontwerpdetail: het filteren via de zoekbalk gebeurt in de gebruikersinterface van de app en niet door de CoreData-database.
+Ontwerpdetail: het filteren via de zoekknop gebeurt in de gebruikersinterface van de app en niet door de CoreData-database.
 </details>
 
 ### Expertises van fotografen
