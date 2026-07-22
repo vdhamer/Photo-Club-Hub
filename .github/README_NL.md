@@ -246,21 +246,23 @@ Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig e
 
 ![Clubs-scherm](images/Clubs/Clubs_NL_Light.jpg "Clubs-scherm")
 
-### Het `Afbeeldingen`-scherm
+### Het `Portfolio`-scherm
 
-Het `Afbeeldingen`-scherm toont één portfolio (van één fotograaf verbonden aan één club).
-Je bereikt het door op een `portfolio` te tikken in het `Clubs`- of het `Personen`-scherm.
-De titel bovenaan het scherm toont de geselecteerde fotograaf en de geselecteerde club:
-"Jane Doe @ Club F/8".
+Het `Portfolio`-scherm toont één portfolio (van één fotograaf verbonden aan één club).
+Je bereikt het door op een `portfolio` te tikken in het `Clubs`-scherm.
+Er is een vergelijkbare route vanuit het `Personen`-scherm.
+De titel bovenaan het `Portfolio`-scherm toont de geselecteerde fotograaf en de geselecteerde club:
+"Francien van Mil van Fotogroep de Gender".
 
 ![Portfolio-scherm](images/Portfolio/PortfolioViaClubs_NL_Light.jpg "Portfolio-scherm")
 
-Beelden worden getoond in volgorde van heden naar verleden, op basis van de _opnamedatum_ van het beeld.
-Bij Fotogroep Waalre wordt het jaar waarin het beeld is gemaakt in het bijschrift getoond.
+Er zijn verschillende manieren om deze portfolio's aan te maken. Deze manier is te zien bij Fotogroep de Gender
+en gebruikt een Lightroom plug-in (`Juicebox Pro`) om webpagina's te maken vanuit LR collecties.
 
-Je kunt naar links of rechts _vegen_ om handmatig terug of vooruit door het portfolio te bladeren.
-Er is ook een _autoplay_-modus voor een automatische diavoorstelling. Dit scherm is (voor Fotogroep Waalre)
-momenteel gebaseerd op een JavaScript-plug-in (`Juicebox Pro`) die normaal wordt gebruikt bij het bouwen van websites.
+Op de voorkeursmanier worden beelden automatisch getoond in volgorde van heden naar verleden op basis van de _opnamedatum_ van het beeld.
+Soms (afhankelijk van plug-in instellingen) krijg je het jaartal onder de foto's te zien.
+Je kunt daar naar links of rechts _vegen_ om handmatig terug of vooruit te bladeren door het portfolio.
+Er is ook een _autoplay_-stand voor het automatische doorlopen van de beelden ("diavoorstelling").
 
 ### Het `Personen`-scherm
 
