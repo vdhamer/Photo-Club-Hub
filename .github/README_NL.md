@@ -235,7 +235,7 @@ Een _blauwe_ speld toont de locatie van elke andere fotoclub die zich toevallig 
 Het scherm kan ook fotomusea tonen die in beeld zijn. Deze hebben andere markeringen dan de fotoclubs.
 Het plan is dat het scherm kan wisselen tussen het tonen van alle fotoclubs en het tonen van alle fotomusea.
 
-![Kaarten-scherm](images/Maps/MapsScreen_NL.png "Kaarten-scherm")
+![Kaarten-scherm](images/Maps/Maps_NL_Light.jpg "Kaarten-scherm")
 
 ### Het `Clubs`-scherm
 
