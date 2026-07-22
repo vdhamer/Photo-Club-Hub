@@ -220,7 +220,7 @@ The remaining screens are reached from these:
 - the `Readme` screen opens via the Info (ⓘ) button available on most tabs,
 - the `Prelude` screen is briefly shown when the app launches.</p>
 
-Usage of the various screens in the user interface:
+The individual screens are described below.
 <ul>
 
 ### The `Maps` Screen
