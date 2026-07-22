@@ -240,10 +240,14 @@ Standaard zijn de kaarten "op slot". Die stand helpt bij het scrollen door de li
 
 ![Kaarten-scherm](images/Maps/Maps_NL_Light.jpg "Kaarten-scherm")
 
+<ul><details>
+<summary>Details (klik om uit te vouwen)</summary></p>
+    
 Een _paarse_ speld op de kaart toont waar de geselecteerde club is gevestigd (bijvoorbeeld een school of gemeentelijk gebouw).
 Een _blauwe_ speld toont de locatie van elke andere fotoclub die zich toevallig in het getoonde gebied bevindt.
 Het scherm kan ook fotomusea tonen die in beeld zijn. Deze hebben andere markeringen dan de fotoclubs.
 Het plan is dat het scherm kan wisselen tussen het tonen van alle fotoclubs en het tonen van alle fotomusea.
+
 </details></ul>
 
 ### Het `Clubs`-scherm
