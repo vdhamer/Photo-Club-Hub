@@ -205,9 +205,14 @@ De app is dus niet bedoeld als vervanging van een persoonlijke website, maar kan
 Verder staat niets je in de weg om een online groep fotografievrienden te ondersteunen - ervan uitgaande
 dat zij dit samen willen organiseren.
 
+<ul><details>
+<summary>Details (klik om uit te vouwen)</summary></p>
+
 Je zou jezelf zelfs als eenpersoonsclub kunnen beschouwen en je beelden in één portfolio onder die club kunnen plaatsen.
 Of je gebruikt het clubniveau om een paar individuele fotografen te groeperen (per regio of interessegebied), zolang de leden
-van deze niet-club bereid zijn dit af te stemmen (bijvoorbeeld het bijhouden van de lijst van portfolio's=fotografen die dan lid zijn van een informele club).
+van deze niet-club bereid zijn dit af te stemmen (bijvoorbeeld het bijhouden van de lijst van 
+portfolio's=fotografen die dan lid zijn van een informele club).
+
 <a/></p></ul>
 </details></ul></details>
 
@@ -228,16 +233,18 @@ Gebruik van de verschillende schermen in de gebruikersinterface:
 
 ### Het `Kaarten`-scherm
 
-Het `Kaarten`-scherm toont alle fotoclubs die bekend zijn bij de app.
-Elk item bestaat vooral uit een kaart die toont waar de club zich bevindt, en optioneel je huidige locatie.
+Het `Kaarten`-scherm toont alle fotoclubs die bekend zijn in de app.
+Elk item bestaat vooral uit een kaart die toont waar de club zich bevindt, en toont desgewenst jouw huidige locatie.
 Een knop met een slotje bepaalt of de kaart interactief bediend kan worden (scrollen, zoomen, roteren, 3D).
-Standaard zijn de kaarten niet interactief. Die stand helpt bij het scrollen door de lijst van clubs, in plaats van het scrollen binnen een kaart.
+Standaard zijn de kaarten "op slot". Die stand helpt bij het scrollen door de lijst van clubs, in plaats van het scrollen binnen een kaart.
+
+![Kaarten-scherm](images/Maps/Maps_NL_Light.jpg "Kaarten-scherm")
+
 Een _paarse_ speld op de kaart toont waar de geselecteerde club is gevestigd (bijvoorbeeld een school of gemeentelijk gebouw).
 Een _blauwe_ speld toont de locatie van elke andere fotoclub die zich toevallig in het getoonde gebied bevindt.
 Het scherm kan ook fotomusea tonen die in beeld zijn. Deze hebben andere markeringen dan de fotoclubs.
 Het plan is dat het scherm kan wisselen tussen het tonen van alle fotoclubs en het tonen van alle fotomusea.
-
-![Kaarten-scherm](images/Maps/Maps_NL_Light.jpg "Kaarten-scherm")
+</details></ul>
 
 ### Het `Clubs`-scherm
 
