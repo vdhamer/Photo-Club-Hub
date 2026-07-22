@@ -708,6 +708,7 @@ capture() {
 # ---------------------------------------------------------------------------
 CAPTURE_COUNT=0
 TOTAL=$(( ${#LANGUAGES[@]} * ${#APPEARANCES[@]} * (${#TAB_SCREENS[@]} + ${#EXTRA_SCREENS[@]}) ))
+TOTAL_WIDTH="${#TOTAL}"
 DEVICE_LABEL="${PREFERRED_DEVICE} / ${PREFERRED_IOS_VERSION}"
 for lang in "${LANGUAGES[@]}"; do
     LANG_UC="$(printf '%s' "${lang}" | tr '[:lower:]' '[:upper:]')"
@@ -735,7 +736,8 @@ for lang in "${LANGUAGES[@]}"; do
             dismiss_first_run_interruptions
             capture "${screen}" "${lang}" "${appearance}"
             CAPTURE_COUNT=$((CAPTURE_COUNT + 1))
-            echo "${CAPTURE_COUNT} of ${TOTAL}: ${screen}_${LANG_UC}_${APP_CAP} captured on ${DEVICE_LABEL} as ${CAPTURE_FORMAT}"
+            printf "%${TOTAL_WIDTH}d of %d: %s_%s_%s captured on %s as %s\n" \
+                "${CAPTURE_COUNT}" "${TOTAL}" "${screen}" "${LANG_UC}" "${APP_CAP}" "${DEVICE_LABEL}" "${CAPTURE_FORMAT}"
             sleep "${SLEEP_BETWEEN_SCREENS}"
         done
     done
