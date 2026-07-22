@@ -322,6 +322,7 @@ RS_RETRY_INTERVAL=3      # pause between retries within the recovery window
 # Returns WIDTHxHEIGHT for a supported device, non-zero for unknown devices.
 app_store_size_for_device() {
     case "$1" in
+        "iPhone 17 Pro"|"iPhone 16 Pro")                  echo "1320x2868" ;;  # 6.9"
         "iPhone 17 Pro Max"|"iPhone 16 Pro Max")          echo "1320x2868" ;;  # 6.9"
         "iPhone 16 Plus"|"iPhone 15 Plus")                echo "1290x2796" ;;  # 6.7"
         "iPad Air 13-inch (M4)"|"iPad Pro 13-inch (M4)")  echo "2064x2752" ;;  # 13"
@@ -466,7 +467,7 @@ if [[ "${DO_BUILD}" -eq 1 ]]; then
 fi
 
 # Fail early (rather than at the first launch) if the app is not installed on the target.
-APP_CONTAINER="$("${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" app 2>/dev/null)"
+APP_CONTAINER="$("${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" app 2>/dev/null)" || true
 if [[ -z "${APP_CONTAINER}" ]]; then
     echo "ERROR: ${BUNDLE_ID} is not installed on simulator ${UDID}." >&2
     echo "       Re-run with --build, install the app on this simulator from Xcode," >&2
@@ -514,7 +515,7 @@ if [[ "${DO_BUILD}" -eq 0 ]]; then
 fi
 
 # Resolve the readiness marker path once (the data container is stable per install).
-APP_DATA_CONTAINER="$("${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" data 2>/dev/null)"
+APP_DATA_CONTAINER="$("${SIMCTL[@]}" get_app_container "${UDID}" "${BUNDLE_ID}" data 2>/dev/null)" || true
 if [[ -z "${APP_DATA_CONTAINER}" ]]; then
     echo "ERROR: cannot resolve the data container of ${BUNDLE_ID} on ${UDID}." >&2
     exit 1
