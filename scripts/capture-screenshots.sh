@@ -190,11 +190,12 @@ KEEP_PNG=1
 # Locate the RocketSim CLI (may not be on PATH; ships inside the app bundle).
 # ---------------------------------------------------------------------------
 find_rocketsim() {
-    if command -v rocketsim >/dev/null 2>&1; then
-        command -v rocketsim
-        return 0
-    fi
+    # Prefer "RocketSim 16.2.app" if installed alongside the current version — workaround
+    # for the screenshot crash in RocketSim 16.3/16.4 (AvdLee/RocketSimApp#1085).
+    # Use check-rocketsim-bug-1085.sh to probe whether a newer version has fixed the crash.
     local candidates=(
+        "/Applications/RocketSim 16.2.app/Contents/Helpers/rocketsim"
+        "${HOME}/Applications/RocketSim 16.2.app/Contents/Helpers/rocketsim"
         "/Applications/RocketSim.app/Contents/Helpers/rocketsim"
         "${HOME}/Applications/RocketSim.app/Contents/Helpers/rocketsim"
     )
@@ -202,6 +203,7 @@ find_rocketsim() {
     for c in "${candidates[@]}"; do
         [[ -x "$c" ]] && { echo "$c"; return 0; }
     done
+    command -v rocketsim >/dev/null 2>&1 && { command -v rocketsim; return 0; }
     return 1
 }
 
@@ -251,6 +253,7 @@ if [[ -z "${RS}" ]]; then
     exit 1
 fi
 echo "RocketSim CLI: ${RS}"
+RS_APP_DIR="$(echo "${RS}" | grep -oE '.*/[^/]+\.app' || true)"
 
 # ipc_reachable_now: returns 0 if RocketSim's IPC channel is open.
 # Accepts both compact JSON ("ipc_reachable":true) and spaced ("ipc_reachable": true).
@@ -267,7 +270,11 @@ ROCKETSIM_STARTUP_TIMEOUT=30
 ensure_rocketsim() {
     ipc_reachable_now && return 0
     echo "RocketSim app not reachable — (re)launching it..."
-    open -a RocketSim || true
+    if [[ -n "${RS_APP_DIR}" ]]; then
+        open "${RS_APP_DIR}" || true
+    else
+        open -a RocketSim || true
+    fi
     local waited=0
     while [[ "${waited}" -lt "${ROCKETSIM_STARTUP_TIMEOUT}" ]]; do
         sleep 2
