@@ -265,7 +265,9 @@ For Fotogroep Waalre, the year the image was made is shown in the caption.
 
 You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
 There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
-currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.### The `People` Screen
+currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
+
+### The `People` Screen
 
 The `People` screen lists all the photographers known to the app.
 It allows you to first select the photographer and then select that person's club-specific portfolio.
