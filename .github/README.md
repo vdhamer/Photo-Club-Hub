@@ -8,7 +8,7 @@
 [![Discussions][discussions-shield]][discussions-url]
 [![MIT License][license-shield]][license-url]
 
-![Screenshots of 3 screens](images/App_EN_Light.jpg "Screenshots of app")
+![Screenshots of 3 screens](images/Levels_EN_Light.jpg "Screenshots of app")
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -230,7 +230,7 @@ Each entry contains a map showing where that club is located and, if you gave pe
 A button with a lock icon toggles whether the map can be controlled interactively (scroll, zoom, rotate, 3D).
 By default, the maps are not interactive. This lock toggle determines whether you will scroll through the list of clubs or scroll within a map.
 
-![Maps Screen](images/clubsMuseumsScreen.png "Maps Screen")
+![Maps Screen](images/Maps/MapsScreen_EN.png "Maps Screen")
 
 <ul><details>
 <summary>Details (click to expand)</summary></p>
