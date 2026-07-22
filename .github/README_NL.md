@@ -221,7 +221,7 @@ portfolio's=fotografen die dan lid zijn van een informele club).
  
 ## De schermen van de gebruikersinterface
 
-De app heeft onderaan het scherm een tabbalk met vier tabs: `Kaarten`, `Clubs`, `Personen` en `Instellingen`.
+De app heeft onderaan het scherm een tabknop met vier tabs: `Kaarten`, `Clubs`, `Personen` en `Instellingen`.
 De overige schermen zijn van daaruit bereikbaar: 
 
 - het `Afbeeldingen`-scherm opent wanneer je op een portfolio tikt,
@@ -255,7 +255,7 @@ Er zijn ook instellingen om via kleur aan te geven of een Nederlandse club lid i
 
 Het `Clubs`-scherm toont alle fotoclubs die in de app zijn opgenomen.
 Hier selecteer je eerst een fotoclub en daarna het portfolio van een van de leden.
-De `Zoek`-balk filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
+De `Zoek`-knop filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
 Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig en is (nog) niet permanent.
 
 ![Clubs-scherm](images/Clubs/Clubs_NL_Light.jpg "Clubs-scherm")
@@ -283,14 +283,14 @@ Er is ook een _autoplay_-stand voor het automatische doorlopen van de beelden ("
 Het `Personen`-scherm toont alle fotografen die bekend zijn bij de app.
 Hier selecteer je eerst de fotograaf en daarna het clubspecifieke portfolio van die persoon.
 Indien beschikbaar wordt hier ook clubonafhankelijke informatie (zoals verjaardagen) van de fotograaf getoond.
-De `Zoek`-balk filtert op de namen van fotografen.
+De `Zoek`-knop filtert op de namen van fotografen.
 
 ![Personen-scherm](images/whosWhoScreen_NL.png "Personen-scherm")
 
 ### Het `Readme`-scherm
 
 Het `Readme`-scherm (in de app getiteld "Over deze app") bevat achtergrondinformatie over de app en uitleg over het gebruik ervan.
-Het opent als een sheet via de Info-knop (ⓘ) in de werkbalk van de tabs `Personen`, `Clubs` en `Kaarten`.
+Het opent als een sheet via de Info-knop (ⓘ) in de werkknop van de tabs `Personen`, `Clubs` en `Kaarten`.
 
 ![Readme-scherm](images/readmeScreen_NL.png "Readme-scherm")
 
@@ -365,16 +365,16 @@ De HTML-versie dekt ook de gevallen waarin iemand de informatie of foto's op een
 
 ### Doorzoekbare lijsten
 
-De drie schermen met lange lijsten (`Clubs`, `Kaarten`, `Personen`) hebben elk een zoekbalk
+De drie schermen met lange lijsten (`Clubs`, `Kaarten`, `Personen`) hebben elk een zoekknop
 waarin je kunt invoeren wat je zoekt. Dit beperkt de lijst tot items die aan dat filtercriterium voldoen.</p>
 
-<details><summary>Details over de zoekbalk (klik om uit te vouwen)</summary></p>
+<details><summary>Details over de zoekknop (klik om uit te vouwen)</summary></p>
 
-De plaats van de zoekbalk verschilt per apparaat: iPads tonen deze bovenaan het scherm,
-nieuwere iPhones tonen deze onderaan het scherm (net boven de tabbalk),
+De plaats van de zoekknop verschilt per apparaat: iPads tonen deze bovenaan het scherm,
+nieuwere iPhones tonen deze onderaan het scherm (net boven de tabknop),
 en oudere iPhones tonen deze bovenaan de lijst (scroll snel omhoog tot je bovenaan bent).
 
-De tekst die je in de zoekbalk typt, wordt vergeleken met sleutelvelden van de records in de lijst.
+De tekst die je in de zoekknop typt, wordt vergeleken met sleutelvelden van de records in de lijst.
 
 - In het `Clubs`-scherm filtert een zoekopdracht op de namen van fotografen en op hun expertises.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
@@ -385,7 +385,7 @@ De tekst die je in de zoekbalk typt, wordt vergeleken met sleutelvelden van de r
 - In het `Personen`-scherm proberen zoekopdrachten te matchen op de volledige naam van de fotograaf.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
 
-Ontwerpdetail: het filteren via de zoekbalk gebeurt in de gebruikersinterface van de app en niet door de CoreData-database.
+Ontwerpdetail: het filteren via de zoekknop gebeurt in de gebruikersinterface van de app en niet door de CoreData-database.
 </details>
 
 ### Expertises van fotografen
