@@ -614,6 +614,15 @@
 			path = Portfolio;
 			sourceTree = "<group>";
 		};
+		D00262413011519E0098588E /* People */ = {
+			isa = PBXGroup;
+			children = (
+				D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */,
+				37A88B59300E1D1E00193829 /* whosWhoScreen_NL.png */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
 		D029C4D02C54096200ABA977 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
@@ -1000,9 +1009,7 @@
 				D002615D301123040098588E /* Maps */,
 				D002616030112C230098588E /* Clubs */,
 				D00261F53011362E0098588E /* Portfolio */,
-				D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */,
-				37A88B59300E1D1E00193829 /* whosWhoScreen_NL.png */,
-				D0DE6B6D2DB6DAE700841DBF /* packages.png */,
+				D00262413011519E0098588E /* People */,
 				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
 				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
 				37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */,
@@ -1010,6 +1017,7 @@
 				37A88B58300E1D1E00193829 /* readmeScreen_NL.png */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D0640F2F2E0609B7008EAE00 /* dataModel.png */,
+				D0DE6B6D2DB6DAE700841DBF /* packages.png */,
 				D0B6B05B2DB27A3E00EAAF69 /* packages.key */,
 			);
 			path = images;
