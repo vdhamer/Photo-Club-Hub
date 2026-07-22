@@ -43,7 +43,7 @@
 # ---------------------------------------------------------------------------
 #
 #   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted] [--no-png]
-#                                  [--jpg-background-light <color>] [--jpg-background-dark <color>]
+#                                  [--jpg-background-light <color>] [--jpg-background-dark <color>] [--app-store]
 #   --build         Build the app for the target simulator and (re)install it first.
 #   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
 #   --ios-version <version>
@@ -59,6 +59,16 @@
 #   --jpg-background-dark <color>
 #                   Background color flattened into the *_dark.jpg images, as RRGGBB or
 #                   #RRGGBB (default: 000000, i.e. black).
+#   --app-store     Rescale the output JPGs to the App Store Connect accepted pixel dimensions
+#                   for the target device. The framed image is scaled proportionally and padded
+#                   with the matte color to fill the required canvas. Only JPGs are rescaled;
+#                   the raw transparent PNGs retain their native framed size.
+#                   Supported devices (portrait):
+#                     iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868  (6.9")
+#                     iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796  (6.7")
+#                     iPad Air 13-inch (M4), iPad Pro 13-inch (M4)  →  2064 × 2752  (13")
+#                   The default device (iPhone 17 Pro) is NOT in the table; target a supported
+#                   device via PREFERRED_DEVICE or --udid.
 #
 # ---------------------------------------------------------------------------
 # Screenshot-related arguments of the app itself:
@@ -185,6 +195,8 @@ OUT_DIR="${REPO_ROOT}/Scripts/screenshots"
 DO_BUILD=0
 KEEP_BOOTED=0
 KEEP_PNG=1
+RESCALE=0
+UDID_FROM_FLAG=0
 
 # ---------------------------------------------------------------------------
 # Locate the RocketSim CLI (may not be on PATH; ships inside the app bundle).
@@ -213,13 +225,14 @@ find_rocketsim() {
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --build)       DO_BUILD=1; shift ;;
-        --udid)        UDID="${2:?--udid needs a value}"; shift 2 ;;
+        --udid)        UDID="${2:?--udid needs a value}"; UDID_FROM_FLAG=1; shift 2 ;;
         --ios-version) PREFERRED_IOS_VERSION="${2?--ios-version needs a value}"; shift 2 ;;
         --out)         OUT_DIR="${2:?--out needs a value}"; shift 2 ;;
         --keep-booted) KEEP_BOOTED=1; shift ;;
         --no-png)      KEEP_PNG=0; shift ;;
         --jpg-background-light) JPG_BACKGROUND_LIGHT="${2:?--jpg-background-light needs a value}"; shift 2 ;;
         --jpg-background-dark)  JPG_BACKGROUND_DARK="${2:?--jpg-background-dark needs a value}"; shift 2 ;;
+        --app-store)   RESCALE=1; shift ;;
         -h|--help)     grep -E '^# ' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
         *)             echo "Unknown argument: $1" >&2; exit 2 ;;
     esac
@@ -304,6 +317,19 @@ RS_RECOVERY_TIMEOUT=90   # seconds to keep retrying a failed rocketsim screensho
 RS_RETRY_INTERVAL=3      # pause between retries within the recovery window
 
 # ---------------------------------------------------------------------------
+# App Store Connect accepted screenshot dimensions (portrait, 2026).
+# ---------------------------------------------------------------------------
+# Returns WIDTHxHEIGHT for a supported device, non-zero for unknown devices.
+app_store_size_for_device() {
+    case "$1" in
+        "iPhone 17 Pro Max"|"iPhone 16 Pro Max")          echo "1320x2868" ;;  # 6.9"
+        "iPhone 16 Plus"|"iPhone 15 Plus")                echo "1290x2796" ;;  # 6.7"
+        "iPad Air 13-inch (M4)"|"iPad Pro 13-inch (M4)")  echo "2064x2752" ;;  # 13"
+        *) return 1 ;;
+    esac
+}
+
+# ---------------------------------------------------------------------------
 # Auto-detect the latest available iOS runtime when PREFERRED_IOS_VERSION is empty.
 # ---------------------------------------------------------------------------
 # Uses awk to pick the highest major.minor from `simctl list runtimes available`, so the
@@ -367,6 +393,35 @@ if [[ -n "${PREFERRED_IOS_VERSION}" ]]; then
     echo "Target simulator: ${PREFERRED_DEVICE:-'(explicit)'} / ${PREFERRED_IOS_VERSION} — ${UDID}"
 else
     echo "Target simulator: ${PREFERRED_DEVICE:-'(explicit)'} — ${UDID}"
+fi
+
+# ---------------------------------------------------------------------------
+# Resolve App Store target dimensions (when --app-store is set).
+# ---------------------------------------------------------------------------
+TARGET_W=""
+TARGET_H=""
+if [[ "${RESCALE}" -eq 1 ]]; then
+    LOOKUP_DEVICE="${PREFERRED_DEVICE}"
+    if [[ "${UDID_FROM_FLAG}" -eq 1 ]]; then
+        # --udid was given without a matching PREFERRED_DEVICE; resolve model name from simctl.
+        LOOKUP_DEVICE="$("${SIMCTL[@]}" list devices \
+            | grep "${UDID}" \
+            | sed -E 's/^[[:space:]]+(.+) \([0-9A-Fa-f-]{36}\).*/\1/' \
+            | head -n1)"
+        [[ -z "${LOOKUP_DEVICE}" ]] && LOOKUP_DEVICE="(unknown)"
+    fi
+    APP_STORE_SIZE="$(app_store_size_for_device "${LOOKUP_DEVICE}")" || {
+        echo "ERROR: --app-store: '${LOOKUP_DEVICE}' is not an accepted App Store screenshot slot." >&2
+        echo "       Supported devices (portrait):" >&2
+        echo "         iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868  (6.9\")" >&2
+        echo "         iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796  (6.7\")" >&2
+        echo "         iPad Air 13-inch (M4), iPad Pro 13-inch (M4)  →  2064 × 2752  (13\")" >&2
+        echo "       Re-run with PREFERRED_DEVICE=\"iPhone 17 Pro Max\" or --udid <UDID of a supported device>." >&2
+        exit 2
+    }
+    TARGET_W="${APP_STORE_SIZE%%x*}"
+    TARGET_H="${APP_STORE_SIZE##*x}"
+    echo "App Store target size: ${TARGET_W} × ${TARGET_H} px (${LOOKUP_DEVICE})"
 fi
 
 mkdir -p "${OUT_DIR}"
@@ -538,26 +593,33 @@ dismiss_first_run_interruptions() {
 # It fills a bitmap with the matte color, composites the PNG over it (sourceOver — the
 # default drawInRect uses "copy", which would replace the fill), and encodes JPEG.
 # Opaque PNGs (the simctl fallback) pass through visually unchanged.
-# Usage: flatten_png_to_jpg <in.png> <out.jpg> <RRGGBB> <quality 0-100>
+# When targetW/targetH are given (--app-store), the framed PNG is aspect-fit into the target
+# canvas, centered, and the remainder padded with the matte color (no distortion).
+# Usage: flatten_png_to_jpg <in.png> <out.jpg> <RRGGBB> <quality 0-100> [targetW] [targetH]
 flatten_png_to_jpg() {
-    /usr/bin/osascript -l JavaScript - "$1" "$2" "$3" "$4" <<'JXA' >/dev/null
+    /usr/bin/osascript -l JavaScript - "$1" "$2" "$3" "$4" "${5:-}" "${6:-}" <<'JXA' >/dev/null
 function run(argv) {
     ObjC.import("AppKit");
     const inPath = argv[0], outPath = argv[1], hex = argv[2], quality = argv[3];
     const src = $.NSBitmapImageRep.imageRepWithData($.NSData.dataWithContentsOfFile(inPath));
     if (src.isNil()) throw new Error("cannot read PNG: " + inPath);
-    const w = src.pixelsWide, h = src.pixelsHigh;
+    const sw = src.pixelsWide, sh = src.pixelsHigh;
+    const tw = argv[4] ? parseInt(argv[4]) : sw;
+    const th = argv[5] ? parseInt(argv[5]) : sh;
     const dst = $.NSBitmapImageRep.alloc.initWithBitmapDataPlanesPixelsWidePixelsHighBitsPerSampleSamplesPerPixelHasAlphaIsPlanarColorSpaceNameBytesPerRowBitsPerPixel(
-        null, w, h, 8, 4, true, false, $.NSDeviceRGBColorSpace, 0, 0);
+        null, tw, th, 8, 4, true, false, $.NSDeviceRGBColorSpace, 0, 0);
     $.NSGraphicsContext.saveGraphicsState;
     $.NSGraphicsContext.setCurrentContext($.NSGraphicsContext.graphicsContextWithBitmapImageRep(dst));
     const r = parseInt(hex.slice(0, 2), 16) / 255;
     const g = parseInt(hex.slice(2, 4), 16) / 255;
     const b = parseInt(hex.slice(4, 6), 16) / 255;
     $.NSColor.colorWithDeviceRedGreenBlueAlpha(r, g, b, 1).setFill;
-    $.NSRectFill($.NSMakeRect(0, 0, w, h));
+    $.NSRectFill($.NSMakeRect(0, 0, tw, th));
+    const scale = Math.min(tw / sw, th / sh);
+    const dw = Math.round(sw * scale), dh = Math.round(sh * scale);
+    const ox = Math.round((tw - dw) / 2), oy = Math.round((th - dh) / 2);
     src.drawInRectFromRectOperationFractionRespectFlippedHints(
-        $.NSMakeRect(0, 0, w, h), $.NSMakeRect(0, 0, 0, 0),
+        $.NSMakeRect(ox, oy, dw, dh), $.NSMakeRect(0, 0, 0, 0),
         $.NSCompositingOperationSourceOver, 1.0, false, $());
     $.NSGraphicsContext.restoreGraphicsState;
     const jpeg = dst.representationUsingTypeProperties($.NSBitmapImageFileTypeJPEG,
@@ -624,7 +686,8 @@ capture() {
         dark) bg="${JPG_BACKGROUND_DARK}" ;;
         *)    bg="${JPG_BACKGROUND_LIGHT}" ;;
     esac
-    if ! flatten_png_to_jpg "${tmp}" "${out}" "${bg}" "${JPEG_QUALITY}"; then
+    local tw="${TARGET_W}" th="${TARGET_H}"
+    if ! flatten_png_to_jpg "${tmp}" "${out}" "${bg}" "${JPEG_QUALITY}" "${tw}" "${th}"; then
         echo "ERROR: PNG->JPEG conversion failed for ${screen}/${lang}/${appearance}." >&2
         rm -f "${tmp}"
         exit 1
