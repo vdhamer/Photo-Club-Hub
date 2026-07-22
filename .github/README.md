@@ -229,11 +229,17 @@ The `Maps` screen shows all photo clubs that are known to the app. They are disp
 Each entry contains a map showing where that club is located and, if you gave permission, your current location.
 A button with a lock icon toggles whether the map can be controlled interactively (scroll, zoom, rotate, 3D).
 By default, the maps are not interactive. This lock toggle determines whether you will scroll through the list of clubs or scroll within a map.
+
+<ul><details>
+<summary>Details (click to expand)</summary></p>
+
 A _purple_ pin on the map shows where the selected club is based (e.g., some municipal building).
 A _blue_ pin shows the location of any other photo club that happens to be based inside the displayed map region.
 The screen can also show any photo museums that happen to be in that region. Photo clubs and museums are displayed differently.
 Under `Settings` you can hide museums, clubs or (if you insist) both. There is an extra feature in `Settings` that allows you
 to set the color of clubs that are/aren't a member of the Dutch "Fotobond" federation. It is only useful in the Netherlands.
+
+</details></ul>
 
 ![Maps Screen](images/clubsMuseumsScreen.png "Maps Screen")
 
