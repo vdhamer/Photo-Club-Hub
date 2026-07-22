@@ -230,6 +230,8 @@ Each entry contains a map showing where that club is located and, if you gave pe
 A button with a lock icon toggles whether the map can be controlled interactively (scroll, zoom, rotate, 3D).
 By default, the maps are not interactive. This lock toggle determines whether you will scroll through the list of clubs or scroll within a map.
 
+![Maps Screen](images/clubsMuseumsScreen.png "Maps Screen")
+
 <ul><details>
 <summary>Details (click to expand)</summary></p>
 
@@ -241,15 +243,13 @@ to set the color of clubs that are/aren't a member of the Dutch "Fotobond" feder
 
 </details></ul>
 
-![Maps Screen](images/clubsMuseumsScreen.png "Maps Screen")
-
 ### The `Clubs` Screen
 
 The `Clubs` screen lists all the photo clubs featured in the app.
 It allows you to first select a photo club and then select the portfolio of one of its members.
 The `Search` bar filters the lists of club members using the photographer's full name or expertise tags.
 
-![Clubs Screen](images/portfoliosScreen.png "Clubs Screen")
+![Clubs Screen](images/clubsScreen.png "Clubs Screen")
 
 ### The `People` Screen
 
