@@ -255,6 +255,7 @@ Er zijn ook instellingen om via kleur aan te geven of een Nederlandse club lid i
 
 Het `Clubs`-scherm toont alle fotoclubs die in de app zijn opgenomen.
 Hier selecteer je eerst een fotoclub en daarna het portfolio van een van de leden.
+
 De `Zoek`-knop filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
 Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig en is (nog) niet permanent.
 
