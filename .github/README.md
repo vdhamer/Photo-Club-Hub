@@ -248,7 +248,6 @@ to set the color of clubs that are/aren't a member of the Dutch "Fotobond" feder
 The `Clubs` screen lists all the photo clubs featured in the app.
 It allows you to first select a photo club and then select the portfolio of one of its members.
 The `Search` bar filters the lists of club members using the photographer's full name or expertise tags.
-Swiping left deletes an entry, but this is not normally needed and is not permanent (yet).
 
 ![Clubs Screen](images/portfoliosScreen.png "Clubs Screen")
 
