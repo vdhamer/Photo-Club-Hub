@@ -246,6 +246,22 @@ Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig e
 
 ![Clubs-scherm](images/Clubs/Clubs_NL_Light.jpg "Clubs-scherm")
 
+### Het `Afbeeldingen`-scherm
+
+Het `Afbeeldingen`-scherm toont één portfolio (van één fotograaf verbonden aan één club).
+Je bereikt het door op een `portfolio` te tikken in het `Clubs`- of het `Personen`-scherm.
+De titel bovenaan het scherm toont de geselecteerde fotograaf en de geselecteerde club:
+"Jane Doe @ Club F/8".
+
+![Portfolio-scherm](images/PortfolioViaClubs_NL_Light.png "Portfolio-scherm")
+
+Beelden worden getoond in volgorde van heden naar verleden, op basis van de _opnamedatum_ van het beeld.
+Bij Fotogroep Waalre wordt het jaar waarin het beeld is gemaakt in het bijschrift getoond.
+
+Je kunt naar links of rechts _vegen_ om handmatig terug of vooruit door het portfolio te bladeren.
+Er is ook een _autoplay_-modus voor een automatische diavoorstelling. Dit scherm is (voor Fotogroep Waalre)
+momenteel gebaseerd op een JavaScript-plug-in (`Juicebox Pro`) die normaal wordt gebruikt bij het bouwen van websites.
+
 ### Het `Personen`-scherm
 
 Het `Personen`-scherm toont alle fotografen die bekend zijn bij de app.
@@ -254,22 +270,6 @@ Indien beschikbaar wordt hier ook clubonafhankelijke informatie (zoals verjaarda
 De `Zoek`-balk filtert op de namen van fotografen.
 
 ![Personen-scherm](images/whosWhoScreen_NL.png "Personen-scherm")
-
-### Het `Afbeeldingen`-scherm
-
-Het `Afbeeldingen`-scherm toont één portfolio (van één fotograaf verbonden aan één club).
-Je bereikt het door op een `portfolio` te tikken in het `Clubs`- of het `Personen`-scherm.
-De titel bovenaan het scherm toont de geselecteerde fotograaf en de geselecteerde club:
-"Jane Doe @ Club F/8".
-
-![Afbeeldingen-scherm](images/imagesScreen_NL.png "Afbeeldingen-scherm")
-
-Beelden worden getoond in volgorde van heden naar verleden, op basis van de _opnamedatum_ van het beeld.
-Bij Fotogroep Waalre wordt het jaar waarin het beeld is gemaakt in het bijschrift getoond.
-
-Je kunt naar links of rechts _vegen_ om handmatig terug of vooruit door het portfolio te bladeren.
-Er is ook een _autoplay_-modus voor een automatische diavoorstelling. Dit scherm is (voor Fotogroep Waalre)
-momenteel gebaseerd op een JavaScript-plug-in (`Juicebox Pro`) die normaal wordt gebruikt bij het bouwen van websites.
 
 ### Het `Readme`-scherm
 
