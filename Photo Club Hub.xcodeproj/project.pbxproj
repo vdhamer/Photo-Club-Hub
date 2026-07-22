@@ -208,8 +208,6 @@
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
 		3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard.txt; sourceTree = "<group>"; };
 		3726AD293010BB3D00918B8D /* check-rocketsim-bug-1085.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "check-rocketsim-bug-1085.sh"; sourceTree = "<group>"; };
-		3726AD753010E6F500918B8D /* App_EN_Light 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "App_EN_Light 2.jpg"; sourceTree = "<group>"; };
-		3726AD763010E70A00918B8D /* App_NL_Light 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "App_NL_Light 2.jpg"; sourceTree = "<group>"; };
 		373EE0D02EED808700F311BE /* FotobondNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotobondNumbers.swift; sourceTree = "<group>"; };
 		37415B072F9D2DA3004B4647 /* ReadmeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSection.swift; sourceTree = "<group>"; };
 		37415B1F2F9D3733004B4647 /* ReadmeSectionOnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnApp.swift; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
 		37A88B52300E1D1E00193829 /* Levels_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_NL_Light.jpg; sourceTree = "<group>"; };
 		37A88B54300E1D1E00193829 /* imagesScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesScreen_NL.png; sourceTree = "<group>"; };
-		37A88B55300E1D1E00193829 /* portfoliosScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfoliosScreen_NL.png; sourceTree = "<group>"; };
 		37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen_NL.png; sourceTree = "<group>"; };
 		37A88B57300E1D1E00193829 /* preludeScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preludeScreen_NL.png; sourceTree = "<group>"; };
 		37A88B58300E1D1E00193829 /* readmeScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readmeScreen_NL.png; sourceTree = "<group>"; };
@@ -309,6 +306,8 @@
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
 		D002615E301128030098588E /* Maps_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_EN_Light.jpg; sourceTree = "<group>"; };
 		D002615F301128030098588E /* Maps_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_NL_Light.jpg; sourceTree = "<group>"; };
+		D002616130112E9F0098588E /* Clubs_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clubs_EN_Light.jpg; sourceTree = "<group>"; };
+		D002616230112E9F0098588E /* Clubs_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clubs_NL_Light.jpg; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
@@ -365,7 +364,6 @@
 		D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+refreshFirstImage.swift"; sourceTree = "<group>"; };
 		D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Aug_2025_app.pages; sourceTree = "<group>"; };
 		D0640F2F2E0609B7008EAE00 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
-		D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfoliosScreen.png; sourceTree = "<group>"; };
 		D06588E52BAE31AE000FD7F3 /* imagesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesScreen.png; sourceTree = "<group>"; };
 		D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen.png; sourceTree = "<group>"; };
 		D06588E72BAE3E49000FD7F3 /* readmeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readmeScreen.png; sourceTree = "<group>"; };
@@ -596,6 +594,15 @@
 				D002615F301128030098588E /* Maps_NL_Light.jpg */,
 			);
 			path = Maps;
+			sourceTree = "<group>";
+		};
+		D002616030112C230098588E /* Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				D002616130112E9F0098588E /* Clubs_EN_Light.jpg */,
+				D002616230112E9F0098588E /* Clubs_NL_Light.jpg */,
+			);
+			path = Clubs;
 			sourceTree = "<group>";
 		};
 		D029C4D02C54096200ABA977 /* Organization */ = {
@@ -982,8 +989,7 @@
 			children = (
 				D002615C3011228C0098588E /* Levels */,
 				D002615D301123040098588E /* Maps */,
-				D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */,
-				37A88B55300E1D1E00193829 /* portfoliosScreen_NL.png */,
+				D002616030112C230098588E /* Clubs */,
 				37A88B54300E1D1E00193829 /* imagesScreen_NL.png */,
 				37A88B57300E1D1E00193829 /* preludeScreen_NL.png */,
 				D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */,
@@ -997,8 +1003,6 @@
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D0640F2F2E0609B7008EAE00 /* dataModel.png */,
 				D0B6B05B2DB27A3E00EAAF69 /* packages.key */,
-				3726AD753010E6F500918B8D /* App_EN_Light 2.jpg */,
-				3726AD763010E70A00918B8D /* App_NL_Light 2.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
