@@ -215,7 +215,7 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 ## The User Interface Screens
 
 The app has a tab bar at the bottom of the screen with four tabs: `Maps`, `Clubs`, `People`, and `Settings`.
-The remaining screens are reached from these: the `Images` screen opens when you tap a portfolio,
+The remaining screens are reached from these: the `Images` screen opens when you tap a Portfolio on the `Clubs` or `People` screens,
 the `Readme` screen opens via the Info (ⓘ) button available on most tabs,
 and the `Prelude` screen is shown when the app launches.</p>
 
