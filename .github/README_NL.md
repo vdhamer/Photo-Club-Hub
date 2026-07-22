@@ -217,9 +217,11 @@ van deze niet-club bereid zijn dit af te stemmen (bijvoorbeeld het bijhouden van
 ## De schermen van de gebruikersinterface
 
 De app heeft onderaan het scherm een tabbalk met vier tabs: `Kaarten`, `Clubs`, `Personen` en `Instellingen`.
-De overige schermen zijn van daaruit bereikbaar: het `Afbeeldingen`-scherm opent wanneer je op een portfolio tikt,
-het `Readme`-scherm opent via de Info-knop (ⓘ) die op de meeste tabs beschikbaar is,
-en het `Prelude`-scherm verschijnt wanneer de app wordt gestart.</p>
+De overige schermen zijn van daaruit bereikbaar: 
+
+- het `Afbeeldingen`-scherm opent wanneer je op een portfolio tikt,
+- het `Readme`-scherm opent via de Info-knop (ⓘ) die op de meeste tabs beschikbaar is,
+- en het `Prelude`-scherm verschijnt wanneer de app wordt gestart.</p>
 
 Gebruik van de verschillende schermen in de gebruikersinterface:
 <ul>
