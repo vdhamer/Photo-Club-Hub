@@ -354,16 +354,16 @@ The HTML version also covers the cases where someone wants to view the informati
 
 ### Searchable Lists
 
-The three screens with long lists (`Clubs`, `Maps`, `People`) each have a Search Bar
+The three screens with long lists (`Clubs`, `Maps`, `People`) each have a Search Button
 where you can enter what you are looking for. This reduces the list to items that match that filter criterion.</p>
 
-<details><summary>Details on the Search Bar (click to expand)</summary></p>
+<details><summary>Details on the Search Button (click to expand)</summary></p>
 
-The positioning of the Search Bar differs per device: iPads show it at the top of the screen,
+The positioning of the Search Button differs per device: iPads show it at the top of the screen,
 newer iPhones show it at the bottom of the screen (just above the tab bar),
 and older iPhones show it at the top of the list (scroll up rapidly until you hit the top).
 
-The text you type inside the search bar is matched against key fields for the records shown in the list.
+The text you type inside the search button is matched against key fields for the records shown in the list.
 
 - In the `Clubs` screen, a search filters on the photographers' names and on their expertises.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
@@ -374,7 +374,7 @@ The text you type inside the search bar is matched against key fields for the re
 - In the `People` screen, searches try to match the photographer's full name.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
 
-Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
+Design detail: Search Button filtering is done in the app's user interface and not by the CoreData database.
 </details>
 
 ### Photographer Expertises
