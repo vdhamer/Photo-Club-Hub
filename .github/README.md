@@ -251,7 +251,21 @@ The `Search` bar filters the lists of club members using the photographer's full
 
 ![Clubs Screen](images/Clubs/Clubs_EN_Light.jpg "Clubs Screen")
 
-### The `People` Screen
+### The `Portfolio` Screen
+
+The `Portfolio` screen displays one portfolio (of one photographer associated with one club).
+It can be reached by tapping on a `portfolio` in either the `Clubs` or the `People` screen.
+The title at the top of the screen shows the selected photographer and selected club affiliation:
+"Francien van Mil @ fgDeGender".
+
+![Portfolio Screen](images/Portfolio/PortfolioViaClubs_EN_Light.jpg "Portfolio Screen")
+
+Images are shown in present-to-past order, based on the image's _capture_ date.
+For Fotogroep Waalre, the year the image was made is shown in the caption.
+
+You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
+There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
+currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.### The `People` Screen
 
 The `People` screen lists all the photographers known to the app.
 It allows you to first select the photographer and then select that person's club-specific portfolio.
@@ -259,22 +273,6 @@ If available, club-independent information (like birthdays) for that photographe
 The `Search` bar filters on photographer names.
 
 ![People Screen](images/whosWhoScreen.png "People Screen")
-
-### The `Images` Screen
-
-The `Images` screen displays one portfolio (of one photographer associated with one club).
-It can be reached by tapping on a `portfolio` in either the `Clubs` or the `People` screen.
-The title at the top of the screen shows the selected photographer and selected club affiliation:
-"Jane Doe @ Club F/8".
-
-![Images Screen](images/imagesScreen.png "Images Screen")
-
-Images are shown in present-to-past order, based on the image's _capture_ date.
-For Fotogroep Waalre, the year the image was made is shown in the caption.
-
-You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
-There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
-currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
 
 ### The `Readme` Screen
 
