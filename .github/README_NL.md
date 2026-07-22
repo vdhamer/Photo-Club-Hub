@@ -253,7 +253,7 @@ Je bereikt het door op een `portfolio` te tikken in het `Clubs`- of het `Persone
 De titel bovenaan het scherm toont de geselecteerde fotograaf en de geselecteerde club:
 "Jane Doe @ Club F/8".
 
-![Portfolio-scherm](images/PortfolioViaClubs_NL_Light.jpg "Portfolio-scherm")
+![Portfolio-scherm](images/Portfolio/PortfolioViaClubs_NL_Light.jpg "Portfolio-scherm")
 
 Beelden worden getoond in volgorde van heden naar verleden, op basis van de _opnamedatum_ van het beeld.
 Bij Fotogroep Waalre wordt het jaar waarin het beeld is gemaakt in het bijschrift getoond.
