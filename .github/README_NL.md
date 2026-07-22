@@ -246,7 +246,8 @@ Standaard zijn de kaarten "op slot". Die stand helpt bij het scrollen door de li
 Een _paarse_ speld op de kaart toont waar de geselecteerde club is gevestigd (bijvoorbeeld een school of gemeentelijk gebouw).
 Een _blauwe_ speld toont de locatie van elke andere fotoclub die zich toevallig in het getoonde gebied bevindt.
 Het scherm kan ook fotomusea tonen die in beeld zijn. Deze hebben andere markeringen dan de fotoclubs.
-Het plan is dat het scherm kan wisselen tussen het tonen van alle fotoclubs en het tonen van alle fotomusea.
+Op het `Instellingen`-scherm kan je aangeven of je musea en/of clubs wilt verbergen.
+Er zijn ook instellingen om via kleur aan te geven of een Nederlandse club lid is van de Fotobond.
 
 </details></ul>
 
