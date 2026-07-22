@@ -695,19 +695,24 @@ capture() {
     fi
     if [[ "${KEEP_PNG}" -eq 1 ]]; then
         mv -f "${tmp}" "${OUT_DIR}/${screen}_${lang}_${appearance}.png"
-        echo "  saved ${out} (+ .png)"
+        chmod 644 "${OUT_DIR}/${screen}_${lang}_${appearance}.png"
+        CAPTURE_FORMAT="jpg+png"
     else
         rm -f "${tmp}"
-        echo "  saved ${out}"
+        CAPTURE_FORMAT="jpg"
     fi
 }
 
 # ---------------------------------------------------------------------------
 # Capture matrix: language x appearance x tab.
 # ---------------------------------------------------------------------------
+CAPTURE_COUNT=0
+TOTAL=$(( ${#LANGUAGES[@]} * ${#APPEARANCES[@]} * (${#TAB_SCREENS[@]} + ${#EXTRA_SCREENS[@]}) ))
+DEVICE_LABEL="${PREFERRED_DEVICE} / ${PREFERRED_IOS_VERSION}"
 for lang in "${LANGUAGES[@]}"; do
+    LANG_UC="$(printf '%s' "${lang}" | tr '[:lower:]' '[:upper:]')"
     for appearance in "${APPEARANCES[@]}"; do
-        echo "=== ${lang} / ${appearance} ==="
+        APP_CAP="$(printf '%s' "${appearance:0:1}" | tr '[:lower:]' '[:upper:]')${appearance:1}"
 
         # Appearance is a device-level setting; apply before launch.
         "${SIMCTL[@]}" ui "${UDID}" appearance "${appearance}"
@@ -715,14 +720,13 @@ for lang in "${LANGUAGES[@]}"; do
         # One fresh launch per screen: locale, initial tab, and (for non-Prelude screens) no
         # Prelude via launch arguments (see the TAB_SCREENS comment for why tabs are not tapped).
         for screen in "${TAB_SCREENS[@]}" "${EXTRA_SCREENS[@]}"; do
-            echo "-- screen: ${screen}"
             "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
             rm -f "${READY_MARKER}"   # the app also clears it at startup (belt and braces)
             # Prelude is the splash screen itself: launch it without -skipPrelude so it is visible.
             SKIP_PRELUDE_ARG=(); [[ "${screen}" != Prelude ]] && SKIP_PRELUDE_ARG=(-skipPrelude YES)
             "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
                 -AppleLanguages "(${lang})" -initialTab "${screen}" \
-                ${SKIP_PRELUDE_ARG[@]+"${SKIP_PRELUDE_ARG[@]}"} -suppressTips YES
+                ${SKIP_PRELUDE_ARG[@]+"${SKIP_PRELUDE_ARG[@]}"} -suppressTips YES >/dev/null
             if [[ "${screen}" == PortfolioVia* ]]; then
                 wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}" "${SLEEP_AFTER_READY_PORTFOLIO}"
             else
@@ -730,6 +734,8 @@ for lang in "${LANGUAGES[@]}"; do
             fi
             dismiss_first_run_interruptions
             capture "${screen}" "${lang}" "${appearance}"
+            CAPTURE_COUNT=$((CAPTURE_COUNT + 1))
+            echo "${CAPTURE_COUNT} of ${TOTAL}: ${screen}_${LANG_UC}_${APP_CAP} captured on ${DEVICE_LABEL} as ${CAPTURE_FORMAT}"
             sleep "${SLEEP_BETWEEN_SCREENS}"
         done
     done
