@@ -231,14 +231,14 @@ De overige schermen zijn van daaruit bereikbaar:
 Gebruik van de verschillende schermen in de gebruikersinterface:
 <ul>
 
-### Het `Kaarten`-scherm
+### De `Kaarten`-tab
 
-Het `Kaarten`-scherm toont alle fotoclubs die bekend zijn in de app.
+De `Kaarten`-tab toont alle fotoclubs die bekend zijn in de app.
 Elk item bestaat vooral uit een kaart die toont waar de club zich bevindt, en toont desgewenst jouw huidige locatie.
 Een knop met een slotje bepaalt of de kaart interactief bediend kan worden (scrollen, zoomen, roteren, 3D).
 Standaard zijn de kaarten "op slot". Die stand helpt bij het scrollen door de lijst van clubs, in plaats van het scrollen binnen een kaart.
 
-![Kaarten-scherm](images/Maps/Maps_NL_Light.jpg "Kaarten-scherm")
+![Kaarten-tab](images/Maps/Maps_NL_Light.jpg "Kaarten-tab")
 
 <ul><details>
 <summary>Details (klik om uit te vouwen)</summary></p>
@@ -381,8 +381,8 @@ De tekst die je in de zoekknop typt, wordt vergeleken met sleutelvelden van de r
 
 - In het `Clubs`-scherm filtert een zoekopdracht op de namen van fotografen en op hun expertises.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
-  Als je op clubnamen wilt zoeken, ga dan naar het `Kaarten`-scherm.
-- In het `Kaarten`-scherm proberen zoekopdrachten te matchen op organisatienamen en plaatsen.
+  Als je op clubnamen wilt zoeken, ga dan naar de `Kaarten`-tab.
+- In de `Kaarten`-tab proberen zoekopdrachten te matchen op organisatienamen en plaatsen.
   Zoeken op `Ber` kan `FFC Shot71 (Berlicum)` en `Museum für Fotografie (Berlin)` en `The Victoria & Albert Museum (London)` opleveren.
   Merk op dat de plaats de locatie is zoals opgegeven in het bestand `root.level1.json` en _niet_ de vertaalde versie, die kan afwijken.
 - In het `Personen`-scherm proberen zoekopdrachten te matchen op de volledige naam van de fotograaf.
@@ -616,7 +616,7 @@ De optionele `usage`-tekst kan in meerdere talen worden gedefinieerd (bij voorke
 ### Level 1. Clubs toevoegen
 
 Voor het toevoegen van fotoclubs (of musea) op `Level 1` zijn een naam, locatie en enkele optionele URL's nodig. 
-Hiermee kan de app de items tonen in het `Kaarten`-scherm en ze weergeven met locatiemarkeringen op de kaarten.
+Hiermee kan de app de items tonen in de `Kaarten`-tab en ze weergeven met locatiemarkeringen op de kaarten.
 
 `Level 1`-data wordt technisch opgeslagen in één centraal gehost 
 [bestand](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json)
