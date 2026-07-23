@@ -41,6 +41,11 @@ struct PhotographersListView2627: View {
     // FilteredPhotographerView2627 (NSObject's Identifiable = ObjectIdentifier).
     @FetchRequest(sortDescriptors: [], animation: .default)
     var photographers: FetchedResults<Photographer>
+    // Watched so that applyScrollPresetIfReady() is re-triggered when level-2 JSON populates
+    // MemberPortfolio records (and their featuredImage URLs) after the Photographer record
+    // itself has already arrived. photographers.count alone is not enough (#776).
+    @FetchRequest(sortDescriptors: [], animation: .default)
+    var memberPortfolios: FetchedResults<MemberPortfolio>
     @State var didApplyPreset = false
     @State var scrollPositionID: ObjectIdentifier?
     private var navigationTitle = String(localized: "People",
@@ -120,6 +125,13 @@ struct PhotographersListView2627: View {
         .scrollPosition(id: $scrollPositionID, anchor: .top)
         .onAppear { applyScrollPresetIfReady() }
         .onChange(of: photographers.count) { _, _ in applyScrollPresetIfReady() }
+        .onChange(of: memberPortfolios.count) { _, _ in applyScrollPresetIfReady() }
+        // Fires when featuredImage transitions nil→non-nil on an EXISTING MemberPortfolio row
+        // (e.g. de Gender's JuiceBox refreshFirstImage() sets it in a second CoreData save that
+        // doesn't change the total count). Without this, the preset never latches (#776).
+        .onChange(of: memberPortfolios.reduce(into: 0) { $0 += $1.featuredImage == nil ? 0 : 1 }) { _, _ in
+            applyScrollPresetIfReady()
+        }
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
