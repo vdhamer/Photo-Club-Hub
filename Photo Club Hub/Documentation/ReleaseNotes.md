@@ -2,13 +2,15 @@
 
 USER-FACING
 
-* TODO: Ticket on automating screenshot capture & associated updates of both Readme files
-- TODO: display expertises on People screen
+* Fix: sometimes diplayed "orange "?" placeholder images for wrong reason (missing @objeservedObject)
+* Updated screenshots in README file on Github
+* TODO: display expertises on People screen
 * TODO: more search functionality on People screen
 * TODO: more search functionality on Clubs screen
-- 
+ 
 STRUCTURAL
-- Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)
+* Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)
+* Script-based screenshot capture (allows more frequent screenshot updates)
 
 This build #4664 is a placeholder for the plans for 2.10.1
 This build is just a placeholder for possible changes.
@@ -20,16 +22,16 @@ This build is just a placeholder for possible changes.
 USER-FACING
 
 * Top-level navigation between screens now uses Tabs (was: Buttons). 
-- Tabs have new icons and new names:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
-- Detailed behavior of the Search bar has changed. Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
-- First use of TipKit for onboarding new users.
-- Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
-- People screen: when using Search, only relevant (non-empty) clubs are shown.
+* Tabs have new icons and new names:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
+* Detailed behavior of the Search bar has changed. Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
+* First use of TipKit for onboarding new users.
+* Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
+* People screen: when using Search, only relevant (non-empty) clubs are shown.
 
 README SCREEN
 
 * Fixed typos in EN and NL versions and updates related to UI changes.
-- Updated 4 screenshots in the Readme screen
+* Updated 4 screenshots in the Readme screen
 
 STRUCTURAL
 
@@ -39,22 +41,22 @@ STRUCTURAL
 * Synchonized code with Photo Club Hub HTML
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
 * Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
-- Added missing uniqueness constraint
-- Significantly increased number of tests
-- JSON files used only for testing are no longer shipped inside the app
-- Tests didn't support iOS 17 (was accidentally set to 18+)
-- Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
-- Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
-- Running automated testing has become more robust.
-- For practical reasons we support iOS 17.5 (was 17.6) and newer. Not sure 17.5 works because that simulator fails on Xcode beta.
-- Switched from manual updating of the LineCount.xlsx spreadsheet to a scripted version, countLines.sh (with help from Claude).
+* Added missing uniqueness constraint
+* Significantly increased number of tests
+* JSON files used only for testing are no longer shipped inside the app
+* Tests didn't support iOS 17 (was accidentally set to 18+)
+* Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
+* Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
+* Running automated testing has become more robust.
+* For practical reasons we support iOS 17.5 (was 17.6) and newer. Not sure 17.5 works because that simulator fails on Xcode beta.
+* Switched from manual updating of the LineCount.xlsx spreadsheet to a scripted version, countLines.sh (with help from Claude).
 
 DOCUMENTATION MAINTENANCE
 
-- Updated data model in README.md
-- Updated screen shots within in-app Readme
-- Translated GitHub README into README_NL.md
-- Most screenshots in App Store updated.
+* Updated data model in README.md
+* Updated screen shots within in-app Readme
+* Translated GitHub README into README_NL.md
+* Most screenshots in App Store updated.
 
 This build #4663 was made using Xcode 26.6 and was submitted to the App Store.
 Amount of code and data lines changed since previous release: 14,934 additions and 4,010 deletions across 467 files.
@@ -66,16 +68,16 @@ Amount of code and data lines changed since previous release: 14,934 additions a
 USER-FACING
 
 * Top-level navigation between screens now uses Tabs (was: Buttons). 
-- Tabs have new icons and new names:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
-- Detailed behavior of the Search bar has changed. Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
-- First use of TipKit for onboarding new users.
-- Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
-- People screen: when using Search, only relevant (non-empty) clubs are shown.
+* Tabs have new icons and new names:  Photographers > People, Members > Clubs, Organizations > Maps, Preferences > Settings.
+* Detailed behavior of the Search bar has changed. Fixed: there were 2 search buttons under iOS 27.0 beta 1 (filed a bug report with Apple).
+* First use of TipKit for onboarding new users.
+* Fixed a visual glitch that sometimes showed up at the start of the Preview Screen.
+* People screen: when using Search, only relevant (non-empty) clubs are shown.
 
 README SCREEN
 
 * Fixed typos in EN and NL versions and updates related to UI changes.
-- TODO: updated 4 screenshots in the Readme screen <<<<<
+* TODO: updated 4 screenshots in the Readme screen <<<<<
 
 STRUCTURAL
 
@@ -85,19 +87,19 @@ STRUCTURAL
 * Synchonized code with Photo Club Hub HTML
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
 * Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
-- Added missing uniqueness constraint
-- Significantly increased number of tests
-- JSON files used only for testing are no longer shipped inside the app
-- Tests didn't support iOS 17 (was accidentally set to 18+)
-- Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
-- Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
-- Running automated testing has become more robust.
-- For practical reasons we support iOS 17.5 (was 17.6) and newer. Not sure 17.5 works because that simulator fails on Xcode beta.
-- Switched from manual updating of the LineCount.xlsx spreadsheet to a scripted version, countLines.sh (with help from Claude).
+* Added missing uniqueness constraint
+* Significantly increased number of tests
+* JSON files used only for testing are no longer shipped inside the app
+* Tests didn't support iOS 17 (was accidentally set to 18+)
+* Filed a bug report (FB23527033) to Apple on Xcode (27 beta) Test Navigator. Not a big deal.
+* Filed a bug report (FB23634536) to Apple on a bug in a TipKit macro
+* Running automated testing has become more robust.
+* For practical reasons we support iOS 17.5 (was 17.6) and newer. Not sure 17.5 works because that simulator fails on Xcode beta.
+* Switched from manual updating of the LineCount.xlsx spreadsheet to a scripted version, countLines.sh (with help from Claude).
 
 DOCUMENTATION MAINTENANCE
 
-- Updated data model in README.md
+* Updated data model in README.md
 
 This build #4662 was made using Xcode 26.6 RC 3. The next build is intended to go the App Store.
 Amount of code and data lines changed since previous release: 1340 additions and 1255 deletions across 55 files.
