@@ -23,12 +23,12 @@
     </p>
     <a href="#de-schermen-van-de-gebruikersinterface">De schermen van de gebruikersinterface</a>
           <ul>
-            <li><a href="#het-kaarten-scherm">Het Kaarten-scherm</a></li>
-            <li><a href="#het-clubs-scherm">Het Clubs-scherm</a></li>
-            <li><a href="#het-personen-scherm">Het Personen-scherm</a></li>
+            <li><a href="#de-kaarten-tab">De Kaarten-tab</a></li>
+            <li><a href="#de-clubs-tab">De Clubs-tab</a></li>
+            <li><a href="#de-personen-scherm">De Personen-tab</a></li>
             <li><a href="#het-afbeeldingen-scherm">Het Afbeeldingen-scherm</a></li>
             <li><a href="#het-readme-scherm">Het Readme-scherm</a></li>
-            <li><a href="#het-instellingen-scherm">Het Instellingen-scherm</a></li>
+            <li><a href="de-instellingen-tab">De Instellingen-tab</a></li>
             <li><a href="#het-prelude-scherm">Het Prelude-scherm</a></li>
           </ul>
     </p>
