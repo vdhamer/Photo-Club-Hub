@@ -348,6 +348,19 @@ if [[ -z "${PREFERRED_IOS_VERSION}" ]]; then
     PREFERRED_IOS_VERSION="$(latest_ios_runtime)"
     [[ -z "${PREFERRED_IOS_VERSION}" ]] && { echo "ERROR: no iOS runtimes found." >&2; exit 1; }
     echo "Auto-detected runtime: ${PREFERRED_IOS_VERSION}"
+else
+    # Normalize user-supplied --ios-version to the "iOS X.Y" form used in simctl section
+    # headers. Accepts "27", "27.0", "iOS 27", or "iOS 27.0"; matches against installed
+    # runtimes so "27" expands to "iOS 27.0" when that is what is installed.
+    _ver="${PREFERRED_IOS_VERSION#iOS }"
+    _matched="$("${SIMCTL[@]}" list runtimes available \
+        | grep -E "^iOS ${_ver}([. ]|\$)" \
+        | head -1 | awk '{print $1, $2}')"
+    if [[ -n "${_matched}" ]]; then
+        PREFERRED_IOS_VERSION="${_matched}"
+    elif [[ "${PREFERRED_IOS_VERSION}" != iOS\ * ]]; then
+        PREFERRED_IOS_VERSION="iOS ${PREFERRED_IOS_VERSION}"
+    fi
 fi
 
 # ---------------------------------------------------------------------------

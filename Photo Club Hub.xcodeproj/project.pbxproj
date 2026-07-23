@@ -258,7 +258,6 @@
 		37A88B52300E1D1E00193829 /* Levels_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_NL_Light.jpg; sourceTree = "<group>"; };
 		37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen_NL.png; sourceTree = "<group>"; };
 		37A88B58300E1D1E00193829 /* readmeScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readmeScreen_NL.png; sourceTree = "<group>"; };
-		37A88B59300E1D1E00193829 /* whosWhoScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whosWhoScreen_NL.png; sourceTree = "<group>"; };
 		37A88B5A300E1D3400193829 /* README_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_NL.md; sourceTree = "<group>"; };
 		37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level2JsonReaders+Helpers.swift"; sourceTree = "<group>"; };
 		37B1A4682F0B18A700854FBD /* museumsUS.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsUS.level1.json; sourceTree = "<group>"; };
@@ -288,6 +287,8 @@
 		37DA3E102F06B62600AB7993 /* museumsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsNL.level1.json; sourceTree = "<group>"; };
 		37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView.swift; sourceTree = "<group>"; };
 		37DB78392FB74854007AC405 /* MemberPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioView.swift; sourceTree = "<group>"; };
+		37E5BFB53012AA71006DA25D /* People_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = People_EN_Light.jpg; sourceTree = "<group>"; };
+		37E5BFB63012AA71006DA25D /* People_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = People_NL_Light.jpg; sourceTree = "<group>"; };
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
 		37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitHub_bestandsbeheer_NL.md; sourceTree = "<group>"; };
 		37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListSectionHeader.swift; sourceTree = "<group>"; };
@@ -336,7 +337,6 @@
 		D02F88522C4C242C0043B25B /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Nieuwsbrief_Aug_2025_app.pdf; sourceTree = "<group>"; };
 		D030CD642B3AE2E800A12E90 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
-		D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whosWhoScreen.png; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+containsWordUsingNLP.swift"; sourceTree = "<group>"; };
 		D036591F2BADBAE10014F266 /* Photo_Club_Hub_2_5_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_6.xcdatamodel; sourceTree = "<group>"; };
@@ -617,8 +617,8 @@
 		D00262413011519E0098588E /* People */ = {
 			isa = PBXGroup;
 			children = (
-				D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */,
-				37A88B59300E1D1E00193829 /* whosWhoScreen_NL.png */,
+				37E5BFB53012AA71006DA25D /* People_EN_Light.jpg */,
+				37E5BFB63012AA71006DA25D /* People_NL_Light.jpg */,
 			);
 			path = People;
 			sourceTree = "<group>";
