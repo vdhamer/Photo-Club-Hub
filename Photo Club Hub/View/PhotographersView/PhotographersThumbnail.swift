@@ -14,7 +14,7 @@ import CoreData // for NSFetchRequest
 //     * buttons (coming) to switch images, and to navigate to portfolio per club
 
 struct PhotographersThumbnail: View {
-    let member: MemberPortfolio // who is this about?
+    @ObservedObject var member: MemberPortfolio // who is this about?
     let settings: SettingsStruct
     /// Set by tapping the caption or chevron; the screen-level view owns the navigationDestination(item:).
     /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).

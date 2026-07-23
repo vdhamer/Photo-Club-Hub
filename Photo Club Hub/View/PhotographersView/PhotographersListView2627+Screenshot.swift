@@ -37,8 +37,11 @@ extension PhotographersListView2627 {
     // are still in flight. We poll until both photographers' membership counts are stable
     // for membershipStabilityRequired consecutive checks before collecting image URLs (#776).
     private static let membershipStabilityCheckInterval: Duration = .milliseconds(500)
-    private static let membershipStabilityRequired = 4   // 2 s of no count change
-    private static let membershipStabilityMaxChecks = 20 // 10 s hard ceiling
+    private static let membershipStabilityRequired = 4   // 2 s of no change in counts or featuredImages
+    // Hard ceiling. Raised from 20 (10 s) because the gate now also waits for every membership's
+    // featuredImage, and slow clubs (Fotogroep de Gender) fetch a JuiceBox config.xml per member
+    // serially before their single save merges into the view context (#776).
+    private static let membershipStabilityMaxChecks = 60 // 30 s hard ceiling
 
     // -initialTab PortfolioViaPeople ⇒ push the shared preset member's portfolio (#777); the
     // People-tab twin of MemberPortfolioView's PortfolioViaClubs, producing a near-identical capture.
@@ -57,9 +60,10 @@ extension PhotographersListView2627 {
         if let target = scrollPresetPhotographerName,
            let photographer = photographers.first(where: { $0.fullNameFirstLast == target }),
            photographer.memberships.contains(where: { $0.featuredImage != nil }) {
-            // Only latch once level-2 JSON has populated at least one featuredImage URL;
-            // without this guard the preset fires before MemberPortfolio data arrives and
-            // every thumbnail renders as an orange question mark (member.featuredImage == nil).
+            // Only latch when at least one membership has a featuredImage URL, so
+            // signalWhenThumbnailsReady has real URLs to prefetch. Without this guard the
+            // preset could fire when the Photographer record first arrives (level-1 JSON)
+            // before any MemberPortfolio records exist and before debouncing is meaningful.
             didApplyPreset = true
             var transaction = Transaction()
             transaction.disablesAnimations = true
@@ -92,17 +96,35 @@ extension PhotographersListView2627 {
         })
 
         Task { @MainActor in
-            // Poll until both photographers' membership counts have been unchanged for
-            // membershipStabilityRequired consecutive checks, then fall through.
-            // All concurrent bgContext.save() calls have now merged into the view context.
+            // Poll until BOTH conditions hold for membershipStabilityRequired consecutive checks:
+            //   (1) both photographers' membership counts are unchanged, AND
+            //   (2) every membership of both photographers has a non-nil featuredImage.
+            //
+            // Count stability alone is insufficient (#776): clubs load concurrently and some
+            // (e.g. Fotogroep de Gender) set featuredImage *only* via refreshFirstImage()'s slow
+            // JuiceBox config.xml fetch, which is done inside that club's single bgContext.save().
+            // A photographer can reach a stable membership count while a slow club's row is still
+            // absent, or present with a nil featuredImage — either way the thumbnail renders as an
+            // orange question mark. Gating on featuredImage completeness closes that race; the
+            // secondary card (Francien van Mil) is de-Gender-only, so it depends on this entirely.
             var prevPrimary = -1
             var prevSecond  = -1
             var stableChecks = 0
 
+            func allFeaturedImagesPresent() -> Bool {
+                for photographer in [primaryPhotographer, secondPhotographer].compactMap({ $0 }) {
+                    let memberships = photographer.memberships
+                    if memberships.isEmpty { return false }
+                    if memberships.contains(where: { $0.featuredImage == nil }) { return false }
+                }
+                return true
+            }
+
             for _ in 0 ..< Self.membershipStabilityMaxChecks {
                 let currentPrimary = primaryPhotographer.memberships.count
                 let currentSecond  = secondPhotographer?.memberships.count ?? 0
-                if currentPrimary == prevPrimary && currentSecond == prevSecond {
+                let countsStable = currentPrimary == prevPrimary && currentSecond == prevSecond
+                if countsStable && allFeaturedImagesPresent() {
                     stableChecks += 1
                     if stableChecks >= Self.membershipStabilityRequired { break }
                 } else {
@@ -136,6 +158,14 @@ extension PhotographersListView2627 {
                 _ = await outer.next() // first to finish wins (images done OR timeout)
                 outer.cancelAll()
             }
+
+            // Let SwiftUI commit any pending @ObservedObject-driven re-render before signaling.
+            // The prefetch above usually returns instantly from URLCache (refreshFirstImage() just
+            // downloaded these), so without this flush signalReady can fire in the same runloop
+            // region as the last CoreData merge — before the render pass that replaces the
+            // question-mark placeholder with the real thumbnail has actually drawn (#776).
+            await Task.yield()
+            try? await Task.sleep(for: .milliseconds(250))
 
             ScreenshotReadiness.signalReady(for: "People")
         }

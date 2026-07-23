@@ -16,7 +16,7 @@ import CoreData     // for NSManagedObjectContext
 /// Tapping the thumbnail toggles the shown image variant if both variants are available.
 struct MemberPortfolioRow: View {
     /// The member portfolio model used to populate this row.
-    var member: MemberPortfolio
+    @ObservedObject var member: MemberPortfolio
     /// Localized connector text used as '<person> of <photo club>'.
     private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
     /// Core Data context used to resolve localized expertise lists.
