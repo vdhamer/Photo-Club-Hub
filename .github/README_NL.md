@@ -26,9 +26,9 @@
             <li><a href="#de-kaarten-tab">De Kaarten-tab</a></li>
             <li><a href="#de-clubs-tab">De Clubs-tab</a></li>
             <li><a href="#het-portfolio-scherm">Het Portfolio-scherm</a></li>
-            <li><a href="#het-personen-scherm">De Personen-tab</a></li>
-            <li><a href="#het-readme-scherm">Het Readme-scherm</a></li>
-            <li><a href="#het-instellingen-scherm">De Instellingen-tab</a></li>
+            <li><a href="#de-personen-tab">De Personen-tab</a></li>
+            <li><a href="#het-over-deze-app-scherm">Het Over deze app-scherm</a></li>
+            <li><a href="#de-instellingen-tab">De Instellingen-tab</a></li>
             <li><a href="#het-prelude-scherm">Het Prelude-scherm</a></li>
           </ul>
     </p>
@@ -136,13 +136,13 @@ Verderop staat een <a href="#fotoclubs-toevoegen-aan-de-app">hoofdstuk</a> over 
 Fotoclubs zijn daarmee het onderscheidende kenmerk van deze app.
 
 Je kunt eerst een fotoclub opzoeken en daarna de leden ervan vinden in de `Clubs`-tab. 
-Of je zoekt juist eerst een fotograaf op en vindt daarna de bijbehorende fotoclub in het `Personen`-scherm.
+Of je zoekt juist eerst een fotograaf op en vindt daarna de bijbehorende fotoclub in de `Personen`-tab.
 In beide gevallen kun je, zodra je een combinatie van fotograaf en club hebt gekozen, het fotoportfolio van dat clublid bekijken.
 
 <ul><details><summary>Details (klik om uit te vouwen)</summary></p>
 
 Hier is een schematische weergave van de `Clubs`-tab.
-Dit scherm zet de fotoclub voorop en laat je vervolgens clubleden en hun werk selecteren:
+Deze tab zet de fotoclub voorop en laat je vervolgens clubleden en hun werk selecteren:
 
 * fotoclub _Clickers_ (gehost op `www.PhotoClubClickers.com`)
   * lid __Bill__
@@ -158,8 +158,8 @@ Dit scherm zet de fotoclub voorop en laat je vervolgens clubleden en hun werk se
 
 <a/></p>
 
-Een alternatieve navigatieroute loopt via het `Personen`-scherm.
-Dit scherm zet de fotograaf voorop, zodat je een fotograaf ook kunt vinden als je de naam
+Een alternatieve navigatieroute loopt via de `Personen`-tab.
+Deze tab zet de fotograaf voorop, zodat je een fotograaf ook kunt vinden als je de naam
 van de club (of clubs) waarmee de fotograaf verbonden is niet kent:
 
 * fotograaf __Bill__
@@ -225,8 +225,8 @@ portfolio's=fotografen die dan lid zijn van een informele club).
 De app heeft onderaan het scherm een tabknop met vier tabs: `Kaarten`, `Clubs`, `Personen` en `Instellingen`.
 De overige schermen zijn van daaruit bereikbaar: 
 
-- het `Afbeeldingen`-scherm opent wanneer je op een portfolio tikt,
-- het `Readme`-scherm opent via de Info-knop (ⓘ) die op de meeste tabs beschikbaar is,
+- het `Portfolio`-scherm opent wanneer je op een portfolio tikt,
+- het `Over deze app`-scherm opent via de Info-knop (ⓘ) die op de meeste tabs beschikbaar is,
 - en het `Prelude`-scherm verschijnt wanneer de app wordt gestart.</p>
 
 Gebruik van de verschillende schermen in de gebruikersinterface:
@@ -246,8 +246,8 @@ Standaard zijn de kaarten "op slot". Die stand helpt bij het scrollen door de li
     
 Een _paarse_ speld op de kaart toont waar de geselecteerde club is gevestigd (bijvoorbeeld een school of gemeentelijk gebouw).
 Een _blauwe_ speld toont de locatie van elke andere fotoclub die zich toevallig in het getoonde gebied bevindt.
-Het scherm kan ook fotomusea tonen die in beeld zijn. Deze hebben andere markeringen dan de fotoclubs.
-Op het `Instellingen`-scherm kan je aangeven of je musea en/of clubs wilt verbergen.
+Deze tab kan ook fotomusea tonen die in beeld zijn. Deze hebben andere markeringen dan de fotoclubs.
+Op de `Instellingen`-tab kan je aangeven of je musea en/of clubs wilt verbergen.
 Er zijn ook instellingen om via kleur aan te geven of een Nederlandse club lid is van de Fotobond.
 
 </details></ul>
@@ -260,13 +260,13 @@ Hier selecteer je eerst een fotoclub en daarna het portfolio van een van de lede
 De `Zoek`-knop filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
 Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig en is (nog) niet permanent.
 
-![Clubs-scherm](images/Clubs/Clubs_NL_Light.jpg "Clubs-scherm")
+![Clubs-tab](images/Clubs/Clubs_NL_Light.jpg "Clubs-tab")
 
 ### Het `Portfolio`-scherm
 
 Het `Portfolio`-scherm toont één portfolio (van één fotograaf verbonden aan één club).
 Je bereikt het door op een `portfolio` te tikken in de `Clubs`-tab.
-Er is een vergelijkbare route vanuit het `Personen`-scherm.
+Er is een vergelijkbare route vanuit de `Personen`-tab.
 De titel bovenaan het `Portfolio`-scherm toont de geselecteerde fotograaf en de geselecteerde club:
 "Francien van Mil van Fotogroep de Gender".
 
@@ -280,31 +280,31 @@ Soms (afhankelijk van plug-in instellingen) krijg je het jaartal onder de foto's
 Je kunt daar naar links of rechts _vegen_ om handmatig terug of vooruit te bladeren door het portfolio.
 Er is ook een _autoplay_-stand voor het automatische doorlopen van de beelden ("diavoorstelling").
 
-### Het `Personen`-scherm
+### De `Personen`-tab
 
-![People Screen](images/People/People_NL_Light.jpg "Personen-Scherm")
+![Personen-tab](images/People/People_NL_Light.jpg "Personen-tab")
 
 De `Personen`-tab toont alle fotografen die voorkomen in de app.
-De banden van deze fotograaf met clubs (of persoonlijke lidmaatschap van de Fotobond) worden als vierkante foto's on de naam getoond.
+De banden van deze fotograaf met clubs (of persoonlijke lidmaatschap van de Fotobond) worden als vierkante foto's onder de naam getoond.
 De `Personen`-tab ondersteunt dus een Persoon>Club navigatievolgorde. De verwante `Clubs`-tab werkt daarentegen van Club>Persoon.
 
-Per Portfolio (Persoon/Club combinatie) kan je navigeren naar de een scherm met alle foto's binnen de Portfolio.
+Per Portfolio (Persoon/Club combinatie) kan je navigeren naar een scherm met alle foto's binnen de Portfolio.
 De `Zoek`-knop filtert op de namen van fotografen. Filteren op clubnaam of expertise wordt nog niet ondersteund.
 
-### Het `Readme`-scherm
+### Het `Over deze app`-scherm
 
-Het `Readme`-scherm (in de app getiteld "Over deze app") bevat achtergrondinformatie over de app en uitleg over het gebruik ervan.
+Het `Over deze app`-scherm bevat achtergrondinformatie over de app en uitleg over het gebruik ervan.
 Het opent als een sheet via de Info-knop (ⓘ) in de werkknop van de tabs `Personen`, `Clubs` en `Kaarten`.
 
-![Readme-scherm](images/readmeScreen_NL.png "Readme-scherm")
+![Over deze app-scherm](images/readmeScreen_NL.png "Over deze app-scherm")
 
-### Het `Instellingen`-scherm
+### De `Instellingen`-tab
 
-In het `Instellingen`-scherm stel je in welke soorten portfolio's je wilt opnemen in de
+In de `Instellingen`-tab stel je in welke soorten portfolio's je wilt opnemen in de
 `Clubs`-tab. Je kunt bijvoorbeeld kiezen of oud-leden worden getoond.
-Het `Instellingen`-scherm zou waarschijnlijk ook het `Personen`-scherm moeten filteren - maar dat doet het nog niet.
+De `Instellingen`-tab zou waarschijnlijk ook de `Personen`-tab moeten filteren - maar dat doet het nog niet.
 
-![Instellingen-scherm](images/preferencesScreen_NL.png "Instellingen-scherm")
+![Instellingen-tab](images/preferencesScreen_NL.png "Instellingen-tab")
 
 ### Het `Prelude`-scherm
 
@@ -369,7 +369,7 @@ De HTML-versie dekt ook de gevallen waarin iemand de informatie of foto's op een
 
 ### Doorzoekbare lijsten
 
-De drie schermen met lange lijsten (`Clubs`, `Kaarten`, `Personen`) hebben elk een zoekknop
+De drie tabs met lange lijsten (`Clubs`, `Kaarten`, `Personen`) hebben elk een zoekknop
 waarin je kunt invoeren wat je zoekt. Dit beperkt de lijst tot items die aan dat filtercriterium voldoen.</p>
 
 <details><summary>Details over de zoekknop (klik om uit te vouwen)</summary></p>
@@ -386,7 +386,7 @@ De tekst die je in de zoekknop typt, wordt vergeleken met sleutelvelden van de r
 - In de `Kaarten`-tab proberen zoekopdrachten te matchen op organisatienamen en plaatsen.
   Zoeken op `Ber` kan `FFC Shot71 (Berlicum)` en `Museum für Fotografie (Berlin)` en `The Victoria & Albert Museum (London)` opleveren.
   Merk op dat de plaats de locatie is zoals opgegeven in het bestand `root.level1.json` en _niet_ de vertaalde versie, die kan afwijken.
-- In het `Personen`-scherm proberen zoekopdrachten te matchen op de volledige naam van de fotograaf.
+- In de `Personen`-tab proberen zoekopdrachten te matchen op de volledige naam van de fotograaf.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
 
 Ontwerpdetail: het filteren via de zoekknop gebeurt in de gebruikersinterface van de app en niet door de CoreData-database.
@@ -427,7 +427,7 @@ Het bestandsformaat is hieronder gedocumenteerd bij [Hoe data wordt geladen](#ho
 
 ### Trek omlaag om te verversen
 
-De bovenkant van de schermen `Clubs`, `Kaarten` en `Personen`
+De bovenkant van de tabs `Clubs`, `Kaarten` en `Personen`
 kan omlaag worden getrokken om alle app-gegevens opnieuw op te halen.
 Verversen is meestal niet nodig, maar kan worden gebruikt om databaserecords te verwijderen
 die eerder zijn gedownload maar niet meer in gebruik zijn.
@@ -463,7 +463,7 @@ Een andere toepassing van _trek omlaag om te verversen_ is het forceren van het 
 
 ### Slim scrollen
 
-De schermen _Kaarten_ en _Personen_ proberen te voorkomen dat gedeeltelijke kaarten of gedeeltelijke fotografeninfo wordt getoond.
+De tabs _Kaarten_ en _Personen_ proberen te voorkomen dat gedeeltelijke kaarten of gedeeltelijke fotografeninfo wordt getoond.
 </p>
 
 <details><summary>Details over slim scrollen</summary></p>
@@ -478,7 +478,7 @@ Omdat iOS 18 blijkbaar overweg kan met lijstitems van variabele hoogte,
 ziet de slim scrollende inhoud van de app er onder iOS 18 iets beter uit.
 </p>
 
-Helaas biedt het _Clubs_-scherm deze slimme scrollfunctie niet, 
+Helaas biedt de _Clubs_-tab deze slimme scrollfunctie niet, 
 omdat het intern gebruikmaakt van een "gesegmenteerde List-view" in plaats van `ScrollView`.
 We moesten dus kiezen tussen het verwijderen van de segmentatie of het niet aanbieden van slim scrollen in de `Clubs`-tab.
 </details>
@@ -530,8 +530,8 @@ Wanneer een club op `Level 1` staat, verschijnt deze als markering op de kaarten
 De app kent immers de naam van de club en de breedte-/lengtegraad van de locatie.
 
 Voor clubs op `Level 2` kent de app ook de namen en optionele rollen van clubleden.
-Zoals de middelste schermafbeelding laat zien, worden de club en haar leden nu getoond op de schermen `Clubs` en `Personen`.
-Clubs met nul leden (voor zover bekend bij de app) worden op geen van beide schermen getoond.
+Zoals de middelste schermafbeelding laat zien, worden de club en haar leden nu getoond op de tabs `Clubs` en `Personen`.
+Clubs met nul leden (voor zover bekend bij de app) worden op geen van beide tabs getoond.
 
 Voor clubs op `Level 3` kent de app de beeldportfolio's van clubleden (schermafbeelding rechts), 
 en kunnen app-gebruikers door de foto's van leden bladeren.
@@ -863,7 +863,7 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
       Niet al deze optionele velden staan in het voorbeeld: zie de Level 1-documentatie voor meer details.
     - `maintainerEmail` is de contactpersoon bij problemen met dit bestand. Dat kan de beheerder of secretaris van de club zijn, of een heel ander lid.</p>
     - `givenName`, `infixName` en `familyName` worden gebruikt om de fotograaf uniek te identificeren.
-    - `infixName` (tussenvoegsel) is vaak leeg. Het maakt het correct sorteren van Europese achternamen mogelijk: "van Aalst" sorteert als "Aalst" in het _Personen_-scherm.
+    - `infixName` (tussenvoegsel) is vaak leeg. Het maakt het correct sorteren van Europese achternamen mogelijk: "van Aalst" sorteert als "Aalst" in de _Personen_-tab.
         - Een weggelaten "infixName" wordt geïnterpreteerd als "infixName" = "".
     - via het veld `level3URL` kan de app de Level 3-informatie vinden met de geselecteerde beelden van dit lid.</p>
     - het veld `roles` geeft aan of een lid een rol als bestuurslid vervult (bijvoorbeeld voorzitter).
@@ -886,7 +886,7 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
     - `birthday` mag de volledige geboortedatum zijn, maar momenteel worden alleen de maand en de dag in de gebruikersinterface getoond. Je kunt dus een fictief jaar (zoals `9999`) opgeven als dat de voorkeur heeft.
     - `website` is een persoonlijke, fotografiegerelateerde website. Als de website-URL beschikbaar is, biedt de app er een link naartoe.
     - `photographerImage` is een afbeelding van de fotograaf zelf. De app toont ofwel deze foto van de fotograaf, ofwel een uitgelicht beeld gemaakt door de fotograaf, afhankelijk van de huidige Instellingen.
-    - `featuredImage` is een URL naar één afbeelding die naast de naam van het lid kan worden getoond. Deze is zichtbaar in de `Clubs`-tab en het `Personen`-scherm.
+    - `featuredImage` is een URL naar één afbeelding die naast de naam van het lid kan worden getoond. Deze is zichtbaar in de `Clubs`-tab en de `Personen`-tab.
     - `level3URL` is een URL naar een bestand met de geselecteerde portfoliobeelden die dit lid heeft gemaakt in de context van een bepaalde fotoclub.
     - `membershipStartDate` is de datum waarop het lid bij de club kwam.
     - `membershipEndDate` is de datum waarop het lid de club verliet. Voor een huidig lid kan deze datum het best worden weggelaten.
@@ -940,7 +940,7 @@ Nog te doen
 
 <p align="right">(<a href="#top">naar boven</a>)</p>
 
-## Installatie</p>
+## Installatie
 
 Als je simpelweg de binaire versie van de app wilt installeren, installeer die dan gewoon vanuit Apple's App Store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=nl)).
 
@@ -1005,7 +1005,7 @@ zodat Core Data bijvoorbeeld hernoemde struct-typen of hernoemde properties kan 
 
 <p align="right">(<a href="#top">naar boven</a>)</p>
 
-## Bijdragen</p>
+## Bijdragen
 
 Bugfixes en nieuwe functies zijn welkom.
 Voordat je moeite steekt in het ontwerpen, programmeren, testen en verfijnen van functies, is het het beste om
@@ -1098,7 +1098,7 @@ maar omdat het meestal goed genoeg werkt, merkt een gebruiker daar doorgaans nie
    Deze hardgecodeerde data omvat de formele rollen van leden (bijvoorbeeld voorzitter, penningmeester).
 5. de fotoclubdata is minimaal (naam, plaats/land, GPS, website), maar is momenteel nog hardgecodeerd.</p>
 
-Sommige van deze hiaten komen [hierboven](#hoe-data-wordt-geladen) aan bod.
+Sommige van deze hiaten komen [hieronder](#hoe-data-wordt-geladen) aan bod.
 </details></ul>
 
 ### Het datamodel
