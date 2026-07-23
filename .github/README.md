@@ -21,12 +21,12 @@
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
-            <li><a href="#the-maps-tab">The Maps Tab</a></li>
-            <li><a href="#the-clubs-tab">The Clubs Tab</a></li>
-            <li><a href="#the-people-tab">The People Tab</a></li>
-            <li><a href="#the-images-screen">The Images Screen</a></li>
-            <li><a href="#the-readme-Screen">The Readme Screen</a></li>
-            <li><a href="#the-settings-Tab">The Settings Tab</a></li>
+            <li><a href="#the-maps-screen">The Maps Tab</a></li>
+            <li><a href="#the-clubs-screen">The Clubs Tab</a></li>
+            <li><a href="#the-portfolio-screen">The Portfolio Screen</a></li>
+            <li><a href="#the-people-screen">The People Tab</a></li>
+            <li><a href="#the-readme-screen">The Readme Screen</a></li>
+            <li><a href="#the-settings-screen">The Settings Tab</a></li>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
@@ -35,8 +35,8 @@
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#website-generation">Website Generation</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
-            <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#photographer-expertises">Photographer Expertises</a></li>
+            <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
             <li><a href="#fancy-scrolling">Fancy scrolling</a></li>
         </ul>
@@ -66,6 +66,7 @@
            </ul>
     </p><details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
            <ul>
+               <li><a href="#mvvm-layers">MVVM Layers</a></li>
                <li><a href="#role-of-the-database">Role of the Database</a></li>
                <li><a href="#the-data-model">The Data Model</a></li>
                <ul>

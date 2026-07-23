@@ -25,10 +25,10 @@
           <ul>
             <li><a href="#de-kaarten-tab">De Kaarten-tab</a></li>
             <li><a href="#de-clubs-tab">De Clubs-tab</a></li>
-            <li><a href="#de-personen-scherm">De Personen-tab</a></li>
-            <li><a href="#het-afbeeldingen-scherm">Het Afbeeldingen-scherm</a></li>
+            <li><a href="#het-portfolio-scherm">Het Portfolio-scherm</a></li>
+            <li><a href="#het-personen-scherm">De Personen-tab</a></li>
             <li><a href="#het-readme-scherm">Het Readme-scherm</a></li>
-            <li><a href="de-instellingen-tab">De Instellingen-tab</a></li>
+            <li><a href="#het-instellingen-scherm">De Instellingen-tab</a></li>
             <li><a href="#het-prelude-scherm">Het Prelude-scherm</a></li>
           </ul>
     </p>
@@ -37,8 +37,8 @@
             <li><a href="#ondersteuning-voor-meerdere-clubs">Ondersteuning voor meerdere clubs</a></li>
             <li><a href="#websitegeneratie">Websitegeneratie</a></li>
             <li><a href="#doorzoekbare-lijsten">Doorzoekbare lijsten</a></li>
-            <li><a href="#fotomusea">Fotomusea</a></li>
             <li><a href="#expertises-van-fotografen">Expertises van fotografen</a></li>
+            <li><a href="#fotomusea">Fotomusea</a></li>
             <li><a href="#trek-omlaag-om-te-verversen">Trek omlaag om te verversen</a></li>
             <li><a href="#slim-scrollen">Slim scrollen</a></li>
         </ul>
@@ -68,6 +68,7 @@
            </ul>
     </p><details><summary><a href="#de-architectuur-van-de-app">De architectuur van de app</a></summary>
            <ul>
+               <li><a href="#mvvm-lagen">MVVM-lagen</a></li>
                <li><a href="#de-rol-van-de-database">De rol van de database</a></li>
                <li><a href="#het-datamodel">Het datamodel</a></li>
                <ul>
