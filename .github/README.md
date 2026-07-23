@@ -272,12 +272,12 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is used to generat
 
 ### The `People` Screen
 
+![People Screen](images/People/People_EN_Light.jpg "People Screen")
+
 The `People` screen lists all the photographers known to the app.
 It allows you to first select the photographer and then select that person's club-specific portfolio.
 If available, club-independent information (like birthdays) for that photographer is displayed here.
 The `Search` bar filters on photographer names.
-
-![People Screen](images/whosWhoScreen.png "People Screen")
 
 ### The `Readme` Screen
 
