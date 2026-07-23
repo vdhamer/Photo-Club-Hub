@@ -91,9 +91,7 @@ extension PhotographersListView2627 {
     // signalReady fires before those records appear, and the screenshot captures their
     // thumbnails as orange question marks (member.featuredImage == nil) (#776).
     private func signalWhenThumbnailsReady(for primaryPhotographer: Photographer) {
-        let secondPhotographer = photographers.first(where: {
-            $0.fullNameFirstLast == Self.secondVisiblePhotographerName
-        })
+        let secondPhotographer = photographers.first { $0.fullNameFirstLast == Self.secondVisiblePhotographerName }
 
         Task { @MainActor in
             // Poll until BOTH conditions hold for membershipStabilityRequired consecutive checks:
@@ -111,20 +109,11 @@ extension PhotographersListView2627 {
             var prevSecond  = -1
             var stableChecks = 0
 
-            func allFeaturedImagesPresent() -> Bool {
-                for photographer in [primaryPhotographer, secondPhotographer].compactMap({ $0 }) {
-                    let memberships = photographer.memberships
-                    if memberships.isEmpty { return false }
-                    if memberships.contains(where: { $0.featuredImage == nil }) { return false }
-                }
-                return true
-            }
-
             for _ in 0 ..< Self.membershipStabilityMaxChecks {
                 let currentPrimary = primaryPhotographer.memberships.count
                 let currentSecond  = secondPhotographer?.memberships.count ?? 0
                 let countsStable = currentPrimary == prevPrimary && currentSecond == prevSecond
-                if countsStable && allFeaturedImagesPresent() {
+                if countsStable && allFeaturedImagesPresent(primary: primaryPhotographer, second: secondPhotographer) {
                     stableChecks += 1
                     if stableChecks >= Self.membershipStabilityRequired { break }
                 } else {
@@ -169,6 +158,15 @@ extension PhotographersListView2627 {
 
             ScreenshotReadiness.signalReady(for: "People")
         }
+    }
+
+    private func allFeaturedImagesPresent(primary: Photographer, second: Photographer?) -> Bool {
+        for photographer in [primary, second].compactMap({ $0 }) { // check both photographers
+            let memberships = photographer.memberships
+            if memberships.isEmpty { return false }
+            if memberships.contains(where: { $0.featuredImage == nil }) { return false } // either featuredImage missing
+        }
+        return true
     }
 
 }
