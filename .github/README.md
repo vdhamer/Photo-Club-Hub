@@ -274,15 +274,14 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is used to generat
 
 ![People Screen](images/People/People_EN_Light.jpg "People Screen")
 
-The `People` tab lists the photographers featured in the app. The photographers are shown
-sorted by name. Affiliations to photo clubs are shown inside the person's "card" - unlike the Clubs tab
-which is essentially club-first rather than person-first. A person may be a member of more than one club
-(example on the left) or might be a member of one club and former member of another. This means a person
-can have multiple portfolios (such rows can be swiped horizontally).
+The `People` tab lists the photographers featured in the app. 
+Affiliations to photo clubs are shown inside the person's "card". This is different to the Clubs tab
+which is essentially Club>Person rather than Person>Club. Note that a person may simultaneously be a member of multiple clubs
+(left part of image) or might be a member of one club and former member of another. Such individuals are shown having
+multiple portfolios. These portfolios can scroll horizontally.
 
-Clicking on one of the portfolio images brings you to a screen where you can browse all images in that portfolio.
-If available, club-independent information (like birthdays) for that photographer is displayed here.
-The `Search` button filters only on photographer names. Filtering on club or expertise are planned.
+Clicking on one of the portfolio images brings you to a screen where you can browse through that portfolio.
+The `Search` button filters only on photographer names. Filtering capabilities on clubs or expertises are planned.
 
 ### The `Readme` Screen
 
