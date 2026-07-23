@@ -21,12 +21,12 @@
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
-            <li><a href="#the-maps-screen">The Maps Screen</a></li>
-            <li><a href="#the-clubs-screen">The Clubs Screen</a></li>
-            <li><a href="#the-people-screen">The People Screen</a></li>
+            <li><a href="#the-maps-tab">The Maps Tab</a></li>
+            <li><a href="#the-clubs-tab">The Clubs Tab</a></li>
+            <li><a href="#the-people-tab">The People Tab</a></li>
             <li><a href="#the-images-screen">The Images Screen</a></li>
-            <li><a href="#the-readme-screen">The Readme Screen</a></li>
-            <li><a href="#the-settings-screen">The Settings Screen</a></li>
+            <li><a href="#the-readme-Screen">The Readme Screen</a></li>
+            <li><a href="#the-settings-Tab">The Settings Tab</a></li>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
