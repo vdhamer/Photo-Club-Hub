@@ -221,7 +221,9 @@ The remaining screens are reached from these:
 - the `Readme` screen opens via the Info (ⓘ) button available on most tabs,
 - the `Prelude` screen is briefly shown when the app launches.</p>
 
-The individual screens are described below.
+The individual screens are described below. The Tabs are reachable via the Tab Bar,
+and can be interpreted as having multiple sheets of paper, and being able to decide which is on top as long as the Tab bar is visible.
+The Screens mean you have navigated away from one of the Tabs, but will - when done - return to the Tab you came from.
 <ul>
 
 ### The `Maps` Tab
