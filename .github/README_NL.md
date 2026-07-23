@@ -283,10 +283,12 @@ Er is ook een _autoplay_-stand voor het automatische doorlopen van de beelden ("
 
 ![People Screen](images/People/People_NL_Light.jpg "Personen-Scherm")
 
-Het `Personen`-scherm toont alle fotografen die bekend zijn bij de app.
-Hier selecteer je eerst de fotograaf en daarna het clubspecifieke portfolio van die persoon.
-Indien beschikbaar wordt hier ook clubonafhankelijke informatie (zoals verjaardagen) van de fotograaf getoond.
-De `Zoek`-knop filtert op de namen van fotografen.
+De `Personen`-tab toont alle fotografen die voorkomen in de app.
+De banden van deze fotograaf met clubs (of persoonlijke lidmaatschap van de Fotobond) worden als vierkante foto's on de naam getoond.
+De `Personen`-tab ondersteunt dus een Persoon>Club navigatievolgorde. De verwante `Clubs`-tab werkt daarentegen van Club>Persoon.
+
+Per Portfolio (Persoon/Club combinatie) kan je navigeren naar de een scherm met alle foto's binnen de Portfolio.
+De `Zoek`-knop filtert op de namen van fotografen. Filteren op clubnaam of expertise wordt nog niet ondersteund.
 
 ### Het `Readme`-scherm
 
