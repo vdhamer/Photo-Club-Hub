@@ -90,13 +90,17 @@ extension PhotographersListView2627 {
     // while other clubs' MemberPortfolio records are still in flight. Without debouncing,
     // signalReady fires before those records appear, and the screenshot captures their
     // thumbnails as orange question marks (member.featuredImage == nil) (#776).
+    //
+    // secondPhotographer is NOT captured before the Task: on machines with many CPU cores
+    // (e.g. M1 Ultra) the preset can latch before Level-1 JSON for de Gender has merged
+    // Francien van Mil's Photographer record into the view context, leaving secondPhotographer
+    // nil for the entire Task. Re-fetching inside the loop detects her appearance (#790).
     private func signalWhenThumbnailsReady(for primaryPhotographer: Photographer) {
-        let secondPhotographer = photographers.first { $0.fullNameFirstLast == Self.secondVisiblePhotographerName }
-
         Task { @MainActor in
-            // Poll until BOTH conditions hold for membershipStabilityRequired consecutive checks:
-            //   (1) both photographers' membership counts are unchanged, AND
-            //   (2) every membership of both photographers has a non-nil featuredImage.
+            // Poll until ALL conditions hold for membershipStabilityRequired consecutive checks:
+            //   (1) secondPhotographer exists in the view context,
+            //   (2) both photographers' membership counts are unchanged, AND
+            //   (3) every membership of both photographers has a non-nil featuredImage.
             //
             // Count stability alone is insufficient (#776): clubs load concurrently and some
             // (e.g. Fotogroep de Gender) set featuredImage *only* via refreshFirstImage()'s slow
@@ -110,10 +114,15 @@ extension PhotographersListView2627 {
             var stableChecks = 0
 
             for _ in 0 ..< Self.membershipStabilityMaxChecks {
+                // Re-fetch each iteration: she may not exist yet when the Task starts (#790).
+                let secondPhotographer = photographers.first {
+                    $0.fullNameFirstLast == Self.secondVisiblePhotographerName
+                }
                 let currentPrimary = primaryPhotographer.memberships.count
                 let currentSecond  = secondPhotographer?.memberships.count ?? 0
                 let countsStable = currentPrimary == prevPrimary && currentSecond == prevSecond
-                if countsStable && allFeaturedImagesPresent(primary: primaryPhotographer, second: secondPhotographer) {
+                if secondPhotographer != nil && countsStable &&
+                    allFeaturedImagesPresent(primary: primaryPhotographer, second: secondPhotographer) {
                     stableChecks += 1
                     if stableChecks >= Self.membershipStabilityRequired { break }
                 } else {
@@ -124,7 +133,8 @@ extension PhotographersListView2627 {
                 try? await Task.sleep(for: Self.membershipStabilityCheckInterval)
             }
 
-            // Collect image URLs now that all memberships have settled.
+            // Collect image URLs — re-fetch secondPhotographer to reflect current view context.
+            let secondPhotographer = photographers.first { $0.fullNameFirstLast == Self.secondVisiblePhotographerName }
             var urls = Set<URL>()
             for photographer in [primaryPhotographer, secondPhotographer].compactMap({ $0 }) {
                 if let url = photographer.photographerImage { urls.insert(url) }
