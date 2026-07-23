@@ -276,7 +276,7 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is used to generat
 
 The `People` tab lists the photographers featured in the app. The photographers are shown
 sorted by name. Affiliations to photo clubs are shown inside the person's "card" - unlike the Clubs tab
-which is essentially club-first rather than person first. A person may be a member of more than one club
+which is essentially club-first rather than person-first. A person may be a member of more than one club
 (example on the left) or might be a member of one club and former member of another. This means a person
 can have multiple portfolios (such rows can be swiped horizontally). Clicking on one of the portfolio images
 brings you to a screen where you can browse all images in that portfolio.
