@@ -281,12 +281,12 @@ Er is ook een _autoplay_-stand voor het automatische doorlopen van de beelden ("
 
 ### Het `Personen`-scherm
 
+![People Screen](images/People/People_NL_Light.jpg "Personen-Scherm")
+
 Het `Personen`-scherm toont alle fotografen die bekend zijn bij de app.
 Hier selecteer je eerst de fotograaf en daarna het clubspecifieke portfolio van die persoon.
 Indien beschikbaar wordt hier ook clubonafhankelijke informatie (zoals verjaardagen) van de fotograaf getoond.
 De `Zoek`-knop filtert op de namen van fotografen.
-
-![Personen-scherm](images/whosWhoScreen_NL.png "Personen-scherm")
 
 ### Het `Readme`-scherm
 
