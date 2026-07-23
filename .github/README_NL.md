@@ -134,13 +134,13 @@ Verderop staat een <a href="#fotoclubs-toevoegen-aan-de-app">hoofdstuk</a> over 
 
 Fotoclubs zijn daarmee het onderscheidende kenmerk van deze app.
 
-Je kunt eerst een fotoclub opzoeken en daarna de leden ervan vinden in het `Clubs`-scherm. 
+Je kunt eerst een fotoclub opzoeken en daarna de leden ervan vinden in de `Clubs`-tab. 
 Of je zoekt juist eerst een fotograaf op en vindt daarna de bijbehorende fotoclub in het `Personen`-scherm.
 In beide gevallen kun je, zodra je een combinatie van fotograaf en club hebt gekozen, het fotoportfolio van dat clublid bekijken.
 
 <ul><details><summary>Details (klik om uit te vouwen)</summary></p>
 
-Hier is een schematische weergave van het `Clubs`-scherm.
+Hier is een schematische weergave van de `Clubs`-tab.
 Dit scherm zet de fotoclub voorop en laat je vervolgens clubleden en hun werk selecteren:
 
 * fotoclub _Clickers_ (gehost op `www.PhotoClubClickers.com`)
@@ -251,9 +251,9 @@ Er zijn ook instellingen om via kleur aan te geven of een Nederlandse club lid i
 
 </details></ul>
 
-### Het `Clubs`-scherm
+### De `Clubs`-tab
 
-Het `Clubs`-scherm toont alle fotoclubs die in de app zijn opgenomen.
+De `Clubs`-tab toont alle fotoclubs die in de app zijn opgenomen.
 Hier selecteer je eerst een fotoclub en daarna het portfolio van een van de leden.
 
 De `Zoek`-knop filtert de ledenlijsten op de volledige naam van de fotograaf of op expertise-tags.
@@ -264,7 +264,7 @@ Naar links vegen verwijdert een item, maar dat is normaal gesproken niet nodig e
 ### Het `Portfolio`-scherm
 
 Het `Portfolio`-scherm toont één portfolio (van één fotograaf verbonden aan één club).
-Je bereikt het door op een `portfolio` te tikken in het `Clubs`-scherm.
+Je bereikt het door op een `portfolio` te tikken in de `Clubs`-tab.
 Er is een vergelijkbare route vanuit het `Personen`-scherm.
 De titel bovenaan het `Portfolio`-scherm toont de geselecteerde fotograaf en de geselecteerde club:
 "Francien van Mil van Fotogroep de Gender".
@@ -299,8 +299,8 @@ Het opent als een sheet via de Info-knop (ⓘ) in de werkknop van de tabs `Perso
 
 ### Het `Instellingen`-scherm
 
-In het `Instellingen`-scherm stel je in welke soorten portfolio's je wilt opnemen in het
-`Clubs`-scherm. Je kunt bijvoorbeeld kiezen of oud-leden worden getoond.
+In het `Instellingen`-scherm stel je in welke soorten portfolio's je wilt opnemen in de
+`Clubs`-tab. Je kunt bijvoorbeeld kiezen of oud-leden worden getoond.
 Het `Instellingen`-scherm zou waarschijnlijk ook het `Personen`-scherm moeten filteren - maar dat doet het nog niet.
 
 ![Instellingen-scherm](images/preferencesScreen_NL.png "Instellingen-scherm")
@@ -379,7 +379,7 @@ en oudere iPhones tonen deze bovenaan de lijst (scroll snel omhoog tot je bovena
 
 De tekst die je in de zoekknop typt, wordt vergeleken met sleutelvelden van de records in de lijst.
 
-- In het `Clubs`-scherm filtert een zoekopdracht op de namen van fotografen en op hun expertises.
+- In de `Clubs`-tab filtert een zoekopdracht op de namen van fotografen en op hun expertises.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
   Als je op clubnamen wilt zoeken, ga dan naar de `Kaarten`-tab.
 - In de `Kaarten`-tab proberen zoekopdrachten te matchen op organisatienamen en plaatsen.
@@ -479,7 +479,7 @@ ziet de slim scrollende inhoud van de app er onder iOS 18 iets beter uit.
 
 Helaas biedt het _Clubs_-scherm deze slimme scrollfunctie niet, 
 omdat het intern gebruikmaakt van een "gesegmenteerde List-view" in plaats van `ScrollView`.
-We moesten dus kiezen tussen het verwijderen van de segmentatie of het niet aanbieden van slim scrollen in het `Clubs`-scherm.
+We moesten dus kiezen tussen het verwijderen van de segmentatie of het niet aanbieden van slim scrollen in de `Clubs`-tab.
 </details>
 </ul>
 <p align="right">(<a href="#top">naar boven</a>)</p>
@@ -734,7 +734,7 @@ Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSO
 ### Level 2. Leden toevoegen
 
 `Level 2`-ondersteuning vereist het aanleveren van een ledenlijst als bestand per club.
-De `Level 2`-data van een club verschijnt in het `Clubs`-scherm als een ledenlijst per club.
+De `Level 2`-data van een club verschijnt in de `Clubs`-tab als een ledenlijst per club.
 Elk `Level 2`-JSON-bestand bevat de huidige (en optioneel voormalige) leden van één club.
 Per lid wordt een URL opgeslagen die verwijst naar het `Level 3`-bestand (portfolio per lid).
 `Level 2`-lijsten bevatten ook de URL van een afbeelding die als miniatuur voor dat lid wordt gebruikt.
@@ -885,7 +885,7 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
     - `birthday` mag de volledige geboortedatum zijn, maar momenteel worden alleen de maand en de dag in de gebruikersinterface getoond. Je kunt dus een fictief jaar (zoals `9999`) opgeven als dat de voorkeur heeft.
     - `website` is een persoonlijke, fotografiegerelateerde website. Als de website-URL beschikbaar is, biedt de app er een link naartoe.
     - `photographerImage` is een afbeelding van de fotograaf zelf. De app toont ofwel deze foto van de fotograaf, ofwel een uitgelicht beeld gemaakt door de fotograaf, afhankelijk van de huidige Instellingen.
-    - `featuredImage` is een URL naar één afbeelding die naast de naam van het lid kan worden getoond. Deze is zichtbaar in het `Clubs`-scherm en het `Personen`-scherm.
+    - `featuredImage` is een URL naar één afbeelding die naast de naam van het lid kan worden getoond. Deze is zichtbaar in de `Clubs`-tab en het `Personen`-scherm.
     - `level3URL` is een URL naar een bestand met de geselecteerde portfoliobeelden die dit lid heeft gemaakt in de context van een bepaalde fotoclub.
     - `membershipStartDate` is de datum waarop het lid bij de club kwam.
     - `membershipEndDate` is de datum waarop het lid de club verliet. Voor een huidig lid kan deze datum het best worden weggelaten.
@@ -921,7 +921,7 @@ Maar het signaleert ook een tijdelijke tag (bijvoorbeeld het gebruik van "Scener
 ### Level 3. Afbeeldingen toevoegen
 
 `Level 3` bevat links naar de online beelden in ledenportfolio's. 
-Fotogroep Waalre in Nederland is een voorbeeld van een `Level 3`-club: je kunt hun portfolio's bekijken via het `Clubs`-scherm.
+Fotogroep Waalre in Nederland is een voorbeeld van een `Level 3`-club: je kunt hun portfolio's bekijken via de `Clubs`-tab.
 Omdat een club met bijvoorbeeld 20 leden honderden beelden heeft, is er een manier om portfolio's automatisch te genereren 
 met Lightroom (instructies over hoe dit werkt volgen later).
 
@@ -1078,7 +1078,7 @@ Die data kan wat verouderd zijn, maar zou accuraat genoeg moeten zijn om mee te 
 
 Om eventuele data-updates te verwerken, halen asynchrone aanroepen versere data op over het netwerk. 
 De MVVM-architectuur gebruikt dit om de `Views` van de gebruikersinterface bij te werken zodra de opgevraagde data binnenkomt.
-Af en toe, enkele seconden na het starten van de app, kan de gebruiker het `Clubs`-scherm dus zien veranderen. 
+Af en toe, enkele seconden na het starten van de app, kan de gebruiker de `Clubs`-tab dus zien veranderen. 
 Dit kan bijvoorbeeld gebeuren als de online ledenlijst van een club is gewijzigd sinds de vorige sessie.</p>
 
 Om precies te zijn is het bovenstaande de beoogde architectuur. Op dit moment zijn er nog een paar hiaten -
