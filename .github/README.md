@@ -21,12 +21,12 @@
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
-            <li><a href="#the-maps-screen">The Maps Tab</a></li>
-            <li><a href="#the-clubs-screen">The Clubs Tab</a></li>
+            <li><a href="#the-maps-tab">The Maps Tab</a></li>
+            <li><a href="#the-clubs-tab">The Clubs Tab</a></li>
             <li><a href="#the-portfolio-screen">The Portfolio Screen</a></li>
-            <li><a href="#the-people-screen">The People Tab</a></li>
+            <li><a href="#the-people-tab">The People Tab</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
-            <li><a href="#the-settings-screen">The Settings Tab</a></li>
+            <li><a href="#the-settings-tab">The Settings Tab</a></li>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
@@ -133,20 +133,20 @@ There is a <a href="#adding-photo-clubs-to-the-app">chapter</a> below on how to 
 
 Photo clubs are thus the distinguishing feature of this app.
 
-You can first look up a photo club and then find its members in the `Clubs` screen. 
-Or you can alternatively look up a photographer and then the associated photo club in the `People` screen.
+You can first look up a photo club and then find its members in the `Clubs` tab. 
+Or you can alternatively look up a photographer and then the associated photo club in the `People` tab.
 Either way, once you have chosen a photographer-and-club combination, you can view the photo portfolio of that club member.
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-Here is a schematic representation of the `Clubs` screen.
-This screen puts the photo club first, and then allows you to select club members and their work:
+Here is a schematic representation of the `Clubs` tab.
+This tab puts the photo club first, and then allows you to select club members and their work:
 
 * photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
   * member __Bill__
-    * photos by Bill as a member the Clickers
+    * photos by Bill as a member of the Clickers
   * member __John__
-    * photos John as a member of the Clickers
+    * photos by John as a member of the Clickers
 
 * photo club _Zoomers_ (hosted on `www.PhotoClubZoomers.com`)
   * member __John__
@@ -156,8 +156,8 @@ This screen puts the photo club first, and then allows you to select club member
 
 <a/></p>
 
-An alternative navigation path is provided by the `People` screen.
-This screen puts the photographer first, thus allowing you to find a photographer even if you don't
+An alternative navigation path is provided by the `People` tab.
+This tab puts the photographer first, thus allowing you to find a photographer even if you don't
 know the name of the club (or clubs) the photographer is associated with:
 
 * photographer __Bill__
@@ -217,48 +217,48 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 
 The app has a tab bar at the bottom of the screen with four tabs: `Maps`, `Clubs`, `People`, and `Settings`.
 The remaining screens are reached from these: 
-- the `Images` screen opens when you tap a Portfolio on the `Clubs` or `People` screens,
+- the `Portfolio` screen opens when you tap a portfolio on the `Clubs` or `People` tabs,
 - the `Readme` screen opens via the Info (ⓘ) button available on most tabs,
 - the `Prelude` screen is briefly shown when the app launches.</p>
 
 The individual screens are described below.
 <ul>
 
-### The `Maps` Screen
+### The `Maps` Tab
 
-The `Maps` screen shows all photo clubs that are known to the app. They are displayed as a scrolling list.
+The `Maps` tab shows all photo clubs that are known to the app. They are displayed as a scrolling list.
 Each entry contains a map showing where that club is located and, if you gave permission, your current location.
 A button with a lock icon toggles whether the map can be controlled interactively (scroll, zoom, rotate, 3D).
 By default, the maps are not interactive. This lock toggle determines whether you will scroll through the list of clubs or scroll within a map.
 
-![Maps Screen](images/Maps/Maps_EN_Light.jpg "Maps Screen")
+![Maps Tab](images/Maps/Maps_EN_Light.jpg "Maps Tab")
 
 <ul><details>
 <summary>Details (click to expand)</summary></p>
 
 A _purple_ pin on the map shows where the selected club is based (e.g., some municipal building).
 A _blue_ pin shows the location of any other photo club that happens to be based inside the displayed map region.
-The screen can also show any photo museums that happen to be in that region. Photo clubs and museums are displayed differently.
+This tab can also show any photo museums that happen to be in that region. Photo clubs and museums are displayed differently.
 Under `Settings` you can hide museums, clubs or (if you insist) both. There is an extra feature in `Settings` that allows you
 to set the color of clubs that are/aren't a member of the Dutch "Fotobond" federation. It is only useful in the Netherlands.
 
 </details></ul>
 
-### The `Clubs` Screen
+### The `Clubs` Tab
 
-The `Clubs` screen lists all the photo clubs featured in the app.
+The `Clubs` tab lists all the photo clubs featured in the app.
 It allows you to first select a photo club and then select the portfolio of one of its members.
 
 The `Search` bar filters the lists of club members using the photographer's full name or expertise tags.
 
-![Clubs Screen](images/Clubs/Clubs_EN_Light.jpg "Clubs Screen")
+![Clubs Tab](images/Clubs/Clubs_EN_Light.jpg "Clubs Tab")
 
 ### The `Portfolio` Screen
 
 The `Portfolio` screen displays one portfolio (of one photographer associated with one club).
-It can be reached by tapping on a `portfolio` in either the `Clubs` or the `People` screen.
+It can be reached by tapping on a `portfolio` in either the `Clubs` or the `People` tab.
 The title at the top of the screen shows the selected photographer and selected club affiliation:
-"Francien van Mil @ fgDeGender".
+"Francien van Mil of Fotogroep de Gender".
 
 ![Portfolio Screen](images/Portfolio/PortfolioViaClubs_EN_Light.jpg "Portfolio Screen")
 
@@ -271,9 +271,9 @@ You can _swipe_ left or right to manually move backwards or forwards through the
 There is also an _autoplay_ mode that replaces the swiping by an automatic slide show. This screen is (for Fotogroep Waalre)
 currently based on a Javascript plug-in (`Juicebox Pro`) that is used to generate galleries for websites.
 
-### The `People` Screen
+### The `People` Tab
 
-![People Screen](images/People/People_EN_Light.jpg "People Screen")
+![People Tab](images/People/People_EN_Light.jpg "People Tab")
 
 The `People` tab lists the photographers featured in the app. 
 Affiliations to photo clubs are shown inside the person's "card". This is different to the Clubs tab
@@ -291,13 +291,13 @@ It opens as a sheet via the Info (ⓘ) button in the toolbar of the `People`, `C
 
 ![Readme Screen](images/readmeScreen.png "Readme Screen")
 
-### The `Settings` Screen
+### The `Settings` Tab
 
-The `Settings` screen allows you to configure which types of portfolios you want to include in the
-`Clubs` screen. You can, for example, choose whether to show former members.
-The `Settings` screen probably should also filter the `People` screen - but it doesn't yet.
+The `Settings` tab allows you to configure which types of portfolios you want to include in the
+`Clubs` tab. You can, for example, choose whether to show former members.
+The `Settings` tab probably should also filter the `People` tab - but it doesn't yet.
 
-![Settings Screen](images/preferencesScreen.png "Settings Screen")
+![Settings Tab](images/preferencesScreen.png "Settings Tab")
 
 ### The `Prelude` Screen
 
@@ -314,9 +314,9 @@ Tapping on the icon turns it into an interactive image illustrating how most dig
 
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
 > that filters the light reaching each photocell or pixel.
-> In a 24 MPixel camera, the image sensor typically consist of an array of 4000 by 6000 photocells.
+> In a 24 MPixel camera, the image sensor typically consists of an array of 4000 by 6000 photocells.
 > Each photocell on the chip itself is not color-sensitive. But by placing a miniscule red, green or blue color filter on
-> on the chip, it because best at seeing one specific color range. Thus in most cameras, only one color is measured per
+> the chip, it becomes best at seeing one specific color range. Thus in most cameras, only one color is measured per
 > pixel: the two missing color channels for that pixel are estimated using color information from surrounding pixels.
 
 Tapping *inside* the image allows you to zoom in or out to your heart's content.
@@ -352,7 +352,7 @@ A companion app [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-
 same input data used by this app to generate (static) HTML web pages. The companion app generates
 static webpages _per club_ that list each club's members and has links to their portfolios.
 
-The webpages per club are collectively equivalent to the Portfolio page in iOS app.
+The webpages per club are collectively equivalent to the Portfolio page in the iOS app.
 The individual club pages can be easily integrated into existing (e.g. Wordpress), websites maintained by
 the individual clubs.
 
@@ -362,7 +362,7 @@ The HTML version also covers the cases where someone wants to view the informati
 
 ### Searchable Lists
 
-The three screens with long lists (`Clubs`, `Maps`, `People`) each have a Search Button
+The three tabs with long lists (`Clubs`, `Maps`, `People`) each have a Search Button
 where you can enter what you are looking for. This reduces the list to items that match that filter criterion.</p>
 
 <details><summary>Details on the Search Button (click to expand)</summary></p>
@@ -373,13 +373,13 @@ and older iPhones show it at the top of the list (scroll up rapidly until you hi
 
 The text you type inside the search button is matched against key fields for the records shown in the list.
 
-- In the `Clubs` screen, a search filters on the photographers' names and on their expertises.
+- In the `Clubs` tab, a search filters on the photographers' names and on their expertises.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
-  If you need to search on club names, go to the `Maps` screen.
-- In the `Maps` screen, searches try to match against the organization names and towns.
+  If you need to search on club names, go to the `Maps` tab.
+- In the `Maps` tab, searches try to match against the organization names and towns.
   Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
   Note that the town is the location specified in the `root.level1.json` file and _not_ its translated version, which can be different.
-- In the `People` screen, searches try to match the photographer's full name.
+- In the `People` tab, searches try to match the photographer's full name.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
 
 Design detail: Search Button filtering is done in the app's user interface and not by the CoreData database.
@@ -398,7 +398,7 @@ Standardization also helps in displaying the texts in multiple languages.
 The translations are defined in a single file named `Level 0`. 
 This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
 they automatically get translations of "Black & White" into certain languages:
-if the app is thus set to Dutch, the user sees "Zwart-Wit" rather than "Black & White".
+if the app is thus set to Dutch, the user sees "Zwart-wit" rather than "Black & White".
 
 Information on how to define expertises per photographer and how to define standardized expertises can be found in
 the explanations about adding `Level 2` data and maintaining `Level 0` data respectively.
@@ -420,7 +420,7 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Pull down to Refresh
 
-The top of the `Clubs`, `Maps`, and `People` screens
+The top of the `Clubs`, `Maps`, and `People` tabs
 can be dragged down to force a refresh of all app data.
 Refreshing is usually not needed, but can be used to remove database records
 that were downloaded earlier but are no longer in use.
@@ -438,7 +438,7 @@ received during earlier app runs. This data merging thus updates the on-device d
 The app's user interface is immediately updated whenever the database is updated.</p>
 
 A problem could occur when a club (or museum or member) is deleted in the online version of the information.
-Let's say, for example, that the club's identifying name or town got edited in the `Level` 1 list.
+Let's say, for example, that the club's identifying name or town got edited in the `Level 1` list.
 This means that the online list now contains a "different" club: one with another identifying name/town combination.
 Unfortunately the app has no way of knowing that this "new" club is actually the same as the club that seemingly vanished.
 So, from the app's perspective, the original club vanished and a new club appeared as two separate events.
@@ -456,7 +456,7 @@ Another application of _pull down to refresh_ is to force a reload of online dat
 
 ### Fancy scrolling
 
-The _Maps_ and _People_ screens try to prevent showing partial maps or partial photographer info.
+The _Maps_ and _People_ tabs try to prevent showing partial maps or partial photographer info.
 </p>
 
 <details><summary>Details about smart scrolling</summary></p>
@@ -471,9 +471,9 @@ Because iOS 18 can apparently handle list items with varying height,
 the app's fancy scrolling content looks slightly better under iOS 18.
 </p>
 
-Unfortunately, the _Clubs_ screen doesn't provide this fancy scrolling feature 
+Unfortunately, the _Clubs_ tab doesn't provide this fancy scrolling feature 
 because internally it relies on a "segmented List view" rather than on `ScrollView`.
-So we had to choose between removing segmentation or not providing fancy scrolling for the `Clubs` screen.
+So we had to choose between removing segmentation or not providing fancy scrolling for the `Clubs` tab.
 </details>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -523,8 +523,8 @@ When a club is at `Level 1`, it shows up as a marker on the maps (leftmost scree
 This is because the app knows the club's name and the latitude/longitude where it is based.
 
 For clubs at `Level 2`, the app also knows the names and optional roles of club members.
-As illustrated in the center screenshot, the club and its members are now shown on the `Clubs` and `People` screens.
-Clubs with zero members (as far as the app is concerned) are _not_ shown on either screens.
+As illustrated in the center screenshot, the club and its members are now shown on the `Clubs` and `People` tabs.
+Clubs with zero members (as far as the app is concerned) are _not_ shown on either tab.
 
 For clubs at `Level 3`, the app is aware of the image portfolios of club members (rightmost screenshot), 
 and allows app users to browse member photos.
@@ -610,7 +610,7 @@ The optional `usage` text can be defined in multiple languages (preferably at le
 ### Level 1. Adding Clubs
 
 Adding photo clubs (or museums) to get to `Level 1` requires providing a name, location and a few optional URLs. 
-This enables the app to list the items on the `Maps` screen and display them using location markers on the maps.
+This enables the app to list the items on the `Maps` tab and display them using location markers on the maps.
 
 `Level 1` data is technically stored in a _single_ `root.level1.json`
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json)
@@ -704,7 +704,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
     - Similarly, the user interface can display a computed `localizedCountry` name that is automatically generated using the provided `coordinates`. The Level 1 data thus does not need or include a `country` attribute. This is convenient because country names commonly get translated into local languages (`Italia`, `Italy`, `İtalya`, etc.).
 - `town` and `fullName` together serve to identify clubs or museums.
   - It is thus possible to have two clubs with the same name in different cities. Two separate clubs or museums with an identical name in the same town would be confusing, and would be treated as a single entity by the app until the data about the original `town` /` fullname` combination is removed from the in-device database. Removal of obsolete `Organization` records is unfortunately not done automatically yet.
-  - Try to avoid changing either string. Because the app doesn't associate the new ID with the original ID, this results in the app displaying two different clubs or museums when the 
+  - Try to avoid changing either string. Because the app doesn't associate the new ID with the original ID, this results in the app displaying two different clubs instead of one club.
 - `nickName` is a short version of `fullName` that is displayed in confined spaces such as on maps. It can be any string, but please keep it short.
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of the names of towns and countries.
 - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Southern hemisphere (e.g., Australia).
@@ -714,7 +714,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
 <ul><details><Summary>Optional Level 1 fields (click to expand)</Summary></p>
 
 - `website` holds a URL to the club's general purpose website. It can be opened by the app in a separate browser window.
-- `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (May 2026).
+- `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Jul 2026).
 - `wikipedia` contains a URL to a Wikipedia page for a museum. It _could_ be used for photo clubs - but Wikipedia pages for photo clubs probably don't/won't exist.
 - `remark` contains a brief note with something worth mentioning about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
   - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
@@ -728,7 +728,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
 ### Level 2. Adding Members
 
 `Level 2` support requires providing a list of the members as a file per club.
-A club's `Level 2` data shows up in the `Clubs` screen as a list of club members per club.
+A club's `Level 2` data shows up in the `Clubs` tab as a list of club members per club.
 Each `Level 2` JSON file lists the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also include the URL of an image used as thumbnail for that member.
@@ -856,7 +856,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
       Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
     - `maintainerEmail` is who to contact if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
-    - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _People_ screen.
+    - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _People_ tab.
         - An omitted "infixName" is interpreted as "infixName" = "".
     - the `level3URL` field allows the app to find the Level 3 information with the selected images for this member.</p>
     - the `roles` field indicates whether a member fulfills a role as a club officer (e.g. chairman).
@@ -879,7 +879,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `birthday` can be the full date of birth but currently only the month and date are shown in the user interface. So you can provide a dummy year (like `9999`) if that is preferred.
     - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
     - `photographerImage` is a depiction of the photographer. The app displays either this photo of the photographer or a featured image made by the photographer, depending on the current Settings.
-    - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Clubs` screen and the `People` screen.
+    - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Clubs` tab and the `People` tab.
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
     - `membershipStartDate` is the date when the member joined the club.
     - `membershipEndDate` is the date when the member left the club. If the member is a current member, it is best to omit this date.
@@ -915,7 +915,7 @@ But it also signals a temporary tag (e.g., using "Scenery" or "Desert" instead o
 ### Level 3. Adding Images
 
 `Level 3` provides links to the online images in member portfolios. 
-Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the `Clubs` screen.
+Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the `Clubs` tab.
 Because a club with, for example, 20 members will have hundreds of images, we have a way to automatically generate portfolios 
 using Lightroom (instructions on how this works will be provided later).
 
@@ -933,7 +933,7 @@ To do
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Installation</p>
+## Installation
 
 If you simply want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
 
@@ -998,7 +998,7 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Contributing</p>
+## Contributing
 
 Bug fixes and new features are welcome.
 Before investing effort in designing, coding testing, and refining features, it is best to first describe
@@ -1073,7 +1073,7 @@ That data might be a bit outdated, but should be accurate enough to start off wi
 
 To handle any data updates, asynchronous calls fetch fresher data over the network. 
 And the MVVM architecture uses this to update the user interface `Views` as soon as the requested data arrives.
-So occasionally, a few seconds after the app launches, the user may see the `Clubs` screen update. 
+So occasionally, a few seconds after the app launches, the user may see the `Clubs` tab update. 
 This can happen, for example if a club's online member list changed since the previous session.</p>
 
 To be precise, the above is the target architecture. Right now there are still a few gaps -
@@ -1085,14 +1085,14 @@ but because it usually works well enough, a user typically won't notice:
    The actual file is not stored locally or cached yet. Thumbnail caching is a roadmap item. 
 3. members who are removed from the online membership list are not automatically deleted from the
    database. This requires a bit more administration, because these individuals don't show up
-   iterates through the online membership list. This is simply because those names/records are
-   _not_ on the online list anymore!
+   as the app iterates through the online membership list.
+   This is simply because those names/records are _not_ on the online list anymore!
 4. in the case of Fotogroep Waalre, some member data is not yet available online in a machine-readable
    form and is thus added programmatically instead. This is done in [this file](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/IndividualClubs/FotogroepWaalreMembersProvider.swift).
    This hardcoded data include the member's formal roles (e.g. chairman, treasurer).
 5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.</p>
 
-Some of these gaps are addressed [below](#a-better-approach).
+Some of these gaps are addressed [below](#the-new-approach).
 </details></ul>
 
 ### The Data Model
@@ -1215,7 +1215,7 @@ In the iOS app, it hasn't been enabled yet because the app is only in one langua
 So, in the iOS app the translations can be stored in fields (`localizedCountryDepr`) in the `Organization` table.
 The Photo Club Hub HTML has more complex requirements: 
 apart from its user interface also being in one language at any one time,
-it also needs to generate translated web pages like `/nl/clubs/myClub/` and `/en/clubs/myClub/` at the push fo one buton.
+it also needs to generate translated web pages like `/nl/clubs/myClub/` and `/en/clubs/myClub/` at the push of one button.
 
 To this end, LocalizedAddress stores translated names of Countries and Towns in multiple supported language. 
 It fetches this data via a reverse geolocation call to an Apple server. 
