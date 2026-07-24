@@ -286,26 +286,26 @@ The `Search` button filters only on photographer names. Filtering capabilities o
 
 ### The `Readme` Screen
 
+![Readme Screen](images/Readme/Readme_EN_Light.jpg "Readme Screen")
+
 The built-in `Readme` screen contains background information on the app and its usage.
 It is accessed via the Info (ⓘ) button on the `People`, `Clubs`, and `Maps` tabs.
 Don't confuse it with the more extensive README text on GitHub (which you are reading now).
 
-![Readme Screen](images/Readme/Readme_EN_Light.jpg "Readme Screen")
-
 ### The `Settings` Tab
+
+![Settings Tab](images/preferencesScreen.png "Settings Tab")
 
 The `Settings` tab allows you to configure which types of portfolios you want to include in the
 `Clubs` tab. You can, for example, choose whether to show former members.
 The `Settings` tab probably should also filter the `People` tab - but it doesn't yet.
 
-![Settings Tab](images/preferencesScreen.png "Settings Tab")
-
 ### The `Prelude` Screen
+
+![Prelude Screen](images/preludeScreen.png "Prelude Screen")
 
 The `Prelude` screen shows an opening animation.
 Clicking outside the central image dismisses the Prelude and reveals the app's main interface (starting on the `Clubs` tab).
-
-![Prelude Screen](images/preludeScreen.png "Prelude Screen")
 
 <ul><details>
 <summary>Details about Prelude screen (click to expand)</summary></p>
