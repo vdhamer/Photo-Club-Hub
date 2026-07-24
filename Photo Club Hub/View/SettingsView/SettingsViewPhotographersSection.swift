@@ -11,11 +11,11 @@ struct SettingsViewPhotographersSection: View {
     @Binding var localSettings: SettingsStruct
 
     var body: some View {
-        Section(header: Text("People screen",
+        Section(header: Text("People tab",
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Preferences, section title"),
                 content: {
-            SettingsViewThumbnail(localSettings: $localSettings)
+            SettingsViewThumbnail(localSettings: $localSettings, iconColor: .peopleColor)
         })
    }
 }

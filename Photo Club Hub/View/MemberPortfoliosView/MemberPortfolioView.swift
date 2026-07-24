@@ -64,18 +64,18 @@ struct MemberPortfolioView: View {
                         .tipCornerRadius(12)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color("_MemberPortfolioColor"), lineWidth: 1.5)
+                                .stroke(Color("_clubsColor"), lineWidth: 1.5)
                         )
-                        .tipBackground(Color("_MemberPortfolioColor").opacity(0.15))
+                        .tipBackground(Color("_ClubsColor").opacity(0.15))
                         .tint(.primary)
 
                     TipView(ReadmeTip())
                         .tipCornerRadius(12)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color("_MemberPortfolioColor"), lineWidth: 1.5)
+                                .stroke(Color("_ClubsColor"), lineWidth: 1.5)
                         )
-                        .tipBackground(Color("_MemberPortfolioColor").opacity(0.15))
+                        .tipBackground(Color("_ClubsColor").opacity(0.15))
                         .tint(.primary)
                 }
                 FilteredMemberPortfoliosView(memberPredicate: settingsModel.settings.memberPredicate,

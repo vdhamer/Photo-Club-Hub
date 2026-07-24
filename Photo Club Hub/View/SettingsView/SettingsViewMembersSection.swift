@@ -11,13 +11,13 @@ struct SettingsViewMembersSection: View {
     @Binding var localSettings: SettingsStruct
 
     var body: some View {
-        Section(header: Text("Clubs screen",
+        Section(header: Text("Clubs tab",
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Preferences, above toggles like \"Show former members\""),
                 content: {
             HStack {
                 RoleStatusIconView(memberStatus: .current)
-                    .foregroundColor(.memberPortfolioColor)
+                    .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show current members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
@@ -44,7 +44,7 @@ struct SettingsViewMembersSection: View {
             }
             HStack {
                 RoleStatusIconView(memberStatus: .prospective)
-                    .foregroundColor(.memberPortfolioColor)
+                    .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show aspiring members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
@@ -52,7 +52,7 @@ struct SettingsViewMembersSection: View {
             }
             HStack {
                 RoleStatusIconView(memberStatus: .honorary)
-                    .foregroundColor(.memberPortfolioColor)
+                    .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show honorary members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
@@ -60,7 +60,7 @@ struct SettingsViewMembersSection: View {
             }
             HStack {
                 RoleStatusIconView(memberStatus: .former)
-                    .foregroundColor(.memberPortfolioColor)
+                    .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show former members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
@@ -88,13 +88,13 @@ struct SettingsViewMembersSection: View {
             }
             HStack {
                 RoleStatusIconView(memberStatus: .coach)
-                    .foregroundColor(.memberPortfolioColor)
+                    .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show external coaches",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
                        isOn: $localSettings.showExternalCoaches)
             }
-            SettingsViewThumbnail(localSettings: $localSettings)
+            SettingsViewThumbnail(localSettings: $localSettings, iconColor: .clubsColor)
         }) // end of section
     } // end of body
 }

@@ -9,12 +9,12 @@ import SwiftUI // for ShapeStyle
 
 extension ShapeStyle where Self == Color {
 
-    static var memberPortfolioColor: Color {
-        Color("_MemberPortfolioColor") // from asset catalog
+    static var clubsColor: Color {
+        Color("_ClubsColor") // from asset catalog
     }
 
-    static var photographerColor: Color {
-        Color("_PhotographerColor") // from asset catalog
+    static var peopleColor: Color {
+        Color("_PeopleColor") // from asset catalog
     }
 
     static var mapsColor: Color {

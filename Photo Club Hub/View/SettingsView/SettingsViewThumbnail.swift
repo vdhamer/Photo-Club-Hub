@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsViewThumbnail: View {
     let localSettings: Binding<SettingsStruct>
+    let iconColor: Color // secondary color of the icon; matches the accent color of the enclosing section
 
     private var featuredBinding: Binding<Bool> {
         Binding<Bool>(
@@ -21,7 +22,7 @@ struct SettingsViewThumbnail: View {
 
         HStack {
             Image(systemName: "photo.artframe")
-                .foregroundStyle(.gray, .memberPortfolioColor, .red)
+                .foregroundStyle(.gray, iconColor, .red)
             Picker(String(localized: "ThumbnailMembers",
                           table: "PhotoClubHub.SwiftUI",
                           comment: "Picker to display featuredImage or photographerImage"),
@@ -44,7 +45,7 @@ struct SettingsViewThumbnail: View {
     struct Container: View {
         @State private var prefs = SettingsStruct.defaultValue
         var body: some View {
-            SettingsViewThumbnail(localSettings: $prefs)
+            SettingsViewThumbnail(localSettings: $prefs, iconColor: .peopleColor)
                 .padding()
         }
     }

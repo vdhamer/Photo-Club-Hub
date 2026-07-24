@@ -68,7 +68,7 @@ struct FilteredMemberPortfoliosView: View {
                                            selectedPortfolio: selectedPortfolio)
                             .listRowSeparator(.visible)
                     }
-                    .tint(.memberPortfolioColor)
+                    .tint(.clubsColor)
                 } header: {
                     MemberListSectionHeader(title: section.id) // String used to group the elements into Sections
                 } footer: {

@@ -54,7 +54,7 @@ struct FilteredPhotographerView2627: View {
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
 
                     PhotographerIconView2627(isDeceased: photographer.isDeceased)
-                        .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
+                        .foregroundStyle(.peopleColor, .gray, .red) // red tertiary color should not show up
                         .font(.title3)
                         .frame(width: 35)
                         .padding(.top, 3)
@@ -76,7 +76,7 @@ struct FilteredPhotographerView2627: View {
                 PhotographersThumbnails(photographer: photographer, selectedPortfolio: selectedPortfolio)
 
             } // VStack
-            .accentColor(.photographerColor)
+            .accentColor(.peopleColor)
             .foregroundColor(chooseColor(accentColor: .accentColor,
                                          isDeceased: photographer.isDeceased))
         } // ForEach filteredPhotographer
@@ -97,7 +97,7 @@ struct FilteredPhotographerView2627: View {
     }
 
     private func chooseColor(accentColor: Color, isDeceased: Bool) -> Color {
-        isDeceased ? .deceasedColor : .photographerColor
+        isDeceased ? .deceasedColor : .peopleColor
     }
 
     @MainActor
@@ -168,7 +168,7 @@ private struct PhotographerIconView2627: View {
             }
         }
         .font(.title3)
-        .foregroundStyle(.photographerColor, .gray, .red)
+        .foregroundStyle(.peopleColor, .gray, .red)
         .padding()
     }    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

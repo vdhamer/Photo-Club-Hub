@@ -40,7 +40,7 @@ struct MemberPortfolioRow: View {
 
                     // icon showing any special role
                     RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus) // icon
-                        .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
+                        .foregroundStyle(.clubsColor, .gray, .red) // red color is not used
                         .imageScale(.large)
 
                     // name of photographer

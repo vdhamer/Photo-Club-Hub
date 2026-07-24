@@ -73,7 +73,7 @@ struct RoleStatusIconView: View {
     var body: some View {
         iconImage.font(.title2)
             .symbolRenderingMode(.palette)
-            .foregroundStyle(.memberPortfolioColor, .gray, .red)
+            .foregroundStyle(.clubsColor, .gray, .red)
     }
 }
 
@@ -118,7 +118,7 @@ struct RoleStatusIconView_Previews: PreviewProvider {
                                 Text(memberStatus.displayNameForAppUI.capitalizingFirstLetter())
                                 Spacer()
                             }
-                            .foregroundStyle(.memberPortfolioColor, .gray, .red) // red tertiary color is not used
+                            .foregroundStyle(.clubsColor, .gray, .red) // red tertiary color is not used
                         }
                     }, header: {
                         HStack {

@@ -12,7 +12,7 @@ struct SettingsViewMapsSection: View {
     @Binding var localSettings: SettingsStruct
 
     var body: some View {
-        Section(header: Text("Maps screen",
+        Section(header: Text("Maps tab",
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Settings, section title above map-related toggles"),
                 content: {

@@ -4,6 +4,7 @@ USER-FACING
 
 * Fix: sometimes diplayed "orange "?" placeholder images for wrong reason (missing @objeservedObject)
 * Updated screenshots in README file on Github
+- Renamed Maps Screen → Maps Tab (and two more) in Settings
 * TODO: display expertises on People screen
 * TODO: more search functionality on People screen
 * TODO: more search functionality on Clubs screen

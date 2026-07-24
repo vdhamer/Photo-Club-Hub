@@ -16,8 +16,8 @@ struct MainTabView1717: View {
         var tint: Color { // matches the accent color used on the corresponding screen
             switch self {
             case .maps:     .mapsColor
-            case .clubs:    .memberPortfolioColor
-            case .people:   .photographerColor
+            case .clubs:    .clubsColor
+            case .people:   .peopleColor
             case .settings: .settingsColor // sepia; distinct from other tabs, gray toggles, and selection blue
             }
         }
