@@ -286,8 +286,9 @@ The `Search` button filters only on photographer names. Filtering capabilities o
 
 ### The `Readme` Screen
 
-The `Readme` screen contains background information on the app and info on app usage.
-It opens as a sheet via the Info (ⓘ) button in the toolbar of the `People`, `Clubs`, and `Maps` tabs.
+The built-in `Readme` screen contains background information on the app and its usage.
+It is accessed via the Info (ⓘ) button on the `People`, `Clubs`, and `Maps` tabs.
+Don't confuse it with the more extensive README text on GitHub (which you are reading now).
 
 ![Readme Screen](images/Readme/Readme_EN_Light.jpg "Readme Screen")
 
