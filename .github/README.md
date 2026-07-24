@@ -286,25 +286,26 @@ The `Search` button filters only on photographer names. Filtering capabilities o
 
 ### The `Readme` Screen
 
-The `Readme` screen contains background information on the app and info on app usage.
-It opens as a sheet via the Info (ⓘ) button in the toolbar of the `People`, `Clubs`, and `Maps` tabs.
-
 ![Readme Screen](images/Readme/Readme_EN_Light.jpg "Readme Screen")
 
+The built-in `Readme` screen contains background information on the app and its usage.
+It is accessed via the Info (ⓘ) button on the `People`, `Clubs`, and `Maps` tabs.
+Don't confuse it with the more extensive README text on GitHub (which you are reading now).
+
 ### The `Settings` Tab
+
+![Settings Tab](images/preferencesScreen.png "Settings Tab")
 
 The `Settings` tab allows you to configure which types of portfolios you want to include in the
 `Clubs` tab. You can, for example, choose whether to show former members.
 The `Settings` tab probably should also filter the `People` tab - but it doesn't yet.
 
-![Settings Tab](images/preferencesScreen.png "Settings Tab")
-
 ### The `Prelude` Screen
+
+![Prelude Screen](images/preludeScreen.png "Prelude Screen")
 
 The `Prelude` screen shows an opening animation.
 Clicking outside the central image dismisses the Prelude and reveals the app's main interface (starting on the `Clubs` tab).
-
-![Prelude Screen](images/preludeScreen.png "Prelude Screen")
 
 <ul><details>
 <summary>Details about Prelude screen (click to expand)</summary></p>
@@ -947,6 +948,9 @@ If you simply want to install the binary version of the app, just install it fro
 * [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom.html) maintaining the portfolios (so far Fotogroep Waalre only)
 * a low cost [JuiceBox Pro](https://www.juicebox.net) JavaScript plugin for exporting from Adobe Lightroom (so far Fotogroep Waalre only)
 * GitHub's [SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package for accessing JSON content via paths (dictionaries that recursively contain dictionaries)
+* Anthropic's [Claude Code](https://code.claude.com/docs/en/overview) for assistance with coding, debugging and documenting
+* Smaller stuff
+  * an open-source [Semantic Color Picker](https://github.com/borisovodov/SemanticColorPicker/) for configuring accent colors
 </details>
 
 ### Cloning the Repository
