@@ -293,25 +293,26 @@ De `Zoek`-knop filtert op de namen van fotografen. Filteren op clubnaam of exper
 
 ### Het `Over deze app`-scherm
 
-Het `Over deze app`-scherm bevat een overzicht de functionaliteit en opzet van de app.
-Het is bereikbaar via de Info-knop (ⓘ) in de `Personen`, `Clubs` en `Kaarten` tabs.
-
 ![Over deze app-scherm](images/Readme/Readme_NL_Light.jpg "Over deze app-scherm")
 
+Dit ingebouwde `Over deze app`-scherm bevat een overzicht de functionaliteit en opzet van de app.
+Het is bereikbaar via de Info-knop (ⓘ) in de `Personen`, `Clubs` en `Kaarten` tabs.
+Er is een meer uitgebreide externe README text op GitHub (deze tekst).
+
 ### De `Instellingen`-tab
+
+![Instellingen-tab](images/preferencesScreen_NL.png "Instellingen-tab")
 
 In de `Instellingen`-tab stel je in welke soorten portfolio's je wilt opnemen in de
 `Clubs`-tab. Je kunt bijvoorbeeld kiezen of oud-leden worden getoond.
 De `Instellingen`-tab zou waarschijnlijk ook de `Personen`-tab moeten filteren - maar dat doet het nog niet.
 
-![Instellingen-tab](images/preferencesScreen_NL.png "Instellingen-tab")
-
 ### Het `Prelude`-scherm
+
+![Prelude-scherm](images/preludeScreen_NL.png "Prelude-scherm")
 
 Het `Prelude`-scherm toont een openingsanimatie.
 Tikken buiten de centrale afbeelding sluit de Prelude af en toont de hoofdinterface van de app (beginnend op de `Clubs`-tab).
-
-![Prelude-scherm](images/preludeScreen_NL.png "Prelude-scherm")
 
 <ul><details>
 <summary>Details over het Prelude-scherm (klik om uit te vouwen)</summary></p>
