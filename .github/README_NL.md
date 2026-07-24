@@ -296,7 +296,7 @@ De `Zoek`-knop filtert op de namen van fotografen. Filteren op clubnaam of exper
 Het `Over deze app`-scherm bevat achtergrondinformatie over de app en uitleg over het gebruik ervan.
 Het opent als een sheet via de Info-knop (ⓘ) in de werkknop van de tabs `Personen`, `Clubs` en `Kaarten`.
 
-![Over deze app-scherm](images/readmeScreen_NL.png "Over deze app-scherm")
+![Over deze app-scherm](images/Readme/Readme_NL_Light.jpg "Over deze app-scherm")
 
 ### De `Instellingen`-tab
 
