@@ -955,6 +955,9 @@ Als je simpelweg de binaire versie van de app wilt installeren, installeer die d
 * [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom.html) voor het onderhouden van de portfolio's (tot dusver alleen Fotogroep Waalre)
 * een goedkope [JuiceBox Pro](https://www.juicebox.net) JavaScript-plug-in voor het exporteren vanuit Adobe Lightroom (tot dusver alleen Fotogroep Waalre)
 * GitHub's [SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON)-package voor toegang tot JSON-inhoud via paden (dictionaries die recursief dictionaries bevatten)
+* Anthropic's [Claude Code](https://code.claude.com/docs/en/overview) voor hulp bij het programmeren, debuggen en bijhouden van documentatie
+* Kleinere zaken
+  * een open-source [Semantic Color Picker](https://github.com/borisovodov/SemanticColorPicker/) voor het configureren van accentkleuren
 </details>
 
 ### De repository klonen
