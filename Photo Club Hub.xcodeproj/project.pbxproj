@@ -216,8 +216,8 @@
 		3744553A2F46611B007DBDE3 /* TemplateMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMax.level2.json; sourceTree = "<group>"; };
 		3744553B2F46611B007DBDE3 /* TemplateMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMin.level1.json; sourceTree = "<group>"; };
 		3744553C2F46611B007DBDE3 /* TemplateMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMin.level2.json; sourceTree = "<group>"; };
-		374B3FC8301361C800A792F8 /* Readme_EN_light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_EN_light.jpg; sourceTree = "<group>"; };
-		374B3FC9301361C800A792F8 /* Readme_NL_light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_NL_light.jpg; sourceTree = "<group>"; };
+		374B40153013649600A792F8 /* Readme_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_EN_Light.jpg; sourceTree = "<group>"; };
+		374B40163013649600A792F8 /* Readme_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_NL_Light.jpg; sourceTree = "<group>"; };
 		37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_7.xcdatamodel; sourceTree = "<group>"; };
 		375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_0.xcdatamodel; sourceTree = "<group>"; };
 		375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SemanticColor+palette.swift"; sourceTree = "<group>"; };
@@ -504,8 +504,8 @@
 		374B3FC73013619F00A792F8 /* Readme */ = {
 			isa = PBXGroup;
 			children = (
-				374B3FC8301361C800A792F8 /* Readme_EN_light.jpg */,
-				374B3FC9301361C800A792F8 /* Readme_NL_light.jpg */,
+				374B40153013649600A792F8 /* Readme_EN_Light.jpg */,
+				374B40163013649600A792F8 /* Readme_NL_Light.jpg */,
 			);
 			path = Readme;
 			sourceTree = "<group>";
