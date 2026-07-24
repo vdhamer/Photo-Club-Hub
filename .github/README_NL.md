@@ -229,7 +229,7 @@ De overige schermen zijn van daaruit bereikbaar:
 - het `Over deze app`-scherm opent via de Info-knop (ⓘ) die op de meeste tabs beschikbaar is,
 - en het `Prelude`-scherm verschijnt wanneer de app wordt gestart.</p>
 
-Gebruik van de verschillende schermen in de gebruikersinterface:
+Gebruik van de verschillende tabs en schermen in de gebruikersinterface:
 <ul>
 
 ### De `Kaarten`-tab
