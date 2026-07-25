@@ -501,6 +501,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3718BB963014EF5E00EB4DD5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
+				37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		374B4017301365D000A792F8 /* Readme */ = {
 			isa = PBXGroup;
 			children = (
@@ -1020,9 +1029,8 @@
 				D00261F53011362E0098588E /* Portfolio */,
 				D00262413011519E0098588E /* People */,
 				374B4017301365D000A792F8 /* Readme */,
+				3718BB963014EF5E00EB4DD5 /* Settings */,
 				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
-				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
-				37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D0640F2F2E0609B7008EAE00 /* dataModel.png */,
 				D0DE6B6D2DB6DAE700841DBF /* packages.png */,
