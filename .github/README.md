@@ -273,8 +273,6 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is used to generat
 
 ### The `People` Tab
 
-![People Tab](images/People/People_EN_Light.jpg "People Tab")
-
 The `People` tab lists the photographers featured in the app. 
 Affiliations to photo clubs are shown inside the person's "card". This is different to the Clubs tab
 which is essentially Club>Person rather than Person>Club. Note that a person may simultaneously be a member of multiple clubs
@@ -283,6 +281,8 @@ multiple portfolios. These portfolios can scroll horizontally.
 
 Clicking on one of the portfolio images brings you to a screen where you can browse through that portfolio.
 The `Search` button filters only on photographer names. Filtering capabilities on clubs or expertises are planned.
+
+![People Tab](images/People/People_EN_Light.jpg "People Tab")
 
 ### The `Readme` Screen
 

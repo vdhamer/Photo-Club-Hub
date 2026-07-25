@@ -282,14 +282,14 @@ Er is ook een _autoplay_-stand voor het automatische doorlopen van de beelden ("
 
 ### De `Personen`-tab
 
-![Personen-tab](images/People/People_NL_Light.jpg "Personen-tab")
-
 De `Personen`-tab toont alle fotografen die voorkomen in de app.
 De banden van deze fotograaf met clubs (of persoonlijke lidmaatschap van de Fotobond) worden als vierkante foto's onder de naam getoond.
 De `Personen`-tab ondersteunt dus een Persoon>Club navigatievolgorde. De verwante `Clubs`-tab werkt daarentegen van Club>Persoon.
 
 Per Portfolio (Persoon/Club combinatie) kan je navigeren naar een scherm met alle foto's binnen de Portfolio.
 De `Zoek`-knop filtert op de namen van fotografen. Filteren op clubnaam of expertise wordt nog niet ondersteund.
+
+![Personen-tab](images/People/People_NL_Light.jpg "Personen-tab")
 
 ### Het `Over deze app`-scherm
 
