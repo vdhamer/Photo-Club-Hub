@@ -301,11 +301,18 @@ Er is een meer uitgebreide externe README text op GitHub (deze tekst).
 
 ### De `Instellingen`-tab
 
-![Instellingen-tab](images/preferencesScreen_NL.png "Instellingen-tab")
+![Settings Tab](images/Settings/Settings_NL_Light.jpg "Settings Tab")
 
-In de `Instellingen`-tab stel je in welke soorten portfolio's je wilt opnemen in de
-`Clubs`-tab. Je kunt bijvoorbeeld kiezen of oud-leden worden getoond.
-De `Instellingen`-tab zou waarschijnlijk ook de `Personen`-tab moeten filteren - maar dat doet het nog niet.
+In de `Instellingen`-tab stel je vooral in welke soorten portfolio's je wilt zien in de
+`Clubs`-tab. Zo kan je bijvoorbeeld:
+
+- kiezen of je ex-leden van de clubs (indien beschikbaar) wilt zien 
+- kiezen of je een profielfoto ("photographer") of voorbeeldfoto ("portfolio") in the thumbnails ziet
+
+Er is een link onderaan het scherm die leidt naar de instellingen voor de app binnen iOS `Settings`.
+Hier kan je bijvoorbeeld de taal van de app omschakelen als je een andere taal wilt zien dan de taal van het apparaat.
+Maar je kunt er ook technische zaken instellen zoals het wissen van de opgeslagen gegevens van de app.
+Dit is normaal niet nodig, en dus vooral iets voor ontwikkelaars. Maar het kan geen kwaad.
 
 ### Het `Prelude`-scherm
 
