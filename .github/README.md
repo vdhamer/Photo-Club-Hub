@@ -309,7 +309,7 @@ None of these technical settings can do any harm, but they are not for casual pl
 
 ### The `Prelude` Screen
 
-![Prelude Screen](images/preludeScreen.png "Prelude Screen")
+![Prelude Screen](images/Prelude/Prelude_EN_Light.jpg "Prelude Screen")
 
 The `Prelude` screen shows an opening animation.
 Clicking outside the central image dismisses the Prelude and reveals the app's main interface (starting on the `Clubs` tab).
