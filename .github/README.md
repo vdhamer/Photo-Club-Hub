@@ -312,20 +312,22 @@ None of these technical settings can do any harm, but they are not for casual pl
 ![Prelude Screen](images/Prelude/Prelude_EN_Light.jpg "Prelude Screen")
 
 The `Prelude` screen shows an opening animation.
-Clicking outside the central image dismisses the Prelude and reveals the app's main interface (starting on the `Clubs` tab).
+Clicking outside the central image dismisses the Prelude screen and brings you to the `Clubs` tab.
 
 <ul><details>
 <summary>Details about Prelude screen (click to expand)</summary></p>
 
 When the app launches, it shows a large version of the app’s icon. 
-Tapping on the icon turns it into an interactive image illustrating how most digital cameras detect color.</p>
+Tapping on the icon turns it into an interactive image illustrating how most digital cameras capture color information.</p>
 
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
-> that filters the light reaching each photocell or pixel.
-> In a 24 MPixel camera, the image sensor typically consists of an array of 4000 by 6000 photocells.
-> Each photocell on the chip itself is not color-sensitive. But by placing a miniscule red, green or blue color filter on
-> the chip, it becomes best at seeing one specific color range. Thus in most cameras, only one color is measured per
-> pixel: the two missing color channels for that pixel are estimated using color information from surrounding pixels.
+> that filters the light reaching each light-sensitive photocell or pixel.
+> In a 24 MPixel camera, the image sensor is typically an array of 4000 by 6000 photocells.
+> Each photocell on the chip measures light intensity - regardless of color.
+> But by placing a miniscule red, green or blue color filter on each photocell,
+> it becomes sensitive to one that specific color range. Thus in most cameras, only one color is measured per
+> photo cell: the two missing color channels for that pixel are estimated (guessed) using color information from surrounding photo cell.
+> In marketing jargon, a sensor with 24 million photo cells measuring one color each is called a 24 MPixel camera.
 
 Tapping *inside* the image allows you to zoom in or out to your heart's content.
 Tapping *outside* the image dismisses the Prelude and reveals the app's main interface.
