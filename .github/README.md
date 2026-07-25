@@ -296,9 +296,16 @@ Don't confuse it with the more extensive README text on GitHub (which you are re
 
 ![Settings Tab](images/Settings/Settings_EN_Light.jpg "Settings Tab")
 
-The `Settings` tab allows you to configure which types of portfolios you want to include in the
-`Clubs` tab. You can, for example, choose whether to show former members.
-The `Settings` tab probably should also filter the `People` tab - but it doesn't yet.
+The `Settings` tab mainly allows you to configure what is shown on the
+`Clubs` tab. Some of the more useful settings:
+
+- choose whether to want to hide former members of the clubs
+- choosing what the portfolio thumbnails show by default: picture _of_ of _by_ the photographer.
+
+At the bottom of the screen is a link that takes you the app's settings within iOS Settings.
+There you will find the ability to run the app in a different language than the device's system language.
+But also some technical stuff like force-clearing the app's data.
+None of these technical settings can do any harm, but they are not for casual playing around.
 
 ### The `Prelude` Screen
 
