@@ -203,8 +203,8 @@
 		370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms.swift; sourceTree = "<group>"; };
 		370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp.swift; sourceTree = "<group>"; };
 		37174DA92F8F93E100E58B6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		3718BCBB3014F1A800EB4DD5 /* Settings_EN_Light .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Settings_EN_Light .jpg"; sourceTree = "<group>"; };
-		3718BCBC3014F1A800EB4DD5 /* Settings_NL_Light .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Settings_NL_Light .jpg"; sourceTree = "<group>"; };
+		3718BCBB3014F1A800EB4DD5 /* Settings_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Settings_EN_Light.jpg; sourceTree = "<group>"; };
+		3718BCBC3014F1A800EB4DD5 /* Settings_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Settings_NL_Light.jpg; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		3722DC9F2F98CE9000F2851C /* ImageChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChoice.swift; sourceTree = "<group>"; };
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
@@ -503,8 +503,8 @@
 		3718BB963014EF5E00EB4DD5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				3718BCBB3014F1A800EB4DD5 /* Settings_EN_Light .jpg */,
-				3718BCBC3014F1A800EB4DD5 /* Settings_NL_Light .jpg */,
+				3718BCBB3014F1A800EB4DD5 /* Settings_EN_Light.jpg */,
+				3718BCBC3014F1A800EB4DD5 /* Settings_NL_Light.jpg */,
 			);
 			path = Settings;
 			sourceTree = "<group>";

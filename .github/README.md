@@ -294,7 +294,7 @@ Don't confuse it with the more extensive README text on GitHub (which you are re
 
 ### The `Settings` Tab
 
-![Settings Tab](images/preferencesScreen.png "Settings Tab")
+![Settings Tab](images/Settings/Settings_EN_Light.jpg "Settings Tab")
 
 The `Settings` tab allows you to configure which types of portfolios you want to include in the
 `Clubs` tab. You can, for example, choose whether to show former members.
