@@ -203,6 +203,8 @@
 		370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms.swift; sourceTree = "<group>"; };
 		370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp.swift; sourceTree = "<group>"; };
 		37174DA92F8F93E100E58B6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3718BCBB3014F1A800EB4DD5 /* Settings_EN_Light .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Settings_EN_Light .jpg"; sourceTree = "<group>"; };
+		3718BCBC3014F1A800EB4DD5 /* Settings_NL_Light .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Settings_NL_Light .jpg"; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		3722DC9F2F98CE9000F2851C /* ImageChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChoice.swift; sourceTree = "<group>"; };
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
@@ -258,7 +260,6 @@
 		37A2A0E52FAAA53400EF39A1 /* MapsViewRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewRemark.swift; sourceTree = "<group>"; };
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
 		37A88B52300E1D1E00193829 /* Levels_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_NL_Light.jpg; sourceTree = "<group>"; };
-		37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen_NL.png; sourceTree = "<group>"; };
 		37A88B5A300E1D3400193829 /* README_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_NL.md; sourceTree = "<group>"; };
 		37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level2JsonReaders+Helpers.swift"; sourceTree = "<group>"; };
 		37B1A4682F0B18A700854FBD /* museumsUS.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsUS.level1.json; sourceTree = "<group>"; };
@@ -365,7 +366,6 @@
 		D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+refreshFirstImage.swift"; sourceTree = "<group>"; };
 		D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Aug_2025_app.pages; sourceTree = "<group>"; };
 		D0640F2F2E0609B7008EAE00 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
-		D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen.png; sourceTree = "<group>"; };
 		D06588EA2BAE5071000FD7F3 /* preludeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preludeScreen.png; sourceTree = "<group>"; };
 		D06B70E32D5FE9A700B0DECB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ifDebugUtils.swift; sourceTree = "<group>"; };
@@ -503,8 +503,8 @@
 		3718BB963014EF5E00EB4DD5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
-				37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */,
+				3718BCBB3014F1A800EB4DD5 /* Settings_EN_Light .jpg */,
+				3718BCBC3014F1A800EB4DD5 /* Settings_NL_Light .jpg */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1029,7 +1029,6 @@
 				D00262413011519E0098588E /* People */,
 				374B4017301365D000A792F8 /* Readme */,
 				3718BB963014EF5E00EB4DD5 /* Settings */,
-				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D0640F2F2E0609B7008EAE00 /* dataModel.png */,
 				D0DE6B6D2DB6DAE700841DBF /* packages.png */,
