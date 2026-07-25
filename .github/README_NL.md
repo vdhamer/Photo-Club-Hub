@@ -316,32 +316,37 @@ Dit is normaal niet nodig, en dus vooral iets voor ontwikkelaars. Maar het kan g
 
 ### Het `Prelude`-scherm
 
-![Prelude-scherm](images/preludeScreen_NL.png "Prelude-scherm")
+![Prelude Screen](images/Prelude/Prelude_NL_Light.jpg "Prelude Screen")
 
-Het `Prelude`-scherm toont een openingsanimatie.
-Tikken buiten de centrale afbeelding sluit de Prelude af en toont de hoofdinterface van de app (beginnend op de `Clubs`-tab).
+Het `Prelude`-scherm, dat getoond wordt direct na opstarten, bevat een animatie.
+Tikken buiten de centrale afbeelding sluit het Prelude-scherm af en brengt je naar de `Clubs`-tab.
 
 <ul><details>
 <summary>Details over het Prelude-scherm (klik om uit te vouwen)</summary></p>
 
 Wanneer de app start, toont deze een grote versie van het app-icoon. 
-Tikken op het icoon verandert het in een interactieve afbeelding die illustreert hoe de meeste digitale camera's kleur waarnemen.</p>
+Tikken op het icoon verandert het in een interactieve afbeelding die illustreert vrijwel alle digitale camera's kleur kunnen zien.</p>
 
 > Dit werkt met een [Bayer-kleurenfilter](https://en.wikipedia.org/wiki/Bayer_filter)
 > dat het licht filtert dat elke fotocel of pixel bereikt.
-> In een 24-megapixelcamera bestaat de beeldsensor doorgaans uit een raster van 4000 bij 6000 fotocellen.
-> Elke fotocel op de chip zelf is niet kleurgevoelig. Maar door een minuscuul rood, groen of blauw kleurfilter op
-> de chip te plaatsen, wordt de cel het gevoeligst voor één specifiek kleurbereik. In de meeste camera's wordt dus per pixel maar
-> één kleur gemeten: de twee ontbrekende kleurkanalen voor die pixel worden geschat met behulp van kleurinformatie van omliggende pixels.
+> In een 24-megapixelcamera bestaat een 2:3 beeldsensor uit een raster van 4000 bij 6000 fotocellen.
+> Elke fotocel op de chip zelf is _niet_ kleurgevoelig. Maar door een minuscuul rood, groen of blauw kleurfilter op
+> iedere fotocel te plaatsen, wordt die cel het gevoeligst voor één specifiek kleurbereik. In de meeste camera's wordt dus
+> per pixel eigenlijk maar één kleur gemeten:
+> de twee ontbrekende kleurkanalen voor die pixel worden door software geschat met behulp van kleurinformatie van omliggende pixels.
 
-Tikken *binnen* de afbeelding laat je naar hartenlust in- en uitzoomen.
+Tikken *binnen* de afbeelding laat je naar hartenlust in- en uitzoomen. De app bevat hiervoor een klein aantal voorbeeld plaatjes.
 Tikken *buiten* de afbeelding sluit de Prelude af en toont de hoofdinterface van de app.
 
-Je ziet de Prelude-animatie opnieuw nadat je de app hebt afgesloten en opnieuw hebt gestart.
+Je ziet de Prelude-animatie opnieuw nadat je de app hebt afgesloten en opnieuw hebt gestart. Op grotere schermen (iPad)
+kan je vanuit de Clubs-tab met een knopje terug naar het Prelude scherm.
 
 Waarom zo'n fraai openingsscherm? Het was deels een leuke uitdaging om te maken (het draait daadwerkelijk
-op de GPU-kernen van je apparaat). Maar het helpt ook het logo van de app te verklaren: het Bayer-filter bestaat inderdaad uit een raster van herhaalde
-rode, blauwe en _twee_ groene pixels.
+op de grafische processor kernen van je apparaat). Maar het helpt ook het logo van de app te verklaren: 
+een Bayer-filter bestaat inderdaad uit een raster van herhaalde
+rode, blauwe en _twee_ groene pixels. Een enkel merk (FujiFilm) gebruikt een wat groter filterpatroon.
+Enkele Sigma camera's kunnen zetten 3 fotocellen onder elkaar ipv naast elkaar.
+Bij een echte digitale monochrome camera (Leica) wordt het raster met kleurenfilters tegen meerprijs weggelaten.
 </details>
     
 </ul></ul>
