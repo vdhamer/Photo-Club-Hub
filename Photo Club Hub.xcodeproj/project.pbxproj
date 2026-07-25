@@ -296,6 +296,8 @@
 		37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListSectionHeader.swift; sourceTree = "<group>"; };
 		37EA14E82FB0C773000D8EDF /* MemberListSectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListSectionFooter.swift; sourceTree = "<group>"; };
 		37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualImageWithCaptionAndControls.swift; sourceTree = "<group>"; };
+		37EA9FC130151BB800C7B6E4 /* Prelude_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Prelude_EN_Light.jpg; sourceTree = "<group>"; };
+		37EA9FC230151BB800C7B6E4 /* Prelude_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Prelude_NL_Light.jpg; sourceTree = "<group>"; };
 		37EBBC372FFA451F00C95FDA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
 		37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationTip.swift; sourceTree = "<group>"; };
@@ -565,6 +567,15 @@
 				D0E2235327DE9139002A8600 /* PreludeView1718.swift */,
 			);
 			path = OldIOSVersionSupport;
+			sourceTree = "<group>";
+		};
+		37EA9FC030151B7C00C7B6E4 /* Prelude */ = {
+			isa = PBXGroup;
+			children = (
+				37EA9FC130151BB800C7B6E4 /* Prelude_EN_Light.jpg */,
+				37EA9FC230151BB800C7B6E4 /* Prelude_NL_Light.jpg */,
+			);
+			path = Prelude;
 			sourceTree = "<group>";
 		};
 		37EBBCBF2FFA997900C95FDA /* RootView */ = {
@@ -1029,6 +1040,7 @@
 				D00262413011519E0098588E /* People */,
 				374B4017301365D000A792F8 /* Readme */,
 				3718BB963014EF5E00EB4DD5 /* Settings */,
+				37EA9FC030151B7C00C7B6E4 /* Prelude */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D0640F2F2E0609B7008EAE00 /* dataModel.png */,
 				D0DE6B6D2DB6DAE700841DBF /* packages.png */,
