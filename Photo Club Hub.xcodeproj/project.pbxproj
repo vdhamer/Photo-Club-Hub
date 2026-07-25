@@ -365,7 +365,6 @@
 		D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+refreshFirstImage.swift"; sourceTree = "<group>"; };
 		D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Aug_2025_app.pages; sourceTree = "<group>"; };
 		D0640F2F2E0609B7008EAE00 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
-		D06588E52BAE31AE000FD7F3 /* imagesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesScreen.png; sourceTree = "<group>"; };
 		D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen.png; sourceTree = "<group>"; };
 		D06588EA2BAE5071000FD7F3 /* preludeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preludeScreen.png; sourceTree = "<group>"; };
 		D06B70E32D5FE9A700B0DECB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -501,6 +500,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3718BB963014EF5E00EB4DD5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
+				37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		374B4017301365D000A792F8 /* Readme */ = {
 			isa = PBXGroup;
 			children = (
@@ -1020,9 +1028,7 @@
 				D00261F53011362E0098588E /* Portfolio */,
 				D00262413011519E0098588E /* People */,
 				374B4017301365D000A792F8 /* Readme */,
-				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
-				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
-				37A88B56300E1D1E00193829 /* preferencesScreen_NL.png */,
+				3718BB963014EF5E00EB4DD5 /* Settings */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D0640F2F2E0609B7008EAE00 /* dataModel.png */,
 				D0DE6B6D2DB6DAE700841DBF /* packages.png */,
