@@ -307,7 +307,7 @@ In de `Instellingen`-tab stel je vooral in welke soorten portfolio's je wilt zie
 `Clubs`-tab. Zo kan je bijvoorbeeld:
 
 - kiezen of je ex-leden van de clubs (indien beschikbaar) wilt zien 
-- kiezen of je een profielfoto ("photographer") of voorbeeldfoto ("portfolio") in the thumbnails ziet
+- kiezen of je een profielfoto ("photographer") of voorbeeldfoto ("portfolio") in de thumbnails ziet
 
 Er is een link onderaan het scherm die leidt naar de instellingen voor de app binnen iOS `Settings`.
 Hier kan je bijvoorbeeld de taal van de app omschakelen als je een andere taal wilt zien dan de taal van het apparaat.
@@ -325,7 +325,7 @@ Tikken buiten de centrale afbeelding sluit het Prelude-scherm af en brengt je na
 <summary>Details over het Prelude-scherm (klik om uit te vouwen)</summary></p>
 
 Wanneer de app start, toont deze een grote versie van het app-icoon. 
-Tikken op het icoon verandert het in een interactieve afbeelding die illustreert vrijwel alle digitale camera's kleur kunnen zien.</p>
+Tikken op het icoon verandert het in een interactieve afbeelding die illustreert hoe vrijwel alle digitale camera's kleur zien.</p>
 
 > Dit werkt met een [Bayer-kleurenfilter](https://en.wikipedia.org/wiki/Bayer_filter)
 > dat het licht filtert dat elke fotocel of pixel bereikt.
@@ -334,6 +334,7 @@ Tikken op het icoon verandert het in een interactieve afbeelding die illustreert
 > iedere fotocel te plaatsen, wordt die cel het gevoeligst voor één specifiek kleurbereik. In de meeste camera's wordt dus
 > per pixel eigenlijk maar één kleur gemeten:
 > de twee ontbrekende kleurkanalen voor die pixel worden door software geschat met behulp van kleurinformatie van omliggende pixels.
+> In marketing-jargon wordt een sensor met 24 miljoen fotocellen (die ieder slechts één kleur meten) een 24-megapixelcamera genoemd.
 
 Tikken *binnen* de afbeelding laat je naar hartenlust in- en uitzoomen. De app bevat hiervoor een klein aantal voorbeeld plaatjes.
 Tikken *buiten* de afbeelding sluit de Prelude af en toont de hoofdinterface van de app.
@@ -342,11 +343,11 @@ Je ziet de Prelude-animatie opnieuw nadat je de app hebt afgesloten en opnieuw h
 kan je vanuit de Clubs-tab met een knopje terug naar het Prelude scherm.
 
 Waarom zo'n fraai openingsscherm? Het was deels een leuke uitdaging om te maken (het draait daadwerkelijk
-op de grafische processor kernen van je apparaat). Maar het helpt ook het logo van de app te verklaren: 
+op de GPU-kernen van je apparaat). Maar het helpt ook het logo van de app te verklaren: 
 een Bayer-filter bestaat inderdaad uit een raster van herhaalde
 rode, blauwe en _twee_ groene pixels. Een enkel merk (FujiFilm) gebruikt een wat groter filterpatroon.
-Enkele Sigma camera's kunnen zetten 3 fotocellen onder elkaar ipv naast elkaar.
-Bij een echte digitale monochrome camera (Leica) wordt het raster met kleurenfilters tegen meerprijs weggelaten.
+Enkele Sigma camera's plaatsen 3 fotocellen boven (!) elkaar in plaats van naast elkaar.
+Bij een digitale monochrome camera (Leica) wordt het raster met kleurenfilters tegen meerprijs weggelaten.
 </details>
     
 </ul></ul>
