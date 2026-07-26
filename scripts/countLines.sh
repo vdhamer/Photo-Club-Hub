@@ -145,3 +145,44 @@ mv "$TMP" "$CSV"
 
 echo "Recorded $NEW_ROW"
 echo "  -> $CSV"
+
+# --- report what changed vs. the previous record -----------------------------
+# Compare each metric against the most recent older row and print what changed...
+# e.g. "   Comments: +12" or "   Open issues: -1".
+# Columns that are unchanged are not shown.
+# Columns that are empty in either row (e.g. issue counts when offline) are also skipped.
+PREV_ROW="$(tail -n +2 "$CSV" | grep -v "^$DATE," | sort -t, -k1,1 | tail -n 1)"
+if [[ -n "$PREV_ROW" ]]; then
+    IFS=, read -r pDate pFiles pCode pComments pBlanks pTests pOpen pClosed pExpertises \
+        <<< "$PREV_ROW"
+
+    anyChange=0
+    print_delta() {  # label  old  new
+        local label="$1" old="$2" new="$3"
+        # Skip unless both values are present and integer-valued.
+        [[ "$old" =~ ^-?[0-9]+$ && "$new" =~ ^-?[0-9]+$ ]] || return 0
+        local diff=$(( new - old ))
+        (( diff == 0 )) && return 0
+        anyChange=1
+        if (( diff < 0 )); then
+            printf '   %s: %d\n' "$label" "$diff"      # negative sign included
+        else
+            printf '   %s: +%d\n' "$label" "$diff"
+        fi
+    }
+
+    echo "Changes since $pDate:"
+    print_delta "Files"         "$pFiles"       "$files"
+    print_delta "Code"          "$pCode"        "$code"
+    print_delta "Comments"      "$pComments"    "$comments"
+    print_delta "Blanks"        "$pBlanks"      "$blanks"
+    print_delta "Tests"         "$pTests"       "$tests"
+    print_delta "Open issues"   "$pOpen"        "$openIssues"
+    print_delta "Closed issues" "$pClosed"      "$closedIssues"
+    print_delta "Expertises"    "$pExpertises"  "$expertises"
+    # Identical metrics (or all columns skipped) leave the list empty; say so
+    # explicitly rather than printing a bare "Changes since …:" header.
+    if (( anyChange == 0 )); then
+        echo "   (no changes since previous day)"
+    fi
+fi
