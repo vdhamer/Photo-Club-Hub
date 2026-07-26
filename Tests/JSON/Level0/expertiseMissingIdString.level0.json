@@ -1,0 +1,10 @@
+{
+    "expertises": [
+        {
+            "name": [
+                { "language": "EN", "localizedString": "Portrait" },
+                { "language": "NL", "localizedString": "Portret" }
+            ]
+        }
+    ]
+}

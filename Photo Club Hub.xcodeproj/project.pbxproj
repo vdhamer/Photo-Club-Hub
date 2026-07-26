@@ -465,20 +465,9 @@
 		D0FF4D3D2DFF813600C640F9 /* LocalizedExpertiseResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedExpertiseResultList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		378C85A52FF6561D00FC749B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				JSON/XampleMax.level1.json,
-				JSON/XampleMin.level1.json,
-			);
-			target = D0E868992D693A3600F2A03A /* Photo Club HubTests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		37A57AA52EFCA74100ED13CE /* OldIOSVersionSupport */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = OldIOSVersionSupport; sourceTree = "<group>"; };
-		D0E8689B2D693A3600F2A03A /* Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (378C85A52FF6561D00FC749B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Tests; sourceTree = "<group>"; };
+		D0E8689B2D693A3600F2A03A /* Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
