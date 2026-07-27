@@ -1,6 +1,6 @@
 ## Creating a level1.json file for a number of clubs
 
-This step-by-step guide describes how to create a list of clubs, for example for a geographic region.
+This step-by-step guide describes how to create a list of clubs, for example for clubs in a geographic region.
 The resulting file is intended to be read automatically by [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
 and [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML). This is why there are requirements regarding the format ("Level 1" JSON).
 Separate instructions exist for adding lists of _club members_ ("Level 2" JSON). Level 2 data can be provided at a later time.
