@@ -36,7 +36,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
 4. Adjust the location of the club (`coordinates`):
     - The coordinates are used to indicate the nominal location of a club on maps. This lets you discover clubs nearby. The app does _not_ work with a traditional street address.
     - For the Netherlands the coordinates will look like e.g. 51.12345 and 5.67890. So with a dot instead of a comma. And values are around 52 and 5.
-    - You can read the coordinates from [maps.google.com](https:/maps.google.com) by right-clicking the chosen address with your mouse.
+    - You can read the coordinates from [maps.google.com](https://maps.google.com) by right-clicking the chosen address with your mouse.
     - We normally choose the location where the club meets or exhibits. If that is undesirable, you can choose a well-known
     square, station or monument nearby. As an alternative you can use fewer digits after the decimal point. This introduces a less precise location that may be e.g. a kilometer away.
     - If you accidentally leave out `coordinates`, the club is shown at coordinates 0, 0. That is in the middle of the sea near West Africa. You will then see a map in the app with nothing but blue ocean on the equator west of Africa.
@@ -138,7 +138,7 @@ It covers, directly or indirectly, the clubs in the Netherlands:
 ```
 
 In this case it contains no individual clubs,
-but only references to 2 underlying files: `clubNLS03.level1.json` and `clubsNL16.level1.json`.
+but only references to 2 underlying files: `clubsNL03.level1.json` and `clubsNL16.level1.json`.
 It can be extended with more references.
 When reading `clubsNL.level1.json`, the apps will check whether there are clubs directly in the file
 (in this case not) and additionally read the two lower Level 1 files mentioned.
@@ -210,7 +210,7 @@ These are therefore fields that you can add later, for example once the required
 It is often practical to start from an existing Level 1 such as [this real one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)
 or [this schematic one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubTemplates.level1.json) example.
 
-- All fields that describe an individual photo club under `clubs:` in a Level 1 file also appear in the `club:` part at the top of a Level 2 file. The fields are described in somewhat more detail in [that documentation](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_creation_EN.md).
+- All fields that describe an individual photo club under `clubs:` in a Level 1 file also appear in the `club:` part at the top of a Level 2 file. The fields are described in somewhat more detail in [that documentation](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_creation_EN.md).
 
 - Regarding the most important fields about Clubs:
    - `level1Header` describes the file itself.
@@ -231,7 +231,7 @@ or [this schematic one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON
    - `museums` contains a list of museums with a notable photography collection.
 For the Netherlands, photo clubs and photo museums are stored in separate files,
 so you will not find museums in files about Dutch photo clubs.
-Museums are further explained in the English [README.me](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document.
+Museums are further explained in the English [README.md](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document.
 
 </details></p>
 
