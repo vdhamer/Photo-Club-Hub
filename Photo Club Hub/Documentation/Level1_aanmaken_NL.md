@@ -36,7 +36,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 4. Pas de locatie van de club aan (`coordinates`):
     - De coördinaten worden gebruikt om de nominale ligging van een club op landkaartjes aan te geven. Dan kan je clubs in de buurt ontdekken. De app werkt _niet_ met een traditioneel adres.
     - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt ipv een komma. En waarden hebben rond de 52 en 5.
-    - Je kunt de coordinaten met [maps.google.com](https:/maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
+    - Je kunt de coordinaten met [maps.google.com](https://maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
     - We kiezen normaal de locatie waar de club bijeenkomt of exposeert. Als dat ongewenst is, kan je een bekend
     plein, station of monument in de buurt kiezen. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je een minder nauwkeurige locatie die b.v. een kilometer verderop ligt.
     - Zou je per ongeluk `coordinates` weglaten, dan wordt de club weergegeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Dan zie je in de app een landkaart met alleen blauwe oceaan op de evenaar ten westen van Africa.
@@ -210,12 +210,12 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld zodra de vereiste 
 Het is vaak praktisch om een bestaand Level 1 zoals [dit echte](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)
 of [dit schematische](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubTemplates.level1.json) voorbeeld uit te gaan.
 
-- Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md) wat uitvoeriger beschreven.
+- Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md) wat uitvoeriger beschreven.
 
 - Wat betreft de belangrijkste velden over Clubs:
    - `level1Header` omschrijft het bestand zelf.
       - `level1URL` is het webadres van de meesterversie van dit document (vermoedelijk op GitHub).
-      - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/edit/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
+      - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
       - `maintainerEmail` is de contactpersoon voor problemen met dit bestand.
    - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden als extra club behandeld door de app (met `fotobondNumber` 1600 voor b.v. afdeling 16).
       - `idPlus` is de identificatie van een club. `town` en `fullName` moeten samen uniek zijn. `nickName` moet ook uniek zijn en liefst voor Nederland een formaat zoals "fcMijnClub" (Fotoclub) of "fgMijnClub" (Fotogroep) hebben.
