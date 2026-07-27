@@ -11,7 +11,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
 
 1. Make a local copy of the [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") and    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") example files.
    _Min_ contains the smallest possible example. _Max_ is an example with almost all available options.
-   Follow the Min and Max links to get a small "Download raw file" button at the top right.
+   Follow the Min and Max links to get a small "Download raw file" button on the top right.
 
 3. Make a **copy** of the [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) file and give it a suitable file name:
    - For Afdeling #3 (Drenthe - Vechtdal) you could choose `clubsNL03.level1.json`.
