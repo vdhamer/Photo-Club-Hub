@@ -48,13 +48,13 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
     > And then make the list more complete in a later version.
 
 6. Preferably add a remark (`remark`).
-    - This highlights something special about this club. It makes the information a bit more interesting to browse through. Practical information is of course allowed too.
-      Avoid a standard sentence that applies to almost all clubs (so not "we strive to take better photos" or "we consider ourselves quite sociable").
-    - Try not to make the text longer than 100 characters (just a guideline). That is about the length of a Twitter/X "tweet".
-    - `remark` contains at least a Dutch (NL) and an English (EN) translation. The iOS app automatically chooses the language to display based on the iOS settings.
+    - The remark is meant to highlight something special about this club. It makes the information a bit more interesting to browse through. Practical information can be fine as well ("we meet at midnight each full moon").
+      Avoid a standard sentence that applies to almost all clubs (avoid "we strive to take better photos" or "our meetings are very friendly").
+    - Try not to make the text longer than 100 characters (just a guideline). So roughly the length of a Twitter/X "tweet".
+    - `remark` contains at least an English (EN) translation, but Dutch (NL) would be nice too. The iOS app automatically chooses the language to display based on the iOS settings.
 
-7. For affiliated clubs, add their four-digit Fotobond number ("fotobondNumber"). See TemplateMax.level1.json for examples.
-    - This consists of 3 lines of text. If a club is not a member of the Fotobond, these 3 lines should be left out: this is how the app knows whether a club is affiliated with the Fotobond.
+7. Unless you are based in the Netherlands, "fotobondNumber" doesn't apply to you. The Fotobond is a national federation of amateur photo clubs.
+   If you want to fill it in, see step #7 of the Level1_aanmaken_NL.md (the Dutch equivalent of this document).
 
 8. This verification step is mainly useful if you do __not__ use [JSON Editor Online](https://jsoneditoronline.org).
     - With [JSON Editor Online](https://jsoneditoronline.org) no separate JSON check is needed.
