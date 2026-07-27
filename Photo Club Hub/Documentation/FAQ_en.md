@@ -358,24 +358,6 @@ Compared to Glass, Photo Club Hub has...
 - no option yet to "follow" individuals or clubs. But that will become necessary with sufficient use.
 </details></p>
 
-</li><li>
-
-### How does this differ from fotoexpositie.nl?
-
-<details><summary>Click to expand or collapse answer</summary></p>
-
-The website [fotoexpositie.nl](https://www.fotoexpositie.nl)) is mainly for giving publicity to exhibitions.
-These apps are mainly for giving publicity to photo clubs and making the associated portfolios visible.
-
-For [fotoexpositie.nl](https://www.fotoexpositie.nl)) the following applies:
-
-- The majority of the members ("friends") are individual photographers. There are also some photo clubs and even photo museums.
-- In essence it is one central website plus a weekly newsletter.
-The data is managed centrally, and some costs are charged for that service.
-The online information is visible to everyone free of charge.
-- Photos posted are mainly for illustration accompanying exhibitions. Portfolios can be seen via links to the photographers' websites.
-</details></p>
-
 </li></ul></details></p>
 
 ## Usage
