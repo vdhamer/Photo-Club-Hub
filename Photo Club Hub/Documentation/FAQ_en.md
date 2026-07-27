@@ -61,7 +61,7 @@ Various clubs in the Netherlands are already included to kick-start process.
 There is an **iOS** (iPhone/iPad) version of the app on the Apple App Store.
 For other phone brands and for larger screens there is a **web version**.
 
-With the [web version](https://www.fcDeGender.nl/clubs) you can view club portfolios in an internet browser (_Chrome_, _Edge_, _Safari_...)
+With the [web version](https://www.fcDeGender.nl/en/clubs) you can view club portfolios in an internet browser (_Chrome_, _Edge_, _Safari_...)
 on all kinds of devices (Android phones, Chinese phone brands, tablets, laptops, Windows PC, Mac).
 Both versions have the same layout and use the same data.
 
