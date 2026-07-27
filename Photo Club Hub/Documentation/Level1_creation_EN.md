@@ -14,7 +14,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
    Follow the Min and Max links to get a small "Download raw file" button on the top right.
 
 3. Make a **copy** of the [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) file and give it a suitable file name:
-   - For Afdeling #3 (Drenthe - Vechtdal) you could choose `clubsNL03.level1.json`.
+   - For, say, Belium you could choose `be.level1.json`. The partitioning over files can be adapted later (e.g. to split Belgium up into regions, if needed).
 
    </br>
 
