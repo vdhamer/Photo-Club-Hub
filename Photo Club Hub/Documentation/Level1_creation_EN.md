@@ -61,7 +61,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
       It continuously checks during entry whether the text complies with the JSON rules.
       This flags certain input errors immediately as a red warning, including the line number where the error was found.
     - To manually check a text file for this kind of error in this step, you can copy the entire content into [JSON Editor Online](https://jsoneditoronline.org).
-        - JSON Editor Online finds the first error. After correction (which can be done within JSON Editor Online) it goes looking for a next error.
+        - JSON Editor Online finds the first error. After correction (which can be done within JSON Editor Online) it checks for a next error.
         - The JSON format is rather strict regarding commas, colons, opening/closing of brackets and quotation marks.
           That is why we recommend starting from an example file here.
         - On the other hand, JSON is completely _not_ picky about the amount of spaces, tabs or new lines.
