@@ -36,16 +36,16 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
 
 5. Adjust the location of the club (`coordinates`):
     - The coordinates are used to indicate the nominal location of a club on maps. This lets you discover clubs nearby. The app does _not_ work with a traditional street address.
-    - For the Netherlands the coordinates will look like e.g. 51.12345 and 5.67890. So with a dot instead of a comma. And values are around 52 and 5.
+    - The coordinates can look like e.g. 51.12345 and 5.67890 (so containing decimal dots; both numbers can be negative if needed).
     - You can read the coordinates from [maps.google.com](https://maps.google.com) by right-clicking the chosen address with your mouse.
-    - We normally choose the location where the club meets or exhibits. If that is undesirable, you can choose a well-known
-    square, station or monument nearby. As an alternative you can use fewer digits after the decimal point. This introduces a less precise location that may be e.g. a kilometer away.
-    - If you accidentally leave out `coordinates`, the club is shown at coordinates 0, 0. That is in the middle of the sea near West Africa. You will then see a map in the app with nothing but blue ocean on the equator west of Africa.
+    - We normally choose the location where the club meets or exhibits. If you don't want to disclose that, you can choose a well-known
+    square, station or monument in the neighborhood. Or you can use fewer digits after the decimal point. This introduces a less precise location that is still roughly correct.
+    - If you accidentally leave out `coordinates`, the club is shown at coordinates 0, 0. That is in the ocean off West Africa. You will then see a map in the app with nothing but blue ocean as the nearest island is still far away.
     </br>
 
-    > Tip: The list of clubs does not need to be complete in one go:
-    > you can add just 1 or 2 clubs first to see whether everything goes well.
-    > And then make the list more complete in a subsequent version.
+    > Tip: You don't need to complete the full list of clubs in one go:
+    > you can first add just 1 or 2 clubs to see whether everything goes well.
+    > And then make the list more complete in a later version.
 
 6. Preferably add a remark (`remark`).
     - This highlights something special about this club. It makes the information a bit more interesting to browse through. Practical information is of course allowed too.
