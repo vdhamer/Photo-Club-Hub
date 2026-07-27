@@ -1,4 +1,4 @@
-## Creating a level1.json file for a Fotobond region
+## Creating a level1.json file for a number of clubs
 
 This step-by-step guide describes how to create a list of clubs, for example for a region ("Afdeling") of the Dutch photography federation (Fotobond).
 The resulting file is intended to be read automatically by [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
