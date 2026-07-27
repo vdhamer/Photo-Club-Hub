@@ -9,7 +9,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
 > That time is needed to understand the approach and to figure out how to work with the required software.
 > After that, adding and adjusting the data will only take minutes per club.
 
-1. If you wish, make a local copy of the [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") and    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") example files.
+1. Make a local copy of the [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") and    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") example files.
    _Min_ contains the smallest possible example. _Max_ is an example with almost all available options. Following the Min and Max links gives a "download" icon at the top right.
 
 2. Make a **copy** of the [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) file and give it a suitable file name:
