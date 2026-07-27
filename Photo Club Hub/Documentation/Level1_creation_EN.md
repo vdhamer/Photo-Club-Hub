@@ -1,9 +1,9 @@
 ## Creating a level1.json file for a number of clubs
 
-This step-by-step guide describes how to create a list of clubs, for example for a region ("Afdeling") of the Dutch photography federation (Fotobond).
+This step-by-step guide describes how to create a list of clubs, for example for a geographic region.
 The resulting file is intended to be read automatically by [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
 and [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML). This is why there are requirements regarding the format ("Level 1" JSON).
-Separate instructions exist for adding lists of _club members_ ("Level 2" JSON). Level 2 can be provided at a later time.
+Separate instructions exist for adding lists of _club members_ ("Level 2" JSON). Level 2 data can be provided at a later time.
 
 > 🕚 Creating a Level 1 file with one or two clubs for the very first time will probably take about 1 hour.
 > That time is needed to understand the approach and to figure out how to work with the required software.
