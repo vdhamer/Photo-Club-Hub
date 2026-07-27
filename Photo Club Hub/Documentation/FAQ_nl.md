@@ -36,7 +36,7 @@ Bezoek aan dit soort kleine websites loopt al jaren terug:
 bezoekers moeten zelf initiatief nemen om ze vinden, en de inhoud verandert zelden.
 De aandacht van gebruikers is daardoor verschoven naar grote websites
 (zoals Nos.nl of Petapixel.com, met hun betaalde redactieteams)
-en social media platforms zoals Facebook die dienen als ontmoetingspleken.</p>
+en social media platforms zoals Facebook die dienen als ontmoetingsplekken.</p>
 
 Vandaar dat wij een behoefte zagen voor een tussenvorm speciaal voor fotoclubs: iets tussen de relatief onbezochte websites
 en de (te) hektische en vluchtige social media. Met als doel om de het fotowerk van clubs eenvoudig en in alle rust te kunnen bekijken.
@@ -61,13 +61,13 @@ De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te s
 Er is een **iOS** (iPhone/iPad) versie van de app op de Apple App Store.
 Voor andere merken telefoontjes en voor grotere schermen is er een **webversie**.
 
-Met de (webversie](https://www.fcDeGender.nl/clubs) kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_...) 
+Met de [webversie](https://www.fcDeGender.nl/clubs) kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_...) 
 op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, Windows PC, Mac).
 Beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
 
 Achter de schermen bestaat de webversie uit een app dat met een druk op de knop de vereiste webpagina's aanmaakt.
 Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites. Dit zullen vaak WordPress websites zijn. 
-Iemand die de webversie bekijkt ziet de achterliggende app niet: de app ondherhoudt als het ware alleen de web pagina's.
+Iemand die de webversie bekijkt ziet de achterliggende app niet: de app onderhoudt als het ware alleen de web pagina's.
 
 Er wordt continu aan verbeteringen van **beide** versies gewerkt.
 Wij staan open voor vrijwilligers die een derde versie voor Android willen en kunnen maken.
@@ -126,7 +126,7 @@ De zusterapp "Fotoclub Hub HTML" kan webpagina's in beide talen genereren.
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Nee. De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn tientallen voorbeelden te vinden op de landkaarten.
-Buitenlandse club zijn uiteraard ook niet lid van de (Nederlandse) Koninklijke Fotobond.
+Buitenlandse clubs zijn uiteraard ook niet lid van de (Nederlandse) Koninklijke Fotobond.
 </details></p>
 
 </li><li>
@@ -148,7 +148,7 @@ En zijn geen kosten voor centrale opslag of rekenkracht want er is geen noemensw
 Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic, 
 dan blijft als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in
 ([Juicebox Pro](https://www.juicebox.net)). Gebruik van Juicebox Pro is overigens optioneel.
-Er kan gekeken worden gekeken worden of er een gratis alternatief
+Er kan gekeken worden of er een gratis alternatief
 afdoende is (LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
 Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
 vinden van een vrijwilliger die de hiervoor benodige deskundigheid en tijd heeft.
@@ -163,10 +163,10 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 De clubs.</p>
 
 Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
-evan de afgelopen jaren te zien zijn.
-Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app.
+van de afgelopen jaren te zien zijn.
+Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/haar portfolio in de app.
 Of een combinatie. De app gaat er wel vanuit dat de foto's geselecteerd zijn.
-Dus betekent eerder tien foto's dan honderd foto's per fotograaf per jaar. Portofolio's en exposeren betekent keuzes maken.
+Dus betekent eerder tien foto's dan honderd foto's per fotograaf per jaar. Portfolio's en exposeren betekent keuzes maken.
 </details></p>
 
 </li><li>
@@ -193,7 +193,7 @@ is optioneel. De app dwingt uiteraard ook niet af dat een clublid op de lijst vo
 
 #### Vergelijking met websites
 
-De app komt wat dit betreft overeen met de opzet van bestaande cubwebsites: die club heeft zeggenschap
+De app komt wat dit betreft overeen met de opzet van bestaande clubwebsites: die club heeft zeggenschap
 over wat ze willen aanleveren/tonen en hoort intern af te stemmen hoe ze dat organiseren. Het belangrijkste verschil
 is dat nieuwe informatievelden in de app ("_wij willen melden wat voor merk camera een lid gebruikt_" - hmmmm)
 een software uitbreiding vergt omdat anders de gebruikte softwaretechnologie
@@ -226,18 +226,18 @@ Wij verwachten echter dat dit om praktische reden niet veel gebruikt zal worden,
 
 </li><li>
 
-### Kan iemand de getoonde foto's kopieëren?
+### Kan iemand de getoonde foto's kopiëren?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Laten we eerste vooropstellen dat de foto's op de clubwebsite staan - en niet ergens centraal.
-Dus deze vraag geld voor iedere clubwebsite waar foto's op te zien zijn.
+Dus deze vraag geldt voor iedere clubwebsite waar foto's op te zien zijn.
 
-Kopieëren is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
-Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij onze procedé hiervoor...
+Kopiëren is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
+Maar het is hier wel opgezet om kopiëren zo lastig mogelijk te maken. Bij ons procedé hiervoor...
 
-- is rechtsklikken en "Save as.." is in de software vaak geblokkeerd. Dit wordt bepaald door de website van de club en browsers.
+- is rechtsklikken en "Save as.." in de software vaak geblokkeerd. Dit wordt bepaald door de website van de club en browsers.
 - is iedere foto zichtbaar voorzien van de naam van de maker in de linkeronderhoek.
-- is iedere foto bevat digitaal en onzichtbaar gemerkt (EXIF copyright) met de naam van de maker.
+- is iedere foto digitaal en onzichtbaar gemerkt (EXIF copyright) met de naam van de maker.
 </details></p>
 
 </li><li>
@@ -339,9 +339,9 @@ Er bestaan manieren om automatisch veranderingen in websites op te sporen (RSS).
 Maar grosso modo is nieuws inmiddels het domein van de grote klassieke media (nos.nl) 
 en van social media zoals Facebook, Instagram, enz.
 
-Ten eerste gebeurt er altijd wat, en probeert je (vaak te hardnekkig) te leiden naar nieuws dat jij interessant vind.
+Ten eerste gebeurt er altijd wat, en probeert het je (vaak te hardnekkig) te leiden naar nieuws dat jij interessant vindt.
 
-Een speciaal platform voor fotoclubs heeft, b.v. vergeleken met Instragram, heeft voordeel dat het er rustiger is.
+Een speciaal platform voor fotoclubs heeft, b.v. vergeleken met Instagram, het voordeel dat het er rustiger is.
 Dat is vooral belangrijk bij een kunstvorm zoals fotografie: bij een expositie 
 wil je liever een museumsfeer hebben dan een druk marktplein waar iedereen en alles om aandacht schreeuwt. 
 
@@ -373,16 +373,16 @@ Vergeleken met Glass, heeft Photo Club Hub...
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
-De website [fotoexpositie.nl](https://www.fotoexpositie.nl)) is vooral om bekendheid te geven aan exposities.
+De website [fotoexpositie.nl](https://www.fotoexpositie.nl) is vooral om bekendheid te geven aan exposities.
 Deze apps zijn vooral om bekendheid te geven aan fotoclubs en de bijbehorende portfolio's zichtbaar te maken.
 
-Voor [fotoexpositie.nl](https://www.fotoexpositie.nl)) geldt:
+Voor [fotoexpositie.nl](https://www.fotoexpositie.nl) geldt:
 
 - Het merendeel van de leden ("vrienden") zijn individuele fotografen. Er zijn ook wat fotoclubs en zelfs fotomusea.
 - In essentie is het één centrale website plus een wekelijks nieuwsbrief.
 De gegevens worden centraal beheerd, en voor die dienst worden wat kosten voor in rekening gebracht.
 De online informatie is kostenloos voor iedereen zichtbaar.
-- Geplaatste foto's zijn vooral ter illustratie bij exposities. Potfolio's zijn te zien via links naar de websites van de fotografen.
+- Geplaatste foto's zijn vooral ter illustratie bij exposities. Portfolio's zijn te zien via links naar de websites van de fotografen.
 </details></p>
 
 </li></ul></details></p>
@@ -401,7 +401,7 @@ En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaard
 
 Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic,
 dan blijft als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in
-([Juicebox Pro](https://www.juicebox.net)). Er kan gekeken worden gekeken worden of er een gratis alternatief
+([Juicebox Pro](https://www.juicebox.net)). Er kan gekeken worden of er een gratis alternatief
 voldoet (LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
 Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
 vinden van een vrijwilliger die ertoe bereid is.
@@ -460,7 +460,7 @@ Ja. Dat doe je door de Level 1 lijst uit te breiden.
 Graag alleen musea toevoegen die duidelijk voor fotografie interessant zijn.</p>
 
 In principe zouden alle Nederlandse fotografie musea er al op de Level 1 lijst moeten staan.
-Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
+Er staan momenteel alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
 </details></p>
 
 </li><li>
@@ -469,7 +469,7 @@ Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden kan ophalen
-via een webadres zoals "http//www.mijnclub.nl/..."). Per niveau:
+via een webadres zoals "http://www.mijnclub.nl/..."). Per niveau:
 
 - Level 1 vereist geen eigen website. De informatie zit in een centraal bestand.
 - Level 2 kost vrijwel geen opslag. Makkelijk om een vrijwilliger te vinden die 1 enkel bestandje online wil zetten.
@@ -497,7 +497,7 @@ Wij raden dus de clubs 3 basisregels aan:
     2. als de belanghebbenden onbereikbaar zijn, verwijder de gegevens.
     3. probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overledene.
 
-Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij de clubs liggen. 
+Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij de clubs ligt. 
 En indien een complete club onverhoopt opgeheven wordt, verdwijnt die club vroeger of later uit de app
 doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
@@ -538,7 +538,7 @@ Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de 
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
-Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
+Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation).
 </details></p>
 
 </li><li>
@@ -554,9 +554,10 @@ Kenners kunnen het bestand ook met `ftp` op de eigen site zetten - maar `ftp` is
 
 Het idee is daarom om het bestand op de eigen server te zetten via **Wordpress** (of iets vergelijkbaars).
 Wordpress is relatief gebruikersvriendelijk en wordt vaak gebruikt. Na de upload kan de app het bestand ophalen via een webadres (URL).
-Je kunt in Wordpress b.v. foto's uploaded via `Dashboard` > `Media`. Wordpress laat het webadres van het bestand zien. Dat webadres zetten wij vervolgens voor je in het `level1.json` bestand.
+Je kunt in Wordpress b.v. foto's uploaden via `Dashboard` > `Media`. 
+Wordpress laat het webadres van het bestand zien. Dat webadres zetten wij vervolgens voor je in het `level1.json` bestand.
 
-Bij het uploadeden via Wordpress zijn 3 complicaties te verwachten:
+Bij het uploaden via Wordpress zijn 3 complicaties te verwachten:
 
 1. **Inloggen**. Er zijn inloggegevens nodig om iets op een Wordpress site te wijzigen. Die moeten iemand van de club al weten.
 Het is handig om klein onderhoud van het `Level 2` bestand bij die persoon neer te leggen: die heeft de inloggevens en kent Wordpress een beetje.
@@ -599,7 +600,7 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 De huidige manier om gegevens van een club in te voeren is omschreven in [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Dit komt neer op
 
-> "de club levert de gegevens aan in een gegevensbestand (bijvoorbeeld `fcMaasvlakte.level2.json`) in een strict formaat
+> "de club levert de gegevens aan in een gegevensbestand (bijvoorbeeld `fcMaasvlakte.level2.json`) in een strict formaat"
 
 zodat software de correcte gegevens uit dit bestand kan plukken.
 
@@ -607,7 +608,7 @@ Het aanmaken van dit bestand betekent wat regels volgen, maar dat valt voor vele
 Het zou beter moeten kunnen met additionele software die "**formulier-achtige**" invoer biedt en de
 verwachte JSON bestand aanmaakt of aanpast.
 Zeg maar zoiets als wat websites gebruiken voor bestellingen in te voeren. Maar
-in dit geval zonder een centrale "server" met de bijbehorende gebruiker/wachtwaard gedoe.
+in dit geval zonder een centrale "server" met de bijbehorende gebruiker/wachtwoord gedoe.
 Het produceert of wijzigt een bestand op je eigen computer.
 </details></p>
 
