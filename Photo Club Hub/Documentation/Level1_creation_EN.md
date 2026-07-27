@@ -21,9 +21,9 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
    > Tip: If you prefer, you can also start from the [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) file instead of Max.
    > The [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) file
    > shows what it looks like when almost all optional fields are missing.
-   > This means that you have to add any extra fields you want to fill in yourself, for example by copying those lines from Max.
-   > In principle, mistakes can be made during this copying, by taking over slightly too much or too little. Or by adding the extra data in the wrong place.
-   > That is not a big deal, though: step 7 explains how you can check the file. The JSON format is simply picky about brackets and commas.
+   > This means that you have to add any extra fields yourself, for example by copying extra lines from Max.
+   > Because JSON tends to be a very strict format, you may introduce errors in the extended file. Typical errors are about commas or mismatched brackets.
+   > Don't worry too much about that now: step 8 explains how you can check your file for common problems.
 
 4. Adjust the naming for each **club**: `town`, `fullName`, and `nickName`:
     > Tip: to edit the file, use for example [JSON Editor Online](https://jsoneditoronline.org).
