@@ -116,7 +116,7 @@ No. The emphasis is currently on growth in the Netherlands, but the app can be u
 
 For this the app supports two languages: Dutch and English.
 In English the app is called "Photo Club Hub" instead of "Fotoclub Hub".
-The sister app "Photo Club Hub HTML" can generate web pages in both languages.
+The sister app "Photo Club Hub HTML" also supports both languages.
 </details></p>
 
 </li><li>
