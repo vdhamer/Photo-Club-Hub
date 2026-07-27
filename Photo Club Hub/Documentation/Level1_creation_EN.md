@@ -1,47 +1,42 @@
-## Creating a level1.json file for a number of clubs
+## Creating a level1.json file for a Fotobond region
 
-This step-by-step guide describes how to create a list of clubs, for example for clubs in a geographic region.
+This step-by-step guide describes how to create a list of clubs, for example for a region ("Afdeling") of the Dutch photography federation (Fotobond).
 The resulting file is intended to be read automatically by [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
 and [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML). This is why there are requirements regarding the format ("Level 1" JSON).
-Separate instructions exist for adding lists of _club members_ ("Level 2" JSON). Level 2 data can be provided at a later time.
+Separate instructions exist for adding lists of _club members_ ("Level 2" JSON). Level 2 can be provided at a later time.
 
 > 🕚 Creating a Level 1 file with one or two clubs for the very first time will probably take about 1 hour.
 > That time is needed to understand the approach and to figure out how to work with the required software.
 > After that, adding and adjusting the data will only take minutes per club.
 
-1. Make a local copy of the [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") and    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") example files.
-   _Min_ contains the smallest possible example. _Max_ is an example with almost all available options.
-   Follow the Min and Max links to get a small "Download raw file" button on the top right.
+1. If you wish, make a local copy of the [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") and    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") example files.
+   _Min_ contains the smallest possible example. _Max_ is an example with almost all available options. Following the Min and Max links gives a "download" icon at the top right.
 
-3. Make a **copy** of the [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) file and give it a suitable file name:
-   - For, say, Belium you could choose `be.level1.json`. The partitioning over files can be adapted later (e.g. to split Belgium up into regions, if needed).
+2. Make a **copy** of the [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) file and give it a suitable file name:
+   - For Afdeling #3 (Drenthe - Vechtdal) you could choose `clubsNL03.level1.json`.
 
    </br>
 
    > Tip: If you prefer, you can also start from the [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) file instead of Max.
    > The [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) file
    > shows what it looks like when almost all optional fields are missing.
-   > This means that you have to add any extra fields yourself, for example by copying those lines from Max.
-   > When extending the format, mistakes can easily occur if you copy a bit too much or too little.
-   > Or by adding the extra field in a wrong location (JSON as a format is notoriously picky about punctuation like commas and brackets).
-   > Don't worry: that will be fixed in step 7 where the file is fixed for technical correctness.
+   > This means that you have to add any extra fields you want to fill in yourself, for example by copying those lines from Max.
+   > In principle, mistakes can be made during this copying, by taking over slightly too much or too little. Or by adding the extra data in the wrong place.
+   > That is not a big deal, though: step 7 explains how you can check the file. The JSON format is simply picky about brackets and commas.
 
-4. Adjust the naming for each **club**: `town`, `fullName`, and `nickName`:
+3. Adjust the naming for each **club**: `town`, `fullName`, and `nickName`:
     > Tip: to edit the file, use for example [JSON Editor Online](https://jsoneditoronline.org).
     > That program is specifically designed to create and check so-called "JSON" text files.
     > As an alternative you can use a bare-bones editor such as [Windows NotePad](https://en.wikipedia.org/wiki/Notepad), [NotePad++](https://en.wikipedia.org/wiki/Notepad%2B%2B) or [Sublime Text](https://en.wikipedia.org/wiki/Sublime_Text).
-    Microsoft Word or Apple Pages are unsuited for this because they much fancier file formats (.docx and .pages) that won't work here.
+    Microsoft Word or Apple Pages are unsuitable because they inherently use their own file format (.docx and .pages).
 
     - For the short name, `nickName`, we use a kind of convention such as `fcDenDungen` (for "Fotoclub Den Dungen") or `fgWaalre` (for "Fotogroep Waalre").
-    This nickname is mainly used for Level 2 file names and for parts of web addresses.
-    In the Netherlands the majority of the clubs have names starting with _Fotogroep_ or _Fotoclub_, so these get abbreviated. 
-    Those won't work work in most of the world (we were never much of an empire), but you may want to come up with something similar for say Sweden.
-    The software itself is not aware of these conventions (but please avoid any spaces or punctuation in the nickname).
+    This nickname is mainly used for Level 2 file names and for web addresses.
 
-5. Adjust the location of the club (`coordinates`):
+4. Adjust the location of the club (`coordinates`):
     - The coordinates are used to indicate the nominal location of a club on maps. This lets you discover clubs nearby. The app does _not_ work with a traditional street address.
     - For the Netherlands the coordinates will look like e.g. 51.12345 and 5.67890. So with a dot instead of a comma. And values are around 52 and 5.
-    - You can read the coordinates from [maps.google.com](https:/maps.google.com) by right-clicking the chosen address with your mouse.
+    - You can read the coordinates from [maps.google.com](https://maps.google.com) by right-clicking the chosen address with your mouse.
     - We normally choose the location where the club meets or exhibits. If that is undesirable, you can choose a well-known
     square, station or monument nearby. As an alternative you can use fewer digits after the decimal point. This introduces a less precise location that may be e.g. a kilometer away.
     - If you accidentally leave out `coordinates`, the club is shown at coordinates 0, 0. That is in the middle of the sea near West Africa. You will then see a map in the app with nothing but blue ocean on the equator west of Africa.
@@ -143,7 +138,7 @@ It covers, directly or indirectly, the clubs in the Netherlands:
 ```
 
 In this case it contains no individual clubs,
-but only references to 2 underlying files: `clubNLS03.level1.json` and `clubsNL16.level1.json`.
+but only references to 2 underlying files: `clubsNL03.level1.json` and `clubsNL16.level1.json`.
 It can be extended with more references.
 When reading `clubsNL.level1.json`, the apps will check whether there are clubs directly in the file
 (in this case not) and additionally read the two lower Level 1 files mentioned.
@@ -215,7 +210,7 @@ These are therefore fields that you can add later, for example once the required
 It is often practical to start from an existing Level 1 such as [this real one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)
 or [this schematic one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubTemplates.level1.json) example.
 
-- All fields that describe an individual photo club under `clubs:` in a Level 1 file also appear in the `club:` part at the top of a Level 2 file. The fields are described in somewhat more detail in [that documentation](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_creation_EN.md).
+- All fields that describe an individual photo club under `clubs:` in a Level 1 file also appear in the `club:` part at the top of a Level 2 file. The fields are described in somewhat more detail in [that documentation](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_creation_EN.md).
 
 - Regarding the most important fields about Clubs:
    - `level1Header` describes the file itself.
@@ -236,7 +231,7 @@ or [this schematic one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON
    - `museums` contains a list of museums with a notable photography collection.
 For the Netherlands, photo clubs and photo museums are stored in separate files,
 so you will not find museums in files about Dutch photo clubs.
-Museums are further explained in the English [README.me](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document.
+Museums are further explained in the English [README.md](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document.
 
 </details></p>
 
