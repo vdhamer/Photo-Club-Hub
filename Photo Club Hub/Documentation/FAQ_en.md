@@ -404,9 +404,8 @@ Photo Club Hub HTML thus generates a member list with links to the portfolios of
 ### How can I find Fotoclub Hub on the Apple App Store?
 
 <details><summary>Click to expand or collapse answer</summary></p>
-Abroad the app is called "Photo Club Hub" (English) instead of "Fotoclub Hub" (Dutch).
-You may see a foreign App Store if you live or have lived abroad.
-In all cases you get exactly the same app. The app automatically chooses the right language on startup.
+By searching on "Photo Club Hub" (English) or "Fotoclub Hub" (Dutch).
+In both cases you get exactly the same app: there is one latest version that supports both languages.
 </details></p></li></ul>
 </details></p>
 
