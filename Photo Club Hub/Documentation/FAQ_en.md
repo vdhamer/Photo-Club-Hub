@@ -112,21 +112,11 @@ and software bugs are fixed.
 
 <details><summary>Click to expand or collapse answer</summary></p>
 
-No. The emphasis is currently on growth in the Netherlands, but the app can be used worldwide.
+No. The emphasis is currently on growth in the Netherlands, but the app targets worldwide usage.
 
 For this the app supports two languages: Dutch and English.
 In English the app is called "Photo Club Hub" instead of "Fotoclub Hub".
-The sister app "Photo Club Hub HTML" also supports both languages.
-</details></p>
-
-</li><li>
-
-### Does a club have to be a member of the Fotobond?
-
-<details><summary>Click to expand or collapse answer</summary></p>
-No. The app can handle clubs that are not members of the Fotobond perfectly well.
-There are dozens of examples to be found on the maps.
-Foreign clubs are of course also not members of the (Dutch) Royal Fotobond.
+The sister app "Photo Club Hub HTML" aka "Fotoclub Hub HTML" also supports both languages.
 </details></p>
 
 </li><li>
@@ -143,15 +133,15 @@ Because it could be useful for some users. And was fairly easy to add.
 
 <details><summary>Click to expand or collapse answer</summary></p>
 Little or none. The _Photo Club Hub_ and _Photo Club Hub HTML_ software is free and remains free.
-And there are no costs for central storage or computing power because there is no significant central infrastructure.</p>
+And there are no costs for central storage or compute because there is no significant central infrastructure.</p>
 
 If we assume that a club almost always already has a website and has at least one member with Lightroom Classic,
-then the only known cost item that remains is a one-time purchase of an LR plug-in
-([Juicebox Pro](https://www.juicebox.net)). Using Juicebox Pro is optional, by the way.
+then the only known cost item that remains is an optional one-time purchase of an LR plug-in
+([Juicebox Pro](https://www.juicebox.net)).
 It can be looked into whether a free alternative
 is sufficient (LR comes with a few web plug-ins, Juicebox itself has a 'Lite' version).
 Building an alternative to that plug-in yourself is in principle possible but not easy: it therefore depends on
-finding a volunteer who has the required expertise and time for this.
+finding a volunteer who is enthusiastic about adding this.
 It can also be looked into whether the plug-in costs for this purpose can be bought off centrally on a one-time basis at Juicebox.
 </details></p>
 
@@ -162,11 +152,12 @@ It can also be looked into whether the plug-in costs for this purpose can be bou
 <details><summary>Click to expand or collapse answer</summary></p>
 The clubs.</p>
 
-For example, you can choose to have photos of all club exhibitions
-of the past years on display.
+For example, a club may choose to have photos of all club exhibitions
+of the past few years on display.
 But you can also agree that each photographer selects photos themselves for his/her portfolio in the app.
 Or a combination. The app does assume that the photos have been selected.
-So it means ten photos rather than a hundred photos per photographer per year. Portfolios and exhibiting mean making choices.
+This suggests having, say, less than ten new photos (rather than a hundred photos per photographer per year).
+Portfolios and exhibiting mean making choices.
 </details></p>
 
 </li><li>
@@ -177,17 +168,17 @@ So it means ten photos rather than a hundred photos per photographer per year. P
 No. A club manages its own data.</p>
 
 And that data is stored on the club website and is supplied and maintained by the club.
-The data in question here can usually already be seen on existing websites:
-names of members, a selection of photos, members of the board.
+The data in question here is typically already found on the existing websites:
+names of club members, a selection of photos, club officers, etc.
 So now that same data has been converted into a machine-readable format,
 so that it can be shown in a consistent, uniform way.</p>
 
 Most of the fields are optional.
-So a club is not obliged to e.g. link to their website, or indicate who is on the board.
+So a club is not obliged to e.g. link to their website, or indicate who their treasurer is.
 Furthermore, the app does not deal with addresses, e-mail addresses or phone numbers of members.
-Those are not even optional: the software does not have the information and could not do anything with it.
+This is by design: the software does not have the information and could not use the data if it did.
 Even the location of the club's home base is optional. The location is stored as GPS coordinates,
-which you can round off or have point to e.g. a square or train station.
+which you can round off or point to a local landmark if you want.
 The same applies at club-member level: a link to a personal website or specifying areas of expertise
 is optional. The app of course also does not require that a club member appears on the list.
 
