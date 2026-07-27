@@ -30,7 +30,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
     > Tip: to edit the file, use for example [JSON Editor Online](https://jsoneditoronline.org).
     > That program is specifically designed to create and check so-called "JSON" text files.
     > As an alternative you can use a bare-bones editor such as [Windows NotePad](https://en.wikipedia.org/wiki/Notepad), [NotePad++](https://en.wikipedia.org/wiki/Notepad%2B%2B) or [Sublime Text](https://en.wikipedia.org/wiki/Sublime_Text).
-    Microsoft Word or Apple Pages are unsuitable because they inherently use their own file format (.docx and .pages).
+    Microsoft Word or Apple Pages are unsuited for this because they much fancier file formats (.docx and .pages) that won't work here.
 
     - For the short name, `nickName`, we use a kind of convention such as `fcDenDungen` (for "Fotoclub Den Dungen") or `fgWaalre` (for "Fotogroep Waalre").
     This nickname is mainly used for Level 2 file names and for web addresses.
