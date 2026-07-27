@@ -49,7 +49,7 @@ and the (too) hectic and fleeting social media. With the aim of being able to vi
 <details><summary>Click to expand or collapse answer</summary></p>
 You can add a club yourself. There are step-by-step instructions for this (see the question about documentation).</p>
 
-The list of clubs in Brabant-Oost is already included to kick-start the growth process.
+Various clubs in the Netherlands are already included to kick-start process.
 </details></p>
 
 </li><li>
