@@ -33,7 +33,10 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
     Microsoft Word or Apple Pages are unsuited for this because they much fancier file formats (.docx and .pages) that won't work here.
 
     - For the short name, `nickName`, we use a kind of convention such as `fcDenDungen` (for "Fotoclub Den Dungen") or `fgWaalre` (for "Fotogroep Waalre").
-    This nickname is mainly used for Level 2 file names and for web addresses.
+    This nickname is mainly used for Level 2 file names and for parts of web addresses.
+    In the Netherlands the majority of the clubs have names starting with _Fotogroep_ or _Fotoclub_, so these get abbreviated. 
+    Those won't work work in most of the world (we were never much of an empire), but you may want to come up with something similar for say Sweden.
+    The software itself is not aware of these conventions (but please avoid any spaces or punctuation in the nickname).
 
 5. Adjust the location of the club (`coordinates`):
     - The coordinates are used to indicate the nominal location of a club on maps. This lets you discover clubs nearby. The app does _not_ work with a traditional street address.
