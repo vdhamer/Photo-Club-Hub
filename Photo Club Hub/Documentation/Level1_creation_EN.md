@@ -29,10 +29,10 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
     > Tip: to edit the file, use for example [JSON Editor Online](https://jsoneditoronline.org).
     > That program is specifically designed to create and check so-called "JSON" text files.
     > As an alternative you can use a bare-bones editor such as [Windows NotePad](https://en.wikipedia.org/wiki/Notepad), [NotePad++](https://en.wikipedia.org/wiki/Notepad%2B%2B) or [Sublime Text](https://en.wikipedia.org/wiki/Sublime_Text).
-    Microsoft Word or Apple Pages are unsuitable because they inherently use their own file format (.docx and .pages).
+    Avoid using word processors like Microsoft Word or Apple Pages. These use much fancier proprietary file formats (.docx and .pages) that cannot be read by these apps.
 
-    - For the short name, `nickName`, we use a kind of convention such as `fcDenDungen` (for "Fotoclub Den Dungen") or `fgWaalre` (for "Fotogroep Waalre").
-    This nickname is mainly used for Level 2 file names and for web addresses.
+    - For the short name, `nickName`, avoid spaces and puctuation in the nickname: a nickname is used in Level 2 file names and in web adresses. So a nickname of "Photo Club Twinkle" will give problems down the road.
+    In the Netherlands we abbreviate common prefixes like "Fotoclub" (fc) and "Fotogroep" (fg) because most club names contain either. You may want to do something similar for other languages.
 
 5. Adjust the location of the club (`coordinates`):
     - The coordinates are used to indicate the nominal location of a club on maps. This lets you discover clubs nearby. The app does _not_ work with a traditional street address.
