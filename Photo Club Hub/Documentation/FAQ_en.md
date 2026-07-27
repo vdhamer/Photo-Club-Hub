@@ -63,7 +63,7 @@ For other phone brands and for larger screens there is a **web version**.
 
 With the [web version](https://www.fcDeGender.nl/en/clubs) you can view club portfolios in an internet browser (_Chrome_, _Edge_, _Safari_...)
 on all kinds of devices (Android phones, Chinese phone brands, tablets, laptops, Windows PC, Mac).
-Both versions have the same layout and use the same data.
+Both versions have the same approach and show the same data.
 
 Behind the scenes the web version consists of an app that, at the push of a button, creates the required web pages.
 Those pages can be added to existing club websites. These will often be WordPress websites.
