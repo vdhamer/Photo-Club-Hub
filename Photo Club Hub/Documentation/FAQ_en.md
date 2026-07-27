@@ -39,7 +39,7 @@ Users' attention has therefore shifted to large websites
 and social media platforms such as Facebook that serve as meeting places.</p>
 
 That is why we saw a need for an intermediate form especially for photo clubs: something between the relatively unvisited websites
-and the (too) hectic and fleeting social media. With the aim of being able to view the photo work of clubs easily and in peace.
+and the (too) hectic and fleeting social media. With the aim of being able to view the photo work of clubs easily and in peace and quiet.
 </details></p>
 
 </li><li>
