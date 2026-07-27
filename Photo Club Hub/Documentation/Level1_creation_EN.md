@@ -10,9 +10,10 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
 > After that, adding and adjusting the data will only take minutes per club.
 
 1. Make a local copy of the [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") and    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") example files.
-   _Min_ contains the smallest possible example. _Max_ is an example with almost all available options. Following the Min and Max links gives a "download" icon at the top right.
+   _Min_ contains the smallest possible example. _Max_ is an example with almost all available options.
+   Follow the Min and Max links to get a small "Download raw file" button at the top right.
 
-2. Make a **copy** of the [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) file and give it a suitable file name:
+3. Make a **copy** of the [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) file and give it a suitable file name:
    - For Afdeling #3 (Drenthe - Vechtdal) you could choose `clubsNL03.level1.json`.
 
    </br>
@@ -24,7 +25,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
    > In principle, mistakes can be made during this copying, by taking over slightly too much or too little. Or by adding the extra data in the wrong place.
    > That is not a big deal, though: step 7 explains how you can check the file. The JSON format is simply picky about brackets and commas.
 
-3. Adjust the naming for each **club**: `town`, `fullName`, and `nickName`:
+4. Adjust the naming for each **club**: `town`, `fullName`, and `nickName`:
     > Tip: to edit the file, use for example [JSON Editor Online](https://jsoneditoronline.org).
     > That program is specifically designed to create and check so-called "JSON" text files.
     > As an alternative you can use a bare-bones editor such as [Windows NotePad](https://en.wikipedia.org/wiki/Notepad), [NotePad++](https://en.wikipedia.org/wiki/Notepad%2B%2B) or [Sublime Text](https://en.wikipedia.org/wiki/Sublime_Text).
@@ -33,7 +34,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
     - For the short name, `nickName`, we use a kind of convention such as `fcDenDungen` (for "Fotoclub Den Dungen") or `fgWaalre` (for "Fotogroep Waalre").
     This nickname is mainly used for Level 2 file names and for web addresses.
 
-4. Adjust the location of the club (`coordinates`):
+5. Adjust the location of the club (`coordinates`):
     - The coordinates are used to indicate the nominal location of a club on maps. This lets you discover clubs nearby. The app does _not_ work with a traditional street address.
     - For the Netherlands the coordinates will look like e.g. 51.12345 and 5.67890. So with a dot instead of a comma. And values are around 52 and 5.
     - You can read the coordinates from [maps.google.com](https:/maps.google.com) by right-clicking the chosen address with your mouse.
