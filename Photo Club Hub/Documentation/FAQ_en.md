@@ -35,7 +35,7 @@ Visibility of their work _outside_ the club runs via online websites and physica
 Visits to this kind of small website have been declining for years:
 visitors have to take the initiative themselves to find them, and the content rarely changes.
 Users' attention has therefore shifted to large websites
-(such as Nos.nl or Petapixel.com, with their paid editorial teams)
+(such as can.com or Petapixel.com, with their paid editorial teams)
 and social media platforms such as Facebook that serve as meeting places.</p>
 
 That is why we saw a need for an intermediate form especially for photo clubs: something between the relatively unvisited websites
