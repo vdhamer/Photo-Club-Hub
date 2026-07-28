@@ -35,7 +35,7 @@ Visibility of their work _outside_ the club runs via online websites and physica
 Visits to this kind of small website have been declining for years:
 visitors have to take the initiative themselves to find them, and the content rarely changes.
 Users' attention has therefore shifted to large websites
-(such as can.com or Petapixel.com, with their paid editorial teams)
+(such as CNN.com or Petapixel.com, with their paid editorial teams)
 and social media platforms such as Facebook that serve as meeting places.</p>
 
 That is why we saw a need for an intermediate form especially for photo clubs: something between the relatively unvisited websites
@@ -258,7 +258,7 @@ That web version consists of HTML pages that can be added to an existing website
 
 The software for the web version is called "Fotoclub Hub HTML" and "Photo Club Hub HTML" in English.
 With it a website administrator can automatically create pages from the _same_ data files
-that are used for the "Fotoclub Hub" app.
+that are used for the "Photo Club Hub" app.
 [Here](http://www.vdhamer.com/fgDeGender/) is an early test version of such a generated mini-site.
 This avoids double work when maintaining both app and website.
 Photo Club Hub HTML thus generates a member list with links to the portfolios of the club members.
@@ -327,7 +327,7 @@ In this case you can solve this by
 
 <details><summary>Click to expand or collapse answer</summary></p>
 There are ways to automatically detect changes in websites (RSS).
-But by and large news has by now become the domain of the large classic media (nos.nl)
+But by and large news has by now become the domain of the large classic media (e.g., CNN.com)
 and of social media such as Facebook, Instagram, etc.
 
 First, something is always happening, and it tries (often too persistently) to steer you towards news that you find interesting.
@@ -348,7 +348,7 @@ Concretely this means:
 ### How does this differ from an online photo club such as Glass.photo?
 
 <details><summary>Click to expand or collapse answer</summary></p>
-[Glass.photo](www.glass.photo) sees photographers as individuals - but you can see Glass as 1 big photo club.
+[Glass.photo](https://glass.photo) sees photographers as individuals - but you can see Glass as 1 big photo club.
 Compared to Glass, Photo Club Hub has...
 
 - no annual subscription and associated login screen. Glass has a few employees and therefore incurs significant costs.
@@ -387,13 +387,13 @@ It can also be looked into whether the plug-in costs for this purpose can be bou
 
 <details><summary>Click to expand or collapse answer</summary></p>
 For practical reasons the app version supports the iPhone and iPad.
-But there are plenty of other target groups. So a so-called "web version" is in development.
+But there are plenty of other target groups. So there is also a so-called "web version" of this app.
 You view it in your browser (Chrome, Edge, Safari...) and it thus covers both PC/Mac users and all brands of smartphones.
 That web version consists of HTML pages that can be added to an existing website (e.g. Wordpress).</p>
 
 The software for the web version is called "Photo Club Hub HTML" (en) or "Fotoclub Hub HTML" (nl).
 With it a website administrator can automatically create pages from the _same_ data files
-that are used for the "Fotoclub Hub" app.
+that are used for the "Photo Club Hub" app.
 [Here](http://www.vdhamer.com/fgDeGender/) is an early test version of such a generated mini-site.
 This avoids double work when maintaining both app and website.
 Photo Club Hub HTML thus generates a member list with links to the portfolios of the club members.
@@ -401,7 +401,7 @@ Photo Club Hub HTML thus generates a member list with links to the portfolios of
 
 </li><li>
 
-### How can I find Fotoclub Hub on the Apple App Store?
+### How can I find Photo Club Hub on the Apple App Store?
 
 <details><summary>Click to expand or collapse answer</summary></p>
 By searching on "Photo Club Hub" (English) or "Fotoclub Hub" (Dutch).
@@ -431,8 +431,8 @@ This applies to all fields, including the names of museums ("Museum für Fotogra
 Yes. You do that by extending the Level 1 list.
 Please only add museums that are clearly interesting for photography.</p>
 
-In principle all Dutch photography museums should already be on the Level 1 list.
-Currently only a few well-known photo museums in e.g. Germany, the US and Japan are included.
+Currently only a few well-known photo museums in e.g. Germany, the US and Japan are included
+although the list of Dutch photography museums should be relatively complete.
 </details></p>
 
 </li><li>
@@ -441,7 +441,7 @@ Currently only a few well-known photo museums in e.g. Germany, the US and Japan 
 
 <details><summary>Click to expand or collapse answer</summary></p>
 I don't know exactly. The vast majority of clubs already have a website (= something from which you can retrieve files
-via a web address such as "http//www.myclub.nl/..."). Per level:
+via a web address such as "http://www.myclub.nl/..."). Per level:
 
 - Level 1 does not require a website of your own. The information is in a central file.
 - Level 2 costs almost no storage. Easy to find a volunteer willing to put a single small file online.
@@ -498,10 +498,10 @@ and a detailed explanation of what each piece of information means ([GitHub](htt
 
 <details><summary>Click to expand or collapse answer</summary></p>
 Maybe.
-For the clubs in the Noord Brabant - Oost region we have entered the Level 1 data for all clubs known to us.
-Other clubs can therefore supply their Level 1 data to us themselves.
-Fortunately Level 1 amounts to very little: mainly the name, municipality, and GPS coordinates.
-Plus preferably (not required) a single sentence about something that is special about the club.
+We have entered the Level 1 data for some local clubs in the Netherlands.
+Other clubs can supply their Level 1 data to us themselves.
+Fortunately Level 1 data is relatively simple: you just need to supply the club name, municipality, and GPS coordinates.
+Plus preferably (not required) a single sentence ("remark") about something worth knowing about the club.
 </details></p>
 
 </li><li>
@@ -509,8 +509,8 @@ Plus preferably (not required) a single sentence about something that is special
 ### How do I create a Level 2 file?
 
 <details><summary>Click to expand or collapse answer</summary></p>
-There is a separate step-by-step guide with instructions for this: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
-There is also an English version of this: [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation).
+There is a separate step-by-step guide with instructions for this: [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation).
+There is also a Dutch version of this: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 </details></p>
 
 </li><li>
@@ -568,7 +568,8 @@ Please notify us of such changes at club level: then we will also correct the Le
 ### Simpler data entry
 
 <details><summary>Click to expand or collapse answer</summary></p>
-The current way to enter a club's data is described in [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
+The current way to enter a club's data is described in [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation)
+(or [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) in Dutch).
 This comes down to
 
 > "the club supplies the data in a data file (for example `fcMaasvlakte.level2.json`) in a strict format

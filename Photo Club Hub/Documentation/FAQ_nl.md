@@ -357,7 +357,7 @@ Concreet betekent dit:
 ### Hoe verschilt dit van een online fotoclub zoals Glass.photo?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-[Glass.photo](www.glass.photo) ziet fotografen als een individu - maar je kunt Glass zien als 1 grote fotoclub.
+[Glass.photo](https://glass.photo) ziet fotografen als een individu - maar je kunt Glass zien als 1 grote fotoclub.
 Vergeleken met Glass, heeft Photo Club Hub...
 
 - geen jaarlijks abonnement en bijbehorend inlogscherm. Glass heeft enkele werknemers en maakt dus significante kosten.
@@ -414,7 +414,7 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
-Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
+Maar er zijn genoeg andere doelgroepen. Dus is er ook een zogenaamde "webversie" van deze app.
 Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
 Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
 
