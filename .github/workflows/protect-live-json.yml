@@ -1,0 +1,85 @@
+name: Protect live JSON
+
+# Every shipped version of the iOS app fetches its data at launch from
+#   https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/JSON/...
+# (see dataSourcePath in FetchAndProcessFile.swift in the Photo-Club-Hub-Data package).
+#
+# Those files are deliberately NOT members of any Xcode target, so to a reader — human or
+# agent — they look like dead weight left over from the #769 package migration. Deleting or
+# renaming one breaks every already-installed app, including versions we can no longer
+# reach with an update. This workflow makes that mistake loud instead of silent.
+#
+# See issue #801 for the plan to make Photo-Club-Hub-Data the source of truth for these files.
+
+on:
+  pull_request:
+    paths: ['JSON/**']
+  push:
+    branches: [main]
+    paths: ['JSON/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  protect:
+    name: No deletions, valid JSON
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out with history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need the base commit to diff against
+
+      - name: Determine comparison point
+        id: base
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            sha="${{ github.event.pull_request.base.sha }}"
+          else
+            sha="${{ github.event.before }}"
+            # all-zeros on a first push, and stale after some force pushes
+            if [ -z "${sha//0/}" ] || ! git cat-file -e "${sha}^{commit}" 2>/dev/null; then
+              sha="$(git rev-parse HEAD^ 2>/dev/null || true)"
+            fi
+          fi
+          echo "sha=${sha}" >> "$GITHUB_OUTPUT"
+
+      - name: Fail if any JSON/ file disappeared
+        run: |
+          base='${{ steps.base.outputs.sha }}'
+          if [ -z "$base" ]; then
+            echo "No comparison point (initial commit) — nothing to compare."
+            exit 0
+          fi
+
+          # --no-renames on purpose: a rename frees the OLD url, which is the one baked into
+          # shipped binaries. We want that reported as a deletion, not quietly paired up.
+          gone="$(git diff --no-renames --diff-filter=D --name-only "$base" "${{ github.sha }}" -- JSON/)"
+
+          if [ -n "$gone" ]; then
+            echo "$gone" | while IFS= read -r f; do
+              echo "::error file=${f}::${f} was deleted or renamed — this URL is fetched by shipped apps"
+            done
+            echo
+            echo "These files are off the Xcode target on purpose. That does not make them unused:"
+            echo "they are the live data source for every version of the app already on a device."
+            echo
+            echo "If a removal really is intended, delete this workflow in the same PR and say why."
+            exit 1
+          fi
+          echo "No files were removed from JSON/."
+
+      - name: Fail on malformed JSON
+        run: |
+          status=0
+          while IFS= read -r f; do
+            if ! jq empty "$f" 2>/dev/null; then
+              echo "::error file=${f}::invalid JSON — shipped apps would fail to parse this"
+              status=1
+            fi
+          done < <(find JSON -type f -name '*.json')
+          if [ "$status" -eq 0 ]; then echo "All JSON/ files parse."; fi
+          exit $status
