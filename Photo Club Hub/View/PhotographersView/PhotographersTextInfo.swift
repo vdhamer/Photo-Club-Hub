@@ -8,6 +8,7 @@
 import SwiftUI // for View
 import WebKit // for WKWebView
 import MapKit // for CLLocationCoordinate2D
+import Photo_Club_Hub_Data // for types like Photographer
 
 // Implements a few lines of text at top of each photographer card, containing:
 //     * an icon (with a special icon if the photographer is deceased)

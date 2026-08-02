@@ -5,7 +5,8 @@
 //  Created by Peter van den Hamer on 05/03/2022.
 //
 
-import SwiftUI
+import SwiftUI // for View
+import Photo_Club_Hub_Data // for ifDebugMode
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'PreludeView2627' for versions about iOS 18.x")
 struct PreludeView1718: View {

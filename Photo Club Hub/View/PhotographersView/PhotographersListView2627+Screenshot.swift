@@ -6,6 +6,7 @@
 //
 
 import SwiftUI // for Transaction, withTransaction
+import Photo_Club_Hub_Data // for types like Photographer
 
 // Screenshot pipeline only (#776/#777) — no role in normal app use.
 // Kept out of PhotographersListView2627.swift so the mainstream code stays uncluttered. The

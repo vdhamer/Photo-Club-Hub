@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import WebKit // for wkWebView
+import Photo_Club_Hub_Data // for types like
 
 // Implements entire Photographers screen including
 //     * providing the navigation title,
