@@ -6,6 +6,7 @@
 //
 
 import Foundation // for URL
+import Photo_Club_Hub_Data // for many types such as MemerPortfolio
 
 /// Picks which of a member's two images (featured vs. photographer portrait) to display, and exposes its URL.
 ///
