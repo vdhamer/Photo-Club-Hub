@@ -6,6 +6,7 @@
 //
 
 import SwiftUI // for View
+import Photo_Club_Hub_Data // for types such as Organization
 
 /// First line of Text: club/museum name plus optional Wikipedia icon. Used in FilteredMapsView.
 @MainActor

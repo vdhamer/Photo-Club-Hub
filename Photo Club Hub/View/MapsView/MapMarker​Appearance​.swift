@@ -7,6 +7,7 @@
 
 import SwiftUI // for Color
 import SemanticColorPicker // for SemanticColor
+import Photo_Club_Hub_Data // for types such as Organization
 
 /// Returns the tint color for a single map marker representing an organization.
 /// The rules for this are executed in a specific priority.
