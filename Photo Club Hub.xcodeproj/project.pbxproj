@@ -34,8 +34,8 @@
 		376DC9522EC3A98900FB429B /* PreludeImageStore2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2627.swift */; };
 		376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9732EC3F33200FB429B /* Crosshairs1718.swift */; };
 		378D4D4C2FFE570E00A49F5A /* ReadmeTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */; };
-		379D5279301F3A3200B18993 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 379D5278301F3A3200B18993 /* Photo Club Hub Data */; };
-		379D52B5301F689F00B18993 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 379D52B4301F689F00B18993 /* Photo Club Hub Data */; };
+		378F6569301FDA23004CAC04 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 378F6568301FDA23004CAC04 /* Photo Club Hub Data */; };
+		378F656B301FDA74004CAC04 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 378F656A301FDA74004CAC04 /* Photo Club Hub Data */; };
 		37A22B6E3009ADBA00074B0C /* ScreenshotReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6D3009ADBA00074B0C /* ScreenshotReadiness.swift */; };
 		37A22B703009B1E400074B0C /* MapsView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */; };
 		37A2A0AF2FAA587F00EF39A1 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */; };
@@ -328,7 +328,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				379D5279301F3A3200B18993 /* Photo Club Hub Data in Frameworks */,
+				378F6569301FDA23004CAC04 /* Photo Club Hub Data in Frameworks */,
 				375AEF0B2F4B4F2700C6FBD9 /* SemanticColorPicker in Frameworks */,
 				D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */,
 			);
@@ -338,7 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				379D52B5301F689F00B18993 /* Photo Club Hub Data in Frameworks */,
+				378F656B301FDA74004CAC04 /* Photo Club Hub Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,7 +886,7 @@
 			packageProductDependencies = (
 				D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */,
 				375AEF0A2F4B4F2700C6FBD9 /* SemanticColorPicker */,
-				379D5278301F3A3200B18993 /* Photo Club Hub Data */,
+				378F6568301FDA23004CAC04 /* Photo Club Hub Data */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -910,7 +910,7 @@
 			);
 			name = "Photo Club HubTests";
 			packageProductDependencies = (
-				379D52B4301F689F00B18993 /* Photo Club Hub Data */,
+				378F656A301FDA74004CAC04 /* Photo Club Hub Data */,
 			);
 			productName = "Photo Club HubTests";
 			productReference = D0E8689A2D693A3600F2A03A /* Photo Club HubTests.xctest */;
@@ -948,7 +948,7 @@
 			packageReferences = (
 				D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */,
-				379D5277301F393400B18993 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */,
+				378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1438,13 +1438,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		379D5277301F393400B18993 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../Photo-Club-Hub-Data";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1452,6 +1445,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
+			};
+		};
+		378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vdhamer/Photo-Club-Hub-Data";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.11.2;
 			};
 		};
 		D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
@@ -1470,14 +1471,14 @@
 			package = 375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */;
 			productName = SemanticColorPicker;
 		};
-		379D5278301F3A3200B18993 /* Photo Club Hub Data */ = {
+		378F6568301FDA23004CAC04 /* Photo Club Hub Data */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 379D5277301F393400B18993 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */;
+			package = 378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */;
 			productName = "Photo Club Hub Data";
 		};
-		379D52B4301F689F00B18993 /* Photo Club Hub Data */ = {
+		378F656A301FDA74004CAC04 /* Photo Club Hub Data */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 379D5277301F393400B18993 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */;
+			package = 378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */;
 			productName = "Photo Club Hub Data";
 		};
 		D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */ = {
