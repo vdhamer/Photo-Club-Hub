@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Check out with history
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0   # need the base commit to diff against
 
@@ -75,11 +75,21 @@ jobs:
       - name: Fail on malformed JSON
         run: |
           status=0
+          count=0
           while IFS= read -r f; do
+            count=$((count + 1))
             if ! jq empty "$f" 2>/dev/null; then
               echo "::error file=${f}::invalid JSON — shipped apps would fail to parse this"
               status=1
             fi
           done < <(find JSON -type f -name '*.json')
-          if [ "$status" -eq 0 ]; then echo "All JSON/ files parse."; fi
+
+          # Without this, a wrong path or a vanished directory would make the loop run zero
+          # times and the step would pass having checked nothing. Silence is not success.
+          if [ "$count" -eq 0 ]; then
+            echo "::error::No .json files found under JSON/ — the directory is missing or the path is wrong."
+            exit 1
+          fi
+
+          if [ "$status" -eq 0 ]; then echo "All ${count} JSON/ files parse."; fi
           exit $status
