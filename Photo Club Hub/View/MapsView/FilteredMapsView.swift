@@ -8,6 +8,7 @@
 import SwiftUI // for View
 import MapKit // for MKMapItem
 import CoreData // for NSFetchRequest
+import Photo_Club_Hub_Data // for types like Organization
 
 @MainActor
 struct FilteredMapsView: View {
