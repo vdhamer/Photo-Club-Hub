@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Photo_Club_Hub_Data // for PersistenceController
 
 /// Thin dispatcher: shows `MainTabView1827` on iOS 18+ and `MainTabView1717` on iOS 17.
 /// Matches the pattern used by `PhotoClubHubApp` to dispatch between `PreludeView1718`/`2627`.

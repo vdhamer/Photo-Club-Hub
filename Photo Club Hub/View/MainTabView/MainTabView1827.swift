@@ -5,7 +5,8 @@
 //  Created by Peter van den Hamer on 04/07/2026.
 //
 
-import SwiftUI
+import SwiftUI             // for View
+import Photo_Club_Hub_Data // for PersistenceController
 
 @available(iOS 18.0, *)
 struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior & PhotographersListView2627 need iOS 26
