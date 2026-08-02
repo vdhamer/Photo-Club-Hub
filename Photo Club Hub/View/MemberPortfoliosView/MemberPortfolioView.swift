@@ -9,6 +9,7 @@ import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI  // for View
 import WebKit   // for WKWebView
 import TipKit   // for TipView
+import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 /// A list-based view that displays member portfolios with Readme and Search toolbar buttons.
 ///

@@ -8,6 +8,7 @@
 import SwiftUI // for View
 import MapKit // for MKMapItem
 import CoreData // for FetchedResults
+import Photo_Club_Hub_Data // for types like Organization
 
 /// Map showing the selected club/museum in the middle, with markers for other organizations and the user's location.
 /// Includes the standard map controls (compass, pitch toggle, scale, user-location button)
