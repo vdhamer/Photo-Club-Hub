@@ -5,7 +5,8 @@
 //  Created by Peter van den Hamer on 05/03/2022.
 //
 
-import SwiftUI
+import SwiftUI // for View
+import Photo_Club_Hub_Data // for inDebugMode
 
 @available(iOS 26.0, *)
 struct PreludeView2627: View {

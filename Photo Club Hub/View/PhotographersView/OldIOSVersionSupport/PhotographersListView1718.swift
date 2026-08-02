@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 import WebKit // for WKWebView used in navigationDestination
-//import Photo_Club_Hub_Data // for types like MemberPortfolio
+import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 // Implements entire Photographers screen including
 //     * providing the navigation title,

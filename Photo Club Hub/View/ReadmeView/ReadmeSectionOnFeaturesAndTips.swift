@@ -5,7 +5,8 @@
 //  Created by Peter van den Hamer on 24/04/2026.
 //
 
-import SwiftUI
+import SwiftUI // for View
+import Photo_Club_Hub_Data // for types like Organization
 
 struct ReadmeSectionOnFeaturesAndTips: View {
     let geo: GeometryProxy
