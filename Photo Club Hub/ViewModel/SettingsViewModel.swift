@@ -8,6 +8,7 @@
 import CoreData // for NSManagedObject
 import Combine // for AnyCancellable
 import SemanticColorPicker // for SemanticColor
+import Photo_Club_Hub_Data // for OrganizationTypeEnum
 
 /// A view model that manages the user's preferences for filtering presentation preferences throughout the app.
 ///

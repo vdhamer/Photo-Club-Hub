@@ -7,6 +7,7 @@
 
 import SwiftUI // for View
 import CoreData // for NSFetchRequest
+import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 // Shows a single photographer portfolio thumbnail containing:
 //     * image representing the portfolio

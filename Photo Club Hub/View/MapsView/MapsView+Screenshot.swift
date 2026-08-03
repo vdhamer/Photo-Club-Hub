@@ -7,6 +7,7 @@
 
 import MapKit  // for MKMapSnapshotter, MKCoordinateRegion, CLLocationCoordinate2D
 import SwiftUI // for Transaction, withTransaction
+import Photo_Club_Hub_Data // for types like Organization
 
 // This extension is for automatic screenshot capture only (#776) — no role in normal app use.
 // The properties (`didApplyPreset`, `scrollPositionID`) must remain in MapsView itself because

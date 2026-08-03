@@ -429,7 +429,7 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the word" },
+                    { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the world" },
                     { "language": "NL", "localizedString": "Beelden die associaties opwekken met andere landen." }
                 ],
                 "dateAdded": "2025-01-01"

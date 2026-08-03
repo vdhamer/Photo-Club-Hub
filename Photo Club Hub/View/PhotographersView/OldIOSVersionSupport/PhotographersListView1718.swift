@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import WebKit // for WKWebView used in navigationDestination
+import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 // Implements entire Photographers screen including
 //     * providing the navigation title,
@@ -77,29 +78,44 @@ struct PhotographersListView1718: View {
                     .filter { !$0.id.contains("expertise") }  // Block "Too many expertises" entry
                     .sorted(by: sortExpertisesLocalized),
                         id: \.self) { expertise in
+                    // Values are computed before the HStack: inline, the row was a single expression
+                    // that the type-checker could no longer solve in reasonable time once Expertise
+                    // and PhotographerExpertise moved to another module. Each Text() keeps the same
+                    // overload it had before, so rendering and localization are unchanged.
+                    let iconAndName: String = """
+                                              \(getIconString(isSupported: expertise.isSupported)) \
+                                              \(expertise.selectedLocalizedExpertise().name)
+                                              """
+                    let assignedCount: Int = PhotographerExpertise.count(context: viewContext,
+                                                                         expertiseID: expertise.id)
+                    let assignedLabel: String = assignedCount.description + "x"
+                    let temporaryMark: String = expertise.isSupported ? "" : temporary
                     HStack {
-                        Text(verbatim: """
-                                       \(getIconString(isSupported: expertise.isSupported)) \
-                                       \(expertise.selectedLocalizedExpertise().name)
-                                       """)
-                        Text(PhotographerExpertise.count(context: viewContext,
-                                                         expertiseID: expertise.id).description+"x")
-                        Text("\(expertise.isSupported ? "" : temporary)")
+                        Text(verbatim: iconAndName)
+                        Text(verbatim: assignedLabel)
+                        Text("\(temporaryMark)")
                     }
                 }
-                let totalCount = Expertise.count(context: viewContext)
+                // Counts are computed as plain Ints before the Text() calls. Inline, the arithmetic and
+                // the filter closure sat inside string interpolation, which the type-checker could no
+                // longer solve once Expertise moved to another module. The interpolated literals are
+                // unchanged, so the .strings keys and localization behaviour are the same.
+                let totalCount: Int = Expertise.count(context: viewContext)
+                let supportedCount: Int = Expertise.getAll(context: viewContext)
+                    .filter { keyword in keyword.isSupported }.count
+                let temporaryCount: Int = totalCount - supportedCount
+                let assignmentCount: Int = PhotographerExpertise.count(context: viewContext)
                 Text("There are \(totalCount) expertise tags.",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Photographers screen")
                 Text("""
-                     \(totalCount
-                     - Expertise.getAll(context: viewContext).filter { keyword in keyword.isSupported }.count) \
-                     of these \(Expertise.count(context: viewContext)) \
+                     \(temporaryCount) \
+                     of these \(totalCount) \
                      expertise tags are temporary.
                      """,
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Photographers screen")
-                Text("Expertise tags were assigned \(PhotographerExpertise.count(context: viewContext)) times.",
+                Text("Expertise tags were assigned \(assignmentCount) times.",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Photographers screen")
             }
@@ -121,10 +137,13 @@ struct PhotographersListView1718: View {
                                             photographers based on either given- and family name.
                                             """))
         .navigationDestination(item: $selectedPortfolio) { member in
+            // split out of the .navigationTitle() call: as one expression the type-checker timed out.
+            // Keep `title` a String so the non-localizing navigationTitle overload stays selected.
+            let clubName: String = horSizeClass == .compact ? member.organization.nickName :
+                                                              member.organization.fullName
+            let title: String = member.photographer.fullNameFirstLast + " @ " + clubName
             SinglePortfolioView(url: member.level3URL, webView: wkWebView)
-                .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
-                                 (horSizeClass == .compact ? member.organization.nickName :
-                                                             member.organization.fullName))
+                .navigationTitle(title)
                 .navigationBarTitleDisplayMode(.inline)
         }
         .refreshable { // for pull-to-refresh

@@ -105,7 +105,7 @@
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/photo_00190-e1712773795260.jpg",
                 "photographerImage": "https://fotogroepwaalre.nl/wp-content/uploads/2023/12/Carel.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/carel-bullens#anker",
-                "roles": {"isViceChairman": true},
+                "roles": {"isChairman": true, "isViceChairman": false},
                 "expertises": ["Landscape", "Street"],
                 "nlSpecific": {"fotobondNumber": 1634010}
             }
@@ -204,6 +204,7 @@
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/GVS3630c-kopie-2.jpg",
                 "photographerImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/01/greetje-1.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/greetje-van-son#anker",
+                "roles": {"isOther": true},
                 "expertises": ["Architecture", "Abstract"],
                 "nlSpecific": {"fotobondNumber": 1634055}
             }
@@ -233,6 +234,7 @@
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/DSC_5134_B_CR-V.jpg",
                 "photographerImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/01/guus.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/guus-maas#anker",
+                "roles": {"isTreasurer": true},
                 "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634066}
             }
@@ -367,6 +369,7 @@
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Fotos-Janneke-Sinot-website-aanvulling.jpg",
                 "photographerImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Fotos-website-Janneke-Sinot-portret-2.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/janneke-sinot#anker",
+                "roles": {"isOther": true},
                 "expertises": ["Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634075}
             }
@@ -588,7 +591,7 @@
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/Mieke.jpg",
                 "photographerImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/01/mieke.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/mieke-kerkhoven#anker",
-                "roles": {"isChairman": true},
+                "roles": {"isChairman": false},
                 "expertises": ["Landscape", "Abstract"],
                 "nlSpecific": {"fotobondNumber": 1634005}
             }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Photo_Club_Hub_Data // for PersistenceController
 
 @available(iOS, obsoleted: 18.0)
 struct MainTabView1717: View {

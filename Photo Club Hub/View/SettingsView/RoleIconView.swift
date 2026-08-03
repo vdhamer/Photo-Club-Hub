@@ -5,7 +5,8 @@
 //  Created by Peter van den Hamer on 08/01/2022.
 //
 
-import SwiftUI
+import SwiftUI // for View
+import Photo_Club_Hub_Data // for MemberRole
 
 struct RoleStatusIconView: View {
 

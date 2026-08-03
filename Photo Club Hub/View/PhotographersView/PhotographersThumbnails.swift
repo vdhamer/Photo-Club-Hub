@@ -7,6 +7,7 @@
 
 import SwiftUI // for View
 import CoreData // for NSFetchRequest
+import Photo_Club_Hub_Data // for types like Photographer
 
 // Shows horizontally scrolling thumbnails (normally 1 or 2) for photographer portfolios, each containing:
 //     * image representing the portfolio

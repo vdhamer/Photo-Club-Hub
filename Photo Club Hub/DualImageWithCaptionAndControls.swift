@@ -8,6 +8,7 @@
 import AudioToolbox // for AudioServicesPlayAlertSound
 import SwiftUI // for View
 import UIKit // for UINotificationFeedbackGenerator, UIDevice
+import Photo_Club_Hub_Data // for many types like MemberPortfolio
 
 /// Trailing-edge widget in a member row: an sizable thumbnail backed by a 20-wide toolbar strip.
 /// The toolbar contains a portfolio link button and, when a second image is available, a flip control

@@ -26,9 +26,9 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 
 3. Pas de naamgeving per **club** aan: `town`, `fullName`, en `nickName`:
     > Tip: gebruik voor het aanpassen van het bestand bijvoorbeeld [JSON Editor Online](https://jsoneditoronline.org).
-    > Dat programma is speciaal bedoeld om zogenaamde "JSON" tekstbestanden aan te maken en te controlleren.
+    > Dat programma is speciaal bedoeld om zogenaamde "JSON" tekstbestanden aan te maken en te controleren.
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
-    Microsoft Word of Apple Pages zijn ongeschikt omdat het van nature een eigen bestandsformaat gebruiken (.docx en .pages).
+    Microsoft Word of Apple Pages zijn ongeschikt omdat ze van nature een eigen bestandsformaat gebruiken (.docx en .pages).
 
     - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals `fcDenDungen` (voor "Fotoclub Den Dungen") of `fgWaalre` (voor "Fotogroep Waalre"). 
     Deze nickname wordt vooral gebruikt voor Level 2 bestandsnamen en voor webadressen.
@@ -36,10 +36,10 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 4. Pas de locatie van de club aan (`coordinates`):
     - De coördinaten worden gebruikt om de nominale ligging van een club op landkaartjes aan te geven. Dan kan je clubs in de buurt ontdekken. De app werkt _niet_ met een traditioneel adres.
     - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt ipv een komma. En waarden hebben rond de 52 en 5.
-    - Je kunt de coordinaten met [maps.google.com](https:/maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
+    - Je kunt de coordinaten met [maps.google.com](https://maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
     - We kiezen normaal de locatie waar de club bijeenkomt of exposeert. Als dat ongewenst is, kan je een bekend
     plein, station of monument in de buurt kiezen. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je een minder nauwkeurige locatie die b.v. een kilometer verderop ligt.
-    - Zou je per ongeluk `coordinates` weglaten, dan wordt de club weergeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Dan zie je in de app een landkaart met alleen blauwe oceaan op de evenaar ten westen van Africa.
+    - Zou je per ongeluk `coordinates` weglaten, dan wordt de club weergegeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Dan zie je in de app een landkaart met alleen blauwe oceaan op de evenaar ten westen van Africa.
     </br>
     
     > Tip: De lijst met clubs hoeft niet in een keer compleet te zijn:
@@ -48,7 +48,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
     
 6. Voeg bij voorkeur een opmerking (`remark`) toe.
     - Dit benadrukt iets bijzonders over deze club. Het maakt de informatie wat interessanter om door te bladeren. Praktische informatie mag uiteraard ook.
-      Vermijdt een standaard zin die voor vrijwel alle clubs van toepassing is (dus niet "wij steven ernaar om betere foto's te maken" of "wij vinden onzelf best gezellig").
+      Vermijd een standaard zin die voor vrijwel alle clubs van toepassing is (dus niet "wij streven ernaar om betere foto's te maken" of "wij vinden onszelf best gezellig").
     - Probeer de tekst niet langer dan 100 karakters te maken (slechts een richtlijn). Dat is ongeveer de lengte van een Twitter/X "tweet".
     - `Remark` bevat minimaal een Nederlandse (NL) en een Engelstalige (EN) vertaling. De iOS app kiest automatisch de weer te geven taal op basis van de iOS instellingen.
     
@@ -110,19 +110,19 @@ Q: Hoe weet de app eigenlijk dat het bestand `naam.level1.json` geladen moet wor
 
 A: De app kan dit ontdekken als er een _ander_ bestand is met een verwijzing naar het `naam.level1.json` bestand.
 
-Q: Kan het bestand `naam.level1.json` zelf ook verwijzigingen bevatting naar andere Level 1 bestanden?
+Q: Kan het bestand `naam.level1.json` zelf ook verwijzingen bevatten naar andere Level 1 bestanden?
 
 A: Ja. Deze andere bestanden kunnen beschouwd worden als integraal deel ("include") van `naam.level1.json`.
 
 Beide aspecten maken gebruik van één en hetzelfde mechanisme: ieder Level 1 bestand 
 kan via `level1URLIncludes` opgeven dat er extra onderliggende Level 1 bestanden geladen moeten worden.
 Alleen het allereerste (hoogste, `root.level1.json`) bestand wordt gevonden via een vaste naam en locatie (URL).
-We gaat hier nu iets dieper op in: 
+We gaan hier nu iets dieper op in: 
 
 ### Opknippen van Level 1 bestanden
 
 Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet.
-Het bevat direct of indirect de club in Nederland af:
+Het beslaat direct of indirect de clubs in Nederland:
 
 ``` json
 {
@@ -138,13 +138,13 @@ Het bevat direct of indirect de club in Nederland af:
 ```
 
 In dit geval bevat het geen losse clubs,
-maar bevat alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
+maar bevat alleen verwijzingen naar 2 onderliggende bestanden: `clubsNL03.level1.json` en `clubsNL16.level1.json`.
 Het kan uitgebreid worden met meer verwijzingen.
 Bij het inlezen van `clubsNL.level1.json` zullen de apps kijken of er clubs direct in het bestand staan
 (in dit geval niet) en bovendien de beide genoemde lagere Level 1 bestanden inlezen.
 
 Voor de gebruikers van de app is er geen verschil tussen een `clubsNL.level1.json` bestand met 80 clubs
-en een `clubsNL.level1.json` bestand met 2 verwijzingen  naar bestanden die samen die 80 clubs bevatten.
+en een `clubsNL.level1.json` bestand met 2 verwijzingen naar bestanden die samen die 80 clubs bevatten.
 
 Het voordeel van opsplitsen is vooral organisatorisch:
 door het opknippen van een lange lijst met clubs in kortere deellijsten
@@ -199,7 +199,7 @@ Voor ons doel is het waarschijnlijk voldoende om nauwgezet de beschikbare voorbe
 
 - Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag weggelaten worden.
 Dat is geen JSON-conventie, maar een keus binnen deze app. 
-Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de vereiste gegevens inmiddels verzameld zijn.
+Het zijn dus velden die men later kan toevoegen, bijvoorbeeld zodra de vereiste gegevens inmiddels verzameld zijn.
 </details></p>
 
 
@@ -210,14 +210,14 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
 Het is vaak praktisch om een bestaand Level 1 zoals [dit echte](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)
 of [dit schematische](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubTemplates.level1.json) voorbeeld uit te gaan.
 
-- Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md) wat uitvoeriger beschreven.
+- Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md) wat uitvoeriger beschreven.
 
 - Wat betreft de belangrijkste velden over Clubs:
    - `level1Header` omschrijft het bestand zelf.
       - `level1URL` is het webadres van de meesterversie van dit document (vermoedelijk op GitHub).
-      - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/edit/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
+      - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
       - `maintainerEmail` is de contactpersoon voor problemen met dit bestand.
-   - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden al extra club behandeld door de app (met `fotobondNumber` 1600 voor b.v. afdeling 16).
+   - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden als extra club behandeld door de app (met `fotobondNumber` 1600 voor b.v. afdeling 16).
       - `idPlus` is de identificatie van een club. `town` en `fullName` moeten samen uniek zijn. `nickName` moet ook uniek zijn en liefst voor Nederland een formaat zoals "fcMijnClub" (Fotoclub) of "fgMijnClub" (Fotogroep) hebben.
       - `coordinates` zijn lengtegraad en breedtegraad van waar de club bijeenkomt of exposeert (formaat: 51.53557 resp 5.62722 maar minder precisie mag ook - meer heeft geen zin).
       - `optional`
@@ -231,7 +231,7 @@ of [dit schematische](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/c
    - `museums` bevat een lijst met musea met een opmerkelijke fotografie collectie.
 Voor Nederland worden fotoclubs en fotomusea in gescheiden bestanden opgeslagen,
 en zal men dus geen musea aantreffen in bestanden over Nederlandse fotoclubs.
-Musea worden verder uitgelegd in het Engelstalige [README.me](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document. 
+Musea worden verder uitgelegd in het [README_NL.md](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README_NL.md) document. 
 
 </details></p>
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI // for View
+import Photo_Club_Hub_Data // for types like Organization
 
 /// Type-icon on the left, few rows of text on the right, tapable lock symbol. Called from FilteredMapsView.
 @MainActor

@@ -1,20 +1,27 @@
-### 2.10.1 (GitHub commit ???????) ??-08-2026
+TO-DO
+
+* display expertises on People screen
+* more search functionality on People screen
+* more search functionality on Clubs screen
+* fix pulldown-to-refresh crash on various screens (was ok in 2.10.0)
+
+---------------------------------------------------------------------------
+
+### 2.11.2 (GitHub commit 0001cae) ??-08-2026
 
 USER-FACING
 
 * Fix: sometimes diplayed "orange "?" placeholder images for wrong reason (missing @objeservedObject)
-* Updated screenshots in README file on Github
+* Updated screenshots in README file on Github and in App Store
 - Renamed Maps Screen → Maps Tab (and two more) in Settings
-* TODO: display expertises on People screen
-* TODO: more search functionality on People screen
-* TODO: more search functionality on Clubs screen
+- Fix: changed icon color of "Thumbnails" on Settings tab
  
 STRUCTURAL
 * Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)
 * Script-based screenshot capture (allows more frequent screenshot updates)
+* Built using v2.11.2 of the Photo Club Hub Data package
 
-This build #4664 is a placeholder for the plans for 2.10.1
-This build is just a placeholder for possible changes.
+This build #4664 was made using Xcode 27.0 beta. A next build is intended to go the App Store.
 
 ---------------------------------------------------------------------------
 

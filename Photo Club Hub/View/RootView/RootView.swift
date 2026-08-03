@@ -5,8 +5,9 @@
 //  Created by Peter van den Hamer on 05/07/2026.
 //
 
-import SwiftUI
+import SwiftUI  // for View
 import CoreData // for NSManagedObjectContext
+import Photo_Club_Hub_Data // for PersistenceController
 
 // RootView is the app's single WindowGroup root and is activated in PhotoClubHubApp.swift.
 // MainTabView is the permanent root content; PreludeView is layered on top until the user dismisses it.

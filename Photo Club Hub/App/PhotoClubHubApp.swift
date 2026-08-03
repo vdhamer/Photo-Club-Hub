@@ -7,6 +7,7 @@
 
 import CoreData // for NSManagedObjectContext
 import TipKit   // for Tips.configure
+import Photo_Club_Hub_Data // for many data-related functions
 
 @main
 struct PhotoClubHubApp: App {

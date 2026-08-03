@@ -1,0 +1,2 @@
+This file is deliberately NOT valid JSON. It is a test file for MalformedJsonReaderTests,
+used to verify that Level1JsonReader handles garbage input gracefully (no organizations, no crash).

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI // for View
+import Photo_Club_Hub_Data // for types like Organization
 
 /// Remark describing club or museum (is a bit tricky due to unpredictable length).
 @MainActor

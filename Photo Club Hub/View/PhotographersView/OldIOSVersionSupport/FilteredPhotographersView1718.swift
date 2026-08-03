@@ -8,6 +8,7 @@
 import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI // for View
 import WebKit // for WKWebView
+import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 // Implements list of photographer cards including
 //      * defining fetchRequest to get list of photographers sorted on last name

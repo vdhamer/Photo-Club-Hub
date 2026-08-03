@@ -5,8 +5,9 @@
 //  Created by Peter van den Hamer on 10/05/2026.
 //
 
-import SwiftUI
+import SwiftUI // for View
 import CoreLocation // for CLLocationCoordinate2D in preview
+import Photo_Club_Hub_Data // for types like Organization
 
 /// Section footer for the Members list showing how many members are visible after filtering.
 /// Displays "N member(s) shown" or "N of M member(s) shown" when a search filter reduces the count,

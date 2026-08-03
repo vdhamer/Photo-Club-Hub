@@ -7,6 +7,7 @@
 
 import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI // for View
+import Photo_Club_Hub_Data // for types like Organization
 
 /// A scroll-based view that displays photo clubs and museums with maps and markers showing their locations.
 ///

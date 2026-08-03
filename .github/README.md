@@ -221,7 +221,7 @@ The remaining screens are reached from these:
 - the `Readme` screen opens via the Info (ⓘ) button available on most tabs,
 - the `Prelude` screen is briefly shown when the app launches.</p>
 
-The individual tabs and screens are described below.
+The tabs and screens are described below.
 <ul>
 
 ### The `Maps` Tab
@@ -273,8 +273,6 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is used to generat
 
 ### The `People` Tab
 
-![People Tab](images/People/People_EN_Light.jpg "People Tab")
-
 The `People` tab lists the photographers featured in the app. 
 Affiliations to photo clubs are shown inside the person's "card". This is different to the Clubs tab
 which is essentially Club>Person rather than Person>Club. Note that a person may simultaneously be a member of multiple clubs
@@ -283,6 +281,8 @@ multiple portfolios. These portfolios can scroll horizontally.
 
 Clicking on one of the portfolio images brings you to a screen where you can browse through that portfolio.
 The `Search` button filters only on photographer names. Filtering capabilities on clubs or expertises are planned.
+
+![People Tab](images/People/People_EN_Light.jpg "People Tab")
 
 ### The `Readme` Screen
 
@@ -299,42 +299,47 @@ Don't confuse it with the more extensive README text on GitHub (which you are re
 The `Settings` tab mainly allows you to configure what is shown on the
 `Clubs` tab. Some of the more useful settings:
 
-- choose whether to want to hide former members of the clubs
+- choose whether to hide former members of the clubs
 - choosing what the portfolio thumbnails show by default: picture _of_ of _by_ the photographer.
 
-At the bottom of the screen is a link that takes you the app's settings within iOS Settings.
+At the bottom of the screen is a link that takes you to the app's settings within iOS Settings.
 There you will find the ability to run the app in a different language than the device's system language.
 But also some technical stuff like force-clearing the app's data.
 None of these technical settings can do any harm, but they are not for casual playing around.
 
 ### The `Prelude` Screen
 
-![Prelude Screen](images/preludeScreen.png "Prelude Screen")
+![Prelude Screen](images/Prelude/Prelude_EN_Light.jpg "Prelude Screen")
 
 The `Prelude` screen shows an opening animation.
-Clicking outside the central image dismisses the Prelude and reveals the app's main interface (starting on the `Clubs` tab).
+Clicking outside the central image dismisses the Prelude screen and brings you to the `Clubs` tab.
 
 <ul><details>
 <summary>Details about Prelude screen (click to expand)</summary></p>
 
 When the app launches, it shows a large version of the app’s icon. 
-Tapping on the icon turns it into an interactive image illustrating how most digital cameras detect color.</p>
+Tapping on the icon turns it into an interactive image illustrating how most digital cameras capture color information.</p>
 
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
-> that filters the light reaching each photocell or pixel.
-> In a 24 MPixel camera, the image sensor typically consists of an array of 4000 by 6000 photocells.
-> Each photocell on the chip itself is not color-sensitive. But by placing a miniscule red, green or blue color filter on
-> the chip, it becomes best at seeing one specific color range. Thus in most cameras, only one color is measured per
-> pixel: the two missing color channels for that pixel are estimated using color information from surrounding pixels.
+> that filters the light reaching each light-sensitive photo cell or pixel.
+> In a 24 MPixel camera, a 2:3 image sensor has an array of 4000 by 6000 photo cells.
+> Each photo cell on the chip measures light intensity - regardless of color.
+> But by placing a miniscule red, green or blue color filter on each photo cell,
+> it becomes sensitive to one specific color range. Thus in most cameras, only one color is measured per
+> photo cell: the two missing color channels for that pixel are estimated (guessed) using color information from surrounding photo cells.
+> In marketing jargon, a sensor with 24 million photo cells measuring one color each is called a 24 MPixel camera.
 
-Tapping *inside* the image allows you to zoom in or out to your heart's content.
+Tapping *inside* the image allows you to zoom in or out to your heart's content. The app includes a small number of sample pictures for this.
 Tapping *outside* the image dismisses the Prelude and reveals the app's main interface.
 
-You will see the Prelude animation again after you shut down and restart the app.
+You will see the Prelude animation again after you shut down and restart the app. On larger screens (iPad),
+you can return to the Prelude screen from the `Clubs` tab using a button.
 
 Why provide such a fancy opening screen? Well, it was partly a nice challenge to make (it actually runs
 on your device's GPU cores). But it also helps explain the app's logo: the Bayer filter array indeed consists of an array of repeated
-red, blue, and _two_ green pixels.
+red, blue, and _two_ green pixels. A single brand (FujiFilm) uses a somewhat larger filter pattern.
+Some Sigma cameras stack 3 photo cells on top of each other instead of side by side.
+In a true digital monochrome camera (Leica), the grid of color filters is left out for a premium price.
 </details>
     
 </ul></ul>

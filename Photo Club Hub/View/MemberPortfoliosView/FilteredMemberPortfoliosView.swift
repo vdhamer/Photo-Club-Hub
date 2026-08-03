@@ -7,6 +7,7 @@
 
 import CoreData // for NSManagedObjectContext, FetchRequest
 import SwiftUI
+import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 /// Renders `MemberPortfolioRow` views grouped by Club, driven by a Core Data sectioned fetch request.
 /// Sections are labeled by Club name+town and include member-count footers.

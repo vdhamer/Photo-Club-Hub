@@ -8,6 +8,7 @@
 import SwiftUI      // for View, etc.
 import CoreLocation // for CLLocationCoordinate2D
 import CoreData     // for NSManagedObjectContext
+import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 /// A single row representing a MemberPortfolio (aka Photographer in the context of a particular Club).
 ///
