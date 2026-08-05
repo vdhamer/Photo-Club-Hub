@@ -23,7 +23,10 @@
 "Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." = "Debug instellingen aanzetten leidt tot niet standaard gedrag. De instellingen zijn er voor het testen van de software. Zie Settings.swift bestand op GitHub voor nadere uitleg.";
 
 /* (No Comment) */
-"Version" = "Versie";
+"iOS app version" = "iOS app versie";
+
+/* (No Comment) */
+"Library version" = "Data module versie";
 
 /* (No Comment) */
 "CoreData merge issue terminates app" = "CoreData mergeconflict sluit de app af";

@@ -35,8 +35,9 @@ struct PhotoClubHubApp: App {
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
-        // update version number shown in iOS Settings
+        // update version numbers shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
+        UserDefaults.standard.set(PhotoClubHubDataVersion.semver, forKey: "libraryVersion_preference")
         if Settings.manualDataLoading || Settings.dataResetPending {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
         } else { // initialize some constant records for Language and OrganizationType (for stability)
