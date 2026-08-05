@@ -37,7 +37,10 @@ struct PhotoClubHubApp: App {
 
         // update version numbers shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
-        UserDefaults.standard.set(PhotoClubHubDataVersion.semver, forKey: "libraryVersion_preference")
+        let noBuildNumber = String(localized: "N/A", table: "PhotoClubHub.SwiftUI",
+                                   comment: "Stands in for the build number, which the Data library doesn't have")
+        UserDefaults.standard.set("\(PhotoClubHubDataVersion.semver) (\(noBuildNumber))",
+                                  forKey: "libraryVersion_preference")
         if Settings.manualDataLoading || Settings.dataResetPending {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
         } else { // initialize some constant records for Language and OrganizationType (for stability)
