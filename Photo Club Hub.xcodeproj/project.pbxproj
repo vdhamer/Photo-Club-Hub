@@ -34,8 +34,6 @@
 		376DC9522EC3A98900FB429B /* PreludeImageStore2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2627.swift */; };
 		376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9732EC3F33200FB429B /* Crosshairs1718.swift */; };
 		378D4D4C2FFE570E00A49F5A /* ReadmeTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */; };
-		378F6569301FDA23004CAC04 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 378F6568301FDA23004CAC04 /* Photo Club Hub Data */; };
-		378F656B301FDA74004CAC04 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 378F656A301FDA74004CAC04 /* Photo Club Hub Data */; };
 		37A22B6E3009ADBA00074B0C /* ScreenshotReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6D3009ADBA00074B0C /* ScreenshotReadiness.swift */; };
 		37A22B703009B1E400074B0C /* MapsView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */; };
 		37A2A0AF2FAA587F00EF39A1 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */; };
@@ -44,6 +42,8 @@
 		37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */; };
 		37A2A0E42FAA9EA100EF39A1 /* OrganizationViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */; };
 		37A2A0E62FAAA53400EF39A1 /* MapsViewRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E52FAAA53400EF39A1 /* MapsViewRemark.swift */; };
+		37AAA67E3020C9DD0056BC94 /* ClubLoadCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AAA67D3020C9DD0056BC94 /* ClubLoadCoordinator.swift */; };
+		37AAA6813020CE980056BC94 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 37AAA6803020CE980056BC94 /* Photo Club Hub Data */; };
 		37C9BEBA2FFC5F120075F6DE /* ReadmeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9BEB92FFC5F120075F6DE /* ReadmeButton.swift */; };
 		37CA632F2FA63EFA00C92F30 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */; };
 		37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */; };
@@ -167,6 +167,7 @@
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
 		37A88B52300E1D1E00193829 /* Levels_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_NL_Light.jpg; sourceTree = "<group>"; };
 		37A88B5A300E1D3400193829 /* README_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_NL.md; sourceTree = "<group>"; };
+		37AAA67D3020C9DD0056BC94 /* ClubLoadCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubLoadCoordinator.swift; sourceTree = "<group>"; };
 		37B1A4682F0B18A700854FBD /* museumsUS.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsUS.level1.json; sourceTree = "<group>"; };
 		37B39FAE2F111B20004AA5D8 /* fcVeghel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcVeghel.level2.json; sourceTree = "<group>"; };
 		37B534982F242F2A000EA5BB /* ffcShot71.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ffcShot71.level2.json; sourceTree = "<group>"; };
@@ -328,7 +329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				378F6569301FDA23004CAC04 /* Photo Club Hub Data in Frameworks */,
+				37AAA6813020CE980056BC94 /* Photo Club Hub Data in Frameworks */,
 				375AEF0B2F4B4F2700C6FBD9 /* SemanticColorPicker in Frameworks */,
 				D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */,
 			);
@@ -338,7 +339,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				378F656B301FDA74004CAC04 /* Photo Club Hub Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +486,7 @@
 		D03DE5CC2C28439800130680 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				37AAA67D3020C9DD0056BC94 /* ClubLoadCoordinator.swift */,
 				D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */,
 				37A22B6D3009ADBA00074B0C /* ScreenshotReadiness.swift */,
 			);
@@ -886,7 +887,7 @@
 			packageProductDependencies = (
 				D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */,
 				375AEF0A2F4B4F2700C6FBD9 /* SemanticColorPicker */,
-				378F6568301FDA23004CAC04 /* Photo Club Hub Data */,
+				37AAA6803020CE980056BC94 /* Photo Club Hub Data */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -910,7 +911,6 @@
 			);
 			name = "Photo Club HubTests";
 			packageProductDependencies = (
-				378F656A301FDA74004CAC04 /* Photo Club Hub Data */,
 			);
 			productName = "Photo Club HubTests";
 			productReference = D0E8689A2D693A3600F2A03A /* Photo Club HubTests.xctest */;
@@ -948,7 +948,7 @@
 			packageReferences = (
 				D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */,
-				378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */,
+				37AAA67F3020CD9B0056BC94 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1094,6 +1094,7 @@
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs2627.swift in Sources */,
+				37AAA67E3020C9DD0056BC94 /* ClubLoadCoordinator.swift in Sources */,
 				37D984092F90406200C30EE5 /* SettingsViewMembersSection.swift in Sources */,
 				376D14FA2E6DE83A00A1403B /* DebugPanel2627.swift in Sources */,
 				37A2A0E02FAA959F00EF39A1 /* MapsViewTitle.swift in Sources */,
@@ -1283,7 +1284,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4664;
+				CURRENT_PROJECT_VERSION = 4665;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1303,7 +1304,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.11.2;
+				MARKETING_VERSION = 2.11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1325,7 +1326,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4664;
+				CURRENT_PROJECT_VERSION = 4665;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_APP_SANDBOX = YES;
@@ -1347,7 +1348,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.11.2;
+				MARKETING_VERSION = 2.11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1438,6 +1439,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		37AAA67F3020CD9B0056BC94 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../Photo-Club-Hub-Data";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1445,14 +1453,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
-			};
-		};
-		378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vdhamer/Photo-Club-Hub-Data";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 2.11.2;
 			};
 		};
 		D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
@@ -1471,14 +1471,9 @@
 			package = 375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */;
 			productName = SemanticColorPicker;
 		};
-		378F6568301FDA23004CAC04 /* Photo Club Hub Data */ = {
+		37AAA6803020CE980056BC94 /* Photo Club Hub Data */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */;
-			productName = "Photo Club Hub Data";
-		};
-		378F656A301FDA74004CAC04 /* Photo Club Hub Data */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 378F6567301FDA23004CAC04 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */;
+			package = 37AAA67F3020CD9B0056BC94 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */;
 			productName = "Photo Club Hub Data";
 		};
 		D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */ = {
