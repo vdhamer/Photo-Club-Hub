@@ -34,7 +34,7 @@ import Photo_Club_Hub_Data // for Model
 /// **Ordering *within* a pass is not this class's concern.** Level 0 before Level 2, and the task group that
 /// joins the club loaders, live in `PhotoClubHubApp.loadLevels0To2()` and exist for an unrelated reason (a
 /// Core Data uniqueness constraint on `Expertise`). Two different orderings, no shared mechanism — reading
-/// them as one topic is what makes this area feel harder than it is. Yes, this comment block is by Claude Code - Opus 5.
+/// them as one topic is what makes this area feel harder than it is. Yes, this comment block is by Claude Code Opus 5.
 @MainActor
 final class ClubLoadCoordinator {
     static let shared = ClubLoadCoordinator()
