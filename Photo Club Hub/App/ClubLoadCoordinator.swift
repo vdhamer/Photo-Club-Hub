@@ -8,14 +8,21 @@
 import CoreData // for NSManagedObjectContext
 import Photo_Club_Hub_Data // for Model
 
-/// Serializes load generations so pull-to-refresh never races an in-flight startup load.
-/// Enforces the ordering: drain in-flight load → delete → fresh load.
+/// Serializes load passes so pull-to-refresh never races an in-flight startup load pass or another refresh.
+/// Enforces the ordering: drain everything ahead of us → delete → fresh load.
 @MainActor
 final class ClubLoadCoordinator {
     static let shared = ClubLoadCoordinator()
+
+    /// Tail of the chain of load passes. Never reset to nil: a finished Task is a satisfied
+    /// `await`, so chaining onto a completed one costs nothing and keeps the ordering rule simple.
     private var currentLoad: Task<Void, Never>?
 
-    /// Startup path: start a generation if none is running; stays fire-and-forget for the caller.
+    /// Whether the startup pass has been requested. Separate from `currentLoad` because that no
+    /// longer distinguishes "running" from "finished", and `.onAppear` can fire more than once.
+    private var hasStartedInitialLoadPass = false
+
+    /// Startup path: start the first load pass; stays fire-and-forget for the caller.
     func loadIfIdle() {
         guard currentLoad == nil else { return }
         currentLoad = Task {

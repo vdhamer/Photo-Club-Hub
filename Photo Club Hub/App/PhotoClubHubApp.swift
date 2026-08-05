@@ -61,7 +61,7 @@ struct PhotoClubHubApp: App {
 extension PhotoClubHubApp {
 
     // swiftlint:disable:next function_body_length
-    static func loadClubsAndMembers() {
+    static func loadLevels123() async {
 
         let isBeingTested = false // these are being loaded to get the data into Core Data, not for testing purposes
         let useOnlyInBundleFile = false
@@ -69,7 +69,7 @@ extension PhotoClubHubApp {
         // MARK: - Level 0
 
         // load list of Expertises and Languages from root.Level0.json file
-        _ = Level0JsonReader(
+        await Level0JsonReader.load(
             bgContext: makeBgContext(ctxName: "Level 0 loader"),
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
@@ -77,15 +77,12 @@ extension PhotoClubHubApp {
         // MARK: - Level 1
 
         // Load list of organizations from root_.Level1.json file (which Includes additional Level 1 child files).
-        // `load()` is `awaitable` so tests can await the loading of both `root_` and all its Includes(issue #760);
-        // the app itslef doesn't need that, so it launches load() from a Task and sticks to fire-and-forget behavior.
-        Task {
-            await Level1JsonReader.load(
-                bgContext: makeBgContext(ctxName: "Level 1 loader for root_"),
-                fileName: "root_",
-                isBeingTested: isBeingTested,
-                useOnlyInBundleFile: useOnlyInBundleFile)
-        }
+        let fileName = "root_"
+        await Level1JsonReader.load(
+            bgContext: makeBgContext(ctxName: "Level 1 loader for \(fileName)"),
+            fileName: fileName,
+            isBeingTested: isBeingTested,
+            useOnlyInBundleFile: useOnlyInBundleFile)
 
         // MARK: - Level 2
 
