@@ -51,7 +51,7 @@ struct RootView: View {
         }
         .onAppear {
             if !Settings.manualDataLoading && !isRunningTests && !isRunningInPreviews {
-                PhotoClubHubApp.loadClubsAndMembers()
+                ClubLoadCoordinator.shared.loadIfIdle()
                 print("Loading clubs and members in background")
             }
         }

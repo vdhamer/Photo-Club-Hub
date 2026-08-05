@@ -34,8 +34,10 @@ struct MapView: View {
                 .pan, .zoom], // actually .all is the default
             selection: $mapSelection) {
 
-            // show markers of all organizations on map
-            ForEach(fetchedOrganizations, id: \.self) { organization in
+            // Show markers of all organizations on map
+            // isUsable: these results are handed down by the parent view, so this ForEach needs its own
+            // filter to skip organizations that pull-to-refresh has just deleted (issue #802).
+            ForEach(fetchedOrganizations.filter { $0.isUsable }, id: \.self) { organization in
                 Marker(organization.fullName,
                        systemImage: systemName(organizationType: organization.organizationType,
                                                circleNeeded: false),

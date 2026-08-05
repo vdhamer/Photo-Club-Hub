@@ -132,13 +132,16 @@ struct FilteredMapsView: View {
         }
     }
 
+    // isUsable keeps rows that pull-to-refresh has just deleted out of the view tree: their
+    // relationships are already nullified, so rendering them trips the accessors (issue #802).
     private var filteredOrganizations: [Organization] {
         if searchText.wrappedValue.isEmpty {
-            return fetchedOrganizations.filter { _ in
-                true
+            return fetchedOrganizations.filter { organization in
+                organization.isUsable
             }
         } else {
             return fetchedOrganizations.filter { organization in
+                organization.isUsable &&
                 organization.fullNameTown.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
     }
