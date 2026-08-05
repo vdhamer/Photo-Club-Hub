@@ -12,12 +12,14 @@ import Photo_Club_Hub_Data // for Level0JsonReader, Level2JsonReader, Expertise,
 
 // #769 step 8(a), re-scoped.
 //
-// The original wording was "app startup loads Level 0 before Level 2", but no such ordering exists:
-// loadClubsAndMembers() hands every loader its own newBackgroundContext() and each returns immediately,
-// so Level 0, Level 1 and the 14 Level 2 loads run concurrently. What actually makes that safe is that
-// the outcome does not depend on the order: Level 2 creates unknown expertises through
-// findCreateUpdateUndefSupported, which passes `isSupported: nil` rather than false, so a later Level 0
-// can still promote them to supported. This test pins that property.
+// The original wording was "app startup loads Level 0 before Level 2", but when this test was written no
+// such ordering existed: every loader got its own newBackgroundContext() and returned immediately, so
+// Level 0, Level 1 and the 14 Level 2 loads ran concurrently. loadLevels0To2() has since introduced the
+// ordering — it awaits Level 0, then Level 1, then runs the Level 2 loaders in a TaskGroup — but this
+// test deliberately does not lean on it. What it pins is the property underneath: the outcome does not
+// depend on the order, because Level 2 creates unknown expertises through findCreateUpdateUndefSupported,
+// which passes `isSupported: nil` rather than false, so a later Level 0 can still promote them to
+// supported.
 //
 // SCOPE: this is an *order-independence* test, not a concurrency-safety test. Both arms below run
 // sequentially. It does not exercise two contexts interleaving inside a single find-then-create window;
