@@ -6,7 +6,7 @@
 //
 
 import CoreData // for NSManagedObjectContext
-import Photo_Club_Hub_Data // for Model
+import Photo_Club_Hub_Data // for Model and LevelLoader
 
 /// Serializes JSON load passes so pull-to-refresh never races an in-flight startup load pass or a preceding refresh.
 /// Enforces the ordering: drain everything ahead of us → delete → fresh load.
@@ -32,9 +32,12 @@ import Photo_Club_Hub_Data // for Model
 /// not mean anything is in flight — which is why `hasStartedInitialLoadPass` exists as a separate flag.
 ///
 /// **Ordering *within* a pass is not this class's concern.** Level 0 before Level 2, and the task group that
-/// joins the club loaders, live in `PhotoClubHubApp.loadLevels0To2()` and exist for an unrelated reason (a
-/// Core Data uniqueness constraint on `Expertise`). Two different orderings, no shared mechanism — reading
-/// them as one topic is what makes this area feel harder than it is. Yes, this comment block is by Claude Code Opus 5.
+/// joins the club loaders, live in `LevelLoader.loadAllLevels()` in the Photo Club Hub Data package and exist
+/// for an unrelated reason (a Core Data uniqueness constraint on `Expertise`). Two different orderings, no
+/// shared mechanism — reading them as one topic is what makes this area feel harder than it is.
+/// That `loadAllLevels` returns only once every club loader has finished is what `enqueue` depends on: a
+/// queued refresh must not delete Core Data on top of a pass that is still writing (#802).
+/// Yes, this comment block is by Claude Code Opus 5.
 @MainActor
 final class ClubLoadCoordinator {
     static let shared = ClubLoadCoordinator()
@@ -51,7 +54,7 @@ final class ClubLoadCoordinator {
     func loadIfIdle() {
         guard !hasStartedInitialLoadPass else { return }
         hasStartedInitialLoadPass = true
-        enqueue { await PhotoClubHubApp.loadLevels0To2() }
+        enqueue { await LevelLoader.loadAllLevels() }
     }
 
     /// Pull-to-refresh: queue a delete-then-reload behind whatever is already in flight, and await it
@@ -60,7 +63,7 @@ final class ClubLoadCoordinator {
         _ = Settings.dataResetPending            // side-effect clears the flag
         await enqueue {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
-            await PhotoClubHubApp.loadLevels0To2()
+            await LevelLoader.loadAllLevels()
         }.value
     } // SwiftUI's refresh spinner automatically stops here
 
