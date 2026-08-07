@@ -153,5 +153,13 @@ iOSInjectionProject/
 
 # Generated documentation screenshots (Scripts/capture-screenshots.sh, issue #775)
 Scripts/screenshots/
+
 # Temporary test images from verify-screenshots.sh (deleted on pass, kept on failure)
 Scripts/screenshots_verify/
+
+# Personal workspace used to shadow the remote Photo-Club-Hub-Data dependency with a
+# local checkout while co-developing (issue #809). Deliberately not committed: adding the
+# package to the workspace writes a local path into contents.xcworkspacedata, which would
+# break any machine that lacks that folder. Nothing else needs the workspace — the release
+# Mac and the screenshot scripts build from the .xcodeproj directly.
+/Photo Club Hub.xcworkspace/
