@@ -3,7 +3,10 @@ TO-DO
 * display expertises on People screen
 * more search functionality on People screen
 * more search functionality on Clubs screen
-* fix pulldown-to-refresh crash on various screens (was ok in 2.10.0)
+
+
+* Done, add to documentation: fixed pulldown-to-refresh crash on various screens (was ok in 2.10.0) <<<< Done
+- implement issue [#810](https://github.com/vdhamer/Photo-Club-Hub/issues/810 (Wanroij, dataResetPending) (Wanroij, dataResetPending) right before app store release <<<<
 
 ---------------------------------------------------------------------------
 
