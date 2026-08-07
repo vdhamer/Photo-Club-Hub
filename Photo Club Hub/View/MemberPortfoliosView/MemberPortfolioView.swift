@@ -105,7 +105,7 @@ struct MemberPortfolioView: View {
                 .navigationBarTitleDisplayMode(.inline)
             }
             .refreshable { // for pull-to-refresh
-                resetAndReloadData()
+                await ClubLoadCoordinator.shared.refresh(viewContext: viewContext)
             }
             .keyboardType(.namePhonePad)
             .textInputAutocapitalization(.sentences)
@@ -140,16 +140,6 @@ struct MemberPortfolioView: View {
             }
             .sheet(isPresented: $showingReadmeSheet, content: readmeSheetContent) // screenshot pipeline (#777)
         } // ScrollViewReader
-    }
-
-    /// Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
-    private func resetAndReloadData() {
-        // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
-        if Settings.dataResetPending {
-            print("dataResetPending flag toggled from true to false")
-        }
-        Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
-        PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
     }
 
 }

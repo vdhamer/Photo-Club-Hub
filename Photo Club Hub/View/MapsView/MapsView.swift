@@ -85,13 +85,7 @@ struct MapsView: View {
                                             the members based on a fragment of the organization name or town.
                                             """))
         .refreshable { // for pull-to-refresh
-            // Pull-to-refresh: clears pending reset flag, wipes Core Data, and reloads data.
-            // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
-            if Settings.dataResetPending {
-                print("dataResetPending flag toggled from true to false")
-            }
-            Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
-            PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
+            await ClubLoadCoordinator.shared.refresh(viewContext: viewContext)
         }
         .task { // will be aborted when ScrollView disappears
             // Request location authorization and start updates; aborted when ScrollView disappears.

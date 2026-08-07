@@ -147,12 +147,7 @@ struct PhotographersListView1718: View {
                 .navigationBarTitleDisplayMode(.inline)
         }
         .refreshable { // for pull-to-refresh
-            // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
-            if Settings.dataResetPending {
-                print("dataResetPending2 flag toggled from true to false")
-            }
-            Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
-            PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
+            await ClubLoadCoordinator.shared.refresh(viewContext: viewContext)
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.sentences)

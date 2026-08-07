@@ -5,7 +5,7 @@
 //  Created by Peter van den Hamer on 20/06/2021.
 //
 
-import CoreData // for NSManagedObjectContext
+import CoreData // for NSMergePolicy
 import TipKit   // for Tips.configure
 import Photo_Club_Hub_Data // for many data-related functions
 
@@ -24,7 +24,7 @@ struct PhotoClubHubApp: App {
         // Automated screenshot functionality: stale-marker cleanup and handle -suppressTips CLI argument.
         ScreenshotReadiness.configureAtStartup()
 
-        // Load persisted tip state (e.g. TabNavigationTip); without this call no tips are shown.
+        // Load persisted UI tip state (e.g. TabNavigationTip); without this call no tips are shown.
         // try? Tips.resetDatastore() /* used during manual testing only */
         try? Tips.configure([.displayFrequency(.daily)]) // show at most one tip per day
 
@@ -35,8 +35,12 @@ struct PhotoClubHubApp: App {
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
-        // update version number shown in iOS Settings
+        // update version numbers shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
+        let noBuildNumber = String(localized: "N/A", table: "PhotoClubHub.SwiftUI",
+                                   comment: "Stands in for the build number, which the Data library doesn't have")
+        UserDefaults.standard.set("\(PhotoClubHubDataVersion.semver) (\(noBuildNumber))",
+                                  forKey: "libraryVersion_preference")
         if Settings.manualDataLoading || Settings.dataResetPending {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
         } else { // initialize some constant records for Language and OrganizationType (for stability)
@@ -56,136 +60,4 @@ struct PhotoClubHubApp: App {
         }
     }
 
-}
-
-extension PhotoClubHubApp {
-
-    // swiftlint:disable:next function_body_length
-    static func loadClubsAndMembers() {
-
-        let isBeingTested = false // these are being loaded to get the data into Core Data, not for testing purposes
-        let useOnlyInBundleFile = false
-
-        // MARK: - Level 0
-
-        // load list of Expertises and Languages from root.Level0.json file
-        _ = Level0JsonReader(
-            bgContext: makeBgContext(ctxName: "Level 0 loader"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // MARK: - Level 1
-
-        // Load list of organizations from root_.Level1.json file (which Includes additional Level 1 child files).
-        // `load()` is `awaitable` so tests can await the loading of both `root_` and all its Includes(issue #760);
-        // the app itslef doesn't need that, so it launches load() from a Task and sticks to fire-and-forget behavior.
-        Task {
-            await Level1JsonReader.load(
-                bgContext: makeBgContext(ctxName: "Level 1 loader for root_"),
-                fileName: "root_",
-                isBeingTested: isBeingTested,
-                useOnlyInBundleFile: useOnlyInBundleFile)
-        }
-
-        // MARK: - Level 2
-
-        // load current/former members of Fotogroep De Gender
-        _ = FotogroepDeGenderMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fgDeGender"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of Fotogroep Waalre
-        _ = FotogroepWaalreMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fgWaalre"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of Fotoclub Bellus Imago
-        _ = FotoclubBellusImagoMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fcBellusImago"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of Fotogroep Oirschot
-        _ = FotogroepOirschotMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fgOirschot"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load test member(s) of TemplateMin.
-        _ = TemplateMinMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader TemplateMin"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load test member(s) of TemplateMax.
-        _ = TemplateMaxMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader TemplateMax"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of container for Persoonlijke members of Fotobond (in region 16)
-        _ = Persoonlijk16MembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader Persoonlijk16"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of Fotoclub Ericamera
-        _ = FotoclubEricameraMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fcEricamera"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of Fotoclub Den Dungen
-        _ = FotoclubDenDungenMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fcDenDungen"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of Fotokring Sint-Michielsgestel
-        _ = FotokringStMichielsgestelMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fkGestel"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of container for Persoonlijke members of Fotobond (in region 03)
-        _ = Persoonlijk03MembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader Persoonlijk03"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of container for Fotoclub Veghel (in region 16)
-        _ = FotoclubVeghelMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fcVeghel"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of container for FFC Shot71 (in region 16)
-        _ = FFCShot71MembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader ffcShot71"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-
-        // load current/former members of container for FGG Gemert (in region 16)
-        _ = FEGGemertMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader fegGemert"),
-            isBeingTested: isBeingTested,
-            useOnlyInBundleFile: useOnlyInBundleFile)
-    }
-
-    static func makeBgContext(ctxName: String) -> NSManagedObjectContext {
-
-        let bgContext = PersistenceController.shared.container.newBackgroundContext()
-        bgContext.name = ctxName
-        if inDebugMode && Settings.errorOnCoreDataMerge {
-            bgContext.mergePolicy = NSMergePolicy.error // to force detection of Core Data merge issues
-        } else {
-            bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // is .mergeByPropertyObjectTrump better?
-        }
-        bgContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
-        bgContext.undoManager = nil // no undo manager (for speed)
-        return bgContext
-
-    }
 }

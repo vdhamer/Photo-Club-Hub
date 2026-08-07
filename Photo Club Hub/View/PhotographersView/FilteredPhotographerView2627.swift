@@ -86,13 +86,16 @@ struct FilteredPhotographerView2627: View {
         }
     } // body
 
+    // isUsable keeps rows that pull-to-refresh has just deleted out of the view tree: their
+    // relationships are already nullified, so rendering them trips the accessors (issue #802).
     private var filteredPhotographers: [Photographer] {
         if searchText.wrappedValue.isEmpty {
-            return fetchedPhotographers.filter { _ in
-                true
+            return fetchedPhotographers.filter { photographer in
+                photographer.isUsable
             }
         } else {
             return fetchedPhotographers.filter { photographer in
+                photographer.isUsable &&
                 photographer.fullNameFirstLast.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
     }

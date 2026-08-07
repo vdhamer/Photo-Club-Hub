@@ -24,7 +24,10 @@ struct PhotographersThumbnails: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) { // 2nd row with images in photographer's "card"
             HStack { // to support multiple portfolio previews in one row
-                ForEach(photographer.memberships.sorted(), id: \.id) { membership in
+                // isUsable before sorted(): MemberPortfolio's < operator reads photographer and
+                // organization, which a membership deleted by pull-to-refresh no longer has, so an
+                // unfiltered sorted() traps before the ForEach body ever runs (issue #802).
+                ForEach(photographer.memberships.filter { $0.isUsable }.sorted(), id: \.id) { membership in
                     PhotographersThumbnail(member: membership,
                                            settings: settingsModel.settings,
                                            selectedPortfolio: $selectedPortfolio)

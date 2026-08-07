@@ -22,7 +22,7 @@ struct FilteredMemberPortfoliosView: View {
     /// Sectioned fetch results keyed per Club by `fullNameTown`.
     /// Replaced within `init` with actuall request predicate and sort order.
     @SectionedFetchRequest<String, MemberPortfolio>(
-        sectionIdentifier: \.organization_!.fullNameTown,
+        sectionIdentifier: \.organizationSectionID, // not \.organization_!... : that traps on a deleted row (#802)
         sortDescriptors: [],
         predicate: predicateNone
     ) private var sectionedMemberPortfolios: SectionedFetchResults<String, MemberPortfolio>
@@ -48,7 +48,7 @@ struct FilteredMemberPortfoliosView: View {
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)
         ]
         _sectionedMemberPortfolios = SectionedFetchRequest(
-            sectionIdentifier: \.organization_!.fullNameTown,
+            sectionIdentifier: \.organizationSectionID, // see the property wrapper above for why not \.organization_!
             sortDescriptors: sortDescriptors,
             predicate: memberPredicate,
             animation: .default)
@@ -136,14 +136,21 @@ struct FilteredMemberPortfoliosView: View {
                                     -> [MemberPortfolio] {
         let filteredPortfolios: [MemberPortfolio]
 
+        // isUsable keeps rows that pull-to-refresh has just deleted out of the view tree: their
+        // relationships are already nullified, so both rendering them and the search test below
+        // (which dereferences photographer) would trip the accessors (issue #802).
         if searchText.wrappedValue.isEmpty {
-            filteredPortfolios = unFilteredPortfolios.filter { _ in true } // to convert types
+            filteredPortfolios = unFilteredPortfolios.filter { memberPortfolio in
+                memberPortfolio.isUsable
+            }
         } else {
             filteredPortfolios = unFilteredPortfolios.filter { memberPortfolio in
-                memberPortfolio.photographer.fullNameFirstLast
-                    .localizedCaseInsensitiveContains(searchText.wrappedValue) ||
-                comparePhotographerExpertisesToSearchText(
-                    photographerExpertises: memberPortfolio.photographer.photographerExpertises
+                memberPortfolio.isUsable && (
+                    memberPortfolio.photographer.fullNameFirstLast
+                        .localizedCaseInsensitiveContains(searchText.wrappedValue) ||
+                    comparePhotographerExpertisesToSearchText(
+                        photographerExpertises: memberPortfolio.photographer.photographerExpertises
+                    )
                 )
             }
         }

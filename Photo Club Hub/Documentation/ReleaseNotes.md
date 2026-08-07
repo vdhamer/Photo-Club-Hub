@@ -3,11 +3,14 @@ TO-DO
 * display expertises on People screen
 * more search functionality on People screen
 * more search functionality on Clubs screen
-* fix pulldown-to-refresh crash on various screens (was ok in 2.10.0)
+
+
+* Done, add to documentation: fixed pulldown-to-refresh crash on various screens (was ok in 2.10.0) <<<< Done
+- implement issue [#810](https://github.com/vdhamer/Photo-Club-Hub/issues/810 (Wanroij, dataResetPending) (Wanroij, dataResetPending) right before app store release <<<<
 
 ---------------------------------------------------------------------------
 
-### 2.11.2 (GitHub commit 0001cae) ??-08-2026
+### 2.11.3 (GitHub commit 0001cae) ??-08-2026
 
 USER-FACING
 
@@ -15,6 +18,7 @@ USER-FACING
 * Updated screenshots in README file on Github and in App Store
 - Renamed Maps Screen → Maps Tab (and two more) in Settings
 - Fix: changed icon color of "Thumbnails" on Settings tab
+- Data module version number displayed in iOS Settings
  
 STRUCTURAL
 * Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)

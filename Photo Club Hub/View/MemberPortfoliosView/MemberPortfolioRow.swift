@@ -31,7 +31,18 @@ struct MemberPortfolioRow: View {
     @StateObject var settingsModel = SettingsViewModel.shared
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
+    ///
+    /// The row observes `member`, so pull-to-refresh deleting it is precisely what makes SwiftUI re-run
+    /// this body — while the parent's filtered `ForEach` has not dropped the row yet. A deleted
+    /// MemberPortfolio has had `photographer_` and `organization_` nullified, so skip it instead of
+    /// tripping those accessors (issue #802).
     var body: some View {
+        if member.isUsable {
+            rowContent
+        }
+    }
+
+    @ViewBuilder private var rowContent: some View {
         HStack(alignment: .top) { // total view content
 
             Button {
@@ -106,7 +117,7 @@ struct MemberPortfolioRow: View {
                                             selectedPortfolio: $selectedPortfolio)
 
         } // HStack
-    } // body of View
+    } // rowContent
 
     /// Chooses a color based on deceased status, otherwise returns the provided default.
     /// - Parameters:
