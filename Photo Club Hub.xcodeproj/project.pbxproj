@@ -118,7 +118,6 @@
 		3722DC9F2F98CE9000F2851C /* ImageChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChoice.swift; sourceTree = "<group>"; };
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
 		3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard.txt; sourceTree = "<group>"; };
-		3726AD293010BB3D00918B8D /* check-rocketsim-bug-1085.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "check-rocketsim-bug-1085.sh"; sourceTree = "<group>"; };
 		37415B072F9D2DA3004B4647 /* ReadmeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSection.swift; sourceTree = "<group>"; };
 		37415B1F2F9D3733004B4647 /* ReadmeSectionOnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnApp.swift; sourceTree = "<group>"; };
 		37415B212F9D5E96004B4647 /* ReadmeSectionOnConcept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnConcept.swift; sourceTree = "<group>"; };
@@ -317,6 +316,7 @@
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
 		D0FCF2E529B558FE00F31442 /* Roadmap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Roadmap.json; sourceTree = "<group>"; };
 		D0FE77E42BB9AEE900272077 /* ElementTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTypeEnum.swift; sourceTree = "<group>"; };
+		D7960DCB8867482485B1C67E /* CLAUDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLAUDE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -428,7 +428,6 @@
 			isa = PBXGroup;
 			children = (
 				379D5273301F331A00B18993 /* countLines.command */,
-				3726AD293010BB3D00918B8D /* check-rocketsim-bug-1085.sh */,
 				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
 				37F36DB93007D34800BBDD60 /* countLines.sh */,
 				3769DF59300AB39F00D819FA /* verify-screenshots.sh */,

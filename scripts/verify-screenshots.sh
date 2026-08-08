@@ -75,12 +75,7 @@ done
 # RocketSim CLI helpers
 # ---------------------------------------------------------------------------
 find_rocketsim() {
-    # Prefer "RocketSim 16.2.app" if installed alongside the current version — workaround
-    # for the screenshot crash in RocketSim 16.3/16.4 (AvdLee/RocketSimApp#1085).
-    # Use check-rocketsim-bug-1085.sh to probe whether a newer version has fixed the crash.
     local candidates=(
-        "/Applications/RocketSim 16.2.app/Contents/Helpers/rocketsim"
-        "${HOME}/Applications/RocketSim 16.2.app/Contents/Helpers/rocketsim"
         "/Applications/RocketSim.app/Contents/Helpers/rocketsim"
         "${HOME}/Applications/RocketSim.app/Contents/Helpers/rocketsim"
     )

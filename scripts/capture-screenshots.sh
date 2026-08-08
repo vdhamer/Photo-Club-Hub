@@ -202,12 +202,7 @@ UDID_FROM_FLAG=0
 # Locate the RocketSim CLI (may not be on PATH; ships inside the app bundle).
 # ---------------------------------------------------------------------------
 find_rocketsim() {
-    # Prefer "RocketSim 16.2.app" if installed alongside the current version — workaround
-    # for the screenshot crash in RocketSim 16.3/16.4 (AvdLee/RocketSimApp#1085).
-    # Use check-rocketsim-bug-1085.sh to probe whether a newer version has fixed the crash.
     local candidates=(
-        "/Applications/RocketSim 16.2.app/Contents/Helpers/rocketsim"
-        "${HOME}/Applications/RocketSim 16.2.app/Contents/Helpers/rocketsim"
         "/Applications/RocketSim.app/Contents/Helpers/rocketsim"
         "${HOME}/Applications/RocketSim.app/Contents/Helpers/rocketsim"
     )
@@ -299,8 +294,8 @@ ensure_rocketsim() {
 
 # Once set to 1, rocketsim is no longer asked for screenshots and the unframed
 # `simctl io screenshot` fallback is used instead (see capture()). This keeps the run
-# going when RocketSim is broken — e.g. RocketSim 16.3 (build 323) crashes with a SIGTRAP
-# in FBSimulatorControl.inferSimulatorConfiguration on every CLI screenshot request.
+# going when RocketSim is unusable — not installed, not running, or unreachable over IPC —
+# at the cost of losing the device bezels.
 RS_BROKEN=0
 UNFRAMED_COUNT=0
 
@@ -313,6 +308,10 @@ UNFRAMED_COUNT=0
 # discovery takes another 25–50s ("No simulator found with UDID ...", then future
 # timeouts) — so a single immediate retry always fails. Retry within a bounded window
 # instead; only when RocketSim stays dead for the whole window is RS_BROKEN set.
+# NB: that crash was observed on 16.2, which the scripts no longer select now that
+# AvdLee/RocketSimApp#1085 is fixed (16.4.2). Whether 16.4.x still aborts on the
+# interact taps is untested, so the recovery window is kept until a run proves it dead
+# code — see #813 for the retirement criterion.
 RS_RECOVERY_TIMEOUT=90   # seconds to keep retrying a failed rocketsim screenshot
 RS_RETRY_INTERVAL=3      # pause between retries within the recovery window
 
@@ -654,8 +653,8 @@ JXA
 # a relaunched RocketSim answers IPC almost immediately but needs another 25–50s before
 # it can see the simulator again. Only when the whole window elapses without success is
 # RocketSim marked broken for the rest of the run and the unframed `simctl io screenshot`
-# fallback used, so a truly broken RocketSim (e.g. the 16.3 crash-on-every-request bug)
-# degrades the output (no bezels) once instead of aborting the run.
+# fallback used, so an unusable RocketSim degrades the output (no bezels) once instead
+# of aborting the run.
 capture() {
     local screen="$1" lang="$2" appearance="$3"
     local out="${OUT_DIR}/${screen}_${lang}_${appearance}.jpg"
