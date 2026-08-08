@@ -213,6 +213,7 @@
 		D00261F7301136760098588E /* PortfolioViaClubs_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PortfolioViaClubs_NL_Light.jpg; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D7960DCB8867482485B1C67E /* CLAUDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLAUDE.md; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
 		D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGender_Trefwoorden.xlsx; sourceTree = "<group>"; };
 		D01383382E23E67A002C325D /* Level2_expertise_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_expertise_EN.md; sourceTree = "<group>"; };
@@ -582,6 +583,7 @@
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
 				D0CEAECE2B2E1134005AE47D /* Settings.bundle */,
 				D0F871912D403D1700530D10 /* JSON */,
+				D7960DCB8867482485B1C67E /* CLAUDE.md */,
 				D008D2A928739167007A7BE2 /* .gitignore */,
 				D0F2F2F22873A19F009DDD2A /* .github */,
 				D0E8689B2D693A3600F2A03A /* Tests */,
@@ -947,7 +949,7 @@
 			packageReferences = (
 				D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */,
-				37AAA67F3020CD9B0056BC94 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */,
+				37AAA67F3020CD9B0056BC94 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1438,13 +1440,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		37AAA67F3020CD9B0056BC94 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../Photo-Club-Hub-Data";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1452,6 +1447,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
+			};
+		};
+		37AAA67F3020CD9B0056BC94 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vdhamer/Photo-Club-Hub-Data";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.11.4;
 			};
 		};
 		D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
@@ -1472,7 +1475,7 @@
 		};
 		37AAA6803020CE980056BC94 /* Photo Club Hub Data */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 37AAA67F3020CD9B0056BC94 /* XCLocalSwiftPackageReference "../Photo-Club-Hub-Data" */;
+			package = 37AAA67F3020CD9B0056BC94 /* XCRemoteSwiftPackageReference "Photo-Club-Hub-Data" */;
 			productName = "Photo Club Hub Data";
 		};
 		D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */ = {
