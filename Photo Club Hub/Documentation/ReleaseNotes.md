@@ -24,6 +24,7 @@ STRUCTURAL
 * Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)
 * Script-based screenshot capture (allows more frequent screenshot updates)
 * Built using v2.11.2 of the Photo Club Hub Data package
+* New documentation file ReleaseProcess.md: the two-Mac split, version numbering, tag conventions, and what contributors should not touch ([#808](https://github.com/vdhamer/Photo-Club-Hub/issues/808))
 
 This build #4664 was made using Xcode 27.0 beta. A next build is intended to go the App Store.
 

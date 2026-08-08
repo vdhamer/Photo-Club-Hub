@@ -635,6 +635,7 @@ Certainly:
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://tinyurl.com/fchPPTnl) | ✓ | coming |
 | File management directly in Github | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md) | ✓ | coming |
 | Featured Image pipeline (rather technical) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | - | ✓ |
+| Release process (rather technical) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/ReleaseProcess.md) | - | ✓ |
 </details></p>
 
 </li></ul>

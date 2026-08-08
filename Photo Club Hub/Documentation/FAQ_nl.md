@@ -661,6 +661,7 @@ Jazeker:
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://tinyurl.com/fchPPTnl) | ✓ | komt |
 | Bestandsbeheer rechtstreeks in Github | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md) | ✓ | komt |
 | Featured Image pipeline (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | - | ✓ |
+| Releaseproces (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/ReleaseProcess.md) | - | ✓ |
 </details></p>
 
 </li></ul>
