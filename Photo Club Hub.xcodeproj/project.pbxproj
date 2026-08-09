@@ -205,8 +205,9 @@
 		37F36DB93007D34800BBDD60 /* countLines.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = countLines.sh; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
-		9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gate-and-stamp.sh"; sourceTree = "<group>"; };
 		8B175F3B103545CFAF33FEA7 /* list-archives.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "list-archives.sh"; sourceTree = "<group>"; };
+		92188A9A6BD04E6D8A835019 /* restore-workspace.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "restore-workspace.sh"; sourceTree = "<group>"; };
+		9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gate-and-stamp.sh"; sourceTree = "<group>"; };
 		D002615E301128030098588E /* Maps_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_EN_Light.jpg; sourceTree = "<group>"; };
 		D002615F301128030098588E /* Maps_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_NL_Light.jpg; sourceTree = "<group>"; };
 		D002616130112E9F0098588E /* Clubs_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clubs_EN_Light.jpg; sourceTree = "<group>"; };
@@ -432,6 +433,7 @@
 				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
 				37F36DB93007D34800BBDD60 /* countLines.sh */,
 				9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */,
+				92188A9A6BD04E6D8A835019 /* restore-workspace.sh */,
 				8B175F3B103545CFAF33FEA7 /* list-archives.sh */,
 				3769DF59300AB39F00D819FA /* verify-screenshots.sh */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
@@ -673,8 +675,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				376E811E3027448C00996745 /* ReleaseProcess.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				376E811E3027448C00996745 /* ReleaseProcess.md */,
 				377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */,
 				377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */,
 				37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */,

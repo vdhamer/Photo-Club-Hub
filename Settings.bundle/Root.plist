@@ -2,10 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>StringsTable</key>
-	<string>Settings</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
+		<dict>
+			<key>Title</key>
+			<string>About this build</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
 		<dict>
 			<key>DefaultValue</key>
 			<string>?.?.? (????)</string>
@@ -17,20 +21,42 @@
 			<string>PSTitleValueSpecifier</string>
 		</dict>
 		<dict>
+			<key>DefaultValue</key>
+			<string>?</string>
+			<key>Key</key>
+			<string>buildDate_preference</string>
+			<key>Title</key>
+			<string>Built</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>?</string>
+			<key>Key</key>
+			<string>gitCommit_preference</string>
 			<key>Title</key>
-			<string>Library version</string>
+			<string>Commit</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<string>?.?.? (N/A)</string>
 			<key>Key</key>
 			<string>libraryVersion_preference</string>
-		</dict>
-		<dict>
+			<key>Title</key>
+			<string>Library version</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
 			<key>Title</key>
-			<string>GitHub</string>
+			<string>Source repository</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<string>https://github.com/vdhamer/Photo-Club-Hub</string>
 			<key>Key</key>
@@ -39,12 +65,12 @@
 			<array>
 				<string>Pad</string>
 			</array>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
 			<string>GitHub</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<string>https://tinyurl.com/PhClubHub</string>
 			<key>Key</key>
@@ -53,12 +79,12 @@
 			<array>
 				<string>Phone</string>
 			</array>
-		</dict>
-		<dict>
+			<key>Title</key>
+			<string>GitHub</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>License</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<string>https://opensource.org/license/mit</string>
 			<key>Key</key>
@@ -67,12 +93,12 @@
 			<array>
 				<string>Pad</string>
 			</array>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
 			<string>License</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<string>https://tinyurl.com/MITlicense</string>
 			<key>Key</key>
@@ -81,65 +107,71 @@
 			<array>
 				<string>Phone</string>
 			</array>
-		</dict>
-		<dict>
+			<key>Title</key>
+			<string>License</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>Repository owner</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<string>Peter van den Hamer</string>
 			<key>Key</key>
 			<string>owner</string>
+			<key>Title</key>
+			<string>Repository owner</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
 		</dict>
 		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>Debug options</string>
 			<key>FooterText</key>
 			<string>Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info.</string>
+			<key>Title</key>
+			<string>Debug options</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
 		</dict>
 		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Load data manually</string>
 			<key>DefaultValue</key>
 			<false/>
 			<key>Key</key>
 			<string>manualDataLoading</string>
-		</dict>
-		<dict>
+			<key>Title</key>
+			<string>Load data manually</string>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Extra saving of data</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<false/>
 			<key>Key</key>
 			<string>extraCoreDataSaves</string>
-		</dict>
-		<dict>
+			<key>Title</key>
+			<string>Extra saving of data</string>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Data refresh pending</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<true/>
 			<key>Key</key>
 			<string>dataResetPending292b4657</string>
-		</dict>
-		<dict>
+			<key>Title</key>
+			<string>Data refresh pending</string>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>CoreData merge issue terminates app</string>
-			<key>Key</key>
-			<string>errorOnCoreDataMerge</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<false/>
+			<key>Key</key>
+			<string>errorOnCoreDataMerge</string>
+			<key>Title</key>
+			<string>CoreData merge issue terminates app</string>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
 		</dict>
 	</array>
+	<key>StringsTable</key>
+	<string>Settings</string>
 </dict>
 </plist>

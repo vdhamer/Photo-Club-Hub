@@ -12,9 +12,8 @@
 * Built using v3.0.0 of the Photo Club Hub Data package
 * Fixed pulldown-to-refresh crash on various screens (only occurred in 2.11.3)
 * New documentation file ReleaseProcess.md: the two-Mac split, version numbering, tag conventions, and what contributors should not touch ([#808](https://github.com/vdhamer/Photo-Club-Hub/issues/808))
-* Data module version number displayed in iOS Settings
+* More precise versioning information displayed in Settings app
 
-* >>>> implement timestamps in iOS Settings <<<<
 * >>>> implement issue [#810](https://github.com/vdhamer/Photo-Club-Hub/issues/810 (Wanroij, dataResetPending) (Wanroij, dataResetPending) right before app store release <<<<
 
 ---------------------------------------------------------------------------
