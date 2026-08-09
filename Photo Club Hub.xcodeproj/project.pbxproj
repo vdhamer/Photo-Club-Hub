@@ -79,7 +79,6 @@
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
 		D087540C2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087540B2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift */; };
 		D0AE1B782788A19500E0100E /* PhotographersListView2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* PhotographersListView2627.swift */; };
-		D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */; };
 		D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
 		D0BADF842DF9C80800BDE2CD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A29277F72590049AB84 /* SettingsViewModel.swift */; };
 		D0C6E95529577921001E5CE9 /* DebugPanel1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel1718.swift */; };
@@ -203,6 +202,7 @@
 		37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewThumbnail.swift; sourceTree = "<group>"; };
 		37F36C1230078A2400BBDD60 /* Levels_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_EN_Light.jpg; sourceTree = "<group>"; };
 		37F36DB83007D34800BBDD60 /* capture-screenshots.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "capture-screenshots.sh"; sourceTree = "<group>"; };
+		9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gate-and-stamp.sh"; sourceTree = "<group>"; };
 		37F36DB93007D34800BBDD60 /* countLines.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = countLines.sh; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
@@ -281,7 +281,6 @@
 		D0A73A482ECA28290055DACD /* Photo_Club_Hub_2_8_8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_8.xcdatamodel; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* PhotographersListView2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersListView2627.swift; sourceTree = "<group>"; };
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
-		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0B6B05B2DB27A3E00EAAF69 /* packages.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = packages.key; sourceTree = "<group>"; };
 		D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL.pptx; sourceTree = "<group>"; };
 		D0B7D2602F427B9400BBCC5F /* Photo_Club_Hub_2_9_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_2.xcdatamodel; sourceTree = "<group>"; };
@@ -431,6 +430,7 @@
 				379D5273301F331A00B18993 /* countLines.command */,
 				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
 				37F36DB93007D34800BBDD60 /* countLines.sh */,
+				9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */,
 				3769DF59300AB39F00D819FA /* verify-screenshots.sh */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				377D8036300294A000E04A04 /* LineCount.csv */,
@@ -648,7 +648,6 @@
 			isa = PBXGroup;
 			children = (
 				D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */,
-				D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -875,8 +874,7 @@
 				D08319E0277F70A30049AB84 /* Frameworks */,
 				D08319E1277F70A30049AB84 /* Resources */,
 				D0831A15277F70D80049AB84 /* Run SwiftLint script */,
-				D003AA7F278F896B001D57B7 /* Run IncrementBuildNumber script */,
-				D05FCD28278E4573008F41D0 /* Run UpdateVersionInSettingsBundle script */,
+				D003AA7F278F896B001D57B7 /* Run GateAndStamp script */,
 			);
 			buildRules = (
 			);
@@ -988,27 +986,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D003AA7F278F896B001D57B7 /* Run IncrementBuildNumber script */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run IncrementBuildNumber script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\n#buildNumber=`echo $buildNumber +1|bc`\nxcrun agvtool new-version $buildNumber\n";
-			showEnvVarsInLog = 0;
-		};
-		D05FCD28278E4573008F41D0 /* Run UpdateVersionInSettingsBundle script */ = {
+		D003AA7F278F896B001D57B7 /* Run GateAndStamp script */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -1018,14 +996,15 @@
 			);
 			inputPaths = (
 			);
-			name = "Run UpdateVersionInSettingsBundle script";
+			name = "Run GateAndStamp script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# do not enable: no longer needed\n# buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\n# version=\"$MARKETING_VERSION ($buildNumber)\"\n# /usr/libexec/PlistBuddy \"$SRCROOT/Settings.bundle/Root.plist\" -c \"set PreferenceSpecifiers:1:DefaultValue $version\"\n";
+			shellScript = "script=\"$PROJECT_DIR/scripts/gate-and-stamp.sh\"\ntest -x \"$script\" || { echo \"error: missing or not executable: $script\"; exit 1; }\n\"$script\"\n";
+			showEnvVarsInLog = 0;
 		};
 		D0831A15277F70D80049AB84 /* Run SwiftLint script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1121,7 +1100,6 @@
 				370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */,
 				3762771E2FF9560B0047E77C /* MainTabView1717.swift in Sources */,
 				37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */,
-				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */,
 				376277202FF956140047E77C /* MainTabView1827.swift in Sources */,
 				37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */,
@@ -1371,7 +1349,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4663;
+				CURRENT_PROJECT_VERSION = 4665;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1394,7 +1372,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4663;
+				CURRENT_PROJECT_VERSION = 4665;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
