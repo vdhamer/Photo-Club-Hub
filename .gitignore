@@ -130,7 +130,13 @@ iOSInjectionProject/
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
+
+# The top-level .xcworkspace is a personal co-development workspace: it exists only to shadow the
+# Photo Club Hub Data dependency with a local checkout, so it is private and untracked. The tracked
+# Package.resolved — the record of which library version a release was built against — lives in
+# *.xcodeproj/project.xcworkspace/ above, and there is deliberately only one of them. See #808.
+# Anchored with a leading slash so it cannot match *.xcodeproj/project.xcworkspace/.
+/*.xcworkspace/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
