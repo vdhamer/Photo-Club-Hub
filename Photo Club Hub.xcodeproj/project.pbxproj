@@ -79,7 +79,6 @@
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
 		D087540C2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087540B2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift */; };
 		D0AE1B782788A19500E0100E /* PhotographersListView2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* PhotographersListView2627.swift */; };
-		D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */; };
 		D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
 		D0BADF842DF9C80800BDE2CD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A29277F72590049AB84 /* SettingsViewModel.swift */; };
 		D0C6E95529577921001E5CE9 /* DebugPanel1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel1718.swift */; };
@@ -118,7 +117,6 @@
 		3722DC9F2F98CE9000F2851C /* ImageChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChoice.swift; sourceTree = "<group>"; };
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
 		3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard.txt; sourceTree = "<group>"; };
-		3726AD293010BB3D00918B8D /* check-rocketsim-bug-1085.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "check-rocketsim-bug-1085.sh"; sourceTree = "<group>"; };
 		37415B072F9D2DA3004B4647 /* ReadmeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSection.swift; sourceTree = "<group>"; };
 		37415B1F2F9D3733004B4647 /* ReadmeSectionOnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnApp.swift; sourceTree = "<group>"; };
 		37415B212F9D5E96004B4647 /* ReadmeSectionOnConcept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnConcept.swift; sourceTree = "<group>"; };
@@ -148,6 +146,7 @@
 		376D14F92E6DE83A00A1403B /* DebugPanel2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2627.swift; sourceTree = "<group>"; };
 		376DC9512EC3A98900FB429B /* PreludeImageStore2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2627.swift; sourceTree = "<group>"; };
 		376DC9732EC3F33200FB429B /* Crosshairs1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs1718.swift; sourceTree = "<group>"; };
+		376E811E3027448C00996745 /* ReleaseProcess.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReleaseProcess.md; sourceTree = "<group>"; };
 		377D8036300294A000E04A04 /* LineCount.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = LineCount.csv; sourceTree = "<group>"; };
 		377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FotoclubHub_flyer_nl.md; sourceTree = "<group>"; };
 		377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PhotoClubHub_flyer_en.md; sourceTree = "<group>"; };
@@ -206,6 +205,8 @@
 		37F36DB93007D34800BBDD60 /* countLines.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = countLines.sh; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
+		9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gate-and-stamp.sh"; sourceTree = "<group>"; };
+		8B175F3B103545CFAF33FEA7 /* list-archives.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "list-archives.sh"; sourceTree = "<group>"; };
 		D002615E301128030098588E /* Maps_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_EN_Light.jpg; sourceTree = "<group>"; };
 		D002615F301128030098588E /* Maps_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_NL_Light.jpg; sourceTree = "<group>"; };
 		D002616130112E9F0098588E /* Clubs_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clubs_EN_Light.jpg; sourceTree = "<group>"; };
@@ -214,7 +215,6 @@
 		D00261F7301136760098588E /* PortfolioViaClubs_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PortfolioViaClubs_NL_Light.jpg; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		D7960DCB8867482485B1C67E /* CLAUDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLAUDE.md; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
 		D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGender_Trefwoorden.xlsx; sourceTree = "<group>"; };
 		D01383382E23E67A002C325D /* Level2_expertise_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_expertise_EN.md; sourceTree = "<group>"; };
@@ -282,7 +282,6 @@
 		D0A73A482ECA28290055DACD /* Photo_Club_Hub_2_8_8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_8.xcdatamodel; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* PhotographersListView2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersListView2627.swift; sourceTree = "<group>"; };
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
-		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0B6B05B2DB27A3E00EAAF69 /* packages.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = packages.key; sourceTree = "<group>"; };
 		D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL.pptx; sourceTree = "<group>"; };
 		D0B7D2602F427B9400BBCC5F /* Photo_Club_Hub_2_9_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_2.xcdatamodel; sourceTree = "<group>"; };
@@ -318,6 +317,7 @@
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
 		D0FCF2E529B558FE00F31442 /* Roadmap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Roadmap.json; sourceTree = "<group>"; };
 		D0FE77E42BB9AEE900272077 /* ElementTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTypeEnum.swift; sourceTree = "<group>"; };
+		D7960DCB8867482485B1C67E /* CLAUDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLAUDE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -429,9 +429,10 @@
 			isa = PBXGroup;
 			children = (
 				379D5273301F331A00B18993 /* countLines.command */,
-				3726AD293010BB3D00918B8D /* check-rocketsim-bug-1085.sh */,
 				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
 				37F36DB93007D34800BBDD60 /* countLines.sh */,
+				9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */,
+				8B175F3B103545CFAF33FEA7 /* list-archives.sh */,
 				3769DF59300AB39F00D819FA /* verify-screenshots.sh */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				377D8036300294A000E04A04 /* LineCount.csv */,
@@ -649,7 +650,6 @@
 			isa = PBXGroup;
 			children = (
 				D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */,
-				D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -673,6 +673,7 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				376E811E3027448C00996745 /* ReleaseProcess.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */,
 				377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */,
@@ -875,8 +876,7 @@
 				D08319E0277F70A30049AB84 /* Frameworks */,
 				D08319E1277F70A30049AB84 /* Resources */,
 				D0831A15277F70D80049AB84 /* Run SwiftLint script */,
-				D003AA7F278F896B001D57B7 /* Run IncrementBuildNumber script */,
-				D05FCD28278E4573008F41D0 /* Run UpdateVersionInSettingsBundle script */,
+				D003AA7F278F896B001D57B7 /* Run GateAndStamp script */,
 			);
 			buildRules = (
 			);
@@ -988,27 +988,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D003AA7F278F896B001D57B7 /* Run IncrementBuildNumber script */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run IncrementBuildNumber script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\n#buildNumber=`echo $buildNumber +1|bc`\nxcrun agvtool new-version $buildNumber\n";
-			showEnvVarsInLog = 0;
-		};
-		D05FCD28278E4573008F41D0 /* Run UpdateVersionInSettingsBundle script */ = {
+		D003AA7F278F896B001D57B7 /* Run GateAndStamp script */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -1018,14 +998,15 @@
 			);
 			inputPaths = (
 			);
-			name = "Run UpdateVersionInSettingsBundle script";
+			name = "Run GateAndStamp script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# do not enable: no longer needed\n# buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\n# version=\"$MARKETING_VERSION ($buildNumber)\"\n# /usr/libexec/PlistBuddy \"$SRCROOT/Settings.bundle/Root.plist\" -c \"set PreferenceSpecifiers:1:DefaultValue $version\"\n";
+			shellScript = "script=\"$PROJECT_DIR/scripts/gate-and-stamp.sh\"\ntest -x \"$script\" || { echo \"error: missing or not executable: $script\"; exit 1; }\n\"$script\"\n";
+			showEnvVarsInLog = 0;
 		};
 		D0831A15277F70D80049AB84 /* Run SwiftLint script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1121,7 +1102,6 @@
 				370D38242F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift in Sources */,
 				3762771E2FF9560B0047E77C /* MainTabView1717.swift in Sources */,
 				37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */,
-				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				37EA14E92FB0C773000D8EDF /* MemberListSectionFooter.swift in Sources */,
 				376277202FF956140047E77C /* MainTabView1827.swift in Sources */,
 				37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */,
@@ -1306,7 +1286,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.11.3;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1350,7 +1330,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.11.3;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1371,7 +1351,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4663;
+				CURRENT_PROJECT_VERSION = 4665;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1394,7 +1374,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4663;
+				CURRENT_PROJECT_VERSION = 4665;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1454,8 +1434,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vdhamer/Photo-Club-Hub-Data";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 2.11.4;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 		D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
