@@ -8,13 +8,29 @@
 
 ### 3.0.0 (GitHub commit ???????) ??-08-2026
 
-* Jump to version 3.x related to introduction of new versioning approach and reusable library package
-* Built using v3.0.0 of the Photo Club Hub Data package
-* Fixed pulldown-to-refresh crash on various screens (only occurred in 2.11.3)
-* New documentation file ReleaseProcess.md: the two-Mac split, version numbering, tag conventions, and what contributors should not touch ([#808](https://github.com/vdhamer/Photo-Club-Hub/issues/808))
-* More precise versioning information displayed in Settings app
+App Store users last received 2.11.2, so this release also delivers everything listed under 2.11.3
+below, which reached TestFlight only. Fold those bullets in when publishing.
 
-* >>>> implement issue [#810](https://github.com/vdhamer/Photo-Club-Hub/issues/810 (Wanroij, dataResetPending) (Wanroij, dataResetPending) right before app store release <<<<
+USER-FACING
+
+* Jump to version 3.x related to introduction of new versioning approach and reusable library package
+* Settings app now reports, for the copy you are actually running: app version and build number, when
+  it was built, the source commit it came from, and the version of the Photo Club Hub Data library it
+  was built against — grouped under "About this build" ([#807](https://github.com/vdhamer/Photo-Club-Hub/issues/807))
+* Fixed pulldown-to-refresh crash on various screens (only occurred in 2.11.3 beta version)
+
+STRUCTURAL
+
+* Built using v3.0.0 of the Photo Club Hub Data package, now pinned "up to next major". The library
+  uses plain semantic versioning — its number is a compatibility contract — while an app version is a
+  label for users; the two were aligned once at 3.0.0 and float apart from there.
+* Every build stamps its git commit and build time into the app, so any install on any device can be
+  traced back to the exact source it came from ([#808](https://github.com/vdhamer/Photo-Club-Hub/issues/808)).
+* Archiving now refuses a working tree that is dirty or not pushed to origin, so a shipped build can
+  always be tied to a commit that exists on GitHub ([#808](https://github.com/vdhamer/Photo-Club-Hub/issues/808)).
+* New documentation file ReleaseProcess.md: the two-Mac split, version numbering, tag conventions, and what contributors should not touch ([#808](https://github.com/vdhamer/Photo-Club-Hub/issues/808)).
+* Retired ReleaseTrainTest and AppVersion: app and library version numbers are no longer required to match.
+* New utility scripts: `list-archives.sh` (which commit each kept archive came from) and `restore-workspace.sh`
 
 ---------------------------------------------------------------------------
 
