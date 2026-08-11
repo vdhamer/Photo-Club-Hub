@@ -1276,7 +1276,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Photo-Club-Hub-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Club Hub";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "User's location is shown on the maps.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows an image to be stored to Photos Library if requested. This permission is not needed for the proper operation of the Photo Club Hub app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -1320,7 +1323,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Photo-Club-Hub-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Club Hub";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "User's location is shown on the maps.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows an image to be stored to Photos Library if requested. This permission is not needed for the proper operation of the Photo Club Hub app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
