@@ -31,7 +31,7 @@ STRUCTURAL
 * New documentation file ReleaseProcess.md: the two-Mac split, version numbering, tag conventions, and what contributors should not touch ([#808](https://github.com/vdhamer/Photo-Club-Hub/issues/808)).
 * Retired ReleaseTrainTest and AppVersion: app and library version numbers are no longer required to match.
 * New utility scripts: `list-archives.sh` (which commit each kept archive came from) and `restore-workspace.sh`
-- Tested with Xcode 27.0 beta 5 (27A5237l), iOS 27.0 beta 5 (24A5408d) and macOS 26.6.1
+- Tested with Xcode 27.0 beta 5 (27A5237l), iOS 27.0 beta 5 (24A5408d) and macOS 26.6.1 (25G76)
 
 ---------------------------------------------------------------------------
 
