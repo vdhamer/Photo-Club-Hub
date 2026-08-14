@@ -17,6 +17,10 @@ dirty=$(git -C "$PROJECT_DIR" status --porcelain)
 if [ "$ACTION" = "install" ]; then # gates: when archiving only
   test -z "$dirty" || { echo "error: archiving from a dirty working tree"; exit 1; }
   git -C "$PROJECT_DIR" branch -r --contains HEAD | grep -q . || { echo "error: HEAD is not pushed to origin"; exit 1; }
+  xcbuild=${XCODE_PRODUCT_BUILD_VERSION:-$(/usr/bin/defaults read "${DEVELOPER_DIR:-$(xcode-select -p)}/../version.plist" ProductBuildVersion 2>/dev/null)}
+  case "$xcbuild" in # beta seeds end in a lowercase letter, release seeds in a digit
+    *[a-z]) echo "warning: archiving with Xcode beta $xcbuild: TestFlight accepts this build, the App Store does not" ;;
+  esac
 fi
 
 hash=$(git -C "$PROJECT_DIR" rev-parse HEAD) # stamps: on every build

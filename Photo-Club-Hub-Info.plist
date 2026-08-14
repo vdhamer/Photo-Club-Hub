@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>User&apos;s location is shown on the maps.</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Allows an image to be stored to Photos Library if requested. This permission is not needed for the proper operation of the Photo Club Hub app.</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 	<key>LSMinimumSystemVersion</key>
 	<string>15.0.0</string>
 	<key>NSAppTransportSecurity</key>

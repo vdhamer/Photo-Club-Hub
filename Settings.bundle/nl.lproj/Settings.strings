@@ -30,3 +30,15 @@
 
 /* (No Comment) */
 "CoreData merge issue terminates app" = "CoreData mergeconflict sluit de app af";
+
+/* (No Comment) */
+"Built" = "Gebouwd";
+
+/* (No Comment) */
+"Commit" = "Commit";
+
+/* (No Comment) */
+"About this build" = "Over deze versie";
+
+/* (No Comment) */
+"Source repository" = "Broncode";

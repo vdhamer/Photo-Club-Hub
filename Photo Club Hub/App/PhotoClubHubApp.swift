@@ -41,6 +41,10 @@ struct PhotoClubHubApp: App {
                                    comment: "Stands in for the build number, which the Data library doesn't have")
         UserDefaults.standard.set("\(PhotoClubHubDataVersion.semver) (\(noBuildNumber))",
                                   forKey: "libraryVersion_preference")
+        let noStamp = String(localized: "?", table: "PhotoClubHub.SwiftUI",
+                             comment: "Stands in for the build date or commit when absent")
+        UserDefaults.standard.set(Bundle.main.buildDate ?? noStamp, forKey: "buildDate_preference")
+        UserDefaults.standard.set(Bundle.main.gitCommit ?? noStamp, forKey: "gitCommit_preference")
         if Settings.manualDataLoading || Settings.dataResetPending {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
         } else { // initialize some constant records for Language and OrganizationType (for stability)

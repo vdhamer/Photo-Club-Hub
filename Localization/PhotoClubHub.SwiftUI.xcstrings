@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "?" : {
+      "comment" : "Stands in for the build date or commit when absent",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "?"
+          }
+        }
+      }
+    },
     "“Current members” includes “club officers”" : {
       "comment" : "Shown when \"Show club officers\" entry is missing in Preferences",
       "localizations" : {
@@ -792,9 +803,32 @@
         }
       }
     },
+    "N/A" : {
+      "comment" : "Stands in for the build number, which the Data library doesn't have",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N/A"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "n.v.t."
+          }
+        }
+      }
+    },
     "Navigation using tabs" : {
       "comment" : "Title of one-time tip about Preferences having moved to the Settings tab",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigation using tabs"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1567,23 +1601,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg."
-          }
-        }
-      }
-    },
-    "N/A" : {
-      "comment" : "Stands in for the build number, which the Data library doesn't have",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "N/A"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "n.v.t."
           }
         }
       }
