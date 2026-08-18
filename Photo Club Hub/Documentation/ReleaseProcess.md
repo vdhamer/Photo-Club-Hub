@@ -1,16 +1,20 @@
 #  Release process
 
-How a version of Photo Club Hub reaches TestFlight and the App Store, and which parts of that are
-not open to contributors. Releasing is done by the maintainer. If you are contributing code, the
-part that concerns you is the last section: do not touch version numbers, and do not create tags.
+Releasing is done by the maintainer. If you are contributing code, the
+part that concerns you is the last section. In any case, do not touch version numbers or create tags
+should you somehow have the privileges to do so.
 
-## Two Macs
+This document details how a version of Photo Club Hub reaches TestFlight and the App Store.
+This is related to how updates to Photo Club Hub __Data__ library/package is handled.
+Something similar applies once Photo Club Hub __HTML__ also gets distributed via TestFlight and the App Store.
+
+## Two Macs (maintainer)
 
 Development and releasing happen on two different Macs, which communicate only through GitHub.
 
 - The **Development Mac** does the development and pushes to GitHub (aka origin).
-- The **Release Mac** pulls from origin and produces the archives that go to Apple (App Store Connect). It keeps a copy
-  of every archive that reached Apple.
+- The **Release Mac** pulls from `origin` and produces the archives that go to Apple (App Store Connect). 
+  It keeps a copy of every archive that reaches Apple App Store Connect.
 
 The table says which machine is supposed to do each thing, and how strictly that is adhered to. Legend:
 
@@ -31,23 +35,10 @@ The table says which machine is supposed to do each thing, and how strictly that
 | Keeping the latest Xcode release and beta installed | development | policy |
 | Getting code only by pulling from origin | release | policy |
 | Archiving for App Store Connect | release | policy |
-| Archiving with a release or RC version of Xcode | release | enforced (by Apple) |
+| Archiving with a Release or RC version of Xcode | release | enforced (by Apple) |
 | Uploading to TestFlight / App Store | release | policy |
 | Saving every TestFlight / App Store `.xcarchive` | release | policy |
 | Archiving only from source pushed to origin | release | enforced (build phase script) |
-
-Two rows are enforced rather than habitual.
-
-- Apple enforces the Xcode row: development normally runs on the latest Xcode beta, but an archive
-  built with a beta Xcode can go to TestFlight and never to the App Store, so the release Mac stays
-  on a release or RC Xcode whatever the destination.
-- We enforce the last row ourselves: the gate in the build phase (below) refuses to archive from a
-  working tree that is dirty or not pushed to origin.
-
-The next `MARKETING_VERSION` is decided up front, at step 1 of the loop below, and it binds nobody
-else: it is a label for users, not a promise to another repo. The one version decision that does
-reach beyond this repo is raising the Data package floor, which is a deliberate edit rather than a
-consequence of releasing (see below).
 
 Most of this split between the machines is *not* technically enforced: in principle both Macs can do
 everything, so much of it is habit. Nothing here strictly *requires* two Macs — one Mac with both
@@ -56,7 +47,20 @@ the split earns its keep: the extra hop makes releasing deliberate rather than c
 archive-of-archives has somewhere with the disk space for it, and because the Macs talk only via
 GitHub, origin is always up to date.
 
-## Version numbers
+Two rows in the table are enforced rather than habitual.
+
+- Apple enforces the Xcode row: our development normally runs on the latest Xcode beta, but an archive
+  built with a beta Xcode can go only be released to TestFlight and never to the App Store.
+  So the release Mac generally uses a release or RC Xcode whatever the destination.
+- We enforce the last row ourselves: the gate in the build phase (below) refuses to archive from a
+  working tree that is dirty or not pushed to origin.
+
+The next `MARKETING_VERSION` is decided up front, at step 1 of the loop below, and it binds nobody
+else: it is a label for users, not a promise to another repo. The one version decision that does
+reach beyond this repo is raising the Data package floor, which is a deliberate edit rather than a
+consequence of releasing (see below).
+
+## Version numbers (maintainer)
 
 Two independent numbers, both stored in `project.pbxproj` and both set by hand on the development
 Mac, exactly once per release cycle (step 1 of the loop).
@@ -73,7 +77,7 @@ an upload whose build number is not higher than one already seen for that market
 "Manage Version and Build Number" option stays **unchecked** (step 5), so a forgotten bump fails
 loudly at upload instead of shipping a silently renumbered binary.
 
-## The Data package dependency
+## The Data package dependency (maintainer)
 
 The Photo-Club-Hub-Data package is the mirror image: its version *is* a contract, in plain
 [semantic versioning](https://semver.org) — MAJOR for a change that breaks consumers, MINOR for
@@ -98,7 +102,7 @@ then on: matching numbers prove nothing and are not maintained. The reasoning is
 What each release was actually built against is recorded in `Package.resolved` — version *and*
 revision — which is the durable answer, and more precise than any version number.
 
-## The gate-and-stamp build phase
+## The gate-and-stamp build phase (maintainer)
 
 The `Run GateAndStamp script` build phase, the last phase of the app target, runs
 `scripts/gate-and-stamp.sh` — the phase itself is only a three-line invoker, so the script stays
@@ -154,7 +158,7 @@ destination — TestFlight only, on to the App Store, or another turn of the loo
 step 8, at the end, and recorded there and then. The loop may run several times per marketing
 version; each turn leaves its own `b<number>` tag.
 
-## Tags and GitHub Releases
+## Tags and GitHub Releases (maintainer)
 
 Two tags with distinct meanings, both created on the development Mac and both published as GitHub
 Releases:
@@ -170,11 +174,31 @@ a build's destination is inferred from how a tag was named: the tag is the recor
 decision happens. Tags predating this convention were applied loosely, so gaps in the older part of
 the `b<number>` sequence do not all mean the same thing.
 
-## If you contribute code
+Both prefixes are protected by a tag ruleset: creating, moving and deleting `b*` and `v*` tags is
+restricted to the repository admin. Moving and deleting are the valuable half — a tag is the record
+of what shipped, and creation was never reachable by contributors anyway, since a fork cannot push
+a tag here. The sibling repos carry the same ruleset: Photo-Club-Hub-HTML with both prefixes,
+Photo-Club-Hub-Data with `v*` only, as it has no build tags and its `v*` tags are the package
+contract.
+
+Each repo keeps its exported copy at `.github/rulesets/release-tags.json`. That file is a record,
+not configuration — GitHub reads no rules from the repository, and re-importing it would create a
+second ruleset rather than update the existing one; updating in place is
+`PUT /repos/vdhamer/Photo-Club-Hub/rulesets/20984692`. A ruleset binds admins as well unless the
+bypass list names them, which is what the `bypass_actors` entry (`RepositoryRole` 5, repository
+admin) is for.
+
+## If you contribute code (contributor)
 
 - **Do not change `MARKETING_VERSION` or `CURRENT_PROJECT_VERSION`.** They are set between releases
-  by the maintainer; a pull request that touches them conflicts with the next preparation commit.
-- **Do not create `b…` or `v…` tags, or publish GitHub Releases.**
+  by the maintainer; a pull request that touches them conflicts with the next preparation commit,
+  and the build number counts uploads to Apple, which is not something a contributor can observe.
+  Nothing on GitHub blocks this — a pull request may edit `project.pbxproj` like any other file —
+  so the rule rests on review, which is why it is asked for here rather than assumed.
+- **Do not create `b…` or `v…` tags, or publish GitHub Releases.** This one is already guarded:
+  contributions arrive as pull requests from forks, and a fork has no write access to this
+  repository, so it can neither push a tag nor publish a Release here. The rule is written down for
+  the case where someone is granted write access, and a tag ruleset now backs it as well.
 - **Do add your change to `ReleaseNotes.md`.** That is the part of the release that contributors
   own.
 - Everything else about contributing is in the `Contributing` section of the
