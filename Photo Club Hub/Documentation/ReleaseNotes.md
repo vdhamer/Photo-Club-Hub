@@ -6,18 +6,22 @@
 
 ---------------------------------------------------------------------------
 
-### 3.0.0 (GitHub commit ???????) ??-08-2026
+### 3.0.0 (GitHub commit ???????) 18-08-2026
 
-App Store users last received 2.11.2, so this release also delivers everything listed under 2.11.3
-below, which reached TestFlight only. Fold those bullets in when publishing.
+App Store users last received 2.10.0, so this release also delivers everything from 2.11.2 below,
+which reached TestFlight only.
 
 USER-FACING
 
-* Jump to version 3.x related to introduction of new versioning approach and reusable library package
-* Settings app now reports, for the copy you are actually running: app version and build number, when
+* Jump to version 3.x related to introduction of stricter versioning rules and the creation of a reusable library package
+* Settings app now accurately reports, for the copy you are actually running: app version and build number, when
   it was built, the source commit it came from, and the version of the Photo Club Hub Data library it
-  was built against — grouped under "About this build" ([#807](https://github.com/vdhamer/Photo-Club-Hub/issues/807))
-* Fixed pulldown-to-refresh crash on various screens (only occurred in 2.11.3 beta version)
+  was built against. All grouped under "About this build" ([#807](https://github.com/vdhamer/Photo-Club-Hub/issues/807))
+* Bug fix: pulldown-to-refresh crash on various screens (known issue in 2.11.2 beta version)
+* Bug fix: sometimes incorrectly displayed "orange "?" placeholder thumbnail (missing @ObservedObject)
+* Updated screenshots in App Store (and in GitHub README)
+* Renamed Maps Screen → Maps Tab (and two more) in Settings
+* Bug fix: changed icon color of "Thumbnails" on Settings tab (very minor)
 
 STRUCTURAL
 
@@ -35,14 +39,14 @@ STRUCTURAL
 
 ---------------------------------------------------------------------------
 
-### 2.11.3 (GitHub commit 0001cae) 03-08-2026 - prerelease version only
+### 2.11.2 (GitHub commit 0001cae) 03-08-2026 - prerelease version only
 
 USER-FACING
 
-* Fix: sometimes diplayed "orange "?" placeholder images for wrong reason (missing @objeservedObject)
-* Updated screenshots in README file on Github and in App Store
+* Bug fix: sometimes incorrectly displayed "orange "?" placeholder thumbnail (missing @ObservedObject)
+* Updated screenshots in App Store (and in GitHub README)
 * Renamed Maps Screen → Maps Tab (and two more) in Settings
-* Fix: changed icon color of "Thumbnails" on Settings tab 
+* Bug fix: changed icon color of "Thumbnails" on Settings tab (very minor)
 
 STRUCTURAL
 * Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)
