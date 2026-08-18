@@ -30,6 +30,7 @@ The table says which machine is supposed to do each thing, and how strictly that
 | Deciding the next `MARKETING_VERSION` | development | policy |
 | Post-release setting of the *next* marketing version | development | policy |
 | Post-release bumping of the build number | development | policy |
+| Running the test suites before a release | development | policy |
 | Creating `v<version>` release tags | development | guideline |
 | Creating `b<number>` build tags | development | guideline |
 | Keeping the latest Xcode release and beta installed | development | policy |
@@ -134,8 +135,11 @@ Releasing is a loop:
    the App Store, by as much as the coming release deserves. Commit and push. These commits are
    recognisable in the log as "Preparation for next release" or "Updated MARKETING_VERSION to …".
 2. **Develop** on the development Mac, keeping `ReleaseNotes.md` and origin up to date as work lands.
-3. **Push to origin** once more for the release, then pull on the release Mac — the only channel
-   between the two.
+3. **Run both test suites, then push to origin.** The app's tests in Xcode on the development Mac;
+   Photo-Club-Hub-Data's run there too and again in GitHub Actions on every push
+   (`.github/workflows/tests.yml`). Nothing checks this at archive time — the gate inspects only the
+   working tree, and an Xcode Archive never runs tests — so a green suite before the push is the
+   whole safeguard. Then pull on the release Mac, the only channel between the two.
 4. **Archive** on the release Mac, with a non-beta Xcode. The build phase refuses a dirty or
    unpushed tree, then stamps commit and build time into the archive.
 5. **Distribute to App Store Connect** from the Organizer, with "Manage Version and Build Number"
