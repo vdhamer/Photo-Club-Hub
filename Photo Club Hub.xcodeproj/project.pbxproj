@@ -126,6 +126,7 @@
 		3744553C2F46611B007DBDE3 /* TemplateMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMin.level2.json; sourceTree = "<group>"; };
 		374B4018301365ED00A792F8 /* Readme_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_EN_Light.jpg; sourceTree = "<group>"; };
 		374B4019301365ED00A792F8 /* Readme_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_NL_Light.jpg; sourceTree = "<group>"; };
+		375099FD30347F5200CB2EEB /* release-tags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "release-tags.json"; sourceTree = "<group>"; };
 		37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_7.xcdatamodel; sourceTree = "<group>"; };
 		375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_0.xcdatamodel; sourceTree = "<group>"; };
 		375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SemanticColor+palette.swift"; sourceTree = "<group>"; };
@@ -363,6 +364,14 @@
 				374B4019301365ED00A792F8 /* Readme_NL_Light.jpg */,
 			);
 			path = Readme;
+			sourceTree = "<group>";
+		};
+		375099FE30347F5200CB2EEB /* rulesets */ = {
+			isa = PBXGroup;
+			children = (
+				375099FD30347F5200CB2EEB /* release-tags.json */,
+			);
+			path = rulesets;
 			sourceTree = "<group>";
 		};
 		3762771C2FF9560B0047E77C /* MainTabView */ = {
@@ -778,6 +787,7 @@
 		D0F2F2F22873A19F009DDD2A /* .github */ = {
 			isa = PBXGroup;
 			children = (
+				375099FE30347F5200CB2EEB /* rulesets */,
 				D02C35F12880C3D6008C671A /* README.md */,
 				37A88B5A300E1D3400193829 /* README_NL.md */,
 				D02AB3EF28A702800021BF41 /* LICENSE.md */,
