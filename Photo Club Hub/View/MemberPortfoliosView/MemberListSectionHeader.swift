@@ -11,9 +11,8 @@ import SwiftUI
 /// Displays the club name inside a pill-shaped gradient capsule, centered and capped at 400 pt wide.
 /// Used by both `FilteredMemberPortfoliosView2627` and `FilteredMemberPortfoliosView1718`.
 struct MemberListSectionHeader: View {
-    @Environment(\.colorScheme) private var colorScheme // to detect dark mode
 
-    var title: String // club name identifying the section/club
+    let title: String // club name identifying the section/club
 
     var body: some View {
         HStack {
@@ -25,10 +24,11 @@ struct MemberListSectionHeader: View {
                                             .gray.opacity(0.2),
                                             .gray.opacity(0.5)]))
                     .frame(maxWidth: 400, alignment: .center)
-                Text(title) // String used to group the elements into Sections
+                    .background(.bar)
+                Text(verbatim: title) // String used to group the elements into Sections
                     .font(.title2)
                     .lineLimit(1)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Color.primary)   // Color.primary, not the hierarchical .primary
                     .padding(.horizontal)
              }
             Spacer()
