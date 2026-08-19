@@ -6,13 +6,14 @@
 
 ---------------------------------------------------------------------------
 
-### 3.0.1 (GitHub commit ???????) ??-09-2026
+### 3.0.0 (GitHub commit ???????) ??-09-2026
 
-- Tested with macOS 26.6.2 (25G76).
+- Tested with macOS 26.6.2 (25G76) and on iOS 26.6.1
+- Increased contrast of club names on Clubs screen
 
 ---------------------------------------------------------------------------
 
-### 3.0.0 (GitHub commit b4b7617) 18-08-2026
+### 3.0.0 (GitHub commit b4b7617, build 4665) 18-08-2026
 
 App Store users last received 2.10.0, so this release also delivers everything from 2.11.2 below,
 which reached TestFlight only.
