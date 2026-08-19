@@ -12,7 +12,7 @@ import Photo_Club_Hub_Data // for types like Organization
 /// Section footer for the Members list showing how many members are visible after filtering.
 /// Displays "N member(s) shown" or "N of M member(s) shown" when a search filter reduces the count,
 /// followed by the club's data-source URL (host + path only).
-/// Used by both `FilteredMemberPortfoliosView2627` and `FilteredMemberPortfoliosView1718`.
+/// Used by `FilteredMemberPortfoliosView` as the `footer` of each club's `Section`.
 struct MemberListSectionFooter: View {
     var filtCount: Int // number of items in filtered list
     var unfiltCount: Int // number of items in unfiltered list

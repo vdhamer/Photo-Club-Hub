@@ -9,7 +9,7 @@ import SwiftUI
 
 /// Centered capsule label used as a section header in the Members list.
 /// Displays the club name inside a pill-shaped gradient capsule, centered and capped at 400 pt wide.
-/// Used by both `FilteredMemberPortfoliosView2627` and `FilteredMemberPortfoliosView1718`.
+/// Used by `FilteredMemberPortfoliosView` as the `header` of each club's `Section`.
 struct MemberListSectionHeader: View {
 
     let title: String // club name identifying the section/club
@@ -29,7 +29,8 @@ struct MemberListSectionHeader: View {
                     .font(.title2)
                     .lineLimit(1)
                     .foregroundStyle(Color.primary)   // Color.primary, not the hierarchical .primary
-                    .padding(.horizontal)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 4)
              }
             Spacer()
         }
