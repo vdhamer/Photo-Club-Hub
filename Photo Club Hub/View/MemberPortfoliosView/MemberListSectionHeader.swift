@@ -40,6 +40,18 @@ struct MemberListSectionHeader: View {
 
 // Believe it or not, the following Previews actually work.
 
+#Preview("In a plain List (as shipped)") {
+    List {
+        Section {
+            Text(verbatim: "Jan Jansen")
+            Text(verbatim: "Piet Pietersen")
+        } header: {
+            MemberListSectionHeader(title: "Fotogroep de Gender (Eindhoven)")
+        }
+    }
+    .listStyle(.plain)
+}
+
 #Preview("Normal club name", traits: .sizeThatFitsLayout) {
     MemberListSectionHeader(title: "Fotogroep de Gender (Eindhoven)")
         .padding()
