@@ -4,7 +4,7 @@ How a version of Photo Club Hub reaches TestFlight and the App Store. The mainta
 releasing, across two Macs. The same shape will apply to Photo Club Hub __HTML__ once that is
 distributed the same way, and it connects to how the Photo Club Hub __Data__ package is versioned.
 
-**Contributing code?** Three house rules, and the rest of this document is for the maintainer rather than contributors:
+**Contributing code?** Three house rules for contributors:
 
 - Add what you changed to `ReleaseNotes.md`. That part of a release is yours.
 - Leave `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` alone. The maintainer sets them between
@@ -14,6 +14,7 @@ distributed the same way, and it connects to how the Photo Club Hub __Data__ pac
 
 Everything else about contributing is in the `Contributing` section of the
 [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).
+The rest of this document is mainly a releasing checklist for the maintainer.
 
 For the maintainer, the steps come first, then a note on each, then annexes with the reasoning:
 the machine split, the numbering rules, the Core Data model, the Data package, the build-phase
