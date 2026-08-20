@@ -31,7 +31,7 @@ there are two.
 | 2 | Develop, keeping `ReleaseNotes.md` and origin (GitHub) up to date | Dev |
 | 3 | Run both test suites, push to origin, then pull changes on the release Mac | Dev → Release |
 | 4 | Archive, with a Release or RC version of Xcode | Release |
-| 5 | Distribute to App Store Connect, "Manage Version and Build Number" | Release |
+| 5 | Distribute to App Store Connect | Release |
 | 6 | Keep the `.xcarchive` alongside earlier archives | Release |
 | 7 | Tag the archived commit `b<number>`, publish it as a pre-release GitHub Release | Dev |
 | 8 | Release to TestFlight; if promoted, tag `v<version>` and publish a full Release | Dev |
@@ -144,11 +144,11 @@ Nothing on GitHub stops a contributor from editing either number: a pull request
 build number in particular counts uploads to Apple, which a contributor cannot observe.
 
 `CURRENT_PROJECT_VERSION` is the build number, e.g. `4665`. It only ever rises, and counts archives
-that reached Apple rather than releases: most builds stop at TestFlight. App Store Connect rejects
+that reached Apple rather than releases: some builds stop at TestFlight. App Store Connect rejects
 an upload whose build number is not higher than one already seen for that marketing version
-(ITMS-4238, "Redundant Binary Upload"). That rejection is deliberately left armed: the Organizer's
-"Manage Version and Build Number" option stays **unchecked** (step 5), so a forgotten bump fails
-loudly at upload instead of shipping a silently renumbered binary.
+(ITMS-4238, "Redundant Binary Upload"), but that rejection is no longer what protects us: Xcode's own
+"Manage Version and Build Number" defaults to on and may quietly fix the number instead. The archive
+gate (Annex E) refuses the reused number before the upload, so the tree and Apple never disagree.
 
 ## Annex C — The Core Data model version
 
@@ -204,14 +204,22 @@ The `Run GateAndStamp script` build phase, the last phase of the app target, run
 reviewable and greppable instead of living escaped inside `project.pbxproj`. It does two jobs, and
 writes only into the built app, never the source tree, so neither Mac's working tree is affected.
 
-- **Stamps, on every build.** Two keys are added to the built app's `Info.plist`:
-  `GitCommitHash` — the exact commit, with `-dirty` appended when built from uncommitted changes —
-  and `BuildDate`, local time at minute resolution. The version and build number are frozen for
-  the whole development phase of a cycle, so the stamps are what distinguish and order the Debug
-  installs sitting on test devices. They are shown in the iOS Settings app (#807) and in the HTML
-  app's About box (Photo-Club-Hub-HTML #239).
+- **Stamps, on every build.** Five keys are added to the built app's `Info.plist`. Two describe the
+  app: `GitCommitHash` — the exact commit, with `-dirty` appended when built from uncommitted
+  changes — and `BuildDate`, local time at minute resolution. Three describe the Data package the
+  binary was built against, taken from the `Package.resolved` that Xcode actually resolved (#814):
+  `LibraryVersion`, `LibraryRevision`, and `LibraryCommitDate`, the last read from the checkout
+  SwiftPM made. Where there is no pin to report — a local checkout, a branch pin, an unreadable
+  file — a word is stamped instead of a blank (`local-checkout`, `unversioned`, `unreadable`,
+  `unknown`), and no stamped value ever contains a space: that is the format contract with the
+  screens displaying them. The library stamps are diagnostic, so failing to read one warns rather
+  than fails the build; only the gates below stop an archive. The version and build number are
+  frozen for the whole development phase of a cycle, so the stamps are what distinguish and order
+  the Debug installs sitting on test devices. They are shown in the iOS Settings app (#807) and in
+  the HTML app's About box (Photo-Club-Hub-HTML #239).
 - **Gates, only when archiving.** The phase refuses to archive from a dirty working tree or from a
-  commit that is not on origin. This is what makes the last row of the Annex A table "enforced".
+  commit that is not on origin. It also refuses a build number that already has a `b<number>` tag.
+  This is what makes the last row of the Annex A table "enforced".
 
 The script takes no arguments and is not meant to be run by hand: outside a build it exits with
 `PROJECT_DIR unset, so this is not an Xcode build phase`. Photo-Club-Hub-HTML carries its own copy
