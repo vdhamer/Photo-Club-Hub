@@ -37,11 +37,13 @@ struct PhotoClubHubApp: App {
 
         // update version numbers shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
-        let noStamp = String(localized: "?", table: "PhotoClubHub.SwiftUI",
-                             comment: "Stands in for the build date or commit when absent")
+        let noStamp = String(localized: "?",
+                             table: "PhotoClubHub.SwiftUI",
+                             comment: "Stands in for an absent build date or commit")
         // "N/A" rather than "?" for the library commit: a local checkout or an unreadable pin means
         // there is no commit to name, which is a different thing from a stamp having gone missing.
-        let notApplicable = String(localized: "N/A", table: "PhotoClubHub.SwiftUI",
+        let notApplicable = String(localized: "N/A",
+                                   table: "PhotoClubHub.SwiftUI",
                                    comment: "Stands in for the library commit when there is none to show")
         UserDefaults.standard.set(Bundle.main.buildDate ?? noStamp, forKey: "buildDate_preference")
         UserDefaults.standard.set(Bundle.main.gitCommit ?? noStamp, forKey: "gitCommit_preference")

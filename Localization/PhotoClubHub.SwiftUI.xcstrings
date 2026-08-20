@@ -2,7 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "?" : {
-      "comment" : "Stands in for the build date or commit when absent",
+      "comment" : "Stands in for an absent build date or commit",
       "localizations" : {
         "nl" : {
           "stringUnit" : {
@@ -799,6 +799,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Musea"
+          }
+        }
+      }
+    },
+    "N/A" : {
+      "comment" : "Stands in for the library commit when there is none to show",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N/A"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "n.v.t."
           }
         }
       }
