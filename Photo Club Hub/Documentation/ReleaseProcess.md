@@ -4,7 +4,7 @@ How a version of Photo Club Hub reaches TestFlight and the App Store. The mainta
 releasing, across two Macs. The same shape will apply to Photo Club Hub __HTML__ once that is
 distributed the same way, and it connects to how the Photo Club Hub __Data__ package is versioned.
 
-**Contributing code?** Three house rules, and the rest of this document is maintainer housekeeping:
+**Contributing code?** Three house rules for contributors:
 
 - Add what you changed to `ReleaseNotes.md`. That part of a release is yours.
 - Leave `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` alone. The maintainer sets them between
@@ -15,31 +15,32 @@ distributed the same way, and it connects to how the Photo Club Hub __Data__ pac
 Everything else about contributing is in the `Contributing` section of the
 [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).
 
+The other parts of this document is mainly a releasing checklist for the maintainer.
 For the maintainer, the steps come first, then a note on each, then annexes with the reasoning:
 the machine split, the numbering rules, the Core Data model, the Data package, the build-phase
 script, and the tags.
 
 ## The release loop
 
-Releasing is a loop. "Dev" is the development Mac, "Release" the release Mac; Annex A explains why
+Releasing is a loop. "Dev" is the **development Mac**, "Release" the **release Mac**; Annex A explains why
 there are two.
 
-| Step | What | Where |
+| Step | What | Machine |
 | --- | --- | --- |
-| 1 | Bump build number and marketing version; add matching model version; commit and push | Dev |
-| 2 | Develop, keeping `ReleaseNotes.md` and origin up to date | Dev |
-| 3 | Run both test suites, push to origin, then pull on the release Mac | Dev → Release |
-| 4 | Archive, with a Release or RC Xcode | Release |
+| 1 | Bump build number and marketing version; add matching data model version; commit; push | Dev |
+| 2 | Develop, keeping `ReleaseNotes.md` and origin (GitHub) up to date | Dev |
+| 3 | Run both test suites, push to origin, then pull changes on the release Mac | Dev → Release |
+| 4 | Archive, with a Release or RC version of Xcode | Release |
 | 5 | Distribute to App Store Connect | Release |
-| 6 | Keep the `.xcarchive` alongside every earlier one | Release |
+| 6 | Keep the `.xcarchive` alongside earlier archives | Release |
 | 7 | Tag the archived commit `b<number>`, publish it as a pre-release GitHub Release | Dev |
 | 8 | Release to TestFlight; if promoted, tag `v<version>` and publish a full Release | Dev |
 | 9 | Back to step 1 | |
 
-Note when things are decided. The numbers are fixed at step 1, at the start of the cycle. The
+Note when things are decided. The numbers are fixed at step 1, at the **start** of the cycle. The
 destination — TestFlight only, on to the App Store, or another turn of the loop — is decided at
 step 8, at the end, and recorded there and then. The loop may run several times per marketing
-version; each turn leaves its own `b<number>` tag.
+version; each turn under its unique `b<number>` tag.
 
 ## Notes on the steps
 
@@ -66,9 +67,11 @@ commit and build time into the archive. Untracked files count as dirty. Annex E 
 
 **Step 5 — the unchecked box.** Verify "Manage Version and Build Number" is off every time, and
 assume it defaults back to on. A rejection with ITMS-4238 means step 1 was skipped: bump, push,
-pull, re-archive. Nothing is burned and nothing drifts.
+pull, re-archive. Nothing is burned and nothing drifts. _Note_: did not do this last time because
+I simply couldn't find the checkbox. As long as version and build are unique (guarded by a script)
+App Store Connect won't modify the numbers.
 
-**Step 7 — every upload gets a tag**, whatever later becomes of the build.
+**Step 7 — every upload gets a tag**, regardless of whether the upload stays a pre-release or is released.
 
 **Step 8 — promotion is a decision, not Apple's timing.** App Store Connect is set to release
 manually rather than automatically on approval, so passing review ships nothing by itself. If the
