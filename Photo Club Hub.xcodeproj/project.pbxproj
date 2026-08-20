@@ -51,6 +51,8 @@
 		37D9840B2F9042F600C30EE5 /* SettingsViewMapsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9840A2F9042F600C30EE5 /* SettingsViewMapsSection.swift */; };
 		37D984232F904B8B00C30EE5 /* SettingsViewPhotographersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D984222F904B8B00C30EE5 /* SettingsViewPhotographersSection.swift */; };
 		37D984252F904DB200C30EE5 /* SettingsViewAdvancedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D984242F904DB200C30EE5 /* SettingsViewAdvancedSection.swift */; };
+		37DA8385303746770064E3AA /* BuildStampKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DA8384303746770064E3AA /* BuildStampKey.swift */; };
+		37DA83893037850C0064E3AA /* PhotoClubHubApp+Versioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DA83883037850C0064E3AA /* PhotoClubHubApp+Versioning.swift */; };
 		37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */; };
 		37DB783A2FB74854007AC405 /* MemberPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB78392FB74854007AC405 /* MemberPortfolioView.swift */; };
 		37EA14632FB0C45E000D8EDF /* MemberListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA14622FB0C45E000D8EDF /* MemberListSectionHeader.swift */; };
@@ -187,6 +189,8 @@
 		37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL16.level1.json; sourceTree = "<group>"; };
 		37DA3E0E2F06B40A00AB7993 /* museums.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museums.level1.json; sourceTree = "<group>"; };
 		37DA3E102F06B62600AB7993 /* museumsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsNL.level1.json; sourceTree = "<group>"; };
+		37DA8384303746770064E3AA /* BuildStampKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildStampKey.swift; sourceTree = "<group>"; };
+		37DA83883037850C0064E3AA /* PhotoClubHubApp+Versioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoClubHubApp+Versioning.swift"; sourceTree = "<group>"; };
 		37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView.swift; sourceTree = "<group>"; };
 		37DB78392FB74854007AC405 /* MemberPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioView.swift; sourceTree = "<group>"; };
 		37E5BFB53012AA71006DA25D /* People_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = People_EN_Light.jpg; sourceTree = "<group>"; };
@@ -502,7 +506,9 @@
 			children = (
 				37AAA67D3020C9DD0056BC94 /* ClubLoadCoordinator.swift */,
 				D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */,
+				37DA83883037850C0064E3AA /* PhotoClubHubApp+Versioning.swift */,
 				37A22B6D3009ADBA00074B0C /* ScreenshotReadiness.swift */,
+				37DA8384303746770064E3AA /* BuildStampKey.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1065,6 +1071,7 @@
 				3769DFA0300AE60800D819FA /* PreludeView2627+Screenshot.swift in Sources */,
 				37D984252F904DB200C30EE5 /* SettingsViewAdvancedSection.swift in Sources */,
 				D0FE77E52BB9AEE900272077 /* ElementTypeEnum.swift in Sources */,
+				37DA83893037850C0064E3AA /* PhotoClubHubApp+Versioning.swift in Sources */,
 				37D984232F904B8B00C30EE5 /* SettingsViewPhotographersSection.swift in Sources */,
 				37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */,
 				370752E1300A257600B0654C /* MemberPortfolioView+Screenshot.swift in Sources */,
@@ -1101,6 +1108,7 @@
 				37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographersListView2627.swift in Sources */,
 				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,
+				37DA8385303746770064E3AA /* BuildStampKey.swift in Sources */,
 				376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */,
 				D0831A21277F72270049AB84 /* FilteredPhotographerView2627.swift in Sources */,
 				37C9BEBA2FFC5F120075F6DE /* ReadmeButton.swift in Sources */,
