@@ -71,7 +71,7 @@ pull, re-archive. Nothing is burned and nothing drifts. _Note_: did not do this 
 I simply couldn't find the checkbox. As long as version and build are unique (guarded by a script)
 App Store Connect won't modify the numbers.
 
-**Step 7 — every upload gets a tag**, regardless of whether the upload stays a pre-release is released.
+**Step 7 — every upload gets a tag**, regardless of whether the upload stays a pre-release or is released.
 
 **Step 8 — promotion is a decision, not Apple's timing.** App Store Connect is set to release
 manually rather than automatically on approval, so passing review ships nothing by itself. If the
