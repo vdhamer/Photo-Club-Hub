@@ -31,7 +31,7 @@ there are two.
 | 2 | Develop, keeping `ReleaseNotes.md` and origin (GitHub) up to date | Dev |
 | 3 | Run both test suites, push to origin, then pull changes on the release Mac | Dev → Release |
 | 4 | Archive, with a Release or RC version of Xcode | Release |
-| 5 | Distribute to App Store Connect, "Manage Version and Build Number" **unchecked** | Release |
+| 5 | Distribute to App Store Connect, "Manage Version and Build Number" | Release |
 | 6 | Keep the `.xcarchive` alongside earlier archives | Release |
 | 7 | Tag the archived commit `b<number>`, publish it as a pre-release GitHub Release | Dev |
 | 8 | Release to TestFlight; if promoted, tag `v<version>` and publish a full Release | Dev |
@@ -40,7 +40,7 @@ there are two.
 Note when things are decided. The numbers are fixed at step 1, at the **start** of the cycle. The
 destination — TestFlight only, on to the App Store, or another turn of the loop — is decided at
 step 8, at the end, and recorded there and then. The loop may run several times per marketing
-version; each turn leaves its own `b<number>` tag.
+version; each turn under its unique `b<number>` tag.
 
 ## Notes on the steps
 
