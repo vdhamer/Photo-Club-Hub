@@ -27,7 +27,7 @@ there are two.
 
 | Step | What | Where |
 | --- | --- | --- |
-| 1 | Bump build number and marketing version; add matching model version; commit and push | Dev |
+| 1 | Bump build number and marketing version; add matching data model version; commit; push | Dev |
 | 2 | Develop, keeping `ReleaseNotes.md` and origin up to date | Dev |
 | 3 | Run both test suites, push to origin, then pull on the release Mac | Dev → Release |
 | 4 | Archive, with a Release or RC Xcode | Release |
