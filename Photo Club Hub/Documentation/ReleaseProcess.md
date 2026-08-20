@@ -22,7 +22,7 @@ script, and the tags.
 
 ## The release loop
 
-Releasing is a loop. "Dev" is the development Mac, "Release" the release Mac; Annex A explains why
+Releasing is a loop. "Dev" is the **development Mac**, "Release" the **release Mac**; Annex A explains why
 there are two.
 
 | Step | What | Where |
