@@ -14,7 +14,7 @@
 			<key>DefaultValue</key>
 			<string>?.?.? (????)</string>
 			<key>Key</key>
-			<string>version_preference</string>
+			<string>appVersion</string>
 			<key>Title</key>
 			<string>iOS app version</string>
 			<key>Type</key>
@@ -24,7 +24,7 @@
 			<key>DefaultValue</key>
 			<string>?</string>
 			<key>Key</key>
-			<string>gitCommit_preference</string>
+			<string>appGitCommit</string>
 			<key>Title</key>
 			<string>iOS app commit</string>
 			<key>Type</key>
@@ -34,7 +34,7 @@
 			<key>DefaultValue</key>
 			<string>?</string>
 			<key>Key</key>
-			<string>buildDate_preference</string>
+			<string>appBuildDate</string>
 			<key>Title</key>
 			<string>iOS app built</string>
 			<key>Type</key>
@@ -44,7 +44,7 @@
 			<key>DefaultValue</key>
 			<string>?.?.?</string>
 			<key>Key</key>
-			<string>libraryVersion_preference</string>
+			<string>libraryVersion</string>
 			<key>Title</key>
 			<string>Library version</string>
 			<key>Type</key>
@@ -54,7 +54,7 @@
 			<key>DefaultValue</key>
 			<string>N/A</string>
 			<key>Key</key>
-			<string>libraryCommit_preference</string>
+			<string>libraryCommit</string>
 			<key>Title</key>
 			<string>Library commit</string>
 			<key>Type</key>
@@ -64,7 +64,7 @@
 			<key>DefaultValue</key>
 			<string>N/A</string>
 			<key>Key</key>
-			<string>libraryCommitDate_preference</string>
+			<string>libraryCommitDate</string>
 			<key>Title</key>
 			<string>Library committed</string>
 			<key>Type</key>
