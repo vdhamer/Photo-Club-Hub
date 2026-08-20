@@ -25,7 +25,7 @@ script, and the tags.
 Releasing is a loop. "Dev" is the **development Mac**, "Release" the **release Mac**; Annex A explains why
 there are two.
 
-| Step | What | Where |
+| Step | What | Machine |
 | --- | --- | --- |
 | 1 | Bump build number and marketing version; add matching data model version; commit; push | Dev |
 | 2 | Develop, keeping `ReleaseNotes.md` and origin (GitHub) up to date | Dev |
