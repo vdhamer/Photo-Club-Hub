@@ -32,7 +32,7 @@ there are two.
 | 3 | Run both test suites, push to origin, then pull changes on the release Mac | Dev → Release |
 | 4 | Archive, with a Release or RC version of Xcode | Release |
 | 5 | Distribute to App Store Connect, "Manage Version and Build Number" **unchecked** | Release |
-| 6 | Keep the `.xcarchive` alongside every earlier one | Release |
+| 6 | Keep the `.xcarchive` alongside earlier archives | Release |
 | 7 | Tag the archived commit `b<number>`, publish it as a pre-release GitHub Release | Dev |
 | 8 | Release to TestFlight; if promoted, tag `v<version>` and publish a full Release | Dev |
 | 9 | Back to step 1 | |
