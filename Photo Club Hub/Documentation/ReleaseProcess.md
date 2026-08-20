@@ -14,8 +14,8 @@ distributed the same way, and it connects to how the Photo Club Hub __Data__ pac
 
 Everything else about contributing is in the `Contributing` section of the
 [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).
-The rest of this document is mainly a releasing checklist for the maintainer.
 
+The other parts of this document is mainly a releasing checklist for the maintainer.
 For the maintainer, the steps come first, then a note on each, then annexes with the reasoning:
 the machine split, the numbering rules, the Core Data model, the Data package, the build-phase
 script, and the tags.
