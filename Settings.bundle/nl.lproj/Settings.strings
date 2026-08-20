@@ -29,13 +29,19 @@
 "Library version" = "Data module versie";
 
 /* (No Comment) */
+"Library commit" = "Data module commit";
+
+/* (No Comment) */
+"Library committed" = "Data module gecommit";
+
+/* (No Comment) */
 "CoreData merge issue terminates app" = "CoreData mergeconflict sluit de app af";
 
 /* (No Comment) */
-"Built" = "Gebouwd";
+"iOS app built" = "iOS app gebouwd";
 
 /* (No Comment) */
-"Commit" = "Commit";
+"iOS app commit" = "iOS app commit";
 
 /* (No Comment) */
 "About this build" = "Over deze versie";

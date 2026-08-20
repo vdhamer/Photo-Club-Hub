@@ -5,6 +5,12 @@
 "Library version" = "Library version";
 
 /* (No Comment) */
+"Library commit" = "Library commit";
+
+/* (No Comment) */
+"Library committed" = "Library committed";
+
+/* (No Comment) */
 "GitHub" = "GitHub";
 
 /* (No Comment) */
@@ -32,10 +38,10 @@
 "CoreData merge issue terminates app" = "CoreData merge issue terminates app";
 
 /* (No Comment) */
-"Built" = "Built";
+"iOS app built" = "iOS app built";
 
 /* (No Comment) */
-"Commit" = "Commit";
+"iOS app commit" = "iOS app commit";
 
 /* (No Comment) */
 "About this build" = "About this build";

@@ -37,14 +37,18 @@ struct PhotoClubHubApp: App {
 
         // update version numbers shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
-        let noBuildNumber = String(localized: "N/A", table: "PhotoClubHub.SwiftUI",
-                                   comment: "Stands in for the build number, which the Data library doesn't have")
-        UserDefaults.standard.set("\(PhotoClubHubDataVersion.semver) (\(noBuildNumber))",
-                                  forKey: "libraryVersion_preference")
         let noStamp = String(localized: "?", table: "PhotoClubHub.SwiftUI",
                              comment: "Stands in for the build date or commit when absent")
+        // "N/A" rather than "?" for the library commit: a local checkout or an unreadable pin means
+        // there is no commit to name, which is a different thing from a stamp having gone missing.
+        let notApplicable = String(localized: "N/A", table: "PhotoClubHub.SwiftUI",
+                                   comment: "Stands in for the library commit when there is none to show")
         UserDefaults.standard.set(Bundle.main.buildDate ?? noStamp, forKey: "buildDate_preference")
         UserDefaults.standard.set(Bundle.main.gitCommit ?? noStamp, forKey: "gitCommit_preference")
+        UserDefaults.standard.set(Bundle.main.libraryVersion ?? noStamp, forKey: "libraryVersion_preference")
+        UserDefaults.standard.set(Bundle.main.libraryCommit ?? notApplicable, forKey: "libraryCommit_preference")
+        UserDefaults.standard.set(Bundle.main.libraryCommitDate ?? notApplicable,
+                                  forKey: "libraryCommitDate_preference")
         if Settings.manualDataLoading || Settings.dataResetPending {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
         } else { // initialize some constant records for Language and OrganizationType (for stability)

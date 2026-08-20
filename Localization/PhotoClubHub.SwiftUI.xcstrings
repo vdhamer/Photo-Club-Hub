@@ -803,23 +803,6 @@
         }
       }
     },
-    "N/A" : {
-      "comment" : "Stands in for the build number, which the Data library doesn't have",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "N/A"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "n.v.t."
-          }
-        }
-      }
-    },
     "Navigation using tabs" : {
       "comment" : "Title of one-time tip about Preferences having moved to the Settings tab",
       "localizations" : {

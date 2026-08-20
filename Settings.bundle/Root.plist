@@ -24,9 +24,9 @@
 			<key>DefaultValue</key>
 			<string>?</string>
 			<key>Key</key>
-			<string>buildDate_preference</string>
+			<string>gitCommit_preference</string>
 			<key>Title</key>
-			<string>Built</string>
+			<string>iOS app commit</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 		</dict>
@@ -34,19 +34,39 @@
 			<key>DefaultValue</key>
 			<string>?</string>
 			<key>Key</key>
-			<string>gitCommit_preference</string>
+			<string>buildDate_preference</string>
 			<key>Title</key>
-			<string>Commit</string>
+			<string>iOS app built</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>?.?.? (N/A)</string>
+			<string>?.?.?</string>
 			<key>Key</key>
 			<string>libraryVersion_preference</string>
 			<key>Title</key>
 			<string>Library version</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>N/A</string>
+			<key>Key</key>
+			<string>libraryCommit_preference</string>
+			<key>Title</key>
+			<string>Library commit</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>N/A</string>
+			<key>Key</key>
+			<string>libraryCommitDate_preference</string>
+			<key>Title</key>
+			<string>Library committed</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 		</dict>
