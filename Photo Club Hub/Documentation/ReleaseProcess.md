@@ -67,7 +67,9 @@ commit and build time into the archive. Untracked files count as dirty. Annex E 
 
 **Step 5 — the unchecked box.** Verify "Manage Version and Build Number" is off every time, and
 assume it defaults back to on. A rejection with ITMS-4238 means step 1 was skipped: bump, push,
-pull, re-archive. Nothing is burned and nothing drifts.
+pull, re-archive. Nothing is burned and nothing drifts. _Note_: did not do this last time because
+I simply couldn't find the checkbox. As long as version and build are unique (guarded by a script)
+App Store Connect won't modify the numbers.
 
 **Step 7 — every upload gets a tag**, whatever later becomes of the build.
 
