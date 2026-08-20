@@ -8,8 +8,15 @@
 
 ### 3.0.0 (GitHub commit ???????) ??-09-2026
 
+USER-FACING
+
+- Increased contrast of club names on Clubs screen ([#816](https://github.com/vdhamer/Photo-Club-Hub/issues/816))
+- Revised versioning information in Settings app ([#814](https://github.com/vdhamer/Photo-Club-Hub/issues/814))
+
+STRUCTURAL
+
 - Tested with macOS 26.6.2 (25G76) and on iOS 26.6.1
-- Increased contrast of club names on Clubs screen ([#816](https://github.com/vdhamer/Photo-Club-Hub/issues/816)) 
+- Cleaned up naming of User Defaults keys ([#820](https://github.com/vdhamer/Photo-Club-Hub/issues/820))
 
 ---------------------------------------------------------------------------
 
