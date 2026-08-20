@@ -30,7 +30,7 @@ there are two.
 | 1 | Bump build number and marketing version; add matching data model version; commit; push | Dev |
 | 2 | Develop, keeping `ReleaseNotes.md` and origin (GitHub) up to date | Dev |
 | 3 | Run both test suites, push to origin, then pull changes on the release Mac | Dev → Release |
-| 4 | Archive, with a Release or RC Xcode | Release |
+| 4 | Archive, with a Release or RC version of Xcode | Release |
 | 5 | Distribute to App Store Connect, "Manage Version and Build Number" **unchecked** | Release |
 | 6 | Keep the `.xcarchive` alongside every earlier one | Release |
 | 7 | Tag the archived commit `b<number>`, publish it as a pre-release GitHub Release | Dev |
