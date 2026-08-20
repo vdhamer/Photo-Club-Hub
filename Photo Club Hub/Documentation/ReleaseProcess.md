@@ -63,13 +63,17 @@ runs tests, so a green suite before the push is the whole safeguard. Pushing to 
 on the release Mac is the only channel between the two machines.
 
 **Step 4 — what the gate does.** The build phase refuses a dirty or unpushed tree, then stamps
-commit and build time into the archive. Untracked files count as dirty. Annex E has the details.
+commit and build time into the archive. Untracked files count as dirty. It also refuses a build
+number that already carries a `b<number>` tag, which is the step 1 bump not having happened. Annex E
+has the details.
 
-**Step 5 — the unchecked box.** Verify "Manage Version and Build Number" is off every time, and
-assume it defaults back to on. A rejection with ITMS-4238 means step 1 was skipped: bump, push,
-pull, re-archive. Nothing is burned and nothing drifts. _Note_: did not do this last time because
-I simply couldn't find the checkbox. As long as version and build are unique (guarded by a script)
-App Store Connect won't modify the numbers.
+**Step 5 — Xcode manages the build number, so the gate has to.** The Organizer's "Manage Version and
+Build Number" option defaults to on, and the streamlined *TestFlight & App Store* distribution path
+does not ask about it — the checkbox appears only under *Custom*. So a stale build number is liable
+to be silently renumbered at upload instead of rejected, which would leave the binary Apple has and
+the commit its `b<number>` tag points at disagreeing. That is why the check moved into the archive
+gate (step 4), where it is local, automatic and one machine earlier. ITMS-4238 remains the backstop,
+not the mechanism.
 
 **Step 7 — every upload gets a tag**, regardless of whether the upload stays a pre-release or is released.
 
