@@ -23,28 +23,22 @@
 "Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." = "Debug instellingen aanzetten leidt tot niet standaard gedrag. De instellingen zijn er voor het testen van de software. Zie Settings.swift bestand op GitHub voor nadere uitleg.";
 
 /* (No Comment) */
-"iOS app version" = "iOS app versie";
-
-/* (No Comment) */
-"Library version" = "Data module versie";
-
-/* (No Comment) */
-"Library commit" = "Data module commit";
-
-/* (No Comment) */
-"Library committed" = "Data module gecommit";
-
-/* (No Comment) */
 "CoreData merge issue terminates app" = "CoreData mergeconflict sluit de app af";
 
 /* (No Comment) */
-"iOS app built" = "iOS app gebouwd";
-
-/* (No Comment) */
-"iOS app commit" = "iOS app commit";
-
-/* (No Comment) */
-"About this build" = "Over deze versie";
-
-/* (No Comment) */
 "Source repository" = "Broncode";
+
+/* (No Comment) */
+"Photo Club Hub Data" = "Fotoclub Hub Data";
+
+/* (No Comment) */
+"Version" = "Versie";
+
+/* (No Comment) */
+"Commit" = "Commit";
+
+/* (No Comment) */
+"Built" = "Gebouwd";
+
+/* (No Comment) */
+"Committed" = "Gecommit";
