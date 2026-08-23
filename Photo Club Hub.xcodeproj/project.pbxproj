@@ -33,6 +33,8 @@
 		376D14FA2E6DE83A00A1403B /* DebugPanel2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F92E6DE83A00A1403B /* DebugPanel2627.swift */; };
 		376DC9522EC3A98900FB429B /* PreludeImageStore2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2627.swift */; };
 		376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9732EC3F33200FB429B /* Crosshairs1718.swift */; };
+		377E8C13303B229400C118A8 /* CalloutBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E8C12303B229400C118A8 /* CalloutBox.swift */; };
+		377E8C15303B22C200C118A8 /* EmptyListReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E8C14303B22C200C118A8 /* EmptyListReason.swift */; };
 		378D4D4C2FFE570E00A49F5A /* ReadmeTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */; };
 		37A22B6E3009ADBA00074B0C /* ScreenshotReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6D3009ADBA00074B0C /* ScreenshotReadiness.swift */; };
 		37A22B703009B1E400074B0C /* MapsView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */; };
@@ -154,6 +156,8 @@
 		377D8036300294A000E04A04 /* LineCount.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = LineCount.csv; sourceTree = "<group>"; };
 		377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FotoclubHub_flyer_nl.md; sourceTree = "<group>"; };
 		377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PhotoClubHub_flyer_en.md; sourceTree = "<group>"; };
+		377E8C12303B229400C118A8 /* CalloutBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutBox.swift; sourceTree = "<group>"; };
+		377E8C14303B22C200C118A8 /* EmptyListReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListReason.swift; sourceTree = "<group>"; };
 		378856A03016CE370008EA13 /* Level1_creation_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_creation_EN.md; sourceTree = "<group>"; };
 		378856A13016CEAB0008EA13 /* FAQ_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FAQ_en.md; sourceTree = "<group>"; };
 		378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeTip.swift; sourceTree = "<group>"; };
@@ -395,6 +399,15 @@
 				3762771D2FF9560B0047E77C /* MainTabView1717.swift */,
 			);
 			path = OldIOSVersionSupport;
+			sourceTree = "<group>";
+		};
+		377E8C11303B225F00C118A8 /* SharedView */ = {
+			isa = PBXGroup;
+			children = (
+				377E8C12303B229400C118A8 /* CalloutBox.swift */,
+				377E8C14303B22C200C118A8 /* EmptyListReason.swift */,
+			);
+			path = SharedView;
 			sourceTree = "<group>";
 		};
 		378D4D4D2FFE571700A49F5A /* TipKit */ = {
@@ -641,6 +654,7 @@
 		D0831A18277F72110049AB84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				377E8C11303B225F00C118A8 /* SharedView */,
 				37EBBCBF2FFA997900C95FDA /* RootView */,
 				3762771C2FF9560B0047E77C /* MainTabView */,
 				D0E2235227DE9139002A8600 /* PreludeView */,
@@ -1066,6 +1080,7 @@
 				37415B222F9D5E96004B4647 /* ReadmeSectionOnConcept.swift in Sources */,
 				D087540C2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift in Sources */,
 				37A2A0B22FAA7DD200EF39A1 /* FilteredMapsView.swift in Sources */,
+				377E8C15303B22C200C118A8 /* EmptyListReason.swift in Sources */,
 				37A2A0E62FAAA53400EF39A1 /* MapsViewRemark.swift in Sources */,
 				37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */,
 				37EBBC382FFA451F00C95FDA /* RootView.swift in Sources */,
@@ -1108,6 +1123,7 @@
 				37174DAA2F8F93E100E58B6E /* SettingsView.swift in Sources */,
 				37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographersListView2627.swift in Sources */,
+				377E8C13303B229400C118A8 /* CalloutBox.swift in Sources */,
 				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,
 				37DA8385303746770064E3AA /* BuildStampKey.swift in Sources */,
 				376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */,
