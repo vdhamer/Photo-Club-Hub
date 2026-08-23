@@ -61,22 +61,25 @@ struct MemberPortfolioView: View {
                 // Section prevents the List from adopting the tip as an implicit section header (all-caps styling).
                 Section {
                     // one-shot tip (toolbar → tabs migration); renders nothing once dismissed
+                    // Constants come from CalloutBox so the tips and the empty-list callout below them
+                    // stay one look. `.clubsColor` replaces the former Color("_clubsColor") literal,
+                    // whose lowercase c missed the case-sensitive asset name and drew no border at all.
                     TipView(TabNavigationTip())
-                        .tipCornerRadius(12)
+                        .tipCornerRadius(CalloutBox.cornerRadius)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color("_clubsColor"), lineWidth: 1.5)
+                            RoundedRectangle(cornerRadius: CalloutBox.cornerRadius)
+                                .stroke(Color.clubsColor, lineWidth: CalloutBox.borderWidth)
                         )
-                        .tipBackground(Color("_ClubsColor").opacity(0.15))
+                        .tipBackground(Color.clubsColor.opacity(CalloutBox.backgroundOpacity))
                         .tint(.primary)
 
                     TipView(ReadmeTip())
-                        .tipCornerRadius(12)
+                        .tipCornerRadius(CalloutBox.cornerRadius)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color("_ClubsColor"), lineWidth: 1.5)
+                            RoundedRectangle(cornerRadius: CalloutBox.cornerRadius)
+                                .stroke(Color.clubsColor, lineWidth: CalloutBox.borderWidth)
                         )
-                        .tipBackground(Color("_ClubsColor").opacity(0.15))
+                        .tipBackground(Color.clubsColor.opacity(CalloutBox.backgroundOpacity))
                         .tint(.primary)
                 }
                 FilteredMemberPortfoliosView(memberPredicate: settingsModel.settings.memberPredicate,
