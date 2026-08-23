@@ -31,16 +31,32 @@ extension Bundle {
         return "\(shortVersion) (\(buildVersion))"
     }
 
+    /// The build stamps that the *Run GateAndStamp script* build phase writes into `BuildStamp.plist`
+    /// inside the app bundle.
+    ///
+    /// A file of the script's own rather than `Info.plist`, which Xcode owns and regenerates from
+    /// `Photo-Club-Hub-Info.plist` at a moment the build system picks. On an incremental build that
+    /// moment falls just after the script phase, so anything stamped into `Info.plist` was silently
+    /// discarded before the app was even signed (#822).
+    ///
+    /// Empty for a binary built without that phase, so every property below then returns `nil` and
+    /// its caller shows a placeholder rather than something misleading.
+    private var buildStamps: [String: String] {
+        guard let url = url(forResource: "BuildStamp", withExtension: "plist"),
+              let data = try? Data(contentsOf: url) else { return [:] }
+        let plist = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil)
+        return plist as? [String: String] ?? [:]
+    }
+
     /// When this binary was built, e.g. `9 aug 2026, 22:40`, in the user's own locale.
     ///
-    /// Reads the `BuildDate` key that the *Run GateAndStamp script* build phase writes into the built
-    /// `Info.plist` (see #808), and returns `nil` for a binary built without that phase so callers can
-    /// show a placeholder rather than something misleading.
+    /// Reads the `BuildDate` key of `buildStamps` (see #808), and returns `nil` for a binary built
+    /// without the stamping phase so callers can show a placeholder rather than something misleading.
     ///
     /// The version and build number are frozen for a whole release cycle, so this is what orders the
     /// Debug installs sitting on test devices; `gitCommit` is what pins each one to a commit.
     var buildDate: String? {
-        guard let stored = infoDictionary?["BuildDate"] as? String else { return nil }
+        guard let stored = buildStamps["BuildDate"] else { return nil }
 
         // The stamp is local time without an offset — deliberately not ISO 8601, so parse it with a
         // fixed format and a POSIX locale, then display it in the user's own locale.
@@ -59,14 +75,14 @@ extension Bundle {
     /// error. An archived build can never show it, because the build phase refuses to archive a dirty
     /// tree. Returns `nil` for a binary built without that phase.
     var gitCommit: String? {
-        guard let hash = infoDictionary?["GitCommitHash"] as? String else { return nil }
+        guard let hash = buildStamps["GitCommitHash"] else { return nil }
         return hash.hasSuffix("-dirty") ? "\(hash.prefix(7))-dirty" : String(hash.prefix(7))
     }
 
     /// The Photo Club Hub Data version this binary was built against, e.g. `3.0.0`.
     ///
-    /// Reads the `LibraryVersion` and `LibraryRevision` keys that the *Run GateAndStamp script* build
-    /// phase copies from the `Package.resolved` that Xcode actually resolved (see
+    /// Reads the `LibraryVersion` and `LibraryRevision` keys of `buildStamps`, which the build phase
+    /// copies from the `Package.resolved` that Xcode actually resolved (see
     /// vdhamer/Photo-Club-Hub#814). This replaces a hand-maintained constant in the package, which
     /// could not tell two binaries apart when they were built against different package commits
     /// carrying the same version number.
@@ -77,7 +93,7 @@ extension Bundle {
     /// read. Those are shown as-is bar the hyphen, on the same reasoning as `-dirty` above: on a test
     /// device it is information, not an error. Returns `nil` for a binary built without the phase.
     var libraryVersion: String? {
-        guard let version = infoDictionary?["LibraryVersion"] as? String else { return nil }
+        guard let version = buildStamps["LibraryVersion"] else { return nil }
         return version.replacingOccurrences(of: "-", with: " ") // "local-checkout" reads as prose
     }
 
@@ -93,7 +109,7 @@ extension Bundle {
     /// *both* keys, hence the test that this one really is a hash — hex, and long enough that
     /// `prefix(7)` is not silently returning something shorter.
     var libraryCommit: String? {
-        guard let revision = infoDictionary?["LibraryRevision"] as? String,
+        guard let revision = buildStamps["LibraryRevision"],
               revision.count >= 7, revision.allSatisfy(\.isHexDigit) else { return nil }
         return String(revision.prefix(7))
     }
@@ -109,7 +125,7 @@ extension Bundle {
     /// rendered here in the device's timezone rather than the committer's. Parsing also does the
     /// filtering: a sentinel word is not a date, so it falls out as `nil` and the caller shows "N/A".
     var libraryCommitDate: String? {
-        guard let stored = infoDictionary?["LibraryCommitDate"] as? String,
+        guard let stored = buildStamps["LibraryCommitDate"],
               let date = ISO8601DateFormatter().date(from: stored) else { return nil }
         // Date only: this row answers "how old is the library", where a time adds nothing. The app's
         // own build row keeps its time, which is there to order several installs made on one day.
