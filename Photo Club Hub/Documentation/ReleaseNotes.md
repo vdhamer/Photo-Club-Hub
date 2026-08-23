@@ -12,11 +12,16 @@ USER-FACING
 
 - Increased contrast of club names on Clubs screen ([#816](https://github.com/vdhamer/Photo-Club-Hub/issues/816))
 - Revised versioning information in Settings app ([#814](https://github.com/vdhamer/Photo-Club-Hub/issues/814))
+- Dutch and English wording for the "About this build" rows in the Settings app ([#814](https://github.com/vdhamer/Photo-Club-Hub/issues/814))
+- Empty People list now says the data still needs loading, instead of blaming the Settings toggles ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
 
 STRUCTURAL
 
 - Tested with macOS 26.6.2 (25G76) and on iOS 26.6.1
 - Cleaned up naming of User Defaults keys ([#820](https://github.com/vdhamer/Photo-Club-Hub/issues/820))
+- Build stamps moved out of the Info.plist Xcode regenerates, into their own `BuildStamp.plist`, plus a test that catches a stamp that stops arriving ([#822](https://github.com/vdhamer/Photo-Club-Hub/issues/822))
+- Archiving refuses a build number that already has a `b<number>` tag ([#818](https://github.com/vdhamer/Photo-Club-Hub/issues/818))
+- Bug fix: build stamps in Settings fell back to placeholders after a rebuild ([#822](https://github.com/vdhamer/Photo-Club-Hub/issues/822))
 
 ---------------------------------------------------------------------------
 
