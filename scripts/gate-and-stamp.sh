@@ -2,19 +2,19 @@
 # Invoked by the "Run GateAndStamp script" build phase; not meant to be run by hand.
 #
 #   Gates  (archiving only) refuse a dirty or unpushed working tree.
-#   Stamps (every build)    write GitCommitHash, BuildDate,
-#                           LibraryVersion, LibraryRevision and LibraryCommitDate into the built Info.plist.
+#   Stamps (every build)    write GitCommitHash, BuildDate, LibraryVersion, LibraryRevision and
+#                           LibraryCommitDate into BuildStamp.plist inside the built app.
 #
 # Stamped values never contain spaces: that is the format contract with the screens that display
-# them (#807, vdhamer/Photo-Club-Hub-HTML#239), and it keeps PlistBuddy's Set/Add unambiguous.
+# them (#807, vdhamer/Photo-Club-Hub-HTML#239), and it means no value ever needs XML escaping.
 #
-# Design: https://github.com/vdhamer/Photo-Club-Hub/issues/808 and issues/814
+# Design: https://github.com/vdhamer/Photo-Club-Hub/issues/808, issues/814 and issues/822
 # Procedure: Photo Club Hub/Documentation/ReleaseProcess.md
 
 test $# -eq 0 || { echo "error: gate-and-stamp.sh takes no arguments"; exit 1; }
 : "${PROJECT_DIR:?error: PROJECT_DIR unset, so this is not an Xcode build phase}"
 : "${TARGET_BUILD_DIR:?error: TARGET_BUILD_DIR unset, so this is not an Xcode build phase}"
-: "${INFOPLIST_PATH:?error: INFOPLIST_PATH unset, so this is not an Xcode build phase}"
+: "${UNLOCALIZED_RESOURCES_FOLDER_PATH:?error: UNLOCALIZED_RESOURCES_FOLDER_PATH unset, so this is not an Xcode build phase}"
 
 dirty=$(git -C "$PROJECT_DIR" status --porcelain)
 
@@ -35,8 +35,16 @@ fi
 
 hash=$(git -C "$PROJECT_DIR" rev-parse HEAD) # stamps: on every build
 test -z "$dirty" || hash="$hash-dirty"
-plist="${TARGET_BUILD_DIR}/${INFOPLIST_PATH}"
-test -f "$plist" || { echo "error: no Info.plist at $plist"; exit 1; }
+# The stamps go into a file of this script's own, never into the built Info.plist. Xcode owns that
+# one: it regenerates it from the target's INFOPLIST_FILE at a moment the build system picks, and
+# since this phase declares no inputs or outputs there is nothing ordering the two. On a clean build the
+# regeneration happens first and the stamps survive; on every incremental build afterwards it happens
+# a few milliseconds later and silently discards them (#822). Nothing else in the build produces
+# BuildStamp.plist, and code signing runs after this phase, so what is written here is what ships.
+# The resources folder is the app bundle itself on iOS and Contents/Resources on macOS; the build
+# setting covers both.
+stampDir="${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+test -d "$stampDir" || { echo "error: no resources folder at $stampDir"; exit 1; }
 
 # Which Package.resolved is live, depends on what Xcode opened:
 #   - for a project build WORKSPACE_DIR *is* the .xcodeproj,
@@ -75,7 +83,6 @@ else
   done
 fi
 
-stamp() { /usr/libexec/PlistBuddy -c "Set :$1 $2" "$plist" 2>/dev/null || /usr/libexec/PlistBuddy -c "Add :$1 string $2" "$plist"; }
 # The pin names a commit but not when it was made, and that is what separates "the library moved
 # last week" from "it has been stable for a year". Only git knows, so ask the checkout SwiftPM made,
 # which is a full clone. Asking for this exact revision self-validates: a missing or wrong checkout
@@ -88,8 +95,34 @@ case "$revision" in
       commitDate=$(git -C "$checkout" show -s --format=%cI "$revision" 2>/dev/null) || commitDate="unknown" ;;
 esac
 
-stamp GitCommitHash "$hash"
-stamp BuildDate "$(date '+%Y-%m-%dT%H:%M')"
-stamp LibraryVersion "$version"
-stamp LibraryRevision "$revision"
-stamp LibraryCommitDate "$commitDate"
+buildDate=$(date '+%Y-%m-%dT%H:%M') # one reading, so the plist and the build log cannot disagree
+
+# Written whole rather than key by key, so a stamp left by an earlier build can never linger.
+cat > "$stampDir/BuildStamp.plist" <<PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GitCommitHash</key>
+	<string>$hash</string>
+	<key>BuildDate</key>
+	<string>$buildDate</string>
+	<key>LibraryVersion</key>
+	<string>$version</string>
+	<key>LibraryRevision</key>
+	<string>$revision</string>
+	<key>LibraryCommitDate</key>
+	<string>$commitDate</string>
+</dict>
+</plist>
+PLIST
+
+# Echoed as well as stamped. The stamps are what tell one Debug install on a test device from
+# another, and the Report Navigator is where to read them for the build just made: no digging the
+# plist out of the app bundle, and it still answers after DerivedData has been cleaned away.
+echo "wrote $stampDir/BuildStamp.plist"
+echo "  GitCommitHash     $hash"
+echo "  BuildDate         $buildDate"
+echo "  LibraryVersion    $version"
+echo "  LibraryRevision   $revision"
+echo "  LibraryCommitDate $commitDate"
