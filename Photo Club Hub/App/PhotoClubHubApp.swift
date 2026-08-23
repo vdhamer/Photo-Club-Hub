@@ -35,7 +35,7 @@ struct PhotoClubHubApp: App {
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
-        fetchVersioning() // fill Root.plist with version-related values that Settings app can then display
+        fetchVersioning() // copy the build stamps into UserDefaults, where the Settings app rows read them
 
         if Settings.manualDataLoading || Settings.dataResetPending {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
