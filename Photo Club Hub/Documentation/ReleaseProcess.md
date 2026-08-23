@@ -208,9 +208,14 @@ The `Run GateAndStamp script` build phase, the last phase of the app target, run
 reviewable and greppable instead of living escaped inside `project.pbxproj`. It does two jobs, and
 writes only into the built app, never the source tree, so neither Mac's working tree is affected.
 
-- **Stamps, on every build.** Five keys are added to the built app's `Info.plist`. Two describe the
-  app: `GitCommitHash` — the exact commit, with `-dirty` appended when built from uncommitted
-  changes — and `BuildDate`, local time at minute resolution. Three describe the Data package the
+- **Stamps, on every build.** Five keys are written to `BuildStamp.plist` inside the built app —
+  a file of the script's own, not `Info.plist`. Xcode owns `Info.plist` and regenerates it from
+  `Photo-Club-Hub-Info.plist` at a moment the build system picks. On a clean build that happens
+  before this phase and stamps survive. On every incremental build afterwards it happens a few
+  milliseconds later and discards them, which is why the Settings pane used to fall back to its
+  placeholders on rebuilds (#822). Two of the five describe the app: `GitCommitHash` — the exact
+  commit, with `-dirty` appended when built from uncommitted changes — and `BuildDate`, local time
+  at minute resolution. Three describe the Data package the
   binary was built against, taken from the `Package.resolved` that Xcode actually resolved (#814):
   `LibraryVersion`, `LibraryRevision`, and `LibraryCommitDate`, the last read from the checkout
   SwiftPM made. Where there is no pin to report — a local checkout, a branch pin, an unreadable
@@ -220,7 +225,13 @@ writes only into the built app, never the source tree, so neither Mac's working 
   than fails the build; only the gates below stop an archive. The version and build number are
   frozen for the whole development phase of a cycle, so the stamps are what distinguish and order
   the Debug installs sitting on test devices. They are shown in the iOS Settings app (#807) and in
-  the HTML app's About box (Photo-Club-Hub-HTML #239).
+  the HTML app's About box (Photo-Club-Hub-HTML #239), and the script echoes all five to the build
+  log as well, so the Report Navigator says what went into the build just made without unpacking the
+  app bundle — and still says it once DerivedData has been cleaned away. `BuildStampFileTest` fails
+  if a stamp stops reaching the built app, which nothing else would notice: the app runs fine
+  without them. When reading the rows on a device, force-quit the Settings app first: it caches an
+  app's page, so after installing a new build it keeps showing the values the *previous* launch
+  wrote.
 - **Gates, only when archiving.** The phase refuses to archive from a dirty working tree or from a
   commit that is not on origin. It also refuses a build number that already has a `b<number>` tag.
   This is what makes the last row of the Annex A table "enforced".
