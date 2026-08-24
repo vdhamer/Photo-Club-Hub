@@ -56,6 +56,12 @@ struct FilteredMapsView: View {
         ItemFilterStatsView(filteredCount: filteredOrganizations.count,
                             unfilteredCount: fetchedOrganizations.count,
                             unit: .organization)
+        // Like a `guard`: deal with the reasons the screen could be empty, then get on with the happy flow below.
+        // Every reason but `.listHasRows` implies the ForEach is empty, so the two never both show.
+        EmptyListHint(reason: emptyListReason(),
+                      tint: .mapsColor,
+                      wording: hintText)
+            .padding(.horizontal) // the organization cards bring their own padding; a callout doesn't.
         ForEach(filteredOrganizations, id: \.id) { filteredOrganization in // for each club or museum...
 
             /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
@@ -103,6 +109,65 @@ struct FilteredMapsView: View {
             .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
         } // ForEach (filteredOrganization)
     } // body
+
+    // MARK: - explaining an empty FilteredMapsView screen to the user
+
+    /// Picks the single reason the screen is empty. The priority order itself lives in
+    /// `EmptyListReason.resolve`, shared with Clubs and People; only the inputs below are specific to
+    /// this screen.
+    ///
+    /// `MapsView` used to make this call from a single `organizations.isEmpty` test on the *unfiltered*
+    /// fetch, which could only ever answer `databaseEmpty` — so it stayed silent on both filter cases and
+    /// flashed "pull down to reload" during the pull-to-refresh that had just emptied the store (#821).
+    private func emptyListReason() -> EmptyListReason {
+        EmptyListReason.resolve(hasVisibleRows: !filteredOrganizations.isEmpty,
+                                allCategoriesOff: fetchedOrganizations.nsPredicate == Self.predicateNone,
+                                storeIsEmpty: anyOrganizationProbe.isEmpty,
+                                searchIsEmpty: searchText.wrappedValue.isEmpty)
+    }
+
+    /// The wording for each reason that has any. `nil` covers the two cases where the screen should stay
+    /// silent: organizations are on display, or a pull-to-refresh is in progress and its spinner said it.
+    private func hintText(for reason: EmptyListReason) -> Text? {
+        switch reason {
+
+        case .listHasRows, .refreshing, .buildingDatabase:
+            return nil
+
+        case .noCategoriesEnabled:
+            return Text("""
+                        Warning: \
+                        all organization categories (Clubs and Museums) on the Settings page are disabled. \
+                        To see maps, please adjust the filter settings in the Settings tab.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if all of the Organization toggles are disabled.")
+
+        case .databaseEmpty: // wording unchanged from the NoClubsText this replaced, translations included
+            return Text("""
+                        No photo clubs or museums appear to be currently loaded.
+                        Try dragging down the Organizations screen to reload the default clubs.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if the database returns zero Organizations.")
+
+        case .searchFilterTooStrict:
+            return Text("""
+                        To see clubs and museums here, please adapt the Search filter \
+                        or enable additional categories on the Preferences page.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if zero Organizations remain visible with Search filter in use.")
+
+        case .categoriesTooStrict:
+            return Text("""
+                        To see clubs and museums here, please enable additional categories \
+                        on the Preferences page.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if the database returns zero Organizations, empty Search filter.")
+        }
+    }
 
     // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
     private func updateTownCountry(clubName: String, town: String,
