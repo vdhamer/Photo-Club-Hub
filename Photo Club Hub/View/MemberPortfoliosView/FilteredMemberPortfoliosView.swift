@@ -27,6 +27,18 @@ struct FilteredMemberPortfoliosView: View {
         predicate: predicateNone
     ) private var sectionedMemberPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
+    /// Unfiltered query just to answer the question: does the data store hold *any* member at all?
+    /// That separates "nothing has been loaded" from "your filters hide everything", which the sectioned
+    /// request above cannot distinguish because its own predicate is one of the suspects (#821).
+    /// Only `isEmpty` is ever read — never a relationship — so it stays clear of the deleted-row
+    /// accessors that `isUsable` guards against (#802).
+    @FetchRequest(fetchRequest: {
+        let request = MemberPortfolio.fetchRequest()
+        request.sortDescriptors = [] // required: @FetchRequest traps on a request with nil sortDescriptors
+        request.fetchLimit = 1       // one row is enough to answer "any?"
+        return request
+    }()) private var anyMemberProbe: FetchedResults<MemberPortfolio>
+
     /// Bound to the parent's search field; changes here trigger re-filtering without a new fetch.
     private let searchText: Binding<String>
     /// Parent-owned selection: a row sets it to trigger navigation via the parent's `navigationDestination(item:)`,
@@ -60,6 +72,13 @@ struct FilteredMemberPortfoliosView: View {
 
     var body: some View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
+        // Like a `guard`: deal with the reasons the list could be empty, then get on with the happy flow
+        // below. Every reason but `.listHasRows` implies no section survives the filter, so the two never
+        // both show.
+        EmptyListHint(reason: emptyListReason(for: sectionedPortfoliosResults),
+                      tint: .clubsColor,
+                      wording: hintText)
+            .listRowSeparator(.hidden) // also covers the spinner branch, which is not a CalloutBox
         ForEach(sectionedPortfoliosResults) { section in
             let filteredPortfolios = filterMemberPortfolios(unFilteredPortfolios: section)
             if !filteredPortfolios.isEmpty { // suppress section if Search filter leaves it without any members
@@ -82,26 +101,61 @@ struct FilteredMemberPortfoliosView: View {
                 .id(section.id)
             }
         }
-        if sectionedPortfoliosResults.nsPredicate == Self.predicateNone {
-            Text("""
-                 Warning: all member categories on the Preferences page are disabled. \
-                 Please enable one or more options in Preferences.
-                 """,
-                 tableName: "PhotoClubHub.SwiftUI",
-                 comment: "Hint to the user if all of the Preference toggles are disabled.")
-        } else if searchText.wrappedValue != "" && allSectionsFilterToZero(sectionedPortfoliosResults) {
-            Text("""
-                 To see names here, please adapt the Search filter \
-                 or enable additional categories on the Preferences page.
-                 """,
-                 tableName: "PhotoClubHub.SwiftUI",
-                 comment: "Hint to the user if zero Members remain visible with Search filter in use.")
-        } else if searchText.wrappedValue == "" && sectionedPortfoliosResults.isEmpty {
-            Text("""
-                 To see names here, please enable additional categories on the Preferences page.
-                 """,
-                 tableName: "PhotoClubHub.SwiftUI",
-                 comment: "Hint to the user if the database returns zero Members with empty Search filter.")
+    }
+
+    // MARK: - explaining an empty list
+
+    /// Picks the single reason the list is empty. The priority order itself lives in
+    /// `EmptyListReason.resolve`, shared with Maps and People; only the inputs below are specific to
+    /// this screen (#821).
+    private func emptyListReason(for sections: SectionedFetchResults<String, MemberPortfolio>)
+                                -> EmptyListReason {
+        EmptyListReason.resolve(hasVisibleRows: !allSectionsFilterToZero(sections),
+                                allCategoriesOff: sections.nsPredicate == Self.predicateNone,
+                                storeIsEmpty: anyMemberProbe.isEmpty,
+                                searchIsEmpty: searchText.wrappedValue.isEmpty)
+    }
+
+    /// The wording for each reason that has any. `nil` covers the two cases where the screen should stay
+    /// silent: rows are on display, or a pull-to-refresh is in progress and its spinner has already said it.
+    private func hintText(for reason: EmptyListReason) -> Text? {
+        switch reason {
+
+        case .listHasRows, .refreshing, .buildingDatabase:
+            return nil
+
+        case .noCategoriesEnabled:
+            return Text("""
+                        Warning: all member categories on the Settings page are disabled. \
+                        Please enable one or more options in Settings.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if all of the Settings toggles are disabled.")
+
+        case .databaseEmpty:
+            return Text("""
+                        To see names here, pull the list down to load the data.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: """
+                                 Hint to the user when the database holds no members at all, \
+                                 e.g. after the Load data manually setting emptied it.
+                                 """)
+
+        case .searchFilterTooStrict:
+            return Text("""
+                        To see names here, please adapt the Search filter \
+                        or enable additional categories on the Settings page.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if zero Members remain visible with Search filter in use.")
+
+        case .categoriesTooStrict:
+            return Text("""
+                        To see names here, please enable additional categories on the Settings page.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if the database returns zero Members with empty Search filter.")
         }
     }
 
@@ -123,8 +177,10 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     /// Returns `true` if nothing remains to display: every fetched section (possibly none at all)
-    /// filters down to zero members. Used to decide whether to show the "adapt the Search filter" hint,
-    /// because with empty sections suppressed the user would otherwise see a blank list without explanation.
+    /// filters down to zero members. This, rather than `sections.isEmpty`, is what "the list looks empty"
+    /// means — sections whose rows are all filtered out are suppressed in `body`, and sections whose rows
+    /// were all just deleted lose them to the `isUsable` test below, so either can leave the user staring
+    /// at a blank list while `isEmpty` insists there is something there.
     private func allSectionsFilterToZero(_ sections: SectionedFetchResults<String, MemberPortfolio>) -> Bool {
         sections.allSatisfy { filterMemberPortfolios(unFilteredPortfolios: $0).isEmpty }
     }

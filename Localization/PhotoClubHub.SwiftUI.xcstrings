@@ -4,6 +4,12 @@
     "?" : {
       "comment" : "Stands in for an absent build date or commit",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "?"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1588,13 +1594,13 @@
         }
       }
     },
-    "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." : {
+    "To see names here, please adapt the Search filter or enable additional categories on the Settings page." : {
       "comment" : "Hint to the user if zero Members remain visible with Search filter in use.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To see names here, please adapt the Search filter or enable additional categories on the Preferences page."
+            "value" : "To see names here, please adapt the Search filter or enable additional categories on the Settings page."
           }
         },
         "nl" : {
@@ -1605,19 +1611,13 @@
         }
       }
     },
-    "To see names here, please enable additional categories on the Preferences page." : {
+    "To see names here, please enable additional categories on the Settings page." : {
       "comment" : "Hint to the user if the database returns zero Members with empty Search filter.",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "To see names here, please enable additional categories on the Preferences page."
-          }
-        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm."
+            "value" : "Deze lijst is waarschijnlijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm."
           }
         }
       }
@@ -1673,19 +1673,13 @@
         }
       }
     },
-    "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Settings." : {
-      "comment" : "Hint to the user if all of the Preference toggles are disabled.",
+    "Warning: all member categories on the Settings page are disabled. Please enable one or more options in Settings." : {
+      "comment" : "Hint to the user if all of the Settings toggles are disabled.",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Settings."
-          }
-        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Settings."
+            "value" : "Waarschuwing: alle leden categorieën in de Instelling tab staan uit. Hierdoor is de getoonde lijst leeg."
           }
         }
       }
