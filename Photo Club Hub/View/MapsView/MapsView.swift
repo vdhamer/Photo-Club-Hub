@@ -12,7 +12,8 @@ import Photo_Club_Hub_Data // for types like Organization
 /// A scroll-based view that displays photo clubs and museums with maps and markers showing their locations.
 ///
 /// - Presents a `FilteredOrganizationView` inside a SwiftUI `ScrollView` with a `LazyVStack`.
-/// - Shows a fallback `NoClubsText` hint when no organizations (= clubs or museums) are loaded.
+/// - Leaves explaining an empty screen to `FilteredMapsView`, which is the only place that knows both
+///   the filtered and the unfiltered count, and whether a load pass is under way (#821).
 /// - Supports pull-to-refresh to delete and then reimport Core Data entities.
 /// - Requests location authorization (once) and starts location updates while the view is visible.
 ///
@@ -26,8 +27,8 @@ struct MapsView: View {
     /// Tracks user location to enable the user-location annotation on the map.
     @State private var locationManager = LocationManager()
 
-    /// Organizations fetched only to detect the empty state; sorting is irrelevant for counting.
-    /// Not `private`: also read by the screenshot preset in MapsView+Screenshot.swift.
+    /// Organizations fetched only so the screenshot preset can wait for them to arrive; sorting is
+    /// irrelevant for counting. Not `private`: read by the preset in MapsView+Screenshot.swift.
     @FetchRequest(
         sortDescriptors: [], // organizations is only used for counting, so sorting doesn't matter
         animation: .default)
@@ -50,10 +51,6 @@ struct MapsView: View {
                     searchText: $searchText)
             }
             .scrollTargetLayout()
-
-            if organizations.isEmpty {
-                NoClubsText()
-            }
 
             VStack(alignment: .leading) {
                 Text("Organizations_Caption_1",
@@ -111,19 +108,6 @@ struct MapsView: View {
         .disableAutocorrection(true)
     }
 
-}
-
-/// Fallback hint displayed when the database returns zero organizations,
-/// instructing the user to pull down to reload the default clubs.
-struct NoClubsText: View {
-    var body: some View {
-        Text("""
-             No photo clubs or museums seem to be currently loaded.
-             Try dragging down the Organizations screen to reload the default clubs.
-             """,
-             tableName: "PhotoClubHub.SwiftUI",
-             comment: "Hint to the user if the database returns zero Organizations.")
-    }
 }
 
 // MARK: - Previews
