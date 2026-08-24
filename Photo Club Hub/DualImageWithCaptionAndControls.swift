@@ -39,18 +39,18 @@ struct DualImageWithCaptionAndControls: View {
                     if let image = phase.image {
                         image // Displays the loaded image
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
+                            .scaledToFill()
                             .frame(height: squareSize)
                     } else if phase.error != nil  ||
                                 member.featuredImage == nil {
                         Image("Question-mark") // Displays image indicating an error occurred
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .scaledToFit()
                     } else {
                         ZStack {
                             Image("Tortoise") // Displays placeholder while loading
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
+                                .scaledToFit()
                                 .opacity(0.4)
                             ProgressView()
                                 .scaleEffect(x: 2, y: 2, anchor: .center)
