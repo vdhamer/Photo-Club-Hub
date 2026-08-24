@@ -35,7 +35,7 @@ struct MemberListSectionFooter: View {
             Spacer()
             VStack {
                 if filtCount < unfiltCount {
-                    Text(verbatim: // verbatim keeps these pretty empty strings out of the String Catalogue
+                    Text(verbatim: // verbatim keeps these pretty empty strings out of the String Catalog
                          "\(filtCount) \(filtCount==1 ? member : members) (\(of1) \(unfiltCount)) \(shown).")
                 } else {
                     Text(verbatim:
