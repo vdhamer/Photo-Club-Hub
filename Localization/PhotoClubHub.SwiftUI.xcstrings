@@ -889,19 +889,19 @@
         }
       }
     },
-    "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Organizations screen to reload the default clubs." : {
+    "No photo clubs or museums appear to be currently loaded.\nTry dragging down the Organizations screen to reload the default clubs." : {
       "comment" : "Hint to the user if the database returns zero Organizations.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Organizations screen to reload the default clubs."
+            "value" : "No photo clubs or museums appear to be currently loaded.\nTry dragging down the Organizations screen to reload the default clubs."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er zijn geen Fotoclubs of Musea momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
+            "value" : "De app bevat geen clubs of musea. Probeer het scherm helemaal omlaag te slepen om de gegevens via het netwerk op te halen."
           }
         }
       }
