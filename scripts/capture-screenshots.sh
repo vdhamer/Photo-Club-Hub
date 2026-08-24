@@ -191,7 +191,7 @@ SLEEP_BETWEEN_SCREENS=5
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT_DIR="${REPO_ROOT}/Scripts/screenshots"
 
-# Behaviour flags (set by args).
+# Behavior flags (set by args).
 DO_BUILD=0
 KEEP_BOOTED=0
 KEEP_PNG=1

@@ -99,7 +99,7 @@ struct PhotographersListView1718: View {
                 // Counts are computed as plain Ints before the Text() calls. Inline, the arithmetic and
                 // the filter closure sat inside string interpolation, which the type-checker could no
                 // longer solve once Expertise moved to another module. The interpolated literals are
-                // unchanged, so the .strings keys and localization behaviour are the same.
+                // unchanged, so the .strings keys and localization behavior are the same.
                 let totalCount: Int = Expertise.count(context: viewContext)
                 let supportedCount: Int = Expertise.getAll(context: viewContext)
                     .filter { keyword in keyword.isSupported }.count

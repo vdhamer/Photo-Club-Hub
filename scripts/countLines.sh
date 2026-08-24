@@ -49,7 +49,7 @@
 #   PCH_HTML_REPO / PCH_DATA_REPO if your checkouts live elsewhere. A missing
 #   checkout is a warning, not an error: its three columns are left empty.
 #
-# Behaviour:
+# Behavior:
 #   - Today's row is always replaced by this fresh recount (idempotent), even if
 #     the new count is lower (e.g. after deleting code).
 #   - Any OTHER duplicate dates are collapsed to one row keeping the highest

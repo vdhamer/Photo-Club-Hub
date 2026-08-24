@@ -54,8 +54,8 @@ struct PackageResourceResolutionTests {
         }
     }
 
-    @Test("The package's string catalogue resolves from the package bundle")
-    func stringCatalogueResolves() throws {
+    @Test("The package's string catalog resolves from the package bundle")
+    func stringCatalogResolves() throws {
         let bundle = try packageBundle()
         // localizedString(forKey:value:table:) returns `value` when the key cannot be found, so a
         // distinctive sentinel distinguishes "table resolved" from "fell back". Comparing against the

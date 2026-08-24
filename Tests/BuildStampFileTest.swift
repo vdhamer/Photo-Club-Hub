@@ -50,7 +50,7 @@ struct BuildStampFileTests {
     }
 
     @Test("No stamp is blank or contains a space")
-    func stampsHonourTheFormatContract() throws {
+    func stampsHonorTheFormatContract() throws {
         let stamps = try Self.buildStamps()
         for key in Self.stampKeys {
             let value = stamps[key] ?? ""

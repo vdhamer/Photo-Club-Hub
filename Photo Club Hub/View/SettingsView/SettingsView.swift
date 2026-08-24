@@ -67,7 +67,7 @@ struct SettingsView: View {
                                             comment: "Dismiss preferences without applying changes") :
                             String(localized: "No changes to undo",
                                    table: "PhotoClubHub.SwiftUI",
-                                   comment: "Explanation why Cancel buton is greyed out")
+                                   comment: "Explanation why Cancel buton is grayed out")
                     ) {
                         localSettings = settings // discard local changes
                         dismiss() // no-op when hosted in a tab
