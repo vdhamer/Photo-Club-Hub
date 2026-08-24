@@ -15,7 +15,7 @@
 ///
 /// The People tab currently doesn't produce `.noCategoriesEnabled`: `photographerPredicate`
 /// is hardcoded `TRUEPREDICATE`, so it has no category toggles to switch off.
-/// It *can* reach `.categoriesTooNarrow`, in the state where
+/// It *can* reach `.categoriesTooStrict`, in the state where
 /// photographers are stored but none are usable; its wording table answers that with the same "pull down
 /// to load" text as `.databaseEmpty`, which is the correct advice to the user there.
 enum EmptyListReason {
