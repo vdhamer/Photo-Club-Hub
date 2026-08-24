@@ -13,10 +13,25 @@ import Photo_Club_Hub_Data // for types like Organization
 @MainActor
 struct FilteredMapsView: View {
 
+    /// Would return nothing — what `organizationPredicate` yields when every category toggle is off.
+    private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
+
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
+
+    /// Unfiltered query that answers one question: does the data store hold *any* organization at all?
+    /// That separates "nothing has been loaded" from "your filters hide everything", which the above
+    /// FetchRequest cannot distinguish because its own predicate is one of the suspects (#821).
+    /// Only `isEmpty` is ever read — never a relationship — so it stays clear of the deleted-row
+    /// accessors that `isUsable` guards against (#802).
+    @FetchRequest(fetchRequest: {
+        let request = Organization.fetchRequest()
+        request.sortDescriptors = [] // required: @FetchRequest traps on a request with nil sortDescriptors
+        request.fetchLimit = 1       // one row is enough to answer "any?"
+        return request
+    }()) private var anyOrganizationProbe: FetchedResults<Organization>
 
     private let searchText: Binding<String>
 

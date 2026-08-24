@@ -20,8 +20,8 @@ import SwiftUI // for View
 
 /// Renders the hint chosen by `EmptyListReason.resolve`, or nothing when the screen speaks for itself.
 ///
-/// A screen adds this as the last element of its `List` content, after the `ForEach` over its rows, and
-/// supplies two private helpers of its own — one wrapping `resolve`, one holding the wording:
+/// A screen adds this as the first element of its `List` content, ahead of the `ForEach` over its rows,
+/// and supplies two private helpers of its own — one wrapping `resolve`, one holding the wording:
 /// ```swift
 /// EmptyListHint(reason: emptyListReason(), // private func: the screen's inputs → EmptyListReason
 ///               tint: .mapsColor,          // the color of the tab showing the hint
@@ -35,6 +35,11 @@ import SwiftUI // for View
 /// Because a non-empty list is one of the reasons, the hint is added unconditionally: there is no `if` at
 /// the call site, and no separate "empty state" branch in the screen. `body` returns nothing at all for
 /// the silent reasons.
+///
+/// It goes first because it reads like a `guard`: the reasons the screen might be empty are dealt with up
+/// front, leaving the rows below as the happy flow. Position is free either way — the hint is only ever
+/// visible when the `ForEach` renders nothing, so the two are mutually exclusive on screen — which makes
+/// this purely a question of how the `body` reads (#821).
 ///
 /// `wording` deliberately stays with the screen that uses it: only that screen knows what to call its own
 /// rows ("names", "clubs and museums", "photographers"), and keeping the strings next to the view makes
