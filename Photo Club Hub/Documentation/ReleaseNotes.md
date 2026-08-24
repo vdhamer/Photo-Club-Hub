@@ -102,7 +102,7 @@ STRUCTURAL
 * Tested with MacOS 26.5.2, Xcode 27.0 beta (27A5218g), Xcode 26.6 (17F113), iOS 27.0 beta (24A5380g), iOS 26.5.2 and  SwiftLint 0.65
 * Synchonized code with Photo Club Hub HTML
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
-* Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
+* Fixed string catalog flaw regarding roles and status (incorrectly labeled "stale")
 * Added missing uniqueness constraint
 * Significantly increased number of tests
 * JSON files used only for testing are no longer shipped inside the app
@@ -148,7 +148,7 @@ STRUCTURAL
 * Tested with MacOS 26.5.2, Xcode 27.0 beta (27A5218g), Xcode 26.6 (17F113), iOS 27.0 beta (24A5380g), iOS 26.5.2 and  SwiftLint 0.65
 * Synchonized code with Photo Club Hub HTML
 * Fixed missing CoreData import (gave warnings under Xcode 27.0)
-* Fixed string catalog flaw regarding roles and status (incorrectly labelled "stale")
+* Fixed string catalog flaw regarding roles and status (incorrectly labeled "stale")
 * Added missing uniqueness constraint
 * Significantly increased number of tests
 * JSON files used only for testing are no longer shipped inside the app
@@ -668,7 +668,7 @@ This build #4642 was made using Xcode 16.4.
 
 Code Maintenance
 * Bug fix: Fotoclub Den Dungen is no longer displayed as "Fotoclub Den Dungen (Den Dungen)"
-* Bug fix: display of GitHub URL and open source licence type in iOS Settings app
+* Bug fix: display of GitHub URL and open source license type in iOS Settings app
 * Turned localizeSortAndClip() into an initializer.
 * Tested with Xcode 26.0 (17A5241e), iOS 26 (23A5260k)
 * Added 2 new "recommended settings" present in Xcode 26 (17A5241e)
@@ -1314,7 +1314,7 @@ This is build #4603 in Apple's App Store.
 ### 2.4.2 (GitHub commit 3548647) 13-09-23
 
 Portfolio screen
-* Fixed bug where users were incorrectly labelled "former member". This release is to fix this bug.
+* Fixed bug where users were incorrectly labeled "former member". This release is to fix this bug.
 
 Readme screen
 * Fixed a typo in Dutch language version

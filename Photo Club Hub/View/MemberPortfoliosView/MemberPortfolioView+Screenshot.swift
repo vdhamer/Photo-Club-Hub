@@ -75,7 +75,7 @@ extension MemberPortfolioView {
                 withTransaction(transaction) { proxy.scrollTo(target, anchor: .top) }
                 // iOS 26's .sidebarAdaptable tab view plays a sidebar→tab-bar morph on first
                 // appearance that can outlast the standard 0.35 s SwiftUI animation budget.
-                // onAppear fires while that morph is still running, so signalling immediately
+                // onAppear fires while that morph is still running, so signaling immediately
                 // would write the marker before the screen is visually settled. A 2 s pause
                 // ensures the morph is complete before the capture script sees the marker.
                 try? await Task.sleep(for: .seconds(2))
