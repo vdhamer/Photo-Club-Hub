@@ -137,9 +137,7 @@ struct MemberPortfolioView: View {
 private extension View {
 
     /// Gives a `TipView` the same look as `CalloutBox`: its rounding, club-color border and wash, so the
-    /// tips and the empty-list callout below them stay one look. `.clubsColor` replaces the former
-    /// Color("_clubsColor") literal, whose lowercase c missed the case-sensitive asset name and drew no
-    /// border at all.
+    /// tips and the empty-list callout below them stay one look.
     ///
     /// `CalloutBox` cannot call this and instead repeats the styling itself, because `.tipCornerRadius`
     /// and `.tipBackground` only take effect on a `TipView`.
