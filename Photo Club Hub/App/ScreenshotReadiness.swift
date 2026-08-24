@@ -46,7 +46,7 @@ enum ScreenshotReadiness {
         try? FileManager.default.removeItem(at: markerURL)
     }
 
-    // MARK: - signalling when screens are available
+    // MARK: - signaling when screens are available
 
     /// SinglePortfolioView's gallery jump serves both Portfolio screen variants; this signals whichever
     /// one is active (each `signalReady(for:)` call is a no-op unless it matches `-initialTab`).
