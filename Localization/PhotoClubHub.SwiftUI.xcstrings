@@ -855,7 +855,7 @@
       }
     },
     "No changes to undo" : {
-      "comment" : "Explanation why Cancel buton is greyed out",
+      "comment" : "Explanation why Cancel buton is grayed out",
       "localizations" : {
         "en" : {
           "stringUnit" : {
