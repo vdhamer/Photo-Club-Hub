@@ -26,6 +26,17 @@ struct FilteredPhotographerView1718: View {
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
 
+    /// Unfiltered query that answers just one question: does the store hold *at least one* photographer?
+    /// That separates "nothing has been loaded" from "your Search text hides everything" (#821).
+    /// Only `isEmpty` is ever read — never a relationship — so it stays clear of the deleted-row
+    /// accessors that `isUsable` guards against (#802).
+    @FetchRequest(fetchRequest: {
+        let request = Photographer.fetchRequest()
+        request.sortDescriptors = [] // required: @FetchRequest traps on a request with nil sortDescriptors
+        request.fetchLimit = 1       // one row is enough to answer "any?"
+        return request
+    }()) private var anyPhotographerProbe: FetchedResults<Photographer>
+
     private let isDeletePhotographersPermitted = true // enable/disable .onDelete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
@@ -50,6 +61,11 @@ struct FilteredPhotographerView1718: View {
         ItemFilterStatsView(filteredCount: filteredPhotographers.count,
                             unfilteredCount: fetchedPhotographers.count,
                             unit: .photographer)
+        // Like a `guard`: deal with the reasons the screen could be empty, then get on with the happy flow
+        // below. Every reason but `.listHasRows` implies the ForEach is empty, so the two never both show.
+        EmptyListHint(reason: emptyListReason(),
+                      tint: .peopleColor,
+                      wording: hintText)
         ForEach(filteredPhotographers, id: \.id) { photographer in // each photographer's "card"
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
@@ -85,6 +101,56 @@ struct FilteredPhotographerView1718: View {
             deletePhotographers(indexSet: indexSet) // can be disabled using isDeletedPhotographerEnabled flag
         }
     } // body
+
+    // MARK: - explaining an empty screen
+
+    /// Picks the single reason the screen is empty. The priority order itself lives in
+    /// `EmptyListReason.resolve`, shared with Clubs and Maps; only the inputs below are specific to
+    /// this screen.
+    ///
+    /// `allCategoriesOff` is always `false` here: `photographerPredicate` is hardcoded `TRUEPREDICATE`
+    /// in `SettingsViewModel`, with all filtering done in this view, so People has no category toggles
+    /// to switch off. People had no hint at all before this, so unlike Maps it had nothing to flash and
+    /// no wrong wording — it simply left "0 photographers" above the gray captions (#821).
+    private func emptyListReason() -> EmptyListReason {
+        EmptyListReason.resolve(hasVisibleRows: !filteredPhotographers.isEmpty,
+                                allCategoriesOff: false,
+                                storeIsEmpty: anyPhotographerProbe.isEmpty,
+                                searchIsEmpty: searchText.wrappedValue.isEmpty)
+    }
+
+    /// The wording for each reason that has any. `nil` covers the two cases where the screen should stay
+    /// silent: photographers are on display, or a pull-to-refresh is in progress and its spinner said it.
+    private func hintText(for reason: EmptyListReason) -> Text? {
+        switch reason {
+
+        case .listHasRows, .refreshing, .buildingDatabase:
+            return nil
+
+        case .noCategoriesEnabled: // unreachable: People has no category toggles to switch off
+            return nil
+
+        // `.categoriesTooStrict` reaches People in one state only: photographers are stored but none are
+        // usable, because their rows are mid-deletion. There is no category to widen, and a refresh is
+        // what fixes it — which is exactly what the wording below already advises.
+        case .databaseEmpty, .categoriesTooStrict:
+            return Text("""
+                        To see photographers here, pull the list down to load the data.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: """
+                                 Hint to the user when the database holds no photographers at all, \
+                                 e.g. after the Load data manually setting emptied it.
+                                 """)
+
+        case .searchFilterTooStrict: // no "or enable more categories": People has no category toggles to enable
+            return Text("""
+                        To see photographers here, please change the Search (filter) text.
+                        """,
+                        tableName: "PhotoClubHub.SwiftUI",
+                        comment: "Hint to the user if zero Photographers remain visible with Search filter in use.")
+        }
+    }
 
     // isUsable keeps rows that pull-to-refresh has just deleted out of the view tree: their
     // relationships are already nullified, so rendering them trips the accessors (issue #802).

@@ -1639,15 +1639,9 @@
         }
       }
     },
-    "To see photographers here, please adapt the Search filter." : {
+    "To see photographers here, please change the Search (filter) text." : {
       "comment" : "Hint to the user if zero Photographers remain visible with Search filter in use.",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "To see photographers here, please adapt the Search filter."
-          }
-        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
