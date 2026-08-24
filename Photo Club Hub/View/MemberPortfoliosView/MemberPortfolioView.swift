@@ -61,26 +61,11 @@ struct MemberPortfolioView: View {
                 // Section prevents the List from adopting the tip as an implicit section header (all-caps styling).
                 Section {
                     // one-shot tip (toolbar → tabs migration); renders nothing once dismissed
-                    // Constants come from CalloutBox so the tips and the empty-list callout below them
-                    // stay one look. `.clubsColor` replaces the former Color("_clubsColor") literal,
-                    // whose lowercase c missed the case-sensitive asset name and drew no border at all.
                     TipView(TabNavigationTip())
-                        .tipCornerRadius(CalloutBox.cornerRadius)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: CalloutBox.cornerRadius)
-                                .stroke(Color.clubsColor, lineWidth: CalloutBox.borderWidth)
-                        )
-                        .tipBackground(Color.clubsColor.opacity(CalloutBox.backgroundOpacity))
-                        .tint(.primary)
+                        .calloutTipStyle()
 
                     TipView(ReadmeTip())
-                        .tipCornerRadius(CalloutBox.cornerRadius)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: CalloutBox.cornerRadius)
-                                .stroke(Color.clubsColor, lineWidth: CalloutBox.borderWidth)
-                        )
-                        .tipBackground(Color.clubsColor.opacity(CalloutBox.backgroundOpacity))
-                        .tint(.primary)
+                        .calloutTipStyle()
                 }
                 FilteredMemberPortfoliosView(memberPredicate: settingsModel.settings.memberPredicate,
                                              searchText: $searchText,
@@ -143,6 +128,30 @@ struct MemberPortfolioView: View {
             }
             .sheet(isPresented: $showingReadmeSheet, content: readmeSheetContent) // screenshot pipeline (#777)
         } // ScrollViewReader
+    }
+
+}
+
+// MARK: - Tip styling
+
+private extension View {
+
+    /// Gives a `TipView` the same look as `CalloutBox`: its rounding, club-color border and wash, so the
+    /// tips and the empty-list callout below them stay one look. `.clubsColor` replaces the former
+    /// Color("_clubsColor") literal, whose lowercase c missed the case-sensitive asset name and drew no
+    /// border at all.
+    ///
+    /// `CalloutBox` cannot call this and instead repeats the styling itself, because `.tipCornerRadius`
+    /// and `.tipBackground` only take effect on a `TipView`.
+    func calloutTipStyle() -> some View {
+        self
+            .tipCornerRadius(CalloutBox.cornerRadius)
+            .overlay {
+                RoundedRectangle(cornerRadius: CalloutBox.cornerRadius)
+                    .strokeBorder(Color.clubsColor, lineWidth: CalloutBox.borderWidth)
+            }
+            .tipBackground(Color.clubsColor.opacity(CalloutBox.backgroundOpacity))
+            .tint(.primary)
     }
 
 }
