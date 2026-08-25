@@ -207,6 +207,9 @@ The `Run GateAndStamp script` build phase, the last phase of the app target, run
 `scripts/gate-and-stamp.sh`. The phase itself is only a three-line invoker, so the script stays
 reviewable and greppable instead of living escaped inside `project.pbxproj`. It does two jobs, and
 writes only into the built app, never the source tree, so neither Mac's working tree is affected.
+The HTML app carries a byte-identical copy, and a weekly sweep in Photo-Club-Hub-Data fails when the
+two drift — so an edit here is an edit in both repos. The check is
+[`weekly-sweep.yml`](https://github.com/vdhamer/Photo-Club-Hub-Data/blob/main/.github/workflows/weekly-sweep.yml).
 
 - **Stamps, on every build.** Five keys are written to `BuildStamp.plist` inside the built app —
   a file of the script's own, not `Info.plist`. Xcode owns `Info.plist` and regenerates it from
