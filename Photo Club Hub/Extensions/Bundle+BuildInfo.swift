@@ -1,5 +1,5 @@
 //
-//  Bundle+VersionBuild.swift
+//  Bundle+BuildInfo.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 26/05/2022.
