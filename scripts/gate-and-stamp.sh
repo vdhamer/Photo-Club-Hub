@@ -3,10 +3,10 @@
 #
 #   Gates  (archiving only) refuse a dirty or unpushed working tree.
 #   Stamps (every build)    write GitCommitHash, BuildDate, LibraryVersion, LibraryRevision and
-#                           LibraryCommitDate into BuildStamp.plist inside the built app.
+#                           LibraryCommitDate into a custom BuildStamp.plist inside the built app.
 #
 # Stamped values never contain spaces: that is the format contract with the screens that display
-# them (#807, vdhamer/Photo-Club-Hub-HTML#239), and it means no value ever needs XML escaping.
+# them (#807, vdhamer/Photo-Club-Hub-HTML#239), and it implies no value ever needs XML escaping.
 #
 # Design: https://github.com/vdhamer/Photo-Club-Hub/issues/808, issues/814 and issues/822
 # Procedure: Photo Club Hub/Documentation/ReleaseProcess.md
@@ -35,14 +35,15 @@ fi
 
 hash=$(git -C "$PROJECT_DIR" rev-parse HEAD) # stamps: on every build
 test -z "$dirty" || hash="$hash-dirty"
-# The stamps go into a file of this script's own, never into the built Info.plist. Xcode owns that
-# one: it regenerates it from the target's INFOPLIST_FILE at a moment the build system picks, and
-# since this phase declares no inputs or outputs there is nothing ordering the two. On a clean build the
-# regeneration happens first and the stamps survive; on every incremental build afterwards it happens
-# a few milliseconds later and silently discards them (#822). Nothing else in the build produces
-# BuildStamp.plist, and code signing runs after this phase, so what is written here is what ships.
-# The resources folder is the app bundle itself on iOS and Contents/Resources on macOS; the build
-# setting covers both.
+# The stamps go into a file owned by this script, never into the built Info.plist.
+# Xcode owns that one: it regenerates it from the target's INFOPLIST_FILE at a moment determined by the build system.
+# Since this phase declares no inputs or outputs, there is nothing ordering the two.
+# On a clean build the regeneration happens first and the stamps survive;
+# on every incremental build afterwards it happens a few milliseconds later and silently discards them (#822).
+# Nothing else in the build produces BuildStamp.plist, and code signing runs after this phase,
+# so what is written here is what ships.
+# The resources folder is the app bundle itself on Photo Club Hub (iOS)
+# and Contents/Resources on Photo Club Hub HTML (macOS); the build setting covers both.
 stampDir="${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 test -d "$stampDir" || { echo "error: no resources folder at $stampDir"; exit 1; }
 
@@ -83,8 +84,8 @@ else
   done
 fi
 
-# The pin names a commit but not when it was made, and that is what separates "the library moved
-# last week" from "it has been stable for a year". Only git knows, so ask the checkout SwiftPM made,
+# The pin names a commit but not when it was made, and that is what separates "the library moved last week"
+# from "it has been stable for a year". Only git knows, so ask the checkout SwiftPM made,
 # which is a full clone. Asking for this exact revision self-validates: a missing or wrong checkout
 # simply has no such commit. Unlike BuildDate above, %cI is strict ISO 8601 with a UTC offset, so it
 # denotes an instant and the displaying app can render it in the reader's own timezone.
@@ -97,7 +98,7 @@ esac
 
 buildDate=$(date '+%Y-%m-%dT%H:%M') # one reading, so the plist and the build log cannot disagree
 
-# Written whole rather than key by key, so a stamp left by an earlier build can never linger.
+# Written in one go rather than key-by-key, so a stamp left by an earlier build can never linger.
 cat > "$stampDir/BuildStamp.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
