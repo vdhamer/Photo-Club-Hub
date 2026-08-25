@@ -208,7 +208,7 @@ The `Run GateAndStamp script` build phase, the last phase of the app target, run
 reviewable and greppable instead of living escaped inside `project.pbxproj`. It does two jobs, and
 writes only into the built app, never the source tree, so neither Mac's working tree is affected.
 The HTML app carries a byte-identical copy, and a weekly sweep in Photo-Club-Hub-Data fails when the
-two drift — so an edit here is an edit in both repos. The check is
+two drift — so an edit here also requires an edit in the Photo Club Hub HTML repo. The check is
 [`weekly-sweep.yml`](https://github.com/vdhamer/Photo-Club-Hub-Data/blob/main/.github/workflows/weekly-sweep.yml).
 
 - **Stamps, on every build.** Five keys are written to `BuildStamp.plist` inside the built app —
