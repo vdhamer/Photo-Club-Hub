@@ -20,7 +20,7 @@ USER-FACING
 
 STRUCTURAL
 
-- Tested with macOS 26.6.2 (25G76) and on iOS 26.6.1 and SwiftLint 0.65.1 
+- Tested with macOS 26.6.2 (25G76) and on iOS 26.6.1 and SwiftLint 0.65.1  and Xcode 27 beta 6 (27A5252f)
 - Cleaned up naming of User Defaults keys ([#820](https://github.com/vdhamer/Photo-Club-Hub/issues/820))
 - Build stamps moved out of the Info.plist Xcode regenerates, into their own `BuildStamp.plist`, plus a test that catches a stamp that stops arriving ([#822](https://github.com/vdhamer/Photo-Club-Hub/issues/822))
 - Archiving refuses a build number that already has a `b<number>` tag ([#818](https://github.com/vdhamer/Photo-Club-Hub/issues/818))
