@@ -6,6 +6,14 @@
 
 ---------------------------------------------------------------------------
 
+### 3.0.2 (GitHub commit ???????) ??-??-2026
+
+STRUCTURAL
+
+- The People tab screenshot anchors on Edjoe Osinski, so Rien den Otter's card — the only one with two thumbnails — sits in the middle of the shot instead of at the top, where it made the single-thumbnail cards below look unfinished. The readiness gate now exempts the anchor: it previously required a `featuredImage`, which Osinski does not have, so the capture waited forever ([#826](https://github.com/vdhamer/Photo-Club-Hub/issues/826))
+
+---------------------------------------------------------------------------
+
 ### 3.0.1 (GitHub commit ???????) ??-09-2026
 
 USER-FACING
