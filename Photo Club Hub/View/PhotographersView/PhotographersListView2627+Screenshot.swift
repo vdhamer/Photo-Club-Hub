@@ -17,16 +17,25 @@ import Photo_Club_Hub_Data // for types like Photographer
 @available(iOS 26.0, *)
 extension PhotographersListView2627 {
 
-    // -initialTab People ⇒ open scrolled to this photographer's card ("Mil, Ad van") anchored
-    // at the top, so the next card ("Mil, Francien van") peeks in below it (#776). Nil in normal use.
+    // -initialTab People ⇒ open scrolled to this photographer's card ("Osinski, Edjoe") anchored
+    // at the top, so the next card ("Otter, Rien den") sits in the middle of the shot (#776).
+    // Nil in normal use.
+    //
+    // Rien den Otter is the point of the screenshot: he is the only photographer with two
+    // image-bearing memberships, so his card shows two thumbnails side by side. He is deliberately
+    // NOT the anchor — at the top he sets an expectation the single-thumbnail cards below him
+    // appear to fall short of. Anchoring one card earlier puts him in the centre instead.
+    //
+    // Edjoe Osinski has no featuredImage of his own (#826), so his card renders the app's
+    // "No images available here yet" placeholder. That is why the readiness gate below exempts
+    // the anchor: requiring an image here would wait forever.
     var scrollPresetPhotographerName: String? {
-        UserDefaults.standard.string(forKey: "initialTab")?.lowercased() == "people" ? "Ad van Mil" : nil
-//            ? "Edjoe Osinski" : nil
+        UserDefaults.standard.string(forKey: "initialTab")?.lowercased() == "people" ? "Edjoe Osinski" : nil
     }
 
     // The card that peeks in just below the scroll-preset target (#776); its images are also
     // prefetched so both visible cards are fully rendered when the screenshot is taken.
-    private static let secondVisiblePhotographerName = "Francien van Mil"
+    private static let secondVisiblePhotographerName = "Rien den Otter"
 
     // Prefetch timeout: give up and signal readiness even if images are still in flight,
     // so the script never hangs on a slow image host. 20 s is generous; cache hits return
@@ -60,11 +69,12 @@ extension PhotographersListView2627 {
         guard !didApplyPreset else { return }
         if let target = scrollPresetPhotographerName,
            let photographer = photographers.first(where: { $0.fullNameFirstLast == target }),
-           photographer.memberships.contains(where: { $0.featuredImage != nil }) {
-            // Only latch when at least one membership has a featuredImage URL, so
-            // signalWhenThumbnailsReady has real URLs to prefetch. Without this guard the
-            // preset could fire when the Photographer record first arrives (level-1 JSON)
-            // before any MemberPortfolio records exist and before debouncing is meaningful.
+           !photographer.memberships.isEmpty {
+            // Latch once the anchor has at least one MemberPortfolio, so debouncing is meaningful:
+            // without this the preset could fire when the Photographer record first arrives from
+            // level-1 JSON, before any membership exists. Deliberately NOT gated on featuredImage —
+            // the anchor may legitimately have none (#826), and the second card carries that
+            // requirement instead.
             didApplyPreset = true
             var transaction = Transaction()
             transaction.disablesAnimations = true
@@ -93,9 +103,9 @@ extension PhotographersListView2627 {
     // thumbnails as orange question marks (member.featuredImage == nil) (#776).
     //
     // secondPhotographer is NOT captured before the Task: on machines with many CPU cores
-    // (e.g. M1 Ultra) the preset can latch before Level-1 JSON for de Gender has merged
-    // Francien van Mil's Photographer record into the view context, leaving secondPhotographer
-    // nil for the entire Task. Re-fetching inside the loop detects her appearance (#790).
+    // (e.g. M1 Ultra) the preset can latch before the Level-1 JSON carrying the second visible
+    // photographer's record has merged into the view context, leaving secondPhotographer nil for
+    // the entire Task. Re-fetching inside the loop detects that record appearing (#790).
     private func signalWhenThumbnailsReady(for primaryPhotographer: Photographer) {
         Task { @MainActor in
             // Poll until ALL conditions hold for membershipStabilityRequired consecutive checks:
@@ -109,7 +119,7 @@ extension PhotographersListView2627 {
             // A photographer can reach a stable membership count while a slow club's row is still
             // absent, or present with a nil featuredImage — either way the thumbnail renders as an
             // orange question mark. Gating on featuredImage completeness closes that race; the
-            // secondary card (Francien van Mil) is de-Gender-only, so it depends on this entirely.
+            // secondary card depends on this entirely when its club is one of the slow ones.
             var prevPrimary = -1
             var prevSecond  = -1
             var stableChecks = 0
@@ -141,6 +151,10 @@ extension PhotographersListView2627 {
                 if let url = photographer.photographerImage { urls.insert(url) }
                 for membership in photographer.memberships {
                     if let url = membership.featuredImage { urls.insert(url) }
+                    // What ImageChoice actually renders: non-optional, and for a member without an
+                    // image of their own it is the shared placeholder. Prefetching it keeps the
+                    // anchor's card from being caught on AsyncImage's question-mark branch (#826).
+                    urls.insert(membership.featuredImageThumbnail)
                 }
             }
             let urlArray = Array(urls)
@@ -171,12 +185,16 @@ extension PhotographersListView2627 {
         }
     }
 
+    // The anchor is exempt: a photographer whose JSON leaves featuredImage empty never satisfies
+    // this, and waiting for one deadlocks the capture (#826). Its card shows the app's own
+    // placeholder, which is a settled state rather than a half-loaded one. The second card still
+    // has to be complete — it is the one whose thumbnails the screenshot is actually advertising,
+    // and a nil there really does mean a slow club has not finished writing yet.
     private func allFeaturedImagesPresent(primary: Photographer, second: Photographer?) -> Bool {
-        for photographer in [primary, second].compactMap({ $0 }) { // check both photographers
-            let memberships = photographer.memberships
-            if memberships.isEmpty { return false }
-            if memberships.contains(where: { $0.featuredImage == nil }) { return false } // either featuredImage missing
-        }
+        if primary.memberships.isEmpty { return false }
+        guard let second else { return false }
+        if second.memberships.isEmpty { return false }
+        if second.memberships.contains(where: { $0.featuredImage == nil }) { return false }
         return true
     }
 
