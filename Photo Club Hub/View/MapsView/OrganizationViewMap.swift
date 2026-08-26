@@ -100,7 +100,8 @@ struct MapViewPreviews: View {
                                                           optionalFields: OrganizationOptionalFields(),
                                                           pinned: false)
 
-        _ = Level1JsonReader(bgContext: context, isBeingTested: false, useOnlyInBundleFile: false)
+        // Every organization this preview shows is the one created above, in this in-memory store.
+        // Nothing is fetched or loaded from JSON: a preview renders what it built itself.
 
         // Save the context so the fetch request can find the data
         do {
