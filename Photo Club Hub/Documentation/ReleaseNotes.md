@@ -17,6 +17,7 @@ USER-FACING
 - Maps screen now explains an empty page, instead of leaving you with just "0 organizations" — including the case where all club and museum categories are switched off ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
 - Maps no longer briefly claims that no clubs are loaded while you are pulling down to refresh ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
 - People screen now explains an empty page, instead of leaving you with just "0 photographers" ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
+- TODO: Refreshed some of the screenshots on App Store (Clubs tab changed somewhat)
 
 STRUCTURAL
 
@@ -76,7 +77,7 @@ STRUCTURAL
 * Tested with Xcode 27.0 beta 4 (27A5228h) and iOS 27.0 beta 4 (24A5390e)
 * Script-based screenshot capture (allows more frequent screenshot updates)
 
-This build #4664 was made using Xcode 27.0 beta. A next build is intended to go the App Store.
+This build #4664 was made using Xcode 27.0 beta. A next build is intended to go the App Store. But the next build was renamed to v3.0.0
 
 ---------------------------------------------------------------------------
 
