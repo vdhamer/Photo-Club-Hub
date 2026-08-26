@@ -11,12 +11,14 @@
 USER-FACING
 
 - Increased contrast of club names on Clubs screen ([#816](https://github.com/vdhamer/Photo-Club-Hub/issues/816))
+- **One-time database reset on first launch of build 4666.** The stored data is wiped and reloaded from scratch, so the first launch after updating takes noticeably longer. Triggered by the `dataResetPending301b4666` key; the reason and the mechanism are in Photo Club Hub Data's own 3.0.1 release notes, not repeated here ([#810](https://github.com/vdhamer/Photo-Club-Hub/issues/810)).
 - Revised versioning information in Settings app ([#814](https://github.com/vdhamer/Photo-Club-Hub/issues/814))
 - Dutch and English wording for the "About this build" rows in the Settings app ([#814](https://github.com/vdhamer/Photo-Club-Hub/issues/814))
 - Empty Clubs list now says the data still needs loading, instead of blaming the Settings toggles ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
 - Maps screen now explains an empty page, instead of leaving you with just "0 organizations" — including the case where all club and museum categories are switched off ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
-- Maps no longer briefly claims that no clubs are loaded while you are pulling down to refresh ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
+- Pull-to-refresh no longer briefly claims that nothing is loaded while it works — on Clubs, Maps and People alike, since all three share one empty-list explanation ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
 - People screen now explains an empty page, instead of leaving you with just "0 photographers" ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
+- Clubs, Maps and People show a spinner while the database is being filled for the first time, rather than an empty screen with no explanation ([#821](https://github.com/vdhamer/Photo-Club-Hub/issues/821))
 - TODO: Refreshed some of the screenshots on App Store (Clubs tab changed somewhat)
 
 STRUCTURAL
