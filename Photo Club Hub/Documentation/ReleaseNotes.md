@@ -25,7 +25,7 @@ STRUCTURAL
 - Build stamps moved out of the Info.plist Xcode regenerates, into their own `BuildStamp.plist`, plus a test that catches a stamp that stops arriving ([#822](https://github.com/vdhamer/Photo-Club-Hub/issues/822))
 - Archiving refuses a build number that already has a `b<number>` tag ([#818](https://github.com/vdhamer/Photo-Club-Hub/issues/818))
 - Bug fix: build stamps in Settings fell back to placeholders after a rebuild ([#822](https://github.com/vdhamer/Photo-Club-Hub/issues/822))
-- MapsView preview no longer starts a Level 1 load of the legacy `root.level1.json`. It renders the sample club it creates, so it is deterministic and offline. Required before Photo Club Hub Data narrows its per-level readers to `internal` ([#825](https://github.com/vdhamer/Photo-Club-Hub/issues/825))
+- MapsView preview no longer starts a Level 1 load of the legacy `root.level1.json`. It renders the sample club it creates, so it is deterministic and offline. Required before this app can move off Data 3.0.1, the last release in which the per-level readers were public ([#825](https://github.com/vdhamer/Photo-Club-Hub/issues/825))
 
 ---------------------------------------------------------------------------
 
