@@ -181,6 +181,7 @@
 		37B534B22F2437C7000EA5BB /* ClubsNL.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = ClubsNL.xlsx; sourceTree = "<group>"; };
 		37C9BEB92FFC5F120075F6DE /* ReadmeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeButton.swift; sourceTree = "<group>"; };
 		37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
+		37CAE14C303FA18D00902C0F /* Photo_Club_Hub_3_0_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_3_0_2.xcdatamodel; sourceTree = "<group>"; };
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
@@ -1514,6 +1515,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				37CAE14C303FA18D00902C0F /* Photo_Club_Hub_3_0_2.xcdatamodel */,
 				372601BB303517F0007DBC00 /* Photo_Club_Hub_3_0_1.xcdatamodel */,
 				D0229855300E73FC006D0A41 /* Photo_Club_Hub_2_10_1.xcdatamodel */,
 				D05326532FB49BA3008567FC /* Photo_Club_Hub_2_10_0.xcdatamodel */,
@@ -1549,7 +1551,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = 372601BB303517F0007DBC00 /* Photo_Club_Hub_3_0_1.xcdatamodel */;
+			currentVersion = 37CAE14C303FA18D00902C0F /* Photo_Club_Hub_3_0_2.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
