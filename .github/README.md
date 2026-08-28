@@ -7,6 +7,7 @@
 [![Issues][issues-shield]][issues-url]
 [![Discussions][discussions-shield]][discussions-url]
 [![MIT License][license-shield]][license-url]
+[![Live JSON][live-json-shield]][live-json-url]
 
 ![Screenshots of 3 screens](images/Levels/Levels_EN_Light.jpg "Screenshots of app")
 
@@ -1491,3 +1492,6 @@ Project Link: [https://github.com/vdhamer/Photo-Club-Hub](https://github.com/vdh
 
 [license-shield]: https://img.shields.io/github/license/vdhamer/Photo-Club-Hub?style=plastic
 [license-url]: https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/LICENSE.md
+
+[live-json-shield]: https://img.shields.io/github/actions/workflow/status/vdhamer/Photo-Club-Hub/protect-live-json.yml?style=plastic&label=live%20JSON
+[live-json-url]: https://github.com/vdhamer/Photo-Club-Hub/actions/workflows/protect-live-json.yml
