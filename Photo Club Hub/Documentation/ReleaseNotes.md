@@ -10,7 +10,9 @@
 
 STRUCTURAL
 
-- The People tab screenshot anchors on Edjoe Osinski, so Rien den Otter's card — the only one with two thumbnails — sits in the middle of the shot instead of at the top, where it made the single-thumbnail cards below look unfinished. The readiness gate now exempts the anchor: it previously required a `featuredImage`, which Osinski does not have, so the capture waited forever ([#826](https://github.com/vdhamer/Photo-Club-Hub/issues/826))
+- **Maps stops re-geocoding clubs it has already resolved.** Every time a club's card was added to the view hierarchy, `FilteredMapsView` fired a fresh `CLGeocoder` request for a town and country name it was already holding, and wrote the result back without comparing it. Measured on iOS 26.5: leaving Maps for another tab and returning re-geocoded the same club, because the teardown makes `.onAppear` fire again — one rate-limited request per card that renders, on every visit, indefinitely. The card now skips the lookup when a localized name is already stored, and `updateTownCountry` assigns only on a real difference, so a re-derived identical name no longer dirties the row. Steady-state cost drops to zero requests; a given club is geocoded once. Because the stored fields carry no language of their own, a device-language change discards the stored names once so they are re-derived in the new language. Temporary: language-keyed `LocalizedAddress` rows and a single queued request replace this path entirely in Photo-Club-Hub-Data#22 step 6 ([#827](https://github.com/vdhamer/Photo-Club-Hub/issues/827))
+
+- The People tab screenshot anchors on Edjoe Osinski, so Rien den Otter's card — a card with two thumbnails — sits in the middle of the shot instead of at the top, where it made the single-thumbnail cards below look unfinished. The readiness gate now exempts the anchor: it previously required a `featuredImage`, which Osinski does not have, so the capture waited forever ([#826](https://github.com/vdhamer/Photo-Club-Hub/issues/826))
 
 ---------------------------------------------------------------------------
 
