@@ -33,6 +33,22 @@ struct FilteredMapsView: View {
         return request
     }()) private var anyOrganizationProbe: FetchedResults<Organization>
 
+    /// The language these cards are shown in: the app's own resolved UI language, so a localized town
+    /// reads in the same language as the rest of the interface. `knownRegions` is en/nl, so this can only
+    /// resolve to a language the site generator also publishes, which keeps the rows written here
+    /// interchangeable with the ones `OrganizationGeocoder` writes (#827).
+    ///
+    /// A `@FetchRequest` rather than a lookup per card: SwiftUI maintains it, so the row is not
+    /// re-fetched on every body evaluation. Empty only if `Language.initConstants` has not run.
+    @FetchRequest(fetchRequest: {
+        let request = Language.fetchRequest()
+        request.predicate = NSPredicate(format: "isoCode_ =[c] %@", // avoid localization
+                                        Locale.current.language.languageCode?.identifier ?? "en")
+        request.sortDescriptors = [] // required: @FetchRequest traps on a request with nil sortDescriptors
+        request.fetchLimit = 1       // one row is enough
+        return request
+    }()) private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
+
     private let searchText: Binding<String>
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
@@ -71,7 +87,7 @@ struct FilteredMapsView: View {
 
                 MapsViewTitle(organization: filteredOrganization)
 
-                MapsViewInfo(organization: filteredOrganization)
+                MapsViewInfo(organization: filteredOrganization, language: uiLanguages.first)
 
                 MapView(filteredOrganization: filteredOrganization,
                         fetchedOrganizations: fetchedOrganizations) // to show all markers within map scope
@@ -86,16 +102,38 @@ struct FilteredMapsView: View {
                 let town = filteredOrganization.town // unlocalized
                 let coordinates = filteredOrganization.coordinates
 
-                Task.detached { // other (non-bgContext) background thread to access 2 async functions
+                // Apple's geocoder is rate limited, so don't spend a request re-deriving a name already
+                // stored. A card re-appears every time it is added to the hierarchy again (#827).
+                guard let uiLanguage = uiLanguages.first else { return } // Language table not seeded yet
+                guard Self.needsGeocoding(filteredOrganization, for: uiLanguage) else { return }
+                let isoCode = uiLanguage.isoCode
+
+                // Deliberately outlives the card. `.onAppear` does not await this, and nothing cancels it
+                // when the card scrolls away: but, by then, the rate-limited request has already been spent,
+                // so abandoning it would discard an answer worth keeping for every later appearance and every
+                // later launch — this fills the cache, not just this card. The guard above means it runs at
+                // most once per organization per language. At least, until the entire database content is wiped
+                // but that is increasingly unnecessary/discouraged in the app's roadmap.
+                // Both awaited methods are `@MainActor`-isolated, because `FilteredMapsView` is,
+                // so detaching keeps `.onAppear` from waiting but does not move the work off the main thread.
+                Task.detached {
                     var localizedTown: String
                     var localizedCountry: String?
                     do {
                         let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
-                            try await reverseGeocode(coordinates: coordinates)
+                            try await reverseGeocode(coordinates: coordinates, isoCode: isoCode)
                         localizedTown = locality ?? town // unlocalized as fallback for localized → String
                         localizedCountry = nation // optional String
-                        await updateTownCountry(clubName: clubName, town: town,
-                                                localizedTown: localizedTown, localizedCountry: localizedCountry)
+                        // Nothing consumes the result, and nothing needs to: the background save merges
+                        // into `viewContext` (`automaticallyMergesChangesFromParent`, set in
+                        // `PersistenceController`) and the `@FetchRequest` above re-renders the card. The
+                        // await only keeps this task alive until the save has landed.
+                        await updateTownCountry(
+                            clubName: clubName, town: town, languageIsoCode: isoCode,
+                            addressStrings: LocalizedAddressStrings(
+                                localizedTown: localizedTown,
+                                localizedCountry: localizedCountry ?? LocalizedAddress.unknownCountry),
+                            coordinates: coordinates)
                     } catch {
                         print("ERROR: could not reverseGeocode (\(coordinates.latitude), \(coordinates.longitude))")
                     }
@@ -169,9 +207,26 @@ struct FilteredMapsView: View {
         }
     }
 
-    // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
-    private func updateTownCountry(clubName: String, town: String,
-                                   localizedTown: String, localizedCountry: String?) async {
+    /// Stores one geocoded address: creates or updates the `LocalizedAddress` row for this organization
+    /// in this language, on a private background context.
+    ///
+    /// Everything arrives as values rather than as objects because `NSManagedObject` is not `Sendable` and
+    /// is bound to the context that fetched it. So the organization and the language are re-found here, in
+    /// the background context, from keys the caller captured on the main queue before detaching.
+    ///
+    /// - Parameters:
+    ///   - clubName: the organization's `fullName`. Together with `town` it is the store's unique identifier of an `Organization`,
+    ///     so the pair re-finds exactly one row.
+    ///   - town: the *unlocalized* town from the JSON — the second half of that key, not the geocoded name.
+    ///   - languageIsoCode: the language the address was derived in, used to re-find the `Language` row.
+    ///     A string rather than a `Language`, for the sendability reason above.
+    ///   - addressStrings: the geocoded town and country. Bundled into one value because the five
+    ///     parameters here are SwiftLint's limit, which is what that type exists for.
+    ///   - coordinates: the coordinates the address was derived from. Stored as `prevCoordinates`, so a
+    ///     club that later moves is geocoded again rather than keeping a name for where it used to be.
+    private func updateTownCountry(clubName: String, town: String, languageIsoCode: String,
+                                   addressStrings: LocalizedAddressStrings,
+                                   coordinates: CLLocationCoordinate2D) async {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext() // background thread
         bgContext.name = "save reverseGeocode \(clubName)"
@@ -197,16 +252,29 @@ struct FilteredMapsView: View {
 
             print("""
                   Photo Club: \(photoClub.fullName), \(photoClub.town) -> \
-                  \(String(describing: localizedTown)), \(String(describing: localizedCountry))
+                  \(addressStrings.localizedTown), \(addressStrings.localizedCountry) [\(languageIsoCode)]
                   """)
 
-            photoClub.localizedTown = localizedTown
-            if let localizedCountry { photoClub.localizedCountry = localizedCountry}
+            guard let language = Language.find(context: bgContext, isoCode: languageIsoCode) else {
+                print("ERROR: no Language row for \(languageIsoCode); cannot store a localized address")
+                return
+            }
+
+            // `findCreateUpdate` compares before assigning and records `prevCoordinates`, so an unchanged
+            // re-geocode leaves the row clean and a club that moved is detected next time (#827).
+            LocalizedAddress.findCreateUpdate(
+                bgContext: bgContext,
+                organization: photoClub,
+                language: language,
+                newLocalizedAddressStrings: addressStrings,
+                newCoordinates: coordinates)
+
+            guard bgContext.hasChanges else { return }
             do {
-                try bgContext.save() // persist Town, Country or both for an organization (on local context)
+                try bgContext.save() // persist the localized address for this (organization × language)
             } catch {
                 print("""
-                      ERROR: could not save \(localizedTown), \(localizedCountry ?? "nil") for \(clubName) to CoreData
+                      ERROR: could not save \(addressStrings.localizedTown) for \(clubName) to CoreData
                       """)
             }
         }
@@ -230,12 +298,29 @@ struct FilteredMapsView: View {
 
 extension FilteredMapsView { // reverse GeoCoding
 
-    private func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
+    /// True when this organization has no localized address in `language`, or when it has moved since
+    /// the stored one was derived.
+    ///
+    /// A row is per (organization × language), so unlike the deprecated single-slot columns this cannot
+    /// serve a name in the wrong language: a device switched to another supported language simply finds
+    /// no row and geocodes afresh. `prevCoordinates` covers the other staleness — a club whose
+    /// coordinates changed in the JSON — which the columns could not express at all (#827).
+    static func needsGeocoding(_ organization: Organization, for language: Language) -> Bool {
+        guard let address = organization.localizedAddress(for: language) else { return true }
+        return address.prevCoordinates != organization.coordinates
+    }
+
+    /// Reverse-geocodes in `isoCode` rather than in whatever the device implies, so the stored name is a
+    /// decision rather than an accident. Mirrors `OrganizationGeocoder`, which sets `preferredLocale` per
+    /// language as it loops over the languages the site publishes in (#827).
+    private func reverseGeocode(coordinates: CLLocationCoordinate2D,
+                                isoCode: String) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
         let location = CLLocation(latitude: coordinates.latitude,
                                   longitude: coordinates.longitude)
 
-        guard let placemark = try await geocoder.reverseGeocodeLocation(location).first else {
+        guard let placemark = try await geocoder.reverseGeocodeLocation(
+            location, preferredLocale: Locale(identifier: isoCode)).first else {
             throw CLError(.geocodeFoundNoResult)
         }
 
