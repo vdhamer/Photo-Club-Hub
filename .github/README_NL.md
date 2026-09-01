@@ -1120,7 +1120,7 @@ Sommige van deze hiaten komen [hieronder](#hoe-data-wordt-geladen) aan bod.
 
 ### Het datamodel
 
-![Datamodel](images/dataModel.png "Het datamodel")
+![Datamodel](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub-Data/main/images/dataModel.png "Het datamodel")
 
 <ul><details><summary>Entiteiten van het datamodel (klik om uit te vouwen)</summary></p>
 

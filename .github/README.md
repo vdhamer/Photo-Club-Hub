@@ -1114,7 +1114,7 @@ Some of these gaps are addressed [below](#the-new-approach).
 
 ### The Data Model
 
-![Data model](images/dataModel.png "The data model")
+![Data model](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub-Data/main/images/dataModel.png "The data model")
 
 <ul><details><summary>Data Model Entities (click to expand)</summary></p>
 
