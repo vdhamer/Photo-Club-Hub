@@ -6,17 +6,19 @@
 
 ---------------------------------------------------------------------------
 
-### 3.0.2 (GitHub commit ???????) ??-??-2026
+### 3.0.2 (GitHub commit ???????) ??-09-2026
 
 STRUCTURAL
 
-- **Maps stops re-geocoding clubs it has already resolved.** Every time a club's card was added to the view hierarchy, `FilteredMapsView` fired a fresh `CLGeocoder` request for a town and country name it was already holding, and wrote the result back without comparing it. Measured on iOS 26.5: leaving Maps for another tab and returning re-geocoded the same club, because the teardown makes `.onAppear` fire again — one rate-limited request per card that renders, on every visit, indefinitely. The card now skips the lookup when a localized name is already stored, and `updateTownCountry` assigns only on a real difference, so a re-derived identical name no longer dirties the row. Steady-state cost drops to zero requests; a given club is geocoded once. Because the stored fields carry no language of their own, a device-language change discards the stored names once so they are re-derived in the new language. Temporary: language-keyed `LocalizedAddress` rows and a single queued request replace this path entirely in Photo-Club-Hub-Data#22 step 6 ([#827](https://github.com/vdhamer/Photo-Club-Hub/issues/827))
+- **Maps stops reverse-geocoding clubs it has already resolved.** 
+Every time a club's card was added to the view hierarchy, `FilteredMapsView` asked Apple's server for a town and country name the app was already holding. Measured on iOS 26.5: leaving Maps for another tab and returning rev-geocoded the same club, because the teardown makes `.onAppear` fire again — one rate-limited request per card that renders on every future visit, with a Core Data write each time. The displayed data was correct; but it cost external requests and internal writes. The card now asks only when it holds no address in the interface language, or when the club's coordinates have moved since that address was derived, which takes the steady state to zero requests. Since re-deriving on every appearance was also what kept those names current, both cases are now handled deliberately rather than as a side effect: a club that relocates is re-geocoded, and a switch to another supported language finds no stored address and derives one.
+One change of behaviour comes with it — the geocoder is now told which language to answer in, this app's own user interface language setting, instead of inheriting whatever the device implies. On a device set to a language the app does not offer, the town used to appear in that language beside an English interface, and now reads in English with it. Requires Photo Club Hub Data 3.1.0. Moving the geocoding call itself into the package, where the website generator already queues and caches its requests, is Photo-Club-Hub-Data#38 ([#827](https://github.com/vdhamer/Photo-Club-Hub/issues/827))
 
 - The People tab screenshot anchors on Edjoe Osinski, so Rien den Otter's card — a card with two thumbnails — sits in the middle of the shot instead of at the top, where it made the single-thumbnail cards below look unfinished. The readiness gate now exempts the anchor: it previously required a `featuredImage`, which Osinski does not have, so the capture waited forever ([#826](https://github.com/vdhamer/Photo-Club-Hub/issues/826))
 
 ---------------------------------------------------------------------------
 
-### 3.0.1 (GitHub commit ???????) ??-09-2026
+### 3.0.1 (GitHub commit f7c6756) 26-08-2026
 
 USER-FACING
 
