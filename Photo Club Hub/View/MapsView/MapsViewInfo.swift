@@ -22,11 +22,18 @@ struct MapsViewInfo: View {
     let organizationWebsite: URL?
     @Binding var isMapScrollLocked: Bool // bound so the lock toggle writes back to the Organization
 
-    init(organization: Organization) { // higher level initializer for production
+    /// - Parameter language: the language to show the address in, or nil when the `Language` table has
+    ///   not been seeded yet. Nil falls back to the unlocalized town the JSON supplied (#827).
+    init(organization: Organization, language: Language?) { // higher level initializer for production
         iconSystemName = systemName(organizationType: organization.organizationType, circleNeeded: true)
         isUnknownType = organization.organizationType.isUnknown
-        localizedTown = organization.localizedTown
-        localizedCountry = organization.localizedCountry
+        if let language {
+            localizedTown = organization.localizedTown(for: language)
+            localizedCountry = organization.localizedCountry(for: language)
+        } else {
+            localizedTown = organization.town
+            localizedCountry = LocalizedAddress.unknownCountry
+        }
         memberCount = organization.members.count
         organizationWebsite = organization.organizationWebsite
         _isMapScrollLocked = Binding(
@@ -123,10 +130,10 @@ struct MapsViewInfo: View {
         Divider()
         MapsViewInfo(iconSystemName: "camera.circle.fill",
                              isUnknownType: false,
-                             localizedTown: "Waalre",
+                             localizedTown: "Eindhoven",
                              localizedCountry: "Netherlands",
-                             memberCount: 24,
-                             organizationWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
+                             memberCount: 20,
+                             organizationWebsite: URL(string: "https://www.fcDeGender.nl"),
                              isMapScrollLocked: $lockedWaalre)
         Divider()
         MapsViewInfo(iconSystemName: "questionmark.circle.fill",
