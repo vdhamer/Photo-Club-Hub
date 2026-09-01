@@ -27,7 +27,7 @@ there are two.
 
 | Step | What | Machine |
 | --- | --- | --- |
-| 1 | Bump build number and marketing version; add matching data model version; commit; push | Dev |
+| 1 | Bump build number and marketing version; commit; push | Dev |
 | 2 | Develop, keeping `ReleaseNotes.md` and origin (GitHub) up to date | Dev |
 | 3 | Run both test suites, push to origin, then pull changes on the release Mac | Dev → Release |
 | 4 | Archive, with a Release or RC version of Xcode | Release |
@@ -52,9 +52,9 @@ rebuilt — safe, because nothing has shipped under the higher number yet. The b
 down. The bump comes straight after the upload, not once the outcome is known, because the outcome
 takes days: TestFlight testers need time, and App Store review runs in parallel with their testing.
 Development continues meanwhile, so the numbers in the tree must describe the next build, not the
-last one. Add the matching Core Data model version at the same time (Annex C), so the model name
-never lags the version being built. These commits show up in the log as "Preparation for next
-release", "Preparation for next build" or "Updated MARKETING_VERSION to …".
+last one. These commits show up in the log as "Preparation for next release", "Preparation for next
+build" or "Updated MARKETING_VERSION to …". The Core Data model version is *not* bumped here: since
+#801 it follows the Photo-Club-Hub-Data release rather than this app's version (Annex C).
 
 **Step 3 — nothing downstream checks the tests.** The app's tests run in Xcode on the development
 Mac; Photo-Club-Hub-Data's run there too and again in GitHub Actions on every push
@@ -156,25 +156,27 @@ gate (Annex E) refuses the reused number before the upload, so the tree and Appl
 
 ## Annex C — The Core Data model version
 
-The Core Data model is versioned in step with `MARKETING_VERSION`: each release gets its own
-`.xcdatamodel` inside `Photo Club Hub/Model/Photo_Club_Hub.xcdatamodeld`, named after the version
-with dots as underscores — `Photo_Club_Hub_3_0_1.xcdatamodel` for 3.0.1 — with `.xccurrentversion`
-pointing at it. The copy is made at step 1, alongside the number bumps, through Xcode's
-*Editor → Add Model Version*.
+The Core Data model lives in the Photo-Club-Hub-Data package, at
+`Sources/Photo Club Hub Data/Model/Photo_Club_Hub.xcdatamodeld`, and is versioned in step with **that
+package's** release rather than with this app's `MARKETING_VERSION` — `Photo_Club_Hub_3_2_0.xcdatamodel`
+for package 3.2.0, dots as underscores, with `.xccurrentversion` pointing at it. The copy is made
+alongside the package's version bump, through Xcode's *Editor → Add Model Version*. It moved there with
+#801; the older names line up with this app's releases because before that it followed them.
 
-It is made whether or not the model changed, and that is the point: without it, a model named after
-an older version gets edited while a newer version of the app is shipping. If `MARKETING_VERSION` is
-lowered again in step 1 because the uploaded build needs replacing, the model copy follows it.
+It is made whether or not the model changed, and that is the point: without it, a model named after an
+older version gets edited while a newer one is shipping. A shipped version has to stay immutable,
+because stores in the field are matched by hash, so a fresh container is what the next schema change
+edits.
 
-Adding a version copies the whole bundle, so `ConfigurationColors.json` and `EntityColors.json`
-appear as new untracked files still carrying the older copy's timestamps. Commit them with the
-model: the archive gate counts untracked files as a dirty working tree.
+Adding a version copies the whole bundle, so `ConfigurationColors.json` and `EntityColors.json` appear
+as new untracked files still carrying the older copy's timestamps. Commit them with the model: the
+archive gate counts untracked files as a dirty working tree.
 
-Fourteen of the thirty-four successive model versions are byte-identical to their predecessor, and
-among recent releases nearly all are. They are the convention working, not duplicates to clean up.
-Two gaps predate this being written down: nothing exists for 2.11.x, and nothing for 3.0.0 — build
-4665 shipped on `Photo_Club_Hub_2_10_1.xcdatamodel`. If a 3.0.0 build 4666 is needed,
-`Photo_Club_Hub_3_0_0.xcdatamodel` gets created then; otherwise the gap stays.
+Most successive versions are byte-identical to their predecessor, and among recent releases nearly all
+are. They are the convention working, not duplicates to clean up. Two gaps predate this being written
+down: nothing exists for 2.11.x, and nothing for 3.0.0 — build 4665 shipped on
+`Photo_Club_Hub_2_10_1.xcdatamodel`.
+
 
 ## Annex D — The Data package dependency
 

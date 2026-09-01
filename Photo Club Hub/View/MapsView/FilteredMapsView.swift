@@ -130,7 +130,7 @@ struct FilteredMapsView: View {
                         // await only keeps this task alive until the save has landed.
                         await updateTownCountry(
                             clubName: clubName, town: town, languageIsoCode: isoCode,
-                            addressStrings: LocalizedAddressStrings(
+                            addressFields: LocalizedAddressFields(
                                 localizedTown: localizedTown,
                                 localizedCountry: localizedCountry ?? LocalizedAddress.unknownCountry),
                             coordinates: coordinates)
@@ -215,17 +215,17 @@ struct FilteredMapsView: View {
     /// the background context, from keys the caller captured on the main queue before detaching.
     ///
     /// - Parameters:
-    ///   - clubName: the organization's `fullName`. Together with `town` it is the store's unique identifier of an `Organization`,
-    ///     so the pair re-finds exactly one row.
+    ///   - clubName: the organization's `fullName`. Together with `town` it is the store's unique
+    ///     identifier of an `Organization`, so the pair re-finds exactly one row.
     ///   - town: the *unlocalized* town from the JSON — the second half of that key, not the geocoded name.
     ///   - languageIsoCode: the language the address was derived in, used to re-find the `Language` row.
     ///     A string rather than a `Language`, for the sendability reason above.
-    ///   - addressStrings: the geocoded town and country. Bundled into one value because the five
+    ///   - addressFields: the geocoded town and country. Bundled into one value because the five
     ///     parameters here are SwiftLint's limit, which is what that type exists for.
     ///   - coordinates: the coordinates the address was derived from. Stored as `prevCoordinates`, so a
     ///     club that later moves is geocoded again rather than keeping a name for where it used to be.
     private func updateTownCountry(clubName: String, town: String, languageIsoCode: String,
-                                   addressStrings: LocalizedAddressStrings,
+                                   addressFields: LocalizedAddressFields,
                                    coordinates: CLLocationCoordinate2D) async {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext() // background thread
@@ -252,7 +252,7 @@ struct FilteredMapsView: View {
 
             print("""
                   Photo Club: \(photoClub.fullName), \(photoClub.town) -> \
-                  \(addressStrings.localizedTown), \(addressStrings.localizedCountry) [\(languageIsoCode)]
+                  \(addressFields.localizedTown), \(addressFields.localizedCountry) [\(languageIsoCode)]
                   """)
 
             guard let language = Language.find(context: bgContext, isoCode: languageIsoCode) else {
@@ -266,7 +266,7 @@ struct FilteredMapsView: View {
                 bgContext: bgContext,
                 organization: photoClub,
                 language: language,
-                newLocalizedAddressStrings: addressStrings,
+                newLocalizedAddressFields: addressFields,
                 newCoordinates: coordinates)
 
             guard bgContext.hasChanges else { return }
@@ -274,7 +274,7 @@ struct FilteredMapsView: View {
                 try bgContext.save() // persist the localized address for this (organization × language)
             } catch {
                 print("""
-                      ERROR: could not save \(addressStrings.localizedTown) for \(clubName) to CoreData
+                      ERROR: could not save \(addressFields.localizedTown) for \(clubName) to CoreData
                       """)
             }
         }
