@@ -72,6 +72,8 @@
        - any special roles of the member such as `"isChairman": true`. These are displayed in the app and via Photo Club Hub HTML.
        - `membershipStartDate`. This is currently displayed using Photo Club Hub HTML.
        - `expertises` indication the main genres per photographer. It is currently an [unfinished feature](https://github.com/vdhamer/Photo-Club-Hub/issues/465), and will be covered in a separate instruction file. You can already start providing this data. Best to stick to the expertises found in [this file](https://github.com/vdhamer/Photo-Club-Hub/issues/465).
+- The `maintainerEmail` field, in the `club` part of the file rather than under a member, says who to contact if something is wrong with the JSON file. Ideally the club member who created it, which may well be whoever looks after the club website.
+   - A role-based address like `secretary@yourclub.nl` is better than a personal one where the club has such an address: it keeps working when the club's officers change, and it doesn't publish an individual's address in a public file.
 </details></p>
 
 

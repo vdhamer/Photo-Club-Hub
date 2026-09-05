@@ -1,0 +1,416 @@
+<title>Roadmap Contact Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#EFF1F3; --surface:#FFFFFF; --surface-2:#F7F8FA;
+  --ink:#15181D; --ink-soft:#5C636E; --ink-faint:#8C939E;
+  --rule:#D9DDE3; --rule-soft:#E8EBEF;
+  --accent:#C1402A; --accent-soft:#F2DED9;
+  --ramp-s:#8FA6B8; --ramp-m:#6E8AA6; --ramp-l:#C08A3E; --ramp-xl:#C1402A;
+  --shadow:0 1px 2px rgba(21,24,29,.06),0 8px 24px -12px rgba(21,24,29,.18);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#121418; --surface:#1A1D22; --surface-2:#20242A;
+    --ink:#E9ECEF; --ink-soft:#A2AAB5; --ink-faint:#6E7681;
+    --rule:#2C3138; --rule-soft:#24282E;
+    --accent:#E2634A; --accent-soft:#3A241F;
+    --ramp-s:#7A93A8; --ramp-m:#6B8FB5; --ramp-l:#D2A056; --ramp-xl:#E2634A;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121418; --surface:#1A1D22; --surface-2:#20242A;
+  --ink:#E9ECEF; --ink-soft:#A2AAB5; --ink-faint:#6E7681;
+  --rule:#2C3138; --rule-soft:#24282E;
+  --accent:#E2634A; --accent-soft:#3A241F;
+  --ramp-s:#7A93A8; --ramp-m:#6B8FB5; --ramp-l:#D2A056; --ramp-xl:#E2634A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,sans-serif;
+  font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 72px;display:flex;flex-direction:column;gap:20px}
+
+header{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-faint)}
+h1{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lede{font-family:"Source Serif 4",Georgia,serif;font-size:16px;color:var(--ink-soft);max-width:62ch;margin:0}
+
+.meters{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-end}
+.meter{display:flex;flex-direction:column;gap:6px;min-width:150px}
+.meter b{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1}
+.meter span{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-faint)}
+.bar{display:flex;height:9px;border-radius:5px;overflow:hidden;background:var(--rule-soft);min-width:210px}
+.bar i{display:block}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 14px;
+  background:var(--surface);border:1px solid var(--rule);border-radius:10px;box-shadow:var(--shadow)}
+.toolbar label{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-faint);margin-right:2px}
+input[type=search]{flex:1 1 190px;min-width:150px;padding:7px 10px;border:1px solid var(--rule);
+  border-radius:7px;background:var(--surface-2);color:var(--ink);font:inherit;font-size:14px}
+input[type=search]:focus-visible,button:focus-visible,th:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chip{font:inherit;font-size:12.5px;padding:5px 11px;border:1px solid var(--rule);border-radius:999px;
+  background:var(--surface-2);color:var(--ink-soft);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.spacer{flex:1 1 auto}
+.btn{font:inherit;font-size:13px;font-weight:500;padding:7px 13px;border-radius:7px;cursor:pointer;
+  border:1px solid var(--accent);background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;color:var(--accent)}
+
+.sheet{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:var(--shadow);overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:940px}
+thead th{position:sticky;top:0;z-index:2;background:var(--surface);text-align:left;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:500;color:var(--ink-faint);padding:11px 12px;border-bottom:1px solid var(--rule);
+  cursor:pointer;user-select:none;white-space:nowrap}
+thead th:hover{color:var(--ink)}
+thead th .ar{opacity:0;margin-left:4px}
+thead th[data-dir] .ar{opacity:1;color:var(--accent)}
+tbody tr{border-bottom:1px solid var(--rule-soft)}
+tbody tr:last-child{border-bottom:0}
+tbody tr:hover{background:var(--surface-2)}
+td{padding:12px;vertical-align:top}
+td.rail{padding:0;width:4px}
+td.rail i{display:block;width:4px;height:100%;min-height:52px}
+.feat{font-weight:600;font-size:14.5px;letter-spacing:-.005em}
+.desc{font-family:"Source Serif 4",Georgia,serif;font-size:14px;color:var(--ink-soft);
+  margin-top:3px;max-width:56ch}
+.note{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);margin-top:5px}
+.tick{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-faint);white-space:nowrap}
+.tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;
+  padding:2px 7px;border-radius:4px;background:var(--surface-2);border:1px solid var(--rule);color:var(--ink-soft)}
+.tag.on{background:var(--accent-soft);border-color:transparent;color:var(--accent)}
+.eff{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:12.5px;padding:3px 9px;
+  border-radius:5px;color:#fff;display:inline-block}
+.stars{display:flex;gap:3px}
+.stars button{width:15px;height:15px;padding:0;border-radius:50%;cursor:pointer;
+  border:1.5px solid var(--rule);background:transparent}
+.stars button[data-on="1"]{background:var(--accent);border-color:var(--accent)}
+.stars button:hover{border-color:var(--accent)}
+.empty{padding:36px;text-align:center;color:var(--ink-faint);font-family:"Source Serif 4",serif}
+footer{color:var(--ink-faint);font-size:12.5px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+dialog{border:1px solid var(--rule);border-radius:10px;background:var(--surface);color:var(--ink);
+  padding:0;max-width:min(820px,92vw);box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.dlg{padding:18px;display:flex;flex-direction:column;gap:12px}
+textarea{width:100%;height:340px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  border:1px solid var(--rule);border-radius:7px;padding:11px;background:var(--surface-2);color:var(--ink);resize:vertical}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+.plot{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.plot-head{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between}
+.plot h2{margin:0;font-size:16px;font-weight:600;letter-spacing:-.01em}
+.plot-sub{margin:4px 0 0;font-family:"Source Serif 4",Georgia,serif;font-size:13.5px;
+  color:var(--ink-soft);max-width:52ch}
+.legend{display:flex;flex-direction:column;gap:6px}
+.legend>span{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink-faint)}
+.legend ul{display:flex;gap:12px;margin:0;padding:0;list-style:none}
+.legend li{display:flex;align-items:center;gap:5px;font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.legend i{width:9px;height:9px;border-radius:2px;display:block}
+.legend b{font-weight:500;color:var(--ink)}
+#plot-wrap{overflow-x:auto}
+#matrix{display:grid;grid-template-columns:74px repeat(4,1fr);gap:5px;min-width:620px}
+.mx-corner{}
+.mx-colh,.mx-rowh{display:flex;flex-direction:column;gap:1px;padding:4px 6px;
+  font-family:"IBM Plex Mono",monospace;line-height:1.25}
+.mx-colh{align-items:center}
+.mx-colh b{font-size:13px;font-weight:500}
+.mx-colh span,.mx-rowh span{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+.mx-rowh{align-items:flex-end;text-align:right;justify-content:center}
+.mx-rowh b{font-size:15px;font-weight:600;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.mx-cell{border:1px solid var(--rule-soft);border-radius:7px;padding:6px;min-height:54px;
+  display:flex;flex-direction:column;gap:4px;align-content:flex-start}
+.mx-item{font-size:11.5px;line-height:1.3;padding:3px 6px;border-left:3px solid var(--rule);
+  border-radius:3px;background:var(--surface-2);color:var(--ink);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mx-todo{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px;align-items:center;
+  margin-top:6px;padding-top:11px;border-top:1px dashed var(--rule)}
+.mx-todo span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink-faint);margin-right:3px}
+.mx-todo i{font-style:normal;font-size:11px;padding:2px 6px;border-left:3px solid var(--rule);
+  border-radius:3px;background:var(--surface-2);color:var(--ink-soft)}
+.plot-empty{margin:0;font-family:"Source Serif 4",Georgia,serif;font-size:13.5px;color:var(--ink-faint);
+  text-align:center;padding:26px 0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Photo Club Hub &middot; candidates for the next six months</div>
+  <h1>Roadmap Contact Sheet</h1>
+  <p class="lede">Every candidate laid out at once, the way you would look at a contact sheet before
+  deciding what is worth printing. Effort is an estimate of Peter&rsquo;s time; value is his to set.
+  Click the dots to rate a row &mdash; ratings are saved in this browser.</p>
+  <div class="meters">
+    <div class="meter"><span>Candidates</span><b id="m-total">0</b></div>
+    <div class="meter"><span>Rated</span><b id="m-rated">0</b></div>
+    <div class="meter"><span>Already underway</span><b id="m-under">0</b></div>
+    <div class="meter" style="flex:1 1 210px">
+      <span>Effort mix</span>
+      <div class="bar" id="m-bar"></div>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input type="search" id="q" placeholder="Search feature, description, ticket&hellip;" aria-label="Search">
+  <label>Repo</label><span id="f-repo"></span>
+  <label>Effort</label><span id="f-eff"></span>
+  <button class="chip" id="f-under" aria-pressed="false">Underway only</button>
+  <button class="chip" id="f-rated" aria-pressed="false">Unrated only</button>
+  <span class="spacer"></span>
+  <button class="btn ghost" id="reset">Reset</button>
+  <button class="btn" id="export">Copy CSV</button>
+</div>
+
+<section class="plot" id="plot-sec">
+  <div class="plot-head">
+    <div>
+      <h2>Value against effort</h2>
+      <p class="plot-sub">Rated rows only, arranged by what they cost and what they are worth. The upper left is
+      cheap and wanted. Filters above apply here too.</p>
+    </div>
+    <div class="legend" aria-label="Effort legend">
+      <span>Effort, in weeks of Peter&rsquo;s time</span>
+      <ul>
+        <li><i style="background:var(--ramp-s)"></i><b>S</b> 1</li>
+        <li><i style="background:var(--ramp-m)"></i><b>M</b> 3</li>
+        <li><i style="background:var(--ramp-l)"></i><b>L</b> 6</li>
+        <li><i style="background:var(--ramp-xl)"></i><b>XL</b> 12</li>
+      </ul>
+    </div>
+  </div>
+  <div id="plot-wrap"><div id="matrix" role="table" aria-label="Value against effort"></div></div>
+  <p class="plot-empty" id="plot-empty">Nothing rated yet &mdash; click the dots in the Value column and
+  the rows appear here.</p>
+</section>
+
+<div class="sheet">
+  <table>
+    <thead><tr>
+      <th class="rail" aria-hidden="true"></th>
+      <th data-k="feature" tabindex="0">Feature<span class="ar">&#9660;</span></th>
+      <th data-k="repo" tabindex="0">Repo<span class="ar">&#9660;</span></th>
+      <th data-k="underway" tabindex="0">Underway<span class="ar">&#9660;</span></th>
+      <th data-k="effort" tabindex="0">Effort<span class="ar">&#9660;</span></th>
+      <th data-k="value" tabindex="0">Value<span class="ar">&#9660;</span></th>
+      <th data-k="tickets" tabindex="0">Tickets<span class="ar">&#9660;</span></th>
+    </tr></thead>
+    <tbody id="tb"></tbody>
+  </table>
+  <div class="empty" id="none" hidden>Nothing matches those filters.</div>
+</div>
+
+<footer>
+  <span id="count"></span>
+  <span class="spacer"></span>
+  <span>S &le; a week &middot; M two to four weeks &middot; L one to two months &middot; xL beyond</span>
+</footer>
+</div>
+
+<dialog id="dlg"><div class="dlg">
+  <strong>CSV with your ratings</strong>
+  <textarea id="csv" readonly aria-label="CSV output"></textarea>
+  <div style="display:flex;gap:9px;justify-content:flex-end">
+    <button class="btn ghost" id="dlg-close">Close</button>
+    <button class="btn" id="dlg-copy">Copy to clipboard</button>
+  </div>
+</div></dialog>
+
+<script>
+const ROWS = __ROWS__;
+const RANK={S:1,M:2,L:3,xL:4,XL:4};
+const RAMP={S:"var(--ramp-s)",M:"var(--ramp-m)",L:"var(--ramp-l)",xL:"var(--ramp-xl)",XL:"var(--ramp-xl)"};
+const KEY="pch-roadmap-values-v1";
+let vals={};
+try{vals=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){vals={}}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(vals))}catch(e){}};
+
+let sortK="", sortDir=1;
+const state={q:"",repo:new Set(),eff:new Set(),under:false,unrated:false};
+const $=s=>document.querySelector(s);
+
+function chips(host,items,set){
+  host.innerHTML="";
+  items.forEach(v=>{
+    const b=document.createElement("button");
+    b.className="chip";b.textContent=v;b.setAttribute("aria-pressed","false");
+    b.onclick=()=>{set.has(v)?set.delete(v):set.add(v);
+      b.setAttribute("aria-pressed",set.has(v)?"true":"false");render()};
+    host.appendChild(b);
+  });
+}
+
+function shown(){
+  const q=state.q.toLowerCase();
+  return ROWS.filter(r=>{
+    if(state.repo.size&&!state.repo.has(r.repo))return false;
+    if(state.eff.size&&!state.eff.has(r.effort))return false;
+    if(state.under&&r.underway!=="partly")return false;
+    if(state.unrated&&vals[r.id])return false;
+    if(!q)return true;
+    return (r.feature+" "+r.description+" "+r.tickets+" "+r.note+" "+r.id).toLowerCase().includes(q);
+  });
+}
+
+function render(){
+  let rs=shown();
+  if(sortK){
+    rs=[...rs].sort((a,b)=>{
+      let x,y;
+      if(sortK==="effort"){x=RANK[a.effort]||0;y=RANK[b.effort]||0}
+      else if(sortK==="value"){x=vals[a.id]||0;y=vals[b.id]||0}
+      else{x=(a[sortK]||"").toLowerCase();y=(b[sortK]||"").toLowerCase()}
+      return x<y?-sortDir:x>y?sortDir:0;
+    });
+  }
+  const tb=$("#tb");tb.innerHTML="";
+  rs.forEach(r=>{
+    const tr=document.createElement("tr");
+    const rail=document.createElement("td");rail.className="rail";
+    const i=document.createElement("i");i.style.background=RAMP[r.effort]||"var(--rule)";rail.appendChild(i);
+
+    const main=document.createElement("td");
+    const f=document.createElement("div");f.className="feat";f.textContent=r.feature;
+    const d=document.createElement("div");d.className="desc";d.textContent=r.description;
+    main.append(f,d);
+    if(r.note){const n=document.createElement("div");n.className="note";n.textContent=r.note;main.appendChild(n)}
+
+    const rp=document.createElement("td");
+    const rt=document.createElement("span");rt.className="tag";rt.textContent=r.repo;rp.appendChild(rt);
+
+    const uw=document.createElement("td");
+    const ut=document.createElement("span");ut.className="tag"+(r.underway==="partly"?" on":"");
+    ut.textContent=r.underway;uw.appendChild(ut);
+
+    const ef=document.createElement("td");
+    const es=document.createElement("span");es.className="eff";
+    es.style.background=RAMP[r.effort]||"var(--ink-faint)";es.textContent=r.effort;ef.appendChild(es);
+
+    const vc=document.createElement("td");
+    const st=document.createElement("div");st.className="stars";
+    for(let n=1;n<=5;n++){
+      const b=document.createElement("button");
+      b.type="button";b.dataset.on=(vals[r.id]||0)>=n?"1":"0";
+      b.setAttribute("aria-label",`Rate ${r.feature} ${n} of 5`);
+      b.onclick=()=>{vals[r.id]=(vals[r.id]===n)?0:n;if(!vals[r.id])delete vals[r.id];save();render()};
+      st.appendChild(b);
+    }
+    vc.appendChild(st);
+
+    const tk=document.createElement("td");tk.className="tick";tk.textContent=r.tickets||"—";
+    tr.append(rail,main,rp,uw,ef,vc,tk);tb.appendChild(tr);
+  });
+  $("#none").hidden=rs.length>0;
+  $("#count").textContent=`${rs.length} of ${ROWS.length} shown`;
+  $("#m-total").textContent=ROWS.length;
+  $("#m-rated").textContent=Object.keys(vals).length;
+  $("#m-under").textContent=ROWS.filter(r=>r.underway==="partly").length;
+  const bar=$("#m-bar");bar.innerHTML="";
+  ["S","M","L","XL"].forEach(k=>{
+    const n=ROWS.filter(r=>r.effort===k).length;if(!n)return;
+    const el=document.createElement("i");
+    el.style.flex=n;el.style.background=RAMP[k];el.title=`${k}: ${n}`;bar.appendChild(el);
+  });
+  document.querySelectorAll("thead th[data-k]").forEach(th=>{
+    if(th.dataset.k===sortK){th.dataset.dir=sortDir>0?"asc":"desc";
+      th.querySelector(".ar").textContent=sortDir>0?"▲":"▼";}
+    else th.removeAttribute("dir"),th.removeAttribute("data-dir");
+  });
+}
+
+document.querySelectorAll("thead th[data-k]").forEach(th=>{
+  const go=()=>{const k=th.dataset.k;sortDir=(sortK===k)?-sortDir:1;sortK=k;render()};
+  th.onclick=go;
+  th.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}};
+});
+$("#q").oninput=e=>{state.q=e.target.value;render()};
+$("#f-under").onclick=e=>{state.under=!state.under;e.target.setAttribute("aria-pressed",state.under);render()};
+$("#f-rated").onclick=e=>{state.unrated=!state.unrated;e.target.setAttribute("aria-pressed",state.unrated);render()};
+$("#reset").onclick=()=>{state.q="";state.repo.clear();state.eff.clear();state.under=false;state.unrated=false;
+  sortK="";$("#q").value="";
+  document.querySelectorAll('.chip[aria-pressed]').forEach(c=>c.setAttribute("aria-pressed","false"));render()};
+
+function csv(){
+  const cols=["id","feature","description","repo","underway","effort","value","tickets","note"];
+  const esc=s=>'"'+String(s??"").replace(/"/g,'""')+'"';
+  // value stays a bare integer so a spreadsheet reads it as a number, not text
+  const cell=(r,c)=>c==="value"?String(vals[r.id]||""):esc(r[c]);
+  return [cols.map(esc).join(",")].concat(
+    ROWS.map(r=>cols.map(c=>cell(r,c)).join(","))
+  ).join("\n");
+}
+$("#export").onclick=()=>{$("#csv").value=csv();$("#dlg").showModal()};
+$("#dlg-close").onclick=()=>$("#dlg").close();
+$("#dlg-copy").onclick=async()=>{
+  const t=$("#csv");t.select();
+  try{await navigator.clipboard.writeText(t.value);$("#dlg-copy").textContent="Copied"}
+  catch(e){$("#dlg-copy").textContent="Select all and copy"}
+  setTimeout(()=>{$("#dlg-copy").textContent="Copy to clipboard"},2200);
+};
+
+chips($("#f-repo"),[...new Set(ROWS.map(r=>r.repo))].sort(),state.repo);
+chips($("#f-eff"),["S","M","L","XL"].filter(k=>ROWS.some(r=>r.effort===k)),state.eff);
+render();
+
+/* ---- value x effort matrix -------------------------------------------- */
+const WEEKS={S:1,M:3,L:6,XL:12,xL:12};
+const COLS=["S","M","L","XL"];
+
+function matrix(){
+  const host=$("#matrix"); host.innerHTML="";
+  const vis=shown(), rated=vis.filter(r=>vals[r.id]);
+  $("#plot-empty").hidden=rated.length>0;
+  host.style.display=rated.length?"grid":"none";
+  if(!rated.length)return;
+
+  const corner=document.createElement("div");corner.className="mx-corner";host.appendChild(corner);
+  COLS.forEach(k=>{
+    const h=document.createElement("div");h.className="mx-colh";
+    h.innerHTML=`<b style="color:${RAMP[k]}">${k}</b><span>${WEEKS[k]}w</span>`;
+    host.appendChild(h);
+  });
+
+  for(let v=5;v>=1;v--){
+    const rh=document.createElement("div");rh.className="mx-rowh";
+    rh.innerHTML=`<b>${v}</b><span>${["","lowest","low","medium","high","highest"][v]}</span>`;
+    host.appendChild(rh);
+    COLS.forEach((k,ci)=>{
+      const cell=document.createElement("div");cell.className="mx-cell";
+      // tint rises toward cheap-and-wanted (top left)
+      const heat=((v-1)/4)*(1-ci/3);
+      cell.style.background=`color-mix(in srgb, var(--accent) ${(heat*11).toFixed(1)}%, transparent)`;
+      const hits=rated.filter(r=>r.effort===k&&vals[r.id]===v);
+      hits.forEach(r=>{
+        const c=document.createElement("span");c.className="mx-item";
+        c.style.borderLeftColor=RAMP[k];
+        c.textContent=r.feature;
+        c.title=`${r.feature} — ${r.effort} (${WEEKS[k]} weeks), value ${v}`;
+        cell.appendChild(c);
+      });
+      host.appendChild(cell);
+    });
+  }
+
+  const todo=vis.filter(r=>!vals[r.id]);
+  const foot=document.createElement("div");foot.className="mx-todo";
+  foot.innerHTML=todo.length
+    ? `<span>Not yet rated (${todo.length})</span>`+todo.map(r=>
+        `<i style="border-left-color:${RAMP[r.effort]||'var(--rule)'}">${r.feature}</i>`).join("")
+    : `<span>Everything visible is rated.</span>`;
+  host.appendChild(foot);
+}
+const _render=render;
+render=function(){_render();matrix()};
+render();
+
+</script>

@@ -1,0 +1,103 @@
+<title>What Photo Club Hub Might Do Next</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --ground:#EFF1F3; --surface:#FFFFFF; --surface-2:#F7F8FA;
+  --ink:#15181D; --ink-soft:#5C636E; --ink-faint:#8C939E;
+  --rule:#D9DDE3; --rule-soft:#E8EBEF;
+  --accent:#C1402A; --accent-soft:#F2DED9;
+  --s:#8FA6B8; --m:#6E8AA6; --l:#C08A3E; --xl:#C1402A;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#121418; --surface:#1A1D22; --surface-2:#20242A;
+  --ink:#E9ECEF; --ink-soft:#A2AAB5; --ink-faint:#6E7681;
+  --rule:#2C3138; --rule-soft:#24282E;
+  --accent:#E2634A; --accent-soft:#3A241F;
+  --s:#7A93A8; --m:#6B8FB5; --l:#D2A056; --xl:#E2634A;
+}}
+:root[data-theme="dark"]{
+  --ground:#121418; --surface:#1A1D22; --surface-2:#20242A;
+  --ink:#E9ECEF; --ink-soft:#A2AAB5; --ink-faint:#6E7681;
+  --rule:#2C3138; --rule-soft:#24282E;
+  --accent:#E2634A; --accent-soft:#3A241F;
+  --s:#7A93A8; --m:#6B8FB5; --l:#D2A056; --xl:#E2634A;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:"Archivo",system-ui,-apple-system,sans-serif;font-size:15.5px;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:40px 22px 80px;display:flex;flex-direction:column;gap:30px}
+.eyebrow{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+h1{font-size:34px;font-weight:700;letter-spacing:-.022em;margin:8px 0 0;text-wrap:balance}
+.intro{font-family:"Source Serif 4",Georgia,serif;font-size:17px;color:var(--ink-soft);
+  display:flex;flex-direction:column;gap:13px}
+.intro p{margin:0}
+.intro strong{color:var(--ink);font-weight:600}
+h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);
+  font-weight:600;margin:0;padding-bottom:9px;border-bottom:1px solid var(--rule)}
+.group{display:flex;flex-direction:column;gap:14px}
+.items{display:flex;flex-direction:column;gap:2px}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:baseline;
+  padding:13px 0;border-bottom:1px solid var(--rule-soft)}
+.item:last-child{border-bottom:0}
+.nm{font-weight:600;font-size:15.5px;letter-spacing:-.006em}
+.ds{grid-column:1/2;font-family:"Source Serif 4",Georgia,serif;font-size:15px;
+  color:var(--ink-soft);max-width:58ch}
+.meta{grid-row:1/3;grid-column:2/3;display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+  white-space:nowrap}
+.eff{font-size:11.5px;font-weight:500;letter-spacing:.04em;padding:2px 9px;border-radius:4px;color:#fff}
+.started{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.key{display:flex;flex-wrap:wrap;gap:16px;padding:15px 17px;background:var(--surface);
+  border:1px solid var(--rule);border-radius:9px}
+.key div{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-soft)}
+.key i{width:10px;height:10px;border-radius:2px;display:block}
+.key b{color:var(--ink);font-weight:600}
+footer{font-family:"Source Serif 4",Georgia,serif;font-size:14.5px;color:var(--ink-faint);
+  border-top:1px solid var(--rule);padding-top:18px}
+@media print{
+  body{background:#fff}
+  .wrap{max-width:100%;padding:0}
+  .item{break-inside:avoid}
+}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Photo Club Hub</div>
+  <h1>What might come next</h1>
+</header>
+
+<div class="intro">
+  <p>Photo Club Hub shows the photographs that members of photography clubs choose to
+  show. Several clubs in one place, so a visitor does not have to find each club's
+  website and learn a new way round it every time. A companion program turns the same
+  information into ordinary web pages a club can put on its own site.</p>
+  <p>The list below is <strong>what might be built next</strong> — possibilities, honestly
+  assessed, not promises. Nobody is paid for any of this, so nothing here is a schedule.
+  What actually gets built depends mostly on what people say they want, and on how many
+  clubs decide to take part.</p>
+  <p>The one thing worth knowing before reading it: the app already knows about far more
+  clubs than have supplied any photographs. <strong>Almost every club listed has an empty
+  page waiting for it.</strong> That shapes the whole list — a good deal of what follows is
+  about making it easier for a club to fill that page in.</p>
+</div>
+
+<div class="key">
+  <div><i style="background:var(--s)"></i><b>S</b> about a week</div>
+  <div><i style="background:var(--m)"></i><b>M</b> two to four weeks</div>
+  <div><i style="background:var(--l)"></i><b>L</b> one to two months</div>
+  <div><i style="background:var(--xl)"></i><b>XL</b> longer</div>
+  <div style="color:var(--accent)">Started &mdash; already partly working</div>
+</div>
+
+<section class="group"><h2>Getting more clubs on board</h2><div class="items"><div class="item"><div class="nm">A place for club-less photographers</div><div class="ds">Photographers who belong to no club can still be shown alongside those who do.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span><span class="started">Started</span></div></div><div class="item"><div class="nm">Every Dutch club on the map</div><div class="ds">Find your Fotobond club already listed, wherever in the country it is, instead of only in one or two regions.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Find the instructions</div><div class="ds">Anyone wondering how to add their club can find the instructions from inside the app.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Instructions for publishing photos</div><div class="ds">Written step-by-step instructions for getting a club's portfolios online.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Less typing per member</div><div class="ds">One link for the club derives every member's portfolio and thumbnail automatically.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Clubs keep their own data</div><div class="ds">A club keeps its member list on its own website, and the app picks up every change.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span><span class="started">Started</span></div></div><div class="item"><div class="nm">Departed clubs disappear</div><div class="ds">A club removed from the source list also disappears from the app.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Low barrier for uploading data files</div><div class="ds">Submitting new or changed data can be overwhelming due to all the other GitHub features.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Mistakes caught as you type</div><div class="ds">Editing club data warns you about a misspelled expertise or a missing field while you type.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Say when a file is broken</div><div class="ds">A club whose data file has an error is reported, instead of quietly appearing empty.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Claim your club</div><div class="ds">Your club is already on the map — add your members and photos without starting from scratch.</div><div class="meta"><span class="eff" style="background:var(--l)">L</span><span class="started">Started</span></div></div><div class="item"><div class="nm">Edit club list in a form</div><div class="ds">Fill in a (partially filled in) form instead of editing a file format, and the app writes the file for you.</div><div class="meta"><span class="eff" style="background:var(--l)">L</span></div></div><div class="item"><div class="nm">Start from your website</div><div class="ds">Point us at your club's website and get a first draft of your club's page back.</div><div class="meta"><span class="eff" style="background:var(--l)">L</span></div></div><div class="item"><div class="nm">Edit club data in a form</div><div class="ds">Fill in a (partially filled in) form instead of a file format, and the app writes the file for you.</div><div class="meta"><span class="eff" style="background:var(--xl)">XL</span></div></div></div></section>
+<section class="group"><h2>Finding what interests you</h2><div class="items"><div class="item"><div class="nm">Expertises on the People screen</div><div class="ds">See at a glance what kind of photography someone is known for.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Tidier lists</div><div class="ds">Museums out of the club list, former clubs last, and ex-members no longer shown as officers.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">A screen for expertises</div><div class="ds">Browse the full list of photography types the way the website already allows.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Clubs shown where they actually are</div><div class="ds">Pins land in the right place, and a club appears once rather than twice.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Follow the clubs you care about</div><div class="ds">Pick a few favourite clubs so the app opens on them instead of on everything.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Search on more than names</div><div class="ds">Search for a club or a kind of photography, not only for a photographer's name.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Somewhere near you, by default</div><div class="ds">The app opens on your own country or region, with the rest of the world available but not in the way.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Show me what I care about</div><div class="ds">Tell the app which clubs, people and kinds of photography interest you, and it stops showing you the rest.</div><div class="meta"><span class="eff" style="background:var(--l)">L</span></div></div></div></section>
+<section class="group"><h2>Looking at the photographs</h2><div class="items"><div class="item"><div class="nm">Say where a photo came from</div><div class="ds">It is clear which club and which source a portfolio and its images come from.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Photos from past exhibitions</div><div class="ds">See the work a club showed at an exhibition, after the exhibition has ended.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span><span class="started">Started</span></div></div><div class="item"><div class="nm">Photos that load faster</div><div class="ds">Photos and thumbnails stay on the device, so they appear immediately next time.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">Zoom into a photo</div><div class="ds">Pinch to zoom, so you can check a crop or read a sign.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div></div></section>
+<section class="group"><h2>Beyond a single club</h2><div class="items"><div class="item"><div class="nm">Vote on what comes next</div><div class="ds">Say which of these you want most, and see what everybody else picked.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Watch the project grow</div><div class="ds">See how many clubs, photographers and photos the app covers, and how that is changing.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Websites that notice they are stale</div><div class="ds">A weekly nudge when a club's data has moved on but its generated site has not.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Not only photo clubs</div><div class="ds">Point the app at a different collection entirely: cats, trains, bird species.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span><span class="started">Started</span></div></div><div class="item"><div class="nm">Website generator on the App Store</div><div class="ds">Install the website generator like any other app, instead of building it yourself.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span><span class="started">Started</span></div></div><div class="item"><div class="nm">Exhibitions near you</div><div class="ds">Find out what is on nearby in the coming weeks, with a reminder on your home screen.</div><div class="meta"><span class="eff" style="background:var(--l)">L</span></div></div></div></section>
+<section class="group"><h2>Keeping it working</h2><div class="items"><div class="item"><div class="nm">Choose how the tab bar behaves</div><div class="ds">Decide for yourself whether the tab bar shrinks away while you scroll.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Everything over https</div><div class="ds">Pages and data travel over a secure connection, so browsers stop warning people away.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">Links that always work</div><div class="ds">A link to a photographer's own website works however it was typed in.</div><div class="meta"><span class="eff" style="background:var(--s)">S</span></div></div><div class="item"><div class="nm">An app that does not disappear</div><div class="ds">The app stops running out of memory or crashing while you scroll and browse.</div><div class="meta"><span class="eff" style="background:var(--m)">M</span></div></div><div class="item"><div class="nm">A project others can join</div><div class="ds">Enough written down — a glossary, a schema, an explained architecture — that a second person can help.</div><div class="meta"><span class="eff" style="background:var(--l)">L</span><span class="started">Started</span></div></div></div></section>
+
+<footer>
+  Comments and disagreement are welcome, and more useful than agreement. If something
+  important is missing from this list, that is worth knowing before any of it is built.
+</footer>
+</div>

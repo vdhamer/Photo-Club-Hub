@@ -156,6 +156,15 @@
 		377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PhotoClubHub_flyer_en.md; sourceTree = "<group>"; };
 		377E8C12303B229400C118A8 /* EmptyListHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListHint.swift; sourceTree = "<group>"; };
 		377E8C14303B22C200C118A8 /* EmptyListReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListReason.swift; sourceTree = "<group>"; };
+		3786FEF03048C0040002D7B2 /* feature-candidates.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "feature-candidates.csv"; sourceTree = "<group>"; };
+		3786FEF33048C0040002D7B2 /* reader-template.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "reader-template.html"; sourceTree = "<group>"; };
+		3786FEF43048C0040002D7B2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3786FEF53048C0040002D7B2 /* roadmap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = roadmap.md; sourceTree = "<group>"; };
+		3786FEF63048C0040002D7B2 /* roadmap-contact-sheet.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "roadmap-contact-sheet.html"; sourceTree = "<group>"; };
+		3786FEF73048C0040002D7B2 /* roadmap-for-readers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "roadmap-for-readers.html"; sourceTree = "<group>"; };
+		3786FEF83048C0040002D7B2 /* roadmap-template.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "roadmap-template.html"; sourceTree = "<group>"; };
+		3786FF323048D2620002D7B2 /* build-roadmap.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build-roadmap.command"; sourceTree = "<group>"; };
+		3786FF333048D2620002D7B2 /* build-roadmap.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "build-roadmap.py"; sourceTree = "<group>"; };
 		378856A03016CE370008EA13 /* Level1_creation_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_creation_EN.md; sourceTree = "<group>"; };
 		378856A13016CEAB0008EA13 /* FAQ_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FAQ_en.md; sourceTree = "<group>"; };
 		378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeTip.swift; sourceTree = "<group>"; };
@@ -376,6 +385,22 @@
 			path = EmptyListFeedback;
 			sourceTree = "<group>";
 		};
+		3786FEF93048C0040002D7B2 /* roadmap */ = {
+			isa = PBXGroup;
+			children = (
+				3786FF323048D2620002D7B2 /* build-roadmap.command */,
+				3786FF333048D2620002D7B2 /* build-roadmap.py */,
+				3786FEF03048C0040002D7B2 /* feature-candidates.csv */,
+				3786FEF33048C0040002D7B2 /* reader-template.html */,
+				3786FEF43048C0040002D7B2 /* README.md */,
+				3786FEF53048C0040002D7B2 /* roadmap.md */,
+				3786FEF63048C0040002D7B2 /* roadmap-contact-sheet.html */,
+				3786FEF73048C0040002D7B2 /* roadmap-for-readers.html */,
+				3786FEF83048C0040002D7B2 /* roadmap-template.html */,
+			);
+			path = roadmap;
+			sourceTree = "<group>";
+		};
 		378D4D4D2FFE571700A49F5A /* TipKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +447,7 @@
 		37F36DBA3007D34800BBDD60 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				3786FEF93048C0040002D7B2 /* roadmap */,
 				379D5273301F331A00B18993 /* countLines.command */,
 				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
 				37F36DB93007D34800BBDD60 /* countLines.sh */,

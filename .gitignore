@@ -169,3 +169,11 @@ Scripts/screenshots_verify/
 # break any machine that lacks that folder. Nothing else needs the workspace — the release
 # Mac and the screenshot scripts build from the .xcodeproj directly.
 /Photo Club Hub.xcworkspace/
+
+# Working notes behind scripts/roadmap/. The roadmap data and the pages generated from
+# it are fine in public — they are the same kind of thing as the issue list. These two
+# are not: they carry a private read of the national federation's internal position,
+# taken from a conversation with one of its officers, and a description of a specific
+# supporter that identifies him to anyone in Dutch photo-club circles. Neither belongs
+# in a public repository. Kept locally because they are still being worked on.
+scripts/roadmap/notes-*.md
