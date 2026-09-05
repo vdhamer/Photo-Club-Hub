@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-cd /Users/petervandenhamer/Developer/Xcode\ projects/SwiftUI/Photo\ Club\ Hub/scripts
+cd "$(dirname "$0")" || exit 1
 ./countLines.sh
