@@ -107,6 +107,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3384213C8E634E3BA2235CD8 /* draft-level2.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "draft-level2.py"; sourceTree = "<group>"; };
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		370752E0300A257600B0654C /* MemberPortfolioView+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolioView+Screenshot.swift"; sourceTree = "<group>"; };
 		370752E2300A25A200B0654C /* PhotographersListView2627+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotographersListView2627+Screenshot.swift"; sourceTree = "<group>"; };
@@ -114,6 +115,10 @@
 		370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips.swift; sourceTree = "<group>"; };
 		370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms.swift; sourceTree = "<group>"; };
 		370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp.swift; sourceTree = "<group>"; };
+		3716E952304C6CAC008D26C7 /* countLines.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = countLines.command; sourceTree = "<group>"; };
+		3716E953304C6CAC008D26C7 /* countLines.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = countLines.sh; sourceTree = "<group>"; };
+		3716E954304C6CAC008D26C7 /* LineCount.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = LineCount.csv; sourceTree = "<group>"; };
+		3716E955304C6CAC008D26C7 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		37174DA92F8F93E100E58B6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3718BCBB3014F1A800EB4DD5 /* Settings_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Settings_EN_Light.jpg; sourceTree = "<group>"; };
 		3718BCBC3014F1A800EB4DD5 /* Settings_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Settings_NL_Light.jpg; sourceTree = "<group>"; };
@@ -143,7 +148,6 @@
 		3768E6C92F0DC0D600E12F6F /* museumsDE.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsDE.level1.json; sourceTree = "<group>"; };
 		3768E6CA2F0DC0D600E12F6F /* museumsJP.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsJP.level1.json; sourceTree = "<group>"; };
 		3768E6CD2F0DC72800E12F6F /* museumsGB.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsGB.level1.json; sourceTree = "<group>"; };
-		3769DF59300AB39F00D819FA /* verify-screenshots.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "verify-screenshots.sh"; sourceTree = "<group>"; };
 		3769DF9F300AE60800D819FA /* PreludeView2627+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreludeView2627+Screenshot.swift"; sourceTree = "<group>"; };
 		376C49C62F9CF8D900E449FC /* ReadmeSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionHeader.swift; sourceTree = "<group>"; };
 		376D14F72E6DE60900A1403B /* PreludeView2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeView2627.swift; sourceTree = "<group>"; };
@@ -151,7 +155,6 @@
 		376DC9512EC3A98900FB429B /* PreludeImageStore2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2627.swift; sourceTree = "<group>"; };
 		376DC9732EC3F33200FB429B /* Crosshairs1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs1718.swift; sourceTree = "<group>"; };
 		376E811E3027448C00996745 /* ReleaseProcess.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReleaseProcess.md; sourceTree = "<group>"; };
-		377D8036300294A000E04A04 /* LineCount.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = LineCount.csv; sourceTree = "<group>"; };
 		377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FotoclubHub_flyer_nl.md; sourceTree = "<group>"; };
 		377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PhotoClubHub_flyer_en.md; sourceTree = "<group>"; };
 		377E8C12303B229400C118A8 /* EmptyListHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListHint.swift; sourceTree = "<group>"; };
@@ -168,7 +171,6 @@
 		378856A03016CE370008EA13 /* Level1_creation_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_creation_EN.md; sourceTree = "<group>"; };
 		378856A13016CEAB0008EA13 /* FAQ_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FAQ_en.md; sourceTree = "<group>"; };
 		378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeTip.swift; sourceTree = "<group>"; };
-		379D5273301F331A00B18993 /* countLines.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = countLines.command; sourceTree = "<group>"; };
 		37A22B6D3009ADBA00074B0C /* ScreenshotReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotReadiness.swift; sourceTree = "<group>"; };
 		37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapsView+Screenshot.swift"; sourceTree = "<group>"; };
 		37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,10 @@
 		37C9BEB92FFC5F120075F6DE /* ReadmeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeButton.swift; sourceTree = "<group>"; };
 		37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
+		37CE2E7E304CBBEB006C68B3 /* capture-screenshots.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "capture-screenshots.sh"; sourceTree = "<group>"; };
+		37CE2E7F304CBBEB006C68B3 /* verify-screenshots.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "verify-screenshots.sh"; sourceTree = "<group>"; };
+		37CE2E80304CBC14006C68B3 /* gate-and-stamp.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gate-and-stamp.sh"; sourceTree = "<group>"; };
+		37CE2E81304CBC14006C68B3 /* list-archives.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "list-archives.sh"; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
 		37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeCaptionedImage.swift; sourceTree = "<group>"; };
@@ -216,13 +222,9 @@
 		37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationTip.swift; sourceTree = "<group>"; };
 		37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewThumbnail.swift; sourceTree = "<group>"; };
 		37F36C1230078A2400BBDD60 /* Levels_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_EN_Light.jpg; sourceTree = "<group>"; };
-		37F36DB83007D34800BBDD60 /* capture-screenshots.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "capture-screenshots.sh"; sourceTree = "<group>"; };
-		37F36DB93007D34800BBDD60 /* countLines.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = countLines.sh; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
-		8B175F3B103545CFAF33FEA7 /* list-archives.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "list-archives.sh"; sourceTree = "<group>"; };
 		92188A9A6BD04E6D8A835019 /* restore-workspace.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "restore-workspace.sh"; sourceTree = "<group>"; };
-		9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "gate-and-stamp.sh"; sourceTree = "<group>"; };
 		D002615E301128030098588E /* Maps_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_EN_Light.jpg; sourceTree = "<group>"; };
 		D002615F301128030098588E /* Maps_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_NL_Light.jpg; sourceTree = "<group>"; };
 		D002616130112E9F0098588E /* Clubs_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clubs_EN_Light.jpg; sourceTree = "<group>"; };
@@ -248,7 +250,6 @@
 		D04856352D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = PhotoClubHub.SwiftUI.xcstrings; sourceTree = "<group>"; };
 		D048571B2D46C13100022117 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		D048571C2D46C13100022117 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
-		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaarverslag 2024 Website.docx"; sourceTree = "<group>"; };
 		D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Persoonlijk16.level2.json; sourceTree = "<group>"; };
 		D05840172E3C18B00013E438 /* PhotographersTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersTextInfo.swift; sourceTree = "<group>"; };
@@ -332,6 +333,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3716E956304C6CAC008D26C7 /* linecount */ = {
+			isa = PBXGroup;
+			children = (
+				3716E952304C6CAC008D26C7 /* countLines.command */,
+				3716E953304C6CAC008D26C7 /* countLines.sh */,
+				3716E954304C6CAC008D26C7 /* LineCount.csv */,
+				3716E955304C6CAC008D26C7 /* LineCount.xlsx */,
+			);
+			path = linecount;
+			sourceTree = "<group>";
+		};
 		3718BB963014EF5E00EB4DD5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,18 +459,40 @@
 		37F36DBA3007D34800BBDD60 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				3716E956304C6CAC008D26C7 /* linecount */,
 				3786FEF93048C0040002D7B2 /* roadmap */,
-				379D5273301F331A00B18993 /* countLines.command */,
-				37F36DB83007D34800BBDD60 /* capture-screenshots.sh */,
-				37F36DB93007D34800BBDD60 /* countLines.sh */,
-				9EF3597EC8AA41AF8650B982 /* gate-and-stamp.sh */,
+				BF79A4AF10B944F491B352DE /* release */,
+				48472A740DA248658CCFC189 /* screenshots */,
+				3E21897B3134401080BEB624 /* scavenger */,
 				92188A9A6BD04E6D8A835019 /* restore-workspace.sh */,
-				8B175F3B103545CFAF33FEA7 /* list-archives.sh */,
-				3769DF59300AB39F00D819FA /* verify-screenshots.sh */,
-				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
-				377D8036300294A000E04A04 /* LineCount.csv */,
 			);
 			path = scripts;
+			sourceTree = "<group>";
+		};
+		3E21897B3134401080BEB624 /* scavenger */ = {
+			isa = PBXGroup;
+			children = (
+				3384213C8E634E3BA2235CD8 /* draft-level2.py */,
+			);
+			path = scavenger;
+			sourceTree = "<group>";
+		};
+		48472A740DA248658CCFC189 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				37CE2E7E304CBBEB006C68B3 /* capture-screenshots.sh */,
+				37CE2E7F304CBBEB006C68B3 /* verify-screenshots.sh */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
+		BF79A4AF10B944F491B352DE /* release */ = {
+			isa = PBXGroup;
+			children = (
+				37CE2E80304CBC14006C68B3 /* gate-and-stamp.sh */,
+				37CE2E81304CBC14006C68B3 /* list-archives.sh */,
+			);
+			path = release;
 			sourceTree = "<group>";
 		};
 		D002615C3011228C0098588E /* Levels */ = {
@@ -1030,7 +1064,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "script=\"$PROJECT_DIR/scripts/gate-and-stamp.sh\"\ntest -x \"$script\" || { echo \"error: missing or not executable: $script\"; exit 1; }\n\"$script\"\n";
+			shellScript = "script=\"$PROJECT_DIR/scripts/release/gate-and-stamp.sh\"\ntest -x \"$script\" || { echo \"error: missing or not executable: $script\"; exit 1; }\n\"$script\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0831A15277F70D80049AB84 /* Run SwiftLint script */ = {
