@@ -206,7 +206,7 @@ That is the durable answer, more precise than any version number.
 ## Annex E — The gate-and-stamp build phase
 
 The `Run GateAndStamp script` build phase, the last phase of the app target, runs
-`scripts/gate-and-stamp.sh`. The phase itself is only a three-line invoker, so the script stays
+`scripts/release/gate-and-stamp.sh`. The phase itself is only a three-line invoker, so the script stays
 reviewable and greppable instead of living escaped inside `project.pbxproj`. It does two jobs, and
 writes only into the built app, never the source tree, so neither Mac's working tree is affected.
 The HTML app carries a byte-identical copy, and a weekly sweep in Photo-Club-Hub-Data fails when the
