@@ -1,3 +1,8 @@
+<meta charset="utf-8">
+<!-- Needed when the file is opened directly from disk. When published as an
+     Artifact the wrapper supplies a charset in <head>; a local file gets none,
+     and the browser then guesses Latin-1 and mangles em-dashes and arrows.
+     Browsers scan the first 1024 bytes for this, so it works here too. -->
 <title>Roadmap Contact Sheet</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,9 +75,15 @@ thead th{position:sticky;top:0;z-index:2;background:var(--surface);text-align:le
   font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
   font-weight:500;color:var(--ink-faint);padding:11px 12px;border-bottom:1px solid var(--rule);
   cursor:pointer;user-select:none;white-space:nowrap}
-thead th:hover{color:var(--ink)}
-thead th .ar{opacity:0;margin-left:4px}
-thead th[data-dir] .ar{opacity:1;color:var(--accent)}
+/* Sortable headers need an affordance even when unsorted: faint on hover so the
+   column reads as clickable, solid and coloured on whichever one is active. */
+thead [data-k]{cursor:pointer}
+thead [data-k] .ar{opacity:0;margin-left:4px;transition:opacity .12s}
+thead [data-k]:hover .ar,thead [data-k]:focus-visible .ar{opacity:.35}
+thead [data-dir] .ar,thead [data-dir]:hover .ar{opacity:1;color:var(--accent)}
+thead [data-k]:hover{color:var(--ink)}
+thead th.dual{padding-right:16px}
+thead .sep{margin:0 5px;opacity:.4}
 tbody tr{border-bottom:1px solid var(--rule-soft)}
 tbody tr:last-child{border-bottom:0}
 tbody tr:hover{background:var(--surface-2)}
@@ -82,7 +93,29 @@ td.rail i{display:block;width:4px;height:100%;min-height:52px}
 .feat{font-weight:600;font-size:14.5px;letter-spacing:-.005em}
 .desc{font-family:"Source Serif 4",Georgia,serif;font-size:14px;color:var(--ink-soft);
   margin-top:3px;max-width:56ch}
+/* own line rather than beside the title: keeps the first column narrow on a laptop */
+.rid{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:400;color:var(--ink-faint);letter-spacing:.02em;margin-top:2px}
 .note{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);margin-top:5px}
+/* Compact view. Some notes run to a page, which is right for reading a row and
+   wrong for ranking a list: dropping them and the descriptions puts all rows on
+   about two laptop screens, which is what comparing them needs. */
+.sheet.dense td{padding:3px 12px}
+.sheet.dense .desc,.sheet.dense .note{display:none}
+.sheet.dense .rid{display:inline;margin:0 0 0 9px}
+.sheet.dense td.rail i{min-height:0}
+/* the chart is worth a screen of its own, so compact mode puts it away too:
+   the point of compact is comparing rows, and it cannot do that from below a plot */
+.plot.folded{display:none}
+/* Shortlist: the 12 rows that become the questionnaire. A tick rather than a
+   rating, because being asked about is a different question from being worth doing. */
+td.pick,th.pick{width:52px;white-space:nowrap}
+.pick button{width:18px;height:18px;padding:0;border-radius:4px;cursor:pointer;
+  border:1.5px solid var(--rule);background:transparent;display:block}
+.pick button:hover{border-color:var(--accent)}
+.pick button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+.pick button[aria-pressed="true"]::after{content:"";display:block;width:4px;height:9px;margin:1px auto 0;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+#m-short.over{color:var(--ramp-xl)}
 .tick{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-faint);white-space:nowrap}
 .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;
   padding:2px 7px;border-radius:4px;background:var(--surface-2);border:1px solid var(--rule);color:var(--ink-soft)}
@@ -100,7 +133,9 @@ dialog{border:1px solid var(--rule);border-radius:10px;background:var(--surface)
   padding:0;max-width:min(820px,92vw);box-shadow:var(--shadow)}
 dialog::backdrop{background:rgba(0,0,0,.45)}
 .dlg{padding:18px;display:flex;flex-direction:column;gap:12px}
-textarea{width:100%;height:340px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+.dlg-note{margin:0;font-family:"Source Serif 4",Georgia,serif;font-size:13.5px;color:var(--ink-soft)}
+.dlg-note code{font-family:"IBM Plex Mono",monospace;font-size:12px}
+textarea{width:100%;height:220px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;
   border:1px solid var(--rule);border-radius:7px;padding:11px;background:var(--surface-2);color:var(--ink);resize:vertical}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -154,6 +189,7 @@ textarea{width:100%;height:340px;font-family:"IBM Plex Mono",monospace;font-size
     <div class="meter"><span>Candidates</span><b id="m-total">0</b></div>
     <div class="meter"><span>Rated</span><b id="m-rated">0</b></div>
     <div class="meter"><span>Already underway</span><b id="m-under">0</b></div>
+    <div class="meter"><span>Shortlist</span><b id="m-short">0</b></div>
     <div class="meter" style="flex:1 1 210px">
       <span>Effort mix</span>
       <div class="bar" id="m-bar"></div>
@@ -167,9 +203,11 @@ textarea{width:100%;height:340px;font-family:"IBM Plex Mono",monospace;font-size
   <label>Effort</label><span id="f-eff"></span>
   <button class="chip" id="f-under" aria-pressed="false">Underway only</button>
   <button class="chip" id="f-rated" aria-pressed="false">Unrated only</button>
+  <button class="chip" id="f-short" aria-pressed="false">Shortlist only</button>
+  <button class="chip" id="f-dense" aria-pressed="true" title="Hide the descriptions and notes, one line per row">Compact</button>
   <span class="spacer"></span>
   <button class="btn ghost" id="reset">Reset</button>
-  <button class="btn" id="export">Copy CSV</button>
+  <button class="btn" id="export">Export ratings</button>
 </div>
 
 <section class="plot" id="plot-sec">
@@ -198,11 +236,12 @@ textarea{width:100%;height:340px;font-family:"IBM Plex Mono",monospace;font-size
   <table>
     <thead><tr>
       <th class="rail" aria-hidden="true"></th>
-      <th data-k="feature" tabindex="0">Feature<span class="ar">&#9660;</span></th>
+      <th class="dual"><span data-k="feature" tabindex="0" role="button">Feature<span class="ar">&#9660;</span></span><span class="sep">/</span><span data-k="id" tabindex="0" role="button">Id<span class="ar">&#9660;</span></span></th>
       <th data-k="repo" tabindex="0">Repo<span class="ar">&#9660;</span></th>
       <th data-k="underway" tabindex="0">Underway<span class="ar">&#9660;</span></th>
       <th data-k="effort" tabindex="0">Effort<span class="ar">&#9660;</span></th>
       <th data-k="value" tabindex="0">Value<span class="ar">&#9660;</span></th>
+      <th class="pick" data-k="shortlist" tabindex="0" title="In the 12-question shortlist">Short<span class="ar">&#9660;</span></th>
       <th data-k="tickets" tabindex="0">Tickets<span class="ar">&#9660;</span></th>
     </tr></thead>
     <tbody id="tb"></tbody>
@@ -218,7 +257,7 @@ textarea{width:100%;height:340px;font-family:"IBM Plex Mono",monospace;font-size
 </div>
 
 <dialog id="dlg"><div class="dlg">
-  <strong>CSV with your ratings</strong>
+  <strong>Your ratings</strong><p class="dlg-note">Save this as <code>ratings.csv</code> beside <code>feature-candidates.csv</code>, then run <code>build-roadmap.py</code>. It merges by id, so sorting, reordering or adding rows in the master changes nothing.</p>
   <textarea id="csv" readonly aria-label="CSV output"></textarea>
   <div style="display:flex;gap:9px;justify-content:flex-end">
     <button class="btn ghost" id="dlg-close">Close</button>
@@ -231,12 +270,25 @@ const ROWS = __ROWS__;
 const RANK={S:1,M:2,L:3,xL:4,XL:4};
 const RAMP={S:"var(--ramp-s)",M:"var(--ramp-m)",L:"var(--ramp-l)",xL:"var(--ramp-xl)",XL:"var(--ramp-xl)"};
 const KEY="pch-roadmap-values-v1";
+// Seed from the value column in the CSV, then let anything this browser has
+// stored override it. A cleared rating is stored as 0 rather than deleted, so
+// clearing here beats a value that is still sitting in the file.
 let vals={};
-try{vals=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){vals={}}
+ROWS.forEach(r=>{const v=parseInt(r.value,10);if(v>=1&&v<=5)vals[r.id]=v});
+try{Object.assign(vals,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){}
+Object.keys(vals).forEach(k=>{if(!vals[k])delete vals[k]});
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(vals))}catch(e){}};
 
 let sortK="", sortDir=1;
-const state={q:"",repo:new Set(),eff:new Set(),under:false,unrated:false};
+const state={q:"",repo:new Set(),eff:new Set(),under:false,unrated:false,short:false};
+// Shortlist marks: seeded from the CSV column, then overridden by this browser.
+// Stored as an explicit 0 when cleared, for the same reason ratings are: an
+// unticked row has to travel back, or the old mark stays in the master.
+const SKEY="pch-roadmap-shortlist-v1";
+const marks={}; ROWS.forEach(r=>{if(String(r.shortlist)==="1")marks[r.id]=1});
+try{Object.assign(marks,JSON.parse(localStorage.getItem(SKEY)||"{}"))}catch(e){}
+const saveMarks=()=>{try{localStorage.setItem(SKEY,JSON.stringify(marks))}catch(e){}};
+const shortCount=()=>ROWS.filter(r=>marks[r.id]).length;
 const $=s=>document.querySelector(s);
 
 function chips(host,items,set){
@@ -257,6 +309,7 @@ function shown(){
     if(state.eff.size&&!state.eff.has(r.effort))return false;
     if(state.under&&r.underway!=="partly")return false;
     if(state.unrated&&vals[r.id])return false;
+    if(state.short&&!marks[r.id])return false;
     if(!q)return true;
     return (r.feature+" "+r.description+" "+r.tickets+" "+r.note+" "+r.id).toLowerCase().includes(q);
   });
@@ -269,6 +322,8 @@ function render(){
       let x,y;
       if(sortK==="effort"){x=RANK[a.effort]||0;y=RANK[b.effort]||0}
       else if(sortK==="value"){x=vals[a.id]||0;y=vals[b.id]||0}
+      // sort on the live marks, not the CSV column, which is a build old
+      else if(sortK==="shortlist"){x=marks[a.id]?1:0;y=marks[b.id]?1:0}
       else{x=(a[sortK]||"").toLowerCase();y=(b[sortK]||"").toLowerCase()}
       return x<y?-sortDir:x>y?sortDir:0;
     });
@@ -279,8 +334,19 @@ function render(){
     const rail=document.createElement("td");rail.className="rail";
     const i=document.createElement("i");i.style.background=RAMP[r.effort]||"var(--rule)";rail.appendChild(i);
 
+    const pick=document.createElement("td");pick.className="pick";
+    const pb=document.createElement("button");pb.type="button";
+    pb.setAttribute("aria-pressed",marks[r.id]?"true":"false");
+    pb.title="Include in the shortlist";
+    pb.onclick=()=>{if(marks[r.id])delete marks[r.id];else marks[r.id]=1;saveMarks();render()};
+    pick.appendChild(pb);
+
     const main=document.createElement("td");
     const f=document.createElement("div");f.className="feat";f.textContent=r.feature;
+    // the id is how rows get referred to in conversation and in ratings.csv, and it
+    // differs from the title on most rows, so show it rather than making it guesswork
+    const idTag=document.createElement("span");idTag.className="rid";idTag.textContent=r.id;
+    f.appendChild(idTag);
     const d=document.createElement("div");d.className="desc";d.textContent=r.description;
     main.append(f,d);
     if(r.note){const n=document.createElement("div");n.className="note";n.textContent=r.note;main.appendChild(n)}
@@ -302,54 +368,78 @@ function render(){
       const b=document.createElement("button");
       b.type="button";b.dataset.on=(vals[r.id]||0)>=n?"1":"0";
       b.setAttribute("aria-label",`Rate ${r.feature} ${n} of 5`);
-      b.onclick=()=>{vals[r.id]=(vals[r.id]===n)?0:n;if(!vals[r.id])delete vals[r.id];save();render()};
+      b.onclick=()=>{
+        const cleared=(vals[r.id]===n);
+        vals[r.id]=cleared?0:n;
+        // persist the 0 so a clear survives a rebuild that still carries the old value
+        let stored={};try{stored=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+        stored[r.id]=cleared?0:n;
+        try{localStorage.setItem(KEY,JSON.stringify(stored))}catch(e){}
+        if(cleared)delete vals[r.id];
+        render();
+      };
       st.appendChild(b);
     }
     vc.appendChild(st);
 
     const tk=document.createElement("td");tk.className="tick";tk.textContent=r.tickets||"—";
-    tr.append(rail,main,rp,uw,ef,vc,tk);tb.appendChild(tr);
+    tr.append(rail,main,rp,uw,ef,vc,pick,tk);tb.appendChild(tr);
   });
   $("#none").hidden=rs.length>0;
   $("#count").textContent=`${rs.length} of ${ROWS.length} shown`;
   $("#m-total").textContent=ROWS.length;
   $("#m-rated").textContent=Object.keys(vals).length;
   $("#m-under").textContent=ROWS.filter(r=>r.underway==="partly").length;
+  const sc=shortCount();
+  $("#m-short").textContent=sc+" / 12";
+  $("#m-short").classList.toggle("over",sc>12);
   const bar=$("#m-bar");bar.innerHTML="";
   ["S","M","L","XL"].forEach(k=>{
     const n=ROWS.filter(r=>r.effort===k).length;if(!n)return;
     const el=document.createElement("i");
     el.style.flex=n;el.style.background=RAMP[k];el.title=`${k}: ${n}`;bar.appendChild(el);
   });
-  document.querySelectorAll("thead th[data-k]").forEach(th=>{
+  document.querySelectorAll("thead [data-k]").forEach(th=>{
     if(th.dataset.k===sortK){th.dataset.dir=sortDir>0?"asc":"desc";
       th.querySelector(".ar").textContent=sortDir>0?"▲":"▼";}
-    else th.removeAttribute("dir"),th.removeAttribute("data-dir");
+    else{th.removeAttribute("data-dir");th.querySelector(".ar").textContent="\u25bc";}
   });
 }
 
-document.querySelectorAll("thead th[data-k]").forEach(th=>{
+document.querySelectorAll("thead [data-k]").forEach(th=>{
   const go=()=>{const k=th.dataset.k;sortDir=(sortK===k)?-sortDir:1;sortK=k;render()};
   th.onclick=go;
   th.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}};
 });
+// A view preference rather than a filter, so Reset leaves it alone and the
+// choice persists per browser.
+const DKEY="pch-roadmap-dense", sheetEl=document.querySelector(".sheet");
+let dense=true; try{const v=localStorage.getItem(DKEY); if(v!==null) dense=v==="1"}catch(e){}
+const applyDense=()=>{sheetEl.classList.toggle("dense",dense);
+  $("#plot-sec").classList.toggle("folded",dense);
+  $("#f-dense").setAttribute("aria-pressed",String(dense));
+  try{localStorage.setItem(DKEY,dense?"1":"0")}catch(e){}};
+applyDense();
+$("#f-dense").onclick=()=>{dense=!dense;applyDense()};
+
 $("#q").oninput=e=>{state.q=e.target.value;render()};
 $("#f-under").onclick=e=>{state.under=!state.under;e.target.setAttribute("aria-pressed",state.under);render()};
 $("#f-rated").onclick=e=>{state.unrated=!state.unrated;e.target.setAttribute("aria-pressed",state.unrated);render()};
-$("#reset").onclick=()=>{state.q="";state.repo.clear();state.eff.clear();state.under=false;state.unrated=false;
+$("#f-short").onclick=e=>{state.short=!state.short;e.target.setAttribute("aria-pressed",state.short);render()};
+$("#reset").onclick=()=>{state.q="";state.repo.clear();state.eff.clear();state.under=false;state.unrated=false;state.short=false;
   sortK="";$("#q").value="";
-  document.querySelectorAll('.chip[aria-pressed]').forEach(c=>c.setAttribute("aria-pressed","false"));render()};
+  document.querySelectorAll('.chip[aria-pressed]:not(#f-dense)').forEach(c=>c.setAttribute("aria-pressed","false"));render()};
 
-function csv(){
-  const cols=["id","feature","description","repo","underway","effort","value","tickets","note"];
-  const esc=s=>'"'+String(s??"").replace(/"/g,'""')+'"';
-  // value stays a bare integer so a spreadsheet reads it as a number, not text
-  const cell=(r,c)=>c==="value"?String(vals[r.id]||""):esc(r[c]);
-  return [cols.map(esc).join(",")].concat(
-    ROWS.map(r=>cols.map(c=>cell(r,c)).join(","))
-  ).join("\n");
+function ratingsCsv(){
+  // Only id, value and the shortlist mark. The master CSV stays the source of truth for every other
+  // column, so pasting these back can never revert an edit made since this page
+  // was built, and the merge keys on id rather than on row position.
+  // Every row, not only the rated ones: an empty value has to travel too, or
+  // clearing a rating here would leave the old number sitting in the master.
+  return ["id,value,shortlist"].concat(
+    ROWS.map(r=>r.id+","+(vals[r.id]||"")+","+(marks[r.id]?"1":""))).join("\n");
 }
-$("#export").onclick=()=>{$("#csv").value=csv();$("#dlg").showModal()};
+$("#export").onclick=()=>{$("#csv").value=ratingsCsv();$("#dlg").showModal()};
 $("#dlg-close").onclick=()=>$("#dlg").close();
 $("#dlg-copy").onclick=async()=>{
   const t=$("#csv");t.select();
