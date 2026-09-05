@@ -48,7 +48,7 @@ ROCKETSIM_STARTUP_TIMEOUT=30
 MAX_SIZE_RATIO=1.05  # max/min file-size ratio above which a pair is considered a FAIL
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 # Default output: scripts/screenshots_verify/ (separate from scripts/screenshots/).
 # Deleted on success; kept on failure for inspection.
 OUT_DIR="${SCRIPT_DIR}/screenshots_verify"

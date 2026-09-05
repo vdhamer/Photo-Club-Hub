@@ -42,7 +42,7 @@
 # Arguments of script:
 # ---------------------------------------------------------------------------
 #
-#   Scripts/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted] [--no-png]
+#   scripts/screenshots/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted] [--no-png]
 #                                  [--jpg-background-light <color>] [--jpg-background-dark <color>] [--app-store]
 #   --build         Build the app for the target simulator and (re)install it first.
 #   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
@@ -187,9 +187,10 @@ SLEEP_AFTER_READY_PORTFOLIO=8   # extra settling for Portfolio screens: Juicebox
 # on a successful run (readiness polling already dominates) but keeps the system breathing.
 SLEEP_BETWEEN_SCREENS=5
 
-# Output directory (kept out of git — see the .gitignore note for Scripts/screenshots).
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-OUT_DIR="${REPO_ROOT}/Scripts/screenshots"
+# Output directory (kept out of git — see the .gitignore note for scripts/screenshots/output).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+OUT_DIR="${SCRIPT_DIR}/output"
 
 # Behavior flags (set by args).
 DO_BUILD=0
