@@ -3,7 +3,7 @@
 # append rows, Git keeps both sides instead of raising a conflict.
 #
 # Trade-off: a union merge can leave duplicate rows for the same date. That is
-# harmless here because scripts/countLines.sh collapses duplicate dates (keeping
+# harmless here because scripts/linecount/countLines.sh collapses duplicate dates (keeping
 # the newest row) on its next run.
 #
 # Matched by basename, so it applies regardless of the file's directory path.
