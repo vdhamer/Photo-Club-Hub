@@ -28,7 +28,7 @@
 #   The three repos are counted the same way (Swift only), so the columns are
 #   directly comparable and can be stacked in the spreadsheet.
 #
-# The CSV (scripts/LineCount.csv) is the version-controlled source of
+# The CSV (scripts/linecount/LineCount.csv) is the version-controlled source of
 # truth. LineCount.xlsx is only a viewer that loads this CSV via Power Query.
 #
 # Usage:  ./scripts/countLines.sh
@@ -65,15 +65,15 @@ set -euo pipefail
 # current working trees, which it cannot.
 (( $# == 0 )) || { echo "error: this script takes no arguments" >&2; exit 1; }
 
-# --- locate repo root (this script lives in <repo>/scripts/) -----------------
+# --- locate repo root (this script lives in <repo>/scripts/linecount/) -------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 PARENT_DIR="$(dirname "$REPO_ROOT")"               # holds the sibling checkouts
 
 DATE="$(date +%F)"                                  # YYYY-MM-DD
 
 # --- configuration -----------------------------------------------------------
-CSV="$REPO_ROOT/scripts/LineCount.csv"
+CSV="$SCRIPT_DIR/LineCount.csv"
 TESTS_DIR="$REPO_ROOT/Tests"                       # where @Test macros live
 EXCLUDE_DIRS=".build,DerivedData,Pods,.git"        # cloc --exclude-dir list
 GH="/opt/homebrew/bin/gh"                          # GitHub CLI (optional)
