@@ -200,7 +200,7 @@
             "name": {
                 "givenName": "Margo",
                 "infixName": "van",
-                "familyName": "Heugten-van-Nunen"
+                "familyName": "Heugten-van Nunen"
             },
             "optional": {
                 "membershipStartDate": "2018-01-01",
@@ -236,7 +236,7 @@
             "name": {
                 "givenName": "Marjo",
                 "infixName": "van der",
-                "familyName": "Burgt-van-Dommelen"
+                "familyName": "Burgt-van Dommelen"
             },
             "optional": {
                 "membershipStartDate": "2012-12-01",
