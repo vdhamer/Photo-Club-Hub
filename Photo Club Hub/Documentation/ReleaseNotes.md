@@ -8,6 +8,12 @@
 
 ### 3.0.2 (GitHub commit ???????) ??-09-2026
 
+USER-FACING
+
+- **One-time database reset on first launch of build 4667.** The stored data is wiped and reloaded from scratch, so the first launch after updating takes noticeably longer. Triggered by the `dataResetPending302b4667` key. It is needed because five members' family names were corrected in the data, and a photographer is identified by their name rather than by any id: without the reset, a device that had already loaded the old spelling would keep that photographer alongside the corrected one and show those five people twice, indefinitely ([#841](https://github.com/vdhamer/Photo-Club-Hub/issues/841))
+
+- Compound family names, the kind formed on marriage, are now written one way instead of seven. There were seven such names in the data and no two were spelled alike: the separator varied between a hyphen, a spaced hyphen and hyphens replacing the spaces, and the first name's infix was sometimes in the `infixName` field and sometimes left inside `familyName`, which decides whether the person sorts under her own family name or under "de". Five were corrected, two already conformed. The convention and its reasoning are in the issue, and it applies to anyone writing a `level2.json` by hand ([#841](https://github.com/vdhamer/Photo-Club-Hub/issues/841))
+
 STRUCTURAL
 
 - **Maps stops reverse-geocoding clubs it has already resolved.** 
