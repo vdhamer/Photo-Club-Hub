@@ -47,6 +47,15 @@ h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-f
   padding:13px 0;border-bottom:1px solid var(--rule-soft)}
 .item:last-child{border-bottom:0}
 .nm{font-weight:600;font-size:15.5px;letter-spacing:-.006em}
+.ask{margin:30px 0 6px;padding:20px 22px;border:1px solid var(--rule);border-radius:10px;
+  background:var(--surface-2)}
+.ask h2{margin:0 0 9px;font-size:15px;letter-spacing:.01em}
+.ask p{margin:0 0 10px;font-family:"Source Serif 4",Georgia,serif;font-size:15px;line-height:1.55}
+.ask p:last-child{margin-bottom:0}
+/* The number is how a reply refers to a row: people are asked to send back their
+   top three as numbers, so it has to be readable and continuous across groups. */
+.no{display:inline-block;min-width:1.6em;font-family:"IBM Plex Mono",monospace;font-size:13px;
+  font-weight:500;color:var(--ink-faint)}
 .ds{grid-column:1/2;font-family:"Source Serif 4",Georgia,serif;font-size:15px;
   color:var(--ink-soft);max-width:58ch}
 .meta{grid-row:1/3;grid-column:2/3;display:flex;flex-direction:column;align-items:flex-end;gap:5px;
@@ -87,18 +96,34 @@ footer{font-family:"Source Serif 4",Georgia,serif;font-size:14.5px;color:var(--i
   about making it easier for a club to fill that page in.</p>
 </div>
 
-<div class="key">
-  <div><i style="background:var(--s)"></i><b>S</b> about a week</div>
-  <div><i style="background:var(--m)"></i><b>M</b> two to four weeks</div>
-  <div><i style="background:var(--l)"></i><b>L</b> one to two months</div>
-  <div><i style="background:var(--xl)"></i><b>XL</b> longer</div>
-  <div style="color:var(--accent)">Started &mdash; already partly working</div>
+<div class="ask">
+  <h2>How to reply</h2>
+  <p>Pick the <strong>three</strong> you would most like to see, and send back their numbers in
+  order of preference &mdash; for example <em>4, 9, 1</em>. The order matters: your first choice
+  counts for more than your third when the answers are added up.</p>
+  <p>Three rather than five because people are usually sure about their first two or three and
+  guessing after that. Just reply to the email that brought you here.</p>
 </div>
 
 __GROUPS__
 
+<div class="ask">
+  <h2>Two more questions, both optional</h2>
+  <p><strong>Is something missing?</strong> These are twelve things somebody already thought of.
+  If what you actually want is not among them, saying so is worth more than any ranking, because
+  no amount of ranking can reveal it.</p>
+  <p>You decide how much weight it carries. <strong>If it belongs in your three, put it there</strong>
+  &mdash; reply with something like <em>&ldquo;first: being able to print a club&rsquo;s photos, which
+  is not listed, then 4, 9&rdquo;</em>. Something worth displacing one of the twelve is exactly what
+  needs hearing. If it is more of a nice-to-have, just mention it and leave your three as they are.</p>
+  <p><strong>Anything else at all?</strong> Including &ldquo;this will not work, because&hellip;&rdquo;.
+  Doubts about the whole idea, or about how it is being approached, are worth more than
+  encouragement and are much harder to come by. Nobody minds being told the plan is wrong while
+  it is still cheap to change.</p>
+</div>
+
 <footer>
-  Comments and disagreement are welcome, and more useful than agreement. If something
-  important is missing from this list, that is worth knowing before any of it is built.
+  Written by one person who builds this in his own time. Nothing here is a promise, and the
+  order things get built in will owe a lot to what comes back from these replies.
 </footer>
 </div>

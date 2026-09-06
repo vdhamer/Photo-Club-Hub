@@ -90,9 +90,13 @@ def read_rows():
         if r["theme"] not in THEMES:
             sys.exit(f"error: row {n} ('{r['id']}') has theme '{r['theme']}', "
                      f"expected one of: {'; '.join(THEMES)}")
-        if r["effort"] not in EFFORT:
+        # An empty effort is allowed, and means "no defined work to estimate yet".
+        # A row can be a question about whether an area is worth pursuing rather
+        # than a candidate to build, and inventing a size for one of those would
+        # make it look like something it is not.
+        if r["effort"] and r["effort"] not in EFFORT:
             sys.exit(f"error: row {n} ('{r['id']}') has effort '{r['effort']}', "
-                     f"expected one of {', '.join(EFFORT)}")
+                     f"expected one of {', '.join(EFFORT)}, or empty")
     return rows
 
 
@@ -105,7 +109,7 @@ def write_html(rows):
 
 
 def write_markdown(rows):
-    ordered = sorted(rows, key=lambda r: (EFFORT[r["effort"]], r["feature"].lower()))
+    ordered = sorted(rows, key=lambda r: (EFFORT.get(r["effort"], 99), r["feature"].lower()))
     out = [
         "# Roadmap Contact Sheet",
         "",
@@ -158,22 +162,26 @@ def write_reader(rows):
         rows = picked
 
     blocks = []
+    number = 0  # continuous across groups: a reply says "7", not "Beyond a single club 2"
     for theme in THEMES:
         members = [r for r in rows if r["theme"] == theme]
         if not members:
             continue
-        members.sort(key=lambda r: (EFFORT[r["effort"]], r["feature"].lower()))
+        members.sort(key=lambda r: (EFFORT.get(r["effort"], 99), r["feature"].lower()))
         items = []
         for r in members:
+            number += 1
             started = ('<span class="started">Started</span>'
                        if r["underway"] == "partly" else "")
+            # No effort badge. A reader asked how much they want something will
+            # discount an L and favour an S, which is precisely the signal being
+            # collected: their value has to arrive independent of our cost, so the
+            # two can be combined afterwards rather than confounded at the source.
             items.append(
                 '<div class="item">'
-                f'<div class="nm">{esc(r["feature"])}</div>'
+                f'<div class="nm"><span class="no">{number}</span>{esc(r["feature"])}</div>'
                 f'<div class="ds">{esc(r["description"])}</div>'
-                f'<div class="meta">'
-                f'<span class="eff" style="background:var(--{r["effort"].lower()})">'
-                f'{r["effort"]}</span>{started}</div>'
+                f'<div class="meta">{started}</div>'
                 "</div>")
         blocks.append(f'<section class="group"><h2>{esc(theme)}</h2>'
                       f'<div class="items">{"".join(items)}</div></section>')

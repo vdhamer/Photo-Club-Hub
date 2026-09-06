@@ -47,6 +47,15 @@ h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-f
   padding:13px 0;border-bottom:1px solid var(--rule-soft)}
 .item:last-child{border-bottom:0}
 .nm{font-weight:600;font-size:15.5px;letter-spacing:-.006em}
+.ask{margin:30px 0 6px;padding:20px 22px;border:1px solid var(--rule);border-radius:10px;
+  background:var(--surface-2)}
+.ask h2{margin:0 0 9px;font-size:15px;letter-spacing:.01em}
+.ask p{margin:0 0 10px;font-family:"Source Serif 4",Georgia,serif;font-size:15px;line-height:1.55}
+.ask p:last-child{margin-bottom:0}
+/* The number is how a reply refers to a row: people are asked to send back their
+   top three as numbers, so it has to be readable and continuous across groups. */
+.no{display:inline-block;min-width:1.6em;font-family:"IBM Plex Mono",monospace;font-size:13px;
+  font-weight:500;color:var(--ink-faint)}
 .ds{grid-column:1/2;font-family:"Source Serif 4",Georgia,serif;font-size:15px;
   color:var(--ink-soft);max-width:58ch}
 .meta{grid-row:1/3;grid-column:2/3;display:flex;flex-direction:column;align-items:flex-end;gap:5px;
@@ -87,18 +96,38 @@ footer{font-family:"Source Serif 4",Georgia,serif;font-size:14.5px;color:var(--i
   about making it easier for a club to fill that page in.</p>
 </div>
 
-<div class="key">
-  <div><i style="background:var(--s)"></i><b>S</b> about a week</div>
-  <div><i style="background:var(--m)"></i><b>M</b> two to four weeks</div>
-  <div><i style="background:var(--l)"></i><b>L</b> one to two months</div>
-  <div><i style="background:var(--xl)"></i><b>XL</b> longer</div>
-  <div style="color:var(--accent)">Started &mdash; already partly working</div>
+<div class="ask">
+  <h2>How to reply</h2>
+  <p>Pick the <strong>three</strong> you would most like to see, and send back their numbers in
+  order of preference &mdash; for example <em>4, 9, 1</em>. The order matters: your first choice
+  counts for more than your third when the answers are added up.</p>
+  <p>Three rather than five because people are usually sure about their first two or three and
+  guessing after that. Just reply to the email that brought you here.</p>
 </div>
 
-<section class="group"><h2>Getting more clubs on board</h2><div class="items"><div class="item"><div class="nm">Edit club data in a form</div><div class="ds">Fill in a (partially filled in) form instead of a file format, and the app writes the file for you.</div><div class="meta"><span class="eff" style="background:var(--l)">L</span></div></div></div></section>
+<section class="group"><h2>Getting more clubs on board</h2><div class="items"><div class="item"><div class="nm"><span class="no">1</span>A place for club-less photographers</div><div class="ds">Photographers who belong to no club can still be shown alongside those who do.</div><div class="meta"><span class="started">Started</span></div></div><div class="item"><div class="nm"><span class="no">2</span>Every Dutch club on the map</div><div class="ds">Find your Fotobond club already listed, wherever in the country it is, instead of only in one or two regions.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">3</span>Edit club list in a form</div><div class="ds">Fill in a (partially filled in) form instead of editing a file format, and the app writes the file for you.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">4</span>Edit club data in a form</div><div class="ds">Fill in a (partially filled in) form instead of a file format, and the app writes the file for you.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Finding what interests you</h2><div class="items"><div class="item"><div class="nm"><span class="no">5</span>Follow the clubs and photographers you like</div><div class="ds">You may get a list of the photographers and clubs you care about, so the app can show you their news rather than everyone's, wherever in the world you are.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">6</span>A screen for expertises</div><div class="ds">Browse the full list of photography types the way the website already allows.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">7</span>Search on more than names</div><div class="ds">Search for a club or a kind of photography, not only for a photographer's name.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">8</span>Show me what I care about</div><div class="ds">Tell the app which clubs, people and kinds of photography interest you, and it stops showing you the rest.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Looking at the photographs</h2><div class="items"><div class="item"><div class="nm"><span class="no">9</span>A better way to look at the photographs</div><div class="ds">More of the photographs, and shown better. This one asks whether the area is worth our effort, before anyone decides what it should look like.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Beyond a single club</h2><div class="items"><div class="item"><div class="nm"><span class="no">10</span>Exhibitions near you</div><div class="ds">See which club exhibitions are on near you in the coming weeks, with a reminder on your home screen.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">11</span>Watch the project grow</div><div class="ds">See how many clubs, photographers and photos the app covers, and how that is changing.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Keeping it working</h2><div class="items"><div class="item"><div class="nm"><span class="no">12</span>Suggestions from your own website</div><div class="ds">You may get a short list of likely changes to your club's data, drawn from your club's own website, to accept or correct.</div><div class="meta"></div></div></div></section>
+
+<div class="ask">
+  <h2>Two more questions, both optional</h2>
+  <p><strong>Is something missing?</strong> These are twelve things somebody already thought of.
+  If what you actually want is not among them, saying so is worth more than any ranking, because
+  no amount of ranking can reveal it.</p>
+  <p>You decide how much weight it carries. <strong>If it belongs in your three, put it there</strong>
+  &mdash; reply with something like <em>&ldquo;first: being able to print a club&rsquo;s photos, which
+  is not listed, then 4, 9&rdquo;</em>. Something worth displacing one of the twelve is exactly what
+  needs hearing. If it is more of a nice-to-have, just mention it and leave your three as they are.</p>
+  <p><strong>Anything else at all?</strong> Including &ldquo;this will not work, because&hellip;&rdquo;.
+  Doubts about the whole idea, or about how it is being approached, are worth more than
+  encouragement and are much harder to come by. Nobody minds being told the plan is wrong while
+  it is still cheap to change.</p>
+</div>
 
 <footer>
-  Comments and disagreement are welcome, and more useful than agreement. If something
-  important is missing from this list, that is worth knowing before any of it is built.
+  Written by one person who builds this in his own time. Nothing here is a promise, and the
+  order things get built in will owe a lot to what comes back from these replies.
 </footer>
 </div>

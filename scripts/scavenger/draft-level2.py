@@ -94,6 +94,14 @@ def names_in(text):
     for m in FULL.finditer(" ".join(text.split())):
         g, inf, fam = m.group(1), (m.group(2) or ""), m.group(3)
         s = score(g, inf, fam)
+        # Emit the compound-name convention agreed in #841: one hyphen between the
+        # two family names with no spaces around it, and the second name's own infix
+        # keeping its space. A site may write any of "X - van Dijk", "X-van-Dijk" or
+        # "X-van Dijk"; the stored form has to be one of them or the same person
+        # arrives twice, since the Photographer row is keyed on the name itself.
+        fam = re.sub(r"\s*-\s*", "-", fam)
+        for _ in range(2):  # twice, so two-word infixes like "van der" are covered
+            fam = re.sub(rf"-({INFIX})-", r"-\1 ", fam)
         fam = fam.rstrip("-'")
         if s >= 2 and len(fam) > 1:
             k = key(g, inf, fam)
