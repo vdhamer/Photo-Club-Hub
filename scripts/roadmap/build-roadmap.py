@@ -6,7 +6,6 @@
 #        ratings.csv              optional: id,value,shortlist rows exported from the web page
 #        roadmap-template.html    page design and behaviour, with a __ROWS__ placeholder
 # Writes roadmap-contact-sheet.html   interactive: sort, filter, rate, value/effort matrix
-#        roadmap.md                   plain table, sorted by effort, for reading and printing
 #        roadmap-for-readers.html     the shareable one: no notes, no ticket numbers, grouped by theme
 #
 # The CSV is the only place data lives. The page embeds a copy at build time, so
@@ -28,21 +27,42 @@ HERE = Path(__file__).resolve().parent
 CSV_IN = HERE / "feature-candidates.csv"
 TEMPLATE = HERE / "roadmap-template.html"
 HTML_OUT = HERE / "roadmap-contact-sheet.html"
-MD_OUT = HERE / "roadmap.md"
 RATINGS_IN = HERE / "ratings.csv"
 READER_TEMPLATE = HERE / "reader-template.html"
 READER_OUT = HERE / "roadmap-for-readers.html"
 
-COLUMNS = ["id", "feature", "description", "repo",
-           "underway", "effort", "value", "shortlist", "theme", "tickets", "note"]
+# The goals this project is trying to serve, in the order they appear on the shareable
+# page, keyed by the short column name used in the CSV.
+#
+# A row carries one mark per goal it serves: "*" for the one goal it mainly serves, and
+# "x" for any others. Exactly one star per row, because the star is also what the reader
+# page groups by, and a row appearing under two headings would be numbered twice — the
+# numbers are how a reply refers to a row. The extra "x" marks exist for analysis: a
+# feature genuinely serving three goals is worth knowing, and the single-theme column
+# this replaced could not say it. Leave a cell blank when in doubt; a grid where most
+# rows carry three marks says nothing.
+GOALS = {"coverage":   "Getting more members covered",
+         "discovery":  "Finding what interests you",
+         "portfolios": "Enjoying portfolios of others",
+         "project":    "Beyond a single club",
+         "durability": "Keeping it working"}
+GOAL_KEYS = list(GOALS)
 
-# Reader-facing groups, in the order they appear on the shareable page. A theme
-# outside this list is a typo rather than a new group, so the build stops on it.
-THEMES = ["Getting more clubs on board",
-          "Finding what interests you",
-          "Looking at the photographs",
-          "Beyond a single club",
-          "Keeping it working"]
+# Two further renames were proposed on 7 Sept 2026 and not adopted, because each would have
+# misdescribed most of its own rows. "Beyond a single club" -> "Seeing outside your own club" fits
+# 2 of its 7: the rest are about the project rather than about another club, such as putting the
+# website generator on the App Store, or voting on what comes next. "Keeping it working" ->
+# "Keeping the data fresh" fits 1 of its 6: the others are about the software and the project
+# surviving, not about data currency.
+#
+# The many-to-many marks do not rescue either, because the star still has to be a good primary
+# fit. What the two labels really expose is that both groups are doing two jobs at once, so the
+# honest fix is to split them into four goals rather than to rename two.
+
+COLUMNS = ["id", "feature", "description", "repo",
+           "underway", "effort", "value", "shortlist",
+           *GOAL_KEYS, "tickets", "note"]
+
 
 # Effort labels, smallest first. The order is the sort order everywhere; the
 # weeks are what the page's matrix labels its columns with.
@@ -87,9 +107,16 @@ def read_rows():
         if r["id"] in seen:
             sys.exit(f"error: row {n} repeats the id '{r['id']}'")
         seen.add(r["id"])
-        if r["theme"] not in THEMES:
-            sys.exit(f"error: row {n} ('{r['id']}') has theme '{r['theme']}', "
-                     f"expected one of: {'; '.join(THEMES)}")
+        marks = {g: (r[g] or "").strip() for g in GOAL_KEYS}
+        bad = {g: m for g, m in marks.items() if m not in ("", "x", "*")}
+        if bad:
+            sys.exit(f"error: row {n} ('{r['id']}') has {bad}, expected '*', 'x' or empty")
+        stars = [g for g, m in marks.items() if m == "*"]
+        if len(stars) != 1:
+            sys.exit(f"error: row {n} ('{r['id']}') has {len(stars)} goals marked '*' "
+                     f"({', '.join(stars) or 'none'}), expected exactly one")
+        # `theme` is derived rather than stored, so the two can never disagree
+        r["theme"] = GOALS[stars[0]]
         # An empty effort is allowed, and means "no defined work to estimate yet".
         # A row can be a question about whether an area is worth pursuing rather
         # than a candidate to build, and inventing a size for one of those would
@@ -107,35 +134,6 @@ def write_html(rows):
     data = json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
     HTML_OUT.write_text(template.replace("__ROWS__", data), encoding="utf-8")
 
-
-def write_markdown(rows):
-    ordered = sorted(rows, key=lambda r: (EFFORT.get(r["effort"], 99), r["feature"].lower()))
-    out = [
-        "# Roadmap Contact Sheet",
-        "",
-        f"{len(ordered)} candidates, sorted by effort and then by name.",
-        "Effort estimates Peter's time: "
-        + ", ".join(f"**{k}** {v} week{'s' if v > 1 else ''}" for k, v in EFFORT.items())
-        + ".",
-        "",
-        "| Feature | What a user would be told | Repo | Underway | Effort | Value | Tickets |",
-        "|---|---|---|---|:--:|:--:|---|",
-    ]
-    for r in ordered:
-        out.append(
-            f"| **{r['feature']}** | {r['description']} | {r['repo']} | "
-            f"{r['underway']} | {r['effort']} | {r['value']} | {r['tickets'] or '—'} |"
-        )
-
-    noted = [r for r in ordered if r["note"]]
-    if noted:
-        out += ["", "## Notes", ""]
-        out += [f"- **{r['feature']}** — {r['note']}" for r in noted]
-
-    tally = {k: sum(1 for r in ordered if r["effort"] == k) for k in EFFORT}
-    out += ["", "## Shape", "", "| Size | Weeks | Count |", "|---|--:|--:|"]
-    out += [f"| {k} | {EFFORT[k]} | {tally[k]} |" for k in EFFORT if tally[k]]
-    MD_OUT.write_text("\n".join(out) + "\n", encoding="utf-8")
 
 
 def esc(text):
@@ -163,7 +161,7 @@ def write_reader(rows):
 
     blocks = []
     number = 0  # continuous across groups: a reply says "7", not "Beyond a single club 2"
-    for theme in THEMES:
+    for theme in GOALS.values():
         members = [r for r in rows if r["theme"] == theme]
         if not members:
             continue
@@ -260,7 +258,6 @@ rows = read_rows()
 applied = merge_ratings(rows)
 write_csv(rows)
 write_html(rows)
-write_markdown(rows)
 write_reader(rows)
 
 rated = sum(1 for r in rows if r["value"])
@@ -272,5 +269,5 @@ print(f"reader page: {short} shortlisted row(s)" if short
       else "reader page: all rows (nothing shortlisted yet)")
 # file:// URLs, percent-escaped: the repository path contains spaces, and an
 # unescaped space stops most terminals treating the line as one clickable link
-for out in (HTML_OUT, MD_OUT, READER_OUT):
+for out in (HTML_OUT, READER_OUT):
     print(f"  {out.as_uri()}")
