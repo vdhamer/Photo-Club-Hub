@@ -12,6 +12,10 @@ no arguments (`build-roadmap.command` runs it by double-click):
 | --- | --- |
 | `roadmap-contact-sheet.html` | Sort, filter, rate; shows value against effort as a matrix |
 | `roadmap-for-readers.html` | The one to share: no notes, no ticket numbers, grouped by goal |
+| `roadmap-for-readers-nl.html` | The same page in Dutch, from `reader-template-nl.html` |
+
+Both reader pages are generated on every run, from `reader-template.html` and
+`reader-template-nl.html`.
 
 The build also rewrites the master itself into a canonical form — comma-separated, every field
 quoted — so formatting choices made by a spreadsheet do not survive a build.
@@ -25,6 +29,38 @@ The merge matches on `id`, so the master can be sorted, reordered or extended wi
 An id that matches no row is reported rather than
 applied, which is what a renamed row looks like. `ratings.csv` itself is not
 committed: it is an intermediate file, and the master is where the actual data is saved.
+
+## The Dutch page
+
+`feature_nl` and `description_nl` hold the Dutch wording of the two columns a reader sees.
+They may be blank on a row that is not shortlisted. On a row that **is** shortlisted they are
+required, and the build stops naming the row rather than emitting a page that mixes the two
+languages: a reader cannot tell an untranslated item from a name left in English on purpose.
+
+Both pages number their rows identically, and the numbering is what a reply refers to. That is
+why rows are sorted on the English name in both languages, rather than on the name being shown.
+Sorting on the translated name would leave the numbering of two rows of equal effort to
+alphabetical luck, and a reply of "7" would then mean different things to different readers.
+
+Headings for the five goals are in the script, not in the CSV, as `GOALS` and `GOALS_NL`.
+
+Apostrophes are curled when a page is written, so the CSV stays plain ASCII: type `foto's` and
+the page shows `foto’s`.
+
+## Fixing the wording
+
+Three places, depending on which words are wrong. Never edit `roadmap-for-readers-nl.html`
+itself: it is generated, and the next build overwrites it.
+
+| What reads badly | Where to fix it |
+| --- | --- |
+| Intro, "Hoe je kunt reageren", the two optional questions, the footer | `reader-template-nl.html` |
+| One of the twelve item names or descriptions | `feature_nl` / `description_nl` in the CSV |
+| One of the five goal headings | `GOALS_NL` in `build-roadmap.py` |
+
+Then run the build again and reopen the page. Changing an item's Dutch wording cannot change
+its number: rows are ordered by the English name in both languages, precisely so a reply of
+"7" means the same thing in both language versions.
 
 The list is a set of possibilities, honestly assessed.
 It is not a plan or a commitment — nobody is paid for doing the work involved.

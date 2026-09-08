@@ -61,7 +61,7 @@ De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te s
 Er is een **iOS** (iPhone/iPad) versie van de app op de Apple App Store.
 Voor andere merken telefoontjes en voor grotere schermen is er een **webversie**.
 
-Met de [webversie](https://www.fcDeGender.nl/clubs) kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_...) 
+Met de [webversie](https://www.fcDeGender.nl/hub/nl/clubs) kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_...) 
 op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, Windows PC, Mac).
 Beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
 

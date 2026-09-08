@@ -42,7 +42,7 @@ More information:
 - App Store: [Photo Club Hub](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)
 - GitHub: [vdhamer/Photo-Club-Hub](https://github.com/vdhamer/Photo-Club-Hub)
 - FAQ (Dutch): [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl)
-- Web version example: [fcDeGender.nl/clubs](https://www.fcDeGender.nl/clubs)
+- Web version example: [fcDeGender.nl/hub/en/clubs](https://www.fcDeGender.nl/hub/en/clubs)
 - Contact: vdhamer@msn.com
 
 ---

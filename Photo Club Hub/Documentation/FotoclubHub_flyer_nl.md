@@ -40,7 +40,7 @@ Meer informatie:
 - GitHub: [vdhamer/Photo-Club-Hub](https://github.com/vdhamer/Photo-Club-Hub)
 - FAQ: [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl)
 - Introductie (PowerPoint): [tinyurl.com/fchPPTnl](https://tinyurl.com/fchPPTnl)
-- Voorbeeld webversie: [fcDeGender.nl/clubs](https://www.fcDeGender.nl/clubs)
+- Voorbeeld webversie: [fcDeGender.nl/hub/nl/clubs](https://www.fcDeGender.nl/hub/nl/clubs)
 - Contact: vdhamer@msn.com
 
 ---

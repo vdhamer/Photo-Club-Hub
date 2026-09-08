@@ -89,7 +89,7 @@ In de iOS versie van de app staat alle beschikbare expertise tags helemaal onder
 Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. 
 Het zijn er al minstens 28.</p>
 
-De HTML versie heeft een pagina met de [lijst](https://www.fcDeGender.nl/expertises) van expertises.
+De HTML versie heeft een pagina met de [lijst](https://www.fcDeGender.nl/hub/nl/expertises) van expertises.
 Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) bekijken.
 </details></p>
 

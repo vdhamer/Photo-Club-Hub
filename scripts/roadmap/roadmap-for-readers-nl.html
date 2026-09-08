@@ -1,0 +1,163 @@
+<meta charset="utf-8">
+<!-- Needed when the file is opened directly from disk. When published as an
+     Artifact the wrapper supplies a charset in <head>; a local file gets none,
+     and the browser then guesses Latin-1 and mangles em-dashes and arrows.
+     Browsers scan the first 1024 bytes for this, so it works here too. -->
+<title>Wat Fotoclub Hub hierna zou kunnen doen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --ground:#EFF1F3; --surface:#FFFFFF; --surface-2:#F7F8FA;
+  --ink:#15181D; --ink-soft:#5C636E; --ink-faint:#8C939E;
+  --rule:#D9DDE3; --rule-soft:#E8EBEF;
+  --accent:#C1402A; --accent-soft:#F2DED9;
+  --s:#8FA6B8; --m:#6E8AA6; --l:#C08A3E; --xl:#C1402A;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#121418; --surface:#1A1D22; --surface-2:#20242A;
+  --ink:#E9ECEF; --ink-soft:#A2AAB5; --ink-faint:#6E7681;
+  --rule:#2C3138; --rule-soft:#24282E;
+  --accent:#E2634A; --accent-soft:#3A241F;
+  --s:#7A93A8; --m:#6B8FB5; --l:#D2A056; --xl:#E2634A;
+}}
+:root[data-theme="dark"]{
+  --ground:#121418; --surface:#1A1D22; --surface-2:#20242A;
+  --ink:#E9ECEF; --ink-soft:#A2AAB5; --ink-faint:#6E7681;
+  --rule:#2C3138; --rule-soft:#24282E;
+  --accent:#E2634A; --accent-soft:#3A241F;
+  --s:#7A93A8; --m:#6B8FB5; --l:#D2A056; --xl:#E2634A;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:"Archivo",system-ui,-apple-system,sans-serif;font-size:15.5px;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:40px 22px 80px;display:flex;flex-direction:column;gap:30px}
+.eyebrow{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+h1{font-size:34px;font-weight:700;letter-spacing:-.022em;margin:8px 0 0;text-wrap:balance}
+.intro{font-family:"Source Serif 4",Georgia,serif;font-size:17px;color:var(--ink-soft);
+  display:flex;flex-direction:column;gap:13px}
+.intro p{margin:0}
+.intro strong{color:var(--ink);font-weight:600}
+/* The page is normally read as a PDF, where a link cannot be clicked on paper. So the
+   visible text of a link is the address itself wherever it has to be typed, and the
+   App Store is reached by the name to search for rather than by a long store URL. */
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);
+  font-weight:600;margin:0;padding-bottom:9px;border-bottom:1px solid var(--rule)}
+.group{display:flex;flex-direction:column;gap:14px}
+.items{display:flex;flex-direction:column;gap:2px}
+.item{display:grid;grid-template-columns:1.7em 1fr auto;column-gap:14px;row-gap:6px;
+  align-items:baseline;padding:13px 0;border-bottom:1px solid var(--rule-soft)}
+.item:last-child{border-bottom:0}
+.nm{grid-column:2;grid-row:1;font-weight:600;font-size:15.5px;letter-spacing:-.006em}
+.ask{margin:30px 0 6px;padding:20px 22px;border:1px solid var(--rule);border-radius:10px;
+  background:var(--surface-2)}
+.ask h2{margin:0 0 9px;font-size:15px;letter-spacing:.01em}
+.ask p{margin:0 0 10px;font-family:"Source Serif 4",Georgia,serif;font-size:15px;line-height:1.55}
+.ask p:last-child{margin-bottom:0}
+/* The box a reader is most likely to skip, and the one whose answers may be worth more
+   than the ranking itself. The emphasis is a border and a heading colour, never a
+   background tint: browsers drop backgrounds when printing, so a tint would simply be
+   missing from the PDF that is what actually gets sent. */
+.ask-open{border-color:var(--accent);border-left-width:4px}
+.ask-open h2{color:var(--accent)}
+/* The number is how a reply refers to a row: people are asked to send back their
+   top three as numbers, so it has to be readable and continuous across groups. It sits
+   in a gutter of its own and is right-aligned, so 10 to 12 line up under 1 to 9 and the
+   names and descriptions share one left edge, indented clear of the group heading. */
+.no{grid-column:1;grid-row:1;text-align:right;font-family:"IBM Plex Mono",monospace;
+  font-size:13px;font-weight:500;color:var(--ink-faint)}
+.ds{grid-column:2;grid-row:2;font-family:"Source Serif 4",Georgia,serif;font-size:15px;
+  color:var(--ink-soft);max-width:58ch}
+.meta{grid-row:1/3;grid-column:3;display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+  white-space:nowrap}
+.eff{font-size:11.5px;font-weight:500;letter-spacing:.04em;padding:2px 9px;border-radius:4px;color:#fff}
+.started{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.key{display:flex;flex-wrap:wrap;gap:16px;padding:15px 17px;background:var(--surface);
+  border:1px solid var(--rule);border-radius:9px}
+.key div{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-soft)}
+.key i{width:10px;height:10px;border-radius:2px;display:block}
+.key b{color:var(--ink);font-weight:600}
+footer{font-family:"Source Serif 4",Georgia,serif;font-size:14.5px;color:var(--ink-faint);
+  border-top:1px solid var(--rule);padding-top:18px}
+@media print{
+  /* The PDF is made by printing this page, so it inherits whatever theme the browser
+     happens to be in. Without this the dark palette survives onto white paper as pale
+     grey text. Plain :root would lose on specificity to the two dark rules above, so
+     their selectors are repeated here rather than relying on source order alone. */
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]){
+    --ground:#FFFFFF; --surface:#FFFFFF; --surface-2:#FFFFFF;
+    --ink:#15181D; --ink-soft:#5C636E; --ink-faint:#8C939E;
+    --rule:#D9DDE3; --rule-soft:#E8EBEF;
+    --accent:#C1402A; --accent-soft:#F2DED9;
+  }
+  body{background:#fff}
+  .wrap{max-width:100%;padding:0}
+  .item{break-inside:avoid}
+  .ask{break-inside:avoid}  /* the reply instructions are useless split over two pages */
+  h2{break-after:avoid}     /* a theme heading must not be left alone at a page foot */
+}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Fotoclub Hub</div>
+  <h1>Wat er hierna zou kunnen komen</h1>
+</header>
+
+<div class="intro">
+  <p>Fotoclub Hub laat de foto&rsquo;s zien die leden van fotoclubs zelf willen tonen.
+  Meerdere clubs op &eacute;&eacute;n plek, zodat een bezoeker niet elke clubwebsite hoeft op
+  te zoeken en niet op elke site opnieuw moet uitzoeken hoe die werkt. Een bijbehorend
+  programma zet dezelfde informatie om in gewone webpagina&rsquo;s die een club op zijn
+  eigen site kan zetten.</p>
+  <p>Ken je de app nog niet? Er zijn eigenlijk twee versies, met vrijwel dezelfde inhoud: de
+  app in de <a href="https://apps.apple.com/nl/app/photo-club-hub/id1178324330">App&nbsp;Store</a> voor Apple-apparaten, en een webversie voor alles
+  met een browser, ook Android en Windows: <a href="https://www.fcdegender.nl/hub/nl/clubs/">www.fcdegender.nl/hub/nl/clubs</a>.</p>
+  <p>De lijst hieronder is <strong>wat er als volgende bij zou kunnen komen</strong>:
+  mogelijkheden, geen beloftes. Wat er daadwerkelijk gebouwd wordt, hangt vooral af van
+  wat mensen nodig achten, hoeveel werk het is en andere praktische zaken.</p>
+  <p>&Eacute;&eacute;n ding is nuttig te weten voordat je verder leest: de app kent veel meer
+  clubs dan er foto&rsquo;s hebben aangeleverd. <strong>Bijna elke club in de lijst heeft een
+  lege pagina klaarstaan.</strong> Dat kleurt de hele lijst: een groot deel van wat volgt gaat
+  erover om het voor een club makkelijker te maken om mee te doen.</p>
+  <p>Er bestaat trouwens nog een tweede lijst (niet getoond) met interne verbeteringen. Die
+  zijn lastiger uit te leggen en te beoordelen.</p>
+  <p>Van elk punt hieronder is ingeschat hoeveel werk het is, maar die inschattingen staan er
+  bewust niet bij. Als je ze zou zien, zou iedereen vooral naar de goedkope punten neigen, en
+  het gaat hier juist om wat je echt wilt. Een kosten/baten afweging komt daarna.</p>
+</div>
+
+<div class="ask">
+  <h2>Hoe je kunt reageren</h2>
+  <p>Kies de <strong>drie</strong> die je het liefst zou zien, en stuur hun nummers terug in
+  volgorde van voorkeur, bijvoorbeeld <em>4, 9, 1</em>. De volgorde telt: je eerste keuze
+  levert meer punten op dan je derde.</p>
+  <p>Drie in plaats van vijf, omdat de meeste mensen zeker zijn van hun eerste twee of drie
+  en daarna vooral invullen omdat &ldquo;het moet&rdquo;. Je kunt gewoon antwoorden op de e-mail waar dit bij zat. Als het je
+  op een andere manier heeft bereikt: het adres is <strong>vdhamer@msn.com</strong>.</p>
+</div>
+
+<section class="group"><h2>Meer leden in beeld krijgen</h2><div class="items"><div class="item"><div class="no">1</div><div class="nm">Een plek voor persoonlijke leden</div><div class="ds">Persoonlijke leden, die niet via een club zijn aangesloten, kunnen elkaar zo ook vinden.</div><div class="meta"><span class="started">Begonnen</span></div></div><div class="item"><div class="no">2</div><div class="nm">Elke Nederlandse club op de kaart</div><div class="ds">Vind je club al op de kaart, waar in het land die ook zit, in plaats van alleen clubs in een paar regio’s.</div><div class="meta"></div></div><div class="item"><div class="no">3</div><div class="nm">De clublijst invullen in een formulier</div><div class="ds">De clubs in een regio vul je in via eenvoudige formulieren die al grotendeels zijn voorbereid. Je hoeft ze alleen na te kijken en aan te vullen wat ontbreekt.</div><div class="meta"></div></div><div class="item"><div class="no">4</div><div class="nm">Clubgegevens invullen in een formulier</div><div class="ds">De leden en portfolio’s van je club vul je in via eenvoudige formulieren die al grotendeels zijn voorbereid. Je hoeft ze alleen na te kijken en aan te vullen wat ontbreekt.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Vinden wat jou interesseert</h2><div class="items"><div class="item"><div class="no">5</div><div class="nm">Een scherm voor soorten fotografie</div><div class="ds">Blader door de volledige lijst met soorten fotografie, zoals dat op de website al kan.</div><div class="meta"></div></div><div class="item"><div class="no">6</div><div class="nm">Zoeken op meer dan namen</div><div class="ds">Zoek op een club of op een soort fotografie, niet alleen op de naam van een fotograaf.</div><div class="meta"></div></div><div class="item"><div class="no">7</div><div class="nm">Laat zien wat ik belangrijk vind</div><div class="ds">Geef de app door welke clubs, mensen en soorten fotografie je interesseren. De app opent dan op die dingen, en kan je laten weten als er iets nieuws is.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Genieten van andermans portfolio’s</h2><div class="items"><div class="item"><div class="no">8</div><div class="nm">Foto’s van eerdere exposities</div><div class="ds">Bekijk het werk dat een club op een expositie liet zien, ook nadat de expositie voorbij is.</div><div class="meta"><span class="started">Begonnen</span></div></div><div class="item"><div class="no">9</div><div class="nm">Een betere manier om de foto’s te bekijken</div><div class="ds">Meer foto’s, en mooier getoond. Deze vraag gaat erover of dit onderwerp onze moeite waard is, voordat iemand bepaalt hoe het eruit moet zien.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Het grotere geheel</h2><div class="items"><div class="item"><div class="no">10</div><div class="nm">Exposities bij jou in de buurt</div><div class="ds">Zie welke clubexposities binnenkort bij jou in de buurt zijn, zodat je er nooit een mist die je wilde bezoeken.</div><div class="meta"></div></div><div class="item"><div class="no">11</div><div class="nm">Zie het project groeien</div><div class="ds">Zie hoeveel clubs, fotografen en foto’s de app omvat, en hoe dat verandert.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Zorgen dat het blijft werken</h2><div class="items"><div class="item"><div class="no">12</div><div class="nm">Merken dat iemand lid wordt of vertrekt</div><div class="ds">Als iemand lid wordt van je club of vertrekt, staat dat meestal eerst op de website van de club zelf. De app kan dat zelf opmerken.</div><div class="meta"></div></div></div></section>
+
+<div class="ask ask-open">
+  <h2>Nog twee open vragen</h2>
+  <p><strong>Mis je iets?</strong> Dit zijn twaalf dingen die iemand al bedacht had. Als wat
+  je eigenlijk wilt er niet bij staat, is dat zeggen meer waard dan welke ranglijst ook, want
+  geen enkele ranglijst kan het aan het licht brengen.</p>
+  <p>Jij bepaalt hoe zwaar het weegt. <strong>Hoort het in je drie thuis, zet het er dan
+  in</strong>, met een antwoord in de trant van <em>&ldquo;ten eerste: de foto&rsquo;s van een
+  club kunnen afdrukken, dat staat er niet bij, daarna 4, 9&rdquo;</em>. Iets dat het waard is
+  om een van de twaalf te verdringen, is precies wat wij in de uitkomsten hopen te leren. Is het meer een
+  leuk-om-te-hebben, noem het dan even en laat je drie zoals ze zijn.</p>
+  <p><strong>Verder nog iets?</strong> Ook &ldquo;dit gaat niet werken, omdat&hellip;&rdquo;.
+  Twijfels over het hele idee, of over de manier waarop het wordt aangepakt, zijn meer waard
+  dan aanmoediging en zijn veel moeilijker te krijgen. Niemand vindt het erg om te horen dat
+  het plan niet klopt zolang het nog goedkoop is om het te veranderen.</p>
+</div>
+
+</div>

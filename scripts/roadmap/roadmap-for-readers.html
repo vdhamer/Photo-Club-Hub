@@ -39,26 +39,38 @@ h1{font-size:34px;font-weight:700;letter-spacing:-.022em;margin:8px 0 0;text-wra
   display:flex;flex-direction:column;gap:13px}
 .intro p{margin:0}
 .intro strong{color:var(--ink);font-weight:600}
+/* The page is normally read as a PDF, where a link cannot be clicked on paper. So the
+   visible text of a link is the address itself wherever it has to be typed, and the
+   App Store is reached by the name to search for rather than by a long store URL. */
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
 h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);
   font-weight:600;margin:0;padding-bottom:9px;border-bottom:1px solid var(--rule)}
 .group{display:flex;flex-direction:column;gap:14px}
 .items{display:flex;flex-direction:column;gap:2px}
-.item{display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:baseline;
-  padding:13px 0;border-bottom:1px solid var(--rule-soft)}
+.item{display:grid;grid-template-columns:1.7em 1fr auto;column-gap:14px;row-gap:6px;
+  align-items:baseline;padding:13px 0;border-bottom:1px solid var(--rule-soft)}
 .item:last-child{border-bottom:0}
-.nm{font-weight:600;font-size:15.5px;letter-spacing:-.006em}
+.nm{grid-column:2;grid-row:1;font-weight:600;font-size:15.5px;letter-spacing:-.006em}
 .ask{margin:30px 0 6px;padding:20px 22px;border:1px solid var(--rule);border-radius:10px;
   background:var(--surface-2)}
 .ask h2{margin:0 0 9px;font-size:15px;letter-spacing:.01em}
 .ask p{margin:0 0 10px;font-family:"Source Serif 4",Georgia,serif;font-size:15px;line-height:1.55}
 .ask p:last-child{margin-bottom:0}
+/* The box a reader is most likely to skip, and the one whose answers may be worth more
+   than the ranking itself. The emphasis is a border and a heading colour, never a
+   background tint: browsers drop backgrounds when printing, so a tint would simply be
+   missing from the PDF that is what actually gets sent. */
+.ask-open{border-color:var(--accent);border-left-width:4px}
+.ask-open h2{color:var(--accent)}
 /* The number is how a reply refers to a row: people are asked to send back their
-   top three as numbers, so it has to be readable and continuous across groups. */
-.no{display:inline-block;min-width:1.6em;font-family:"IBM Plex Mono",monospace;font-size:13px;
-  font-weight:500;color:var(--ink-faint)}
-.ds{grid-column:1/2;font-family:"Source Serif 4",Georgia,serif;font-size:15px;
+   top three as numbers, so it has to be readable and continuous across groups. It sits
+   in a gutter of its own and is right-aligned, so 10 to 12 line up under 1 to 9 and the
+   names and descriptions share one left edge, indented clear of the group heading. */
+.no{grid-column:1;grid-row:1;text-align:right;font-family:"IBM Plex Mono",monospace;
+  font-size:13px;font-weight:500;color:var(--ink-faint)}
+.ds{grid-column:2;grid-row:2;font-family:"Source Serif 4",Georgia,serif;font-size:15px;
   color:var(--ink-soft);max-width:58ch}
-.meta{grid-row:1/3;grid-column:2/3;display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+.meta{grid-row:1/3;grid-column:3;display:flex;flex-direction:column;align-items:flex-end;gap:5px;
   white-space:nowrap}
 .eff{font-size:11.5px;font-weight:500;letter-spacing:.04em;padding:2px 9px;border-radius:4px;color:#fff}
 .started{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
@@ -70,9 +82,21 @@ h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-f
 footer{font-family:"Source Serif 4",Georgia,serif;font-size:14.5px;color:var(--ink-faint);
   border-top:1px solid var(--rule);padding-top:18px}
 @media print{
+  /* The PDF is made by printing this page, so it inherits whatever theme the browser
+     happens to be in. Without this the dark palette survives onto white paper as pale
+     grey text. Plain :root would lose on specificity to the two dark rules above, so
+     their selectors are repeated here rather than relying on source order alone. */
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]){
+    --ground:#FFFFFF; --surface:#FFFFFF; --surface-2:#FFFFFF;
+    --ink:#15181D; --ink-soft:#5C636E; --ink-faint:#8C939E;
+    --rule:#D9DDE3; --rule-soft:#E8EBEF;
+    --accent:#C1402A; --accent-soft:#F2DED9;
+  }
   body{background:#fff}
   .wrap{max-width:100%;padding:0}
   .item{break-inside:avoid}
+  .ask{break-inside:avoid}  /* the reply instructions are useless split over two pages */
+  h2{break-after:avoid}     /* a theme heading must not be left alone at a page foot */
 }
 </style>
 <div class="wrap">
@@ -83,51 +107,56 @@ footer{font-family:"Source Serif 4",Georgia,serif;font-size:14.5px;color:var(--i
 
 <div class="intro">
   <p>Photo Club Hub shows the photographs that members of photography clubs choose to
-  show. Several clubs in one place, so a visitor does not have to find each club's
-  website and learn a new way round it every time. A companion program turns the same
-  information into ordinary web pages a club can put on its own site.</p>
-  <p>The list below is <strong>what might be built next</strong> — possibilities, honestly
-  assessed, not promises. Nobody is paid for any of this, so nothing here is a schedule.
-  What actually gets built depends mostly on what people say they want, and on how many
-  clubs decide to take part.</p>
-  <p>The one thing worth knowing before reading it: the app already knows about far more
+  show. Multiple clubs in one place, so a visitor does not have to find each club&rsquo;s
+  website and learn how to navigate every single site. A companion program turns the same
+  information into ordinary web pages that a club can put on its existing site.</p>
+  <p>Not come across the app yet? There are really two versions, with much the same content:
+  the app in the <a href="https://apps.apple.com/nl/app/photo-club-hub/id1178324330">App&nbsp;Store</a> for Apple devices, and a web version for
+  anything with a browser, Android and Windows included:
+  <a href="https://www.fcdegender.nl/hub/en/clubs/">www.fcdegender.nl/hub/en/clubs</a>.</p>
+  <p>The list below is <strong>what features might be added next</strong> — possibilities, not
+  promises. What actually gets built depends largely on what people consider necessary,
+  how much work each one is, and other practical matters.</p>
+  <p>One thing worth knowing before reading it: the app already knows about far more
   clubs than have supplied any photographs. <strong>Almost every club listed has an empty
   page waiting for it.</strong> That shapes the whole list — a good deal of what follows is
-  about making it easier for a club to fill that page in.</p>
+  about making it easier for a club to take part.</p>
+  <p>Note that a second list (not shown) exists with internal improvements. These are harder to explain
+  and judge.</p>
+  <p>Each item has been estimated for how much work it would be, but those estimates are
+  deliberately not shown here. Seeing them would only push everyone towards the cheap ones, and
+  what is needed is what you actually want. A cost/benefit judgement comes afterwards.</p>
 </div>
 
 <div class="ask">
   <h2>How to reply</h2>
   <p>Pick the <strong>three</strong> you would most like to see, and send back their numbers in
   order of preference &mdash; for example <em>4, 9, 1</em>. The order matters: your first choice
-  counts for more than your third when the answers are added up.</p>
-  <p>Three rather than five because people are usually sure about their first two or three and
-  guessing after that. Just reply to the email that brought you here.</p>
+  gets more points than your third choice.</p>
+  <p>Three rather than five because people are usually sure about their first two or three,
+  and after that mostly fill something in because &ldquo;it has to be done&rdquo;. Just reply to the email this was attached to. If it reached you some
+  other way, the address is <strong>vdhamer@msn.com</strong>.</p>
 </div>
 
-<section class="group"><h2>Getting more members covered</h2><div class="items"><div class="item"><div class="nm"><span class="no">1</span>A place for club-less photographers</div><div class="ds">Photographers who belong to no club can still be shown alongside those who do.</div><div class="meta"><span class="started">Started</span></div></div><div class="item"><div class="nm"><span class="no">2</span>Every Dutch club on the map</div><div class="ds">Find your club already on the map wherever it is in the country, rather than only clubs in a couple of regions.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">3</span>Edit club list in a form</div><div class="ds">Clubs in a region are entered using simple forms that are already largely pre-filled. You only need to check them and add any missing bits.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">4</span>Edit club data in a form</div><div class="ds">Your club's members and portfolios are entered using simple forms that are already largely pre-filled. You only need to check them and add any missing bits.</div><div class="meta"></div></div></div></section>
-<section class="group"><h2>Finding what interests you</h2><div class="items"><div class="item"><div class="nm"><span class="no">5</span>A screen for expertises</div><div class="ds">Browse the full list of photography types the way the website already allows.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">6</span>Search on more than names</div><div class="ds">Search for a club or a kind of photography, not only for a photographer's name.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">7</span>Show me what I care about</div><div class="ds">Tell the app which clubs, people and kinds of photography interest you. It then opens on those, and can let you know when they have something new.</div><div class="meta"></div></div></div></section>
-<section class="group"><h2>Enjoying portfolios of others</h2><div class="items"><div class="item"><div class="nm"><span class="no">8</span>Photos from past exhibitions</div><div class="ds">See the work a club showed at an exhibition, after the exhibition has ended.</div><div class="meta"><span class="started">Started</span></div></div><div class="item"><div class="nm"><span class="no">9</span>A better way to look at the photographs</div><div class="ds">More of the photographs, and shown better. This one asks whether the area is worth our effort, before anyone decides what it should look like.</div><div class="meta"></div></div></div></section>
-<section class="group"><h2>Beyond a single club</h2><div class="items"><div class="item"><div class="nm"><span class="no">10</span>Exhibitions near you</div><div class="ds">See which club exhibitions are coming near you soon. So you never miss one that you wanted to attend.</div><div class="meta"></div></div><div class="item"><div class="nm"><span class="no">11</span>Watch the project grow</div><div class="ds">See how many clubs, photographers and photos the app covers, and how that is changing.</div><div class="meta"></div></div></div></section>
-<section class="group"><h2>Keeping it working</h2><div class="items"><div class="item"><div class="nm"><span class="no">12</span>Noticing when someone joins or leaves</div><div class="ds">When someone joins or leaves your club, the club's own website usually says so first. The app can notice this by itself.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Getting more members covered</h2><div class="items"><div class="item"><div class="no">1</div><div class="nm">A place for individual members</div><div class="ds">Individual members, who are not attached to a club, can find each other too.</div><div class="meta"><span class="started">Started</span></div></div><div class="item"><div class="no">2</div><div class="nm">Every Dutch club on the map</div><div class="ds">Find your club already on the map wherever it is in the country, rather than only clubs in a couple of regions.</div><div class="meta"></div></div><div class="item"><div class="no">3</div><div class="nm">Edit club list in a form</div><div class="ds">Clubs in a region are entered using simple forms that are already largely pre-filled. You only need to check them and add any missing bits.</div><div class="meta"></div></div><div class="item"><div class="no">4</div><div class="nm">Edit club data in a form</div><div class="ds">Your club’s members and portfolios are entered using simple forms that are already largely pre-filled. You only need to check them and add any missing bits.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Finding what interests you</h2><div class="items"><div class="item"><div class="no">5</div><div class="nm">A screen for expertises</div><div class="ds">Browse the full list of photography types the way the website already allows.</div><div class="meta"></div></div><div class="item"><div class="no">6</div><div class="nm">Search on more than names</div><div class="ds">Search for a club or a kind of photography, not only for a photographer’s name.</div><div class="meta"></div></div><div class="item"><div class="no">7</div><div class="nm">Show me what I care about</div><div class="ds">Tell the app which clubs, people and kinds of photography interest you. It then opens on those, and can let you know when they have something new.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Enjoying portfolios of others</h2><div class="items"><div class="item"><div class="no">8</div><div class="nm">Photos from past exhibitions</div><div class="ds">See the work a club showed at an exhibition, after the exhibition has ended.</div><div class="meta"><span class="started">Started</span></div></div><div class="item"><div class="no">9</div><div class="nm">A better way to look at the photographs</div><div class="ds">More of the photographs, and shown better. This one asks whether the area is worth our effort, before anyone decides what it should look like.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>The bigger picture</h2><div class="items"><div class="item"><div class="no">10</div><div class="nm">Exhibitions near you</div><div class="ds">See which club exhibitions are coming near you soon. So you never miss one that you wanted to attend.</div><div class="meta"></div></div><div class="item"><div class="no">11</div><div class="nm">Watch the project grow</div><div class="ds">See how many clubs, photographers and photos the app covers, and how that is changing.</div><div class="meta"></div></div></div></section>
+<section class="group"><h2>Keeping it working</h2><div class="items"><div class="item"><div class="no">12</div><div class="nm">Noticing when someone joins or leaves</div><div class="ds">When someone joins or leaves your club, the club’s own website usually says so first. The app can notice this by itself.</div><div class="meta"></div></div></div></section>
 
-<div class="ask">
-  <h2>Two more questions, both optional</h2>
+<div class="ask ask-open">
+  <h2>Two more open questions</h2>
   <p><strong>Is something missing?</strong> These are twelve things somebody already thought of.
   If what you actually want is not among them, saying so is worth more than any ranking, because
   no amount of ranking can reveal it.</p>
   <p>You decide how much weight it carries. <strong>If it belongs in your three, put it there</strong>
   &mdash; reply with something like <em>&ldquo;first: being able to print a club&rsquo;s photos, which
   is not listed, then 4, 9&rdquo;</em>. Something worth displacing one of the twelve is exactly what
-  needs hearing. If it is more of a nice-to-have, just mention it and leave your three as they are.</p>
+  we hope to learn from the answers. If it is more of a nice-to-have, just mention it and leave your three as they are.</p>
   <p><strong>Anything else at all?</strong> Including &ldquo;this will not work, because&hellip;&rdquo;.
   Doubts about the whole idea, or about how it is being approached, are worth more than
   encouragement and are much harder to come by. Nobody minds being told the plan is wrong while
   it is still cheap to change.</p>
 </div>
 
-<footer>
-  Nothing here is a promise, and the order things get built in will depend a lot on what
-  comes back from these replies.
-</footer>
 </div>

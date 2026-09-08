@@ -90,7 +90,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
       Dan vindt de app het bestand op een vast adres. Maar kan het bestand "lokaal" bijgewerkt worden zonder centrale betrokkenheid.
 
 10. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
-Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/clubs](https://www.fcDeGender.nl/clubs).
+Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/hub/nl/clubs](https://www.fcDeGender.nl/hub/nl/clubs).
 
 ## Hoe zit het met `level1URLIncludes`?
 
