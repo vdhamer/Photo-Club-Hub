@@ -162,7 +162,6 @@
 		3786FEF03048C0040002D7B2 /* feature-candidates.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "feature-candidates.csv"; sourceTree = "<group>"; };
 		3786FEF33048C0040002D7B2 /* reader-template.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "reader-template.html"; sourceTree = "<group>"; };
 		3786FEF43048C0040002D7B2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3786FEF53048C0040002D7B2 /* roadmap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = roadmap.md; sourceTree = "<group>"; };
 		3786FEF63048C0040002D7B2 /* roadmap-contact-sheet.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "roadmap-contact-sheet.html"; sourceTree = "<group>"; };
 		3786FEF73048C0040002D7B2 /* roadmap-for-readers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "roadmap-for-readers.html"; sourceTree = "<group>"; };
 		3786FEF83048C0040002D7B2 /* roadmap-template.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "roadmap-template.html"; sourceTree = "<group>"; };
@@ -405,7 +404,6 @@
 				3786FEF03048C0040002D7B2 /* feature-candidates.csv */,
 				3786FEF33048C0040002D7B2 /* reader-template.html */,
 				3786FEF43048C0040002D7B2 /* README.md */,
-				3786FEF53048C0040002D7B2 /* roadmap.md */,
 				3786FEF63048C0040002D7B2 /* roadmap-contact-sheet.html */,
 				3786FEF73048C0040002D7B2 /* roadmap-for-readers.html */,
 				3786FEF83048C0040002D7B2 /* roadmap-template.html */,
