@@ -282,5 +282,29 @@ second ruleset rather than update the existing one. Updating in place is
 bypass list names them, which is what the `bypass_actors` entry (`RepositoryRole` 5, repository
 admin) is for.
 
+**Releasing Photo-Club-Hub-Data: check the constant against the tag before pushing it.** That package's
+`v*` tag is the only thing consumers resolve, and `PhotoClubHubDataVersion.semver` inside the *tagged*
+tree has to carry the same number: both apps display it, and the gate-and-stamp phase copies it into
+`BuildStamp.plist` as `LibraryVersion`. Nothing enforces the equality, so read the constant out of the
+tag rather than out of the working copy, where it is always right:
+
+```bash
+git show v3.3.0:"Sources/Photo Club Hub Data/PhotoClubHubDataVersion.swift" | grep "semver ="
+```
+
+The failure this catches is ordinary, and was hit on 9 September 2026: the tag was created while HEAD
+was still the commit *before* the version bump, and Xcode's *Include tags* checkbox then pushed it as
+it stood. A tag points at the commit it was created on, never follows the branch, and pushing does not
+re-aim it. The constant is normally bumped at the *start* of the cycle (Annex C), so by tagging time
+the branch has usually moved well past it: name the commit explicitly with `git tag v<version> <sha>`
+rather than trusting where HEAD happens to be. The tagged tree then said 3.2.0 while the tag said 3.3.0, which would have
+put a wrong `LibraryVersion` in every build made against it.
+
+Moving a `v*` tag is normally out of the question — it is the package contract, and SwiftPM caches a
+resolved tag by name — but it is the right repair inside the window before any consumer has resolved
+it, and both apps' `Package.resolved` files tell you whether that window is still open. Delete on
+origin, re-create on the right commit, push; the ruleset's admin bypass permits it. Publish the GitHub
+Release afterwards, from the corrected tag.
+
 Background and the reasoning behind the numbering rules:
 [issue #808](https://github.com/vdhamer/Photo-Club-Hub/issues/808).
