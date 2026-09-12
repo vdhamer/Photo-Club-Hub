@@ -14,7 +14,7 @@ For the step-by-step procedure of adding a member's JuiceBox portfolio, see [Jui
   ```
   - This hardcoding isn't ideal: the app code needs updating whenever a new Level 2 club is added.
     - Plan: use the Level 1 data (list of clubs) to load the Level 2 data (list of a club's members).
-- Example URL for a Level 2 file: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
+- Example URL for a Level 2 file: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/JSON/fgDeGender.level2.json`
 - If the URL fails to load when the app starts, a version of the same file is taken from the PhotoClubHubData bundle.
   - This version corresponds to the level2.json file state _at build time_. This means it could be outdated compared to the GitHub version.
   - This means that GitHub holds the _master copy_ of (committed) Level 2 data. Both apps rely on this copy.
@@ -51,12 +51,16 @@ For the step-by-step procedure of adding a member's JuiceBox portfolio, see [Jui
   - And this sets `level3URL_` to `"level3URL": "https://www.fcDeGender.nl/portfolios/Miep_Franssen/"`
 - How does level2JsonReader know whether `level3URL` in the `level2.json` data points to an unstandardized HTML page 
   or to an HTML/XML page pair that can be parsed?
-  - Currently the list of clubs that use the HTML/XML option (aka "JuiceBox Pro" LR plugin) are hardcoded in the app.
+  - Currently the lists of clubs that use the HTML/XML option (aka "JuiceBox Pro" LR plugin) are hardcoded in the app.
  
   ```
-      private static let clubsUsingJuiceBox: [OrganizationID] = [ // careful: ID strings have to precisely match
-        OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre"),
+      private static let clubsFullyUsingJuiceBox: [OrganizationID] = [ // careful: ID strings require an exact match
         OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
+    ]
+
+    // if JuiceBox Pro is only used for former members
+    private static let clubsPartiallyUsingJuiceBox: [OrganizationID] = [ // careful: ID strings require an exact match
+        OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre")
     ]
   ```
   - This hardcoded approach should be changed to a data driven approach (e.g. by checking for an appropriate XML file).
