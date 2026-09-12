@@ -1,5 +1,7 @@
 #  Featured image data flow
 
+For the step-by-step procedure of adding a member's JuiceBox portfolio, see [JuiceBoxPortfolioSetup.md](JuiceBoxPortfolioSetup.md).
+
 ## Storing level2.json data
 
 - A club's `level2.json` file is available online at GitHub.
