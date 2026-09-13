@@ -67,10 +67,16 @@ is derived from `level3URL` rather than stored in the JSON.
    ```
 
    A mirror that would make this automatic is specified but not built — Photo-Club-Hub-Data#7.
+   That mirror runs the other way: the intent is to edit the Data package and generate the iOS
+   copy. Until it exists, the order below is the one that works, not the one that was designed.
 
 6. **Push the iOS repo copy.** Both apps fetch from
    `raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/JSON/` at runtime, so an edit that has not
    been pushed reaches neither of them. Editing only the Data package copy changes nothing at all.
+
+   That URL is compiled into every released binary and cannot be redirected, so it keeps serving the
+   data even after the Data package becomes the copy you edit. What changes then is which side you
+   type into, not which side is fetched.
 
 7. **Regenerate the website after pushing, not before.** The HTML app reads the same live URL, so
    regenerating first just rebuilds the old data.
@@ -78,7 +84,12 @@ is derived from `level3URL` rather than stored in the JSON.
 ## Every export is currently broken (Lightroom Classic 15.5.1)
 
 Since some point between 2026-05-25 and 2026-09-11, every gallery the plugin exports is invalid XML.
-The three per-image text fields come out as `<div></div>` instead of empty:
+
+**An empty metadata value comes out as `<div></div>` instead of as nothing.** A value with content is
+written normally — confirmed on 2026-09-13 by exporting one photo with its Title and Caption filled in,
+which produced `<![CDATA[TestTitle]]>` and `<![CDATA[TestCaption]]>` with no wrapper, while the empty
+`linkURL` on the same image was wrapped. So the fault is the representation of *emptiness*, not of the
+value, and no real title or link is ever mangled.
 
 ```xml
 <image imageURL="images/x.jpg" thumbURL="thumbs/x.jpg" linkURL="<div></div>" linkTarget="_blank">
@@ -86,9 +97,16 @@ The three per-image text fields come out as `<div></div>` instead of empty:
 <caption><![CDATA[<div></div>]]></caption>
 ```
 
-A raw `<` inside an attribute value is illegal XML, so `juicebox.js` rejects the document and the
-gallery renders as a blank white page — not even its own dark background. The Web tab preview inside
-Lightroom is blank for the same reason, since it runs the same code against the same file.
+**Only `linkURL` is fatal.** A raw `<` inside an attribute value is illegal XML, so `juicebox.js`
+rejects the document and the gallery renders as a blank white page, not even its own dark background.
+The same `<div></div>` in title or caption sits inside CDATA, which legally contains `<`, so it parses
+and at worst renders as an empty element. The Web tab preview inside Lightroom is blank for the same
+reason as the live page, since it runs the same code against the same file.
+
+`linkURL` is filled from the photo's IPTC **Website** field, which Lightroom does not show in the
+default Metadata panel. That field is empty on virtually every photo, which is why virtually every
+export is affected: one image without a Website value is enough to invalidate the whole gallery.
+Filling it everywhere would avoid the fault, and is not practical.
 
 ### It is Lightroom, not the plugin
 
