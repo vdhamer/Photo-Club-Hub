@@ -31,7 +31,11 @@
 # The CSV (scripts/linecount/LineCount.csv) is the version-controlled source of
 # truth. LineCount.xlsx is only a viewer that loads this CSV via Power Query.
 #
-# Usage:  ./scripts/countLines.sh
+# Usage:  scripts/linecount/countLines.sh
+#
+#   Normally not run by hand: the pre-commit hook beside this script runs it on
+#   every commit in this repo and stages the CSV, so each commit carries the row
+#   for its day (see pre-commit.sh, and issue #850).
 #
 #   Rows are always stamped with today's date and always reflect the current
 #   working trees. Reconstructing a past date means reading it out of git history
