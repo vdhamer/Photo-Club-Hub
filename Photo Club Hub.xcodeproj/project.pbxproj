@@ -136,6 +136,8 @@
 		374B4018301365ED00A792F8 /* Readme_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_EN_Light.jpg; sourceTree = "<group>"; };
 		374B4019301365ED00A792F8 /* Readme_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Readme_NL_Light.jpg; sourceTree = "<group>"; };
 		375099FD30347F5200CB2EEB /* release-tags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "release-tags.json"; sourceTree = "<group>"; };
+		375690E430585A21000E0F27 /* unwrap.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = unwrap.py; sourceTree = "<group>"; };
+		375690E63058A29F000E0F27 /* JuiceBoxPortfolioSetup.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = JuiceBoxPortfolioSetup.md; sourceTree = "<group>"; };
 		375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SemanticColor+palette.swift"; sourceTree = "<group>"; };
 		375B99202F9E287A002EAD0F /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
 		375FC2923042F9CD00315444 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
@@ -369,6 +371,14 @@
 			path = rulesets;
 			sourceTree = "<group>";
 		};
+		375690E530585A21000E0F27 /* juicebox */ = {
+			isa = PBXGroup;
+			children = (
+				375690E430585A21000E0F27 /* unwrap.py */,
+			);
+			path = juicebox;
+			sourceTree = "<group>";
+		};
 		3762771C2FF9560B0047E77C /* MainTabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +467,7 @@
 		37F36DBA3007D34800BBDD60 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				375690E530585A21000E0F27 /* juicebox */,
 				3716E956304C6CAC008D26C7 /* linecount */,
 				3786FEF93048C0040002D7B2 /* roadmap */,
 				BF79A4AF10B944F491B352DE /* release */,
@@ -728,6 +739,7 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				375690E63058A29F000E0F27 /* JuiceBoxPortfolioSetup.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				376E811E3027448C00996745 /* ReleaseProcess.md */,
 				377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */,
