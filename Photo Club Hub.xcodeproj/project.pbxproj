@@ -115,7 +115,7 @@
 		370D381D2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnFeaturesAndTips.swift; sourceTree = "<group>"; };
 		370D381F2F9E1B700046AA0C /* ReadmeSectionOnSupportedPlatforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnSupportedPlatforms.swift; sourceTree = "<group>"; };
 		370D38232F9E1DAF0046AA0C /* ReadmeSectionOnHowYouCanHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSectionOnHowYouCanHelp.swift; sourceTree = "<group>"; };
-		3716E952304C6CAC008D26C7 /* countLines.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = countLines.command; sourceTree = "<group>"; };
+		3716E952304C6CAC008D26C7 /* pre-commit.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-commit.sh"; sourceTree = "<group>"; };
 		3716E953304C6CAC008D26C7 /* countLines.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = countLines.sh; sourceTree = "<group>"; };
 		3716E954304C6CAC008D26C7 /* LineCount.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = LineCount.csv; sourceTree = "<group>"; };
 		3716E955304C6CAC008D26C7 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 		3716E956304C6CAC008D26C7 /* linecount */ = {
 			isa = PBXGroup;
 			children = (
-				3716E952304C6CAC008D26C7 /* countLines.command */,
+				3716E952304C6CAC008D26C7 /* pre-commit.sh */,
 				3716E953304C6CAC008D26C7 /* countLines.sh */,
 				3716E954304C6CAC008D26C7 /* LineCount.csv */,
 				3716E955304C6CAC008D26C7 /* LineCount.xlsx */,
