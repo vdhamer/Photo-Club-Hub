@@ -34,25 +34,34 @@ is derived from `level3URL` rather than stored in the JSON.
    curl -s "https://www.fcDeGender.nl/portfolios/Given_Family/config.xml" | xmllint --noout -
    ```
 
-   Silence means valid. As of Lightroom Classic 15.5.1 this will **not** be silent, so expect to run
-   step 3 every time.
+   Silence means valid, and with the fixed plugin template it should be silent every time. If it is
+   not, something has regressed again: run step 3 and say so in the thread linked below.
 
-3. **Repair the export on the server.**
+   Do not skip the check, even once the plugin is fixed. Nothing downstream complains about a
+   malformed gallery: the export reports success, the server serves it with a 200, and the app's
+   own `parseXMLContent()` matches it with a regex that never parses XML. The first symptom is a
+   blank white page when someone taps the thumbnail, long after the fact, and the member's row looks
+   perfectly healthy until they do (vdhamer/Photo-Club-Hub-Data#54).
 
-   ```bash
-   sed -i 's|linkURL="<div></div>"|linkURL=""|g; s|<!\[CDATA\[<div></div>\]\]>|<![CDATA[]]>|g' config.xml
-   ```
+3. **Nothing to repair, with the fixed plugin template installed.** The fatal case is handled at
+   source: `clean_url` blanks the sentinel before it reaches the `linkURL` attribute, so exports are
+   valid XML again. Step 2 should be silent every time.
 
-   That is GNU `sed`, as found on the web server. On macOS the same command needs an empty argument
-   after `-i` (`sed -i '' 's|…'`), which matters if you fix a downloaded copy instead.
+   What the vendor fix does *not* cover is an empty **title** or **caption**, which still come
+   through as `<div></div>`. That is legal inside CDATA and breaks nothing, but Juicebox treats it as
+   a non-empty title and builds a caption frame for it: measured at 23 px of empty strip under every
+   photo in such a gallery, where a genuinely empty title produces none at all. Cosmetic, and
+   inconsistent between members.
 
-   Then re-run the check in step 2 and confirm it is silent before moving on. Every re-export
-   reintroduces the fault, so this is part of exporting, not a one-time fix.
+   Two ways to deal with it, if it bothers you. Wrapping `clean_url` around the title and caption in
+   the plugin template fixes every gallery at once and leaves real values untouched, which matters
+   because titles are genuinely used — `© Bert Zantingh`, and the exhibition galleries. Deselecting
+   Title and Caption in the plugin's Image Info section works too, but is per collection and blanks
+   real values along with the sentinel.
 
-   Do not skip this. Nothing downstream will complain: the authoring tool emits invalid XML
-   silently, the server returns it with a 200, and `parseXMLContent()` matches it with a regex that
-   never parses XML. The first symptom is a blank white page when someone taps the thumbnail, which
-   is easy to miss because the row itself looks correct (see Photo-Club-Hub-Data#54).
+   `scripts/juicebox/unwrap.py` remains for repairing a gallery already uploaded in the broken state,
+   without re-exporting it. It exits non-zero if a file still does not parse after the known repair,
+   which is the case where the corruption has changed shape and the file must not be uploaded.
 
 4. **Add the member** to `fgDeGender.level2.json`, using the underscore spelling for `level3URL`.
 
@@ -81,58 +90,18 @@ is derived from `level3URL` rather than stored in the JSON.
 7. **Regenerate the website after pushing, not before.** The HTML app reads the same live URL, so
    regenerating first just rebuilds the old data.
 
-## Every export is currently broken (Lightroom Classic 15.5.1)
+## The Lightroom bug that made step 3 necessary
 
-Since some point between 2026-05-25 and 2026-09-11, every gallery the plugin exports is invalid XML.
+A Lightroom Classic release in 2026 began writing an *empty* metadata value as `<div></div>` rather
+than as nothing. In the `linkURL` attribute that is a raw `<`, which makes the file invalid XML, so
+juicebox.js renders a blank white page. Values with content were never affected.
 
-**An empty metadata value comes out as `<div></div>` instead of as nothing.** A value with content is
-written normally — confirmed on 2026-09-13 by exporting one photo with its Title and Caption filled in,
-which produced `<![CDATA[TestTitle]]>` and `<![CDATA[TestCaption]]>` with no wrapper, while the empty
-`linkURL` on the same image was wrapped. So the fault is the representation of *emptiness*, not of the
-value, and no real title or link is ever mangled.
+Juicebox fixed it at source on 2026-09-10: either de-select **Link URL** in the plugin's Image Info
+settings, or replace the plugin's own `config.xml` template with the corrected one from
+[the vendor's thread](https://juicebox.net/forum/viewtopic.php?id=5551). Install that first, and step
+3 stops applying to anything you export from then on.
 
-```xml
-<image imageURL="images/x.jpg" thumbURL="thumbs/x.jpg" linkURL="<div></div>" linkTarget="_blank">
-<title><![CDATA[<div></div>]]></title>
-<caption><![CDATA[<div></div>]]></caption>
-```
-
-**Only `linkURL` is fatal.** A raw `<` inside an attribute value is illegal XML, so `juicebox.js`
-rejects the document and the gallery renders as a blank white page, not even its own dark background.
-The same `<div></div>` in title or caption sits inside CDATA, which legally contains `<`, so it parses
-and at worst renders as an empty element. The Web tab preview inside Lightroom is blank for the same
-reason as the live page, since it runs the same code against the same file.
-
-`linkURL` is filled from the photo's IPTC **Website** field, which Lightroom does not show in the
-default Metadata panel. That field is empty on virtually every photo, which is why virtually every
-export is affected: one image without a Website value is enough to invalidate the whole gallery.
-Filling it everywhere would avoid the fault, and is not practical.
-
-### It is Lightroom, not the plugin
-
-Worth recording, because the obvious move is to go hunting for a plugin update. Exporting one
-unchanged collection twice — 2026-05-17 and 2026-09-12, same settings, same photo — gave a diff of
-exactly those three fields and nothing else. The plugin's own output was byte-identical across the
-two runs:
-
-| File | Both exports |
-|---|---|
-| `jbcore/juicebox.js` | md5 `0ba5d18013bf96ca051bc5900e6d6cbf`, 227891 bytes |
-| `index.html` | md5 `dc31684e11f145c5051c07cfef42b03e`, 1018 bytes |
-
-Same plugin version, same template, only the interpolated values changed. So Lightroom now hands the
-plugin an empty rich-text fragment where it used to hand an empty string, and the plugin writes it
-through unescaped.
-
-This also means a plugin update that merely escapes the value would not help: the file would become
-valid XML carrying a bogus link URL rather than an empty one. The value has to be empty.
-
-### Symptom to recognise
-
-The member's row looks completely healthy — correct thumbnail, correct portfolio link — and tapping
-it opens a blank page. The thumbnail survives because `parseXMLContent()` extracts it with a regex
-that never parses XML, so it succeeds on a document that `juicebox.js` refuses
-(vdhamer/Photo-Club-Hub-Data#54).
+Full analysis, evidence and the remaining app-side gap: vdhamer/Photo-Club-Hub-Data#54.
 
 ## Checking a whole club at once
 
@@ -149,3 +118,8 @@ Every member prints either `OK` or the parser error, so a silent line means the 
 rather than that everything passed.
 
 Worth running after any batch of portfolio work.
+
+It covers member portfolios only, because it walks the `level3URL`s in the Level 2 files. The
+exhibition galleries under `/exposities/` are reached from WordPress links and appear in no JSON, so
+neither this loop nor the weekly sweep in the Data package ever sees them. If you re-export one, run
+the step 2 check on it by hand.
