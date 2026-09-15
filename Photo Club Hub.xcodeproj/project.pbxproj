@@ -739,8 +739,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				375690E63058A29F000E0F27 /* JuiceBoxPortfolioSetup.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				375690E63058A29F000E0F27 /* JuiceBoxPortfolioSetup.md */,
 				376E811E3027448C00996745 /* ReleaseProcess.md */,
 				377D81883002FF5100E04A04 /* FotoclubHub_flyer_nl.md */,
 				377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */,
