@@ -441,11 +441,13 @@
     "languages": [
         {
             "isoCode": "EN",
-            "languageNameEN": "English"
+            "languageNameEN": "English",
+            "isSupported": true
         },
         {
             "isoCode": "NL",
-            "languageNameEN": "Dutch"
+            "languageNameEN": "Dutch",
+            "isSupported": true
         },
         {
             "isoCode": "DE",
