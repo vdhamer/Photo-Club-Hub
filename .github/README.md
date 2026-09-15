@@ -580,11 +580,13 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
     "languages": [
         {
             "isoCode": "EN",
-            "languageNameEN": "English"
+            "languageNameEN": "English",
+            "isSupported": true
         },
         {
             "isoCode": "NL",
-            "languageNameEN": "Dutch"
+            "languageNameEN": "Dutch",
+            "isSupported": true
         },
         {
             "isoCode": "AR",
@@ -619,6 +621,10 @@ Additional translations are fine, and will be used where appropriate.
 
 - `usage` (within a `expertise`) is a description of the expertise's intended usage.
 The optional `usage` text can be defined in multiple languages (preferably at least in EN and NL).
+- `isSupported` (within a `language`) marks a language the project is fully localized into: currently EN and NL.
+Leaving it out means `false`, which is what languages like the Arabic example above are: they can be used
+for individual translations of an expertise or a club remark, but the app's screens, the generated website
+and the automatically translated town and country names are not available in them.
 </details></ul>
 
 ### Level 1. Adding Clubs

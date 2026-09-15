@@ -587,11 +587,13 @@ Je kunt het lezen over `Level 0` bij een eerste kennismaking gerust overslaan: h
     "languages": [
         {
             "isoCode": "EN",
-            "languageNameEN": "English"
+            "languageNameEN": "English",
+            "isSupported": true
         },
         {
             "isoCode": "NL",
-            "languageNameEN": "Dutch"
+            "languageNameEN": "Dutch",
+            "isSupported": true
         },
         {
             "isoCode": "AR",
@@ -626,6 +628,10 @@ Extra vertalingen zijn prima, en worden gebruikt waar dat van toepassing is.
 
 - `usage` (binnen een `expertise`) is een beschrijving van het beoogde gebruik van de expertise.
 De optionele `usage`-tekst kan in meerdere talen worden gedefinieerd (bij voorkeur minstens in EN en NL).
+- `isSupported` (binnen een `language`) markeert een taal waarin het project volledig is gelokaliseerd: op dit moment EN en NL.
+Weglaten betekent `false`, zoals bij talen als het Arabische voorbeeld hierboven: ze kunnen worden gebruikt
+voor losse vertalingen van een expertise of een opmerking bij een club, maar de schermen van de app, de
+gegenereerde website en de automatisch vertaalde plaats- en landnamen zijn voor die taal niet beschikbaar.
 </details></ul>
 
 ### Level 1. Clubs toevoegen
