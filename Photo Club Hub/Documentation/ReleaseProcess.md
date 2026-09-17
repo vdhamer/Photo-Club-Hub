@@ -306,5 +306,17 @@ it, and both apps' `Package.resolved` files tell you whether that window is stil
 origin, re-create on the right commit, push; the ruleset's admin bypass permits it. Publish the GitHub
 Release afterwards, from the corrected tag.
 
+**A Release is titled `Release <version>`, never after its tag.** Every `v*` Release across the three
+repos reads `Release 3.4.0` while its tag is `v3.4.0`; `b*` pre-releases read `Build 4666`. The notes go in
+the body, not as a pointer to `ReleaseNotes.md` — a Release page is read by people who are not in the
+repository. So:
+
+```bash
+gh release create v3.4.0 --title "Release 3.4.0" --notes-file <file>
+```
+
+A handful of pre-2.11 tags were titled loosely (`b4658` titled `b4658`, `b4663` titled `Release 2.10.0`),
+which is the same drift noted above for tag naming.
+
 Background and the reasoning behind the numbering rules:
 [issue #808](https://github.com/vdhamer/Photo-Club-Hub/issues/808).

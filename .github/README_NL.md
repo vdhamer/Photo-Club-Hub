@@ -629,9 +629,11 @@ Extra vertalingen zijn prima, en worden gebruikt waar dat van toepassing is.
 - `usage` (binnen een `expertise`) is een beschrijving van het beoogde gebruik van de expertise.
 De optionele `usage`-tekst kan in meerdere talen worden gedefinieerd (bij voorkeur minstens in EN en NL).
 - `isSupported` (binnen een `language`) markeert een taal waarin het project volledig is gelokaliseerd: op dit moment EN en NL.
-Weglaten betekent `false`, zoals bij talen als het Arabische voorbeeld hierboven: ze kunnen worden gebruikt
-voor losse vertalingen van een expertise of een opmerking bij een club, maar de schermen van de app, de
-gegenereerde website en de automatisch vertaalde plaats- en landnamen zijn voor die taal niet beschikbaar.
+Een taal die nooit is gemarkeerd, zoals het Arabische voorbeeld hierboven, is dat niet: Arabisch kan nog wel worden
+gebruikt voor losse vertalingen van een expertise of een opmerking bij een club, maar de schermen van de app,
+de gegenereerde website en de automatisch vertaalde plaats- en landnamen zijn voor die taal niet beschikbaar.
+De regel weglaten maakt (momenteel!) een eerdere `true` niet ongedaan, net zoals het weglaten van `isChairman` iemands
+voorzitter status niet beïnvloedt. Schrijf `"isSupported": false` om een taal terug te trekken.
 </details></ul>
 
 ### Level 1. Clubs toevoegen
