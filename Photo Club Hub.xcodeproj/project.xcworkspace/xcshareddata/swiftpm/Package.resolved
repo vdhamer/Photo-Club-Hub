@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vdhamer/Photo-Club-Hub-Data",
       "state" : {
-        "revision" : "16cdeef9bf782394231a10c1054fe4bc356911d2",
-        "version" : "3.3.0"
+        "revision" : "3daae314ec679f0d3d8f14d59180a3a8d3f39f15",
+        "version" : "3.4.0"
       }
     },
     {

@@ -23,7 +23,7 @@ Every time a club's card was added to the view hierarchy, `FilteredMapsView` ask
 
 - The People tab screenshot anchors on Edjoe Osinski, so Rien den Otter's card — a card with two thumbnails — sits in the middle of the shot instead of at the top, where it made the single-thumbnail cards below look unfinished. The readiness gate now exempts the anchor: it previously required a `featuredImage`, which Osinski does not have, so the capture waited forever ([#826](https://github.com/vdhamer/Photo-Club-Hub/issues/826))
 - Tested with iOS 26.6.2 and Xcode 27.0 (final)
-- Built using v3.3.0 of the Photo Club Hub Data package. That release carries the name normalization this build's one-time database reset exists for, and the https placeholder thumbnail (vdhamer/Photo-Club-Hub-Data#52).
+- Built using v3.4.0 of the Photo Club Hub Data package. v3.3.0 carries the name normalization this build's one-time database reset exists for, and the https placeholder thumbnail (vdhamer/Photo-Club-Hub-Data#52). v3.4.0 carries the Langauge.isSupported flag.
 
 ---------------------------------------------------------------------------
 
