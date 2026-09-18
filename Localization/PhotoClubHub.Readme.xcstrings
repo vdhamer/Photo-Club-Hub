@@ -444,13 +444,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The app currently contains a list of %lld photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users."
+            "value" : "The app currently contains a list of %lld photo clubs. Many of them are currently concentrated in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Momenteel kent de app %lld fotoclubs, vooral in regio Brabant Oost. Velen hiervan zijn aangesloten bij de Koninklijke Fotobond. De app is overigens ook geschikt voor clubs in het buitenland."
+            "value" : "Momenteel kent de app %lld fotoclubs, vooral in afdeling Brabant Oost. Velen hiervan zijn aangesloten bij de Koninklijke Fotobond. De app is overigens ook geschikt voor clubs in het buitenland."
           }
         }
       }
