@@ -36,7 +36,7 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te v
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fkGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fkGestel) |
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
       | Veghel | Fotoclub Veghel | fcVeghel | 51.62441 | 5.55930 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcVeghel.level2.json) | [link](http://www.vdhamer.com/fcVeghel) |
-      | Veghel | Fotoclub Zzzoom | fcVeghel | 51.35712 | 5.31062 | ? |  |
+      | Veghel | Fotogroep Zooomm | fgZooomm | 51.62201 | 5.54782 | ? |  |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
 
    > Tip: Hoe kies je tussen het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) of [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand?
@@ -56,9 +56,11 @@ En er komen aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te v
     > NotePad controlleert de JSON conventiies niet. NotePad++ of Sublime Text wel (mits de bestandsnaam op .json eindigt).
 
     - Neem, indien beschikbaar, de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
-      uit de bovenstaande tabel over. De gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) en Drenthe Vechtdal (afdeling 03) te vinden in
-      [clubsNL16.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json) respectievelijk
-      [clubsNL03.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL03.level1.json).
+      uit de bovenstaande tabel over. Voor Nederlandse clubs staan die gegevens per Fotobond afdeling in een bestand `clubsNLxx.level1.json`, bijvoorbeeld
+      [clubsNL16.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json) voor Brabant Oost (afdeling 16) en
+      [clubsNL03.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL03.level1.json) voor Drenthe Vechtdal (afdeling 03).
+    - De coördinaten hier gaan voor op die in het Level 1 bestand. Dat is bewust: de club kent de eigen gegevens het best, terwijl Level 1 vaak op afdelingsniveau wordt bijgehouden.
+      Hier bepaalt je club dus wat de kaart toont, bijvoorbeeld een plein of herkenningspunt in de buurt in plaats van de plek waar jullie bijeenkomen.
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
