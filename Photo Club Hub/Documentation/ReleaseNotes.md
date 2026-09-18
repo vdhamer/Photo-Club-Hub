@@ -10,7 +10,7 @@
 
 USER-FACING
 
-- **One-time database reset on first launch of build 4667.** The stored data is wiped and reloaded from scratch, so the first launch after updating takes noticeably longer. Triggered by the `dataResetPending302b4667` key. It is needed because five members' family names were corrected in the data, and a photographer is identified by their name rather than by any id: without the reset, a device that had already loaded the old spelling would keep that photographer alongside the corrected one and show those five people twice, indefinitely ([#841](https://github.com/vdhamer/Photo-Club-Hub/issues/841))
+- **One-time database reset on first launch of build 4667.** The stored data is wiped and reloaded from scratch, so the first launch after updating takes noticeably longer. Triggered by the `dataResetPending302b4667` key. It is needed because five members' family names were corrected in the data, and a photographer is identified by their name rather than by any id: without the reset, a device that had already loaded the old spelling would keep that photographer alongside the corrected one and show those five people twice, indefinitely ([#841](https://github.com/vdhamer/Photo-Club-Hub/issues/841)). The same holds for a club, which is identified by its name and town: the reset also clears out the old spelling "Fotogroep Zoomm" (Veghel), now corrected to "Fotogroep Zooomm"
 
 - Compound family names, the kind formed on marriage, are now written one way instead of seven. There were seven such names in the data and no two were spelled alike: the separator varied between a hyphen, a spaced hyphen and hyphens replacing the spaces, and the first name's infix was sometimes in the `infixName` field and sometimes left inside `familyName`, which decides whether the person sorts under her own family name or under "de". Five were corrected, two already conformed. The convention and its reasoning are in the issue, and it applies to anyone writing a `level2.json` by hand ([#841](https://github.com/vdhamer/Photo-Club-Hub/issues/841))
 
@@ -28,6 +28,7 @@ Every time a club's card was added to the view hierarchy, `FilteredMapsView` ask
 DATA MAINTENANCE
 
 - Added 14 nature photography clubs from across the Netherlands, none of them Fotobond members ([vdhamer/Photo-Club-Hub-Data#59](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/59)). They are split into one Level 1 file per Fotobond Afdeling: nine new files (`clubsNL02`, `clubsNL04` to `clubsNL08`, `clubsNL10` to `clubsNL12`), all included from `clubsNL.level1.json`, plus one club each in the existing `clubsNL03` and `clubsNL16`. Empty placeholder files were also created for the remaining Afdelingen (`clubsNL01`, `clubsNL09`, `clubsNL14`, `clubsNL15`, `clubsNL17`).
+- Corrected the name of the photo group in Veghel from "Fotogroep Zoomm" to "Fotogroep Zooomm" (nickname `fgZooomm`), as the group spells it itself, including in other clubs' remarks and in `root.level1.json`. It also got a new website link and remark. Fotoclub Zzzoom (Eersel) got a remark without a member count.
 
 ---------------------------------------------------------------------------
 
