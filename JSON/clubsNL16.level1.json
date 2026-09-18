@@ -513,11 +513,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "The club currently has 12 members and a jearly exposition."
+                        "value": "Has held a club exhibition almost every year since 2009."
                     },
                     {
                         "language": "NL",
-                        "value": "Uit de website blijkt dat de club 12 leden heeft en jaarlijks exposeert."
+                        "value": "Houdt sinds 2009 vrijwel elk jaar een clubexpositie."
                     }
                 ]
             }
@@ -1552,11 +1552,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "fcSchijndel coordinates it yearly exposition with 3 other nearby clubs (fcRooi, Zoomm, fcVeghel)."
+                        "value": "fcSchijndel coordinates it yearly exposition with 3 other nearby clubs (fcRooi, Zooomm, fcVeghel)."
                     },
                     {
                         "language": "NL",
-                        "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
+                        "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zooomm, fcVeghel) die okt/nov gehouden worden."
                     }
                 ],
                 "nlSpecific": {
@@ -1639,11 +1639,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "fcRooi coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcVeghel)."
+                        "value": "fcRooi coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zooomm, fcVeghel)."
                     },
                     {
                         "language": "NL",
-                        "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
+                        "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zooomm, fcVeghel) die okt/nov gehouden worden."
                     }
                 ],
                 "nlSpecific": {
@@ -1775,11 +1775,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
+                        "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zooomm, fcVeghel) die okt/nov gehouden worden."
                     },
                     {
                         "language": "EN",
-                        "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)."
+                        "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zooomm, fcRooi)."
                     }
                 ],
                 "nlSpecific": {
@@ -1791,24 +1791,24 @@
         {
             "idPlus": {
                 "town": "Veghel",
-                "fullName": "Fotogroep Zoomm",
-                "nickName": "fgZoomm"
+                "fullName": "Fotogroep Zooomm",
+                "nickName": "fgZooomm"
             },
             "coordinates": {
                 "latitude": 51.62201,
                 "longitude": 5.54782
             },
             "optional": {
-                "website": "https://www.facebook.com/FotofestijnMeierijstad/",
-                "level2URL": "https://www.example.com/fgZoomm.level2.json",
+                "website": "https://www.wijnuveghel.nl/fotogroep/",
+                "level2URL": "https://www.example.com/fgZooomm.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "fgZoom coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, fcVeghel, fcRooi)."
+                        "value": "A group within Wijnu, the seniors' association in Veghel. It exhibits regularly, sometimes together with other photo clubs in Meierijstad."
                     },
                     {
                         "language": "NL",
-                        "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
+                        "value": "Een groep binnen seniorenvereniging Wijnu in Veghel. Exposeert regelmatig, soms samen met andere fotoclubs uit Meierijstad."
                     }
                 ]
             }
