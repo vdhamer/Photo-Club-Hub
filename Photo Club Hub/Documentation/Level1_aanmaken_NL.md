@@ -153,8 +153,8 @@ kan je duidelijk afspreken (en via `maintainerEmail` zien) wie welk deelbestand 
 ### Vinden van alle Level 1 bestanden
 
 In bovenstaand voorbeeld wordt `clubsNL03.level1.json` gevonden via een verwijzing vanuit `clubsNL.level1.json` (clubs in Nederland).
-Op een soortgelijke manier kan `clubsNL.level1.json` gevonden worden vanuit een bestand dat `clubs.level1.json` heet (clubs in alle landen).
-Op zijn beurt wordt `clubs.level1.json` gevonden vanuit een bestand dat `root_.level1.json` of `root.level1.json` heet. 
+Op een soortgelijke manier zou `clubsNL.level1.json` gevonden kunnen worden vanuit een bestand dat `clubs.level1.json` heet (clubs in alle landen), maar zo'n bestand bestaat nog niet.
+Nu wordt `clubsNL.level1.json` direct gevonden vanuit een bestand dat `root_.level1.json` heet.
 Dat bestand is het enige level1.json dat de software vindt via een vaste naam en locatie.
 Alle andere level1.json bestanden worden via verwijzingen gevonden.
 

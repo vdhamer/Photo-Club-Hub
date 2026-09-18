@@ -152,8 +152,8 @@ you can clearly agree (and see via `maintainerEmail`) who maintains which sub-fi
 ### Finding all Level 1 files
 
 In the example above, `clubsNL03.level1.json` is found via a reference from `clubsNL.level1.json` (clubs in the Netherlands).
-In a similar way, `clubsNL.level1.json` can be found from a file called `clubs.level1.json` (clubs in all countries).
-In turn, `clubs.level1.json` is found from a file called `root_.level1.json` or `root.level1.json`.
+In a similar way, `clubsNL.level1.json` could be found from a file called `clubs.level1.json` (clubs in all countries), but no such file exists yet.
+Today `clubsNL.level1.json` is found directly from a file called `root_.level1.json`.
 That file is the only level1.json that the software finds via a fixed name and location.
 All other level1.json files are found via references.
 

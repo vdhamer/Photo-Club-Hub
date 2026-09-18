@@ -526,7 +526,7 @@ en een gedetailleerde uitleg wat ieder stukje informatie betekent ([GitHub](http
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Misschien.
-Voor de clubs in regio Noord Brabant - Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
+Voor de clubs in afdeling Brabant Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
 Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren.
 Gelukkig stelt Level 1 heel weinig voor: vooral de naam, gemeente, en GPS coordinaten.
 Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de club.
