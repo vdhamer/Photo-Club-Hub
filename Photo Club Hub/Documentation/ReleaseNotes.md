@@ -25,6 +25,10 @@ Every time a club's card was added to the view hierarchy, `FilteredMapsView` ask
 - Tested with iOS 26.6.2 and Xcode 27.0 (final)
 - Built using v3.4.0 of the Photo Club Hub Data package. v3.3.0 carries the name normalization this build's one-time database reset exists for, and the https placeholder thumbnail (vdhamer/Photo-Club-Hub-Data#52). v3.4.0 carries the Language.isSupported flag.
 
+DATA MAINTENANCE
+
+- Added 14 nature photography clubs from across the Netherlands, none of them Fotobond members ([vdhamer/Photo-Club-Hub-Data#59](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/59)). They are split into one Level 1 file per Fotobond Afdeling: nine new files (`clubsNL02`, `clubsNL04` to `clubsNL08`, `clubsNL10` to `clubsNL12`), all included from `clubsNL.level1.json`, plus one club each in the existing `clubsNL03` and `clubsNL16`. Empty placeholder files were also created for the remaining Afdelingen (`clubsNL01`, `clubsNL09`, `clubsNL14`, `clubsNL15`, `clubsNL17`).
+
 ---------------------------------------------------------------------------
 
 ### 3.0.1 (GitHub commit f7c6756) 26-08-2026
