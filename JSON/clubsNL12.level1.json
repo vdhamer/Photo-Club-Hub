@@ -1,0 +1,37 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL12.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Dordrecht",
+                "fullName": "Natuurfotografen Drechtsteden",
+                "nickName": "nfDrechtsteden"
+            },
+            "coordinates": {
+                "latitude": 51.80977,
+                "longitude": 4.66281
+            },
+            "optional": {
+                "website": "https://nfd-fotografie.club",
+                "level2URL": "https://www.example.com/nfDrechtsteden.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "For nature photographers in the Drechtsteden (the towns around DorDRECHT)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Voor natuurfotografen in de Drechtsteden."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

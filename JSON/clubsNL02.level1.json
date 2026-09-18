@@ -1,0 +1,37 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL02.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Rottum",
+                "fullName": "Vereniging voor Natuurfotografen Friesland",
+                "nickName": "vnfFriesland"
+            },
+            "coordinates": {
+                "latitude": 52.93603,
+                "longitude": 5.89192
+            },
+            "optional": {
+                "website": "https://vnf-friesland.nl",
+                "level2URL": "https://www.example.com/vnfFriesland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1992. Each year opens with a guest speaker, preceded by a joint kale dinner known as 'het boerenkoolgebeuren'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1992. Het jaar begint traditiegetrouw met een spreker van buiten, voorafgegaan door het 'boerenkoolgebeuren'."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

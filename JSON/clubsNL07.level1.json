@@ -1,0 +1,63 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL07.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Houten",
+                "fullName": "Natuurfotografen Vereniging Utrecht",
+                "nickName": "nfUtrecht"
+            },
+            "coordinates": {
+                "latitude": 52.03367,
+                "longitude": 5.15358
+            },
+            "optional": {
+                "website": "https://www.natuurfotografenutrecht.nl",
+                "level2URL": "https://www.example.com/nfUtrecht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2009. Also known as NVU."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 2009. Vereniging wordt soms afgekort als NVU."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Schoonrewoerd",
+                "fullName": "Natuurfotografengilde",
+                "nickName": "nfGilde"
+            },
+            "coordinates": {
+                "latitude": 51.93807,
+                "longitude": 5.10255
+            },
+            "optional": {
+                "website": "https://www.natuurfotografengilde.nl",
+                "level2URL": "https://www.example.com/nfGilde.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1977, it calls itself the oldest national association for nature photography in the Netherlands."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1977, en naar eigen zeggen de oudste landelijke vereniging voor natuurfotografie in Nederland."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

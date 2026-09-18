@@ -1,0 +1,37 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL08.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Alkmaar",
+                "fullName": "Natuurfotografieclub Objectief",
+                "nickName": "nfObjectief"
+            },
+            "coordinates": {
+                "latitude": 52.61865,
+                "longitude": 4.74674
+            },
+            "optional": {
+                "website": "https://www.nfo-hhw.nl",
+                "level2URL": "https://www.example.com/nfObjectief.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1985. Sometimes abbreviated to NFO."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1985. Vereniging wordt soms afgekort als NFO."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

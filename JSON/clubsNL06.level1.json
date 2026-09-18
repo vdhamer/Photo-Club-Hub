@@ -1,0 +1,89 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL06.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Nijkerk",
+                "fullName": "Vereniging van Natuurfotografen Nijkerk",
+                "nickName": "vnfNijkerk"
+            },
+            "coordinates": {
+                "latitude": 52.23521,
+                "longitude": 5.46405
+            },
+            "optional": {
+                "website": "https://natuurfotografie.vnf-nijkerk.nl",
+                "level2URL": "https://www.example.com/vnfNijkerk.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2014."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 2014."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nijmegen",
+                "fullName": "Vereniging Natuurfotografen Nijmegen",
+                "nickName": "vnfNijmegen"
+            },
+            "coordinates": {
+                "latitude": 51.80986,
+                "longitude": 5.84547
+            },
+            "optional": {
+                "website": "https://vnf-nijmegen.nl",
+                "level2URL": "https://www.example.com/vnfNijmegen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club organizes a photography excursion once a month."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Er wordt maandelijks een excursie georganiseerd."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ugchelen",
+                "fullName": "Vereniging voor Natuurfotografen Apeldoorn",
+                "nickName": "vnfApeldoorn"
+            },
+            "coordinates": {
+                "latitude": 52.18542,
+                "longitude": 5.93313
+            },
+            "optional": {
+                "website": "https://vnf-apeldoorn.nl",
+                "level2URL": "https://www.example.com/vnfApeldoorn.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1986. Also known as VNF-A."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1986. De vereniging wordt soms afgekort als VNF-A."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

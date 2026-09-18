@@ -68,6 +68,32 @@
         
         {
             "idPlus": {
+                "town": "Beilen",
+                "fullName": "Vereniging Natuurfotografen Drenthe",
+                "nickName": "vnfDrenthe"
+            },
+            "coordinates": {
+                "latitude": 52.86350,
+                "longitude": 6.50525
+            },
+            "optional": {
+                "website": "https://www.vnfdrenthe.nl",
+                "level2URL": "https://www.example.com/vnfDrenthe.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "De leden komen uit Drenthe, Friesland en Groningen."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "The club does nature photography. Its members come from Drenthe, Friesland and Groningen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Borger",
                 "fullName": "Fotoclub Borger-Odoorn",
                 "nickName": "fcBorgerOdoorn"

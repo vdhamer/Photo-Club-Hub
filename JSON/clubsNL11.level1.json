@@ -1,0 +1,37 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL11.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Delft",
+                "fullName": "Vereniging Natuurfotografen West",
+                "nickName": "vnfWest"
+            },
+            "coordinates": {
+                "latitude": 52.01575,
+                "longitude": 4.37651
+            },
+            "optional": {
+                "website": "https://www.vnf-west.nl",
+                "level2URL": "https://www.example.com/vnfWest.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2001."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 2001."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL05.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Holten",
+                "fullName": "Natuurfocus",
+                "nickName": "nfFocus"
+            },
+            "coordinates": {
+                "latitude": 52.28131,
+                "longitude": 6.42166
+            },
+            "optional": {
+                "website": "https://www.natuurfocus.org",
+                "level2URL": "https://www.example.com/nfFocus.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "An association for nature photographers in the east of the Netherlands."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Vereniging voor natuurfotografen in Oost-Nederland."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

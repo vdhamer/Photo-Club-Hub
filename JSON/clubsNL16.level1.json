@@ -851,6 +851,32 @@
 
         {
             "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Vereniging van Natuurfotografen Eindhoven",
+                "nickName": "vnfEindhoven"
+            },
+            "coordinates": {
+                "latitude": 51.46799,
+                "longitude": 5.45780
+            },
+            "optional": {
+                "website": "https://vnfe.nl",
+                "level2URL": "https://www.example.com/vnfEindhoven.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1986. Also known as VNFE."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1986. Vereniging wordt soms afgekort als VNFE."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Geldrop",
                 "fullName": "Fotoclub de Dreef",
                 "nickName": "fcDeDreef"

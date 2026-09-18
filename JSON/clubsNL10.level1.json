@@ -1,0 +1,37 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL10.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Amstelveen",
+                "fullName": "Verenigde Amateur Natuurfotografen",
+                "nickName": "nfVAN"
+            },
+            "coordinates": {
+                "latitude": 52.28122,
+                "longitude": 4.85566
+            },
+            "optional": {
+                "website": "https://vanfoto.nl",
+                "level2URL": "https://www.example.com/nfVAN.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "For the monthly meetups, each member can submit up to four photos for review."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Tijdens de maandelijkse clubavonden worden er maximaal vier foto's per clublid besproken."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

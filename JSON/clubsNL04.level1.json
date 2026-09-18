@@ -1,0 +1,37 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL04.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Kampen",
+                "fullName": "VNF Noord-West Overijssel & Flevoland",
+                "nickName": "vnfNWOverijssel"
+            },
+            "coordinates": {
+                "latitude": 52.55779,
+                "longitude": 5.91217
+            },
+            "optional": {
+                "website": "https://vnf-nwoverijssel.nl",
+                "level2URL": "https://www.example.com/vnfNWOverijssel.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "For nature photographers in north-west Overijssel and Flevoland."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Voor natuurfotografen in Noord-West Overijssel en Flevoland."
+                    }
+                ]
+            }
+        }
+
+    ]
+}
