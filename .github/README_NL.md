@@ -399,7 +399,7 @@ De tekst die je in de zoekknop typt, wordt vergeleken met sleutelvelden van de r
   Als je op clubnamen wilt zoeken, ga dan naar de `Kaarten`-tab.
 - In de `Kaarten`-tab proberen zoekopdrachten te matchen op organisatienamen en plaatsen.
   Zoeken op `Ber` kan `FFC Shot71 (Berlicum)` en `Museum für Fotografie (Berlin)` en `The Victoria & Albert Museum (London)` opleveren.
-  Merk op dat de plaats de locatie is zoals opgegeven in het bestand `root.level1.json` en _niet_ de vertaalde versie, die kan afwijken.
+  Merk op dat de plaats de locatie is zoals opgegeven in de Level 1 gegevens van de club en _niet_ de vertaalde versie, die een enkele keer kan afwijken ("Paris" vs "Parijs").
 - In de `Personen`-tab proberen zoekopdrachten te matchen op de volledige naam van de fotograaf.
   Zoeken op `Jan` kan `Jan Stege`, `Ariejan van Twisk` en `Jos Jansen` opleveren.
 
@@ -729,7 +729,7 @@ Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSO
   - Syntactisch kan elk van beide worden weggelaten, maar dan heb je geen fotoclubs of musea in de app.
     - Bij het laden in de interne database van de app bepalen `clubs` en `museums` het `OrganizationType` (`club` of `museum`) van elk `Organization`-object. Dit wordt onder andere gebruikt om te bepalen welk type markering op een kaart moet worden getoond.
 - `town` kan een stad zijn (London) of een kleinere plaats (Land's End)
-  - `town` is _niet_ direct zichtbaar in de gebruikersinterface, ook al lijkt dat misschien zo. De gebruikersinterface toont een taalgelokaliseerde naam die wordt gegenereerd op basis van de `coordinates`. Deze zogenoemde `localizedTown` kan dezelfde tekst bevatten als `town`, of een vertaling van `town` zijn, of zelfs een grotere of kleinere bestuurlijke eenheid aanduiden. Het `town`-veld in het bestand dient om een unieke ID voor een club of museum te garanderen. Zo zou `Fotoclub Lucifer` in `Vessem` als niet-verwant worden beschouwd aan een `Fotoclub Lucifer` in `Eersel`. Het `town`-veld dient ook ter documentatie van het record in het `root.level1.json`-bestand: het is duidelijker om te zeggen "Victoria and Albert Museum (London)" dan alleen "Victoria and Albert Museum", waarbij jij de locatie via de `coordinates` zou moeten achterhalen.
+  - `town` is _niet_ direct zichtbaar in de gebruikersinterface, ook al lijkt dat misschien zo. De gebruikersinterface toont een taalgelokaliseerde naam die wordt gegenereerd op basis van de `coordinates`. Deze zogenoemde `localizedTown` kan dezelfde tekst bevatten als `town`, of een vertaling van `town` zijn, of zelfs een grotere of kleinere bestuurlijke eenheid aanduiden. Het `town`-veld in het bestand dient om een unieke ID voor een club of museum te garanderen. Zo zou `Fotoclub Lucifer` in `Vessem` als niet-verwant worden beschouwd aan een `Fotoclub Lucifer` in `Eersel`. Het `town`-veld dient ook ter documentatie van het record in het Level 1 bestand: het is duidelijker om te zeggen "Victoria and Albert Museum (London)" dan alleen "Victoria and Albert Museum", waarbij jij de locatie via de `coordinates` zou moeten achterhalen.
     - Op vergelijkbare wijze kan de gebruikersinterface een berekende `localizedCountry`-naam tonen die automatisch wordt gegenereerd op basis van de opgegeven `coordinates`. De Level 1-data heeft dus geen `country`-attribuut nodig en bevat dat ook niet. Dat is handig, omdat landnamen vaak in lokale talen worden vertaald (`Italia`, `Italy`, `İtalya`, enz.).
 - `town` en `fullName` identificeren samen een club of museum.
   - Het is dus mogelijk om twee clubs met dezelfde naam in verschillende plaatsen te hebben. Twee aparte clubs of musea met een identieke naam in dezelfde plaats zou verwarrend zijn, en zou door de app als één entiteit worden behandeld totdat de data over de oorspronkelijke `town`/`fullName`-combinatie uit de database op het apparaat is verwijderd. Het verwijderen van verouderde `Organization`-records gebeurt helaas nog niet automatisch.
@@ -864,9 +864,9 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
 
 <ul><details><Summary>Verplichte Level 2-velden (klik om uit te vouwen)</Summary></p>
 
-- `club` heeft dezelfde structuur als één `club`-record uit het `root.level1.json`-bestand. Het dient als label van het `Level 2`-bestand, zodat je kunt zien bij welke club het hoort.
+- `club` heeft dezelfde structuur als één `club`-record uit een Level 1 bestand. Het dient als label van het `Level 2`-bestand, zodat je kunt zien bij welke club het hoort.
   - `idPlus` en de 3 velden ervan (`town`, `fullName` en `nickName`) zijn allemaal verplicht.
-  - `town` en `fullName` moeten exact overeenkomen met de corresponderende velden in het `root.level1.json`-bestand.
+  - `town` en `fullName` moeten exact overeenkomen met de corresponderende velden in de Level 1 gegevens van de club.
 - `coordinates` wordt gebruikt om de club op de kaart te tekenen en om gelokaliseerde versies van de namen van plaatsen en landen te genereren.
   - `coordinates` in het Level 2-bestand hebben voorrang op de coördinaten van de club in het Level 1-bestand. Zo kan een club de coördinaten wijzigen zonder hulp van buitenaf.
   - `latitude` moet in het bereik [-90.0, +90.0] liggen, waarbij negatieve waarden worden gebruikt voor het zuidelijk halfrond (bijvoorbeeld Australië).
@@ -878,9 +878,9 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
 <ul><details><Summary>Optionele Level 2-velden (klik om uit te vouwen)</Summary></p>
 
 - **Optionele** velden (die worden genegeerd)
-    - het veld `level2URL` mag worden opgenomen, maar de waarde ervan heeft om veiligheidsredenen _geen_ voorrang op de `level2URL`-waarde in `root.level1.json`.
+    - het veld `level2URL` mag worden opgenomen, maar de waarde ervan heeft om veiligheidsredenen _geen_ voorrang op de `level2URL`-waarde in de Level 1 gegevens van de club.
 - **Optionele** velden (die worden gebruikt)
-    - de velden `wikipedia`, `fotobondNumber`, `coordinates`, `website` en `localizedRemarks` van een club hebben zo nodig voorrang op de corresponderende velden in `root.level1.json`.
+    - de velden `wikipedia`, `fotobondNumber`, `coordinates`, `website` en `localizedRemarks` van een club hebben zo nodig voorrang op de corresponderende velden in de Level 1 gegevens van de club.
       Zo kan een club de centraal aangeleverde informatie _corrigeren_ met door de club aangeleverde informatie.
       Niet al deze optionele velden staan in het voorbeeld: zie de Level 1-documentatie voor meer details.
     - `maintainerEmail` is de contactpersoon bij problemen met dit bestand. Dat kan de beheerder of secretaris van de club zijn, of een heel ander lid.</p>

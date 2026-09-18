@@ -392,7 +392,7 @@ The text you type inside the search button is matched against key fields for the
   If you need to search on club names, go to the `Maps` tab.
 - In the `Maps` tab, searches try to match against the organization names and towns.
   Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
-  Note that the town is the location specified in the `root.level1.json` file and _not_ its translated version, which can be different.
+  Note that the town is the location specified in the club's Level 1 entry and _not_ its translated version, which can sometimes be different.
 - In the `People` tab, searches try to match the photographer's full name.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
 
@@ -722,7 +722,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
   - Syntactically either can be omitted, but then you wouldn't have photo clubs or museums in the app.
     - When loaded into the app's internal database, `clubs` and `museums` determine the `OrganizationType` (`club` or `museum`) of each `Organization` object. This is among others used to determine which marker type to display on a map.
 - `town` can be a city (London) or smaller locality (Land's End)
-  - `town` is _not_ directy visible in the user interface, although it may look that way. The user interface displays a language-localized name generated using the `coordinates`. This so-called `localizedTown` may contain the same string as `town`, or be a translation of `town`, or may even hold larger or smaller administrative entity. The file's `town` field is used to ensure that there is a unique ID for a club or museum. So `Fotoclub Lucifer` in `Vessem` would be considered unrelated to a `Fotoclub Lucifer` in `Eersel`. The `town` field also serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say just "Victoria and Albert Museum" and leave you to determine the location using its `coordinates`.
+  - `town` is _not_ directy visible in the user interface, although it may look that way. The user interface displays a language-localized name generated using the `coordinates`. This so-called `localizedTown` may contain the same string as `town`, or be a translation of `town`, or may even hold larger or smaller administrative entity. The file's `town` field is used to ensure that there is a unique ID for a club or museum. So `Fotoclub Lucifer` in `Vessem` would be considered a different club to `Fotoclub Lucifer` in nearby `Eersel`. The `town` field also serves to document the record in its Level 1 file: it is clearer to say "Victoria and Albert Museum (London)" than to say just "Victoria and Albert Museum" and leave you to guess the location or look up its `coordinates`.
     - Similarly, the user interface can display a computed `localizedCountry` name that is automatically generated using the provided `coordinates`. The Level 1 data thus does not need or include a `country` attribute. This is convenient because country names commonly get translated into local languages (`Italia`, `Italy`, `İtalya`, etc.).
 - `town` and `fullName` together serve to identify clubs or museums.
   - It is thus possible to have two clubs with the same name in different cities. Two separate clubs or museums with an identical name in the same town would be confusing, and would be treated as a single entity by the app until the data about the original `town` /` fullname` combination is removed from the in-device database. Removal of obsolete `Organization` records is unfortunately not done automatically yet.
@@ -857,9 +857,9 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 
 <ul><details><Summary>Mandatory Level 2 fields (click to expand)</Summary></p>
 
-- `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the `Level2` file so you can tell which club it belongs to.
+- `club` has the same structure as a single `club` record in a Level 1 file. It serves to label the `Level2` file so you can tell which club it belongs to.
   - `idPlus` and its 3 fields (`town`, `fullName`, and `nickName`) are all required.
-  - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
+  - `town` and `fullName` must precisely match the corresponding fields in the club's Level 1 entry.
 - `coordinates` is used to draw the club on the map and to generate localized versions of the names of towns and countries.
   - `coordinates` in the Level 2 file overrule the club's coordinates in the Level 1 file. This allows a club to change the coordinates without any outside help.
   - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Southern hemisphere (e.g., Australia).
@@ -871,9 +871,9 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 <ul><details><Summary>Optional Level 2 fields (click to expand)</Summary></p>
 
 - **Optional** fields (that are ignored)
-    - the `level2URL` field can be included, but its value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
+    - the `level2URL` field can be included, but its value does _not_ overrule the `level2URL` value in the club's Level 1 entry for security reasons.
 - **Optional** fields (that are used)
-    - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding `root.level1.json` fields if needed.
+    - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding fields in the club's Level 1 entry if there is no exact match.
       This allows a club to _correct_ the centrally-provided information with club-provided information.
       Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
     - `maintainerEmail` is who to contact if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
