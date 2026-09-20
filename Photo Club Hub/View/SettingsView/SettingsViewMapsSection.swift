@@ -28,17 +28,6 @@ struct SettingsViewMapsSection: View {
                        isOn: $localSettings.showClubs.animation())
             }
 
-            HStack { // SHOW TEMPLATE CLUBS
-                Image(systemName: "mappin.square")
-                    .font(.title2)
-                    .symbolRenderingMode(.palette)
-                    .foregroundStyle(.mapsColor, .gray, .red)
-                Toggle(String(localized: "Show template clubs",
-                              table: "PhotoClubHub.SwiftUI",
-                              comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showTemplateClubs.animation())
-            }
-
             HStack { // SHOW MUSEUMS
                 Image(systemName: "mappin.square")
                     .font(.title2)

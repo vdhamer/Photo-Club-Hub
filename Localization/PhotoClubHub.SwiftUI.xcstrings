@@ -1422,23 +1422,6 @@
         }
       }
     },
-    "Show template clubs" : {
-      "comment" : "Label of toggle in Preferences",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show template clubs"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon template clubs"
-          }
-        }
-      }
-    },
     "shown" : {
       "comment" : "X member(s) shown (due to various forms of filtering)",
       "localizations" : {
