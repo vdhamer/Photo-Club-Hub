@@ -181,6 +181,20 @@
 		37A2A0E32FAA9EA100EF39A1 /* OrganizationViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewMap.swift; sourceTree = "<group>"; };
 		37A2A0E52FAAA53400EF39A1 /* MapsViewRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewRemark.swift; sourceTree = "<group>"; };
 		37A74C022F1451F6003DCD06 /* museumsCN.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsCN.level1.json; sourceTree = "<group>"; };
+		37A835F030608FFD004F69CB /* clubsNL01.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL01.level1.json; sourceTree = "<group>"; };
+		37A835F130608FFD004F69CB /* clubsNL02.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL02.level1.json; sourceTree = "<group>"; };
+		37A835F230608FFD004F69CB /* clubsNL04.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL04.level1.json; sourceTree = "<group>"; };
+		37A835F330608FFD004F69CB /* clubsNL05.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL05.level1.json; sourceTree = "<group>"; };
+		37A835F430608FFD004F69CB /* clubsNL06.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL06.level1.json; sourceTree = "<group>"; };
+		37A835F530608FFD004F69CB /* clubsNL07.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL07.level1.json; sourceTree = "<group>"; };
+		37A835F630608FFD004F69CB /* clubsNL08.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL08.level1.json; sourceTree = "<group>"; };
+		37A835F730608FFD004F69CB /* clubsNL09.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL09.level1.json; sourceTree = "<group>"; };
+		37A835F830608FFD004F69CB /* clubsNL10.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL10.level1.json; sourceTree = "<group>"; };
+		37A835F930608FFD004F69CB /* clubsNL11.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL11.level1.json; sourceTree = "<group>"; };
+		37A835FA30608FFD004F69CB /* clubsNL12.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL12.level1.json; sourceTree = "<group>"; };
+		37A835FB30608FFD004F69CB /* clubsNL14.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL14.level1.json; sourceTree = "<group>"; };
+		37A835FC30608FFD004F69CB /* clubsNL15.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL15.level1.json; sourceTree = "<group>"; };
+		37A835FD30608FFD004F69CB /* clubsNL17.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL17.level1.json; sourceTree = "<group>"; };
 		37A88B52300E1D1E00193829 /* Levels_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_NL_Light.jpg; sourceTree = "<group>"; };
 		37A88B5A300E1D3400193829 /* README_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_NL.md; sourceTree = "<group>"; };
 		37AAA67D3020C9DD0056BC94 /* ClubLoadCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubLoadCoordinator.swift; sourceTree = "<group>"; };
@@ -873,6 +887,20 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				37A835F030608FFD004F69CB /* clubsNL01.level1.json */,
+				37A835F130608FFD004F69CB /* clubsNL02.level1.json */,
+				37A835F230608FFD004F69CB /* clubsNL04.level1.json */,
+				37A835F330608FFD004F69CB /* clubsNL05.level1.json */,
+				37A835F430608FFD004F69CB /* clubsNL06.level1.json */,
+				37A835F530608FFD004F69CB /* clubsNL07.level1.json */,
+				37A835F630608FFD004F69CB /* clubsNL08.level1.json */,
+				37A835F730608FFD004F69CB /* clubsNL09.level1.json */,
+				37A835F830608FFD004F69CB /* clubsNL10.level1.json */,
+				37A835F930608FFD004F69CB /* clubsNL11.level1.json */,
+				37A835FA30608FFD004F69CB /* clubsNL12.level1.json */,
+				37A835FB30608FFD004F69CB /* clubsNL14.level1.json */,
+				37A835FC30608FFD004F69CB /* clubsNL15.level1.json */,
+				37A835FD30608FFD004F69CB /* clubsNL17.level1.json */,
 				37B534B22F2437C7000EA5BB /* ClubsNL.xlsx */,
 				D061AEFF2E3A451700E39B43 /* 260308_Fotoclubs_Brabant_Oost.xlsx */,
 				37DA3E082F06AFC600AB7993 /* clubsNL.level1.json */,
