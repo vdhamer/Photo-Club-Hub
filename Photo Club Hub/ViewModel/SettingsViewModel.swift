@@ -82,7 +82,7 @@ struct SettingsStruct { // order in which they are shown on Preferences page
         preferenceForFeaturedImage: true,
 
         showClubs: true,
-        showTemplateClubs: false,
+        showTemplateClubs: true, // counted and shown like any other club, so both apps agree (#858)
         showMuseums: true,
         highlightFotobondNL: false,
         highlightNonFotobondNL: false,

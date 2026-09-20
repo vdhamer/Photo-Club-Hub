@@ -132,9 +132,8 @@ struct ReadmeSectionOnFeaturesAndTips: View {
                           geo: geo)
             let persistenceController = PersistenceController.shared // for Core Data
             let viewContext = persistenceController.container.viewContext
-            // -2 is not counting TemplateMin and TemplateMax
             let orgCount = Organization.count(context: viewContext,
-                                              organizationTypeE: OrganizationTypeEnum.club) - 2
+                                              organizationTypeE: OrganizationTypeEnum.club)
             ReadmeSection(LocalizedStringResource("§3.06.b \(orgCount)", // dynamic via query
                                                   table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
