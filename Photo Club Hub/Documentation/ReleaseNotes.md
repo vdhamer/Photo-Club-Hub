@@ -14,7 +14,7 @@ USER-FACING
 
 - Compound family names, the kind formed on marriage, are now written one way instead of seven. There were seven such names in the data and no two were spelled alike: the separator varied between a hyphen, a spaced hyphen and hyphens replacing the spaces, and the first name's infix was sometimes in the `infixName` field and sometimes left inside `familyName`, which decides whether the person sorts under her own family name or under "de". Five were corrected, two already conformed. The convention and its reasoning are in the issue, and it applies to anyone writing a `level2.json` by hand ([#841](https://github.com/vdhamer/Photo-Club-Hub/issues/841))
 
-- **The two template clubs are now treated as regular clubs.** `TemplateMin` and `TemplateMax` exist so that a club maintainer can compare their JSON with what the apps show, which only works if they are visible. The *Show template clubs* toggle was thus from Settings: the two are shown and counted like any other club, so the numbers visible in this app and the website equivalent now match exactly ([#858](https://github.com/vdhamer/Photo-Club-Hub/issues/858))
+- **The two template clubs are now treated as regular clubs.** `TemplateMin` and `TemplateMax` exist so that a club maintainer can compare their JSON with what the apps show, which only works if they are visible. The *Show template clubs* toggle was thus from Settings: the two are shown and counted like any other club, so the numbers visible in this app and the website equivalent now match ([#858](https://github.com/vdhamer/Photo-Club-Hub/issues/858))
 
 STRUCTURAL
 
