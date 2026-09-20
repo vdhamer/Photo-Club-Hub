@@ -100,9 +100,9 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 
         case .organization: // may change unit to ElementTypeEnum.club if Museums are filted out in Preferences
             let settings = SettingsViewModel.shared.settings
-            if settings.anyClubs && !settings.showMuseums {
+            if settings.showClubs && !settings.showMuseums {
                 return localizedFilteredCount(unit: .club)
-            } else if !settings.anyClubs && settings.showMuseums {
+            } else if !settings.showClubs && settings.showMuseums {
                 return localizedFilteredCount(unit: .museum)
             } else {
                 return String(localized: "\(filteredCount) organization",
