@@ -34,6 +34,8 @@ DATA MAINTENANCE
 - Compound family names, the kind formed on marriage, are now written one way instead of seven. There were seven such names in the data and no two were spelled alike: the separator varied between a hyphen, a spaced hyphen and hyphens replacing the spaces. Five were corrected, two already conformed. Only the separator needed fixing: the first family name's infix was already in the `infixName` field wherever there was one, which is what makes the person sort under their own family name rather than under "de". The convention and its reasoning are in the issue, and it applies to anyone writing a `level2.json` by hand. The scavenger script `scripts/scavenger/draft-level2.py` now writes compound names in this convention too, instead of copying whatever spelling a club website uses. The separator rule is also enforced in code: since Photo Club Hub Data 3.3.0, a compound family name is normalized while it is loaded, so a `level2.json` that writes the hyphen another way still yields one person rather than two. The file itself is not corrected, and the infix rule is not enforced ([#841](https://github.com/vdhamer/Photo-Club-Hub/issues/841))
 - Corrected the name of the photo group in Veghel from "Fotogroep Zoomm" to "Fotogroep Zooomm" (nickname `fgZooomm`), as the group spells it itself, including in other clubs' remarks and in `root.level1.json`. It also got a new website link and remark. Fotoclub Zzzoom (Eersel) got a remark without a member count.
 
+This build #4667 was made using Xcode 27.0 and is intended to go the App Store.
+
 ---------------------------------------------------------------------------
 
 ### 3.0.1 (GitHub commit f7c6756, build 4666) 26-08-2026
