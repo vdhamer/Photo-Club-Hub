@@ -12,7 +12,7 @@ PLACEHOLDER FORR NEXT RELEASE
 
 ---------------------------------------------------------------------------
 
-### 3.0.2 (GitHub commit ???????, build 4667) ??-09-2026
+### 3.0.2 (GitHub commit 2429df3e, build 4667) 21-09-2026
 
 USER-FACING
 
