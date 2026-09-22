@@ -18,6 +18,10 @@ import Photo_Club_Hub_Data // for types like MemberPortfolio
 struct MemberPortfolioRow: View {
     /// The member portfolio model used to populate this row.
     @ObservedObject var member: MemberPortfolio
+    /// Always `member.photographer`, set in `init`. Observed separately because name, deceased status and
+    /// expertise tags live on the Photographer, not on the membership: during pull-to-refresh another club's
+    /// file can add expertises after this row is drawn, and observing `member` does not notice that (#862).
+    @ObservedObject private var photographer: Photographer
     /// Localized connector text used as '<person> of <photo club>'.
     private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
     /// Core Data context used to resolve localized expertise lists.
@@ -29,6 +33,14 @@ struct MemberPortfolioRow: View {
     @State var flipImageFlag: Bool = false
     /// Provides access to user preferences (e.g. settings.preferenceForFeaturedImage) to this view and descendants.
     @StateObject var settingsModel = SettingsViewModel.shared
+
+    /// The caller's list is filtered on `member.isUsable`, which is what makes reading `member.photographer`
+    /// safe here (#802).
+    init(member: MemberPortfolio, selectedPortfolio: Binding<MemberPortfolio?>) {
+        self.member = member
+        self.photographer = member.photographer
+        self._selectedPortfolio = selectedPortfolio
+    }
 
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     ///
@@ -57,19 +69,19 @@ struct MemberPortfolioRow: View {
 
                     // name of photographer
                     VStack(alignment: .leading) {
-                        Text(verbatim: "\(member.photographer.fullNameFirstLast)") // photographer's name
+                        Text(verbatim: "\(photographer.fullNameFirstLast)") // photographer's name
                             .font(UIDevice.isIPad ? .title : .title2)
                             .tracking(1)
                             .allowsTightening(true)
                             .foregroundStyle(chooseColor(
                                 defaultColor: .accentColor,
-                                isDeceased: member.photographer.isDeceased
+                                isDeceased: photographer.isDeceased
                             ))
 
                         // expertises
                         let localizedExpertiseResultLists =
                             LocalizedExpertiseResultLists(moc: moc,
-                                                          member.photographer.photographerExpertises)
+                                                          photographer.photographerExpertises)
                         Group {
                             if !localizedExpertiseResultLists.supported.list.isEmpty { // list any supported expertises
                                 HStack(spacing: 3) {
@@ -100,7 +112,7 @@ struct MemberPortfolioRow: View {
                             .truncationMode(.tail)
                             .lineLimit(2)
                             .font(UIDevice.isIPad ? .subheadline : .caption)
-                            .foregroundStyle(member.photographer.isDeceased ?
+                            .foregroundStyle(photographer.isDeceased ?
                                 .deceasedColor : .primary)
                     }
                 }
