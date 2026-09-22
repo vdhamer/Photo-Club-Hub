@@ -1555,7 +1555,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dit scherm is leeg doordat de Zoekfilter niets vindt binnen de gekozen categorieën. Pas dus de Zoekfilter aan of zet met organisatiecategorieën aan in de Instellingen tab."
+            "value" : "Dit scherm is leeg doordat de Zoekfilter niets vindt binnen de gekozen categorieën. Pas de Zoekfilter aan of zet met organisatiecategorieën aan in de Instellingen tab."
           }
         }
       }
@@ -1589,7 +1589,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deze lijst is leeg doordat de Zoekfilter niets vindt binnen de gekozen ledencategorieën. Pas dus de Zoekfilter aan of voeg bij Instellingen ledencategorieën toe."
+            "value" : "Deze lijst is leeg doordat de Zoekfilter niets vindt binnen de gekozen ledencategorieën. Pas de Zoekfilter aan of voeg bij Instellingen ledencategorieën toe."
           }
         }
       }
@@ -1628,7 +1628,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deze lijst is leeg doordat de Zoekfilter niemand doorlaat. Pas dus de Zoekfilter aan."
+            "value" : "Deze lijst is leeg doordat de Zoekfilter niemand doorlaat. Pas de Zoekfilter aan."
           }
         }
       }
