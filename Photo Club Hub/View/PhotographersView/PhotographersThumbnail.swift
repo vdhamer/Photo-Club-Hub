@@ -38,12 +38,6 @@ struct PhotographersThumbnail: View {
             }
         }
     }
-
-    private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
-        return
-            member.photographer.photographerImage != nil && // there are two images defined for this member
-            member.photographer.photographerImage != member.featuredImage // and the two images are different
-    }
 }
 
 // MARK: - Previews

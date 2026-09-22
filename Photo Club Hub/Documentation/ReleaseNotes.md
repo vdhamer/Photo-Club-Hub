@@ -8,7 +8,9 @@
 
 ### 3.0.3 (GitHub commit ???????, build 4668) ??-10-2026
 
-PLACEHOLDER FORR NEXT RELEASE
+USER-FACING
+
+- **The People tab no longer loses a club after pull-to-refresh.** A photographer who belongs to two or more clubs could display only one thumbnail after a refresh. The data was complete; only the photographer's card was not redrawn. A refresh loads the clubs concurrently, so the card appears as soon as the first club is in, and the second membership arrives later on the same object. The thumbnail row held that object without observing it, so SwiftUI saw unchanged inputs and skipped redrawing it. The row, the card's text lines and the thumbnail image view now observe the object they display, and the thumbnail image view also observes the photographer, whose own image can arrive from another club's file later. The first is the observed bug; the rest are preventive ([#862](https://github.com/vdhamer/Photo-Club-Hub/issues/862))
 
 ---------------------------------------------------------------------------
 
@@ -21,7 +23,16 @@ The stored data is wiped and reloaded from scratch, so the first launch after up
 
 - **The two template clubs are now treated as regular clubs.** `TemplateMin` and `TemplateMax` exist so that a club maintainer can compare their JSON with what the apps show, which only works if they are visible. The *Show template clubs* toggle was thus from Settings: the two are shown and counted like any other club, so the numbers visible in this app and the website equivalent now match ([#858](https://github.com/vdhamer/Photo-Club-Hub/issues/858))
 
-[ add in the changes from Data repo !!! ]
+* __A Level 1 file without a bundled copy still loads from its online copy.__
+The loader looked for a bundled copy of each file before trying the online one, and gave up on the file when there was no bundled copy: skipped in release builds, a trap in debug builds. Because the Level 1 tree is read from live data, it can "Include" files newer than the app reading it, and on 19 Sept 2026 fourteen new `clubsNLxx` files did exactly that. All released versions of the app skipped them, and the debug build of the iOS app crashed on launch (with a console message). A missing bundled copy is now reported as an error only when the bundle is the sole source (`useOnlyInBundleFile`, as in the tests), where it really is a build mistake. Otherwise it is logged, and the online copy is used. Released apps keep the old behavior until their users update to the newer version (Data#62).
+
+DATA
+
+* `clubsNL01`, `clubsNL02`, `clubsNL04` to `clubsNL12`, `clubsNL14`, `clubsNL15`, `clubsNL17` (new), `clubsNL03`, `clubsNL16`, `clubsNL.level1.json`
+Fourteen nature photography clubs, none of them Fotobond members, placed in one Level 1 file per Fotobond afdeling, each included from `clubsNL.level1.json`. Five more files (`clubsNL01`, `clubsNL09`, `clubsNL14`, `clubsNL15`, `clubsNL17`) are empty placeholders, so every afdeling now has a file to add clubs to. The fourteen new files are bundled through `Package.swift`. Mirrored identically in the iOS repo's live copy (Data#59).
+
+* `clubsNL16`, `root.level1.json`, `fcVeghel.level2.json`
+One Club in Veghel is "Fotogroep Zooomm" (nickname `fgZooomm`), as it spells itself, not "Zoomm". Renamed everywhere, including other clubs' remarks. Because a club is identified by name and town, a device that loaded the old spelling keeps it until the iOS app's 3.0.2 data reset. Mirrored identically in the iOS repo's live copy.
 
 STRUCTURAL
 

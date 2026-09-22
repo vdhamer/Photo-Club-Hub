@@ -19,7 +19,10 @@ import Photo_Club_Hub_Data // for types like Photographer
 // Preview is commented out (doesn't work yet).
 
 struct PhotographersTextInfo: View {
-    var photographer: Photographer
+    /// Observed so that attributes merged in after the card first appears (e.g. a website or birthday from
+    /// another club's file during pull-to-refresh) redraw these lines. The parent passes the same object again,
+    /// so SwiftUI would otherwise see unchanged inputs and skip this body.
+    @ObservedObject var photographer: Photographer
     let wkWebView: WKWebView
 
     private static let dateFormatter: DateFormatter = {

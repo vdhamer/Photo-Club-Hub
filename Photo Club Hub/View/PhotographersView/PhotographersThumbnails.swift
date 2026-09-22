@@ -15,7 +15,10 @@ import Photo_Club_Hub_Data // for types like Photographer
 //     * buttons (coming) to switch images, and to navigate to portfolio per club
 
 struct PhotographersThumbnails: View {
-    let photographer: Photographer // who is this about?
+    /// Observed, not `let`: the card keeps the same Photographer object when a membership is merged in later
+    /// (pull-to-refresh loads clubs concurrently), so without observing it SwiftUI sees unchanged inputs and
+    /// skips redrawing this row, leaving it one thumbnail short.
+    @ObservedObject var photographer: Photographer // who is this about?
     /// Set by tapping a caption or chevron; the screen-level view owns the navigationDestination(item:).
     /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
     @Binding var selectedPortfolio: MemberPortfolio?

@@ -15,8 +15,13 @@ import Photo_Club_Hub_Data // for many types like MemberPortfolio
 /// that toggles between the Featured image and the Photographer's own image.
 /// `flipImageFlag` is a binding so taps here propagate back to the parent view/row.
 struct DualImageWithCaptionAndControls: View {
-    /// who is this about?
-    let member: MemberPortfolio
+    /// who is this about? Observed even though both parents observe it too: a parent that re-renders passes
+    /// the same object again, and SwiftUI then skips this body unless it observes the object itself.
+    @ObservedObject var member: MemberPortfolio
+    /// Always `member.photographer`, set in `init`. Observed separately because the photographer's own image
+    /// lives on the Photographer, not on the membership: during pull-to-refresh it can arrive from another club's
+    /// file after this view is drawn, and observing `member` does not notice that (#862).
+    @ObservedObject private var photographer: Photographer
     let settings: SettingsStruct
     /// size of  square image
     let squareSize: CGFloat
@@ -27,6 +32,19 @@ struct DualImageWithCaptionAndControls: View {
     /// Set by tapping the caption or chevron; the screen-level view owns the navigationDestination(item:).
     /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
     @Binding var selectedPortfolio: MemberPortfolio?
+
+    /// Callers check `member.isUsable` before creating this view, which is what makes reading
+    /// `member.photographer` safe here (#802).
+    init(member: MemberPortfolio, settings: SettingsStruct, squareSize: CGFloat, caption: Bool,
+         flipImageFlag: Binding<Bool>, selectedPortfolio: Binding<MemberPortfolio?>) {
+        self.member = member
+        self.photographer = member.photographer
+        self.settings = settings
+        self.squareSize = squareSize
+        self.caption = caption
+        self._flipImageFlag = flipImageFlag
+        self._selectedPortfolio = selectedPortfolio
+    }
 
     var body: some View {
         let imageChoice = ImageChoice(member: member,
@@ -132,8 +150,8 @@ struct DualImageWithCaptionAndControls: View {
     }
 
     private func isThumbnailFlippable(member: MemberPortfolio) -> Bool {
-        return member.photographer.photographerImage != nil &&
-        member.photographer.photographerImage != member.featuredImage
+        return photographer.photographerImage != nil &&
+        photographer.photographerImage != member.featuredImage
     }
 }
 
