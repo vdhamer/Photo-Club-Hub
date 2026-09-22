@@ -49,6 +49,14 @@ struct FilteredMapsView: View {
         return request
     }()) private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
 
+    /// Never really read: it exists so that any geocoded town or country, new or changed, redraws the cards.
+    /// `fetchedOrganizations` alone misses a changed LocalizedAddress. A club/museum with changed coordinates gets its existing
+    /// `LocalizedAddress` updated in place, the Organization itself does not change, and the card would keep
+    /// the old town until Maps is left and reopened (#862). A brand-new address happens to reach
+    /// `fetchedOrganizations` too, by changing the Organization's to-many relationship, but no longer depends on it.
+    @FetchRequest(sortDescriptors: [])
+    private var localizedAddresses: FetchedResults<LocalizedAddress>
+
     private let searchText: Binding<String>
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
