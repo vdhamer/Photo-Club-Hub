@@ -49,11 +49,16 @@ struct FilteredMapsView: View {
         return request
     }()) private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
 
-    /// Never really read: it exists so that any geocoded town or country, new or changed, redraws the cards.
-    /// `fetchedOrganizations` alone misses a changed LocalizedAddress. A club/museum with changed coordinates gets its existing
-    /// `LocalizedAddress` updated in place, the Organization itself does not change, and the card would keep
-    /// the old town until Maps is left and reopened (#862). A brand-new address happens to reach
-    /// `fetchedOrganizations` too, by changing the Organization's to-many relationship, but no longer depends on it.
+    /// Never directly read: it exists only so that any geocoded town or country, new or changed, redraws the cards.
+    /// `fetchedOrganizations` alone misses an address rewritten in place: a fetch request reports changes to its
+    /// own objects, not to the contents of their related records (#862). That happens two ways.
+    /// A club that relocates does change the Organization, so the card redraws at once, but with the old town,
+    /// because the re-geocode `needsGeocoding` triggers from the new coordinates lands later and touches only the
+    /// `LocalizedAddress`. And a re-geocode of unchanged coordinates can still return a different name, once Apple's
+    /// database records a rename or a redrawn border: there no Organization changes at all. Only a coordinate change
+    /// triggers a re-geocode today, so that second case waits for a scheduled re-check.
+    /// A first translation instead creates a row, which changes the Organization's to-many relationship: that case
+    /// reached `fetchedOrganizations` too, but no longer depends on it.
     @FetchRequest(sortDescriptors: [])
     private var localizedAddresses: FetchedResults<LocalizedAddress>
 
@@ -134,7 +139,7 @@ struct FilteredMapsView: View {
                         localizedCountry = nation // optional String
                         // Nothing consumes the result, and nothing needs to: the background save merges
                         // into `viewContext` (`automaticallyMergesChangesFromParent`, set in
-                        // `PersistenceController`) and the `@FetchRequest` above re-renders the card. The
+                        // `PersistenceController`) and the `localizedAddresses` watch re-renders the card. The
                         // await only keeps this task alive until the save has landed.
                         await updateTownCountry(
                             clubName: clubName, town: town, languageIsoCode: isoCode,
