@@ -77,7 +77,7 @@ struct FilteredMemberPortfoliosView: View {
         // both show.
         EmptyListHint(reason: emptyListReason(for: sectionedPortfoliosResults),
                       tint: .clubsColor,
-                      wording: hintText)
+                      wording: { hintText(for: $0) }) // not `hintText`: previews fail to compile it
             .listRowSeparator(.hidden) // also covers the spinner branch, which is not a CalloutBox
         ForEach(sectionedPortfoliosResults) { section in
             let filteredPortfolios = filterMemberPortfolios(unFilteredPortfolios: section)

@@ -65,7 +65,7 @@ struct FilteredPhotographerView2627: View {
         // below. Every reason but `.listHasRows` implies the ForEach is empty, so the two never both show.
         EmptyListHint(reason: emptyListReason(),
                       tint: .peopleColor,
-                      wording: hintText)
+                      wording: { hintText(for: $0) }) // not `hintText`: previews fail to compile it
         ForEach(filteredPhotographers, id: \.id) { photographer in // each photographer's "card"
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
