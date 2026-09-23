@@ -20,11 +20,13 @@ struct MapsViewInfo: View {
     let localizedCountry: String
     let memberCount: Int
     let organizationWebsite: URL?
-    @Binding var isMapScrollLocked: Bool // bound so the lock toggle writes back to the Organization
+    @Binding var isMapScrollLocked: Bool // owned by the card (`MapsViewCard`), which also passes it to the map
 
     /// - Parameter language: the language to show the address in, or nil when the `Language` table has
     ///   not been seeded yet. Nil falls back to the unlocalized town the JSON supplied (#827).
-    init(organization: Organization, language: Language?) { // higher level initializer for production
+    init(organization: Organization, // higher level initializer for production
+         language: Language?,
+         isMapScrollLocked: Binding<Bool>) {
         iconSystemName = systemName(organizationType: organization.organizationType, circleNeeded: true)
         isUnknownType = organization.organizationType.isUnknown
         if let language {
@@ -36,10 +38,7 @@ struct MapsViewInfo: View {
         }
         memberCount = organization.members.count
         organizationWebsite = organization.organizationWebsite
-        _isMapScrollLocked = Binding(
-            get: { organization.isMapScrollLocked },
-            set: { organization.isMapScrollLocked = $0 }
-        )
+        _isMapScrollLocked = isMapScrollLocked
     }
 
     fileprivate init(iconSystemName: String, // lower level initiatizer used by preview
