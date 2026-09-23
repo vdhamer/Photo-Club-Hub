@@ -64,6 +64,8 @@
 		37ECFBDD2FFDAD7600806590 /* TabNavigationTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */; };
 		37EEEB9D2FA0B3A3001463BA /* SettingsViewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
+		37F61871306492E6002DA468 /* ItemFilterStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */; };
+		37F61872306492F8002DA468 /* ElementTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ElementTypeEnum.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
@@ -86,14 +88,12 @@
 		D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
 		D0BADF842DF9C80800BDE2CD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A29277F72590049AB84 /* SettingsViewModel.swift */; };
 		D0C6E95529577921001E5CE9 /* DebugPanel1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel1718.swift */; };
-		D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */; };
 		D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D0DFBEF32D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings */; };
 		D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView1718.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EB533C295775240061613B /* Crosshairs2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs2627.swift */; };
-		D0FE77E52BB9AEE900272077 /* ElementTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ElementTypeEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -689,7 +689,6 @@
 				D03DE5CC2C28439800130680 /* App */,
 				D0831A18277F72110049AB84 /* View */,
 				37EA14EA2FB0CCD6000D8EDF /* DualImageWithCaptionAndControls.swift */,
-				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
 				D0831A23277F72340049AB84 /* ViewModel */,
 				D0831A48277F736C0049AB84 /* Documentation */,
 				D0831A3F277F731C0049AB84 /* Extensions */,
@@ -712,6 +711,7 @@
 				D05E451B27EF286B00D31327 /* SettingsView */,
 				D05E451C27EF297100D31327 /* ReadmeView */,
 				D081655D278616710078AB16 /* SinglePortFolioView */,
+				D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */,
 				D0FCF2E429B558B500F31442 /* VoteOnRoadmapView */,
 			);
 			path = View;
@@ -1141,7 +1141,6 @@
 				37EBBC382FFA451F00C95FDA /* RootView.swift in Sources */,
 				3769DFA0300AE60800D819FA /* PreludeView2627+Screenshot.swift in Sources */,
 				37D984252F904DB200C30EE5 /* SettingsViewAdvancedSection.swift in Sources */,
-				D0FE77E52BB9AEE900272077 /* ElementTypeEnum.swift in Sources */,
 				37DA83893037850C0064E3AA /* PhotoClubHubApp+Versioning.swift in Sources */,
 				37D984232F904B8B00C30EE5 /* SettingsViewPhotographersSection.swift in Sources */,
 				37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */,
@@ -1158,17 +1157,18 @@
 				37F7F53D2EC8A028000F1889 /* PreludeImage2627.swift in Sources */,
 				375AEF0D2F4B500F00C6FBD9 /* SemanticColor+palette.swift in Sources */,
 				376DC9522EC3A98900FB429B /* PreludeImageStore2627.swift in Sources */,
-				D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */,
 				D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */,
 				D032944A283F9D1D0044C70C /* Bundle+BuildInfo.swift in Sources */,
 				370D381E2F9E162A0046AA0C /* ReadmeSectionOnFeaturesAndTips.swift in Sources */,
 				37DB783A2FB74854007AC405 /* MemberPortfolioView.swift in Sources */,
 				37415B202F9D3733004B4647 /* ReadmeSectionOnApp.swift in Sources */,
 				37EEEB9D2FA0B3A3001463BA /* SettingsViewThumbnail.swift in Sources */,
+				37F61872306492F8002DA468 /* ElementTypeEnum.swift in Sources */,
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs2627.swift in Sources */,
 				37AAA67E3020C9DD0056BC94 /* ClubLoadCoordinator.swift in Sources */,
+				37F61871306492E6002DA468 /* ItemFilterStatsView.swift in Sources */,
 				37D984092F90406200C30EE5 /* SettingsViewMembersSection.swift in Sources */,
 				376D14FA2E6DE83A00A1403B /* DebugPanel2627.swift in Sources */,
 				37A2A0E02FAA959F00EF39A1 /* MapsViewTitle.swift in Sources */,
