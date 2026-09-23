@@ -148,31 +148,7 @@ struct MapsViewMapPreviews: View {
                                                           optionalFields: OrganizationOptionalFields(),
                                                           pinned: false)
 
-        // Four neighbors about 2.5 km north, east, south and west of it, so the map always shows other markers too,
-        // in the same places, and their colors can be checked. The store's randomly placed sample organizations
-        // (`PersistenceController.preview`) rarely land inside the 10 km default view. Nothing is loaded from JSON.
-        // MapKit converts meters to degrees at this location, so the distances hold at any latitude.
-        let span = MKCoordinateRegion(center: center,
-                                      latitudinalMeters: 5_000, longitudinalMeters: 5_000).span // half: 2.5 km
-        let neighbors: [String: (latitude: Double, longitude: Double)] = [ // offsets in degrees
-            "North": (span.latitudeDelta / 2, 0),
-            "East": (0, span.longitudeDelta / 2),
-            "South": (-span.latitudeDelta / 2, 0),
-            "West": (0, -span.longitudeDelta / 2)
-        ]
-        for (name, offset) in neighbors {
-            _ = Organization.findCreateUpdate(context: context,
-                                              organizationTypeEnum: OrganizationTypeEnum.club,
-                                              idPlus: OrganizationIdPlus(fullName: "Club \(name)",
-                                                                         town: "Eindhoven",
-                                                                         nickname: "fcPreview\(name)"),
-                                              coordinates: CLLocationCoordinate2D(
-                                                  latitude: center.latitude + offset.latitude,
-                                                  longitude: center.longitude + offset.longitude),
-                                              removeOrganization: false,
-                                              optionalFields: OrganizationOptionalFields(),
-                                              pinned: false)
-        }
+        Self.addNeighbors(around: center, in: context)
 
         // Save the context so the fetch request can find the data
         do {
@@ -197,6 +173,34 @@ struct MapsViewMapPreviews: View {
             animation: .easeIn
         )
         print("Preview: \(fetchedOrganizations.count) returned organizations")
+    }
+
+    /// Adds four clubs about 2.5 km north, east, south and west of `center`, so the map always shows other markers
+    /// too, in the same places, and their colors can be checked. The store's randomly placed sample organizations
+    /// (`PersistenceController.preview`) rarely land inside the 10 km default view. Nothing is loaded from JSON.
+    private static func addNeighbors(around center: CLLocationCoordinate2D, in context: NSManagedObjectContext) {
+        // MapKit converts meters to degrees at this location, so the distances hold at any latitude.
+        let span = MKCoordinateRegion(center: center,
+                                      latitudinalMeters: 5_000, longitudinalMeters: 5_000).span // half: 2.5 km
+        let neighbors: [String: (latitude: Double, longitude: Double)] = [ // offsets in degrees
+            "North": (span.latitudeDelta / 2, 0),
+            "East": (0, span.longitudeDelta / 2),
+            "South": (-span.latitudeDelta / 2, 0),
+            "West": (0, -span.longitudeDelta / 2)
+        ]
+        for (name, offset) in neighbors {
+            _ = Organization.findCreateUpdate(context: context,
+                                              organizationTypeEnum: OrganizationTypeEnum.club,
+                                              idPlus: OrganizationIdPlus(fullName: "Club \(name)",
+                                                                         town: "Eindhoven",
+                                                                         nickname: "fcPreview\(name)"),
+                                              coordinates: CLLocationCoordinate2D(
+                                                  latitude: center.latitude + offset.latitude,
+                                                  longitude: center.longitude + offset.longitude),
+                                              removeOrganization: false,
+                                              optionalFields: OrganizationOptionalFields(),
+                                              pinned: false)
+        }
     }
 
     var body: some View {
