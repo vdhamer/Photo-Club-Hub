@@ -340,7 +340,7 @@ extension FilteredMapsView { // reverse GeoCoding
 ///
 /// The lock keeps a map inert, so a swipe over it scrolls the list; unlocking is a deliberate, temporary choice
 /// to explore one map. A user should only see two states: locked with the club's default view, or unlocked with
-/// a view they chose (#866). So the lock is `@State` here, and `MapView` keeps its camera view in `@State` too:
+/// a view they chose (#866). So the lock is `@State` here, and `MapsViewMap` keeps its camera view in `@State` too:
 /// both share this card's lifetime, survive scrolling off-screen together, and reset together to "locked, default
 /// view". A relaunch always starts locked. The lock used to be persisted in Core Data (removed in Data 3.6.0),
 /// which brought back unlocked maps whose view had reset, thus subtly violating the "two states" rule.
@@ -357,9 +357,9 @@ private struct MapsViewCard: View {
         VStack(alignment: .leading) {
             MapsViewTitle(organization: organization)
             MapsViewInfo(organization: organization, language: language, isMapScrollLocked: $isMapScrollLocked)
-            MapView(filteredOrganization: organization,
-                    fetchedOrganizations: fetchedOrganizations,
-                    isMapScrollLocked: isMapScrollLocked)
+            MapsViewMap(filteredOrganization: organization,
+                        fetchedOrganizations: fetchedOrganizations,
+                        isMapScrollLocked: isMapScrollLocked)
             MapsViewRemark(organization: organization)
         } // VStack
     }
