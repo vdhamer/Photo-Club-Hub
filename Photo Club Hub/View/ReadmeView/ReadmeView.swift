@@ -14,7 +14,8 @@ extension View {
 struct ReadmeView: View {
 
     @Environment(\.dismiss) var dismiss: DismissAction
-    @State private var showingRoadmap = false // controls visibility of Preferences screen
+    // Controlled the sheet with VoteOnRoadmapView, which is no longer in the build target.
+//    @State private var showingRoadmap = false
 
     private let title = String(localized: "Readme",
                                table: "PhotoClubHub.Readme",
