@@ -61,7 +61,7 @@ Various clubs in the Netherlands are already included to kick-start process.
 There is an **iOS** (iPhone/iPad) version of the app on the Apple App Store.
 For other phone brands and for larger screens there is a **web version**.
 
-With the [web version](https://www.fcDeGender.nl/en/clubs) you can view club portfolios in an internet browser (_Chrome_, _Edge_, _Safari_...)
+With the [web version](https://www.fcdegender.nl/hub/en/clubs/) you can view club portfolios in an internet browser (_Chrome_, _Edge_, _Safari_...)
 on all kinds of devices (Android phones, Chinese phone brands, tablets, laptops, Windows PC, Mac).
 Both versions have the same approach and show the same data.
 
@@ -167,7 +167,7 @@ Portfolios and exhibiting mean making choices.
 <details><summary>Click to expand or collapse answer</summary></p>
 No. A club manages its own data.</p>
 
-And that data is stored on the club website and is supplied and maintained by the club.
+That data is supplied and maintained by the club. A club owns its data and can host it itself; alternatively, the project can host it on the club's behalf.
 The data in question here is typically already found on the existing websites:
 names of club members, a selection of photos, club officers, etc.
 So now that same data has been converted into a machine-readable format,
@@ -198,11 +198,11 @@ require a software extension because otherwise the software technology used
 <details><summary>Click to expand or collapse answer</summary></p>
 Yes. No copies are made of the photos. The photos are on the club's website.
 Technically they are only "linked to".
-And even the lists with links to photos preferably reside on the club's website, and thus _not_ in a central location.
+The photos, and the galleries that show them, stay on the club's own website.
 So this is not comparable to sharing photos via Facebook, Instagram, Flickr, X, etc. Social media therefore makes
 a copy, and often tries to appropriate rights (^%$#) to photos in exchange for the use of the free service.
 This app, by contrast, is explicitly designed so that the club/photographer retains full control:
-no copies of photos or data are made, there is no central server,
+no copies of photos are made, the club owns its data,
 and the software is free and the source code is public.</p>
 
 Example: the photos and lists of photos of Fotogroep De Gender are on [www.fcDeGender.nl](https://www.fcDeGender.nl).
@@ -259,7 +259,7 @@ That web version consists of HTML pages that can be added to an existing website
 The software for the web version is called "Fotoclub Hub HTML" and "Photo Club Hub HTML" in English.
 With it a website administrator can automatically create pages from the _same_ data files
 that are used for the "Photo Club Hub" app.
-[Here](http://www.vdhamer.com/fgDeGender/) is an early test version of such a generated mini-site.
+[Here](https://www.fcdegender.nl/hub/) is such a generated site, for Fotogroep De Gender.
 This avoids double work when maintaining both app and website.
 Photo Club Hub HTML thus generates a member list with links to the portfolios of the club members.
 </details></p>
@@ -394,7 +394,7 @@ That web version consists of HTML pages that can be added to an existing website
 The software for the web version is called "Photo Club Hub HTML" (en) or "Fotoclub Hub HTML" (nl).
 With it a website administrator can automatically create pages from the _same_ data files
 that are used for the "Photo Club Hub" app.
-[Here](http://www.vdhamer.com/fgDeGender/) is an early test version of such a generated mini-site.
+[Here](https://www.fcdegender.nl/hub/) is such a generated site, for Fotogroep De Gender.
 This avoids double work when maintaining both app and website.
 Photo Club Hub HTML thus generates a member list with links to the portfolios of the club members.
 </details></p>
@@ -519,7 +519,7 @@ There is also a Dutch version of this: [tinyurl.com/Level2aanmaken](https://tiny
 
 <details><summary>Click to expand or collapse answer</summary></p>
 
-For the first clubs we are willing to _temporarily_ put the file on our own server.
+The project can host the file on its own server on the club's behalf.
 The disadvantage of this is that every revision of the file has to go through us.
 
 Those in the know can also put the file on their own site with `ftp` - but `ftp` is not really user-friendly.
@@ -589,7 +589,9 @@ It produces or modifies a file on your own computer.
 ### Photos of past exhibitions
 
 <details><summary>Click to expand or collapse answer</summary></p>
-A start has been made on this in Photo Club Hub HTML ([example](https://www.fcDeGender.nl/fgDeGender/expo2025/)).
+A precursor exists on the website of Fotogroep De Gender ([example](https://www.fcdegender.nl/exposities/expo2025/)).
+The web version aims get this for many club: past exhibitions on a club's page, and the most recent and next exhibition in the club list
+([HTML#273](https://github.com/vdhamer/Photo-Club-Hub-HTML/issues/273)).
 
 This is about showing the photos of club exhibitions _after_ the physical exhibition has ended.
 For upcoming exhibitions: see [next point](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FAQ_en.md#announcing-upcoming-exhibitions).

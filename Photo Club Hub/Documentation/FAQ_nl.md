@@ -176,7 +176,7 @@ Dus betekent eerder tien foto's dan honderd foto's per fotograaf per jaar. Portf
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Nee. Een club beheert zijn eigen gegevens.</p>
 
-En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
+Die gegevens worden door de club geleverd en onderhouden. Een club is eigenaar van zijn gegevens en kan ze zelf hosten; als alternatief kan het project ze namens de club hosten.
 De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: 
 namen van leden, een selectie van foto's, leden van het bestuur.
 Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, 
@@ -207,11 +207,11 @@ een software uitbreiding vergt omdat anders de gebruikte softwaretechnologie
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
 Technisch wordt er alleen naar "gelinkt".
-En zelfs de lijsten met linkjes naar foto's staan liefst op de website van de club, en dus _niet_ op een centrale locatie 
+De foto's, en de galerijen die ze tonen, blijven op de eigen website van de club.
 Dit is dus niet vergelijkbaar met foto's delen via Facebook, Instagram, Flickr, X, enz. Social media trekt 
 dus een kopie, en probeert zich vaak rechten toe te eigenen (^%$#) op foto's in ruil voor het gebruik van de gratis dienst.
 Deze app is daarentegen expliciet ontwerpen zodat de club/fotograaf volledige controle houdt: 
-er worden geen kopieën van foto's of data gemaakt, er is geen centrale server, 
+er worden geen kopieën van foto's gemaakt, de club blijft eigenaar van zijn gegevens, 
 en de software is gratis en de broncode is openbaar.</p>
 
 Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender staan op [www.fcDeGender.nl](https://www.fcDeGender.nl).
@@ -268,7 +268,7 @@ Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een be
 De software voor de webversie heet "Fotoclub Hub HTML" en "Photo Club Hub HTML" in het Engels. 
 Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
 die gebruikt worden voor "Fotoclub Hub" app.
-[Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
+[Hier](https://www.fcdegender.nl/hub/) staat zo'n gegenereerde site, van Fotogroep De Gender.
 Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
 Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
@@ -421,7 +421,7 @@ Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een be
 De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
 Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
 die gebruikt worden voor "Fotoclub Hub" app.
-[Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
+[Hier](https://www.fcdegender.nl/hub/) staat zo'n gegenereerde site, van Fotogroep De Gender.
 Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
 Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
@@ -547,7 +547,7 @@ Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2creation](https://
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
-Voor de eerste clubs zijn we bereid om _tijdelijk_ het bestand op onze eigen server zetten. 
+Het project kan het bestand namens de club op zijn eigen server zetten. 
 Het nadeel hiervan is dat iedere herziening van het bestand via ons moet lopen.
 
 Kenners kunnen het bestand ook met `ftp` op de eigen site zetten - maar `ftp` is niet echt gebruikersvriendelijk.
@@ -617,7 +617,9 @@ Het produceert of wijzigt een bestand op je eigen computer.
 ### Foto's van afgelopen exposities
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorbeeld](https://www.fcDeGender.nl/fgDeGender/expo2025/)).
+Een voorloper staat op de website van Fotogroep De Gender ([voorbeeld](https://www.fcdegender.nl/exposities/expo2025/)).
+De webversie krijgt dit voor elke club: afgelopen exposities op de pagina van een club, en de laatste en volgende expositie in de clublijst
+([HTML#273](https://github.com/vdhamer/Photo-Club-Hub-HTML/issues/273)).
 
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 Voor komende exposities: zie [volgende punt](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FAQ_nl.md#aankondigen-komende-exposities).
