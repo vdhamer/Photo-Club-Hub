@@ -16,6 +16,10 @@ USER-FACING
 
 - **A map is now either locked on its club, or unlocked showing where you took it.** An unlocked map that scrolled a few cards away and back used to jump back to its club, while its lock stayed open. And a map left unlocked stayed unlocked after restarting the app, catching the swipes meant for scrolling the list. The lock and the map's view now live and reset together: both survive scrolling away, and the app always starts with every map locked. ([#866](https://github.com/vdhamer/Photo-Club-Hub/issues/866))
 
+STRUCTURAL
+
+- Tested with Xcode 27.2 beta (27B5028f), iOS 27.2 beta (24B5089g) 
+
 ---------------------------------------------------------------------------
 
 ### 3.0.2 (GitHub commit 2429df3e, build 4667) 21-09-2026
