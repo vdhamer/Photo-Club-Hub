@@ -34,7 +34,10 @@
         {
           "name": {"givenName": "Peter", "infixName": "van", "familyName": "Gils"},
           "optional": {
-
+              "status": {
+                  "isFormerMember": true
+              },
+              "membershipEndDate": "2026-09-16"
           }
         }
 

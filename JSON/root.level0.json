@@ -11,9 +11,9 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Subject of the image is difficult to identify or less relevant." },
                     { "language": "NL", "localizedString": "Beelden waarbij het onderwerp nauwelijks herkenbaar of nauwelijks relevant is." }
-                ]
-            },
-            "dateAdded": "2025-01-01"
+                ],
+                "dateAdded": "2025-01-01"
+            }
         },
         
         {
@@ -54,7 +54,7 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Grayscale or monochromatic images" },
+                    { "language": "EN", "localizedString": "Grayscale or monochromatic images." },
                     { "language": "NL", "localizedString": "Monochrome beelden, waaronder beelden in grijstinten of sepia." }
                 ],
                 "dateAdded": "2025-01-01"
@@ -129,7 +129,7 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Trying out something that is not cliche." },
+                    { "language": "EN", "localizedString": "Trying out something that is not a cliché." },
                     { "language": "NL", "localizedString": "Beelden die nadrukkelijk de gebaande paden verlaten." }
                 ],
                 "dateAdded": "2025-01-01"
@@ -144,8 +144,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Monuments from the industrial revolution (mills, machines, etc)." },
-                    { "language": "NL", "localizedString": "Monumenten van de industriele revolutie (fabrieken, machines, enz.)." }
+                    { "language": "EN", "localizedString": "Monuments from the industrial revolution (mills, machines, etc.)." },
+                    { "language": "NL", "localizedString": "Monumenten van de industriële revolutie (fabrieken, machines, enz.)." }
                 ],
                 "dateAdded": "2025-08-29"
             }
@@ -175,7 +175,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Macro and micro photography." },
-                    { "language": "NL", "localizedString": "Macro en micro fotografie." }
+                    { "language": "NL", "localizedString": "Macro- en microfotografie." }
                 ],
                 "dateAdded": "2025-01-01"
             }
@@ -339,8 +339,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Exposition-quality printing skills including color management and paper choice." },
-                    { "language": "NL", "localizedString": "Gecontrolleerd afdrukken met aandacht voor kleurenprofielen en papierkeus." }
+                    { "language": "EN", "localizedString": "Exhibition-quality printing skills including color management and paper choice." },
+                    { "language": "NL", "localizedString": "Gecontroleerd afdrukken met aandacht voor kleurenprofielen en papierkeus." }
                 ],
                 "dateAdded": "2025-12-22"
             }
@@ -355,7 +355,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Images that the photographer uses to express feelings or personality." },
-                    { "language": "NL", "localizedString": "Beelden bedoeld on gevoelens en persoonlijkheid van de maker te uiten." }
+                    { "language": "NL", "localizedString": "Beelden bedoeld om gevoelens en persoonlijkheid van de maker te uiten." }
                 ],
                 "dateAdded": "2025-01-01"
             }
@@ -384,7 +384,7 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Urban scenes largely involving passers by." },
+                    { "language": "EN", "localizedString": "Urban scenes largely involving passersby." },
                     { "language": "NL", "localizedString": "Stadsbeelden met passanten." }
                 ],
                 "dateAdded": "2025-01-01"
@@ -400,7 +400,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Setups with lamps, reflectors, backdrops, etc." },
-                    { "language": "NL", "localizedString": "Opstellingen met b.v. grote flitsers en achtergronden." }
+                    { "language": "NL", "localizedString": "Opstellingen met bijv. grote flitsers en achtergronden." }
                 ],
                 "dateAdded": "2026-02-08"
             }
@@ -429,7 +429,7 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the world" },
+                    { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the world." },
                     { "language": "NL", "localizedString": "Beelden die associaties opwekken met andere landen." }
                 ],
                 "dateAdded": "2025-01-01"
