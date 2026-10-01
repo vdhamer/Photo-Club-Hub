@@ -621,6 +621,9 @@ Additional translations are fine, and will be used where appropriate.
 
 - `usage` (within a `expertise`) is a description of the expertise's intended usage.
 The optional `usage` text can be defined in multiple languages (preferably at least in EN and NL).
+- `dateAdded` (within the `optional` part of an `expertise`) records when the expertise was added, as "YYYY-MM-DD".
+The apps ignore it: it is there for humans. It explains why a photographer lacks a fairly new expertise:
+it probably didn't exist yet when their club's `Level 2` file was written.
 - `isSupported` (within a `language`) marks a language the project is fully localized into: currently EN and NL.
 A language that has never been marked, like the Arabic example above, is not: it can still be used for
 individual translations of an expertise or a club remark, but the app's screens, the generated website and
