@@ -1,5 +1,5 @@
 //
-//  MapMarker​Appearance.swift
+//  MapMarkerAppearance.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 06/02/2026.
