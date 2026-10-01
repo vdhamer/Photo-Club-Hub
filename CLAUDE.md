@@ -10,9 +10,17 @@ The CoreData model, JSON loaders, and club `MembersProvider`s live in the
 therefore reach this app only after a tag and a resolve, and `Package.resolved` records the exact
 version and revision every release was built against.
 
-To co-develop app and package, add a local checkout of the package to `Photo Club Hub.xcworkspace`
-— a personal workspace, deliberately git-ignored — and Xcode shadows the remote dependency with it.
-Remove it to return to the resolved tag.
+The app is opened as `Photo Club Hub.xcodeproj`, **without a workspace**. Workspaces were used for a
+while and dropped, in this repo and in Photo-Club-Hub-HTML: with both a project and a workspace level,
+edits too easily land at the wrong one. Package changes reach the app through a tag and a resolve.
+
+A workspace is only a temporary stopgap, for when the remote package cannot be fetched (e.g. GitHub
+unreachable). Adding a local checkout of the package to a git-ignored `Photo Club Hub.xcworkspace`
+makes Xcode shadow the remote dependency with it. That is **not** equivalent to the pinned version:
+the workspace builds whatever the package's working tree holds (untagged commits, uncommitted edits),
+while the project builds the tag in `Package.resolved`. Remove the workspace as soon as the remote
+works again: delete it, reopen the `.xcodeproj`, resolve package versions, and check that
+`Package.resolved` is unchanged.
 
 Do **not** use *Add Package Dependencies ▸ Add Local…*: that writes an `XCLocalSwiftPackageReference`
 into `project.pbxproj`, reverting #809 and silently putting untagged package code into release builds.
