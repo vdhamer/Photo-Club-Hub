@@ -20,6 +20,11 @@ struct MapsViewMap: View {
     var fetchedOrganizations: FetchedResults<Organization> // all organizations; `markedOrganizations` picks from these
     let isMapScrollLocked: Bool // read-only copy; the @State lives in `MapsViewCard`, whose lock button toggles it
 
+    /// Height of the map. Shared with the placeholder that `MapsViewCard` shows before the map is live (#870),
+    /// so the card keeps its height when switching from a placeholder to an actual live map.
+    static let minHeight: CGFloat = 300
+    static let idealHeight: CGFloat = 500
+
     /// Width and height of the organization's default view, which every map starts with and returns to when locked.
     private static let defaultViewSpanMeters: CLLocationDistance = 10_000 // 10 km
 
@@ -65,7 +70,7 @@ struct MapsViewMap: View {
             } // Marker loop
             UserAnnotation() // show user's location on map
         }
-        .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
+        .frame(minHeight: Self.minHeight, idealHeight: Self.idealHeight, maxHeight: .infinity)
         .mapControls {
             MapCompass() // map Compass shown if rotation differs from North on top
             MapPitchToggle() // switch between 2D and 3D
@@ -79,6 +84,11 @@ struct MapsViewMap: View {
             // draws the nearby ones. So "locked" always means "this organization's own map".
             if isLocked { cameraPosition = Self.defaultView(of: organization) }
         }
+        #if DEBUG
+        // #870: counts live maps, shown in the debug section of the Settings tab
+        .onAppear { LiveMapCounter.shared.mapAppeared(organization.fullName) }
+        .onDisappear { LiveMapCounter.shared.mapDisappeared() }
+        #endif
     }
 
     /// The organizations that get a marker on this map.
