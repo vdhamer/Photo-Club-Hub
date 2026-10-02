@@ -34,3 +34,23 @@ struct LogoPath: Shape {
     }
 
 }
+
+// MARK: - Previews
+
+// Believe it or not, this preview works.
+
+// The four interleaved grids as the Prelude screen stacks them, each offset by half a cell. Only 4 × 4 cells here
+// (the Prelude uses 32 × 32), so each square is large enough to see.
+#Preview {
+    let logCellRepeat: Double = 2 // log2(4)
+    let relPixelSize: Double = 5.5 / 18 // as in the Prelude screen
+    ZStack {
+        LogoPath(logCellRepeat: logCellRepeat, relPixelSize: relPixelSize, offsetPoint: .zero).fill(.fgwGreen)
+        LogoPath(logCellRepeat: logCellRepeat, relPixelSize: relPixelSize, offsetPoint: .top).fill(.fgwBlue)
+        LogoPath(logCellRepeat: logCellRepeat, relPixelSize: relPixelSize, offsetPoint: .leading).fill(.fgwRed)
+        LogoPath(logCellRepeat: logCellRepeat, relPixelSize: relPixelSize, offsetPoint: .center).fill(.fgwGreen)
+    }
+    .aspectRatio(1, contentMode: .fit)
+    .border(.gray)
+    .padding()
+}
