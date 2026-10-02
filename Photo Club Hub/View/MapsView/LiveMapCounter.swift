@@ -23,8 +23,8 @@ enum MapsTestMode: String, CaseIterable {
 
     static let delayStorageKey = "mapsTestDelayMilliseconds"
     // #870 started at ⅓ s, which felt slow on a slow scroll; 150 and 200 ms kept memory as low (iPhone, 1 Oct 2026)
-    static let delayChoicesMilliseconds = [150, 200, 333, 500, 1000] // to tune the delay on the iPhone and iPads
-    static let defaultDelayMilliseconds = 150
+    static let delayChoicesMilliseconds = [150, 175, 200, 333, 500, 1000] // to tune the delay on the iPhone and iPads
+    static let defaultDelayMilliseconds = 175 // overruled as soon as user select another value (saved in UserDefaults)
 }
 
 #if DEBUG
