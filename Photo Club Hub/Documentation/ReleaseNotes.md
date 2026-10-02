@@ -16,6 +16,23 @@ USER-FACING
 
 - **A map is now either locked on its club, or unlocked showing where you took it.** An unlocked map that scrolled a few cards away and back used to jump back to its club, while its lock stayed open. And a map left unlocked stayed unlocked after restarting the app, catching the swipes meant for scrolling the list. The lock and the map's view now live and reset together: both survive scrolling away, and the app always starts with every map locked. ([#866](https://github.com/vdhamer/Photo-Club-Hub/issues/866))
 
+DATA
+
+* `fegGemert.level2.json`
+The club's only listed member has left the club. He is marked as a former member (`isFormerMember`, with a `membershipEndDate` but no known start date) rather than removed: the file stays valid, so the loader needs no change, and no data reset is needed because the next load updates the existing record. He still appears on the People tab, and on the Clubs tab only when Settings ▸ Show former members is on. Mirrored identically in the Data package's bundled copy.
+
+* `root.level0.json`
+12 typos fixed in the expertise descriptions (the "usage" texts, Dutch and English). Expertise names and ids are unchanged. Abstract's `dateAdded` moved into `optional`, like all the others; the apps don't read it, and it is now documented in the README. Mirrored identically in the Data package's bundled copy.
+
+* `clubsNL03`, `clubsNL04`, `clubsNL16` and `museums*.level1.json`
+About 80 typos and spelling errors fixed in the remarks about clubs and museums (Dutch, English and one German), and the English remarks now use US spelling ("center", "organization"), like the rest of the project. A Level 2 remark overrules the Level 1 one and is what users actually see, so the same fixes went into four Level 2 files (`Persoonlijk03`, `fcVeghel`, `ffcShot71`, `fgOirschot`), and the `Persoonlijk16` Level 1 remark now copies its Level 2 wording. The `TemplateMax` and `XampleMax` remarks, which explain this override, were corrected too and no longer mention the legacy `root.level1.json`. Only remark text changed, not any club's name or town, so no data reset is needed. Mirrored identically in the Data package's bundled copies.
+
+* `IndividueelBO.level2.json` removed
+Replaced in Dec 2025 by `Persoonlijk16.level2.json` ([#641](https://github.com/vdhamer/Photo-Club-Hub/issues/641)). Only iOS releases up to v2.8.7 still fetch it, through hardcoded code. Without the online file they fall back to their bundled copy, or keep the data they already stored: no crash in release builds.
+
+* `clubsNL17.level1.json`
+Fotoclub Océ (Venlo) added, the first club in Fotobond afdeling 17. An employee photo club of Canon Production Printing (formerly Océ), at Level 1 only: the club agreed to being listed, but not to listing its members. Mirrored identically in the Data package's bundled copy.
+
 STRUCTURAL
 
 - Tested with Xcode 27.2 beta (27B5028f), iOS 27.2 beta (24B5089g) 
