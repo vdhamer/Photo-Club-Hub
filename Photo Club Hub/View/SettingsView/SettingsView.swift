@@ -33,6 +33,9 @@ struct SettingsView: View {
                 SettingsViewMembersSection(localSettings: $localSettings)
                 SettingsViewMapsSection(localSettings: $localSettings)
                 SettingsViewAdvancedSection(localSettings: $localSettings)
+                #if DEBUG
+                SettingsViewMapsTestSection() // #870: debug-only test mode for the Maps screen
+                #endif
             }
             .navigationTitle(title)
             // #776: Settings has no async content, so it is capture-ready as soon as it appears.
