@@ -146,27 +146,7 @@ struct MapsViewMapPreviews: View {
 
     init() {
         self.context = Self.persistenceController.container.viewContext
-        let center = CLLocationCoordinate2D(latitude: 51.42398, longitude: 5.4501) // Fotogroep de Gender
-
-        self.organization = Organization.findCreateUpdate(context: context,
-                                                          organizationTypeEnum: OrganizationTypeEnum.club,
-                                                          idPlus: OrganizationIdPlus(fullName: "Fotogroep de Gender",
-                                                                                     town: "Eindhoven",
-                                                                                     nickname: "fgDeGender"),
-                                                          coordinates: center,
-                                                          removeOrganization: false,
-                                                          optionalFields: OrganizationOptionalFields(),
-                                                          pinned: false)
-
-        Self.addNeighbors(around: center, in: context)
-
-        // Save the context so the fetch request can find the data
-        do {
-            try context.save()
-            print("Preview: successfully saved preview input data")
-        } catch {
-            fatalError("Couldn't save preview data: \(error)")
-        }
+        self.organization = Self.seedOrganization(in: context)
 
         let sortDescriptors: [SortDescriptor] = [
             SortDescriptor(\Organization.pinned, order: .reverse), // pinned organizations first
@@ -183,6 +163,33 @@ struct MapsViewMapPreviews: View {
             animation: .easeIn
         )
         print("Preview: \(fetchedOrganizations.count) returned organizations")
+    }
+
+    /// Creates Fotogroep de Gender and four imaginary neighbors in the preview store, saves them, and returns the club.
+    /// Also used by the `MapsViewCard` preview. Safe to call repeatedly: `findCreateUpdate` finds what exists.
+    static func seedOrganization(in context: NSManagedObjectContext) -> Organization {
+        let center = CLLocationCoordinate2D(latitude: 51.42398, longitude: 5.4501) // Fotogroep de Gender (Eindhoven)
+
+        let organization = Organization.findCreateUpdate(context: context,
+                                                         organizationTypeEnum: OrganizationTypeEnum.club,
+                                                         idPlus: OrganizationIdPlus(fullName: "Fotogroep de Gender",
+                                                                                    town: "Eindhoven",
+                                                                                    nickname: "fgDeGender"),
+                                                         coordinates: center,
+                                                         removeOrganization: false,
+                                                         optionalFields: OrganizationOptionalFields(),
+                                                         pinned: false)
+
+        addNeighbors(around: center, in: context)
+
+        // Save the context so the fetch request can find the data
+        do {
+            try context.save()
+            print("Preview: successfully saved preview input data")
+        } catch {
+            fatalError("Couldn't save preview data: \(error)")
+        }
+        return organization
     }
 
     /// Adds four clubs about 2.5 km north, east, south and west of `center`, so the map always shows other markers
