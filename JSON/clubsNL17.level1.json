@@ -7,5 +7,34 @@
 
     "clubs": [
 
+        {
+            "idPlus": {
+                "town": "Venlo",
+                "fullName": "Fotoclub Océ",
+                "nickName": "fcOce"
+            },
+            "coordinates": {
+                "latitude": 51.39055,
+                "longitude": 6.17291
+            },
+            "optional": {
+                "website": "https://www.fotoclub-oce.nl",
+                "level2URL": "https://www.example.com/fcOce.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "An employee photo club of Canon Production Printing (formerly Océ): its members are current and former employees."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Personeelsfotoclub van Canon Production Printing (voorheen Océ): de leden zijn (oud-)medewerkers."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1708
+                }
+            }
+        }
+
     ]
 }

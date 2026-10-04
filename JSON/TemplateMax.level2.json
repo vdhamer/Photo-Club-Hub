@@ -17,11 +17,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "A remark here about the club will overrule any remark provided in level1.json file."
+                        "value": "A remark here about the club will overrule any remark provided in the club's level1.json entry."
                     },
                     {
                         "language": "NL",
-                        "value": "Deze beschrijving van de club overschrijft een beschrijving in root.level1.json."
+                        "value": "Deze beschrijving van de club overschrijft een beschrijving in de level1.json-gegevens van de club."
                     }
                 ],
                 "maintainerEmail": "admin@TemplateMax.nl",
