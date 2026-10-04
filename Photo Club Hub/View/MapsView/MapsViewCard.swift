@@ -69,7 +69,7 @@ struct MapsViewCard: View {
         // Cancelled by SwiftUI when the card leaves the screen, so a card flung past never gets a live map.
         // Restarted when the test mode changes, so switching modes also applies to the cards already on screen.
         .task(id: testMode) {
-            guard testMode == .phase1Delay, !isMapLive else { return }
+            guard testMode != .original, !isMapLive else { return } // only .original mode runs without a delay
             try? await Task.sleep(for: .milliseconds(delayMilliseconds))
             guard !Task.isCancelled else { return }
             withAnimation(.easeIn(duration: Self.fadeInSeconds)) { isMapLive = true }

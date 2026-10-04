@@ -8,8 +8,8 @@
 #if DEBUG // exists only in builds Xcode installs, so it never reaches the App Store
 import SwiftUI
 
-/// Debug-only section of the Settings tab for measuring the Maps screen (#870):
-/// chooses when a card creates its live map, and shows how many live maps were created.
+/// Debug-only section of the Settings tab for measuring the Maps screen (#870, #867):
+/// chooses how and when a card creates its live map or image, and shows how many live maps were created.
 ///
 /// Changes apply at once, without Save.
 /// All text is `verbatim`, which keeps these debug-only strings out of the String Catalog and its translations.
@@ -23,8 +23,9 @@ struct SettingsViewMapsTestSection: View {
     var body: some View {
         Section {
             Picker(selection: $mode) {
-                Text(verbatim: "Original").tag(MapsTestMode.original)
+                Text(verbatim: "Original: no delay & all maps are live").tag(MapsTestMode.original)
                 Text(verbatim: "Phase 1: delay").tag(MapsTestMode.phase1Delay)
+                Text(verbatim: "Phase 2: delay & static images").tag(MapsTestMode.phase2Snapshot)
             } label: {
                 Text(verbatim: "Maps test mode")
             }
@@ -56,7 +57,7 @@ struct SettingsViewMapsTestSection: View {
                 Text(verbatim: "Reset counters")
             }
         } header: {
-            Text(verbatim: "Debug: Maps scrolling test (#870)")
+            Text(verbatim: "Debug: Maps scrolling test (#870, #867)")
         }
     }
 }

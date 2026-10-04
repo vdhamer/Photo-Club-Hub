@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-/// Controls how a Maps card creates its live map (#870).
-/// Switchable on the device in Debug builds only, via the debug section of the Settings tab,
-/// so Original and Phase 1 can be compared in the same build.
-/// A Release build has no way to change these values, so it always uses the defaults below.
+/// Controls how a Maps card creates its live map (#870) or its image of a locked map (#867).
+/// Switchable (only if the device has a Debug build).
+/// It is switched via the debug section of the Settings tab,  so the modes can be compared using a single build.
+/// A Release build has no way to change these values, and sticks to using the defaults settings below.
 ///
 /// Stored with `@AppStorage` rather than in `SettingsStruct`:
 /// those settings only apply after tapping Save, while a before/after comparison needs instant mode switching.
 enum MapsTestMode: String, CaseIterable {
     case original // every card creates its live map as soon as the card appears, as before #870
     case phase1Delay // a locked map becomes live only after the card has been on screen for the delay
+    case phase2Snapshot // a locked map is an image, made after the same delay; only an unlocked map is live
 
     static let storageKey = "mapsTestMode"
     static let defaultValue: MapsTestMode = .phase1Delay
