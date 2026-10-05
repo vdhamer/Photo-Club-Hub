@@ -39,7 +39,9 @@ Fotoclub Océ (Venlo) added, the first club in Fotobond afdeling 17. An employee
 
 STRUCTURAL
 
-- Tested with Xcode 27.2 beta (27B5028f), iOS 27.2 beta (24B5089g) 
+- Tested with Xcode 27.2 beta (27B5028f), Xcode 27.1 RC1 (27A9275), iOS 27.2 beta (24B5089g) 
+
+This build #4668 was made using Xcode 27.1 RC1 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
 
