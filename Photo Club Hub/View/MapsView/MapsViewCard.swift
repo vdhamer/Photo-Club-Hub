@@ -42,7 +42,7 @@ struct MapsViewCard: View {
     @AppStorage(MapsTestMode.delayStorageKey) private var delayMilliseconds = MapsTestMode.defaultDelayMilliseconds
 
     /// How long a map or its image takes to fade in over its placeholder, so its arrival after the delay seems
-    /// calm, not late. Also used by `MapsViewSnapshot`, whose image arrives a moment after the delay.
+    /// calm, not late. Also used by `MapsViewScreenshot`, whose image arrives a moment after the delay.
     static let fadeInSeconds = 0.2
 
     private var showsLiveMap: Bool {
@@ -65,7 +65,7 @@ struct MapsViewCard: View {
                             isMapScrollLocked: isMapScrollLocked)
                 .transition(.opacity) // only animated where `isDelayOver` is set inside `withAnimation`, below
             } else if showsSnapshot {
-                MapsViewSnapshot(organization: organization, fetchedOrganizations: fetchedOrganizations)
+                MapsViewScreenshot(mapOrganization: organization, fetchedOrganizations: fetchedOrganizations)
             } else {
                 // Quiet on purpose: the card's own background shows through, and most placeholders are only seen
                 // for an instant.
@@ -113,7 +113,7 @@ private struct MapsViewCardPreviewHost: View {
 
     init() {
         let context = MapsViewMapPreviews.persistenceController.container.viewContext
-        organization = MapsViewMapPreviews.seedOrganization(in: context)
+        organization = MapsViewMapPreviews.seedOrganization(context: context)
         language = Self.seedLocalizedAddress(for: organization, in: context)
     }
 

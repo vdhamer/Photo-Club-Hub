@@ -48,7 +48,7 @@ struct MapsViewMap: View {
     /// tag, so no other marker can be selected.
     /// A tap on a marker (#256) can use an ordinary tap gesture (instead of selection).
     /// Side effect: MapKit always shows a selected annotation's name, even over a neighbor's marker.
-    /// `MapsViewSnapshot` does the same on the image of a locked map, so the map marker's name is shown on both.
+    /// `MapsViewScreenshot` does the same on the image of a locked map, so the map marker's name is shown on both.
     @State private var mapMarkerTagString: String? = Self.mapMarkerIDString
 
     /// The tag of the map marker: an invisible ID, the same for every map. Never shown; only equality matters.
@@ -121,7 +121,7 @@ struct MapsViewMap: View {
 
     /// Whether `candidate` is the organization a map is centered on: the one with the purple marker.
     /// Matched on name and town. Also used by `MapMarkerBalloon` to pick the purple one, so "on top" and "purple" can't
-    /// disagree. Shared with `MapsViewSnapshot`.
+    /// disagree. Shared with `MapsViewScreenshot`.
     static func isMapOrganization(_ candidate: Organization,
                                   mapOrganization: Organization) -> Bool {
         candidate.fullName == mapOrganization.fullName && candidate.town == mapOrganization.town
@@ -143,13 +143,13 @@ struct MapsViewMap: View {
         guard isMapScrollLocked else { // when NOT scroll locked (often), don't filter based on distance
             return fetchedOrganizations.filter { $0.isUsable }
         }
-        return Self.nearbyOrganizations(around: mapOrganization, in: fetchedOrganizations)
+        return Self.nearbyOrganizations(around: mapOrganization, fetchedOrganizations: fetchedOrganizations)
     }
 
     /// The usable organizations within `lockedMarkerRadiusMeters` of `organization`, including itself:
-    /// the markers of a locked map. Shared with `MapsViewSnapshot`, so its image of a locked map has the same markers.
+    /// the markers of a locked map. Shared with `MapsViewScreenshot` so its image of a locked map has the same markers.
     static func nearbyOrganizations(around organization: Organization,
-                                    in fetchedOrganizations: FetchedResults<Organization>) -> [Organization] {
+                                    fetchedOrganizations: FetchedResults<Organization>) -> [Organization] {
         let center = CLLocation(latitude: organization.latitude_, longitude: organization.longitude_)
         return fetchedOrganizations.filter { candidate in
             guard candidate.isUsable else { return false }
@@ -163,7 +163,7 @@ struct MapsViewMap: View {
         MapCameraPosition.region(defaultRegion(of: organization))
     }
 
-    /// The region of the organization's default view. Shared with `MapsViewSnapshot`.
+    /// The region of the organization's default view. Shared with `MapsViewScreenshot`.
     static func defaultRegion(of organization: Organization) -> MKCoordinateRegion {
         MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: organization.latitude_,
                                                           longitude: organization.longitude_),
@@ -195,7 +195,7 @@ struct MapsViewMapPreviews: View {
 
     init() {
         self.context = Self.persistenceController.container.viewContext
-        self.organization = Self.seedOrganization(in: context)
+        self.organization = Self.seedOrganization(context: context)
 
         let sortDescriptors: [SortDescriptor] = [
             SortDescriptor(\Organization.pinned, order: .reverse), // pinned organizations first
@@ -216,7 +216,7 @@ struct MapsViewMapPreviews: View {
 
     /// Creates Fotogroep de Gender and four imaginary neighbors in the preview store, saves them, and returns the club.
     /// Also used by the `MapsViewCard` preview. Safe to call repeatedly: `findCreateUpdate` finds what exists.
-    static func seedOrganization(in context: NSManagedObjectContext) -> Organization {
+    static func seedOrganization(context: NSManagedObjectContext) -> Organization {
         let center = CLLocationCoordinate2D(latitude: 51.42398, longitude: 5.4501) // Fotogroep de Gender (Eindhoven)
 
         let organization = Organization.findCreateUpdate(context: context,
