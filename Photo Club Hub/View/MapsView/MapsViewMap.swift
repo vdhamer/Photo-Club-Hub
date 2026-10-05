@@ -16,7 +16,7 @@ import Photo_Club_Hub_Data // for types like Organization
 @MainActor
 struct MapsViewMap: View {
 
-    @ObservedObject var organization: Organization // the organization this map is centered on
+    @ObservedObject var mapOrganization: Organization // the organization this map is about and is centered on
     var fetchedOrganizations: FetchedResults<Organization> // all organizations; `markedOrganizations` picks from these
     let isMapScrollLocked: Bool // read-only copy; the @State lives in `MapsViewCard`, whose lock button toggles it
 
@@ -40,15 +40,28 @@ struct MapsViewMap: View {
     /// initial value while it keeps this view's state, so the user's view survives scrolling away and back, just like
     /// the lock in `MapsViewCard` does (#866).
     @State private var cameraPosition: MapCameraPosition
-    @State private var mapSelection: MKMapItem? // always nil: no Marker has an MKMapItem tag, so none selectable (#256)
 
-    init(filteredOrganization: Organization,
+    /// The tag of the marker MapKit has selected, or nil when nothing is selected. Keeps the map marker (the purple
+    /// one, of the organization the map is about) selected, only because MapKit draws the selected annotation on top
+    /// of all others. The SwiftUI map offers no other way to order annotations: by itself, MapKit puts the southern one
+    /// on top, which can bury the purple marker under a neighbor's if there is overlap. Only the map marker has a
+    /// tag, so no other marker can be selected.
+    /// A tap on a marker (#256) can use an ordinary tap gesture (instead of selection).
+    /// Side effect: MapKit always shows a selected annotation's name, even over a neighbor's marker.
+    /// `MapsViewSnapshot` does the same on the image of a locked map, so the map marker's name is shown on both.
+    @State private var mapMarkerTagString: String? = Self.mapMarkerIDString
+
+    /// The tag of the map marker: an invisible ID, the same for every map. Never shown; only equality matters.
+    /// Not to be confused with a marker's label, the organization's name shown below it.
+    private static let mapMarkerIDString = "this is the mapMarker"
+
+    init(mapOrganization: Organization,
          fetchedOrganizations: FetchedResults<Organization>,
          isMapScrollLocked: Bool) {
-        self.organization = filteredOrganization
+        self.mapOrganization = mapOrganization
         self.fetchedOrganizations = fetchedOrganizations
         self.isMapScrollLocked = isMapScrollLocked
-        _cameraPosition = State(initialValue: Self.defaultView(of: filteredOrganization))
+        _cameraPosition = State(initialValue: Self.defaultView(of: mapOrganization))
     }
 
     var body: some View {
@@ -57,17 +70,17 @@ struct MapsViewMap: View {
                 .rotate, // automatically enables the compas button when rotated
                 .pitch, // switch to 3D view if zoomed in far enough
                 .pan, .zoom], // actually .all is the default
-            selection: $mapSelection) {
+            selection: $mapMarkerTagString) {
 
             // Markers for the organizations this map can show: nearby ones when locked, all of them when unlocked.
             ForEach(markedOrganizations, id: \.self) { markedOrganization in
-                Marker(markedOrganization.fullName,
-                       systemImage: systemName(organizationType: markedOrganization.organizationType,
-                                               circleNeeded: false),
-                       coordinate: markedOrganization.coordinates)
-                .tint(selectMarkerTint(organization: markedOrganization,
-                                       selectedOrganization: organization))
-            } // Marker loop
+                if Self.isMapOrganization(markedOrganization, mapOrganization: mapOrganization) {
+                    annotation(for: markedOrganization)
+                        .tag(Self.mapMarkerIDString) // tell MapKit it is selected, in order to get it on top
+                } else {
+                    annotation(for: markedOrganization)
+                }
+            } // Annotation loop
             UserAnnotation() // show user's location on map
         }
         .frame(minHeight: Self.minHeight, idealHeight: Self.idealHeight, maxHeight: .infinity)
@@ -78,17 +91,40 @@ struct MapsViewMap: View {
             MapUserLocationButton()
         }
         .mapControlVisibility(isMapScrollLocked ? .hidden : .automatic)
+        .onChange(of: mapMarkerTagString) { _, newSelection in
+            // Preparation for future interactive Markers. Isn't there yet (Oct 5th 2026)
+            // A tap on the map (or on the marker itself) deselects it. Select it again, to keep it on top.
+            if newSelection == nil { mapMarkerTagString = Self.mapMarkerIDString }
+        }
         .onChange(of: isMapScrollLocked) { _, isLocked in
             // Locking returns the map to the organization's default view. Without this, a map zoomed out to the whole
             // country and then locked would keep that view but lose all distant markers, because a locked map only
             // draws the nearby ones. So "locked" always means "this organization's own map".
-            if isLocked { cameraPosition = Self.defaultView(of: organization) }
+            if isLocked { cameraPosition = Self.defaultView(of: mapOrganization) }
         }
         #if DEBUG
         // #870: counts live maps, shown in the debug section of the Settings tab
-        .onAppear { LiveMapCounter.shared.mapAppeared(organization.fullName) }
+        .onAppear { LiveMapCounter.shared.mapAppeared(mapOrganization.fullName) }
         .onDisappear { LiveMapCounter.shared.mapDisappeared() }
         #endif
+    }
+
+    /// The marker of one organization: our own balloon instead of MapKit's `Marker`, so it matches the image of a
+    /// locked map (#867). MapKit still draws the name below it, and hides names that would collide.
+    private func annotation(for organization: Organization) -> some MapContent {
+        Annotation(organization.fullName,
+                   coordinate: organization.coordinates,
+                   anchor: .bottom) { // the balloon's tip is at the coordinates
+            MapMarkerBalloon(organization: organization, mapOrganization: mapOrganization)
+        }
+    }
+
+    /// Whether `candidate` is the organization a map is centered on: the one with the purple marker.
+    /// Matched on name and town. Also used by `MapMarkerBalloon` to pick the purple one, so "on top" and "purple" can't
+    /// disagree. Shared with `MapsViewSnapshot`.
+    static func isMapOrganization(_ candidate: Organization,
+                                  mapOrganization: Organization) -> Bool {
+        candidate.fullName == mapOrganization.fullName && candidate.town == mapOrganization.town
     }
 
     /// The organizations that get a marker on this map.
@@ -104,23 +140,34 @@ struct MapsViewMap: View {
     /// `isUsable`: these results are handed down by the parent view, so this list needs its own filter to skip
     /// organizations that pull-to-refresh has just deleted (#802).
     private var markedOrganizations: [Organization] {
-        let usable = fetchedOrganizations.filter { $0.isUsable }
-        guard isMapScrollLocked else { return usable } // when NOT scroll locked (often), don't filter based on distance
+        guard isMapScrollLocked else { // when NOT scroll locked (often), don't filter based on distance
+            return fetchedOrganizations.filter { $0.isUsable }
+        }
+        return Self.nearbyOrganizations(around: mapOrganization, in: fetchedOrganizations)
+    }
 
+    /// The usable organizations within `lockedMarkerRadiusMeters` of `organization`, including itself:
+    /// the markers of a locked map. Shared with `MapsViewSnapshot`, so its image of a locked map has the same markers.
+    static func nearbyOrganizations(around organization: Organization,
+                                    in fetchedOrganizations: FetchedResults<Organization>) -> [Organization] {
         let center = CLLocation(latitude: organization.latitude_, longitude: organization.longitude_)
-        return usable.filter { candidate in
+        return fetchedOrganizations.filter { candidate in
+            guard candidate.isUsable else { return false }
             let location = CLLocation(latitude: candidate.latitude_, longitude: candidate.longitude_)
-            return location.distance(from: center) <= Self.lockedMarkerRadiusMeters // check against e.g. 15km radius
+            return location.distance(from: center) <= lockedMarkerRadiusMeters // check against e.g. 15km radius
         }
     }
 
     /// The organization's default view: `defaultViewSpanMeters` around it.
     private static func defaultView(of organization: Organization) -> MapCameraPosition {
-        MapCameraPosition.region(MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: organization.latitude_,
-                                           longitude: organization.longitude_),
-            latitudinalMeters: defaultViewSpanMeters, longitudinalMeters: defaultViewSpanMeters)
-        )
+        MapCameraPosition.region(defaultRegion(of: organization))
+    }
+
+    /// The region of the organization's default view. Shared with `MapsViewSnapshot`.
+    static func defaultRegion(of organization: Organization) -> MKCoordinateRegion {
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: organization.latitude_,
+                                                          longitude: organization.longitude_),
+                           latitudinalMeters: defaultViewSpanMeters, longitudinalMeters: defaultViewSpanMeters)
     }
 }
 
@@ -128,6 +175,8 @@ struct MapsViewMap: View {
 
 // Shows this map's own organization and four fixed neighbors. The other sample organizations of
 // `PersistenceController.preview` lie up to ~200 km away: zoom out in a live preview to see them.
+
+// Believe it or not, this preview actually works.
 @MainActor
 struct MapsViewMapPreviews: View {
 
@@ -221,7 +270,7 @@ struct MapsViewMapPreviews: View {
     }
 
     var body: some View {
-        MapsViewMap(filteredOrganization: organization,
+        MapsViewMap(mapOrganization: organization,
                     fetchedOrganizations: fetchedOrganizations,
                     isMapScrollLocked: false)
     }
