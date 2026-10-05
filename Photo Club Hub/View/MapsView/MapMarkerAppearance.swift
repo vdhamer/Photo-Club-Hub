@@ -83,8 +83,8 @@ struct MapMarkerBalloon: View {
     /// Looks up what `markerTint` needs from the two organizations and the app's settings.
     init(organization: Organization, mapOrganization: Organization) {
         self.init(organizationType: organization.organizationType.organizationTypeEnum,
-                  isOwn: MapsViewMap.isOwn(organization,
-                                           mapOrganization: mapOrganization),
+                  isOwn: MapsViewMap.isMapOrganization(organization,
+                                                       mapOrganization: mapOrganization),
                   isInFotobond: organization.fotobondClubNumber?.id != nil, // is club member of Dutch Fotobond
                   settings: SettingsViewModel().settings) /// SettingsViewModel is marked as `@Published`
     }

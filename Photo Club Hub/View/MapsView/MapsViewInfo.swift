@@ -14,8 +14,7 @@ struct MapsViewInfo: View {
 
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
-    let iconSystemName: String // SF Symbol name for organizationType
-    let isUnknownType: Bool // true when organizationType is "unknown"
+    let organizationType: OrganizationTypeEnum
     let localizedTown: String
     let localizedCountry: String
     let memberCount: Int
@@ -27,8 +26,7 @@ struct MapsViewInfo: View {
     init(organization: Organization, // higher level initializer for production
          language: Language?,
          isMapScrollLocked: Binding<Bool>) {
-        iconSystemName = systemName(organizationType: organization.organizationType, circleNeeded: true)
-        isUnknownType = organization.organizationType.isUnknown
+        organizationType = organization.organizationType.organizationTypeEnum
         if let language {
             localizedTown = organization.localizedTown(for: language)
             localizedCountry = organization.localizedCountry(for: language)
@@ -41,15 +39,13 @@ struct MapsViewInfo: View {
         _isMapScrollLocked = isMapScrollLocked
     }
 
-    fileprivate init(iconSystemName: String, // lower level initiatizer used by preview
-                     isUnknownType: Bool,
+    fileprivate init(organizationType: OrganizationTypeEnum, // lower level initiatizer used by preview
                      localizedTown: String,
                      localizedCountry: String,
                      memberCount: Int,
                      organizationWebsite: URL?,
                      isMapScrollLocked: Binding<Bool>) {
-        self.iconSystemName = iconSystemName
-        self.isUnknownType = isUnknownType
+        self.organizationType = organizationType
         self.localizedTown = localizedTown
         self.localizedCountry = localizedCountry
         self.memberCount = memberCount
@@ -59,12 +55,13 @@ struct MapsViewInfo: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
-            Image(systemName: iconSystemName) // icon for organizationType
-            .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
-                             isUnknownType ? .red : .accentColor)
-            .symbolRenderingMode(.palette)
-            .font(.largeTitle)
-            .padding(.horizontal, 5)
+            // The same balloon as this organization's own (purple) marker on the map below.
+            MapMarkerBalloon(organizationType: organizationType,
+                             isOwn: true, // so Fotobond and settings don't matter
+                             isInFotobond: false,
+                             settings: .defaultValue)
+                .padding(.leading, 5)
+                .padding(.trailing, 12) // the gap to the text
 
             VStack(alignment: .leading) {
 
@@ -120,28 +117,27 @@ struct MapsViewInfo: View {
 
 // MARK: - Previews
 
-// Believe it or not, these previews actually works.
+// Believe it or not, these previews actually work.
+
 #Preview {
-    @Previewable @State var lockedWaalre = false
-    @Previewable @State var lockedDenDungen = true
+    @Previewable @State var lockedClub1 = false
+    @Previewable @State var lockedClub2 = true
 
     VStack(alignment: .leading, spacing: 20) {
         Divider()
-        MapsViewInfo(iconSystemName: "camera.circle.fill",
-                             isUnknownType: false,
+        MapsViewInfo(organizationType: .club,
                              localizedTown: "Eindhoven",
                              localizedCountry: "Netherlands",
                              memberCount: 20,
                              organizationWebsite: URL(string: "https://www.fcDeGender.nl"),
-                             isMapScrollLocked: $lockedWaalre)
+                             isMapScrollLocked: $lockedClub1)
         Divider()
-        MapsViewInfo(iconSystemName: "questionmark.circle.fill",
-                             isUnknownType: true,
+        MapsViewInfo(organizationType: .unknown,
                              localizedTown: "Nieuw Amsterdam",
                              localizedCountry: "Verenigde Staten",
                              memberCount: 0,
                              organizationWebsite: nil,
-                             isMapScrollLocked: $lockedDenDungen)
+                             isMapScrollLocked: $lockedClub2)
         Divider()
         HStack {
             Spacer()
