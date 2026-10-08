@@ -20,7 +20,8 @@ enum MapsTestMode: String, CaseIterable {
     case phase2Snapshot // a locked map is an image, made after the same delay; only an unlocked map is live
 
     static let storageKey = "mapsTestMode"
-    static let defaultValue: MapsTestMode = .phase1Delay
+    // Phase 2 used the least memory on the iPhone and both iPads; Original crashed on iPadOS 26 at 4.4 GB (#867)
+    static let defaultValue: MapsTestMode = .phase2Snapshot
 
     static let delayStorageKey = "mapsTestDelayMilliseconds"
     // #870 started at ⅓ s, which felt slow on a slow scroll; 150 and 200 ms kept memory as low (iPhone, 1 Oct 2026)
