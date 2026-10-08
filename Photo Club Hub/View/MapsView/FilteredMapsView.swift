@@ -91,7 +91,8 @@ struct FilteredMapsView: View {
                       tint: .mapsColor,
                       wording: { hintText(for: $0) }) // not `hintText`: previews fail to compile it
             .padding(.horizontal) // the organization cards bring their own padding; a callout doesn't.
-        ForEach(filteredOrganizations, id: \.id) { filteredOrganization in // for each club or museum...
+        ForEach(organizationRows) { row in // for each club or museum...
+            let filteredOrganization = row.organization
 
             /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
             @State var flipImageFlag: Bool = false
@@ -99,7 +100,7 @@ struct FilteredMapsView: View {
             MapsViewCard(organization: filteredOrganization,
                          language: uiLanguages.first,
                          fetchedOrganizations: fetchedOrganizations) // to show all markers within map scope
-            .id(filteredOrganization.id)
+            .id(row.id)
             .onAppear {
                 // on main queue (avoid accessing NSManagedObjects on background thread!)
                 let clubName = filteredOrganization.fullName
@@ -297,6 +298,27 @@ struct FilteredMapsView: View {
         }
     }
 
+    /// The rows of the `ForEach`, each with its identity already computed to rule out race conditions.
+    ///
+    /// SwiftUI may lay out the `LazyVStack` on a background thread of its own, and then asks each row for its
+    /// identity there. `Organization.id` reads Core Data attributes, which is only allowed on the main thread:
+    /// on iPadOS 26 (proven, but possibly iOS 26 too) this tripped Core Data's thread checker during a scroll.
+    /// This checker (scheme settings) only applies when the app is launched from Xcode.
+    /// This property runs in `body`, on the main thread, so the background thread only reads a stored value.
+    /// The identity stays name and town rather than `objectID`, so a card keeps its state (lock, delay)
+    /// when pull-to-refresh recreates its organization (#802).
+    private var organizationRows: [OrganizationRow] {
+        filteredOrganizations.map { organization in
+            OrganizationRow(id: organization.id, organization: organization)
+        }
+    }
+
+}
+
+/// One row of `FilteredMapsView`: an organization with its identity, computed on the main thread.
+private struct OrganizationRow: Identifiable {
+    let id: OrganizationID
+    let organization: Organization
 }
 
 extension FilteredMapsView { // reverse GeoCoding
