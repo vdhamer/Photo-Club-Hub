@@ -12,44 +12,70 @@ import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 /// A single row representing a MemberPortfolio (aka Photographer in the context of a particular Club).
 ///
+/// Only guards against unusable memberships; `MemberPortfolioRowContent` draws the row.
+struct MemberPortfolioRow: View {
+    /// The member portfolio used to populate this row.
+    @ObservedObject var member: MemberPortfolio
+    /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
+    /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
+    @Binding var selectedPortfolio: MemberPortfolio?
+
+    /// Deliberately reads nothing from `member` (#874).
+    /// Pull-to-refresh deletes all memberships and saves, and that save makes SwiftUI rebuild the `List`
+    /// synchronously, inside the save: the parent's `ForEach` still holds its array from before the delete,
+    /// so `init` runs on memberships whose relationships were just nullified.
+    /// The parent's `isUsable` filter cannot help, because the parent's body has not run again yet.
+    init(member: MemberPortfolio, selectedPortfolio: Binding<MemberPortfolio?>) {
+        self.member = member
+        self._selectedPortfolio = selectedPortfolio
+    }
+
+    /// Skips a membership that has been deleted (#802) or has no photographer (#874), instead of tripping the
+    /// `photographer` and `organization` accessors.
+    /// The row observes `member`, so pull-to-refresh deleting it is precisely what makes SwiftUI re-run
+    /// this body, while the parent's filtered `ForEach` has not dropped the row yet.
+    var body: some View {
+        if member.isUsable, let photographer = member.photographer_ {
+            MemberPortfolioRowContent(member: member,
+                                      photographer: photographer,
+                                      selectedPortfolio: $selectedPortfolio)
+        }
+    }
+
+}
+
+/// The content of a `MemberPortfolioRow`, created only once the row has checked that `member` is usable and
+/// has a photographer.
+///
 /// Displays the member's role/status icon, name, expertise tags, club/town role description,
 /// and a thumbnail image that can toggle between featured and photographer images.
 /// Tapping the thumbnail toggles the shown image variant if both variants are available.
-struct MemberPortfolioRow: View {
+private struct MemberPortfolioRowContent: View {
     /// The member portfolio model used to populate this row.
     @ObservedObject var member: MemberPortfolio
-    /// Always `member.photographer`, set in `init`. Observed separately because name, deceased status and
-    /// expertise tags live on the Photographer, not on the membership: during pull-to-refresh another club's
-    /// file can add expertises after this row is drawn, and observing `member` does not notice that (#862).
-    @ObservedObject private var photographer: Photographer
+    /// The membership's photographer, passed in by `MemberPortfolioRow` after it has checked it (#874).
+    /// Observed separately because name, deceased status and expertise tags live on the Photographer,
+    /// not on the membership: during pull-to-refresh another club's file can add expertises after this row is drawn,
+    /// and observing `member` does not notice that (#862).
+    @ObservedObject var photographer: Photographer
+    /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
+    /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
+    @Binding var selectedPortfolio: MemberPortfolio?
     /// Localized connector text used as '<person> of <photo club>'.
     private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
     /// Core Data context used to resolve localized expertise lists.
     let moc = PersistenceController.shared.container.viewContext
-    /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
-    /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
-    @Binding var selectedPortfolio: MemberPortfolio?
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
     /// Provides access to user preferences (e.g. settings.preferenceForFeaturedImage) to this view and descendants.
     @StateObject var settingsModel = SettingsViewModel.shared
 
-    /// The caller's list is filtered on `member.isUsable`, which is what makes reading `member.photographer`
-    /// safe here (#802).
-    init(member: MemberPortfolio, selectedPortfolio: Binding<MemberPortfolio?>) {
-        self.member = member
-        self.photographer = member.photographer
-        self._selectedPortfolio = selectedPortfolio
-    }
-
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     ///
-    /// The row observes `member`, so pull-to-refresh deleting it is precisely what makes SwiftUI re-run
-    /// this body — while the parent's filtered `ForEach` has not dropped the row yet. A deleted
-    /// MemberPortfolio has had `photographer_` and `organization_` nullified, so skip it instead of
-    /// tripping those accessors (issue #802).
+    /// Repeats the check in `MemberPortfolioRow.body`, because this view observes `member` itself:
+    /// pull-to-refresh deleting it re-runs this body directly, without passing through the row's body (#874).
     var body: some View {
-        if member.isUsable {
+        if member.isUsable && member.photographer_ != nil {
             rowContent
         }
     }
@@ -122,6 +148,7 @@ struct MemberPortfolioRow: View {
             Spacer()
 
             DualImageWithCaptionAndControls(member: member,
+                                            photographer: photographer,
                                             settings: settingsModel.settings,
                                             squareSize: 80,
                                             caption: false,

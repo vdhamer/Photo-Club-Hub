@@ -18,9 +18,10 @@ struct DualImageWithCaptionAndControls: View {
     /// who is this about? Observed even though both parents observe it too: a parent that re-renders passes
     /// the same object again, and SwiftUI then skips this body unless it observes the object itself.
     @ObservedObject var member: MemberPortfolio
-    /// Always `member.photographer`, set in `init`. Observed separately because the photographer's own image
-    /// lives on the Photographer, not on the membership: during pull-to-refresh it can arrive from another club's
-    /// file after this view is drawn, and observing `member` does not notice that (#862).
+    /// The membership's photographer, passed in by the caller rather than read from `member` in `init` (#874).
+    /// Observed separately because the photographer's own image lives on the Photographer, not on the membership:
+    /// during pull-to-refresh it can arrive from another club's file after this view is drawn,
+    /// and observing `member` does not notice that (#862).
     @ObservedObject private var photographer: Photographer
     let settings: SettingsStruct
     /// size of  square image
@@ -33,12 +34,12 @@ struct DualImageWithCaptionAndControls: View {
     /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
     @Binding var selectedPortfolio: MemberPortfolio?
 
-    /// Callers check `member.isUsable` before creating this view, which is what makes reading
-    /// `member.photographer` safe here (#802).
-    init(member: MemberPortfolio, settings: SettingsStruct, squareSize: CGFloat, caption: Bool,
-         flipImageFlag: Binding<Bool>, selectedPortfolio: Binding<MemberPortfolio?>) {
+    /// Reads nothing from `member`: SwiftUI can create this view for a membership that e.g. pull-to-refresh has just
+    /// deleted (#874), so the caller passes in the photographer it has already checked.
+    init(member: MemberPortfolio, photographer: Photographer, settings: SettingsStruct, squareSize: CGFloat,
+         caption: Bool, flipImageFlag: Binding<Bool>, selectedPortfolio: Binding<MemberPortfolio?>) {
         self.member = member
-        self.photographer = member.photographer
+        self.photographer = photographer
         self.settings = settings
         self.squareSize = squareSize
         self.caption = caption
@@ -46,7 +47,16 @@ struct DualImageWithCaptionAndControls: View {
         self._selectedPortfolio = selectedPortfolio
     }
 
+    /// This view observes `member`, so pull-to-refresh deleting it re-runs this body directly, even when the
+    /// caller's body has already skipped it. A deleted MemberPortfolio has had `photographer_` and `organization_`
+    /// nullified, so skip it instead of tripping those accessors (#802, #874).
     var body: some View {
+        if member.isUsable && member.photographer_ != nil {
+            content
+        }
+    }
+
+    @ViewBuilder private var content: some View {
         let imageChoice = ImageChoice(member: member,
                                       isImageFlipped: flipImageFlag,
                                       settingsForFeaturedImage: settings.preferenceForFeaturedImage)
@@ -173,6 +183,7 @@ struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
         var body: some View {
             NavigationStack {
                 DualImageWithCaptionAndControls(member: member,
+                                                photographer: member.photographer,
                                                 settings: SettingsStruct.defaultValue,
                                                 squareSize: squareSize,
                                                 caption: caption,

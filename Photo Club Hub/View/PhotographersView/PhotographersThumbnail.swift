@@ -27,9 +27,10 @@ struct PhotographersThumbnail: View {
     /// the enclosing `ForEach` has dropped it. A deleted MemberPortfolio has no photographer_ left, which
     /// the image chooser below dereferences, so skip it (issue #802).
     var body: some View {
-        if member.isUsable {
+        if member.isUsable, let photographer = member.photographer_ {
             HStack {
                 DualImageWithCaptionAndControls(member: member,
+                                                photographer: photographer,
                                                 settings: settings,
                                                 squareSize: 160,
                                                 caption: true,
