@@ -71,6 +71,10 @@
    - Later you may want to add
        - a `website` address (a portfolio website managed by the photographer, separately from their club portfolio). This shows up in the app and via Photo Club Hub HTML as a clickable link.
        - any special roles of the member such as `"isChairman": true`. These are displayed in the app and via Photo Club Hub HTML.
+           - When a member leaves the club or dies, set `isFormerMember` or `isDeceased` and leave their roles as they are.
+             The app then describes them as, for example, a former chairman, and no longer counts them as a current club officer.
+           - When a member steps down from a role but stays in the club, write `"isSecretary": false` (or whichever role it was).
+             Simply removing the line is not enough yet: the app remembers the role it read earlier.
        - `membershipStartDate`. This is currently displayed using Photo Club Hub HTML.
        - `expertises` indication the main genres per photographer. It is currently an [unfinished feature](https://github.com/vdhamer/Photo-Club-Hub/issues/465), and will be covered in a separate instruction file. You can already start providing this data. Best to stick to the expertises found in [this file](https://github.com/vdhamer/Photo-Club-Hub/issues/465).
 - The `maintainerEmail` field, in the `club` part of the file rather than under a member, says who to contact if something is wrong with the JSON file. Ideally the club member who created it, which may well be whoever looks after the club website.
