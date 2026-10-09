@@ -887,11 +887,13 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - the `roles` field indicates whether a member fulfills a role as a club officer (e.g. chairman).
       If a given `role` is not mentioned, a default value of `false` is assumed.
       Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
+      When a member leaves or passes away, their roles can stay as they are: a role then records the role they held,
+      and the app no longer counts them as a current club officer.
     - the `status` entries indicate a member's status in the club. If a given `status` is not mentioned, a default value of `false` is assumed.
       Many `members` have an empty or even absent `status` section. Some `members` may have multiple special statuses (e.g., `former` and `honorary`).
     - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible.
       The user interface will state `former member` where applicable. 
-      By default (see Settings) former members are shown. When shown, users see "Former member of <clubname>".
+      By default (see Settings) former members are not shown. When shown, users see "Former member of <clubname>".
       The user interface can generate text for more complex cases like "Former honorary member of <clubname>".
     - `isDeceased` is a special variant of `isFormerMember`.
       If deceased members are not removed from the level2.json list, this allows the user interface to indicate this.

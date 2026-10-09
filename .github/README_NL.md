@@ -894,11 +894,13 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
     - het veld `roles` geeft aan of een lid een rol als bestuurslid vervult (bijvoorbeeld voorzitter).
       Als een bepaalde `role` niet wordt genoemd, wordt de standaardwaarde `false` aangenomen.
       Veel `members` hebben een lege of zelfs ontbrekende `roles`-sectie. Sommige `members` kunnen meerdere rollen hebben (bijvoorbeeld `secretary` en `admin`).
+      Als een lid de club verlaat of overlijdt, kunnen de rollen blijven staan: een rol legt dan vast welke functie het lid had,
+      en de app telt het lid niet meer mee als huidig bestuurslid.
     - de `status`-items geven de status van een lid binnen de club aan. Als een bepaalde `status` niet wordt genoemd, wordt de standaardwaarde `false` aangenomen.
       Veel `members` hebben een lege of zelfs ontbrekende `status`-sectie. Sommige `members` kunnen meerdere bijzondere statussen hebben (bijvoorbeeld `former` en `honorary`).
     - `isFormerMember` kan op true worden gezet als de persoon de club heeft verlaten en de club het portfolio van dat lid zichtbaar wil houden.
       De gebruikersinterface vermeldt waar van toepassing `oud-lid`. 
-      Standaard (zie Instellingen) worden oud-leden getoond. Wanneer getoond, zien gebruikers "Oud-lid van <clubnaam>".
+      Standaard (zie Instellingen) worden oud-leden niet getoond. Wanneer getoond, zien gebruikers "Oud-lid van <clubnaam>".
       De gebruikersinterface kan ook tekst genereren voor complexere gevallen, zoals "Voormalig erelid van <clubnaam>".
     - `isDeceased` is een speciale variant van `isFormerMember`.
       Als overleden leden niet uit de level2.json-lijst worden verwijderd, kan de gebruikersinterface dit zo aangeven.
