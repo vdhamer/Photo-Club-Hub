@@ -18,19 +18,19 @@
         }
       }
     },
-    "“Current members” includes “club officers”" : {
-      "comment" : "Shown when \"Show club officers\" entry is missing in Preferences",
+    "“Current members” includes “current club officers”" : {
+      "comment" : "Shown when \"Show current club officers\" entry is disabled in Preferences",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "“Current members” includes “club officers”"
+            "value" : "“Current members” includes “current club officers”"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De optie “huidige leden“ bevat “bestuursleden“"
+            "value" : "De optie “huidige leden“ bevat “huidige bestuursleden“"
           }
         }
       }
@@ -1286,23 +1286,6 @@
         }
       }
     },
-    "Show club officers" : {
-      "comment" : "Label of toggle in Preferences",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show club officers"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon bestuursleden"
-          }
-        }
-      }
-    },
     "Show clubs" : {
       "comment" : "Label of toggle in Preferences",
       "localizations" : {
@@ -1316,6 +1299,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toon clubs"
+          }
+        }
+      }
+    },
+    "Show current club officers" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show current club officers"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon huidige bestuursleden"
           }
         }
       }
