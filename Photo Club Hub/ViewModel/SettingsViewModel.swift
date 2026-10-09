@@ -103,14 +103,18 @@ struct SettingsStruct { // order in which they are shown on Preferences page
         if showAspiringMembers {
             format = format.predicateOrAppend(suffix: "(isProspectiveMember = TRUE)")
         }
+        // Officers are current members with an extra responsibility.
+        // A role flag can outlive the membership: the JSON keeps it when a member leaves or passes away (#609).
         if showOfficers {
             format = format.predicateOrAppend(suffix: """
-                                                      (isChairman = TRUE OR
-                                                       isViceChairman = TRUE OR
-                                                       isTreasurer = TRUE OR
-                                                       isSecretary = TRUE OR
-                                                       isAdmin = TRUE OR
-                                                       isOther = TRUE)
+                                                      ((isChairman = TRUE OR
+                                                        isViceChairman = TRUE OR
+                                                        isTreasurer = TRUE OR
+                                                        isSecretary = TRUE OR
+                                                        isAdmin = TRUE OR
+                                                        isOther = TRUE) AND
+                                                       isFormerMember = FALSE AND
+                                                       photographer_.isDeceased = FALSE)
                                                       """)
         }
         if showHonoraryMembers {
