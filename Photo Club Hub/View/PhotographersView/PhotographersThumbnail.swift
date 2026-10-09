@@ -23,9 +23,10 @@ struct PhotographersThumbnail: View {
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
     @State var flipImageFlag: Bool = false
 
-    /// This view observes `member`, so pull-to-refresh deleting it is what triggers the re-render, before
-    /// the enclosing `ForEach` has dropped it. A deleted MemberPortfolio has no photographer_ left, which
-    /// the image chooser below dereferences, so skip it (issue #802).
+    /// This view observes `member`, so deleting it (by pull-to-refresh or any other deletion) is what triggers
+    /// the re-render, before the enclosing `ForEach` has dropped it.
+    /// A deleted MemberPortfolio has no photographer_ left, which the image chooser below dereferences,
+    /// so skip it (issue #802).
     var body: some View {
         if member.isUsable, let photographer = member.photographer_ {
             HStack {

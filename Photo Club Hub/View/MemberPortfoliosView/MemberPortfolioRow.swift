@@ -21,9 +21,12 @@ struct MemberPortfolioRow: View {
     @Binding var selectedPortfolio: MemberPortfolio?
 
     /// Deliberately reads nothing from `member` (#874).
-    /// Pull-to-refresh deletes all memberships and saves, and that save makes SwiftUI rebuild the `List`
-    /// synchronously, inside the save: the parent's `ForEach` still holds its array from before the delete,
+    /// Deleting memberships makes SwiftUI rebuild the `List` synchronously, inside the save that deletes them:
+    /// the parent's `ForEach` still holds its array from before the delete,
     /// so `init` runs on memberships whose relationships were just nullified.
+    /// Today the deleter is pull-to-refresh, which wipes the store; later it is the pruning of obsolete records
+    /// (Photo-Club-Hub-Data#39). Deleting on a background context does not avoid this:
+    /// merging that save into the view context notifies the observing views on the main thread in the same way.
     /// The parent's `isUsable` filter cannot help, because the parent's body has not run again yet.
     init(member: MemberPortfolio, selectedPortfolio: Binding<MemberPortfolio?>) {
         self.member = member
@@ -32,8 +35,8 @@ struct MemberPortfolioRow: View {
 
     /// Skips a membership that has been deleted (#802) or has no photographer (#874), instead of tripping the
     /// `photographer` and `organization` accessors.
-    /// The row observes `member`, so pull-to-refresh deleting it is precisely what makes SwiftUI re-run
-    /// this body, while the parent's filtered `ForEach` has not dropped the row yet.
+    /// The row observes `member`, so deleting it is precisely what makes SwiftUI re-run this body,
+    /// while the parent's filtered `ForEach` has not dropped the row yet.
     var body: some View {
         if member.isUsable, let photographer = member.photographer_ {
             MemberPortfolioRowContent(member: member,
@@ -50,7 +53,8 @@ struct MemberPortfolioRow: View {
 /// Displays the member's role/status icon, name, expertise tags, club/town role description,
 /// and a thumbnail image that can toggle between featured and photographer images.
 /// Tapping the thumbnail toggles the shown image variant if both variants are available.
-private struct MemberPortfolioRowContent: View {
+/// Only `MemberPortfolioRow` creates it; it is not `private` so that `DeletedMembershipViewsTest` can reach it.
+struct MemberPortfolioRowContent: View {
     /// The member portfolio model used to populate this row.
     @ObservedObject var member: MemberPortfolio
     /// The membership's photographer, passed in by `MemberPortfolioRow` after it has checked it (#874).
@@ -73,7 +77,7 @@ private struct MemberPortfolioRowContent: View {
     /// Builds the row content with role icon, identity, expertise, role/club line, and image.
     ///
     /// Repeats the check in `MemberPortfolioRow.body`, because this view observes `member` itself:
-    /// pull-to-refresh deleting it re-runs this body directly, without passing through the row's body (#874).
+    /// deleting it re-runs this body directly, without passing through the row's body (#874).
     var body: some View {
         if member.isUsable && member.photographer_ != nil {
             rowContent

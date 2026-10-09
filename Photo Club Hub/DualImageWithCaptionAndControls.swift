@@ -47,9 +47,10 @@ struct DualImageWithCaptionAndControls: View {
         self._selectedPortfolio = selectedPortfolio
     }
 
-    /// This view observes `member`, so pull-to-refresh deleting it re-runs this body directly, even when the
-    /// caller's body has already skipped it. A deleted MemberPortfolio has had `photographer_` and `organization_`
-    /// nullified, so skip it instead of tripping those accessors (#802, #874).
+    /// This view observes `member`, so deleting it (by pull-to-refresh or any other deletion)
+    /// re-runs this body directly, even when the caller's body has already skipped it.
+    /// A deleted MemberPortfolio has had `photographer_` and `organization_` nullified,
+    /// so skip it instead of tripping those accessors (#802, #874).
     var body: some View {
         if member.isUsable && member.photographer_ != nil {
             content
