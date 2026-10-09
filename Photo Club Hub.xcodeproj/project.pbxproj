@@ -277,10 +277,10 @@
 		D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Persoonlijk16.level2.json; sourceTree = "<group>"; };
 		D05840172E3C18B00013E438 /* PhotographersTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersTextInfo.swift; sourceTree = "<group>"; };
 		D06061EC28A05D4600A675A7 /* String+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Paths.swift"; sourceTree = "<group>"; };
-		D061AEFF2E3A451700E39B43 /* 260308_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 260308_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
+		D061AEFF2E3A451700E39B43 /* 260308_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; path = 260308_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
 		D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Aug_2025_app.pages; sourceTree = "<group>"; };
-		D07276F92D63A8FB0047B0CF /* Website_Status_Feb25.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_Feb25.pptx; sourceTree = "<group>"; };
-		D07276FA2D63A8FB0047B0CF /* Website_Status_template.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_template.pptx; sourceTree = "<group>"; };
+		D07276F92D63A8FB0047B0CF /* Website_Status_Feb25.pptx */ = {isa = PBXFileReference; path = Website_Status_Feb25.pptx; sourceTree = "<group>"; };
+		D07276FA2D63A8FB0047B0CF /* Website_Status_template.pptx */ = {isa = PBXFileReference; path = Website_Status_template.pptx; sourceTree = "<group>"; };
 		D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_aanmaken_NL.md; sourceTree = "<group>"; };
 		D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_8_0.pages; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };

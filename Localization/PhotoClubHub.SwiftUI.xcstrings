@@ -18,19 +18,19 @@
         }
       }
     },
-    "“Current members” includes “club officers”" : {
-      "comment" : "Shown when \"Show club officers\" entry is missing in Preferences",
+    "“Current members” includes “current club officers”" : {
+      "comment" : "Shown when \"Show current club officers\" entry is missing in Preferences",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "“Current members” includes “club officers”"
+            "value" : "“Current members” includes “current club officers”"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De optie “huidige leden“ bevat “bestuursleden“"
+            "value" : "De optie “huidige leden“ bevat “huidige bestuursleden“"
           }
         }
       }
@@ -1286,23 +1286,6 @@
         }
       }
     },
-    "Show club officers" : {
-      "comment" : "Label of toggle in Preferences",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show club officers"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon bestuursleden"
-          }
-        }
-      }
-    },
     "Show clubs" : {
       "comment" : "Label of toggle in Preferences",
       "localizations" : {
@@ -1316,6 +1299,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toon clubs"
+          }
+        }
+      }
+    },
+    "Show current club officers" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show current club officers"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon huidige bestuursleden"
           }
         }
       }
@@ -1597,6 +1597,12 @@
     "To see names here, please enable additional categories on the Settings page." : {
       "comment" : "Hint to the user if the database returns zero Members with empty Search filter.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To see names here, please enable additional categories on the Settings page."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1625,6 +1631,12 @@
     "To see photographers here, please change the Search (filter) text." : {
       "comment" : "Hint to the user if zero Photographers remain visible with Search filter in use.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To see photographers here, please change the Search (filter) text."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1653,6 +1665,12 @@
     "Warning: all member categories on the Settings page are disabled. Please enable one or more options in Settings." : {
       "comment" : "Hint to the user if all of the Settings toggles are disabled.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warning: all member categories on the Settings page are disabled. Please enable one or more options in Settings."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",

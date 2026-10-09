@@ -170,11 +170,6 @@ scripts/screenshots/screenshots_verify/
 # Mac and the screenshot scripts build from the .xcodeproj directly.
 /Photo Club Hub.xcworkspace/
 
-# SwiftPM mirror used while GitHub cannot serve Photo-Club-Hub-Data: it points the package URL
-# at a local clone, so Xcode resolves the pinned tag from there. It holds an absolute path on
-# one Mac, so it is never right in origin. Delete the file once GitHub works again.
-/Photo Club Hub.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration/mirrors.json
-
 # Working notes behind scripts/roadmap/. The roadmap data and the pages generated from
 # it are fine in public — they are the same kind of thing as the issue list. These two
 # are not: they carry a private read of the national federation's internal position,

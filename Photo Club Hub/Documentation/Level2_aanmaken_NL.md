@@ -147,6 +147,8 @@ Het `featuredImage` veld levert een klein voorbeeldplaatje op van het oevre van 
        - `roles` bevat eventuele bestuursfuncties van het lid binnen de club. Een lid kan meerdere bestuurfuncties hebben.
            - Men hoeft niet te vermelden dat een lid een bestuursfunctie _niet_ heeft.
              Invoer zoals '"isSecretary": false` kan nodig zijn om te expliciet aan te geven dat iemand die vroeger secretaris was dat niet meer is. Dit is momenteel een beperking in de app software.
+           - Als een lid de club verlaat of overlijdt, zet dan `isFormerMember` of `isDeceased` op true en laat de rollen staan.
+             De app beschrijft het lid dan bijvoorbeeld als voormalig voorzitter, en telt het lid niet meer mee als huidig bestuurslid.
        - `membershipStartDate`. Dit veld wordt momenteel alleen gebruikt in _Photo Club Hub HTML_ en niet in de iOS app.
        - `expertises` geven één of twee opvallendste expertisegebieden van de fotograaf aan. Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) over hoe het `expertises` veld het beste te gebruiken.
        - `photographerImage` bevat het adres van een soort pasfoto van de fotograaf. In de kleine "thumbnails" naast de naam van de fotograaf wordt (afhankelijk van instellingen en beschikbaarheid) `photographerImage` of `featuredImage` getoond).

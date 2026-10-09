@@ -27,7 +27,7 @@ struct SettingsViewMembersSection: View {
                 HStack {
                     RoleStatusIconView(memberRole: .viceChairman)
                         .foregroundColor(.deceasedColor)
-                    Toggle(String(localized: "Show club officers",
+                    Toggle(String(localized: "Show current club officers",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
                            isOn: $localSettings.showOfficers)
@@ -36,9 +36,9 @@ struct SettingsViewMembersSection: View {
                 HStack {
                     RoleStatusIconView(memberRole: .viceChairman)
                         .foregroundColor(.deceasedColor)
-                    Text("“Current members” includes “club officers”",
+                    Text("“Current members” includes “current club officers”",
                          tableName: "PhotoClubHub.SwiftUI",
-                         comment: "Shown when \"Show club officers\" entry is missing in Preferences")
+                         comment: "Shown when \"Show current club officers\" entry is missing in Preferences")
                     .foregroundColor(.gray)
                 }
             }
