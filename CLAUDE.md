@@ -15,7 +15,7 @@ while and dropped, in this repo and in Photo-Club-Hub-HTML: with both a project 
 edits too easily land at the wrong one. Package changes reach the app through a tag and a resolve.
 
 When the remote package cannot be fetched (e.g. GitHub unreachable), the stopgap is a **SwiftPM
-mirror**, the same in both apps: a git-ignored file at
+mirror**, the same in both apps: a file at
 `Photo Club Hub.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration/mirrors.json`
 that redirects the package URL to a local clone:
 
@@ -27,9 +27,10 @@ that redirects the package URL to a local clone:
 Xcode and `xcodebuild` then resolve from the clone's git history and check out the commit pinned in
 `Package.resolved`, so the build is the exact pinned version. The clone's working tree is ignored:
 uncommitted edits and untagged commits do not reach the app, and a new package version still needs a
-tag (locally, until it can be pushed). The file holds an absolute path on one Mac, which is why it is
-never committed. Delete it as soon as the remote works again, resolve package versions, and check that
-`Package.resolved` is unchanged.
+tag (locally, until it can be pushed). The file holds an absolute path on one Mac, so it must never be
+committed. `.gitignore` has no entry for it while no mirror is in use: add one when creating the file.
+Delete the file as soon as the remote works again, together with that `.gitignore` entry,
+resolve package versions, and check that `Package.resolved` is unchanged.
 
 A temporary workspace that adds the local package was used for this before, and is no longer the
 stopgap: it builds the package's working tree rather than the pinned tag, rewrites the package repo's
