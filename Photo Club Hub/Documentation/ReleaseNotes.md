@@ -22,6 +22,8 @@ USER-FACING
 
 - **New map markers, the same on locked and unlocked maps.** The colored circle now runs into a longer point whose tip marks the club's exact location. The icon next to the club's name, above its map, is now the same marker. MapKit's own marker had a short point in the map's outline color, which was nearly invisible in dark mode. The club a map is about is always drawn on top of nearby markers and always shows its name, also where clubs share an address. On a locked map, names that would overlap other names or markers are left out, as the live map already did. ([#867](https://github.com/vdhamer/Photo-Club-Hub/issues/867))
 
+- **Former and deceased club officers no longer appear when filtering on officers.** A club's file keeps a member's role, such as chairman, when that member leaves or dies, and the app then describes them as a former chairman. But the officers filter in Settings still counted every role as current, so these people showed up even with only "Show current members" on. Officers are current members with an extra task, so the filter now leaves out anyone marked as former or deceased. They still appear when "Show former members" or "Show deceased members" is on. To match, the toggle is renamed "Show current club officers". The README and the Level 2 instructions now say that a club marking someone as former or deceased can leave their roles as they are. ([#609](https://github.com/vdhamer/Photo-Club-Hub/issues/609))
+
 DATA
 
 * `fegGemert.level2.json`
