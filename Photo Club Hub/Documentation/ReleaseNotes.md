@@ -24,6 +24,8 @@ USER-FACING
 
 - **Former and deceased club officers no longer appear when filtering on officers.** A club's file keeps a member's role, such as chairman, when that member leaves or dies, and the app then describes them as a former chairman. But the officers filter in Settings still counted every role as current, so these people showed up even with only "Show current members" on. Officers are current members with an extra task, so the filter now leaves out anyone marked as former or deceased. They still appear when "Show former members" or "Show deceased members" is on. To match, the toggle is renamed "Show current club officers". The README and the Level 2 instructions now say that a club marking someone as former or deceased can leave their roles as they are. ([#609](https://github.com/vdhamer/Photo-Club-Hub/issues/609))
 
+- **Settings now apply the moment you change them.** The Save and Cancel buttons are gone. Settings is a tab, so switching to another tab never asked whether to save, and changes made without tapping Save were silently ignored while the toggles still showed them. Each change is now in effect and saved at once, as in the iPhone's own Settings app. "Reset to defaults" remains: the toggles slide back visibly, and an iPhone confirms the reset with a short vibration. ([#878](https://github.com/vdhamer/Photo-Club-Hub/issues/878))
+
 DATA
 
 * `fegGemert.level2.json`

@@ -364,59 +364,6 @@
         }
       }
     },
-    "Cancel" : {
-      "comment" : "Dismiss preferences without applying changes",
-      "localizations" : {
-        "en" : {
-          "variations" : {
-            "device" : {
-              "ipad" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Undo changes"
-                }
-              },
-              "iphone" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Undo changes"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Undo changes"
-                }
-              }
-            }
-          }
-        },
-        "nl" : {
-          "variations" : {
-            "device" : {
-              "ipad" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Wijzigingen ongedaan maken"
-                }
-              },
-              "iphone" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Undo"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Undo"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "Clubs" : {
       "comment" : "Tab bar label for the club member portfolios list\nTitle of page showing member portfolios\nTitle of page with maps for Clubs",
       "localizations" : {
@@ -487,7 +434,7 @@
       }
     },
     "Done" : {
-      "comment" : "Apply preference changes and dismiss\nClose button for dismissing Readme view",
+      "comment" : "Close button for dismissing Readme view",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -860,41 +807,6 @@
         }
       }
     },
-    "No changes to undo" : {
-      "comment" : "Explanation why Cancel buton is grayed out",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No changes to undo"
-          }
-        },
-        "nl" : {
-          "variations" : {
-            "device" : {
-              "ipad" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Er is niets gewijzigd"
-                }
-              },
-              "iphone" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Geen wijzigingen"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Geen wijzigingen"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "No photo clubs or museums appear to be currently loaded.\nTry dragging down the Organizations screen to reload the default clubs." : {
       "comment" : "Hint to the user if the database returns zero Organizations.",
       "localizations" : {
@@ -1173,30 +1085,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Set to app defaults"
+            "value" : "Reset to defaults"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Standaard instellingen"
-          }
-        }
-      }
-    },
-    "Save" : {
-      "comment" : "Apply preference changes and dismiss",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Save"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opslaan"
+            "value" : "Terug naar standaardinstellingen"
           }
         }
       }
