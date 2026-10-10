@@ -9,7 +9,7 @@ import SwiftUI
 import SemanticColorPicker // for SemanticColor and SemanticColorPicker
 
 struct SettingsViewMapsSection: View {
-    @Binding var localSettings: SettingsStruct
+    @Binding var settings: SettingsStruct
 
     var body: some View {
         Section(header: Text("Maps tab",
@@ -25,7 +25,7 @@ struct SettingsViewMapsSection: View {
                 Toggle(String(localized: "Show clubs",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showClubs.animation())
+                       isOn: $settings.showClubs.animation())
             }
 
             HStack { // SHOW MUSEUMS
@@ -36,10 +36,10 @@ struct SettingsViewMapsSection: View {
                 Toggle(String(localized: "Show museums",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showMuseums.animation())
+                       isOn: $settings.showMuseums.animation())
             }
 
-            if localSettings.highlightNonFotobondNL == false {
+            if settings.highlightNonFotobondNL == false {
                 HStack { // HIGHLIGHT FOTOBOND
                     Image(systemName: "mappin.square")
                         .font(.title2)
@@ -48,7 +48,7 @@ struct SettingsViewMapsSection: View {
                     Toggle(String(localized: "Highlight Dutch Fotobond NL clubs",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localSettings.highlightFotobondNL.animation())
+                           isOn: $settings.highlightFotobondNL.animation())
                 }
             } else {
                 HStack {
@@ -64,7 +64,7 @@ struct SettingsViewMapsSection: View {
                 }
             }
 
-            if localSettings.highlightFotobondNL == false {
+            if settings.highlightFotobondNL == false {
                 HStack { // HIGHLIGHT NON-FOTOBOND
                     Image(systemName: "mappin.square")
                         .font(.title2)
@@ -73,7 +73,7 @@ struct SettingsViewMapsSection: View {
                     Toggle(String(localized: "Highlight non-Fotobond NL clubs",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localSettings.highlightNonFotobondNL.animation())
+                           isOn: $settings.highlightNonFotobondNL.animation())
                 }
             } else {
                 HStack {
@@ -89,8 +89,8 @@ struct SettingsViewMapsSection: View {
                 }
             }
 
-            let highlightIsUsed = localSettings.highlightFotobondNL ||
-                                  localSettings.highlightNonFotobondNL
+            let highlightIsUsed = settings.highlightFotobondNL ||
+                                  settings.highlightNonFotobondNL
             if highlightIsUsed {
                 HStack {
                     Image(systemName: "mappin.square")
@@ -102,7 +102,7 @@ struct SettingsViewMapsSection: View {
                                table: "PhotoClubHub.SwiftUI",
                                comment: "Label of color picker in Preferences"),
                         data: SemanticColor.palette,
-                        selection: $localSettings.highlightColor)
+                        selection: $settings.highlightColor)
                 }
             }
         }) // end of section
@@ -118,7 +118,7 @@ private struct SettingsViewMapSectionPreviewHost: View {
     var body: some View {
         NavigationStack {
             List {
-                SettingsViewMapsSection(localSettings: $model.settings)
+                SettingsViewMapsSection(settings: $model.settings)
             }
         }
     }

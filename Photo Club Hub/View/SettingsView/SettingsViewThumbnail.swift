@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct SettingsViewThumbnail: View {
-    let localSettings: Binding<SettingsStruct>
+    let settings: Binding<SettingsStruct>
     let iconColor: Color // secondary color of the icon; matches the accent color of the enclosing section
 
     private var featuredBinding: Binding<Bool> {
         Binding<Bool>(
-            get: { localSettings.wrappedValue.preferenceForFeaturedImage },
-            set: { localSettings.wrappedValue.preferenceForFeaturedImage = $0 } // unused
+            get: { settings.wrappedValue.preferenceForFeaturedImage },
+            set: { settings.wrappedValue.preferenceForFeaturedImage = $0 } // unused
         )
     }
 
@@ -45,7 +45,7 @@ struct SettingsViewThumbnail: View {
     struct Container: View {
         @State private var prefs = SettingsStruct.defaultValue
         var body: some View {
-            SettingsViewThumbnail(localSettings: $prefs, iconColor: .peopleColor)
+            SettingsViewThumbnail(settings: $prefs, iconColor: .peopleColor)
                 .padding()
         }
     }

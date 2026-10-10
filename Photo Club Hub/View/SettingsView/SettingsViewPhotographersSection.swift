@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SettingsViewPhotographersSection: View {
-    @Binding var localSettings: SettingsStruct
+    @Binding var settings: SettingsStruct
 
     var body: some View {
         Section(header: Text("People tab",
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Preferences, section title"),
                 content: {
-            SettingsViewThumbnail(localSettings: $localSettings, iconColor: .peopleColor)
+            SettingsViewThumbnail(settings: $settings, iconColor: .peopleColor)
         })
    }
 }
@@ -26,7 +26,7 @@ private struct SettingsViewPhotSectionPreviewHost: View {
     var body: some View {
         NavigationStack {
             List {
-                SettingsViewPhotographersSection(localSettings: $model.settings)
+                SettingsViewPhotographersSection(settings: $model.settings)
             }
         }
     }

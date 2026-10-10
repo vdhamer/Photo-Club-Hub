@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsViewMembersSection: View {
-    @Binding var localSettings: SettingsStruct
+    @Binding var settings: SettingsStruct
 
     var body: some View {
         Section(header: Text("Clubs tab",
@@ -21,16 +21,16 @@ struct SettingsViewMembersSection: View {
                 Toggle(String(localized: "Show current members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showCurrentMembers.animation())
+                       isOn: $settings.showCurrentMembers.animation())
             }
-            if localSettings.showCurrentMembers == false {
+            if settings.showCurrentMembers == false {
                 HStack {
                     RoleStatusIconView(memberRole: .viceChairman)
                         .foregroundColor(.deceasedColor)
                     Toggle(String(localized: "Show current club officers",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localSettings.showOfficers)
+                           isOn: $settings.showOfficers)
                 }
             } else {
                 HStack {
@@ -48,7 +48,7 @@ struct SettingsViewMembersSection: View {
                 Toggle(String(localized: "Show aspiring members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showAspiringMembers)
+                       isOn: $settings.showAspiringMembers)
             }
             HStack {
                 RoleStatusIconView(memberStatus: .honorary)
@@ -56,7 +56,7 @@ struct SettingsViewMembersSection: View {
                 Toggle(String(localized: "Show honorary members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showHonoraryMembers)
+                       isOn: $settings.showHonoraryMembers)
             }
             HStack {
                 RoleStatusIconView(memberStatus: .former)
@@ -64,16 +64,16 @@ struct SettingsViewMembersSection: View {
                 Toggle(String(localized: "Show former members",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showFormerMembers.animation())
+                       isOn: $settings.showFormerMembers.animation())
             }
-            if localSettings.showFormerMembers == false {
+            if settings.showFormerMembers == false {
                 HStack { // moving this outside the if() works but gives a boring animation
                     RoleStatusIconView(memberStatus: .deceased)
                         .foregroundColor(.deceasedColor)
                     Toggle(String(localized: "Show deceased members",
                                   table: "PhotoClubHub.SwiftUI",
                                   comment: "Label of toggle in Preferences"),
-                           isOn: $localSettings.showDeceasedMembers)
+                           isOn: $settings.showDeceasedMembers)
                 }
             } else {
                 HStack {
@@ -92,9 +92,9 @@ struct SettingsViewMembersSection: View {
                 Toggle(String(localized: "Show external coaches",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Label of toggle in Preferences"),
-                       isOn: $localSettings.showExternalCoaches)
+                       isOn: $settings.showExternalCoaches)
             }
-            SettingsViewThumbnail(localSettings: $localSettings, iconColor: .clubsColor)
+            SettingsViewThumbnail(settings: $settings, iconColor: .clubsColor)
         }) // end of section
     } // end of body
 }
@@ -108,7 +108,7 @@ private struct SettingsViewMembersSectionPreviewHost: View {
     var body: some View {
         NavigationStack {
             List {
-                SettingsViewMembersSection(localSettings: $model.settings)
+                SettingsViewMembersSection(settings: $model.settings)
             }
         }
     }

@@ -1080,7 +1080,7 @@
       }
     },
     "Reset to defaults" : {
-      "comment" : "Button to reset preferences to original settings",
+      "comment" : "Button to reset preferences to default settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {

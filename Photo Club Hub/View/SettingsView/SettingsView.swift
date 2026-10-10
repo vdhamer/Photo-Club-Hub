@@ -10,29 +10,26 @@ import SemanticColorPicker // for SemanticColor and SemanticColorPicker itself
 
 struct SettingsView: View {
 
-    @Environment(\.dismiss) private var dismiss
-    @Environment(\.isPresented) private var isSheet // false when hosted in a tab, true when hosted in a sheet
-
+    // #878: these toggles change `settings` (below) directly, with no working copy and no Save button that commits.
+    // It is bound to SettingsViewModel.settings, whose @Published wrapper saves every change to UserDefaults.
+    // Previously there was a working copy with a Save button, but users sometimes forgot to Save. Now no longer needed.
     @Binding var settings: SettingsStruct // parameters for various Toggles()
-    @State private var localSettings: SettingsStruct
-    @State private var isDirty = false // for tracking changes to localSettings
+    // Flipped by every tap on "Reset to defaults".
+    // Note that true or false state means nothing and is never read:
+    // .sensoryFeedback(trigger:) plays the haptic whenever `hapticTriggerOnChange` changes state.
+    @State private var hapticTriggerOnChange = false // true would have same behavior (see above)
 
     private let title = String(localized: "Settings",
                                table: "PhotoClubHub.SwiftUI",
                                comment: "Title of the in-app Settings tab")
 
-    init(settings: Binding<SettingsStruct>) {
-        _settings = settings // set binding
-        localSettings = settings.wrappedValue
-    }
-
     var body: some View {
         NavigationStack {
             List {
-                SettingsViewPhotographersSection(localSettings: $localSettings)
-                SettingsViewMembersSection(localSettings: $localSettings)
-                SettingsViewMapsSection(localSettings: $localSettings)
-                SettingsViewAdvancedSection(localSettings: $localSettings)
+                SettingsViewPhotographersSection(settings: $settings)
+                SettingsViewMembersSection(settings: $settings)
+                SettingsViewMapsSection(settings: $settings)
+                SettingsViewAdvancedSection(settings: $settings)
                 #if DEBUG
                 SettingsViewMapsTestSection() // #870: debug-only test mode for the Maps screen
                 #endif
@@ -41,60 +38,25 @@ struct SettingsView: View {
             // #776: Settings has no async content, so it is capture-ready as soon as it appears.
             .onAppear { ScreenshotReadiness.signalReady(for: "Settings") }
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    if isDirty {
-                        Button(String(localized: "Save",
+                // Only shown when there is something to reset, so its disappearing also confirms a reset.
+                if settings != SettingsStruct.defaultValue {
+                    ToolbarItem(placement: .secondaryAction) {
+                        Button(String(localized: "Reset to defaults",
                                       table: "PhotoClubHub.SwiftUI",
-                                      comment: "Apply preference changes and dismiss")
+                                      comment: "Button to reset preferences to default settings"),
+                               systemImage: "arrow.counterclockwise" // partly shown to help fill menu's minimum width
                         ) {
-                            settings = localSettings // this is where state of Preferences is persisted
-                            localSettings = settings // sync back in case setter normalized prefs → isDirty clears
-                            dismiss()
+                            // The animation lets changed toggles visibly slide back and dependent rows fold in or out.
+                            // The haptic confirms the reset even when the changed toggles are scrolled out of view.
+                            withAnimation {
+                                settings = SettingsStruct.defaultValue // persisted like any other change
+                            }
+                            hapticTriggerOnChange.toggle() // trigger haptic to acknowledge "Reset to defaults"
                         }
-                        .buttonStyle(BorderedProminentButtonStyle())
-                        .controlSize(.small)
-                    } else if isSheet { // Done only dismisses, so it is pointless when hosted in a tab
-                        Button(String(localized: "Done",
-                                      table: "PhotoClubHub.SwiftUI",
-                                      comment: "Apply preference changes and dismiss")
-                        ) {
-                            dismiss()
-                        }
-                        .buttonStyle(BorderedButtonStyle()) // ternary operator doesn't work here
-                    }
-                }
-
-                ToolbarItem(placement: .secondaryAction) {
-                    Button(isDirty ? String(localized: "Cancel",
-                                            table: "PhotoClubHub.SwiftUI",
-                                            comment: "Dismiss preferences without applying changes") :
-                            String(localized: "No changes to undo",
-                                   table: "PhotoClubHub.SwiftUI",
-                                   comment: "Explanation why Cancel buton is grayed out")
-                    ) {
-                        localSettings = settings // discard local changes
-                        dismiss() // no-op when hosted in a tab
-                    }
-                    .onChange(of: localSettings) { _, newValue in
-                        isDirty = newValue != settings // SettingsStruct is Equatable
-                    }
-                    .onChange(of: settings) { _, newValue in
-                        isDirty = localSettings != newValue
-                    }
-                    .disabled(isDirty == false)
-                }
-
-                ToolbarItem(placement: .secondaryAction) {
-                    Button(String(localized: "Reset to defaults",
-                                  table: "PhotoClubHub.SwiftUI",
-                                  comment: "Button to reset preferences to original settings")
-                    ) {
-                        localSettings = SettingsStruct.defaultValue // update UI immediately
-                        settings = SettingsStruct.defaultValue // persist the defaults
                     }
                 }
             }
-            .animation(.easeOut(duration: 0.75), value: isDirty)
+            .sensoryFeedback(.success, trigger: hapticTriggerOnChange) // no effect on iPad, which has no haptics
             .controlSize(.small)
         }
     }

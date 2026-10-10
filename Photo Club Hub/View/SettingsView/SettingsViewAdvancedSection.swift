@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsViewAdvancedSection: View {
-    @Binding var localSettings: SettingsStruct
+    @Binding var settings: SettingsStruct
 
     var body: some View {
         Section(header: Text("Advanced",
@@ -41,7 +41,7 @@ private struct SettingsViewAdvSectionPreviewHost: View {
     var body: some View {
         NavigationStack {
             List {
-                SettingsViewAdvancedSection(localSettings: $model.settings)
+                SettingsViewAdvancedSection(settings: $model.settings)
             }
         }
     }
