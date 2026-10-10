@@ -58,15 +58,6 @@ private func markerTint(organizationType: OrganizationTypeEnum,
     }
 }
 
-extension OrganizationType { // TODO: delete this copy when the app moves to Photo Club Hub Data 3.7.0
-    /// The type as an enum, which views can use without Core Data (e.g. in previews).
-    /// The Data package creates every `OrganizationType` from an `OrganizationTypeEnum` value, so the fallback to
-    /// `.unknown` (a red marker) only catches a damaged store.
-    var organizationTypeEnum: OrganizationTypeEnum {
-        OrganizationTypeEnum(rawValue: organizationTypeName) ?? .unknown
-    }
-}
-
 /// The marker for an organization on a map: a tinted pointer with the organization type's symbol and appropriate color.
 /// Used on live maps (as the content of an `Annotation`) and on static images of locked maps (#867), so that locking or
 /// unlocking a map doesn't change its markers.
