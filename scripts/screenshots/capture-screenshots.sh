@@ -14,12 +14,17 @@
 # Output: per screen a framed JPG named <Screen>_<lang>_<appearance>.jpg (background flattened
 # to white for light captures, black for dark ones) plus the original transparent-background
 # PNG (larger, but usable on any backdrop; suppress with --no-png), in OUT_DIR.
+# With --app-store the JPGs go into OUT_DIR/AppStore instead: they are the only files App Store Connect
+# accepts (the PNGs have other sizes and a transparent background), so that folder can be uploaded as is.
 #
 # ---------------------------------------------------------------------------
 # Scope (per #775):
 # ---------------------------------------------------------------------------
-#   - The four TAB screens (#775) plus the non-tab screens in EXTRA_SCREENS (#777):
-#     Portfolio (via Clubs and via People tabs), Prelude, and Readme sheet.
+#   - The 10 screens of the App Store listing, in listing order (SCREENS, #880): four tab screens (#775),
+#     Portfolio and Readme sheet (#777), plus portfolios in landscape and portrait and two museum maps (#880).
+#     PortfolioViaPeople and Prelude are still supported by the app but left out of SCREENS.
+#   - Landscape (#880): on an iPad, LANDSCAPE_SCREENS are captured last, after a notification asking for the iPad to
+#     be rotated in Device Hub; an iPhone turns itself. Nobody there: they're captured in portrait after 10 minutes.
 #   - Content readiness (#776): instead of fixed sleeps, the app writes a marker file
 #     (Documents/screenshot-ready) once the launched screen's preset content is on screen;
 #     wait_until_ready() polls for it and fails the run on a per-screen timeout.
@@ -62,13 +67,16 @@
 #   --app-store     Rescale the output JPGs to the App Store Connect accepted pixel dimensions
 #                   for the target device. The framed image is scaled proportionally and padded
 #                   with the matte color to fill the required canvas. Only JPGs are rescaled;
-#                   the raw transparent PNGs retain their native framed size.
-#                   Supported devices (portrait):
-#                     iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868  (6.9")
-#                     iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796  (6.7")
-#                     iPad Air 13-inch (M4), iPad Pro 13-inch (M4)  →  2064 × 2752  (13")
-#                   The default device (iPhone 17 Pro) is NOT in the table; target a supported
-#                   device via PREFERRED_DEVICE or --udid.
+#                   the raw transparent PNGs retain their native framed size. The rescaled JPGs are
+#                   written to an AppStore subfolder of the output directory.
+#                   Supported devices (portrait), per Apple's screenshot specifications (Oct 2026):
+#                     iPhone 18 Pro, iPhone 17 Pro, iPhone 16 Pro  →  1206 × 2622
+#                       ("iPhone with Dynamic Island, medium display": the one REQUIRED iPhone size)
+#                     iPhone 18 Pro Max, iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868  (optional)
+#                     iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796  (optional)
+#                     iPad Pro 13-inch (M5), iPad Pro 13-inch (M4), iPad Air 13-inch (M4)  →  2064 × 2752
+#                       (13": REQUIRED when the app runs on iPad)
+#                   Any other device: target a supported one via PREFERRED_DEVICE or --udid.
 #
 # ---------------------------------------------------------------------------
 # Screenshot-related arguments of the app itself:
@@ -132,31 +140,59 @@ SCHEME="Photo Club Hub"
 # Preferred simulator model (the current iPhone "Pro"). Auto-discovered by name unless
 # an explicit --udid is supplied. Change PREFERRED_DEVICE to retarget.
 #PREFERRED_DEVICE="iPad Air 13-inch (M4)"
+# Not "iPhone 18 Pro" yet: RocketSim 16.7.0 ships iPhone 18 Pro device frames but does not apply them
+# (neither in its own window nor via the CLI), and then silently returns the bare screen without a bezel.
+# Switch back once https://github.com/AvdLee/RocketSimApp/issues/1214 is fixed.
 PREFERRED_DEVICE="iPhone 17 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""            # resolved below (or from --udid)
 
 # Matrix.
 LANGUAGES=(en nl)
-APPEARANCES=(light dark)
+APPEARANCES=(light)       # the App Store listing uses light mode (#880), except for DARK_SCREENS
+#APPEARANCES=(light dark)
+# Screens captured in dark mode whatever the round's appearance: a portfolio image on an upright phone gets wide
+# bars above and below it, which are white in light mode and drew the eye away from the photo (#880).
+DARK_SCREENS=(PortfolioLandscape PortfolioPortrait)
+# Screens that need the device in landscape. On an iPhone the app turns itself sideways for these. On an iPad,
+# iPadOS 26+ refuses that ("The current windowing mode does not allow for programmatic changes to interface
+# orientation", also with Full Screen Apps), so an iPad run captures them last, for all languages in one go, after
+# asking for the iPad to be rotated by hand in Device Hub (#880). Unattended, it captures them in portrait instead.
+# Neither simctl nor the RocketSim CLI can rotate a simulator yet; once https://github.com/AvdLee/RocketSimApp/issues/1219
+# adds a rotate command, the iPad can be turned from here and the manual step can go.
+LANDSCAPE_SCREENS=(PortfolioLandscape)
+LANDSCAPE_WAIT_TIMEOUT=600 # seconds to wait for the iPad to be rotated before capturing in portrait
 
-# The four tab screens, in tab bar order (MainTabView1827.swift / issue #773).
+# The screens, in the order of the App Store listing (#880). Each file name starts with its position here
+# ("01_Maps_en_light.jpg"), so the files sort in listing order.
 # Navigation does NOT tap the tab bar: RocketSim's element tree omits tab buttons when the
 # app runs in a non-English locale (https://github.com/AvdLee/RocketSimApp/issues/1083),
 # so the script relaunches the app once per screen
 # with the `-initialTab <Screen>` launch argument instead (canonical English
 # names, handled in MainTabView1827.swift). `-skipPrelude YES` suppresses the splash screen.
 # This is locale-independent and also more deterministic than tap choreography.
-TAB_SCREENS=(Maps Clubs People Settings)
-
-# Non-tab screens. PortfolioViaClubs/PortfolioViaPeople (#777) = Clubs resp. People tab +
-# app-hardcoded push of the preset member's portfolio (Fotogroep de Gender / Francien van Mil),
-# with its gallery jumped to a preset image when the site is a Juicebox-Pro gallery (handled
-# app-side in MemberPortfolioView and SinglePortfolioView; on a non-Juicebox site the jump is a
-# no-op and the capture shows that site's opening screen). Prelude = the initial splash screen,
-# launched WITHOUT -skipPrelude so the view is visible. Readme = Clubs tab with the Readme
-# sheet auto-presented by ReadmeButton (ReadmeButton+Screenshot.swift).
-EXTRA_SCREENS=(PortfolioViaClubs PortfolioViaPeople Prelude Readme)
+#
+# Maps, Clubs, People, Settings: the four tabs (#775).
+# PortfolioViaClubs (#777) = Clubs tab + app-hardcoded push of a preset member's portfolio,
+# with its gallery showing a preset image when the site is a Juicebox-Pro gallery (handled
+# app-side in MemberPortfolioView and SinglePortfolioView; on a non-Juicebox site this is a
+# no-op and the capture shows that site's opening screen). PortfolioLandscape and PortfolioPortrait (#880)
+# work the same way with other presets; PortfolioLandscape also turns the device sideways.
+# MapsMuseum / MapsMuseum3D (#880) = Maps tab on Fotografiska New York, locked resp. unlocked in 3D.
+# Readme = Clubs tab with the Readme sheet auto-presented by ReadmeButton (ReadmeButton+Screenshot.swift).
+# Supported but not in the listing: PortfolioViaPeople (the People-tab twin of PortfolioViaClubs) and
+# Prelude (the splash screen, launched WITHOUT -skipPrelude so it is visible).
+SCREENS=(Maps
+         Clubs
+         PortfolioViaClubs
+         People
+         Settings
+         PortfolioLandscape
+         PortfolioPortrait
+         MapsMuseum
+         MapsMuseum3D
+         Readme)
+#SCREENS+=(PortfolioViaPeople Prelude)
 
 # Framing options for `rocketsim screenshot`.
 BEZEL="device"            # device frame style: none | simulator | device
@@ -181,6 +217,9 @@ READY_TIMEOUT=60                 # per-screen readiness timeout (seconds)
 READY_TIMEOUT_PORTFOLIO=90       # PortfolioVia* also loads the web gallery + jumps to its image
 SLEEP_AFTER_READY=3              # visual settling after readiness: map tiles, thumbnails, scroll
 SLEEP_AFTER_READY_PORTFOLIO=8   # extra settling for Portfolio screens: Juicebox gallery image load
+# MapsMuseum3D signals readiness after a MapKit snapshot, but SwiftUI's live Map has no "fully drawn" signal of its
+# own, and on 11 Oct an iPad capture 8 s after readiness still showed both 3D maps empty (#880).
+SLEEP_AFTER_READY_MAPS3D=20
 # Pause between screens after each capture. iPad captures push host CPU to ~100%; without
 # a gap the simulator watchdog kills background apps (0x8BADF00D) that can't complete their
 # launch within 30 s when the Mac scheduler is fully saturated. A few seconds costs nothing
@@ -322,10 +361,10 @@ RS_RETRY_INTERVAL=3      # pause between retries within the recovery window
 # Returns WIDTHxHEIGHT for a supported device, non-zero for unknown devices.
 app_store_size_for_device() {
     case "$1" in
-        "iPhone 17 Pro"|"iPhone 16 Pro")                  echo "1320x2868" ;;  # 6.9"
-        "iPhone 17 Pro Max"|"iPhone 16 Pro Max")          echo "1320x2868" ;;  # 6.9"
-        "iPhone 16 Plus"|"iPhone 15 Plus")                echo "1290x2796" ;;  # 6.7"
-        "iPad Air 13-inch (M4)"|"iPad Pro 13-inch (M4)")  echo "2064x2752" ;;  # 13"
+        "iPhone 18 Pro"|"iPhone 17 Pro"|"iPhone 16 Pro")              echo "1206x2622" ;;  # required
+        "iPhone 18 Pro Max"|"iPhone 17 Pro Max"|"iPhone 16 Pro Max")  echo "1320x2868" ;;
+        "iPhone 16 Plus"|"iPhone 15 Plus")                            echo "1290x2796" ;;
+        "iPad Pro 13-inch (M5)"|"iPad Pro 13-inch (M4)"|"iPad Air 13-inch (M4)")  echo "2064x2752" ;;  # required
         *) return 1 ;;
     esac
 }
@@ -403,6 +442,18 @@ if [[ -z "${UDID}" ]]; then
     echo "       Pick one from 'xcrun simctl list devices available' and pass --udid." >&2
     exit 1
 fi
+if [[ "${UDID_FROM_FLAG}" -eq 1 ]]; then
+    # --udid names the device itself; resolve its model name for the label, the size lookup and the bezel.
+    PREFERRED_DEVICE="$("${SIMCTL[@]}" list devices \
+        | grep "${UDID}" \
+        | sed -E 's/^[[:space:]]+(.+) \([0-9A-Fa-f-]{36}\).*/\1/' \
+        | head -n1)"
+    [[ -z "${PREFERRED_DEVICE}" ]] && PREFERRED_DEVICE="(unknown)"
+fi
+# RocketSim 16.7.0 applies no device frame to the iPad Pro 13-inch (M4 or M5), like the iPhone 18 Pro
+# (https://github.com/AvdLee/RocketSimApp/issues/1214), so those get the generic Simulator outline instead.
+# The iPad Air 13-inch (M4) does get its frame, and has the same 2064 × 2752 screen, so the iPad set is made on it.
+[[ "${PREFERRED_DEVICE}" == "iPad Pro"* ]] && BEZEL="simulator"
 if [[ -n "${PREFERRED_IOS_VERSION}" ]]; then
     echo "Target simulator: ${PREFERRED_DEVICE:-'(explicit)'} / ${PREFERRED_IOS_VERSION} — ${UDID}"
 else
@@ -416,20 +467,13 @@ TARGET_W=""
 TARGET_H=""
 if [[ "${RESCALE}" -eq 1 ]]; then
     LOOKUP_DEVICE="${PREFERRED_DEVICE}"
-    if [[ "${UDID_FROM_FLAG}" -eq 1 ]]; then
-        # --udid was given without a matching PREFERRED_DEVICE; resolve model name from simctl.
-        LOOKUP_DEVICE="$("${SIMCTL[@]}" list devices \
-            | grep "${UDID}" \
-            | sed -E 's/^[[:space:]]+(.+) \([0-9A-Fa-f-]{36}\).*/\1/' \
-            | head -n1)"
-        [[ -z "${LOOKUP_DEVICE}" ]] && LOOKUP_DEVICE="(unknown)"
-    fi
     APP_STORE_SIZE="$(app_store_size_for_device "${LOOKUP_DEVICE}")" || {
         echo "ERROR: --app-store: '${LOOKUP_DEVICE}' is not an accepted App Store screenshot slot." >&2
         echo "       Supported devices (portrait):" >&2
-        echo "         iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868  (6.9\")" >&2
-        echo "         iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796  (6.7\")" >&2
-        echo "         iPad Air 13-inch (M4), iPad Pro 13-inch (M4)  →  2064 × 2752  (13\")" >&2
+        echo "         iPhone 18 Pro, iPhone 17 Pro, iPhone 16 Pro  →  1206 × 2622" >&2
+        echo "         iPhone 18 Pro Max, iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868" >&2
+        echo "         iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796" >&2
+        echo "         iPad Pro 13-inch (M5), iPad Pro 13-inch (M4), iPad Air 13-inch (M4)  →  2064 × 2752" >&2
         echo "       Re-run with PREFERRED_DEVICE=\"iPhone 17 Pro Max\" or --udid <UDID of a supported device>." >&2
         exit 2
     }
@@ -438,8 +482,11 @@ if [[ "${RESCALE}" -eq 1 ]]; then
     echo "App Store target size: ${TARGET_W} × ${TARGET_H} px (${LOOKUP_DEVICE})"
 fi
 
-mkdir -p "${OUT_DIR}"
+JPG_DIR="${OUT_DIR}"
+[[ "${RESCALE}" -eq 1 ]] && JPG_DIR="${OUT_DIR}/AppStore"
+mkdir -p "${OUT_DIR}" "${JPG_DIR}"
 echo "Output folder: ${OUT_DIR}"
+[[ "${JPG_DIR}" != "${OUT_DIR}" ]] && echo "App Store JPGs: ${JPG_DIR}"
 
 # ---------------------------------------------------------------------------
 # Boot the simulator.
@@ -447,7 +494,15 @@ echo "Output folder: ${OUT_DIR}"
 echo "Booting simulator..."
 "${SIMCTL[@]}" boot "${UDID}" 2>/dev/null || true   # no-op if already booted
 "${SIMCTL[@]}" bootstatus "${UDID}" -b || true
-open -a Simulator --args -CurrentDeviceUDID "${UDID}" || true
+# Show the device in a window: Device Hub since Xcode 27, Simulator.app before. Capturing doesn't need the window,
+# but rotating an iPad by hand does (see LANDSCAPE_SCREENS). Device Hub may still not list a simulator created with
+# simctl until it has been added there once.
+DEV_DIR="$(cd "$(dirname "$(xcrun --find simctl)")/../.." && pwd)"
+if [[ -d "${DEV_DIR}/../Applications/DeviceHub.app" ]]; then
+    open -a "${DEV_DIR}/../Applications/DeviceHub.app" --args -CurrentDeviceUDID "${UDID}" || true
+elif [[ -d "${DEV_DIR}/Applications/Simulator.app" ]]; then
+    open -a "${DEV_DIR}/Applications/Simulator.app" --args -CurrentDeviceUDID "${UDID}" || true
+fi
 
 # Verify RocketSim's IPC channel after the simulator is running. Checking before boot can
 # give a false negative because RocketSim only detects the device once the simulator starts.
@@ -645,7 +700,7 @@ function run(argv) {
 JXA
 }
 
-# Capture one framed screenshot to <Screen>_<lang>_<appearance>.jpg (plus the .png
+# Capture one framed screenshot to <NN>_<Screen>_<lang>_<appearance>.jpg (plus the .png
 # unless --no-png). RocketSim always emits PNG bytes; flatten_png_to_jpg converts to JPEG
 # with a white (light mode) or black (dark mode) background.
 # If the capture fails (because RocketSim quit, lost its IPC channel, or crashed — see the
@@ -658,7 +713,7 @@ JXA
 # of aborting the run.
 capture() {
     local screen="$1" lang="$2" appearance="$3"
-    local out="${OUT_DIR}/${screen}_${lang}_${appearance}.jpg"
+    local out="${JPG_DIR}/${CAPTURE_PREFIX}${screen}_${lang}_${appearance}.jpg"
     local tmp tmperr framed=0 recovery_start
     tmp="$(mktemp /tmp/screenshot_XXXXXX)"
     tmperr="$(mktemp /tmp/screenshot_err_XXXXXX)"
@@ -701,14 +756,21 @@ capture() {
         *)    bg="${JPG_BACKGROUND_LIGHT}" ;;
     esac
     local tw="${TARGET_W}" th="${TARGET_H}"
+    # A landscape capture (PortfolioLandscape) gets the landscape version of the App Store size, e.g. 2622 × 1206.
+    if [[ -n "${tw}" ]]; then
+        local pw ph
+        pw="$(sips -g pixelWidth "${tmp}" | awk '/pixelWidth/{print $2}')"
+        ph="$(sips -g pixelHeight "${tmp}" | awk '/pixelHeight/{print $2}')"
+        [[ "${pw}" -gt "${ph}" ]] && { tw="${TARGET_H}"; th="${TARGET_W}"; }
+    fi
     if ! flatten_png_to_jpg "${tmp}" "${out}" "${bg}" "${JPEG_QUALITY}" "${tw}" "${th}"; then
         echo "ERROR: PNG->JPEG conversion failed for ${screen}/${lang}/${appearance}." >&2
         rm -f "${tmp}"
         exit 1
     fi
     if [[ "${KEEP_PNG}" -eq 1 ]]; then
-        mv -f "${tmp}" "${OUT_DIR}/${screen}_${lang}_${appearance}.png"
-        chmod 644 "${OUT_DIR}/${screen}_${lang}_${appearance}.png"
+        mv -f "${tmp}" "${OUT_DIR}/${CAPTURE_PREFIX}${screen}_${lang}_${appearance}.png"
+        chmod 644 "${OUT_DIR}/${CAPTURE_PREFIX}${screen}_${lang}_${appearance}.png"
         CAPTURE_FORMAT="jpg+png"
     else
         rm -f "${tmp}"
@@ -717,44 +779,138 @@ capture() {
 }
 
 # ---------------------------------------------------------------------------
+# Warm-up launches (not captured).
+#
+# The first launch after an install, or on a fresh simulator, still imports most clubs while
+# Maps is already on screen. Maps scrolls to its preset club as soon as that club exists, but
+# the clubs imported after it shift the list, so the first Maps capture ended up at the top of
+# the list instead. Later launches find the clubs already stored and scroll correctly.
+# One uncaptured Maps launch, given time to finish the import, makes the first real capture
+# behave like the later ones.
+# MapsMuseum3D gets one too: its readiness signal waits for a map snapshot, but a snapshot is flat and
+# doesn't fetch the 3D buildings the live map needs, so the first 3D capture once showed an empty grid.
+# An uncaptured 3D launch puts those tiles in MapKit's cache, as a later capture of the same view found them.
+# ---------------------------------------------------------------------------
+WARMUP_SETTLE=20   # seconds after readiness for the remaining clubs, or the 3D buildings, to load
+WARMUP_TIMEOUT=150 # a cold 3D view took 72 s to become ready on the iPad, against 6 s once cached
+echo "Warm-up launches, so that the first captures don't race the first data import or the 3D tiles..."
+for warmup_screen in Maps MapsMuseum3D; do
+    "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
+    rm -f "${READY_MARKER}"
+    "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
+        -AppleLanguages "(en)" -initialTab "${warmup_screen}" -skipPrelude YES -suppressTips YES >/dev/null
+    wait_until_ready "${warmup_screen} (warm-up)" "${WARMUP_TIMEOUT}" "${WARMUP_SETTLE}"
+    dismiss_first_run_interruptions
+done
+"${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
+
+# ---------------------------------------------------------------------------
 # Capture matrix: language x appearance x tab.
 # ---------------------------------------------------------------------------
 CAPTURE_COUNT=0
-TOTAL=$(( ${#LANGUAGES[@]} * ${#APPEARANCES[@]} * (${#TAB_SCREENS[@]} + ${#EXTRA_SCREENS[@]}) ))
+TOTAL=$(( ${#LANGUAGES[@]} * ${#APPEARANCES[@]} * ${#SCREENS[@]} ))
 TOTAL_WIDTH="${#TOTAL}"
 DEVICE_LABEL="${PREFERRED_DEVICE} / ${PREFERRED_IOS_VERSION}"
+# Launches one screen in one language and appearance, waits until it's ready, and captures it.
+capture_screen() {
+    local lang="$1" appearance="$2" screen="$3" position="$4"
+    local lang_uc screen_appearance dark_screen app_cap
+    lang_uc="$(printf '%s' "${lang}" | tr '[:lower:]' '[:upper:]')"
+    CAPTURE_PREFIX="$(printf '%02d_' "${position}")" # listing position, used by capture() in file names
+    screen_appearance="${appearance}"
+    for dark_screen in "${DARK_SCREENS[@]}"; do
+        [[ "${screen}" == "${dark_screen}" ]] && screen_appearance="dark"
+    done
+    app_cap="$(printf '%s' "${screen_appearance:0:1}" | tr '[:lower:]' '[:upper:]')${screen_appearance:1}"
+    # Appearance is a device-level setting; apply before launch.
+    "${SIMCTL[@]}" ui "${UDID}" appearance "${screen_appearance}"
+    "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
+    rm -f "${READY_MARKER}"   # the app also clears it at startup (belt and braces)
+    # Prelude is the splash screen itself: launch it without -skipPrelude so it is visible.
+    local skip_prelude_arg=(); [[ "${screen}" != Prelude ]] && skip_prelude_arg=(-skipPrelude YES)
+    "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
+        -AppleLanguages "(${lang})" -initialTab "${screen}" \
+        ${skip_prelude_arg[@]+"${skip_prelude_arg[@]}"} -suppressTips YES >/dev/null
+    if [[ "${screen}" == MapsMuseum3D ]]; then # 3D tiles load slowly
+        wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}" "${SLEEP_AFTER_READY_MAPS3D}"
+    elif [[ "${screen}" == Portfolio* ]]; then
+        wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}" "${SLEEP_AFTER_READY_PORTFOLIO}"
+    else
+        wait_until_ready "${screen}" "${READY_TIMEOUT}"
+    fi
+    dismiss_first_run_interruptions
+    capture "${screen}" "${lang}" "${screen_appearance}"
+    CAPTURE_COUNT=$((CAPTURE_COUNT + 1))
+    printf "%${TOTAL_WIDTH}d of %d: %s_%s_%s captured on %s as %s\n" \
+        "${CAPTURE_COUNT}" "${TOTAL}" "${screen}" "${lang_uc}" "${app_cap}" "${DEVICE_LABEL}" "${CAPTURE_FORMAT}"
+    sleep "${SLEEP_BETWEEN_SCREENS}"
+}
+
+# Shows a macOS notification as well as a line in the log, for the one moment a run needs a person.
+notify() {
+    echo ">>> $1"
+    printf '\a'
+    osascript -e "display notification \"$1\" with title \"capture-screenshots.sh\"" >/dev/null 2>&1 || true
+}
+
+# Waits until RocketSim delivers a picture wider than it is tall, i.e. until the device has been rotated.
+# Returns non-zero after LANDSCAPE_WAIT_TIMEOUT seconds.
+wait_for_landscape() {
+    local probe w h waited=0
+    probe="$(mktemp -t landscape-probe)" # RocketSim writes PNG bytes; sips reads them whatever the extension
+    while [[ "${waited}" -lt "${LANDSCAPE_WAIT_TIMEOUT}" ]]; do
+        if "${RS}" screenshot --udid "${UDID}" --bezel none > "${probe}" 2>/dev/null; then
+            w="$(sips -g pixelWidth "${probe}" 2>/dev/null | awk '/pixelWidth/{print $2}')"
+            h="$(sips -g pixelHeight "${probe}" 2>/dev/null | awk '/pixelHeight/{print $2}')"
+            if [[ -n "${w}" && -n "${h}" && "${w}" -gt "${h}" ]]; then rm -f "${probe}"; return 0; fi
+        fi
+        sleep 3
+        waited=$((waited + 3))
+    done
+    rm -f "${probe}"
+    return 1
+}
+
+# On an iPad, landscape screens wait until the end (see LANDSCAPE_SCREENS), as "lang|appearance|screen|position".
+IS_IPAD=0; [[ "${PREFERRED_DEVICE}" == iPad* ]] && IS_IPAD=1
+DEFERRED=()
 for lang in "${LANGUAGES[@]}"; do
-    LANG_UC="$(printf '%s' "${lang}" | tr '[:lower:]' '[:upper:]')"
     for appearance in "${APPEARANCES[@]}"; do
-        APP_CAP="$(printf '%s' "${appearance:0:1}" | tr '[:lower:]' '[:upper:]')${appearance:1}"
-
-        # Appearance is a device-level setting; apply before launch.
-        "${SIMCTL[@]}" ui "${UDID}" appearance "${appearance}"
-
         # One fresh launch per screen: locale, initial tab, and (for non-Prelude screens) no
-        # Prelude via launch arguments (see the TAB_SCREENS comment for why tabs are not tapped).
-        for screen in "${TAB_SCREENS[@]}" "${EXTRA_SCREENS[@]}"; do
-            "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
-            rm -f "${READY_MARKER}"   # the app also clears it at startup (belt and braces)
-            # Prelude is the splash screen itself: launch it without -skipPrelude so it is visible.
-            SKIP_PRELUDE_ARG=(); [[ "${screen}" != Prelude ]] && SKIP_PRELUDE_ARG=(-skipPrelude YES)
-            "${SIMCTL[@]}" launch "${UDID}" "${BUNDLE_ID}" \
-                -AppleLanguages "(${lang})" -initialTab "${screen}" \
-                ${SKIP_PRELUDE_ARG[@]+"${SKIP_PRELUDE_ARG[@]}"} -suppressTips YES >/dev/null
-            if [[ "${screen}" == PortfolioVia* ]]; then
-                wait_until_ready "${screen}" "${READY_TIMEOUT_PORTFOLIO}" "${SLEEP_AFTER_READY_PORTFOLIO}"
-            else
-                wait_until_ready "${screen}" "${READY_TIMEOUT}"
+        # Prelude via launch arguments (see the SCREENS comment for why tabs are not tapped).
+        position=0
+        for screen in "${SCREENS[@]}"; do
+            position=$((position + 1))
+            deferred=0
+            if [[ "${IS_IPAD}" -eq 1 ]]; then
+                for landscape_screen in "${LANDSCAPE_SCREENS[@]}"; do
+                    [[ "${screen}" == "${landscape_screen}" ]] && deferred=1
+                done
             fi
-            dismiss_first_run_interruptions
-            capture "${screen}" "${lang}" "${appearance}"
-            CAPTURE_COUNT=$((CAPTURE_COUNT + 1))
-            printf "%${TOTAL_WIDTH}d of %d: %s_%s_%s captured on %s as %s\n" \
-                "${CAPTURE_COUNT}" "${TOTAL}" "${screen}" "${LANG_UC}" "${APP_CAP}" "${DEVICE_LABEL}" "${CAPTURE_FORMAT}"
-            sleep "${SLEEP_BETWEEN_SCREENS}"
+            if [[ "${deferred}" -eq 1 ]]; then
+                DEFERRED+=("${lang}|${appearance}|${screen}|${position}")
+            else
+                capture_screen "${lang}" "${appearance}" "${screen}" "${position}"
+            fi
         done
     done
 done
+
+LANDSCAPE_FALLBACK=0
+if [[ "${#DEFERRED[@]}" -gt 0 ]]; then
+    notify "Rotate the iPad to landscape in Device Hub (${#DEFERRED[@]} landscape screenshots left)."
+    if wait_for_landscape; then
+        echo "iPad is in landscape."
+    else
+        echo "WARNING: iPad not rotated within ${LANDSCAPE_WAIT_TIMEOUT}s; capturing the landscape screens in portrait." >&2
+        LANDSCAPE_FALLBACK=1
+    fi
+    for item in "${DEFERRED[@]}"; do
+        IFS='|' read -r lang appearance screen position <<< "${item}"
+        capture_screen "${lang}" "${appearance}" "${screen}" "${position}"
+    done
+    [[ "${LANDSCAPE_FALLBACK}" -eq 0 ]] && notify "Landscape screenshots done: you can rotate the iPad back to portrait."
+fi
 
 # ---------------------------------------------------------------------------
 # Cleanup.
@@ -767,6 +923,9 @@ if [[ "${KEEP_BOOTED}" -eq 0 ]]; then
     "${SIMCTL[@]}" shutdown "${UDID}" || true
 fi
 
+if [[ "${LANDSCAPE_FALLBACK}" -eq 1 ]]; then
+    echo "WARNING: the landscape screens (${LANDSCAPE_SCREENS[*]}) were captured in portrait: nobody rotated the iPad." >&2
+fi
 if [[ "${UNFRAMED_COUNT}" -gt 0 ]]; then
     echo "WARNING: ${UNFRAMED_COUNT} screenshot(s) were captured WITHOUT a device bezel" >&2
     echo "         (simctl fallback because RocketSim was not usable)." >&2
