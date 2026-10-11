@@ -19,7 +19,7 @@
       }
     },
     "“Current members” includes “current club officers”" : {
-      "comment" : "Shown when \"Show current club officers\" entry is missing in Preferences",
+      "comment" : "Shown when \"Show current club officers\" entry is missing in Preferences. Trickery with double quotes!",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -30,13 +30,13 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De optie “huidige leden“ bevat “huidige bestuursleden“"
+            "value" : "De optie “huidige leden” bevat “huidige bestuursleden”"
           }
         }
       }
     },
     "“Former members” includes “deceased members”" : {
-      "comment" : "Shown when \"Show deceased members\" entry is missing in Preferences",
+      "comment" : "Shown when \"Show deceased members\" entry is missing in Preferences. Trickery with double quotes!",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -47,7 +47,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De optie “ex-leden“ bevat “overleden leden“"
+            "value" : "De optie “ex-leden” bevat “overleden leden”"
           }
         }
       }
@@ -1023,7 +1023,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "③ De “thumbnail“ foto's kunnen horizontaal verplaatst worden. Als een fotograaf bij meerdere clubs aangesloten is (of was) zijn er namelijk twee of meer “thumbnails“."
+            "value" : "③ De “thumbnail” foto's kunnen horizontaal verplaatst worden. Als een fotograaf bij meerdere clubs aangesloten is (of was) zijn er namelijk twee of meer “thumbnails”."
           }
         }
       }
