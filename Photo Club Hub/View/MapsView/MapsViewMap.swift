@@ -61,7 +61,9 @@ struct MapsViewMap: View {
         self.mapOrganization = mapOrganization
         self.fetchedOrganizations = fetchedOrganizations
         self.isMapScrollLocked = isMapScrollLocked
-        _cameraPosition = State(initialValue: Self.defaultView(of: mapOrganization))
+        // The screenshot pipeline's `MapsMuseum3D` starts this one map in 3D instead (#880); nil in normal use.
+        let screenshotCamera = MapsScreenshotPreset.camera3D(for: mapOrganization).map { MapCameraPosition.camera($0) }
+        _cameraPosition = State(initialValue: screenshotCamera ?? Self.defaultView(of: mapOrganization))
     }
 
     var body: some View {

@@ -23,19 +23,26 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
             }
         }
 
-        // Reads the `-initialTab <Maps|Clubs|People|Settings|PortfolioViaClubs|PortfolioViaPeople|Readme>`
-        // launch argument (canonical English names, case-insensitive). Used by the screenshot
-        // pipeline (#775/#776/#777) to open the app directly on a given tab: RocketSim cannot tap
-        // localized tab bars (see #776), and a launch argument is deterministic across locales
-        // anyway. Returns nil in normal use. `PortfolioViaClubs`/`PortfolioViaPeople` also open
-        // the Clubs/People tab; MemberPortfolioView resp. PhotographersListView2627 react to those
-        // values by pushing the preset member's portfolio (#777). `Readme` opens the Clubs tab;
-        // ReadmeButton reacts by auto-presenting the Readme sheet (#777).
+        // Reads the `-initialTab` launch argument (canonical English names, case-insensitive):
+        // Maps, MapsMuseum, MapsMuseum3D, Clubs, People, Settings, PortfolioViaClubs, PortfolioViaPeople,
+        // PortfolioPortrait, PortfolioLandscape or Readme.
+        // Used by the screenshot pipeline (#775/#776/#777/#880) to open the app directly on a given tab:
+        // RocketSim cannot tap localized tab bars (see #776), and a launch argument is deterministic across locales
+        // anyway. Returns nil in normal use.
+        // `PortfolioViaClubs`/`PortfolioViaPeople` also open the Clubs/People tab;
+        // MemberPortfolioView resp. PhotographersListView2627 react to those values by pushing the preset member's
+        // portfolio (#777). `PortfolioPortrait`/`PortfolioLandscape` do the same via the Clubs tab (#880).
+        // `MapsMuseum`/`MapsMuseum3D` open the Maps tab on another preset organization (#880).
+        // `Readme` opens the Clubs tab; ReadmeButton reacts by auto-presenting the Readme sheet (#777).
         static var launchArgument: TabID? {
             switch UserDefaults.standard.string(forKey: "initialTab")?.lowercased() {
             case "maps":               .maps
+            case "mapsmuseum":         .maps
+            case "mapsmuseum3d":       .maps
             case "clubs":              .clubs
             case "portfolioviaclubs":  .clubs
+            case "portfolioportrait":  .clubs
+            case "portfoliolandscape": .clubs
             case "people":             .people
             case "portfolioviapeople": .people
             case "readme":             .clubs

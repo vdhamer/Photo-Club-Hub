@@ -143,8 +143,8 @@ struct PhotographersListView2627: View {
                                             """))
         .navigationDestination(item: $selectedPortfolio) { member in
             SinglePortfolioView(url: member.level3URL, webView: wkWebView,
-                                presetImageIndex: portfolioPresetActive ?
-                                    ScreenshotReadiness.portfolioPresetImageIndex : nil)
+                                presetImageFileName: portfolioPresetActive ?
+                                    ScreenshotReadiness.portfolioPreset?.imageFileName : nil)
                 .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
                                  (horSizeClass == .compact ? member.organization.nickName :
                                                              member.organization.fullName))

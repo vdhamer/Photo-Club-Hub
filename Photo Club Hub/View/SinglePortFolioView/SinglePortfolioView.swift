@@ -17,10 +17,10 @@ struct SinglePortfolioView: UIViewRepresentable {
     @State var webView: WKWebView // sharing WKWebView to avoid error messages if webView goes out of scope
 
     /// Screenshot pipeline (#777) — the logic lives in SinglePortfolioView+Screenshot.swift.
-    /// 1-based index of the gallery image to jump to after the page loads. Non-nil only when
-    /// the app was launched with `-initialTab PortfolioViaClubs`; nil in normal use, which
-    /// leaves the web view completely untouched (no injected script, no navigation delegate).
-    var presetImageIndex: Int?
+    /// File name of the gallery image to show after the page loads. Non-nil only when the app was launched
+    /// with one of the Portfolio values of `-initialTab`; nil in normal use, which leaves the web view
+    /// completely untouched (no injected script, no navigation delegate).
+    var presetImageFileName: String?
 
     func makeUIView(context: Context) -> WKWebView {
         configureForScreenshotCapture(context: context) // no-op in normal use (#777)

@@ -19,15 +19,17 @@ extension MemberPortfolioView {
         UserDefaults.standard.string(forKey: "initialTab")?.lowercased()
     }
 
-    // -initialTab Clubs ⇒ open scrolled to this section (#776). Nil in normal use.
+    // -initialTab Clubs ⇒ open scrolled to the section of `ScreenshotReadiness.deGender` (#776). Nil in normal use.
+    // Sections are keyed by `Organization.fullNameTown`; it is read from the club's imported members,
+    // so it matches the section header whether or not the header shows the town.
     var scrollPresetSectionID: String? {
-        initialTabArgument == "clubs" ? "Fotogroep de Gender (Eindhoven)" : nil
+        initialTabArgument == "clubs" ? scrollPresetMembers.first?.organization.fullNameTown : nil
     }
 
-    // -initialTab PortfolioViaClubs ⇒ push the shared preset member's portfolio and jump its
-    // Juicebox-Pro gallery to the preset image (#777). Member, club, and image number live in
+    // -initialTab PortfolioViaClubs, PortfolioPortrait or PortfolioLandscape ⇒ push the preset member's portfolio
+    // and show the preset image in its Juicebox-Pro gallery (#777, #880). Member, club, and image file name live in
     // ScreenshotReadiness, shared with the PortfolioViaPeople twin (PhotographersListView2627).
-    var portfolioPresetActive: Bool { initialTabArgument == "portfolioviaclubs" }
+    var portfolioPresetActive: Bool { ScreenshotReadiness.isPortfolioViaClubsTab }
 
     /// Applies the screenshot-pipeline preset (at most one is active per launch, keyed off `-initialTab`):
     /// - `Clubs`: scrolls the `List` to a target `Section` by its `.id()`. A `List` cannot use
@@ -83,7 +85,7 @@ extension MemberPortfolioView {
             }
         } else if portfolioPresetActive,
                   let member = scrollPresetMembers.first(where: {
-                      $0.photographer.fullNameFirstLast == ScreenshotReadiness.portfolioPresetMemberName
+                      $0.photographer.fullNameFirstLast == ScreenshotReadiness.portfolioPreset?.memberName
                   }) {
             didApplyPreset = true
             var transaction = Transaction()

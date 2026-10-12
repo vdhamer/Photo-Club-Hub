@@ -13,7 +13,7 @@
 #     PortfolioViaClubs_en_light.jpg  vs  PortfolioViaPeople_en_light.jpg
 #     Same portfolio and gallery image reached via two different navigation routes.
 #
-# Pass criterion regarding jpg file lengths: max/min < 1.01 for each pair while file lenths are not identical
+# Pass criterion regarding jpg file lengths: max/min < MAX_SIZE_RATIO for each pair while file lengths are not identical
 # On success the four test images are deleted; on failure they are kept for inspection.
 #
 # Usage: verify-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>]
@@ -49,7 +49,7 @@ MAX_SIZE_RATIO=1.05  # max/min file-size ratio above which a pair is considered 
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
-# Default output: scripts/screenshots_verify/ (separate from scripts/screenshots/).
+# Default output: scripts/screenshots/screenshots_verify/ (separate from scripts/screenshots/output/).
 # Deleted on success; kept on failure for inspection.
 OUT_DIR="${SCRIPT_DIR}/screenshots_verify"
 

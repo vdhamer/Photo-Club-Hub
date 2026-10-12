@@ -81,10 +81,11 @@ extension PhotographersListView2627 {
             withTransaction(transaction) { scrollPositionID = photographer.id }
             signalWhenThumbnailsReady(for: photographer) // #776: tells capture script to stop waiting
         } else if portfolioPresetActive,
+                  let preset = ScreenshotReadiness.portfolioPreset,
                   let member = photographers
-                      .first(where: { $0.fullNameFirstLast == ScreenshotReadiness.portfolioPresetMemberName })?
+                      .first(where: { $0.fullNameFirstLast == preset.memberName })?
                       .memberships
-                      .first(where: { $0.organization.fullName == ScreenshotReadiness.portfolioPresetClubName }) {
+                      .first(where: { ScreenshotReadiness.OrganizationTarget($0.organization) == preset.club }) {
             didApplyPreset = true
             var transaction = Transaction()
             transaction.disablesAnimations = true

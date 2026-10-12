@@ -19,7 +19,7 @@
       }
     },
     "“Current members” includes “current club officers”" : {
-      "comment" : "Shown when \"Show current club officers\" entry is missing in Preferences. Trickery with double quotes!",
+      "comment" : "Shown when \"Show current club officers\" entry is missing in Preferences",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -36,7 +36,7 @@
       }
     },
     "“Former members” includes “deceased members”" : {
-      "comment" : "Shown when \"Show deceased members\" entry is missing in Preferences. Trickery with double quotes!",
+      "comment" : "Shown when \"Show deceased members\" entry is missing in Preferences",
       "localizations" : {
         "en" : {
           "stringUnit" : {

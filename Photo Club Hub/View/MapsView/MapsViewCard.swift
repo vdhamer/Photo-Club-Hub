@@ -83,6 +83,10 @@ struct MapsViewCard: View {
             guard !Task.isCancelled else { return }
             withAnimation(.easeIn(duration: Self.fadeInSeconds)) { isDelayOver = true }
         }
+        .onAppear {
+            // Screenshot pipeline only (#880): `-initialTab MapsMuseum3D` shows this one map unlocked. No-op otherwise.
+            if MapsScreenshotPreset.startsUnlocked(organization) { isMapScrollLocked = false }
+        }
         .onDisappear {
             // Otherwise, scrolling back during a fast fling would make every card seen before create its map at once.
             if isMapScrollLocked { isDelayOver = false }

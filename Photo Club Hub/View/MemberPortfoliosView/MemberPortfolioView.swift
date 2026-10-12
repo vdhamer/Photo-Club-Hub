@@ -48,10 +48,11 @@ struct MemberPortfolioView: View {
     // itself (Level 1) loads earlier and is therefore not a sufficient readiness signal.
     // `showingReadmeSheet`: set to true by the Readme preset to present the ReadmeView sheet (#777).
     @FetchRequest(sortDescriptors: [],
-                  predicate: NSPredicate(format: "organization_.fullName_ = %@",
-                                         ScreenshotReadiness.portfolioPresetClubName),
+                  predicate: NSPredicate(format: "organization_.fullName_ = %@ AND organization_.town_ = %@",
+                                         ScreenshotReadiness.clubsTabPresetClub.fullName,
+                                         ScreenshotReadiness.clubsTabPresetClub.town),
                   animation: .default)
-    var scrollPresetMembers: FetchedResults<MemberPortfolio> // could theoretically be multiple (in different Towns)
+    var scrollPresetMembers: FetchedResults<MemberPortfolio>
     @State var didApplyPreset = false
     @State var showingReadmeSheet = false
 
@@ -85,8 +86,8 @@ struct MemberPortfolioView: View {
                                             """))
             .navigationDestination(item: $selectedPortfolio) { member in
                 SinglePortfolioView(url: member.level3URL, webView: wkWebView,
-                                    presetImageIndex: portfolioPresetActive ?
-                                        ScreenshotReadiness.portfolioPresetImageIndex : nil)
+                                    presetImageFileName: portfolioPresetActive ?
+                                        ScreenshotReadiness.portfolioPreset?.imageFileName : nil)
                 .navigationTitle(member.photographer.fullNameFirstLast + " @ " +
                                  (horSizeClass == .compact ? member.organization.nickName :
                                     member.organization.fullName))

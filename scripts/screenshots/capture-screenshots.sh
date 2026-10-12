@@ -54,7 +54,7 @@
 #   --ios-version <version>
 #                   Narrow the auto-pick to a specific iOS runtime (default: auto-detect
 #                   the latest installed runtime). Ignored when --udid is set.
-#   --out <dir>     Override the output directory (default: <repo>/scripts/screenshots).
+#   --out <dir>     Override the output directory (default: <repo>/scripts/screenshots/output).
 #   --keep-booted   Do not shut the simulator down when finished.
 #   --no-png        Only keep the flattened JPGs; discard the transparent-background PNGs
 #                   (default: keep both).
@@ -76,7 +76,7 @@
 #                     iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796  (optional)
 #                     iPad Pro 13-inch (M5), iPad Pro 13-inch (M4), iPad Air 13-inch (M4)  →  2064 × 2752
 #                       (13": REQUIRED when the app runs on iPad)
-#                   Any other device: target a supported one via PREFERRED_DEVICE or --udid.
+#                   Any other device: target a supported one by setting PREFERRED_DEVICE in this script, or with --udid.
 #
 # ---------------------------------------------------------------------------
 # Screenshot-related arguments of the app itself:
@@ -474,7 +474,7 @@ if [[ "${RESCALE}" -eq 1 ]]; then
         echo "         iPhone 18 Pro Max, iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868" >&2
         echo "         iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796" >&2
         echo "         iPad Pro 13-inch (M5), iPad Pro 13-inch (M4), iPad Air 13-inch (M4)  →  2064 × 2752" >&2
-        echo "       Re-run with PREFERRED_DEVICE=\"iPhone 17 Pro Max\" or --udid <UDID of a supported device>." >&2
+        echo "       Set PREFERRED_DEVICE in this script to a supported device, or re-run with --udid <UDID of one>." >&2
         exit 2
     }
     TARGET_W="${APP_STORE_SIZE%%x*}"

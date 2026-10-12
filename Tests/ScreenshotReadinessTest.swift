@@ -18,6 +18,8 @@ import Foundation
 @Suite("Tests the ScreenshotReadiness marker-file and launch-arg logic", .serialized)
 struct ScreenshotReadinessTests {
 
+    private let initialTabKey: String = "initialTab" // key of temporary UserDefault setting
+
     // Mirrors the private ScreenshotReadiness.markerURL.
     private let markerURL: URL = FileManager.default
         .urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -25,7 +27,7 @@ struct ScreenshotReadinessTests {
 
     // Resets shared state before and after each test (belt and suspenders).
     private func cleanup() {
-        UserDefaults.standard.removeObject(forKey: "initialTab")
+        UserDefaults.standard.removeObject(forKey: initialTabKey)
         try? FileManager.default.removeItem(at: markerURL)
     }
 
@@ -34,7 +36,7 @@ struct ScreenshotReadinessTests {
     @Test("signalReady writes the marker when initialTab matches")
     func signalReadyWritesMarkerOnMatch() {
         cleanup(); defer { cleanup() }
-        UserDefaults.standard.set("clubs", forKey: "initialTab")
+        UserDefaults.standard.set("clubs", forKey: initialTabKey)
         ScreenshotReadiness.signalReady(for: "Clubs")
         #expect(FileManager.default.fileExists(atPath: markerURL.path))
     }
@@ -42,7 +44,7 @@ struct ScreenshotReadinessTests {
     @Test("signalReady skips the marker when initialTab does not match")
     func signalReadySkipsMarkerOnMismatch() {
         cleanup(); defer { cleanup() }
-        UserDefaults.standard.set("maps", forKey: "initialTab")
+        UserDefaults.standard.set("maps", forKey: initialTabKey)
         ScreenshotReadiness.signalReady(for: "Clubs")
         #expect(!FileManager.default.fileExists(atPath: markerURL.path))
     }
@@ -50,7 +52,7 @@ struct ScreenshotReadinessTests {
     @Test("signalReady matching is case-insensitive")
     func signalReadyCaseInsensitive() {
         cleanup(); defer { cleanup() }
-        UserDefaults.standard.set("CLUBS", forKey: "initialTab")
+        UserDefaults.standard.set("CLUBS", forKey: initialTabKey)
         ScreenshotReadiness.signalReady(for: "clubs")
         #expect(FileManager.default.fileExists(atPath: markerURL.path))
     }
@@ -68,7 +70,7 @@ struct ScreenshotReadinessTests {
     func resetDeletesMarker() throws {
         cleanup(); defer { cleanup() }
         try Data().write(to: markerURL)
-        UserDefaults.standard.set("clubs", forKey: "initialTab")
+        UserDefaults.standard.set("clubs", forKey: initialTabKey)
         ScreenshotReadiness.reset()
         #expect(FileManager.default.fileExists(atPath: markerURL.path) == false)
     }
@@ -87,7 +89,7 @@ struct ScreenshotReadinessTests {
     @Test("signalReadyForPortfolioPreset writes the marker for PortfolioViaClubs")
     func portfolioPresetSignalsViaClubs() {
         cleanup(); defer { cleanup() }
-        UserDefaults.standard.set("portfolioviaclubs", forKey: "initialTab")
+        UserDefaults.standard.set("portfolioviaclubs", forKey: initialTabKey)
         ScreenshotReadiness.signalReadyForPortfolioPreset()
         #expect(FileManager.default.fileExists(atPath: markerURL.path))
     }
@@ -95,9 +97,68 @@ struct ScreenshotReadinessTests {
     @Test("signalReadyForPortfolioPreset writes the marker for PortfolioViaPeople")
     func portfolioPresetSignalsViaPeople() {
         cleanup(); defer { cleanup() }
-        UserDefaults.standard.set("portfolioviapeople", forKey: "initialTab")
+        UserDefaults.standard.set("portfolioviapeople", forKey: initialTabKey)
         ScreenshotReadiness.signalReadyForPortfolioPreset()
         #expect(FileManager.default.fileExists(atPath: markerURL.path))
+    }
+
+    @Test("signalReadyForPortfolioPreset writes the marker for PortfolioPortrait and PortfolioLandscape (#880)")
+    func portfolioPresetSignalsPortraitAndLandscape() {
+        for screen in ["portfolioportrait", "portfoliolandscape"] {
+            cleanup(); defer { cleanup() }
+            UserDefaults.standard.set(screen, forKey: initialTabKey)
+            ScreenshotReadiness.signalReadyForPortfolioPreset()
+            #expect(FileManager.default.fileExists(atPath: markerURL.path), "no marker for \(screen)")
+        }
+    }
+
+    @Test("signalReadyForPortfolioPreset writes no marker outside the Portfolio screens")
+    func portfolioPresetSignalsNothingElsewhere() {
+        cleanup(); defer { cleanup() }
+        UserDefaults.standard.set("maps", forKey: initialTabKey)
+        ScreenshotReadiness.signalReadyForPortfolioPreset()
+        #expect(FileManager.default.fileExists(atPath: markerURL.path) == false)
+    }
+
+    // MARK: - portfolioPreset (#880)
+
+    @Test("Each Portfolio screen has a preset with an image file name; other screens have none")
+    func portfolioPresetPerScreen() {
+        cleanup(); defer { cleanup() }
+        for screen in ["portfolioviaclubs", "portfolioviapeople", "portfolioportrait", "portfoliolandscape"] {
+            UserDefaults.standard.set(screen, forKey: initialTabKey)
+            let preset = ScreenshotReadiness.portfolioPreset
+            #expect(preset != nil, "no preset for \(screen)")
+            #expect(preset?.imageFileName.hasSuffix(".jpg") == true, "\(screen) names no .jpg file")
+        }
+        UserDefaults.standard.set("clubs", forKey: initialTabKey)
+        #expect(ScreenshotReadiness.portfolioPreset == nil)
+    }
+
+    @Test("Only PortfolioViaPeople starts from the People tab")
+    func portfolioPresetStartingTab() {
+        cleanup(); defer { cleanup() }
+        for screen in ["portfolioviaclubs", "portfolioportrait", "portfoliolandscape"] {
+            UserDefaults.standard.set(screen, forKey: initialTabKey)
+            #expect(ScreenshotReadiness.isPortfolioViaClubsTab, "\(screen) should start from the Clubs tab")
+        }
+        UserDefaults.standard.set("portfolioviapeople", forKey: initialTabKey)
+        #expect(ScreenshotReadiness.isPortfolioViaClubsTab == false)
+    }
+
+    // MARK: - MapsScreenshotPreset (#880)
+
+    @Test("Maps, MapsMuseum and MapsMuseum3D are Maps screens; others are not")
+    func mapsPresetScreens() {
+        cleanup(); defer { cleanup() }
+        for screen in ["maps", "mapsmuseum", "mapsmuseum3d"] {
+            UserDefaults.standard.set(screen, forKey: initialTabKey)
+            #expect(MapsScreenshotPreset.screen == screen)
+        }
+        UserDefaults.standard.set("clubs", forKey: initialTabKey)
+        #expect(MapsScreenshotPreset.screen == nil)
+        UserDefaults.standard.removeObject(forKey: initialTabKey)
+        #expect(MapsScreenshotPreset.screen == nil)
     }
 
 }

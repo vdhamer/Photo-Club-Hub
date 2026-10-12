@@ -157,8 +157,9 @@ iOSInjectionProject/
 # Claude Code personal (per-project) settings
 .claude/settings.local.json
 
-# Generated documentation screenshots (scripts/screenshots/capture-screenshots.sh, issue #775)
-scripts/screenshots/output/
+# Generated documentation screenshots (scripts/screenshots/capture-screenshots.sh, issue #775):
+# the default output/ plus folders such as output_303/ chosen with --out
+scripts/screenshots/output*/
 
 # Temporary test images from verify-screenshots.sh (deleted on pass, kept on failure)
 scripts/screenshots/screenshots_verify/

@@ -6,23 +6,39 @@
 //
 
 import WebKit // for WKWebView, WKUserScript, WKNavigationDelegate
+import UIKit  // for UIWindowScene, to turn the device sideways for PortfolioLandscape
 
 // Screenshot pipeline only (#777) — no role in normal app use.
 // Kept out of SinglePortfolioView.swift so the mainstream code stays uncluttered. The
-// counterpart stored property (`presetImageIndex`) remains in SinglePortfolioView itself;
+// counterpart stored property (`presetImageFileName`) remains in SinglePortfolioView itself;
 // it is nil in normal use, which makes everything in this file a no-op.
 extension SinglePortfolioView {
 
-    /// Called from `makeUIView`. In normal use (`presetImageIndex == nil`) this does nothing,
+    /// Called from `makeUIView`. In normal use (`presetImageFileName == nil`) this does nothing,
     /// leaving the web view completely untouched: no injected script, no navigation delegate.
     func configureForScreenshotCapture(context: Context) {
-        guard presetImageIndex != nil else { return }
+        guard presetImageFileName != nil else { return }
         installJuiceboxTrap()
         webView.navigationDelegate = context.coordinator
+        turnSidewaysIfLandscapePreset()
     }
 
     func makeCoordinator() -> ScreenshotCoordinator {
-        ScreenshotCoordinator(presetImageIndex: presetImageIndex)
+        ScreenshotCoordinator(presetImageFileName: presetImageFileName)
+    }
+
+    /// PortfolioLandscape (#880) only: asks iOS to show the app in landscape. Neither `simctl` nor the RocketSim CLI
+    /// can rotate a simulator, so the app turns itself. The request is honored because the app supports landscape
+    /// on iPhone; the next launch of any other screen starts in portrait again.
+    private func turnSidewaysIfLandscapePreset() {
+        guard UserDefaults.standard.string(forKey: "initialTab")?.lowercased() == "portfoliolandscape" else { return }
+        Task { @MainActor in
+            let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+            guard let scene = scenes.first else { return }
+            scene.requestGeometryUpdate(.iOS(interfaceOrientations: .landscapeRight)) { error in
+                print("PortfolioLandscape: could not turn sideways: \(error.localizedDescription)")
+            }
+        }
     }
 
     /// Injects a script (at document start, before the site's own scripts run) that captures the
@@ -66,36 +82,58 @@ extension SinglePortfolioView {
         """
 
     /// In screenshot mode (#777), waits for the Juicebox gallery to come alive after `didFinish`
-    /// (gallery construction and image loading continue asynchronously), then jumps it to
-    /// `presetImageIndex`. All JavaScript is guarded, so the polling quietly times out on
+    /// (gallery construction and image loading continue asynchronously), then looks up the image whose file name
+    /// is `presetImageFileName` and shows it (#880). All JavaScript is guarded, so the polling quietly times out on
     /// non-Juicebox sites without affecting what they display.
     final class ScreenshotCoordinator: NSObject, WKNavigationDelegate {
 
-        private let presetImageIndex: Int?
+        private let presetImageFileName: String?
 
-        init(presetImageIndex: Int?) {
-            self.presetImageIndex = presetImageIndex
+        init(presetImageFileName: String?) {
+            self.presetImageFileName = presetImageFileName
         }
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            guard let presetImageIndex else { return }
+            guard let presetImageFileName else { return }
+            // The file name goes into the script as a JSON string literal, so any quote in it stays harmless.
+            let quotedFileName = (try? JSONEncoder().encode(presetImageFileName))
+                .flatMap { String(data: $0, encoding: .utf8) } ?? "\"\""
+            // Returns 'pending' until the gallery and its image list exist, then 'missing' or 'shown'.
+            // Juicebox-Pro numbers its images from 1; `imageURL` is relative to the gallery, e.g. "images/x.jpg".
             let jumpScript = """
                 (function () {
                     var jb = window.__jbInstance;
-                    if (!jb || typeof jb.showImage !== 'function') { return 'pending'; }
-                    var index = (typeof jb.getImageIndex === 'function') ? jb.getImageIndex() : -1;
-                    if (index !== \(presetImageIndex)) { jb.showImage(\(presetImageIndex)); }
-                    return String(index);
+                    if (!jb || typeof jb.showImage !== 'function' || typeof jb.getImageCount !== 'function' ||
+                        typeof jb.getImageInfo !== 'function') { return 'pending'; }
+                    var count = jb.getImageCount();
+                    if (!count) { return 'pending'; }
+                    var wanted = \(quotedFileName);
+                    for (var i = 1; i <= count; i++) {
+                        var info = jb.getImageInfo(i);
+                        var url = info && info.imageURL ? String(info.imageURL) : '';
+                        if (url.split('?')[0].split('/').pop() === wanted) {
+                            var index = (typeof jb.getImageIndex === 'function') ? jb.getImageIndex() : -1;
+                            if (index === i) { return 'shown'; }
+                            jb.showImage(i);
+                            return 'pending';
+                        }
+                    }
+                    return 'missing';
                 })();
                 """
             Task { @MainActor in
-                // Signal readiness (#776) both on success and after the timeout: on a
+                // Signal readiness (#776) on success, on a missing image and after the timeout: on a
                 // non-Juicebox site the capture then simply shows that site's opening screen.
-                defer { ScreenshotReadiness.signalReadyForPortfolioPreset() } // ViaClubs or ViaPeople
+                defer { ScreenshotReadiness.signalReadyForPortfolioPreset() }
                 for _ in 0..<20 { // poll for up to ~10 s; times out harmlessly on non-Juicebox sites
                     let result = try? await webView.evaluateJavaScript(jumpScript)
-                    if let index = result as? String, index == String(presetImageIndex) { return }
-                    try? await Task.sleep(for: .milliseconds(500))
+                    switch result as? String {
+                    case "shown": return
+                    case "missing":
+                        print("Screenshot preset: no image named \(presetImageFileName) in this gallery")
+                        return
+                    default: try? await Task.sleep(for: .milliseconds(500))
+                    }
                 }
             }
         }
