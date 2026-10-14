@@ -6,7 +6,6 @@
 //
 
 import WebKit // for WKWebView, WKUserScript, WKNavigationDelegate
-import UIKit  // for UIWindowScene, to turn the device sideways for PortfolioLandscape
 
 // Screenshot pipeline only (#777) — no role in normal app use.
 // Kept out of SinglePortfolioView.swift so the mainstream code stays uncluttered. The
@@ -20,25 +19,10 @@ extension SinglePortfolioView {
         guard presetImageFileName != nil else { return }
         installJuiceboxTrap()
         webView.navigationDelegate = context.coordinator
-        turnSidewaysIfLandscapePreset()
     }
 
     func makeCoordinator() -> ScreenshotCoordinator {
         ScreenshotCoordinator(presetImageFileName: presetImageFileName)
-    }
-
-    /// PortfolioLandscape (#880) only: asks iOS to show the app in landscape. Neither `simctl` nor the RocketSim CLI
-    /// can rotate a simulator, so the app turns itself. The request is honored because the app supports landscape
-    /// on iPhone; the next launch of any other screen starts in portrait again.
-    private func turnSidewaysIfLandscapePreset() {
-        guard UserDefaults.standard.string(forKey: "initialTab")?.lowercased() == "portfoliolandscape" else { return }
-        Task { @MainActor in
-            let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
-            guard let scene = scenes.first else { return }
-            scene.requestGeometryUpdate(.iOS(interfaceOrientations: .landscapeRight)) { error in
-                print("PortfolioLandscape: could not turn sideways: \(error.localizedDescription)")
-            }
-        }
     }
 
     /// Injects a script (at document start, before the site's own scripts run) that captures the

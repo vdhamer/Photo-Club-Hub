@@ -49,6 +49,7 @@ struct RootView: View {
                 .opacity(showPrelude ? 1 : 0)
                 .allowsHitTesting(showPrelude) // stop reacting to taps and gestures
         }
+        .task { ScreenshotReadiness.applyScreenshotOrientation() } // screenshot mode only (#881); no-op otherwise
         .onAppear {
             if !Settings.manualDataLoading && !isRunningTests && !isRunningInPreviews {
                 ClubLoadCoordinator.shared.loadIfIdle()
@@ -81,6 +82,6 @@ struct RootView: View {
 // Believe it or not, this preview works.
 
 #Preview {
-    RootView()
+    RootView() // launches entire app on canvas
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

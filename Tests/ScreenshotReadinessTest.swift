@@ -7,6 +7,7 @@
 
 import Testing
 import Foundation
+import UIKit // for UIInterfaceOrientationMask
 @testable import Photo_Club_Hub
 
 // UserDefaults.standard["initialTab"] and the Documents/screenshot-ready marker file are global singletons,
@@ -159,6 +160,19 @@ struct ScreenshotReadinessTests {
         #expect(MapsScreenshotPreset.screen == nil)
         UserDefaults.standard.removeObject(forKey: initialTabKey)
         #expect(MapsScreenshotPreset.screen == nil)
+    }
+
+    // MARK: - screenshotOrientation (#881)
+
+    @Test("PortfolioLandscape asks for landscape, every other screen for portrait, normal use for nothing")
+    func screenshotOrientationPerScreen() {
+        #expect(ScreenshotReadiness.screenshotOrientation(forInitialTab: "PortfolioLandscape") == .landscapeRight)
+        let otherScreens = ["Maps", "MapsMuseum3D", "Clubs", "PortfolioPortrait", "PortfolioViaClubs",
+                            "Readme", "Settings"]
+        for screen in otherScreens {
+            #expect(ScreenshotReadiness.screenshotOrientation(forInitialTab: screen) == .portrait, "\(screen)")
+        }
+        #expect(ScreenshotReadiness.screenshotOrientation(forInitialTab: nil) == nil)
     }
 
 }

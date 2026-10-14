@@ -7,11 +7,12 @@
 
 import Foundation          // for UserDefaults, FileManager, Data, URL
 import TipKit              // for Tips.hideAllTipsForTesting
+import UIKit               // for UIWindowScene and UIInterfaceOrientationMask, to set the orientation per screen
 import Photo_Club_Hub_Data // for Organization
 
 /// Screenshot pipeline (#776): Lets each screen signal "my target/preset content is now on screen"
-/// to `capture-screenshots.sh`. Only does anything if the app was launched with `-initialTab`
-/// (= app is in special screenshot mode).
+/// to `capture-screenshots.sh`. Doesn't do anything unless the app was launched
+/// in special screenshot mode via `-initialTab`.
 ///
 /// The script polls for a marker file in the app's Documents directory (located via
 /// `simctl get_app_container <UDID> <bundle> data`) instead of relying
@@ -103,6 +104,34 @@ enum ScreenshotReadiness {
         reset()
         if UserDefaults.standard.bool(forKey: "suppressTips") { // launch arguments -> not persisted by UserDefaults
             Tips.hideAllTipsForTesting()
+        }
+    }
+
+    // MARK: - orientation
+
+    /// The orientation a screen is captured in: landscape for PortfolioLandscape, portrait for every other screen,
+    /// nil outside screenshot mode. Every screen asks, rather than only the landscape one, because the app's last
+    /// requested orientation outlives the launch, even a reboot of the simulator: after PortfolioLandscape, later
+    /// launches of other screens came up sideways (#881).
+    static func screenshotOrientation(forInitialTab initialTab: String?) -> UIInterfaceOrientationMask? {
+        guard let initialTab else { return nil }
+        return initialTab.lowercased() == "portfoliolandscape" ? .landscapeRight : .portrait
+    }
+
+    /// Asks iOS for the current screen's orientation (see `screenshotOrientation(forInitialTab:)`).
+    /// Called once per launch from `RootView`, when a window scene exists.
+    /// Neither `simctl` nor the RocketSim CLI can rotate a simulator, so the app turns itself.
+    /// That works on an iPhone and a folded iPhone Duo. iPadOS 26 and later refuse it ("The current windowing mode
+    /// does not allow for programmatic changes to interface orientation", also with Full Screen Apps), so on an iPad
+    /// `capture-screenshots.sh` asks for the iPad to be rotated by hand instead.
+    @MainActor
+    static func applyScreenshotOrientation() {
+        let initialTab = UserDefaults.standard.string(forKey: "initialTab") // launch argument, not persisted
+        guard let orientation = screenshotOrientation(forInitialTab: initialTab),
+              let scene = UIApplication.shared.connectedScenes.compactMap({ $0 as? UIWindowScene }).first
+            else { return }
+        scene.requestGeometryUpdate(.iOS(interfaceOrientations: orientation)) { error in
+            print("Screenshot preset: could not set the orientation: \(error.localizedDescription)")
         }
     }
 
