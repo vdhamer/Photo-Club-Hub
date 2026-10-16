@@ -14,8 +14,8 @@
                 "nickName": "fcAfovera"
             },
             "coordinates": {
-                "latitude": 53.00658,
-                "longitude": 6.54594
+                "latitude": 52.98786,
+                "longitude": 6.54936
             },
             "optional": {
                 "website": "https://www.afovera.nl",
@@ -23,11 +23,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Afovera bestaat al meer dan 50 jaar. Foto’s worden getoond en besproken in een gezellige sfeer."
+                        "value": "Een kleine club die bewust klein wil blijven en elke maand samen op fototocht gaat."
                     },
                     {
                         "language": "EN",
-                        "value": "Afovera was founded over 50 years ago. Photos are presented and reviewed in a friendly atmosphere."
+                        "value": "A small club that deliberately intends to stay small, and that holds a joint monthly photo outing."
                     }
                 ],
                 "maintainerEmail": "karel@stooptech.nl",
@@ -53,11 +53,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Bij BeFoAm proberen we elkaar te stimuleren steeds creatiever en perfecter werk af te leveren. Meerdere vrijetijdsfotografen hebben prijzen behaald met hun werk."
+                        "value": "BeFoAm staat voor Beiler Foto Amateurs. De club bespreekt alleen geprinte foto’s, bij voorkeur in passe-partout."
                     },
                     {
                         "language": "EN",
-                        "value": "At BeFoAm, we strive to encourage each other to deliver increasingly creative and perfect work. Several amateur photographers have won awards for their work."
+                        "value": "BeFoAm stands for Beiler Foto Amateurs (Beilen photo amateurs). The club discusses printed photos only, preferably matted."
                     }
                 ],
                 "nlSpecific": {
@@ -69,7 +69,7 @@
         {
             "idPlus": {
                 "town": "Beilen",
-                "fullName": "Vereniging Natuurfotografen Drenthe",
+                "fullName": "Vereniging van Natuurfotografen Drenthe",
                 "nickName": "vnfDrenthe"
             },
             "coordinates": {
@@ -82,16 +82,16 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "De leden komen uit Drenthe, Friesland en Groningen."
+                        "value": "Vereniging van natuur- en landschapsfotografen die zich richt op Drenthe."
                     },
                     {
                         "language": "EN",
-                        "value": "The club does nature photography. Its members come from Drenthe, Friesland and Groningen."
+                        "value": "An association of nature and landscape photographers that focuses on the Drenthe region."
                     }
                 ]
             }
         },
-
+        
         {
             "idPlus": {
                 "town": "Borger",
@@ -108,11 +108,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "FC Borger probeert op een positieve manier alle leden een platform te bieden waarop ze hun hobby kunnen beoefenen."
+                        "value": "Begonnen in 2009 door enkele natuurfotografen, nu een algemene club met thema’s per seizoen."
                     },
                     {
                         "language": "EN",
-                        "value": "FC Borger tries to offer all members a positive platform for practicing their hobby."
+                        "value": "Started in 2009 by a few nature photographers, now a general club with seasonal themes."
                     }
                 ]
             }
@@ -120,54 +120,51 @@
         
         {
             "idPlus": {
-                "town": "Gieten",
-                "fullName": "Fotoclub GiAF",
-                "nickName": "fcGiaf"
+                "town": "Coevorden",
+                "fullName": "Amateur Fotografen Vereniging Goed Licht",
+                "nickName": "afvGoedLicht"
             },
             "coordinates": {
-                "latitude": 53.00585,
-                "longitude": 6.76427
+                "latitude": 52.66323,
+                "longitude": 6.74255
             },
             "optional": {
-                "website": "https://www.giaf.nl",
-                "level2URL": "http://www.example.com/fcGiaf.level2.json",
+                "website": "https://www.afvgoedlicht.nl",
+                "level2URL": "https://www.example.com/afvGoedLicht.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Het doel van GiAF is het stimuleren en enthousiasmeren van de amateurfotografie in de meest brede zin van het woord."
+                        "value": "De club kort haar naam vaak af tot AFV Goed Licht."
                     },
                     {
                         "language": "EN",
-                        "value": "The aim of GiAF is to stimulate and inspire amateur photography in the broadest sense of the word."
+                        "value": "Often abbreviated to AFV Goed Licht."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 306
-                }
+                ]
             }
         },
         
         {
             "idPlus": {
-                "town": "Hardenberg",
-                "fullName": "Fotocollectief Hardenberg",
-                "nickName": "fcHardenberg"
+                "town": "Dalfsen",
+                "fullName": "Fotoclub Dalfsen",
+                "nickName": "fcDalfsen"
             },
             "coordinates": {
-                "latitude": 52.56913,
-                "longitude": 6.62204
+                "latitude": 52.51038,
+                "longitude": 6.25316
             },
             "optional": {
-                "website": "https://www.fotocollectiefhardenberg.nl/",
-                "level2URL": "http://www.example.com/fcHardenberg.level2.json",
+                "website": "https://www.fotoclub-dalfsen.nl",
+                "level2URL": "https://www.example.com/fcDalfsen.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "We hebben een gevarieerd jaarprogramma: fotobespreking en tips, adviezen over technische aspecten, cursussen, foto's maken rond thema's, kettingfoto, exposities samenstellen, enz."
+                        "value": "Elk seizoen twee gelijktijdige fotokettingen vanuit eenzelfde startfoto: ieder lid ontvangt alleen de voorgaande foto."
                     },
                     {
                         "language": "EN",
-                        "value": "We offer a varied annual program: photo discussions and tips, advice on technical aspects, courses, themed photography, chain photography, exhibition curation, and more."
+                        "value": "Each season two photo chains grow from the same starting photo; every member sees only the photo they receive."
                     }
                 ]
             }
@@ -203,6 +200,87 @@
         
         {
             "idPlus": {
+                "town": "Emmen",
+                "fullName": "FotoFun Emmen",
+                "nickName": "fotoFunEmmen"
+            },
+            "coordinates": {
+                "latitude": 52.77834,
+                "longitude": 6.90113
+            },
+            "optional": {
+                "website": "https://www.fotofunemmen.nl",
+                "level2URL": "https://www.example.com/fotoFunEmmen.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Elk thema gaat in drie stappen met 2 weken per stap: introductieavond, gezamenlijke doedag (fotograferen) en een bespreekavond."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Each topic runs in three steps, two weeks apart: an introduction evening, a joint shooting day and a review evening."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Gieten",
+                "fullName": "Fotoclub GiAF",
+                "nickName": "fcGiaf"
+            },
+            "coordinates": {
+                "latitude": 53.00585,
+                "longitude": 6.76427
+            },
+            "optional": {
+                "website": "https://www.giaf.nl",
+                "level2URL": "http://www.example.com/fcGiaf.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Opgericht op 26 oktober 1960. GiAF staat voor Gieter Amateurfotografen; de leden komen inmiddels uit de wijde omtrek."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Founded on 26 October 1960. GiAF stands for Gieter Amateurfotografen (Gieten amateur photographers); its members now come from a wide area around the village."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 306
+                }
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Hardenberg",
+                "fullName": "Fotocollectief Hardenberg",
+                "nickName": "fcHardenberg"
+            },
+            "coordinates": {
+                "latitude": 52.56913,
+                "longitude": 6.62204
+            },
+            "optional": {
+                "website": "https://www.fotocollectiefhardenberg.nl/",
+                "level2URL": "http://www.example.com/fcHardenberg.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Opgericht op 24 mei 2006 door oud-leden van fotogroep OWASE van Wavin."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Founded on 24 May 2006 by former members of OWASE, the photo group of the company Wavin."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
                 "town": "Hoogeveen",
                 "fullName": "Fotogroep Hoogeveen",
                 "nickName": "fgHoogeveen"
@@ -217,11 +295,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Beginnende en ervaren fotografen: iedereen is welkom. Samen delen we kennis en inspiratie."
+                        "value": "Bespreekt foto’s aan de hand van erkende methodes, zoals de Manders-driehoek en de methode van Tom Meerman."
                     },
                     {
                         "language": "EN",
-                        "value": "Beginning and experienced photographers alike: everyone is welcome. Together we'll share knowledge and inspiration."
+                        "value": "Discusses photos using recognised methods, such as the Manders triangle and Tom Meerman’s method."
                     }
                 ],
                 "nlSpecific": {
@@ -233,7 +311,7 @@
         {
             "idPlus": {
                 "town": "Meppel",
-                "fullName": "Fotogroep Meppel e.o.",
+                "fullName": "Fotogroep Meppel",
                 "nickName": "fgMeppel"
             },
             "coordinates": {
@@ -246,11 +324,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Fotogroep Meppel heeft als doel het creatieve en technische niveau van de leden te verhogen."
+                        "value": "Opgericht op 21 februari 1955. Speerpunt is het bespreken van foto’s, zowel van de leden als van bekende fotografen."
                     },
                     {
                         "language": "EN",
-                        "value": "The aim of Fotogroep Meppel is to increase the creative and technical level of its members."
+                        "value": "Founded on 21 February 1955. Its focus is discussing photos, both by its members and by well-known photographers."
                     }
                 ],
                 "nlSpecific": {
@@ -261,8 +339,86 @@
         
         {
             "idPlus": {
+                "town": "Norg",
+                "fullName": "Fotoclub Noordenveld",
+                "nickName": "fcNoordenveld"
+            },
+            "coordinates": {
+                "latitude": 53.06766,
+                "longitude": 6.46117
+            },
+            "optional": {
+                "website": "https://www.fotoclubnoordenveld.nl",
+                "level2URL": "https://www.example.com/fcNoordenveld.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "De leden fotograferen ook voor maatschappelijke organisaties, bijvoorbeeld voor het jubileumboek van RUG400."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Its members also photograph for community organisations, for example for the RUG400 jubilee book of the University of Groningen."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Ommen",
+                "fullName": "Fotoclub Ommen",
+                "nickName": "fcOmmen"
+            },
+            "coordinates": {
+                "latitude": 52.5291,
+                "longitude": 6.41882
+            },
+            "optional": {
+                "website": "https://www.fotoclubommen.nl",
+                "level2URL": "https://www.example.com/fcOmmen.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Organiseert elk jaar een lezing door een gastfotograaf, ook toegankelijk voor niet-leden."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Hosts a yearly lecture by a guest photographer, open to non-members too."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Rolde",
+                "fullName": "Fotogroep Rolde",
+                "nickName": "fgRolde"
+            },
+            "coordinates": {
+                "latitude": 52.98292,
+                "longitude": 6.64729
+            },
+            "optional": {
+                "website": "https://www.fotogroeprolde.nl",
+                "level2URL": "https://www.example.com/fgRolde.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in januari 2012 op initiatief van twee inwoners van Rolde."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Founded in January 2012 on the initiative of two residents of Rolde."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
                 "town": "Ruinen",
-                "fullName": "Fotoclub De Wolden",
+                "fullName": "FotoClub De Wolden",
                 "nickName": "fcDWolden"
             },
             "coordinates": {
@@ -275,11 +431,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "We komen twee keer per maand bij elkaar, we bespreken foto's en technieken en ook gaan we samen op pad."
+                        "value": "Jaarlijks brengt ieder lid diens beste afdruk van het afgelopen seizoen mee, voor beoordeling door een extern jurylid."
                     },
                     {
                         "language": "EN",
-                        "value": "We meet twice a month, we discuss photos and techniques and we also go out together."
+                        "value": "At the end of each season, every member brings their best print, and an outside juror awards the prizes."
                     }
                 ]
             }
@@ -287,8 +443,34 @@
         
         {
             "idPlus": {
-                "town": "Westerveld",
-                "fullName": "Fotoclub Westerveld en Omstreken",
+                "town": "Spijkerboor",
+                "fullName": "Fotoclub Spijkerboor",
+                "nickName": "fcSpijkerboor"
+            },
+            "coordinates": {
+                "latitude": 53.07638,
+                "longitude": 6.76484
+            },
+            "optional": {
+                "website": "https://www.fotoclubspijkerboor.nl",
+                "level2URL": "https://www.example.com/fcSpijkerboor.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Maandelijks een opdracht of uitje, van light painting tot kapotgeschoten ballonnen; per lid terug te zien tot 2019."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "A monthly assignment or outing, from light painting to bursting balloons, viewable per member back to 2019."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Wapserveen",
+                "fullName": "Fotoclub Westerveld e.o.",
                 "nickName": "fcwesterveld"
             },
             "coordinates": {
@@ -301,11 +483,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Behalve de clubavond organiseren we fotoworkshops, lezingen en/of uitstapjes naar waardevolle of inspirerende foto-objecten/doelen of tentoonstellingen."
+                        "value": "Sluit elk seizoen af met een wedstrijd om de wisseltrofee “De Kei”."
                     },
                     {
                         "language": "EN",
-                        "value": "In addition to the club evening, we organize photo workshops, lectures and/or trips to worthwhile or inspiring places to photograph, or to exhibitions."
+                        "value": "Ends every season with a competition for a challenge trophy called “De Kei” (the boulder)."
                     }
                 ]
             }
