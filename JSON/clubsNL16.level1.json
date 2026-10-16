@@ -123,32 +123,6 @@
         {
             "idPlus": {
                 "town": "Best",
-                "fullName": "PVGE Best",
-                "nickName": "pvgeBest"
-            },
-            "coordinates": {
-                "latitude": 51.50975,
-                "longitude": 5.39411
-            },
-            "optional": {
-                "website": "https://www.pvge.nl/best/clubs/overige-clubs/fotoclub/",
-                "level2URL": "https://www.example.com/pvgeBest.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "PVGE was originally a society for retired employees of the Philips company."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "PVGE is oorspronkelijk Philips Vereniging van Gepensioneerden Eindhoven."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Best",
                 "fullName": "Fotogroep Best",
                 "nickName": "fgBest"
             },
@@ -219,6 +193,32 @@
                     {
                         "language": "NL",
                         "value": "Deze fotowerkgroep in Best maakt deel uit van de IVN (Instituut voor Natuurbeschermingseducatie)."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Best",
+                "fullName": "PVGE Best",
+                "nickName": "pvgeBest"
+            },
+            "coordinates": {
+                "latitude": 51.50975,
+                "longitude": 5.39411
+            },
+            "optional": {
+                "website": "https://www.pvge.nl/best/clubs/overige-clubs/fotoclub/",
+                "level2URL": "https://www.example.com/pvgeBest.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "PVGE was originally a society for retired employees of the Philips company."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "PVGE is oorspronkelijk Philips Vereniging van Gepensioneerden Eindhoven."
                     }
                 ]
             }
@@ -310,32 +310,6 @@
         {
             "idPlus": {
                 "town": "Den Bosch",
-                "fullName": "Fotogroep Argus",
-                "nickName": "fgArgus"
-            },
-            "coordinates": {
-                "latitude": 51.68806,
-                "longitude": 5.3075
-            },
-            "optional": {
-                "website": "https://argusfoto.nl/",
-                "level2URL": "https://www.example.com/fgArgus.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "With 7 members, the group is smallish (but aims to grow). Photo review sessions are held in living rooms."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De groep heeft 7 leden (met de ambitie om iets te groeien). Voor fotobesprekingen komt de groep en een mentor bijeen in een van de huiskamers."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Den Bosch",
                 "fullName": "Fotoclub Den Bosch AFC 68",
                 "nickName": "fcAFC68"
             },
@@ -382,6 +356,32 @@
                     {
                         "language": "NL",
                         "value": "ISO2016 heeft geen eigen website."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Den Bosch",
+                "fullName": "Fotogroep Argus",
+                "nickName": "fgArgus"
+            },
+            "coordinates": {
+                "latitude": 51.68806,
+                "longitude": 5.3075
+            },
+            "optional": {
+                "website": "https://argusfoto.nl/",
+                "level2URL": "https://www.example.com/fgArgus.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "With 7 members, the group is smallish (but aims to grow). Photo review sessions are held in living rooms."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De groep heeft 7 leden (met de ambitie om iets te groeien). Voor fotobesprekingen komt de groep en een mentor bijeen in een van de huiskamers."
                     }
                 ]
             }
@@ -500,32 +500,6 @@
         {
             "idPlus": {
                 "town": "Eersel",
-                "fullName": "Fotoclub Zzzoom",
-                "nickName": "fcZzzoom"
-            },
-            "coordinates": {
-                "latitude": 51.35712,
-                "longitude": 5.31062
-            },
-            "optional": {
-                "website": "https://www.zzzoom.nl",
-                "level2URL": "https://www.example.com/fcZzzoom.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Has held a club exhibition almost every year since 2009."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Houdt sinds 2009 vrijwel elk jaar een clubexpositie."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Eersel",
                 "fullName": "Fotoclub Lucifer",
                 "nickName": "fcLucifer"
             },
@@ -554,25 +528,50 @@
 
         {
             "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Dekate Mousa",
-                "nickName": "DekateMousa"
+                "town": "Eersel",
+                "fullName": "Fotoclub Zzzoom",
+                "nickName": "fcZzzoom"
             },
             "coordinates": {
-                "latitude": 51.44914,
-                "longitude": 5.48768
+                "latitude": 51.35712,
+                "longitude": 5.31062
             },
             "optional": {
-                "website": "https://dekatemousa.nl",
-                "level2URL": "https://www.example.com/DekateMousa.level2.json",
+                "website": "https://www.zzzoom.nl",
+                "level2URL": "https://www.example.com/fcZzzoom.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "The club is run by students of the local university and also caters to English-speaking students."
+                        "value": "Has held a club exhibition almost every year since 2009."
                     },
                     {
                         "language": "NL",
-                        "value": "De club is verbonden aan de TU/e en doet ook aan fotografiecursussen."
+                        "value": "Houdt sinds 2009 vrijwel elk jaar een clubexpositie."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "De Beeldmakers",
+                "nickName": "DeBeeldmakers"
+            },
+            "coordinates": {
+                "latitude": 51.44304,
+                "longitude": 5.51534
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/DeBeeldmakers.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The 2025 exposition in a local gallery in Eindhoven included a dance performance."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Tijdens de 2025 expositie in De Kruisruimte (Eindhoven) was er een bijbehorende dansvoorstelling."
                     }
                 ]
             }
@@ -607,6 +606,32 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "Dekate Mousa",
+                "nickName": "DekateMousa"
+            },
+            "coordinates": {
+                "latitude": 51.44914,
+                "longitude": 5.48768
+            },
+            "optional": {
+                "website": "https://dekatemousa.nl",
+                "level2URL": "https://www.example.com/DekateMousa.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club is run by students of the local university and also caters to English-speaking students."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club is verbonden aan de TU/e en doet ook aan fotografiecursussen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "Foto-videoclub DAF",
                 "nickName": "DAF"
             },
@@ -627,6 +652,64 @@
                         "value": "De club bestaat uit DAF-medewerkers en organiseert onder meer workshops op het DAF-terrein in Eindhoven, maar ook elders."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotoclub 't Karregat",
+                "nickName": "fcKarregat"
+            },
+            "coordinates": {
+                "latitude": 51.44798,
+                "longitude": 5.51988
+            },
+            "optional": {
+                "website": "https://www.fotoclubkarregat.nl/",
+                "level2URL": "https://www.example.com/fcKarregat.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club with up to 25 members meets in the former town hall of a municipality that is now part of Eindhoven."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Citaat: “Elk jaar wordt er tijdens de ALV een thema vastgelegd, waar we in het lopende jaar onder begeleiding van een mentor aan werken.”"
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1643
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotoclub Debuut",
+                "nickName": "fcDebuut"
+            },
+            "coordinates": {
+                "latitude": 51.4429,
+                "longitude": 5.5152
+            },
+            "optional": {
+                "website": "https://debuut.jimdofree.com",
+                "level2URL": "https://www.example.com/fcDebuut.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A small club where 'anything goes, like out-of-focus, crooked and grainy - as long as it results in a unique image that conveys a message.'"
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een 7-mans club waar 'alles mag, van onscherp, scheef tot grove korrel als het maar leidt tot een eigenzinnig beeld dat communiceert.'"
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1659
+                }
             }
         },
 
@@ -662,6 +745,32 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "Fotoclub Rapenland",
+                "nickName": "fcRapenland"
+            },
+            "coordinates": {
+                "latitude": 51.46101,
+                "longitude": 5.47689
+            },
+            "optional": {
+                "website": "https://www.fotoclubrapenland.nl/",
+                "level2URL": "https://www.example.com/fcRapenland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club meets in a community center in Eindhoven. The yearly exposition is in March."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club komt bijeen in Gemeenschapshuis De Uitwijk, Eindhoven. De jaarlijkse expo valt in maart."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "Fotogroep Anders",
                 "nickName": "fgAnders"
             },
@@ -680,31 +789,6 @@
                     {
                         "language": "NL",
                         "value": "FG Anders is klein genoeg dat de bijeenkomsten bij leden thuis gehouden worden. Exposities zijn echter in De Kruisruimte, Eindhoven."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "De Beeldmakers",
-                "nickName": "DeBeeldmakers"
-            },
-            "coordinates": {
-                "latitude": 51.44304,
-                "longitude": 5.51534
-            },
-            "optional": {
-                "level2URL": "https://www.example.com/DeBeeldmakers.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The 2025 exposition in a local gallery in Eindhoven included a dance performance."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Tijdens de 2025 expositie in De Kruisruimte (Eindhoven) was er een bijbehorende dansvoorstelling."
                     }
                 ]
             }
@@ -742,35 +826,6 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
-                "fullName": "Fotoclub Debuut",
-                "nickName": "fcDebuut"
-            },
-            "coordinates": {
-                "latitude": 51.4429,
-                "longitude": 5.5152
-            },
-            "optional": {
-                "website": "https://debuut.jimdofree.com",
-                "level2URL": "https://www.example.com/fcDebuut.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "A small club where 'anything goes, like out-of-focus, crooked and grainy - as long as it results in a unique image that conveys a message.'"
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Een 7-mans club waar 'alles mag, van onscherp, scheef tot grove korrel als het maar leidt tot een eigenzinnig beeld dat communiceert.'"
-                    }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1659
-                }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Eindhoven",
                 "fullName": "Fotogroep Klick",
                 "nickName": "fgKlick"
             },
@@ -791,61 +846,6 @@
                         "value": "Citaat: 'Fotogroep Klick is in 2010 na het beëindigen van een fotografiecursus door een aantal enthousiaste fotoamateurs opgericht.'"
                     }
                 ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotoclub Rapenland",
-                "nickName": "fcRapenland"
-            },
-            "coordinates": {
-                "latitude": 51.46101,
-                "longitude": 5.47689
-            },
-            "optional": {
-                "website": "https://www.fotoclubrapenland.nl/",
-                "level2URL": "https://www.example.com/fcRapenland.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The club meets in a community center in Eindhoven. The yearly exposition is in March."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De club komt bijeen in Gemeenschapshuis De Uitwijk, Eindhoven. De jaarlijkse expo valt in maart."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotoclub 't Karregat",
-                "nickName": "fcKarregat"
-            },
-            "coordinates": {
-                "latitude": 51.44798,
-                "longitude": 5.51988
-            },
-            "optional": {
-                "website": "https://www.fotoclubkarregat.nl/",
-                "level2URL": "https://www.example.com/fcKarregat.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The club with up to 25 members meets in the former town hall of a municipality that is now part of Eindhoven."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Citaat: “Elk jaar wordt er tijdens de ALV een thema vastgelegd, waar we in het lopende jaar onder begeleiding van een mentor aan werken.”"
-                    }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1643
-                }
             }
         },
 
@@ -1036,6 +1036,32 @@
         {
             "idPlus": {
                 "town": "Helmond",
+                "fullName": "Fotoclub Fotodier",
+                "nickName": "fcFotodier"
+            },
+            "coordinates": {
+                "latitude": 51.49516,
+                "longitude": 5.69171
+            },
+            "optional": {
+                "website": "https://dierdonk.nl/fotodier/",
+                "level2URL": "https://www.example.com/fcFotodier.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotodier is named after a suburb of the city of Helmond."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotodier is genoemd naar Dierdonk, een wijk van Helmond."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Helmond",
                 "fullName": "Fotoclub Helmond",
                 "nickName": "fcHelmond"
             },
@@ -1080,32 +1106,6 @@
                     {
                         "language": "NL",
                         "value": "De club bestaat sinds 2015 en heeft ongeveer 20 leden."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Helmond",
-                "fullName": "Fotoclub Fotodier",
-                "nickName": "fcFotodier"
-            },
-            "coordinates": {
-                "latitude": 51.49516,
-                "longitude": 5.69171
-            },
-            "optional": {
-                "website": "https://dierdonk.nl/fotodier/",
-                "level2URL": "https://www.example.com/fcFotodier.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Fotodier is named after a suburb of the city of Helmond."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Fotodier is genoemd naar Dierdonk, een wijk van Helmond."
                     }
                 ]
             }
@@ -1244,24 +1244,24 @@
         {
             "idPlus": {
                 "town": "Nuenen",
-                "fullName": "Fotoclub Prisma",
-                "nickName": "fcPrisma"
+                "fullName": "Fotoclub Momentum",
+                "nickName": "fcMomentum"
             },
             "coordinates": {
-                "latitude": 51.4656,
-                "longitude": 5.5487
+                "latitude": 51.47586,
+                "longitude": 5.55000
             },
             "optional": {
-                "website": "https://www.pvge.nl/nuenen/fotoclub-prisma/",
-                "level2URL": "https://www.example.com/fcPrisma.level2.json",
+                "website": "https://www.fotoclub-momentum.nl",
+                "level2URL": "https://www.example.com/fcMomentum.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "The club is part of a senior citizens organization, along with 3 other photography clubs in Nuenen."
+                        "value": "A noteworthy activity in the group is to pass around a physical object (e.g. a small sculpture) which the photographers can then portray in their own style. The results are shared at the end of the assignment."
                     },
                     {
                         "language": "NL",
-                        "value": "De club maakt deel uit van seniorenvereniging PVGE Nuenen - net als 3 andere fotoclubs."
+                        "value": "Soms heeft de club een project rondom een “doorgeefobject” dat door achtereenvolgende fotografen vastgelegd wordt. De beelden hiervan worden aan het einde van de rit gedeeld."
                     }
                 ]
             }
@@ -1296,24 +1296,24 @@
         {
             "idPlus": {
                 "town": "Nuenen",
-                "fullName": "Fotoclub Momentum",
-                "nickName": "fcMomentum"
+                "fullName": "Fotoclub Prisma",
+                "nickName": "fcPrisma"
             },
             "coordinates": {
-                "latitude": 51.47586,
-                "longitude": 5.55000
+                "latitude": 51.4656,
+                "longitude": 5.5487
             },
             "optional": {
-                "website": "https://www.fotoclub-momentum.nl",
-                "level2URL": "https://www.example.com/fcMomentum.level2.json",
+                "website": "https://www.pvge.nl/nuenen/fotoclub-prisma/",
+                "level2URL": "https://www.example.com/fcPrisma.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "A noteworthy activity in the group is to pass around a physical object (e.g. a small sculpture) which the photographers can then portray in their own style. The results are shared at the end of the assignment."
+                        "value": "The club is part of a senior citizens organization, along with 3 other photography clubs in Nuenen."
                     },
                     {
                         "language": "NL",
-                        "value": "Soms heeft de club een project rondom een “doorgeefobject” dat door achtereenvolgende fotografen vastgelegd wordt. De beelden hiervan worden aan het einde van de rit gedeeld."
+                        "value": "De club maakt deel uit van seniorenvereniging PVGE Nuenen - net als 3 andere fotoclubs."
                     }
                 ]
             }
@@ -1429,6 +1429,32 @@
 
         {
             "idPlus": {
+                "town": "Reusel",
+                "fullName": "Amateur Fotoclub Reusel",
+                "nickName": "AFCReusel"
+            },
+            "coordinates": {
+                "latitude": 51.36227,
+                "longitude": 5.16208
+            },
+            "optional": {
+                "website": "https://afcreusel.nl",
+                "level2URL": "https://www.example.com/AFCReusel.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Because of renovations, the club temporarily meets in the local town hall."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Wegens verbouwingen is de thuisbasis van de club tijdelijk in het plaatselijke gemeentehuis."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Riethoven",
                 "fullName": "Fotokring Riethoven",
                 "nickName": "fgRiethoven"
@@ -1452,32 +1478,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 1627
                 }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Reusel",
-                "fullName": "Amateur Fotoclub Reusel",
-                "nickName": "AFCReusel"
-            },
-            "coordinates": {
-                "latitude": 51.36227,
-                "longitude": 5.16208
-            },
-            "optional": {
-                "website": "https://afcreusel.nl",
-                "level2URL": "https://www.example.com/AFCReusel.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Because of renovations, the club temporarily meets in the local town hall."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Wegens verbouwingen is de thuisbasis van de club tijdelijk in het plaatselijke gemeentehuis."
-                    }
-                ]
             }
         },
 
@@ -1682,29 +1682,26 @@
         {
             "idPlus": {
                 "town": "Uden",
-                "fullName": "Udense Amateurfotografen F/8",
-                "nickName": "f8Uden"
+                "fullName": "Fotoclub Maashorst",
+                "nickName": "fcMaashorst"
             },
             "coordinates": {
-                "latitude": 51.66519,
-                "longitude": 5.62025
+                "latitude": 51.67258,
+                "longitude": 5.62362
             },
             "optional": {
-                "website": "https://www.f8-uden.nl",
-                "level2URL": "https://www.example.com/f8Uden.level2.json",
+                "website": "https://www.facebook.com/profile.php?id=100089970454138",
+                "level2URL": "https://www.example.com/fcMaashorst.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Their website states that due to Covid they haven't had meetings in years, but that text probably needs updating."
+                        "value": "The club's original site www.fotoclubmaashorst.nl doesn't seem to be accessible."
                     },
                     {
                         "language": "NL",
-                        "value": "De website vermeldt dat er de afgelopen jaren wegens corona geen activiteiten waren, maar dit bericht is hopelijk niet meer actueel."
+                        "value": "De website www.fotoclubmaashorst.nl lijkt het niet meer te doen."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1619
-                }
+                ]
             }
         },
 
@@ -1736,26 +1733,29 @@
         {
             "idPlus": {
                 "town": "Uden",
-                "fullName": "Fotoclub Maashorst",
-                "nickName": "fcMaashorst"
+                "fullName": "Udense Amateurfotografen F/8",
+                "nickName": "f8Uden"
             },
             "coordinates": {
-                "latitude": 51.67258,
-                "longitude": 5.62362
+                "latitude": 51.66519,
+                "longitude": 5.62025
             },
             "optional": {
-                "website": "https://www.facebook.com/profile.php?id=100089970454138",
-                "level2URL": "https://www.example.com/fcMaashorst.level2.json",
+                "website": "https://www.f8-uden.nl",
+                "level2URL": "https://www.example.com/f8Uden.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "The club's original site www.fotoclubmaashorst.nl doesn't seem to be accessible."
+                        "value": "Their website states that due to Covid they haven't had meetings in years, but that text probably needs updating."
                     },
                     {
                         "language": "NL",
-                        "value": "De website www.fotoclubmaashorst.nl lijkt het niet meer te doen."
+                        "value": "De website vermeldt dat er de afgelopen jaren wegens corona geen activiteiten waren, maar dit bericht is hopelijk niet meer actueel."
                     }
-                ]
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1619
+                }
             }
         },
 
@@ -1846,6 +1846,32 @@
         {
             "idPlus": {
                 "town": "Veldhoven",
+                "fullName": "Fotogroep Luminos",
+                "nickName": "fgLuminos"
+            },
+            "coordinates": {
+                "latitude": 51.40549,
+                "longitude": 5.39662
+            },
+            "optional": {
+                "website": "https://www.fotogroep-luminos.nl",
+                "level2URL": "https://www.example.com/fgLuminos.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The website doesn't look up to date, but there are signs the club is still active."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De website loopt deels jaren achter, maar de club lijkt nog actief te zijn."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veldhoven",
                 "fullName": "Fotogroep Veldhoven",
                 "nickName": "fgVeldhoven"
             },
@@ -1869,32 +1895,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 1637
                 }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Veldhoven",
-                "fullName": "Fotogroep Luminos",
-                "nickName": "fgLuminos"
-            },
-            "coordinates": {
-                "latitude": 51.40549,
-                "longitude": 5.39662
-            },
-            "optional": {
-                "website": "https://www.fotogroep-luminos.nl",
-                "level2URL": "https://www.example.com/fgLuminos.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The website doesn't look up to date, but there are signs the club is still active."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De website loopt deels jaren achter, maar de club lijkt nog actief te zijn."
-                    }
-                ]
             }
         },
 
@@ -1955,6 +1955,32 @@
         {
             "idPlus": {
                 "town": "Waalre",
+                "fullName": "Collectief de Verbeelding",
+                "nickName": "cDeVerbeelding"
+            },
+            "coordinates": {
+                "latitude": 51.38691,
+                "longitude": 5.44533
+            },
+            "optional": {
+                "website": "https://collectief-deverbeelding.nl",
+                "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The collective consists of 4 members and was founded in May 2025."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het collectief is opgericht in mei 2025 en exposeert in het Waalres Museum."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Waalre",
                 "fullName": "Fotogroep Waalre",
                 "nickName": "fgWaalre"
             },
@@ -1978,32 +2004,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 1634
                 }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Waalre",
-                "fullName": "Collectief de Verbeelding",
-                "nickName": "cDeVerbeelding"
-            },
-            "coordinates": {
-                "latitude": 51.38691,
-                "longitude": 5.44533
-            },
-            "optional": {
-                "website": "https://collectief-deverbeelding.nl",
-                "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The collective consists of 4 members and was founded in May 2025."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het collectief is opgericht in mei 2025 en exposeert in het Waalres Museum."
-                    }
-                ]
             }
         },
 
