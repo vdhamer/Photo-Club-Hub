@@ -49,6 +49,8 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 6. Voeg bij voorkeur een opmerking (`remark`) toe.
     - Dit benadrukt iets bijzonders over deze club. Het maakt de informatie wat interessanter om door te bladeren. Praktische informatie mag uiteraard ook.
       Vermijd een standaard zin die voor vrijwel alle clubs van toepassing is (dus niet "wij streven ernaar om betere foto's te maken" of "wij vinden onszelf best gezellig").
+    - Één goede keuze is een activiteit die de club onderscheidt, zoals een fotoketting waarbij ieder lid alleen reageert op de foto van het vorige lid.
+      Dit is o.a. interessant voor andere clubs om nieuwe ideeën op te doen. De pagina's met het jaarprogramma zijn daarvoor vaak een betere bron dan de homepage.
     - Probeer de tekst niet langer dan 100 karakters te maken (slechts een richtlijn). Dat is ongeveer de lengte van een Twitter/X "tweet".
     - `Remark` bevat minimaal een Nederlandse (NL) en een Engelstalige (EN) vertaling. De iOS app kiest automatisch de weer te geven taal op basis van de iOS instellingen.
     

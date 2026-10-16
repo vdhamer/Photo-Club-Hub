@@ -50,6 +50,8 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
 6. Preferably add a remark (`remark`).
     - The remark is meant to highlight something special about this club. It makes the information a bit more interesting to browse through. Practical information can be fine as well ("we meet at midnight each full moon").
       Avoid a standard sentence that applies to almost all clubs (avoid "we strive to take better photos" or "our meetings are very friendly").
+    - One good choice is an activity that sets the club apart, such as a photo chain in which each member responds only to the previous member's photo.
+      Other clubs sometimes read such remarks as a source of new ideas. A club's program pages are often a better source for this than its home page.
     - Try not to make the text longer than 100 characters (just a guideline). So roughly the length of a Twitter/X "tweet".
     - `remark` contains at least an English (EN) translation, but Dutch (NL) would be nice too. The iOS app automatically chooses the language to display based on the iOS settings.
 
