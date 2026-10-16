@@ -1963,7 +1963,7 @@
                 "longitude": 5.44533
             },
             "optional": {
-                "website": "https://collectief-deverbeelding.nl",
+                "website": "https://collectief-de-verbeelding.nl",
                 "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
                 "remark": [
                     {
@@ -2004,32 +2004,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 1634
                 }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Waalre",
-                "fullName": "Collectief de Verbeelding",
-                "nickName": "cDeVerbeelding"
-            },
-            "coordinates": {
-                "latitude": 51.38691,
-                "longitude": 5.44533
-            },
-            "optional": {
-                "website": "https://collectief-de-verbeelding.nl",
-                "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The collective consists of 4 members and was founded in May 2025."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het collectief is opgericht in mei 2025 en exposeert in het Waalres Museum."
-                    }
-                ]
             }
         },
 
