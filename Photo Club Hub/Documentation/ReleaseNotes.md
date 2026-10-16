@@ -8,9 +8,17 @@
 
 ### 3.0.4 (GitHub commit ???????, build 4669) ??-11-2026
 
+USER-FACING CHANGES
+
+- **One-time database reset on first launch of build 4669.**
+The stored data is wiped and reloaded from scratch, so the first launch after updating takes noticeably longer. Triggered by the `dataResetPending304b4669` key. It is needed because a club is identified by its name and town, and four clubs in Drenthe had one or both corrected: Fotoclub Westerveld en Omstreken is now "Fotoclub Westerveld e.o.", in Wapserveen (the village where it meets) instead of Westerveld (the municipality); "Fotoclub De Wolden" is now spelled "FotoClub De Wolden", as the club writes it; "Vereniging Natuurfotografen Drenthe" is now "Vereniging van Natuurfotografen Drenthe"; and "Fotogroep Meppel e.o." is now "Fotogroep Meppel", its registered name. Without the reset, a device that had already loaded an old entry would keep it alongside the corrected one and show that club twice, indefinitely, with both markers on the same spot ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
+
 STRUCTURAL
 
-* Tested on iOS 27.0.1
+* Tested with iOS 27.0.1, with Xcode 27.1 (27A9275)
+
+This build #4669 was made using Xcode 27.1 and is intended for the App Store.
+
 ---------------------------------------------------------------------------
 
 ### 3.0.3 (GitHub commit bfa5cad6, build 4668) 13-10-2026
