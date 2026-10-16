@@ -9,6 +9,32 @@
 
         {
             "idPlus": {
+                "town": "Hasselt",
+                "fullName": "Fotoclub Positief",
+                "nickName": "fcPositief"
+            },
+            "coordinates": {
+                "latitude": 52.59038,
+                "longitude": 6.09852
+            },
+            "optional": {
+                "website": "https://www.fotoclubpositief.nl",
+                "level2URL": "https://www.example.com/fcPositief.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club chooses a theme monthly, plus an extra theme for an internal yearly competition."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Er wordt maandelijks aan een thema gewerkt. Er is bovendien een jaarlijkse interne fotowedstrijd, ook op basis van een thema."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Kampen",
                 "fullName": "VNF Noord-West Overijssel & Flevoland",
                 "nickName": "vnfNWOverijssel"
