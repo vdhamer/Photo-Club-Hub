@@ -19,6 +19,8 @@ USER-FACING BUG FIXES
 
 - **Map highlight settings now apply at once.** Turning on "Highlight Dutch Fotobond NL clubs" or "Highlight non-Fotobond NL clubs", or changing the highlighting color, had no visible effect on the Maps tab until the app was relaunched or a card was scrolled away and back. The other settings applied immediately since 3.0.3 ([#878](https://github.com/vdhamer/Photo-Club-Hub/issues/878)). Each map marker read the settings once, when it was created, without observing them. SwiftUI kept the map cards as long as the clubs on them were unchanged, so the markers were never redrawn. The markers now observe the settings, on both locked and unlocked maps. ([#885](https://github.com/vdhamer/Photo-Club-Hub/issues/885))
 
+- **Settings icons no longer touch their labels.** Since iOS 27, most rows in the Settings tab showed their icon almost against the text. Only the rows with a toggle were affected: iOS 27 shrank the default space between an icon and a toggle to nearly nothing, while the space before plain text stayed as it was. Every row now has the same explicit spacing, so all labels line up again. ([#888](https://github.com/vdhamer/Photo-Club-Hub/issues/888))
+
 STRUCTURAL
 
 * Tested with iOS 27.0.1, with Xcode 27.1 (27A9275)
