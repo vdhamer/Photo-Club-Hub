@@ -22,6 +22,10 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
     private let unfilteredCount: Int
     private let unit: ElementTypeEnum
 
+    /// Observed, so the unit label ("clubs", "museums" or "organizations") for `.organization` tracks Settings at once,
+    /// even when a button label should from "Show clubs" to "Show orgnaizations" without a change in the count.
+    @ObservedObject private var settingsModel = SettingsViewModel.shared
+
     init(filteredCount: Int, unfilteredCount: Int, unit: ElementTypeEnum) {
         self.filteredCount = filteredCount      // Number of items after filtering.
         self.unfilteredCount = unfilteredCount  // Total number of items before filtering.
@@ -99,7 +103,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
                           comment: comment)
 
         case .organization: // may change unit to ElementTypeEnum.club if Museums are filted out in Preferences
-            let settings = SettingsViewModel.shared.settings
+            let settings = settingsModel.settings
             if settings.showClubs && !settings.showMuseums {
                 return localizedFilteredCount(unit: .club)
             } else if !settings.showClubs && settings.showMuseums {
