@@ -26,9 +26,10 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
-                SettingsViewPhotographersSection(settings: $settings)
-                SettingsViewMembersSection(settings: $settings)
+                // One section per tab, in tab bar order (#887): Maps, Clubs, People.
                 SettingsViewMapsSection(settings: $settings)
+                SettingsViewMembersSection(settings: $settings) // "Clubs tab"
+                SettingsViewPhotographersSection(settings: $settings) // "People tab"
                 SettingsViewAdvancedSection(settings: $settings)
                 #if DEBUG
                 SettingsViewMapsTestSection() // #870: debug-only test mode for the Maps screen
