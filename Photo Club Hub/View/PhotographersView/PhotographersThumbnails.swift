@@ -22,7 +22,7 @@ struct PhotographersThumbnails: View {
     /// Set by tapping a caption or chevron; the screen-level view owns the navigationDestination(item:).
     /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
     @Binding var selectedPortfolio: MemberPortfolio?
-    @StateObject var settingsModel = SettingsViewModel.shared
+    @ObservedObject var settingsModel = SettingsViewModel.shared
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) { // 2nd row with images in photographer's "card"

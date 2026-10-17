@@ -21,7 +21,7 @@ struct MapsView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     /// A wrapper that mainly holds a Preferences struct
-    @StateObject var modelToHoldSettings = SettingsViewModel.shared
+    @ObservedObject var modelToHoldSettings = SettingsViewModel.shared
     @State private var searchText: String = ""
     @State private var isSearchPresented = false
     /// Tracks user location to enable the user-location annotation on the map.

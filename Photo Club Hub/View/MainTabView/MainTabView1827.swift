@@ -52,7 +52,7 @@ struct MainTabView1827: View { // Tab() needs iOS 18+; .tabBarMinimizeBehavior &
         }
     }
 
-    @StateObject private var settingsModel = SettingsViewModel.shared
+    @ObservedObject private var settingsModel = SettingsViewModel.shared
     @State private var personSearchText = ""
     @State private var selectedTab: TabID = TabID.launchArgument ?? .clubs // tab shown when app is launched
 

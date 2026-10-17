@@ -33,7 +33,7 @@ struct PhotographersListView2627: View {
     /// Stored in @State so it survives re-initialization of this view struct.
     @State private var wkWebView = WKWebView()
 
-    @StateObject var model = SettingsViewModel.shared
+    @ObservedObject var model = SettingsViewModel.shared
 
     // Screenshot pipeline (#776) — the logic lives in PhotographersListView2627+Screenshot.swift.
     // These stored properties must stay here (property wrappers can't be declared in extensions)

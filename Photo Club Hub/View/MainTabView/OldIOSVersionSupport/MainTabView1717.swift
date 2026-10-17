@@ -24,7 +24,7 @@ struct MainTabView1717: View {
         }
     }
 
-    @StateObject private var settingsModel = SettingsViewModel.shared
+    @ObservedObject private var settingsModel = SettingsViewModel.shared
     @State private var personSearchText = ""
     @State private var selectedTab: TabID = .clubs
 

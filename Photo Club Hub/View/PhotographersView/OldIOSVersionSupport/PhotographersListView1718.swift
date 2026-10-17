@@ -32,7 +32,7 @@ struct PhotographersListView1718: View {
     /// Stored in @State so it survives re-initialization of this view struct.
     @State private var wkWebView = WKWebView()
 
-    @StateObject var model = SettingsViewModel.shared
+    @ObservedObject var model = SettingsViewModel.shared
     private var navigationTitle = String(localized: "People",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
