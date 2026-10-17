@@ -10,10 +10,10 @@ import SemanticColorPicker // for SemanticColor
 import Photo_Club_Hub_Data // for types such as Organization
 
 // We strongly recommend viewing the Preview for this file:
-// *t shows a table of all possible cases and resulting markers.
+// it shows a table of all possible cases and resulting markers.
 
 /// Central rules for deciding a marker's tint, applied in this order of priority.
-/// `markerTint`is private, and only meant to be used by `MapMarkerBalloon`.
+/// `markerTint` is private, and only meant to be used by `MapMarkerBalloon` (and by the Preview of this file).
 /// Note that the marker uses a different symbol for Clubs than for Museums.
 ///
 /// - Parameters:
@@ -65,33 +65,57 @@ private func markerTint(organizationType: OrganizationTypeEnum,
 /// Replaces MapKit's own `Marker`, whose look can't be changed beyond its color and symbol. Its point is short and,
 /// in dark mode, has the map's dark outline color, so it is hard to see, and the eye takes the circle's center for
 /// the spot. Here the tint runs into a longer point, whose tip points to the organization's location on the map.
+///
+/// This view decides the color; `MapMarkerBalloonDrawing` draws the balloon.
 struct MapMarkerBalloon: View {
 
+    // What `markerTint` needs besides the settings.
     private let organizationType: OrganizationTypeEnum
-    private let backgroundColor: Color // always from `markerTint`
+    private let isOwn: Bool
+    private let isInFotobond: Bool
+
+    /// Observed, so the marker can immediately change color as soon as any highlight setting changes (#885).
+    /// Merely reading the settings when the marker is created is not enough: SwiftUI keeps the map cards, and with
+    /// them their markers, as long as the organizations don't change. So the old color would stay until a relaunch.
+    @ObservedObject private var settingsModel = SettingsViewModel.shared
 
     /// For the marker of `organization` on the map centered on `mapOrganization`. Used by the maps.
-    /// Looks up what `markerTint` needs from the two organizations and the app's settings.
+    /// Looks up what `markerTint` needs from the two organizations.
     init(organization: Organization, mapOrganization: Organization) {
-        self.init(organizationType: organization.organizationType.organizationTypeEnum,
-                  isOwn: MapsViewMap.isMapOrganization(organization,
-                                                       mapOrganization: mapOrganization),
-                  isInFotobond: organization.fotobondClubNumber?.id != nil, // is club member of Dutch Fotobond
-                  settings: SettingsViewModel().settings) /// SettingsViewModel is marked as `@Published`
+        self.organizationType = organization.organizationType.organizationTypeEnum
+        self.isOwn = MapsViewMap.isMapOrganization(organization, mapOrganization: mapOrganization)
+        self.isInFotobond = organization.fotobondClubNumber?.id != nil // is club member of Dutch photo club federation
     }
 
-    /// For a marker described without Core Data: used by previews, and by `MapsViewInfo` for its own organization.
-    /// The parameters are those of `markerTint`.
-    init(organizationType: OrganizationTypeEnum,
-         isOwn: Bool,
-         isInFotobond: Bool,
-         settings: SettingsStruct) {
-        self.organizationType = organizationType
-        self.backgroundColor = markerTint(organizationType: organizationType,
-                                          isOwn: isOwn,
-                                          isInFotobond: isInFotobond,
-                                          settings: settings)
+    /// For the purple marker of the organization a map is about, shown next to its name by `MapsViewInfo`.
+    /// The map's own organization is always purple, so Fotobond membership and the settings don't matter.
+    init(mapOrganizationType: OrganizationTypeEnum) {
+        self.organizationType = mapOrganizationType
+        self.isOwn = true
+        self.isInFotobond = false
     }
+
+    static let width: CGFloat = 30 // matches MapKit's own marker (iPhone simulator, Oct 2026)
+    static let height: CGFloat = 36
+
+    var body: some View {
+        MapMarkerBalloonDrawing(organizationType: organizationType,
+                                color: markerTint(organizationType: organizationType,
+                                                  isOwn: isOwn,
+                                                  isInFotobond: isInFotobond,
+                                                  settings: settingsModel.settings))
+    }
+}
+
+/// The balloon of a `MapMarkerBalloon`, in a given color.
+/// Kept separate so that the Preview below can show every combination of settings side by side,
+/// while the app itself only ever uses the one set of settings it has.
+private struct MapMarkerBalloonDrawing: View {
+
+    let organizationType: OrganizationTypeEnum
+    let color: Color // from `markerTint`
+
+    private static let outlineWidth: CGFloat = 1.5
 
     /// The SF Symbol drawn in the round part, for the organization's type.
     private var systemImage: String {
@@ -102,22 +126,18 @@ struct MapMarkerBalloon: View {
         }
     }
 
-    static let width: CGFloat = 30 // matches MapKit's own marker (iPhone simulator, Oct 2026)
-    static let height: CGFloat = 36
-    private static let outlineWidth: CGFloat = 1.5
-
     var body: some View {
         MapMarkerBalloonShape()
-            .fill(backgroundColor)
+            .fill(color)
             .stroke(.secondary, lineWidth: Self.outlineWidth)
             .overlay(alignment: .top) {
                 Image(systemName: systemImage)
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundStyle(.white)
-                    .frame(width: Self.width, height: Self.width) // centered in the round part
+                    .frame(width: MapMarkerBalloon.width, height: MapMarkerBalloon.width) // centered in the round part
             }
             .shadow(color: .black.opacity(0.4), radius: 3, x: 3, y: 3)
-            .frame(width: Self.width, height: Self.height)
+            .frame(width: MapMarkerBalloon.width, height: MapMarkerBalloon.height)
     }
 }
 
@@ -182,10 +202,11 @@ private struct MapMarkerBalloonShape: Shape {
                     .lineLimit(1)
                     .gridColumnAlignment(.leading) // applies to the whole first column
                 ForEach([false, true], id: \.self) { isOwn in
-                    MapMarkerBalloon(organizationType: row.type,
-                                     isOwn: isOwn,
-                                     isInFotobond: row.isInFotobond,
-                                     settings: row.settings)
+                    MapMarkerBalloonDrawing(organizationType: row.type,
+                                            color: markerTint(organizationType: row.type,
+                                                              isOwn: isOwn,
+                                                              isInFotobond: row.isInFotobond,
+                                                              settings: row.settings))
                 }
             }
         }

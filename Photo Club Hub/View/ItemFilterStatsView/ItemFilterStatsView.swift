@@ -22,8 +22,9 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
     private let unfilteredCount: Int
     private let unit: ElementTypeEnum
 
-    /// Observed, so the unit label ("clubs", "museums" or "organizations") for `.organization` tracks Settings at once,
-    /// even when a button label should from "Show clubs" to "Show orgnaizations" without a change in the count.
+    /// Observed for consistency with every other view that reads the settings (see `SettingsViewModel.shared`).
+    /// Not observing it would not cause a visible bug here: "Show clubs" and "Show museums" also change
+    /// `unfilteredCount`, the "(of 156)" part, so this view gets new inputs and is redrawn anyway.
     @ObservedObject private var settingsModel = SettingsViewModel.shared
 
     init(filteredCount: Int, unfilteredCount: Int, unit: ElementTypeEnum) {

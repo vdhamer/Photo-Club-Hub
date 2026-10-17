@@ -56,10 +56,7 @@ struct MapsViewInfo: View {
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
             // The same balloon as this organization's own (purple) marker on the map below.
-            MapMarkerBalloon(organizationType: organizationType,
-                             isOwn: true, // so Fotobond and settings don't matter
-                             isInFotobond: false,
-                             settings: .defaultValue)
+            MapMarkerBalloon(mapOrganizationType: organizationType)
                 .padding(.leading, 5)
                 .padding(.trailing, 12) // the gap to the text
 
