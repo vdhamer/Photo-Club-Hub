@@ -12,8 +12,8 @@ import SwiftUI
 /// It is switched via the debug section of the Settings tab,  so the modes can be compared using a single build.
 /// A Release build has no way to change these values, and sticks to using the defaults settings below.
 ///
-/// Stored with `@AppStorage` rather than in `SettingsStruct`:
-/// those settings only apply after tapping Save, while a before/after comparison needs instant mode switching.
+/// Stored with `@AppStorage` rather than in `SettingsStruct`, because it is a test setting for developers.
+/// This keeps it out of the user's settings, and "Reset to defaults" in the Settings tab leaves it alone.
 enum MapsTestMode: String, CaseIterable {
     case original // every card creates its live map as soon as the card appears, as before #870
     case phase1Delay // a locked map becomes live only after the card has been on screen for the delay

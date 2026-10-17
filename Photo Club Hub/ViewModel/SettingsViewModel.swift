@@ -30,6 +30,10 @@ import Photo_Club_Hub_Data // for OrganizationTypeEnum
 @MainActor
 class SettingsViewModel: ObservableObject {
     /// Shared singleton instance used by all views to ensure preference changes propagate everywhere.
+    /// A view whose content depends on a setting holds it as `@ObservedObject var … = SettingsViewModel.shared`.
+    /// `@ObservedObject` rather than `@StateObject`: the instance outlives every view, so no view owns it.
+    /// Reading `SettingsViewModel.shared.settings` or `SettingsViewModel().settings` without observing it would give
+    /// the values of that moment, and the view would not be redrawn when they change (#885).
     static let shared = SettingsViewModel()
 
     /// Stores Combine cancellables tied to persistence of the `settings` property.
@@ -174,7 +178,7 @@ struct SettingsStruct { // order in which they are shown on Preferences page
     /// A localized title for the Organizations screen derived from user preferences.
     /// The`organizationLabel` is also used when displaying the count of shown organizations (e.g. "35 museums").
     ///
-    /// This computed property inspects the current `SettingsViewModel().settings` flags
+    /// This method inspects this struct's own flags
     /// — `showClubs` and `showMuseums` — to decide which section(s)
     /// of organizations are visible, and returns an appropriate, localized string.
     ///

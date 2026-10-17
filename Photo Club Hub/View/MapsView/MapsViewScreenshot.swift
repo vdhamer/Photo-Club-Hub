@@ -16,10 +16,10 @@ import Photo_Club_Hub_Data // for types like Organization
 /// A locked map cannot pan or zoom anyway, so a static image of its default view looks the same at a fraction of
 /// the memory usage. `MKMapSnapshotter` makes the image at the card's exact size, in its light or dark appearance.
 ///
-/// The markers are not included the static image: they are SwiftUI views drawn on top of it,
+/// The markers are not included in the static image: they are SwiftUI views drawn on top of it,
 /// at the points where the screenshot says their coordinates landed.
-/// That keeps their colors current when the highlight settings change, and lets a later
-/// tap on a pin be handled like any SwiftUI tap (#256).
+/// That keeps their colors current when the highlight settings change (`MapMarkerBalloon` observes them, #885),
+/// and lets a later tap on a pin be handled like any SwiftUI tap (#256).
 ///
 /// The user's location is deliberarly left out of the static image. It is a blue dot (or a larger circle with the
 /// approximate location), and iOS updates it when needed. Showing it would make an image stale whenever the user moves.
