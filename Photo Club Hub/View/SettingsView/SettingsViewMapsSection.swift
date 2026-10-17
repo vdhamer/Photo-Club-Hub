@@ -17,7 +17,7 @@ struct SettingsViewMapsSection: View {
                              comment: "In Settings, section title above map-related toggles"),
                 content: {
 
-            HStack { // SHOW CLUBS
+            HStack(spacing: SettingsView.iconSpacing) { // Show clubs
                 Image(systemName: "mappin.square")
                     .font(.title2)
                     .symbolRenderingMode(.palette)
@@ -28,7 +28,7 @@ struct SettingsViewMapsSection: View {
                        isOn: $settings.showClubs.animation())
             }
 
-            HStack { // SHOW MUSEUMS
+            HStack(spacing: SettingsView.iconSpacing) { // Show museums
                 Image(systemName: "mappin.square")
                     .font(.title2)
                     .symbolRenderingMode(.palette)
@@ -40,7 +40,7 @@ struct SettingsViewMapsSection: View {
             }
 
             if settings.highlightNonFotobondNL == false {
-                HStack { // HIGHLIGHT FOTOBOND
+                HStack(spacing: SettingsView.iconSpacing) { // Highlight Fotobond clubs
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
@@ -51,7 +51,7 @@ struct SettingsViewMapsSection: View {
                            isOn: $settings.highlightFotobondNL.animation())
                 }
             } else {
-                HStack {
+                HStack(spacing: SettingsView.iconSpacing) {
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
@@ -65,7 +65,7 @@ struct SettingsViewMapsSection: View {
             }
 
             if settings.highlightFotobondNL == false {
-                HStack { // HIGHLIGHT NON-FOTOBOND
+                HStack(spacing: SettingsView.iconSpacing) { // Highlight non-Fotobond clubs
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
@@ -76,7 +76,7 @@ struct SettingsViewMapsSection: View {
                            isOn: $settings.highlightNonFotobondNL.animation())
                 }
             } else {
-                HStack {
+                HStack(spacing: SettingsView.iconSpacing) {
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)
@@ -92,7 +92,7 @@ struct SettingsViewMapsSection: View {
             let highlightIsUsed = settings.highlightFotobondNL ||
                                   settings.highlightNonFotobondNL
             if highlightIsUsed {
-                HStack {
+                HStack(spacing: SettingsView.iconSpacing) {
                     Image(systemName: "mappin.square")
                         .font(.title2)
                         .symbolRenderingMode(.palette)

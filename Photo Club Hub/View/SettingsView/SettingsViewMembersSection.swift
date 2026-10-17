@@ -15,7 +15,7 @@ struct SettingsViewMembersSection: View {
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Preferences, above toggles like \"Show former members\""),
                 content: {
-            HStack {
+            HStack(spacing: SettingsView.iconSpacing) {
                 RoleStatusIconView(memberStatus: .current)
                     .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show current members",
@@ -24,7 +24,7 @@ struct SettingsViewMembersSection: View {
                        isOn: $settings.showCurrentMembers.animation())
             }
             if settings.showCurrentMembers == false {
-                HStack {
+                HStack(spacing: SettingsView.iconSpacing) {
                     RoleStatusIconView(memberRole: .viceChairman)
                         .foregroundColor(.deceasedColor)
                     Toggle(String(localized: "Show current club officers",
@@ -33,7 +33,7 @@ struct SettingsViewMembersSection: View {
                            isOn: $settings.showOfficers)
                 }
             } else {
-                HStack {
+                HStack(spacing: SettingsView.iconSpacing) {
                     RoleStatusIconView(memberRole: .viceChairman)
                         .foregroundColor(.deceasedColor)
                     Text("“Current members” includes “current club officers”",
@@ -42,7 +42,7 @@ struct SettingsViewMembersSection: View {
                     .foregroundColor(.gray)
                 }
             }
-            HStack {
+            HStack(spacing: SettingsView.iconSpacing) {
                 RoleStatusIconView(memberStatus: .prospective)
                     .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show aspiring members",
@@ -50,7 +50,7 @@ struct SettingsViewMembersSection: View {
                               comment: "Label of toggle in Preferences"),
                        isOn: $settings.showAspiringMembers)
             }
-            HStack {
+            HStack(spacing: SettingsView.iconSpacing) {
                 RoleStatusIconView(memberStatus: .honorary)
                     .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show honorary members",
@@ -58,7 +58,7 @@ struct SettingsViewMembersSection: View {
                               comment: "Label of toggle in Preferences"),
                        isOn: $settings.showHonoraryMembers)
             }
-            HStack {
+            HStack(spacing: SettingsView.iconSpacing) {
                 RoleStatusIconView(memberStatus: .former)
                     .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show former members",
@@ -67,7 +67,8 @@ struct SettingsViewMembersSection: View {
                        isOn: $settings.showFormerMembers.animation())
             }
             if settings.showFormerMembers == false {
-                HStack { // moving this outside the if() works but gives a boring animation
+                // moving this HStack outside the if() works but gives a boring animation
+                HStack(spacing: SettingsView.iconSpacing) {
                     RoleStatusIconView(memberStatus: .deceased)
                         .foregroundColor(.deceasedColor)
                     Toggle(String(localized: "Show deceased members",
@@ -76,7 +77,7 @@ struct SettingsViewMembersSection: View {
                            isOn: $settings.showDeceasedMembers)
                 }
             } else {
-                HStack {
+                HStack(spacing: SettingsView.iconSpacing) {
                     RoleStatusIconView(memberStatus: .deceased)
                         .foregroundColor(.deceasedColor)
                     Text(
@@ -86,7 +87,7 @@ struct SettingsViewMembersSection: View {
                     .foregroundColor(.gray)
                 }
             }
-            HStack {
+            HStack(spacing: SettingsView.iconSpacing) {
                 RoleStatusIconView(memberStatus: .coach)
                     .foregroundColor(.clubsColor)
                 Toggle(String(localized: "Show external coaches",

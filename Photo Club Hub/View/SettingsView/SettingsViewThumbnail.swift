@@ -20,7 +20,7 @@ struct SettingsViewThumbnail: View {
 
     var body: some View {
 
-        HStack {
+        HStack(spacing: SettingsView.iconSpacing) {
             Image(systemName: "photo.artframe")
                 .foregroundStyle(.gray, iconColor, .red)
             Picker(String(localized: "ThumbnailMembers",

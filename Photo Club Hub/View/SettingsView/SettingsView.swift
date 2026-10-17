@@ -19,6 +19,11 @@ struct SettingsView: View {
     // .sensoryFeedback(trigger:) plays the haptic whenever `hapticTriggerOnChange` changes state.
     @State private var hapticTriggerOnChange = false // true would have same behavior (see above)
 
+    /// Space between a row's icon and its label, used by every icon row in the sections (#888).
+    /// Explicit because since iOS 27 an `HStack`'s default spacing before a `Toggle` is almost zero,
+    /// while before a `Text` it is still the standard 8 points. So toggle rows and text rows no longer lined up.
+    static let iconSpacing: CGFloat = 8
+
     private let title = String(localized: "Settings",
                                table: "PhotoClubHub.SwiftUI",
                                comment: "Title of the in-app Settings tab")
