@@ -9,6 +9,35 @@
 
         {
             "idPlus": {
+                "town": "Haarlo",
+                "fullName": "Fotoclub Berkelland",
+                "nickName": "fcBerkelland"
+            },
+            "coordinates": {
+                "latitude": 52.11060,
+                "longitude": 6.58054
+            },
+            "optional": {
+                "website": "https://fotoclubberkelland.nl",
+                "level2URL": "https://www.example.com/fcBerkelland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photographed local artists at work, from a blacksmith to a potter."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografeerde kunstenaars uit de streek aan het werk, van smid tot pottenbakker."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 588
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Holten",
                 "fullName": "Natuurfocus",
                 "nickName": "nfFocus"
