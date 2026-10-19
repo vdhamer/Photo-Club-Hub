@@ -10,16 +10,31 @@
 
 USER-FACING CHANGES
 
-- **One-time database reset on first launch of build 4669.**
-The stored data is wiped and reloaded from scratch, so the first launch after updating takes noticeably longer. Triggered by the `dataResetPending304b4669` key. It is needed because a club is identified by its name and town, and four clubs in Drenthe had one or both corrected: Fotoclub Westerveld en Omstreken is now "Fotoclub Westerveld e.o.", in Wapserveen (the village where it meets) instead of Westerveld (the municipality); "Fotoclub De Wolden" is now spelled "FotoClub De Wolden", as the club writes it; "Vereniging Natuurfotografen Drenthe" is now "Vereniging van Natuurfotografen Drenthe"; and "Fotogroep Meppel e.o." is now "Fotogroep Meppel", its registered name. Without the reset, a device that had already loaded an old entry would keep it alongside the corrected one and show that club twice, indefinitely, with both markers on the same spot ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
+- **31 more photo clubs in Gelderland.** The Maps and Clubs tabs now show 34 clubs in the Fotobond's Gelderland Zuid region, up from 3: from the Achterhoek and the Liemers to Arnhem, Nijmegen, the Betuwe, Ede and Wageningen. 13 of them are Fotobond clubs, the other 18 are independent. Fotoclub Berkelland in Haarlo joins the Twente region. Many clubs now come with a short remark about what makes them special, such as a yearly photo chain or a photo book project. The new clubs also show up in older versions of the app, without updating. ([Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77))
 
-- **Settings sections now follow the tab bar.** The Settings tab has one section per tab, which were shown as People, Clubs, Maps. They now follow the tab bar order: Maps, Clubs, People, followed by Advanced. ([#887](https://github.com/vdhamer/Photo-Club-Hub/issues/887))
+- **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. This removes four clubs in Drenthe that would otherwise appear twice, because their names were corrected: Fotoclub Westerveld e.o. (now listed in Wapserveen, where it meets), FotoClub De Wolden, Vereniging van Natuurfotografen Drenthe and Fotogroep Meppel. ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
+
+- **Settings follow the order of the tabs.** The Settings tab now lists its sections in the same order as the tabs at the bottom of the screen: Maps, Clubs, People, and then Advanced. ([#887](https://github.com/vdhamer/Photo-Club-Hub/issues/887))
 
 USER-FACING BUG FIXES
 
-- **Map highlight settings now apply at once.** Turning on "Highlight Dutch Fotobond NL clubs" or "Highlight non-Fotobond NL clubs", or changing the highlighting color, had no visible effect on the Maps tab until the app was relaunched or a card was scrolled away and back. The other settings applied immediately since 3.0.3 ([#878](https://github.com/vdhamer/Photo-Club-Hub/issues/878)). Each map marker read the settings once, when it was created, without observing them. SwiftUI kept the map cards as long as the clubs on them were unchanged, so the markers were never redrawn. The markers now observe the settings, on both locked and unlocked maps. ([#885](https://github.com/vdhamer/Photo-Club-Hub/issues/885))
+- **Map highlighting changes show at once.** Turning the highlighting of Fotobond or non-Fotobond clubs on or off, or picking another highlight color, now shows on the Maps tab right away. Before, it only showed after restarting the app. ([#885](https://github.com/vdhamer/Photo-Club-Hub/issues/885))
 
-- **Settings icons no longer touch their labels.** Since iOS 27, most rows in the Settings tab showed their icon almost against the text. Only the rows with a toggle were affected: iOS 27 shrank the default space between an icon and a toggle to nearly nothing, while the space before plain text stayed as it was. Every row now has the same explicit spacing, so all labels line up again. ([#888](https://github.com/vdhamer/Photo-Club-Hub/issues/888))
+- **Tidier Settings on iOS 27.** On iOS 27, the icons in rows with a switch almost touched their text. All rows have the same spacing again. ([#888](https://github.com/vdhamer/Photo-Club-Hub/issues/888))
+
+DATA
+
+* `clubsNL06.level1.json`
+31 clubs added to the 3 nature clubs already listed, which are unchanged: 13 Fotobond clubs and 18 independent ones, found in the second search pass of [Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68) and reviewed in [Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77). Additions only, so no data reset is needed. Mirrored identically in the Data package's bundled copy.
+
+* `clubsNL05.level1.json`
+Fotoclub Berkelland (Haarlo) added, Fotobond club 0588.
+
+* `clubsNL16.level1.json`, `TemplateMax.level1.json` and `TemplateMin.level1.json`
+Where two clubs had exactly the same coordinates, one was moved by 0.0001° (about 10 m), so that both markers can be seen and tapped. In `clubsNL16` that is Fotocollectief 2020 in Vught.
+
+* `root.level1.json`
+"New York" is now "New York City". Only app versions before 2.9.0 read this file.
 
 STRUCTURAL
 
