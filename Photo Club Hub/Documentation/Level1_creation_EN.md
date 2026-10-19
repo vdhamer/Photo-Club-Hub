@@ -33,6 +33,7 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
 
     - For the short name, `nickName`, avoid spaces and puctuation in the nickname: a nickname is used in Level 2 file names and in web adresses. So a nickname of "Photo Club Twinkle" will give problems down the road.
     In the Netherlands we abbreviate common prefixes like "Fotoclub" (fc) and "Fotogroep" (fg) because most club names contain either. You may want to do something similar for other languages.
+    A nickname must be unique across all files. If another club already has the nickname you want, the club that was listed first keeps it, and yours gets its town added: `fcPositievenBeuningen` next to `fcPositieven`.
 
 5. Adjust the location of the club (`coordinates`):
     - The coordinates are used to indicate the nominal location of a club on maps. This lets you discover clubs nearby. The app does _not_ work with a traditional street address.

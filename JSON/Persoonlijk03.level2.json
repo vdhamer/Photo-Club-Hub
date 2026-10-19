@@ -13,12 +13,12 @@
             "level2URL": "http://www.example.com/Persoonlijk03.level2.json",
             "remark": [
                 {
-                    "language": "NL",
-                    "value": "Persoonlijke leden Fotobond Drenthe - Vechtdal"
-                },
-                {
                     "language": "EN",
                     "value": "Members of Fotobond Drenthe - Vechtdal who are not members of any Fotobond club."
+                },
+                {
+                    "language": "NL",
+                    "value": "Persoonlijke leden Fotobond Drenthe - Vechtdal"
                 }
             ],
             "nlSpecific": {

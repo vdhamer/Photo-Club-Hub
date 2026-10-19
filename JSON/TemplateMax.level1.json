@@ -23,12 +23,12 @@
                 "level2URL": "https://www.TemplateMax.nl/TemplateMax.level2.json",
                 "remark": [
                     {
-                        "language": "NL",
-                        "value": "Deze clubbeschrijving kan overschreven worden door een remark-veld in het level2.json-bestand van de club."
-                    },
-                    {
                         "language": "EN",
                         "value": "A remark here about the club can be overruled by a remark in the club's level2.json file."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze clubbeschrijving kan overschreven worden door een remark-veld in het level2.json-bestand van de club."
                     }
                 ],
                 "maintainerEmail": "admin@TemplateMax.nl",
@@ -54,12 +54,12 @@
                 "level2URL": "https://www.TemplateMax.nl/LeicaRC.level2.json",
                 "remark": [
                     {
-                        "language": "NL",
-                        "value": "Een denkbeeldige club van enthousiaste eigenaren van Leica meetzoeker camera's."
-                    },
-                    {
                         "language": "EN",
                         "value": "A hypothetical exclusive photography club for Leica rangefinder owners."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een denkbeeldige club van enthousiaste eigenaren van Leica meetzoeker camera's."
                     }
                 ],
                 "maintainerEmail": "admin@leicaROC.de"
