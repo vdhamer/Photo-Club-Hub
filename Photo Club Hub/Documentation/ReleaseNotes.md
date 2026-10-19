@@ -14,7 +14,7 @@ USER-FACING CHANGES
 
 - **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. This removes four clubs in Drenthe that would otherwise appear twice, because their names were corrected: Fotoclub Westerveld e.o. (now listed in Wapserveen, where it meets), FotoClub De Wolden, Vereniging van Natuurfotografen Drenthe and Fotogroep Meppel. ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
 
-- **Settings follow the order of the tabs.** The Settings tab now lists its sections in the same order as the tabs at the bottom of the screen: Maps, Clubs, People, and then Advanced. ([#887](https://github.com/vdhamer/Photo-Club-Hub/issues/887))
+- **Settings sections follow the order of the tabs.** The Settings tab now lists its sections in the same order as the tabs at the bottom of the screen: Maps, Clubs, People, and then Advanced. ([#887](https://github.com/vdhamer/Photo-Club-Hub/issues/887))
 
 USER-FACING BUG FIXES
 
@@ -38,9 +38,9 @@ Where two clubs had exactly the same coordinates, one was moved by 0.0001° (abo
 
 STRUCTURAL
 
-* Tested with iOS 27.0.1, with Xcode 27.1 (27A9275)
+* Tested with iOS 27.0.1, Xcode 27.1 (27A9275), Xcode 27.2 RC1 (27B48) and iOS 27.2 beta (?????)
 
-This build #4669 was made using Xcode 27.1 and is intended for the App Store.
+This build #4669 was made using Xcode 27.2 RC1 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
 

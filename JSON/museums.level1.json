@@ -112,12 +112,12 @@
                         "value": "The museum is specialized in conserving large photo collections, including that of Charlie Chaplin."
                     },
                     {
-                        "language": "NL",
-                        "value": "Het museum is gespecialiseerd in het conserveren van grote fotocollecties, waaronder die van Charlie Chaplin."
-                    },
-                    {
                         "language": "FR",
                         "value": "Le musée est spécialisé dans la conservation de grandes collections photographiques, dont celle de Charlie Chaplin."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum is gespecialiseerd in het conserveren van grote fotocollecties, waaronder die van Charlie Chaplin."
                     }
                 ]
             }
