@@ -71,13 +71,13 @@
     "museums": [
         {
             "idPlus": {
-                "town": "New York",
+                "town": "New York City",
                 "fullName": "Fotografiska New York",
                 "nickName": "Fotografiska NYC"
             },
             "coordinates": {
-                "latitude": 40.739278,
-                "longitude": -73.986722
+                "latitude": 40.739378,
+                "longitude": -73.986622
             },
             "optional": {
                 "website": "https://www.fotografiska.com/nyc/",
