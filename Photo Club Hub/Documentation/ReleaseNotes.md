@@ -38,7 +38,7 @@ Where two clubs had exactly the same coordinates, one was moved by 0.0001° (abo
 
 STRUCTURAL
 
-* Tested with iOS 27.0.1, Xcode 27.1 (27A9275), Xcode 27.2 RC1 (27B48) and iOS 27.2 beta (?????)
+* Tested with iOS 27.0.1, Xcode 27.1 (27A9275), Xcode 27.2 RC1 (27B48) and iOS 27.2 beta (24B114)
 
 This build #4669 was made using Xcode 27.2 RC1 and is intended for the App Store.
 
