@@ -1905,8 +1905,8 @@
                 "nickName": "fc2020"
             },
             "coordinates": {
-                "latitude": 51.65823,
-                "longitude": 5.29832
+                "latitude": 51.65833,
+                "longitude": 5.29842
             },
             "optional": {
                 "level2URL": "https://www.example.com/fc2020.level2.json",
