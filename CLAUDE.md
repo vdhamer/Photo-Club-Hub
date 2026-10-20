@@ -56,6 +56,23 @@ prefix, with the compatibility boundary at the second position — was dropped i
 semver. **They float apart from then on**; matching numbers prove nothing and are not maintained.
 Full description in `Photo Club Hub/Documentation/ReleaseProcess.md`; the reasoning is in #808.
 
+## What each tab shows
+
+Check this before writing release notes, App Store text or anything else that tells users where data appears.
+The four tabs list different kinds of records, so a data change can show up on one tab and not on another.
+
+- **Maps** lists organizations: every club and every museum, filtered only by the Settings toggles for clubs and
+  museums (`organizationPredicate`). Every club with a Level 1 record appears, whether or not it also has
+  Level 2 data; this is the only tab that shows clubs without members.
+- **Clubs** fetches member portfolios that pass the Settings member filters (`memberPredicate`) and groups them into
+  one section per club (`FilteredMemberPortfoliosView`). So a club shows only if at least one of its members gets
+  through: no members, or none that pass the filters, means no club. A club whose only member is former shows only
+  with "Show former members" on.
+- **People** lists photographers, with no Settings filter; only the search field narrows it.
+- **Settings** holds the toggles above, among others.
+
+The word is "tab" for these four; everything else is a "screen".
+
 ## Planning & process live in GitHub, not local files
 
 GitHub is the technical and process source of truth across the Photo Club Hub repos
