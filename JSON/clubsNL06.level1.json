@@ -35,6 +35,32 @@
 
         {
             "idPlus": {
+                "town": "Aalten",
+                "fullName": "Oostgelders Fotografen en Kunstenaars Collectief",
+                "nickName": "OFKC"
+            },
+            "coordinates": {
+                "latitude": 51.92782,
+                "longitude": 6.58411
+            },
+            "optional": {
+                "website": "https://ofkc.nl",
+                "level2URL": "https://www.example.com/OFKC.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Exhibits every two months in a pub, and outdoors along a footpath in Bredevoort."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Exposeert om de twee maanden in een kroeg, en buiten langs een wandelpad in Bredevoort."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Angeren",
                 "fullName": "Fotoclub Lingewaard",
                 "nickName": "fcLingewaard"
@@ -161,6 +187,32 @@
                     {
                         "language": "NL",
                         "value": "Houdt twee fotokettingen tegelijk."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Buren",
+                "fullName": "Fotocollectief Natuurmoment",
+                "nickName": "natuurmoment"
+            },
+            "coordinates": {
+                "latitude": 51.91182,
+                "longitude": 5.33388
+            },
+            "optional": {
+                "website": "https://www.natuurmoment.eu",
+                "level2URL": "https://www.example.com/natuurmoment.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Nature photographers who use photography creatively, from abstract compositions to imaginative interpretations."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Natuurfotografen die fotografie creatief inzetten, van abstracte composities tot fantasierijke interpretaties."
                     }
                 ]
             }
