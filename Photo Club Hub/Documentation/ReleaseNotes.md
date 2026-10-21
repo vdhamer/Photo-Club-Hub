@@ -50,6 +50,8 @@ The translations of each text are now listed in order of language code (DE, EN, 
 
 STRUCTURAL
 
+* `scripts/roadmap/`, the roadmap and its questionnaire pages, moved to [Photo-Club-Hub-Project](https://github.com/vdhamer/Photo-Club-Hub-Project), together with its two `.gitignore` rules. None of it was part of the app. `CLAUDE.md` now names that fourth repo. ([Project#1](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/1))
+* [#596](https://github.com/vdhamer/Photo-Club-Hub/issues/596), supported expertises sometimes shown as temporary on the People tab, is closed without a code change in this release: it no longer occurs since Data 2.11.4 loads Level 0 before Level 2. Three fresh installs gave the expected 29 supported and 5 temporary expertises.
 * Tested with iOS 27.0.1, Xcode 27.1 (27A9275), Xcode 27.2 RC1 (27B48) and iOS 27.2 beta (24B114)
 
 This build #4669 was made using Xcode 27.2 RC1 and is intended for the App Store.
