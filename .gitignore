@@ -171,23 +171,6 @@ scripts/screenshots/screenshots_verify/
 # Mac and the screenshot scripts build from the .xcodeproj directly.
 /Photo Club Hub.xcworkspace/
 
-# Working notes behind scripts/roadmap/. The roadmap data and the pages generated from
-# it are fine in public — they are the same kind of thing as the issue list. These two
-# are not: they carry a private read of the national federation's internal position,
-# taken from a conversation with one of its officers, and a description of a specific
-# supporter that identifies him to anyone in Dutch photo-club circles. Neither belongs
-# in a public repository. Kept locally because they are still being worked on.
-# Extended from notes-*.md to notes-*: working material also arrives as CSV, such as a
-# scrape of another organisation's public club roster, which is ours to use but not to
-# republish wholesale.
-scripts/roadmap/notes-*
-
-# Ratings exported from the roadmap page (scripts/roadmap). A transient hand-off file:
-# build-roadmap.py merges it into feature-candidates.csv, which is the master and is
-# committed. Keeping the export as well would mean the same numbers in two places, and
-# churn on every rating session.
-scripts/roadmap/ratings.csv
-
 # The scavenger works from a local page cache and writes draft level2 files.
 # Both are per-run scratch: the draft is meant to be checked, corrected and moved
 # into JSON/, not committed from here.

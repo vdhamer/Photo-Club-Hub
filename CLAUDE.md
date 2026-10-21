@@ -2,6 +2,9 @@
 
 Guidance for AI coding assistants (e.g. Claude Code) working in this repository.
 
+Project-wide work lives in a fourth repo, [Photo-Club-Hub-Project](https://github.com/vdhamer/Photo-Club-Hub-Project):
+non-code tickets (written `Project#N`), the roadmap and its `scripts/roadmap/`, and the dashboard (Discussion #14).
+
 ## Dependency on Photo Club Hub Data
 
 The CoreData model, JSON loaders, and club `MembersProvider`s live in the
