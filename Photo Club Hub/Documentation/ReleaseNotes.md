@@ -10,7 +10,7 @@
 
 USER-FACING CHANGES
 
-- **40 more photo clubs.** The Maps tab now shows 34 clubs in the Fotobond's Gelderland Zuid region, up from 3: from the Achterhoek and the Liemers to Arnhem, Nijmegen, the Betuwe, Ede and Wageningen. 13 of them are Fotobond clubs, the other 18 are independent. Drenthe and the Vechtdal gain 7 clubs, among them Fotoclub Dalfsen, FotoFun Emmen and Fotoclub Ommen. Fotoclub Berkelland in Haarlo joins the Twente region, and Fotoclub Positief in Hasselt the "Transijssel" region. Many clubs now come with a short remark about what makes them special, such as a yearly photo chain or a photo book project. They appear on the Clubs tab once a club shares its member list. The new clubs also show up in older versions of the app, without updating. ([Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68), [Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77))
+- **42 more photo clubs.** The Maps tab now shows 36 clubs in the Fotobond's Gelderland Zuid region, up from 3: from the Achterhoek and the Liemers to Arnhem, Nijmegen, the Betuwe, Ede and Wageningen. 13 of the new ones are Fotobond clubs, the other 20 are independent. Drenthe and the Vechtdal gain 7 clubs, among them Fotoclub Dalfsen, FotoFun Emmen and Fotoclub Ommen. Fotoclub Berkelland in Haarlo joins the Twente region, and Fotoclub Positief in Hasselt the "Transijssel" region. Many clubs now come with a short remark about what makes them special, such as a yearly photo chain or a photo book project. They appear on the Clubs tab once a club shares its member list. The new clubs also show up in older versions of the app, without updating. ([Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68), [Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77))
 
 - **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. This removes four clubs in Drenthe that would otherwise appear twice, because their names were corrected: Fotoclub Westerveld e.o. (now listed in Wapserveen, where it meets), FotoClub De Wolden, Vereniging van Natuurfotografen Drenthe and Fotogroep Meppel. ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
 
@@ -25,10 +25,10 @@ USER-FACING BUG FIXES
 DATA
 
 * `clubsNL06.level1.json`
-31 clubs added to the 3 nature clubs already listed, which are unchanged: 13 Fotobond clubs and 18 independent ones, found in the second search pass of [Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68) and reviewed in [Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77). Additions only, so no data reset is needed. Mirrored identically in the Data package's bundled copy.
+33 clubs added to the 3 nature clubs already listed: 13 Fotobond clubs and 18 independent ones, found in the second search pass of [Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68) and reviewed in [Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77), plus two independent ones found on fotoexpositie.nl: the Oostgelders Fotografen en Kunstenaars Collectief (Aalten) and Fotocollectief Natuurmoment (Buren). The remarks of the 3 nature clubs were rewritten too. Additions only, so no data reset is needed. Mirrored identically in the Data package's bundled copy.
 
 * `clubsNL03.level1.json`
-7 clubs added, all independent: AFV Goed Licht (Coevorden), FotoFun Emmen, Fotoclub Dalfsen, Fotoclub Noordenveld (Norg), Fotoclub Ommen, Fotoclub Spijkerboor and Fotogroep Rolde. They come from the first search pass of [Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68), reviewed with the afdeling's contact. Four existing clubs had their name or town corrected; the one-time reload above ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883)) clears their old entries. Mirrored identically in the Data package's bundled copy.
+7 clubs added, all independent: AFV Goed Licht (Coevorden), FotoFun Emmen, Fotoclub Dalfsen, Fotoclub Noordenveld (Norg), Fotoclub Ommen, Fotoclub Spijkerboor and Fotogroep Rolde. They come from the first search pass of [Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68), reviewed with the afdeling's contact. Afovera's pin moved to the centre of Assen, as the club no longer meets at its old address. Four existing clubs had their name or town corrected; the one-time reload above ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883)) clears their old entries. Mirrored identically in the Data package's bundled copy.
 
 * `clubsNL04.level1.json`
 Fotoclub Positief (Hasselt) added, an independent club. Mirrored identically in the Data package's bundled copy.
@@ -38,6 +38,12 @@ Fotoclub Berkelland (Haarlo) added, Fotobond club 0588.
 
 * `clubsNL16.level1.json`, `TemplateMax.level1.json` and `TemplateMin.level1.json`
 Where two clubs had exactly the same coordinates, one was moved by 0.0001° (about 10 m), so that both markers can be seen and tapped. In `clubsNL16` that is Fotocollectief 2020 in Vught.
+
+* `clubsNL16.level1.json`
+Collectief de Verbeelding (Waalre) now links to its new site, collectief-de-verbeelding.nl: its old domain serves a casino site. The clubs are now sorted by town, as in the other files.
+
+* `clubsNL03`, `clubsNL16`, `TemplateMax`, `Persoonlijk03` and `fcVeghel`
+The translations of each text are now listed in order of language code (DE, EN, FR, NL). The app ignores the order; it only makes the files easier to read.
 
 * `root.level1.json`
 "New York" is now "New York City". Only app versions before 2.9.0 read this file.
