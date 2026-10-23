@@ -339,31 +339,6 @@
         {
             "idPlus": {
                 "town": "Den Bosch",
-                "fullName": "Fotocollectief ISO 2016",
-                "nickName": "iso2016"
-            },
-            "coordinates": {
-                "latitude": 51.65823,
-                "longitude": 5.29832
-            },
-            "optional": {
-                "level2URL": "https://www.example.com/iso2016.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The club ISO 2016 in Den Bosch ('s Hertogenbosch) does not currently have a website."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "ISO2016 heeft geen eigen website."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Den Bosch",
                 "fullName": "Fotogroep Argus",
                 "nickName": "fgArgus"
             },
@@ -1972,7 +1947,7 @@
                     },
                     {
                         "language": "NL",
-                        "value": "Het collectief is opgericht in mei 2025 en exposeert in het Waalres Museum."
+                        "value": "Het collectief bestaat uit vier fotografen."
                     }
                 ]
             }
