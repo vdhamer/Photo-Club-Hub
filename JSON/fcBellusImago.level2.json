@@ -53,6 +53,9 @@
         "familyName": "Jongeneelen"
       },
       "optional": {
+        "status": {
+          "isFormerMember": true
+        },
         "roles": {"isOther": true},
         "birthday": "9999-05-17",
         "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-annemiek-1-annemiek-jongeneelen-2024.jpg",
@@ -283,6 +286,9 @@
     {
       "name": {"givenName": "Tony", "infixName": "", "familyName": "Seesing"},
       "optional": {
+        "status": {
+          "isFormerMember": true
+        },
         "birthday": "9999-03-05",
         "website": "http://www.dezelfontspanner.nl",
         "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-tony-3.jpg",
