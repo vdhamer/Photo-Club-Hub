@@ -83,7 +83,7 @@ The updated data gets committed on the bgContext for the thread loading this par
 ====================================================================================
 
 When generating a memberRow for Ignite, first downloadThumbnailToLocal is called.
-It uses featuredImageThumbnail = http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/thumbs/2014_ExpoFGWaalre_069.jpg
+It uses featuredImageThumbnail = https://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/thumbs/2014_ExpoFGWaalre_069.jpg
 It re-encodes the JPG file (of compression 0.65).
 And writes the data to "file:/Users/peter/Library/Containers/com.vdHamer.Photo-Club-Hub-HTML/Data/Build/images/2014_ExpoFGWaalre_069.jpg" in the app's sandbox.
 

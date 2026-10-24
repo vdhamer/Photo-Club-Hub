@@ -14,6 +14,8 @@ USER-FACING CHANGES
 
 - **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. This removes four clubs in Drenthe that would otherwise appear twice, because their names were corrected: Fotoclub Westerveld e.o. (now listed in Wapserveen, where it meets), FotoClub De Wolden, Vereniging van Natuurfotografen Drenthe and Fotogroep Meppel. ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
 
+- **Portfolios on vdhamer.com open over a secure connection.** The portfolios of former Fotogroep Waalre members, and the page shown for a member without a portfolio, now load over an encrypted connection, like every other site the app opens. ([#145](https://github.com/vdhamer/Photo-Club-Hub/issues/145))
+
 - **Settings sections follow the order of the tabs.** The Settings tab now lists its sections in the same order as the tabs at the bottom of the screen: Maps, Clubs, People, and then Advanced. ([#887](https://github.com/vdhamer/Photo-Club-Hub/issues/887))
 
 USER-FACING BUG FIXES
@@ -48,7 +50,12 @@ The translations of each text are now listed in order of language code (DE, EN, 
 * `root.level1.json`
 "New York" is now "New York City". Only app versions before 2.9.0 read this file.
 
+* `fgWaalre.level2.json` and `fcEricamera.level2.json`
+All 38 portfolio links (`level3URL`) to vdhamer.com now use https, which that server offers since 23 Oct 2026 ([Project#5](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/5)). Older app versions follow them as well. Mirrored identically in the Data package's bundled copy.
+
 STRUCTURAL
+
+* The App Transport Security exception for vdhamer.com is gone from `Photo-Club-Hub-Info.plist`, so the app no longer allows plain http to any host. This needs the Data release that makes `emptyPortfolioURL` and the default `level2URL` https ([Data#86](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/86)). The `SinglePortfolioView` preview URL switched too. ([#145](https://github.com/vdhamer/Photo-Club-Hub/issues/145))
 
 * `scripts/roadmap/`, the roadmap and its questionnaire pages, moved to [Photo-Club-Hub-Project](https://github.com/vdhamer/Photo-Club-Hub-Project), together with its two `.gitignore` rules. None of it was part of the app. `CLAUDE.md` now names that fourth repo. ([Project#1](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/1))
 * [#596](https://github.com/vdhamer/Photo-Club-Hub/issues/596), supported expertises sometimes shown as temporary on the People tab, is closed without a code change in this release: it no longer occurs since Data 2.11.4 loads Level 0 before Level 2. Three fresh installs gave the expected 29 supported and 5 temporary expertises.

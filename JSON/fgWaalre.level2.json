@@ -31,7 +31,7 @@
                 "familyName": "Schoenmakers"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634046}
             }
@@ -45,7 +45,7 @@
             },
             "optional": {
                 "website": "http://www.ariejanvantwiskfotografie.nl",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Ariejan_van_Twisk/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Ariejan_van_Twisk/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Architecture"],
                 "nlSpecific": {"fotobondNumber": 1634051}
@@ -59,7 +59,7 @@
                 "familyName": "Stekelenburg"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Bart_van_Stekelenburg/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Bart_van_Stekelenburg/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Street", "Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634041}
@@ -73,7 +73,7 @@
                 "familyName": "Graaf"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Bettina_de_Graaf/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Bettina_de_Graaf/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634067}
             }
@@ -118,7 +118,7 @@
                 "familyName": "Postema"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Cassandra_Postema/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Cassandra_Postema/",
                 "status": {"isFormerMember": true}
             }
         },
@@ -130,7 +130,7 @@
                 "familyName": "Klessens"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Conny_Klessens/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Conny_Klessens/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634065}
             }
@@ -143,7 +143,7 @@
                 "familyName": "Neggers"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Elke_Neggers/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Elke_Neggers/",
                 "status": {"isFormerMember": true}
             }
         },
@@ -217,7 +217,7 @@
                 "familyName": "Steger"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Guido_Steger/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Guido_Steger/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634040}
             }
@@ -248,7 +248,7 @@
             },
             "optional": {
                 "website": "https://www.brabantcultureel.nl/2024/03/28/hans-zoete-1948-2024-zag-de-schoonheid-in-ogenschijnlijk-onbelangrijke-zaken/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Hans_Zoete/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Hans_Zoete/",
                 "status": {
                     "isDeceased"    : true,
                     "isFormerMember": true,
@@ -266,7 +266,7 @@
             },
             "optional": {
                 "website": "http://helganuchelmans.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Helga_Nuchelmans/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Helga_Nuchelmans/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634062}
             }
@@ -311,7 +311,7 @@
             },
             "optional": {
                 "website": "https://500px.com/irene_van_nunen",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Irene_van_Nunen/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Irene_van_Nunen/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634058}
             }
@@ -325,7 +325,7 @@
             },
             "optional": {
                 "website": "http://www.istvannagy.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Istvan_Nagy/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Istvan_Nagy/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Black & White", "Panorama"],
                 "nlSpecific": {"fotobondNumber": 1634053}
@@ -339,7 +339,7 @@
                 "familyName": "Niezen"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Niezen/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Jan_Niezen/",
                 "status": {"isDeceased": true, "isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634061}
             }
@@ -352,7 +352,7 @@
                 "familyName": "Stege"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Stege/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Jan_Stege/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634056}
@@ -397,7 +397,7 @@
                 "familyName": "Hazelzet"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jet_Hazelzet/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Jet_Hazelzet/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634035}
             }
@@ -410,7 +410,7 @@
                 "familyName": "Stegehuis"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Joke_Stegehuis/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Joke_Stegehuis/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634022}
             }
@@ -424,7 +424,7 @@
             },
             "optional": {
                 "website": "http://www.flickr.com/photos/jooppostema/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Joop_Postema/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Joop_Postema/",
                 "status": {"isDeceased": true, "isFormerMember": true},
                 "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634036}
@@ -438,7 +438,7 @@
                 "familyName": "Jansen"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_Jansen/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Jos_Jansen/",
                 "status": {"isDeceased": true, "isFormerMember": true},
                 "expertises": ["Street"],
                 "nlSpecific": {"fotobondNumber": 1634050},
@@ -453,7 +453,7 @@
                 "familyName": "Vries"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_de_Vries/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Jos_de_Vries/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Black & White"]
             }
@@ -466,7 +466,7 @@
                 "familyName": "Daniëls"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jose_Daniels/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Jose_Daniels/",
                 "status": {"isFormerMember": true}
             }
         },
@@ -510,7 +510,7 @@
             },
             "optional": {
                 "website": "http://ldje.home.xs4all.nl/photography.html",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Ludwig_Eggermont/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Ludwig_Eggermont/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634060}
             }
@@ -524,7 +524,7 @@
             },
             "optional": {
                 "website": "http://www.m3w.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Mariet_Wielders/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Mariet_Wielders/",
                 "status": {"isFormerMember": true}
             }
         },
@@ -550,7 +550,7 @@
                 "familyName": "Obbing"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Marijelle_Obbing/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Marijelle_Obbing/",
                 "status": {"isFormerMember": true}
             }
         },
@@ -562,7 +562,7 @@
                 "familyName": "Gallas"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Marijke_Gallas/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Marijke_Gallas/",
                 "status": {"isFormerMember": true, "isHonoraryMember": true},
                 "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634011}
@@ -576,7 +576,7 @@
                 "familyName": "Driessen"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Mia_Driessen/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Mia_Driessen/",
                 "status": {"isDeceased": true, "isFormerMember": true}
             }
         },
@@ -635,7 +635,7 @@
             },
             "optional": {
                 "website": "https://glass.photo/vdhamer",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_van_den_Hamer/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Peter_van_den_Hamer/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Minimal", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634045}
@@ -649,7 +649,7 @@
                 "familyName": "Poelen"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_Poelen/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Peter_Poelen/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634054}
             }
@@ -663,7 +663,7 @@
             },
             "optional": {
                 "website": "http://www.riavanderploegfotografie.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Ria_van_der_Ploeg/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Ria_van_der_Ploeg/",
                 "status": {"isFormerMember": true}
             }
         },
@@ -690,7 +690,7 @@
                 "familyName": "Waas"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Theo_van_Waas/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Theo_van_Waas/",
                 "status": {
                     "isDeceased"    : true,
                     "isFormerMember": true,
@@ -706,7 +706,7 @@
                 "familyName": "Comperen"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Tinus_Comperen/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Tinus_Comperen/",
                 "status": {"isDeceased": true, "isFormerMember": true}
             }
         },
@@ -719,7 +719,7 @@
             },
             "optional": {
                 "website": "https://www.tistis.nl/photos.html",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Tis_Veugen/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Tis_Veugen/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634064}
@@ -733,7 +733,7 @@
                 "familyName": "Asseldonk"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Wilko_van_Asseldonk/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Wilko_van_Asseldonk/",
                 "status": {"isFormerMember": true},
                 "nlSpecific": {"fotobondNumber": 1634059}
             }
@@ -746,7 +746,7 @@
                 "familyName": "Meijer"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Willem_Meijer/",
+                "level3URL": "https://www.vdhamer.com/fgWaalre/Willem_Meijer/",
                 "status": {"isFormerMember": true},
                 "expertises": ["Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634049}

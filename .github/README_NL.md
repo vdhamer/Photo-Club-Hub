@@ -738,7 +738,7 @@ Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSO
   - Het is dus mogelijk om twee clubs met dezelfde naam in verschillende plaatsen te hebben. Twee aparte clubs of musea met een identieke naam in dezelfde plaats zou verwarrend zijn, en zou door de app als één entiteit worden behandeld totdat de data over de oorspronkelijke `town`/`fullName`-combinatie uit de database op het apparaat is verwijderd. Het verwijderen van verouderde `Organization`-records gebeurt helaas nog niet automatisch.
   - Probeer geen van beide teksten te wijzigen. Omdat de app de nieuwe ID niet koppelt aan de oorspronkelijke ID, leidt een wijziging ertoe dat de app twee verschillende clubs of musea toont.
 - `nickName` is een korte versie van `fullName` die wordt getoond in krappe ruimtes zoals op kaarten. Het mag elke tekst zijn, maar houd het kort.
-- `coordinates` wordt gebruikt om de club op de kaart te tekenen en om gelokaliseerde versies van de namen van plaatsen en landen te [genereren](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/).
+- `coordinates` wordt gebruikt om de club op de kaart te tekenen en om gelokaliseerde versies van de namen van plaatsen en landen te [genereren](https://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/).
 - `latitude` moet in het bereik [-90.0, +90.0] liggen, waarbij negatieve waarden worden gebruikt voor het zuidelijk halfrond (bijvoorbeeld Australië).
 - `longitude` moet in het bereik [-180.0, +180.0] liggen, waarbij negatieve waarden worden gebruikt voor het westelijk halfrond (bijvoorbeeld de VS).</p>
 </details></ul>
@@ -853,7 +853,7 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
                 "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
                 "photographerImage": "https://www.fcDeGender.nl/wp-content/uploads/Peter-van-den-Hamer.png",
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+                "featuredImage": "https://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
                 "membershipStartDate": "2024-01-01",
                 "membershipEndDate": "9999-01-01",
