@@ -40,7 +40,7 @@ struct SinglePortfolioView: UIViewRepresentable {
 struct SinglePortfolioView_Previews: PreviewProvider {
 
     static var webView = WKWebView()
-    static var url: URL = URL(string: "http://www.vdHamer.com/fgWaalre/Peter_van_den_Hamer/")!
+    static var url: URL = URL(string: "https://www.vdhamer.com/fgWaalre/Peter_van_den_Hamer/")!
 
     static var previews: some View {
         NavigationStack {
