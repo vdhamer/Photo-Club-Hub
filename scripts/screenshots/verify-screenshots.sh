@@ -32,7 +32,7 @@ set -euo pipefail
 # ---------------------------------------------------------------------------
 BUNDLE_ID="com.vdhamer.Fotogroep-Waalre"
 SCHEME="Photo Club Hub"
-#PREFERRED_DEVICE="iPad Air 13-inch (M4)"
+#PREFERRED_DEVICE="iPad Pro 13-inch (M5)"
 PREFERRED_DEVICE="iPhone 18 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""

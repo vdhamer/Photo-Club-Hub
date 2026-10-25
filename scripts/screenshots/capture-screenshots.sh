@@ -144,7 +144,7 @@ SCHEME="Photo Club Hub"
 
 # Preferred simulator model (the current iPhone "Pro"). Auto-discovered by name unless
 # an explicit --udid is supplied. Change PREFERRED_DEVICE to retarget.
-#PREFERRED_DEVICE="iPad Air 13-inch (M4)"
+#PREFERRED_DEVICE="iPad Pro 13-inch (M5)"
 PREFERRED_DEVICE="iPhone 18 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""            # resolved below (or from --udid)
@@ -455,10 +455,8 @@ if [[ "${UDID_FROM_FLAG}" -eq 1 ]]; then
         | head -n1)"
     [[ -z "${PREFERRED_DEVICE}" ]] && PREFERRED_DEVICE="(unknown)"
 fi
-# RocketSim 16.7.0 applied no device frame to the iPad Pro 13-inch (M4 or M5), so those get the generic Simulator
-# outline instead. 16.7.1 fixed the same bug for the iPhone 18 Pro (AvdLee/RocketSimApp#1214); the iPad Pro is untested.
-# The iPad Air 13-inch (M4) does get its frame, and has the same 2064 × 2752 screen, so the iPad set is made on it.
-[[ "${PREFERRED_DEVICE}" == "iPad Pro"* ]] && BEZEL="simulator"
+# RocketSim 16.7.1 frames the iPad Pro 13-inch (M5), but has no frame for the iPad Air 13-inch (M3 or M4)
+# ("No device bezel is available"), so the iPad set is made on the iPad Pro; both have a 2064 × 2752 screen.
 # Since Xcode 27.2 (27B48), `simctl io screenshot` fails on the iPhone Duo ("Invalid argument") unless it names a
 # display: 1 = outer display (1398 × 2034), 3 = inner display (2007 × 2853). begin_duo_pass() picks the display
 # per posture; the outer one is the start value, as the Duo is folded first.
