@@ -6,13 +6,17 @@
 
 ---------------------------------------------------------------------------
 
+### 3.0.5 (GitHub commit ???????, build 4670) ??-??-2026
+
+---------------------------------------------------------------------------
+
 ### 3.0.4 (GitHub commit 0cc03046, build 4669) 25-10-2026
 
 USER-FACING CHANGES
 
-- **42 more photo clubs.** The Maps tab now shows 36 clubs in the Fotobond's Gelderland Zuid region, up from 3: from the Achterhoek and the Liemers to Arnhem, Nijmegen, the Betuwe, Ede and Wageningen. 13 of the new ones are Fotobond clubs, the other 20 are independent. Drenthe and the Vechtdal gain 7 clubs, among them Fotoclub Dalfsen, FotoFun Emmen and Fotoclub Ommen. Fotoclub Berkelland in Haarlo joins the Twente region, and Fotoclub Positief in Hasselt the "Transijssel" region. Many clubs now come with a short remark about what makes them special, such as a yearly photo chain or a photo book project. They appear on the Clubs tab once a club shares its member list. The new clubs also show up in older versions of the app, without updating. ([Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68), [Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77))
+- **42 extra clubs.** The Maps tab shows 33 new clubs in the Fotobond's Gelderland Zuid region, now 36 in all. Drenthe and the Vechtdal gain 7 clubs. The new clubs now come with a short remark about what makes them special, such as a yearly photo chain or a photo book project. They appear on the Clubs tab once a club shares its member list. ([Data#68](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/68), [Data#77](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/77))
 
-- **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. This removes four clubs in Drenthe that would otherwise appear twice, because their names were corrected: Fotoclub Westerveld e.o. (now listed in Wapserveen, where it meets), FotoClub De Wolden, Vereniging van Natuurfotografen Drenthe and Fotogroep Meppel. It also clears the old entry of Collectief de Verbeelding, now listed in Eindhoven instead of Waalre, and removes Fotocollectief ISO 2016 in Den Bosch, which is no longer listed. ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
+- **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. This removes four clubs in Drenthe that would otherwise appear twice, because their names were corrected: Fotoclub Westerveld e.o. (now listed in Wapserveen, where it meets), FotoClub De Wolden, Vereniging van Natuurfotografen Drenthe and Fotogroep Meppel. It also clears the old entry of Collectief de Verbeelding, now listed in Eindhoven instead of Waalre, and removes Fotocollectief ISO 2016 in Den Bosch, which is no longer active. ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883))
 
 - **Portfolios on vdhamer.com open over a secure connection.** The portfolios of former Fotogroep Waalre members, and the page shown for a member without a portfolio, now load over an encrypted connection, like every other site the app opens. ([#145](https://github.com/vdhamer/Photo-Club-Hub/issues/145))
 
@@ -20,7 +24,7 @@ USER-FACING CHANGES
 
 USER-FACING BUG FIXES
 
-- **Map highlighting changes show at once.** Turning the highlighting of Fotobond or non-Fotobond clubs on or off, or picking another highlight color, now shows on the Maps tab right away. Before, it only showed after restarting the app. ([#885](https://github.com/vdhamer/Photo-Club-Hub/issues/885))
+- **Map highlighting changes take effect immediately.** Turning the highlighting of Fotobond or non-Fotobond clubs on or off, or picking another highlight color, now shows up on the Maps tab right away. Before, it only showed after relaunching the app. ([#885](https://github.com/vdhamer/Photo-Club-Hub/issues/885))
 
 - **Tidier Settings on iOS 27.** On iOS 27, the icons in rows with a switch almost touched their text. All rows have the same spacing again. ([#888](https://github.com/vdhamer/Photo-Club-Hub/issues/888))
 
@@ -42,13 +46,13 @@ Fotoclub Berkelland (Haarlo) added, Fotobond club 0588.
 Where two clubs had exactly the same coordinates, one was moved by 0.0001° (about 10 m), so that both markers can be seen and tapped. In `clubsNL16` that is Fotocollectief 2020 in Vught.
 
 * `clubsNL16.level1.json`
-Collectief de Verbeelding now links to its new site, collectief-de-verbeelding.nl: its old domain serves a casino site. Its town is now Eindhoven instead of Waalre, and its pin moved there. A town is part of a club's identity, so the one-time reload above ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883)) clears the old entry. The clubs are now sorted by town, as in the other files.
+Collectief de Verbeelding now links to its new website, collectief-de-verbeelding.nl: its old domain serves a casino site. Its town is now Eindhoven instead of Waalre, and its pin moved there. A town is part of a club's identity, so the one-time reload above ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883)) clears the old entry.
 
 * `clubsNL03`, `clubsNL16`, `TemplateMax`, `Persoonlijk03` and `fcVeghel`
-The translations of each text are now listed in order of language code (DE, EN, FR, NL). The app ignores the order; it only makes the files easier to read.
+The translations of each text are now listed in order of language code (DE, EN, FR, NL). The app ignores the order; it only makes the files easier to check.
 
 * `root.level1.json`
-"New York" is now "New York City", and Collectief de Verbeelding moved from Waalre to Eindhoven, as in `clubsNL16`. Only app versions before 2.9.0 read this file; they get no data reset, so they show that club twice.
+"New York" is now "New York City", and Collectief de Verbeelding moved from Waalre to Eindhoven, as in `clubsNL16`. Only app versions before 2.9.0 read this particular file; they will stil show that club twice because they cannot .
 
 * `fgWaalre.level2.json` and `fcEricamera.level2.json`
 All 38 portfolio links (`level3URL`) to vdhamer.com now use https, which that server offers since 23 Oct 2026 ([Project#5](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/5)). Older app versions follow them as well. Mirrored identically in the Data package's bundled copy.
@@ -58,8 +62,11 @@ STRUCTURAL
 * The App Transport Security exception for vdhamer.com is gone from `Photo-Club-Hub-Info.plist`, so the app no longer allows plain http to any host. This needs the Data release that makes `emptyPortfolioURL` and the default `level2URL` https ([Data#86](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/86)). The `SinglePortfolioView` preview URL switched too. ([#145](https://github.com/vdhamer/Photo-Club-Hub/issues/145))
 
 * `scripts/roadmap/`, the roadmap and its questionnaire pages, moved to [Photo-Club-Hub-Project](https://github.com/vdhamer/Photo-Club-Hub-Project), together with its two `.gitignore` rules. None of it was part of the app. `CLAUDE.md` now names that fourth repo. ([Project#1](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/1))
+
 * [#596](https://github.com/vdhamer/Photo-Club-Hub/issues/596), supported expertises sometimes shown as temporary on the People tab, is closed without a code change in this release: it no longer occurs since Data 2.11.4 loads Level 0 before Level 2. Three fresh installs gave the expected 29 supported and 5 temporary expertises.
+
 * The Maps test modes and the live-map counter used to compare scrolling approaches ([#870](https://github.com/vdhamer/Photo-Club-Hub/issues/870), [#867](https://github.com/vdhamer/Photo-Club-Hub/issues/867)) are removed, together with their debug-only section of the Settings tab. Phase 2 is now the only behavior: a locked map shows as an image after a fixed 175 ms delay, and only an unlocked map is live. Users see no change. ([#876](https://github.com/vdhamer/Photo-Club-Hub/issues/876))
+
 * Built using v3.7.2 of the Photo Club Hub Data package ([release notes](https://github.com/vdhamer/Photo-Club-Hub-Data/releases/tag/v3.7.2)). Its 3.7.1 part ([release notes](https://github.com/vdhamer/Photo-Club-Hub-Data/releases/tag/v3.7.1)) carries this build's one-time reset key, `dataResetPending304b4669` ([#883](https://github.com/vdhamer/Photo-Club-Hub/issues/883)), and https for the empty-portfolio page and the default `level2URL` ([Data#86](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/86)), which the removal of the App Transport Security exception above depends on. A changed club nickname now reaches existing installs without a reset ([Data#75](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/75), Question 1). 3.7.2 only updates the bundled copy for Collectief de Verbeelding's move to Eindhoven. It also carries the bundled copies of the data files listed above.
 * Tested with iOS 27.0.1, Xcode 27.1 (27A9275), Xcode 27.2 RC1 (27B48) and iOS 27.2 beta (24B114)
 
