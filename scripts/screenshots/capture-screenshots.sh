@@ -13,9 +13,9 @@
 #
 # Output: per screen a framed JPG named <Screen>_<lang>_<appearance>.jpg (background flattened
 # to white for light captures, black for dark ones) plus the original transparent-background
-# PNG (larger, but usable on any backdrop; suppress with --no-png), in OUT_DIR.
-# With --app-store the JPGs go into OUT_DIR/AppStore instead: they are the only files App Store Connect
-# accepts (the PNGs have other sizes and a transparent background), so that folder can be uploaded as is.
+# PNG (larger, but usable on any backdrop; suppress with --no-png). The JPGs go into OUT_DIR, the PNGs into
+# OUT_DIR/PNG. With --app-store the JPGs are the only files App Store Connect accepts (the PNGs have other sizes
+# and a transparent background), so the JPGs in OUT_DIR can be uploaded as they are.
 #
 # ---------------------------------------------------------------------------
 # Scope (per #775):
@@ -29,6 +29,9 @@
 #     (Documents/screenshot-ready) once the launched screen's preset content is on screen;
 #     wait_until_ready() polls for it and fails the run on a per-screen timeout.
 #   - Tips (#776): `-suppressTips YES` keeps TipKit tips out of the captures.
+#   - iPhone Duo (#886): one run captures every screen twice, folded (outer display) into OUT_DIR/Folded and
+#     unfolded (inner display) into OUT_DIR/Open, each with its own JPGs and PNG subfolder. App Store Connect has a
+#     separate slot per display, so each folder fills one slot.
 #
 # ---------------------------------------------------------------------------
 # Requirements:
@@ -50,14 +53,14 @@
 #   scripts/screenshots/capture-screenshots.sh [--build] [--udid <UDID>] [--ios-version <version>] [--out <dir>] [--keep-booted] [--no-png]
 #                                  [--jpg-background-light <color>] [--jpg-background-dark <color>] [--app-store]
 #   --build         Build the app for the target simulator and (re)install it first.
-#   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 17 Pro).
+#   --udid <UDID>   Override the target simulator UDID (default: auto-pick iPhone 18 Pro).
 #   --ios-version <version>
 #                   Narrow the auto-pick to a specific iOS runtime (default: auto-detect
 #                   the latest installed runtime). Ignored when --udid is set.
 #   --out <dir>     Override the output directory (default: <repo>/scripts/screenshots/output).
 #   --keep-booted   Do not shut the simulator down when finished.
 #   --no-png        Only keep the flattened JPGs; discard the transparent-background PNGs
-#                   (default: keep both).
+#                   (default: keep both, the PNGs in a PNG subfolder of the output directory).
 #   --jpg-background-light <color>
 #                   Background color flattened into the *_light.jpg images, as RRGGBB or
 #                   #RRGGBB (default: FFFFFF, i.e. white).
@@ -67,8 +70,8 @@
 #   --app-store     Rescale the output JPGs to the App Store Connect accepted pixel dimensions
 #                   for the target device. The framed image is scaled proportionally and padded
 #                   with the matte color to fill the required canvas. Only JPGs are rescaled;
-#                   the raw transparent PNGs retain their native framed size. The rescaled JPGs are
-#                   written to an AppStore subfolder of the output directory.
+#                   the raw transparent PNGs retain their native framed size. The rescaled JPGs stay in
+#                   the output directory itself, so it holds exactly the files to upload.
 #                   Supported devices (portrait), per Apple's screenshot specifications (Oct 2026):
 #                     iPhone 18 Pro, iPhone 17 Pro, iPhone 16 Pro  →  1206 × 2622
 #                       ("iPhone with Dynamic Island, medium display": the one REQUIRED iPhone size)
@@ -76,7 +79,8 @@
 #                     iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796  (optional)
 #                     iPad Pro 13-inch (M5), iPad Pro 13-inch (M4), iPad Air 13-inch (M4)  →  2064 × 2752
 #                       (13": REQUIRED when the app runs on iPad)
-#                     iPhone Duo  →  1398 × 2034  (outer display, folded; required from April 2027)
+#                     iPhone Duo  →  1398 × 2034 folded (outer display), 2007 × 2853 open (inner display)
+#                       (required from April 2027; the open captures are landscape, 2853 × 2007)
 #                   Any other device: target a supported one by setting PREFERRED_DEVICE in this script, or with --udid.
 #
 # ---------------------------------------------------------------------------
@@ -141,10 +145,7 @@ SCHEME="Photo Club Hub"
 # Preferred simulator model (the current iPhone "Pro"). Auto-discovered by name unless
 # an explicit --udid is supplied. Change PREFERRED_DEVICE to retarget.
 #PREFERRED_DEVICE="iPad Air 13-inch (M4)"
-# Not "iPhone 18 Pro" yet: RocketSim 16.7.0 ships iPhone 18 Pro device frames but does not apply them
-# (neither in its own window nor via the CLI), and then silently returns the bare screen without a bezel.
-# Switch back once https://github.com/AvdLee/RocketSimApp/issues/1214 is fixed.
-PREFERRED_DEVICE="iPhone 17 Pro"
+PREFERRED_DEVICE="iPhone 18 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""            # resolved below (or from --udid)
 
@@ -340,7 +341,6 @@ ensure_rocketsim() {
 # at the cost of losing the device bezels.
 RS_BROKEN=0
 UNFRAMED_COUNT=0
-DELIBERATELY_UNFRAMED=0 # 1 = this device is captured with simctl on purpose (iPhone Duo), so no warning at the end
 
 # Recovery window for a failed `rocketsim screenshot` (see capture()). RocketSim 16.2
 # (build 320) intermittently aborts on an uncaught NSException raised on a background
@@ -367,7 +367,8 @@ app_store_size_for_device() {
         "iPhone 18 Pro"|"iPhone 17 Pro"|"iPhone 16 Pro")              echo "1206x2622" ;;  # required
         "iPhone 18 Pro Max"|"iPhone 17 Pro Max"|"iPhone 16 Pro Max")  echo "1320x2868" ;;
         "iPhone 16 Plus"|"iPhone 15 Plus")                            echo "1290x2796" ;;
-        "iPhone Duo")                                                 echo "1398x2034" ;;  # outer display
+        "iPhone Duo")                                                 echo "1398x2034" ;;  # folded: outer display
+        "iPhone Duo open")                                            echo "2007x2853" ;;  # inner display
         "iPad Pro 13-inch (M5)"|"iPad Pro 13-inch (M4)"|"iPad Air 13-inch (M4)")  echo "2064x2752" ;;  # required
         *) return 1 ;;
     esac
@@ -454,10 +455,16 @@ if [[ "${UDID_FROM_FLAG}" -eq 1 ]]; then
         | head -n1)"
     [[ -z "${PREFERRED_DEVICE}" ]] && PREFERRED_DEVICE="(unknown)"
 fi
-# RocketSim 16.7.0 applies no device frame to the iPad Pro 13-inch (M4 or M5), like the iPhone 18 Pro
-# (https://github.com/AvdLee/RocketSimApp/issues/1214), so those get the generic Simulator outline instead.
+# RocketSim 16.7.0 applied no device frame to the iPad Pro 13-inch (M4 or M5), so those get the generic Simulator
+# outline instead. 16.7.1 fixed the same bug for the iPhone 18 Pro (AvdLee/RocketSimApp#1214); the iPad Pro is untested.
 # The iPad Air 13-inch (M4) does get its frame, and has the same 2064 × 2752 screen, so the iPad set is made on it.
 [[ "${PREFERRED_DEVICE}" == "iPad Pro"* ]] && BEZEL="simulator"
+# Since Xcode 27.2 (27B48), `simctl io screenshot` fails on the iPhone Duo ("Invalid argument") unless it names a
+# display: 1 = outer display (1398 × 2034), 3 = inner display (2007 × 2853). begin_duo_pass() picks the display
+# per posture; the outer one is the start value, as the Duo is folded first.
+# Expanded as ${SIMCTL_DISPLAY_ARGS[@]+...} below: macOS's bash 3.2 treats an empty array as unbound under set -u.
+SIMCTL_DISPLAY_ARGS=()
+[[ "${PREFERRED_DEVICE}" == "iPhone Duo" ]] && SIMCTL_DISPLAY_ARGS=(--display=1)
 if [[ -n "${PREFERRED_IOS_VERSION}" ]]; then
     echo "Target simulator: ${PREFERRED_DEVICE:-'(explicit)'} / ${PREFERRED_IOS_VERSION} — ${UDID}"
 else
@@ -477,7 +484,7 @@ if [[ "${RESCALE}" -eq 1 ]]; then
         echo "         iPhone 18 Pro, iPhone 17 Pro, iPhone 16 Pro  →  1206 × 2622" >&2
         echo "         iPhone 18 Pro Max, iPhone 17 Pro Max, iPhone 16 Pro Max  →  1320 × 2868" >&2
         echo "         iPhone 16 Plus, iPhone 15 Plus        →  1290 × 2796" >&2
-        echo "         iPhone Duo (outer display)  →  1398 × 2034" >&2
+        echo "         iPhone Duo  →  1398 × 2034 folded, 2007 × 2853 open" >&2
         echo "         iPad Pro 13-inch (M5), iPad Pro 13-inch (M4), iPad Air 13-inch (M4)  →  2064 × 2752" >&2
         echo "       Set PREFERRED_DEVICE in this script to a supported device, or re-run with --udid <UDID of one>." >&2
         exit 2
@@ -488,10 +495,15 @@ if [[ "${RESCALE}" -eq 1 ]]; then
 fi
 
 JPG_DIR="${OUT_DIR}"
-[[ "${RESCALE}" -eq 1 ]] && JPG_DIR="${OUT_DIR}/AppStore"
-mkdir -p "${OUT_DIR}" "${JPG_DIR}"
-echo "Output folder: ${OUT_DIR}"
-[[ "${JPG_DIR}" != "${OUT_DIR}" ]] && echo "App Store JPGs: ${JPG_DIR}"
+PNG_DIR="${OUT_DIR}/PNG"
+mkdir -p "${JPG_DIR}"
+if [[ "${PREFERRED_DEVICE}" == "iPhone Duo" ]]; then
+    echo "Output folders: ${OUT_DIR}/Folded and ${OUT_DIR}/Open (JPGs, PNGs in a PNG subfolder of each)"
+else
+    [[ "${KEEP_PNG}" -eq 1 ]] && mkdir -p "${PNG_DIR}"
+    echo "Output folder: ${OUT_DIR} (JPGs)"
+    [[ "${KEEP_PNG}" -eq 1 ]] && echo "PNGs: ${PNG_DIR}"
+fi
 
 # ---------------------------------------------------------------------------
 # Boot the simulator.
@@ -500,36 +512,76 @@ echo "Booting simulator..."
 "${SIMCTL[@]}" boot "${UDID}" 2>/dev/null || true   # no-op if already booted
 "${SIMCTL[@]}" bootstatus "${UDID}" -b || true
 
-# iPhone Duo: only the folded outer display (1398 × 2034) can be captured for now. Unfolded, RocketSim 16.7.0
-# still captures the switched-off outer display (https://github.com/AvdLee/RocketSimApp/issues/1215), so the inner
-# display's App Store slot (2007 × 2853) waits for a fix. The Duo is folded here in case it was left open.
-# Its screen also stays black for up to several minutes after booting (a known simulator issue in Xcode 27), which
-# would make every capture black, so wait until a plain simctl screenshot shows something. A black PNG compresses
-# to well under 200 KB; the Home Screen is several times that.
-if [[ "${PREFERRED_DEVICE}" == "iPhone Duo" ]]; then
-    "${RS}" duo pose closed --udid "${UDID}" >/dev/null 2>&1 || true
-    DUO_BLACK_TIMEOUT=900
-    duo_probe="$(mktemp -t duo-probe)"
-    duo_waited=0
-    echo "Waiting for the iPhone Duo's screen to come up (it can stay black for minutes after booting)..."
+# iPhone Duo: RocketSim sets the fold posture (`rocketsim duo pose`) and captures both displays with a device frame.
+# Since RocketSim 16.7.1 its captures match simctl's in size and brightness, folded and open (#886; the earlier
+# darkness and wrong-display problems were AvdLee/RocketSimApp#1215).
+# A display can stay black for up to several minutes after booting (a known simulator issue in Xcode 27), which
+# would make every capture black, so duo_wait_for_display() waits until a plain simctl screenshot of that display
+# shows something. A black PNG compresses to well under 200 KB; the Home Screen is several times that.
+DUO_BLACK_TIMEOUT=900   # seconds to wait for a Duo display to show something
+DUO_POSE_TIMEOUT=60     # seconds to wait for the hinge to report the requested posture
+duo_wait_for_display() {
+    local display="$1" probe waited=0
+    probe="$(mktemp -t duo-probe)"
+    echo "Waiting for the iPhone Duo's display ${display} to come up (it can stay black for minutes after booting)..."
     while :; do
-        "${SIMCTL[@]}" io "${UDID}" screenshot --type=png "${duo_probe}" >/dev/null 2>&1 || true
-        if [[ "$(stat -f %z "${duo_probe}" 2>/dev/null || echo 0)" -gt 200000 ]]; then break; fi
-        if [[ "${duo_waited}" -ge "${DUO_BLACK_TIMEOUT}" ]]; then
-            rm -f "${duo_probe}"
-            echo "ERROR: the iPhone Duo's screen was still black after ${DUO_BLACK_TIMEOUT}s." >&2
+        "${SIMCTL[@]}" io "${UDID}" screenshot --display="${display}" --type=png "${probe}" >/dev/null 2>&1 || true
+        if [[ "$(stat -f %z "${probe}" 2>/dev/null || echo 0)" -gt 200000 ]]; then break; fi
+        if [[ "${waited}" -ge "${DUO_BLACK_TIMEOUT}" ]]; then
+            rm -f "${probe}"
+            echo "ERROR: the iPhone Duo's display ${display} was still black after ${DUO_BLACK_TIMEOUT}s." >&2
             exit 1
         fi
         sleep 10
-        duo_waited=$((duo_waited + 10))
+        waited=$((waited + 10))
     done
-    rm -f "${duo_probe}"
-    echo "iPhone Duo screen is up after ${duo_waited}s."
-    # RocketSim 16.7.0 makes the Duo's outer display darker than it is, and sometimes captures the switched-off
-    # inner display instead (both on AvdLee/RocketSimApp#1215). simctl gets the outer display right, at exactly
-    # the App Store size, so the Duo set is captured with simctl and has no device frame (#881).
-    RS_BROKEN=1
-    DELIBERATELY_UNFRAMED=1
+    rm -f "${probe}"
+    echo "iPhone Duo display ${display} is up after ${waited}s."
+}
+# `rocketsim duo pose` can report a pose_confirmation_timeout although the hinge did move (RocketSim 16.7.1),
+# so the posture is confirmed with `rocketsim duo hinge` instead, asking again every 20 s.
+duo_set_posture() {
+    local pose="$1" expected="closed" waited=0
+    [[ "${pose}" == "open" ]] && expected="openFlat"
+    "${SIMCTL[@]}" terminate "${UDID}" "${BUNDLE_ID}" 2>/dev/null || true
+    "${RS}" duo pose "${pose}" --udid "${UDID}" >/dev/null 2>&1 || true
+    until "${RS}" duo hinge --udid "${UDID}" 2>/dev/null | grep -qE "\"hinge_state\" *: *\"${expected}\""; do
+        if [[ "${waited}" -ge "${DUO_POSE_TIMEOUT}" ]]; then
+            echo "ERROR: the iPhone Duo did not reach the '${pose}' posture within ${DUO_POSE_TIMEOUT}s." >&2
+            exit 1
+        fi
+        sleep 5
+        waited=$((waited + 5))
+        if [[ $((waited % 20)) -eq 0 ]]; then "${RS}" duo pose "${pose}" --udid "${UDID}" >/dev/null 2>&1 || true; fi
+    done
+    echo "iPhone Duo is ${pose}."
+}
+# Sets everything that differs between the folded and the open pass: posture, display, bezel, App Store size,
+# output folders and the label in the progress lines.
+begin_duo_pass() {
+    local pose="$1" display=1 size="1398x2034" pass="Folded"
+    BEZEL="device"   # folded, the flat device frame already shows the Duo as a 3D model
+    if [[ "${pose}" == "open" ]]; then
+        display=3; size="2007x2853"; pass="Open"
+        BEZEL="device3d"
+    fi
+    duo_set_posture "${pose}"
+    duo_wait_for_display "${display}"
+    SIMCTL_DISPLAY_ARGS=(--display="${display}")
+    SCREENSHOT_FLAGS=(--udid "${UDID}" --bezel "${BEZEL}" --background "${BACKGROUND}")
+    [[ "${DEVICE_SHADOW}" -eq 1 ]] && SCREENSHOT_FLAGS+=(--device-shadow)
+    if [[ "${RESCALE}" -eq 1 ]]; then TARGET_W="${size%%x*}"; TARGET_H="${size##*x}"; fi
+    JPG_DIR="${OUT_DIR}/${pass}"
+    PNG_DIR="${JPG_DIR}/PNG"
+    mkdir -p "${JPG_DIR}"
+    [[ "${KEEP_PNG}" -eq 1 ]] && mkdir -p "${PNG_DIR}"
+    DEVICE_LABEL="${PREFERRED_DEVICE} ${pose} / ${PREFERRED_IOS_VERSION}"
+    echo "=== iPhone Duo ${pose}: ${JPG_DIR} ==="
+}
+if [[ "${PREFERRED_DEVICE}" == "iPhone Duo" ]]; then
+    ensure_rocketsim || { echo "ERROR: the iPhone Duo needs RocketSim to set its fold posture." >&2; exit 1; }
+    duo_set_posture closed   # folded for the warm-up launches, in case it was left open
+    duo_wait_for_display 1
 fi
 # Show the device in a window: Device Hub since Xcode 27, Simulator.app before. Capturing doesn't need the window,
 # but rotating an iPad by hand does (see LANDSCAPE_SCREENS). Device Hub may still not list a simulator created with
@@ -779,7 +831,8 @@ capture() {
         fi
     fi
     if [[ "${framed}" -eq 0 ]]; then
-        if ! "${SIMCTL[@]}" io "${UDID}" screenshot "${tmp}" >/dev/null 2>&1; then
+        if ! "${SIMCTL[@]}" io "${UDID}" screenshot ${SIMCTL_DISPLAY_ARGS[@]+"${SIMCTL_DISPLAY_ARGS[@]}"} "${tmp}" \
+                >/dev/null 2>&1; then
             echo "ERROR: fallback 'simctl io screenshot' also failed for ${screen}/${lang}/${appearance}." >&2
             rm -f "${tmp}" "${tmperr}"
             exit 1
@@ -806,8 +859,8 @@ capture() {
         exit 1
     fi
     if [[ "${KEEP_PNG}" -eq 1 ]]; then
-        mv -f "${tmp}" "${OUT_DIR}/${CAPTURE_PREFIX}${screen}_${lang}_${appearance}.png"
-        chmod 644 "${OUT_DIR}/${CAPTURE_PREFIX}${screen}_${lang}_${appearance}.png"
+        mv -f "${tmp}" "${PNG_DIR}/${CAPTURE_PREFIX}${screen}_${lang}_${appearance}.png"
+        chmod 644 "${PNG_DIR}/${CAPTURE_PREFIX}${screen}_${lang}_${appearance}.png"
         CAPTURE_FORMAT="jpg+png"
     else
         rm -f "${tmp}"
@@ -845,7 +898,8 @@ done
 # Capture matrix: language x appearance x tab.
 # ---------------------------------------------------------------------------
 CAPTURE_COUNT=0
-TOTAL=$(( ${#LANGUAGES[@]} * ${#APPEARANCES[@]} * ${#SCREENS[@]} ))
+PASS_COUNT=1; [[ "${PREFERRED_DEVICE}" == "iPhone Duo" ]] && PASS_COUNT=2   # folded and open
+TOTAL=$(( ${#LANGUAGES[@]} * ${#APPEARANCES[@]} * ${#SCREENS[@]} * PASS_COUNT ))
 TOTAL_WIDTH="${#TOTAL}"
 DEVICE_LABEL="${PREFERRED_DEVICE} / ${PREFERRED_IOS_VERSION}"
 # Launches one screen in one language and appearance, waits until it's ready, and captures it.
@@ -913,48 +967,53 @@ wait_for_landscape() {
 # stayed sideways for some of the following launches (NL 09 and 10 on 13 Oct), so it goes last there as well.
 IS_IPAD=0; [[ "${PREFERRED_DEVICE}" == iPad* ]] && IS_IPAD=1
 DEFER_LANDSCAPE="${IS_IPAD}"; [[ "${PREFERRED_DEVICE}" == "iPhone Duo" ]] && DEFER_LANDSCAPE=1
-DEFERRED=()
-for lang in "${LANGUAGES[@]}"; do
-    for appearance in "${APPEARANCES[@]}"; do
-        # One fresh launch per screen: locale, initial tab, and (for non-Prelude screens) no
-        # Prelude via launch arguments (see the SCREENS comment for why tabs are not tapped).
-        position=0
-        for screen in "${SCREENS[@]}"; do
-            position=$((position + 1))
-            deferred=0
-            if [[ "${DEFER_LANDSCAPE}" -eq 1 ]]; then
-                for landscape_screen in "${LANDSCAPE_SCREENS[@]}"; do
-                    [[ "${screen}" == "${landscape_screen}" ]] && deferred=1
-                done
-            fi
-            if [[ "${deferred}" -eq 1 ]]; then
-                DEFERRED+=("${lang}|${appearance}|${screen}|${position}")
-            else
-                capture_screen "${lang}" "${appearance}" "${screen}" "${position}"
-            fi
+LANDSCAPE_FALLBACK=0
+# One pass for most devices; the iPhone Duo makes two, folded and then open, each into its own folder.
+PASSES=(single); [[ "${PREFERRED_DEVICE}" == "iPhone Duo" ]] && PASSES=(closed open)
+for pass in "${PASSES[@]}"; do
+    [[ "${pass}" != "single" ]] && begin_duo_pass "${pass}"
+    DEFERRED=()
+    for lang in "${LANGUAGES[@]}"; do
+        for appearance in "${APPEARANCES[@]}"; do
+            # One fresh launch per screen: locale, initial tab, and (for non-Prelude screens) no
+            # Prelude via launch arguments (see the SCREENS comment for why tabs are not tapped).
+            position=0
+            for screen in "${SCREENS[@]}"; do
+                position=$((position + 1))
+                deferred=0
+                if [[ "${DEFER_LANDSCAPE}" -eq 1 ]]; then
+                    for landscape_screen in "${LANDSCAPE_SCREENS[@]}"; do
+                        [[ "${screen}" == "${landscape_screen}" ]] && deferred=1
+                    done
+                fi
+                if [[ "${deferred}" -eq 1 ]]; then
+                    DEFERRED+=("${lang}|${appearance}|${screen}|${position}")
+                else
+                    capture_screen "${lang}" "${appearance}" "${screen}" "${position}"
+                fi
+            done
         done
     done
-done
 
-LANDSCAPE_FALLBACK=0
-if [[ "${#DEFERRED[@]}" -gt 0 ]]; then
-    if [[ "${IS_IPAD}" -eq 1 ]]; then
-        notify "Rotate the iPad to landscape in Device Hub (${#DEFERRED[@]} landscape screenshots left)."
-        if wait_for_landscape; then
-            echo "iPad is in landscape."
-        else
-            echo "WARNING: iPad not rotated within ${LANDSCAPE_WAIT_TIMEOUT}s; capturing the landscape screens in portrait." >&2
-            LANDSCAPE_FALLBACK=1
+    if [[ "${#DEFERRED[@]}" -gt 0 ]]; then
+        if [[ "${IS_IPAD}" -eq 1 ]]; then
+            notify "Rotate the iPad to landscape in Device Hub (${#DEFERRED[@]} landscape screenshots left)."
+            if wait_for_landscape; then
+                echo "iPad is in landscape."
+            else
+                echo "WARNING: iPad not rotated within ${LANDSCAPE_WAIT_TIMEOUT}s; capturing the landscape screens in portrait." >&2
+                LANDSCAPE_FALLBACK=1
+            fi
+        fi
+        for item in "${DEFERRED[@]}"; do
+            IFS='|' read -r lang appearance screen position <<< "${item}"
+            capture_screen "${lang}" "${appearance}" "${screen}" "${position}"
+        done
+        if [[ "${IS_IPAD}" -eq 1 && "${LANDSCAPE_FALLBACK}" -eq 0 ]]; then
+            notify "Landscape screenshots done: you can rotate the iPad back to portrait."
         fi
     fi
-    for item in "${DEFERRED[@]}"; do
-        IFS='|' read -r lang appearance screen position <<< "${item}"
-        capture_screen "${lang}" "${appearance}" "${screen}" "${position}"
-    done
-    if [[ "${IS_IPAD}" -eq 1 && "${LANDSCAPE_FALLBACK}" -eq 0 ]]; then
-        notify "Landscape screenshots done: you can rotate the iPad back to portrait."
-    fi
-fi
+done
 
 # ---------------------------------------------------------------------------
 # Cleanup.
@@ -970,7 +1029,7 @@ fi
 if [[ "${LANDSCAPE_FALLBACK}" -eq 1 ]]; then
     echo "WARNING: the landscape screens (${LANDSCAPE_SCREENS[*]}) were captured in portrait: nobody rotated the iPad." >&2
 fi
-if [[ "${UNFRAMED_COUNT}" -gt 0 && "${DELIBERATELY_UNFRAMED}" -eq 0 ]]; then
+if [[ "${UNFRAMED_COUNT}" -gt 0 ]]; then
     echo "WARNING: ${UNFRAMED_COUNT} screenshot(s) were captured WITHOUT a device bezel" >&2
     echo "         (simctl fallback because RocketSim was not usable)." >&2
 fi

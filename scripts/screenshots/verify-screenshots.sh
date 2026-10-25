@@ -33,7 +33,7 @@ set -euo pipefail
 BUNDLE_ID="com.vdhamer.Fotogroep-Waalre"
 SCHEME="Photo Club Hub"
 #PREFERRED_DEVICE="iPad Air 13-inch (M4)"
-PREFERRED_DEVICE="iPhone 17 Pro"
+PREFERRED_DEVICE="iPhone 18 Pro"
 PREFERRED_IOS_VERSION=""  # "" = auto-detect latest installed iOS runtime; override with --ios-version
 UDID=""
 JPEG_QUALITY=85
@@ -241,6 +241,10 @@ echo "Applying clean status bar override..."
 # ---------------------------------------------------------------------------
 SCREENSHOT_FLAGS=(--udid "${UDID}" --bezel "${BEZEL}" --background "${BACKGROUND}")
 [[ "${DEVICE_SHADOW}" -eq 1 ]] && SCREENSHOT_FLAGS+=(--device-shadow)
+# Since Xcode 27.2 (27B48), `simctl io screenshot` fails on the iPhone Duo unless it names a display (1 = outer,
+# 3 = inner); see capture-screenshots.sh. Checked on the device itself, because --udid leaves PREFERRED_DEVICE unset.
+SIMCTL_DISPLAY_ARGS=()
+"${SIMCTL[@]}" list devices | grep "${UDID}" | grep -q "iPhone Duo" && SIMCTL_DISPLAY_ARGS=(--display=1)
 
 wait_until_ready() {
     local screen="$1" timeout="$2" settle="${3:-${SLEEP_AFTER_READY}}" waited=0
@@ -274,7 +278,8 @@ capture() {
         fi
     fi
     if [[ "${framed}" -eq 0 ]]; then
-        "${SIMCTL[@]}" io "${UDID}" screenshot "${tmp}" >/dev/null 2>&1 \
+        "${SIMCTL[@]}" io "${UDID}" screenshot ${SIMCTL_DISPLAY_ARGS[@]+"${SIMCTL_DISPLAY_ARGS[@]}"} "${tmp}" \
+                >/dev/null 2>&1 \
             || { echo "ERROR: simctl screenshot also failed for ${screen}/${lang}/${appearance}." >&2
                  rm -f "${tmp}" "${tmperr}"; exit 1; }
         UNFRAMED_COUNT=$((UNFRAMED_COUNT + 1))
