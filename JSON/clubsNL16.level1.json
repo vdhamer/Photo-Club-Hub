@@ -530,6 +530,32 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "Collectief de Verbeelding",
+                "nickName": "cDeVerbeelding"
+            },
+            "coordinates": {
+                "latitude": 51.44604,
+                "longitude": 5.45434
+            },
+            "optional": {
+                "website": "https://collectief-de-verbeelding.nl",
+                "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The collective consists of 4 members and was founded in May 2025."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het collectief bestaat uit vier fotografen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "De Beeldmakers",
                 "nickName": "DeBeeldmakers"
             },
@@ -1924,32 +1950,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 1661
                 }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Waalre",
-                "fullName": "Collectief de Verbeelding",
-                "nickName": "cDeVerbeelding"
-            },
-            "coordinates": {
-                "latitude": 51.44604,
-                "longitude": 5.45434
-            },
-            "optional": {
-                "website": "https://collectief-de-verbeelding.nl",
-                "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The collective consists of 4 members and was founded in May 2025."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het collectief bestaat uit vier fotografen."
-                    }
-                ]
             }
         },
 

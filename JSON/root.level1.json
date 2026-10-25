@@ -2231,13 +2231,13 @@
 
         {
             "idPlus": {
-                "town": "Waalre",
+                "town": "Eindhoven",
                 "fullName": "Collectief de Verbeelding",
                 "nickName": "cDeVerbeelding"
             },
             "coordinates": {
-                "latitude": 51.38691,
-                "longitude": 5.44533
+                "latitude": 51.44604,
+                "longitude": 5.45434
             },
             "optional": {
                 "website": "https://collectief-de-verbeelding.nl",
