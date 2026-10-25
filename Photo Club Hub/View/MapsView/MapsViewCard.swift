@@ -31,28 +31,28 @@ struct MapsViewCard: View {
     /// Whether this card has been on screen long enough for its locked map to appear (#870). A fast scroll used to
     /// create a live map, loading its tiles, for every card that flew past, and memory could not keep up (#804).
     /// Now a locked map appears only after the card has been on screen for a short delay, and returns to a
-    /// placeholder when the card leaves the screen. What appears depends on the test mode: a live map in Phase 1,
-    /// an image of it in Phase 2 (#867).
+    /// placeholder when the card leaves the screen. What appears is an image of the map, not a live map (#867).
     /// An unlocked map is always live and is never removed: that would destroy `MapsViewMap`'s `@State`, and with it
     /// the zoom/pan settings the user chose (#866).
     /// A locked map always shows the default view, so recreating it loses nothing.
     @State private var isDelayOver: Bool = false
 
-    @AppStorage(MapsTestMode.storageKey) private var testMode = MapsTestMode.defaultValue
-    @AppStorage(MapsTestMode.delayStorageKey) private var delayMilliseconds = MapsTestMode.defaultDelayMilliseconds
+    /// How long a card must be on screen before the image of its locked map appears.
+    /// #870 started at ⅓ s, which felt slow on a slow scroll; 150 and 200 ms kept memory as low (iPhone, 1 Oct 2026).
+    /// Images after a delay used the least memory of the approaches measured on the iPhone and both iPads; creating
+    /// every live map at once, as before #870, crashed on iPadOS 26 at 4.4 GB (#867).
+    static let delayMilliseconds = 175
 
     /// How long a map or its image takes to fade in over its placeholder, so its arrival after the delay seems
     /// calm, not late. Also used by `MapsViewScreenshot`, whose image arrives a moment after the delay.
     static let fadeInSeconds = 0.2
 
-    private var showsLiveMap: Bool {
-        testMode == .original ||                  // all maps used to be live
-        isMapScrollLocked == false ||             // live if user unlocked it
-        (testMode == .phase1Delay && isDelayOver) // or live once visible long enough (Phase 2: show image instead)
+    private var showsLiveMap: Bool { // only an unlocked map is live
+        isMapScrollLocked == false
     }
 
     private var showsSnapshot: Bool { // only asked when `showsLiveMap` is false, so the map is locked
-        testMode == .phase2Snapshot && isDelayOver
+        isDelayOver
     }
 
     var body: some View {
@@ -75,11 +75,10 @@ struct MapsViewCard: View {
             }
             MapsViewRemark(organization: organization)
         } // VStack
-        // Cancelled by SwiftUI when the card leaves the screen, so a card flung past never gets a live map.
-        // Restarted when the test mode changes, so switching modes also applies to the cards already on screen.
-        .task(id: testMode) {
-            guard testMode != .original, !isDelayOver else { return } // only .original mode runs without a delay
-            try? await Task.sleep(for: .milliseconds(delayMilliseconds))
+        // Cancelled by SwiftUI when the card leaves the screen, so a card flung past never gets a map or its image.
+        .task {
+            guard !isDelayOver else { return }
+            try? await Task.sleep(for: .milliseconds(Self.delayMilliseconds))
             guard !Task.isCancelled else { return }
             withAnimation(.easeIn(duration: Self.fadeInSeconds)) { isDelayOver = true }
         }
@@ -103,7 +102,7 @@ struct MapsViewCard: View {
 
 /// Shows one card the way `FilteredMapsView` does, for Fotogroep de Gender and its four neighbors
 /// (see `MapsViewMapPreviews.seedOrganization`). A host view is needed because `FetchedResults` only comes from a
-/// `@FetchRequest` inside a view. With the default test mode, the map fades in over its placeholder after the delay.
+/// `@FetchRequest` inside a view. The map's image fades in over its placeholder after the delay.
 ///
 /// This preview actually works.
 @MainActor

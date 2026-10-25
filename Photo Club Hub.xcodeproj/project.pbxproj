@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3704003F306DBA4E000959CC /* LiveMapCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704003E306DBA4E000959CC /* LiveMapCounter.swift */; };
-		37040041306DBAA9000959CC /* SettingsViewMapsTestSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37040040306DBAA9000959CC /* SettingsViewMapsTestSection.swift */; };
 		370752E1300A257600B0654C /* MemberPortfolioView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370752E0300A257600B0654C /* MemberPortfolioView+Screenshot.swift */; };
 		370752E3300A25A200B0654C /* PhotographersListView2627+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370752E2300A25A200B0654C /* PhotographersListView2627+Screenshot.swift */; };
 		370752E5300A25C600B0654C /* SinglePortfolioView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370752E4300A25C600B0654C /* SinglePortfolioView+Screenshot.swift */; };
@@ -112,8 +110,6 @@
 
 /* Begin PBXFileReference section */
 		3384213C8E634E3BA2235CD8 /* draft-level2.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "draft-level2.py"; sourceTree = "<group>"; };
-		3704003E306DBA4E000959CC /* LiveMapCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMapCounter.swift; sourceTree = "<group>"; };
-		37040040306DBAA9000959CC /* SettingsViewMapsTestSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewMapsTestSection.swift; sourceTree = "<group>"; };
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		370752E0300A257600B0654C /* MemberPortfolioView+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolioView+Screenshot.swift"; sourceTree = "<group>"; };
 		370752E2300A25A200B0654C /* PhotographersListView2627+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotographersListView2627+Screenshot.swift"; sourceTree = "<group>"; };
@@ -578,7 +574,6 @@
 				37D984222F904B8B00C30EE5 /* SettingsViewPhotographersSection.swift */,
 				37D984242F904DB200C30EE5 /* SettingsViewAdvancedSection.swift */,
 				37EEEB9C2FA0B3A3001463BA /* SettingsViewThumbnail.swift */,
-				37040040306DBAA9000959CC /* SettingsViewMapsTestSection.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -780,7 +775,6 @@
 			children = (
 				3756CE61307301AF00B7C724 /* MapsViewScreenshot.swift */,
 				37D9D01F306E8842006B4E43 /* MapsViewCard.swift */,
-				3704003E306DBA4E000959CC /* LiveMapCounter.swift */,
 				37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */,
 				37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
@@ -1131,7 +1125,6 @@
 				37D984252F904DB200C30EE5 /* SettingsViewAdvancedSection.swift in Sources */,
 				37DA83893037850C0064E3AA /* PhotoClubHubApp+Versioning.swift in Sources */,
 				37D984232F904B8B00C30EE5 /* SettingsViewPhotographersSection.swift in Sources */,
-				3704003F306DBA4E000959CC /* LiveMapCounter.swift in Sources */,
 				37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */,
 				370752E1300A257600B0654C /* MemberPortfolioView+Screenshot.swift in Sources */,
 				375B99212F9E287A002EAD0F /* ReadmeView.swift in Sources */,
@@ -1154,7 +1147,6 @@
 				37EEEB9D2FA0B3A3001463BA /* SettingsViewThumbnail.swift in Sources */,
 				37F61872306492F8002DA468 /* ElementTypeEnum.swift in Sources */,
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
-				37040041306DBAA9000959CC /* SettingsViewMapsTestSection.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs2627.swift in Sources */,
 				37AAA67E3020C9DD0056BC94 /* ClubLoadCoordinator.swift in Sources */,

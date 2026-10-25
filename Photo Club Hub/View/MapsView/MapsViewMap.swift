@@ -104,11 +104,6 @@ struct MapsViewMap: View {
             // draws the nearby ones. So "locked" always means "this organization's own map".
             if isLocked { cameraPosition = Self.defaultView(of: mapOrganization) }
         }
-        #if DEBUG
-        // #870: counts live maps, shown in the debug section of the Settings tab
-        .onAppear { LiveMapCounter.shared.mapAppeared(mapOrganization.fullName) }
-        .onDisappear { LiveMapCounter.shared.mapDisappeared() }
-        #endif
     }
 
     /// The marker of one organization: our own balloon instead of MapKit's `Marker`, so it matches the image of a
