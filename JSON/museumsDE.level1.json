@@ -62,7 +62,37 @@
                 ]
             }
         },
-        
+
+        {
+            "idPlus": {
+                "town": "Köln",
+                "fullName": "Museum Ludwig",
+                "nickName": "Museum Ludwig"
+            },
+            "coordinates": {
+                "latitude": 50.94083,
+                "longitude": 6.96028
+            },
+            "optional": {
+                "website": "https://www.museum-ludwig.de",
+                "wikipedia": "https://en.wikipedia.org/wiki/Museum_Ludwig",
+                "remark": [
+                    {
+                        "language": "DE",
+                        "value": "Die Sammlung Fotografie umfasst rund 70.000 Werke, seit 2005 auch die Fotografien des Agfa Foto-Historama."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Its photography collection holds about 70,000 works, including the photographs of the Agfa Foto-Historama since 2005."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De fotocollectie telt zo'n 70.000 werken, sinds 2005 ook de foto's van het Agfa Foto-Historama."
+                    }
+                ]
+            }
+        },
+
         {
             "idPlus": {
                 "town": "Wetzlar",

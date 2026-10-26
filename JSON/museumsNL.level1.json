@@ -162,6 +162,32 @@
         
         {
             "idPlus": {
+                "town": "Groningen",
+                "fullName": "Noorderlicht",
+                "nickName": "Noorderlicht"
+            },
+            "coordinates": {
+                "latitude": 53.21645,
+                "longitude": 6.56324
+            },
+            "optional": {
+                "website": "https://noorderlicht.com",
+                "wikipedia": "https://en.wikipedia.org/wiki/Noorderlicht",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Noorderlicht runs a photography gallery here, and since 1990 has organized the international Noorderlicht photo festival."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Noorderlicht heeft hier een fotogalerie en organiseert sinds 1990 het internationale Noorderlicht fotofestival."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Hilversum",
                 "fullName": "Museum Hilversum",
                 "nickName": "Museum Hilversum"
