@@ -9,6 +9,35 @@
 
         {
             "idPlus": {
+                "town": "Almere",
+                "fullName": "Fotoclub Almere",
+                "nickName": "fcAlmere"
+            },
+            "coordinates": {
+                "latitude": 52.37855,
+                "longitude": 5.21619
+            },
+            "optional": {
+                "website": "https://fotoclubalmere.nl/",
+                "level2URL": "https://www.example.com/fcAlmere.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Makes a photo chain every year, usually two at a time: members may join neither, one, or both."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Maakt elk jaar een fotoketting, meestal twee tegelijk: leden doen mee aan één, beide of geen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1001
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Amstelveen",
                 "fullName": "Verenigde Amateur Natuurfotografen",
                 "nickName": "nfVAN"
@@ -28,6 +57,32 @@
                     {
                         "language": "NL",
                         "value": "Tijdens de maandelijkse clubavonden worden er maximaal vier foto's per clublid besproken."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lelystad",
+                "fullName": "Lelystadse Foto Club",
+                "nickName": "LFC"
+            },
+            "coordinates": {
+                "latitude": 52.51546,
+                "longitude": 5.52606
+            },
+            "optional": {
+                "website": "https://lfc.nl/",
+                "level2URL": "https://www.example.com/LFC.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Presents photos from its club competitions in the `Spetter en Spatter` swimming pool, with a new selection every six months."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Toont foto's uit de clubwedstrijden in zwembad `Spetter en Spatter`, met elk half jaar een nieuwe selectie."
                     }
                 ]
             }
