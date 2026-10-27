@@ -9,6 +9,87 @@
 
         {
             "idPlus": {
+                "town": "Amersfoort",
+                "fullName": "Fotokring Eemland",
+                "nickName": "fkEemland"
+            },
+            "coordinates": {
+                "latitude": 52.16377,
+                "longitude": 5.40888
+            },
+            "optional": {
+                "website": "https://www.fotokringeemland.nl/",
+                "level2URL": "https://www.example.com/fkEemland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1936; marked its 90th year with an open photo contest for all residents of Eemland."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1936; vierde het 90-jarig bestaan met een open fotowedstrijd voor alle inwoners van Eemland."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 709
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hilversum",
+                "fullName": "Fotoclub De Beeldjagers",
+                "nickName": "fcBeeldjagers"
+            },
+            "coordinates": {
+                "latitude": 52.22414,
+                "longitude": 5.17194
+            },
+            "optional": {
+                "website": "https://www.beeldjagers.nl/",
+                "level2URL": "https://www.example.com/fcBeeldjagers.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Small working groups each spend half a year on one aspect of photography, which is then presented to the club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Kleine werkgroepjes verdiepen zich elk een half jaar in één onderdeel van de fotografie en presenteren dat aan de club."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Houten",
+                "fullName": "Fotoclub Houten",
+                "nickName": "fcHouten"
+            },
+            "coordinates": {
+                "latitude": 52.02714,
+                "longitude": 5.16206
+            },
+            "optional": {
+                "website": "https://fotoclubhouten.nl/",
+                "level2URL": "https://www.example.com/fcHouten.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Passes a small case of items from member to member; each photographs one or more items and passes the case on."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Geeft een koffertje met voorwerpen door van lid tot lid; ieder fotografeert er één of meer van en geeft het koffertje door."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Houten",
                 "fullName": "Natuurfotografen Vereniging Utrecht",
                 "nickName": "nfUtrecht"
