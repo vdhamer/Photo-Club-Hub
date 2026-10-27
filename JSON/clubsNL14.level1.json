@@ -7,5 +7,57 @@
 
     "clubs": [
 
+        {
+            "idPlus": {
+                "town": "Axel",
+                "fullName": "Fotoclub Axel",
+                "nickName": "fcAxel"
+            },
+            "coordinates": {
+                "latitude": 51.26739,
+                "longitude": 3.90716
+            },
+            "optional": {
+                "website": "https://www.fotoclubaxel.nl/",
+                "level2URL": "https://www.example.com/fcAxel.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Stages its yearly exhibition on Ascension Day, with the exhibition themes set each year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt elk jaar op Hemelvaartsdag een expositie, met telkens vooraf vastgestelde thema's."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Koudekerke",
+                "fullName": "Fotoclub Valkenisse",
+                "nickName": "fcValkenisse"
+            },
+            "coordinates": {
+                "latitude": 51.48138,
+                "longitude": 3.55611
+            },
+            "optional": {
+                "website": "https://fotoclubvalkenisse.jouwweb.nl/",
+                "level2URL": "https://www.example.com/fcValkenisse.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Named after Valkenisse, a former municipality on Walcheren (that included Koudekerke), itself named after a 17th-century farm."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Genoemd naar Valkenisse, een voormalige gemeente op Walcheren waartoe Koudekerke behoorde, zelf vernoemd naar een boerderij uit de 17e eeuw."
+                    }
+                ]
+            }
+        }
+
     ]
 }
