@@ -9,6 +9,90 @@
 
         {
             "idPlus": {
+                "town": "Helden",
+                "fullName": "Fotoclub Helden-Panningen",
+                "nickName": "fcHeldenPanningen"
+            },
+            "coordinates": {
+                "latitude": 51.32168,
+                "longitude": 6.00911
+            },
+            "optional": {
+                "website": "https://www.fotoclubheldenpanningen.nl/",
+                "level2URL": "https://www.example.com/fcHeldenPanningen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every outing comes with a photo assignment."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Aan elk uitstapje is een foto-opdracht gekoppeld."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sittard",
+                "fullName": "Fotoclub Sittard",
+                "nickName": "fcSittard"
+            },
+            "coordinates": {
+                "latitude": 50.99742,
+                "longitude": 5.86666
+            },
+            "optional": {
+                "website": "https://fotoclubsittard.nl/",
+                "level2URL": "https://www.example.com/fcSittard.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members visit museums and exhibitions together."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden bezoeken samen musea en tentoonstellingen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1771
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Urmond",
+                "fullName": "Fotokring Stein",
+                "nickName": "fkStein"
+            },
+            "coordinates": {
+                "latitude": 50.99032,
+                "longitude": 5.76535
+            },
+            "optional": {
+                "website": "https://fotokringstein.nl/",
+                "level2URL": "https://www.example.com/fkStein.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Dates back to 1961 when a doctor - called to a home birth in Stein - got talking to the father about photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Ontstond in 1961 toen een huisarts, bij een thuisbevalling in Stein, met de vader over fotografie in gesprek raakte."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1721
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Venlo",
                 "fullName": "Fotoclub Océ",
                 "nickName": "fcOce"
