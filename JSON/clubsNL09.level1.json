@@ -7,5 +7,86 @@
 
     "clubs": [
 
+        {
+            "idPlus": {
+                "town": "Uithoorn",
+                "fullName": "Fotokring Uithoorn",
+                "nickName": "fkUithoorn"
+            },
+            "coordinates": {
+                "latitude": 52.24332,
+                "longitude": 4.82577
+            },
+            "optional": {
+                "website": "https://www.fotokringuithoorn.nl/",
+                "level2URL": "https://www.example.com/fkUithoorn.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Has a tradition to Open each season by inviting members to submit a new portfolio."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opent elk seizoen met de oproep een (nieuw) portfolio aan te leveren; inmiddels een traditie."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 905
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zaandam",
+                "fullName": "Fotoclub De Sluiter",
+                "nickName": "fcSluiter"
+            },
+            "coordinates": {
+                "latitude": 52.43568,
+                "longitude": 4.85624
+            },
+            "optional": {
+                "website": "https://www.fotoclubdesluiter.nl/",
+                "level2URL": "https://www.example.com/fcSluiter.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Turns common enclosed spaces into a camera obscura: rooms with taped-up windows, a camper van, a suitcase, even a guitar."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Verandert alledaagse holtes in een camera obscura: kamers met afgeplakte ramen, een camperbus, een koffer, zelfs een gitaar."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zaandam",
+                "fullName": "Fotogroep Spectrum",
+                "nickName": "fgSpectrum"
+            },
+            "coordinates": {
+                "latitude": 52.44691,
+                "longitude": 4.84346
+            },
+            "optional": {
+                "website": "https://fotogroepspectrum.nl/",
+                "level2URL": "https://www.example.com/fgSpectrum.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs a season-long theme next to its themed evenings; for 2026-27 it is 'Zaanse buurten', the neighbourhoods of the Zaan region."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Heeft naast de themaavonden een jaarthema; in 2026-27 is dat 'Zaanse buurten', de wijken van de Zaanstreek."
+                    }
+                ]
+            }
+        }
+
     ]
 }
