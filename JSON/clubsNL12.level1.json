@@ -9,6 +9,32 @@
 
         {
             "idPlus": {
+                "town": "Alblasserdam",
+                "fullName": "Fotoclub Sliedrecht",
+                "nickName": "fcSliedrecht"
+            },
+            "coordinates": {
+                "latitude": 51.8658,
+                "longitude": 4.6654
+            },
+            "optional": {
+                "website": "https://www.fotoclubsliedrecht.nl/",
+                "level2URL": "https://www.example.com/fcSliedrecht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1961 as Foto- en Filmklub Sliedrecht."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1961 als Foto- en Filmklub Sliedrecht."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Dordrecht",
                 "fullName": "Natuurfotografen Drechtsteden",
                 "nickName": "nfDrechtsteden"
@@ -30,6 +56,151 @@
                         "value": "Voor natuurfotografen in de Drechtsteden."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Melissant",
+                "fullName": "Fotoclub De Rarekiek",
+                "nickName": "fcRarekiek"
+            },
+            "coordinates": {
+                "latitude": 51.76743,
+                "longitude": 4.0718
+            },
+            "optional": {
+                "website": "https://rarekiek.nl/",
+                "level2URL": "https://www.example.com/fcRarekiek.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each year a photographer and an artist take turns picking the best black-and-white, color and series."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk jaar kiezen afwisselend een fotograaf en een beeldend kunstenaar het beste zwart-wit-, kleuren- en seriewerk van de club."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1218
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Amateurfotoclub De Maasstad",
+                "nickName": "AFCMaasstad"
+            },
+            "coordinates": {
+                "latitude": 51.91072,
+                "longitude": 4.55469
+            },
+            "optional": {
+                "website": "https://fotoclubdemaasstad.nl/",
+                "level2URL": "https://www.example.com/AFCMaasstad.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "One of six Rotterdam clubs forming SAFORO, short for Samenwerkende Fotoclubs Rotterdam."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een van de zes Rotterdamse clubs die SAFORO vormen, kort voor Samenwerkende Fotoclubs Rotterdam."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1220
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Fotowerkgroep Ommoord",
+                "nickName": "fwgOmmoord"
+            },
+            "coordinates": {
+                "latitude": 51.96251,
+                "longitude": 4.54577
+            },
+            "optional": {
+                "website": "https://fotowerkgroepommoord.nl",
+                "level2URL": "https://www.example.com/fwgOmmoord.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1974 as Amateur Fotoclub Doeswat, while the new Rotterdam neighborhood of Ommoord was being built."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1974 als Amateur Fotoclub Doeswat, toen de nieuwe wijk Ommoord gebouwd werd."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1232
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vlaardingen",
+                "fullName": "Amateur Fotografen Vereniging Vlaardingen",
+                "nickName": "AFVV"
+            },
+            "coordinates": {
+                "latitude": 51.90668,
+                "longitude": 4.34486
+            },
+            "optional": {
+                "website": "https://www.afvv.nl/",
+                "level2URL": "https://www.example.com/AFVV.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Chooses a photographer of the year, who receives a trophy."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Kiest elk jaar een fotograaf van het jaar, die een wisseltrofee krijgt."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1203
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zwijndrecht",
+                "fullName": "Fotoclub Zwijndrecht",
+                "nickName": "fcZwijndrecht"
+            },
+            "coordinates": {
+                "latitude": 51.82175,
+                "longitude": 4.64698
+            },
+            "optional": {
+                "website": "https://www.fotoclubzwijndrecht.nl/",
+                "level2URL": "https://www.example.com/fcZwijndrecht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs its own gallery, Fotogalerie Zwijndrecht, where members show their work."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Heeft een eigen galerie, Fotogalerie Zwijndrecht, waar leden hun werk laten zien."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1244
+                }
             }
         }
 
