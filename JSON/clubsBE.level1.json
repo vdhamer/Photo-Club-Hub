@@ -1,0 +1,115 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Schoten",
+                "fullName": "Fauna Flora Fotoclub Schoten",
+                "nickName": "FFFS"
+            },
+            "coordinates": {
+                "latitude": 51.24475,
+                "longitude": 4.48905
+            },
+            "optional": {
+                "website": "https://www.fffs.be/",
+                "level2URL": "https://www.example.com/FFFS.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1987 by nature lovers to raise awareness of nature conservation through an educational annual exhibition."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1987 door natuurliefhebbers om via een natuureducatieve jaarlijkse tentoonstelling aan natuurbehoud te werken."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sint-Truiden",
+                "fullName": "Renovat Foto",
+                "nickName": "RenovatFoto"
+            },
+            "coordinates": {
+                "latitude": 50.77871,
+                "longitude": 5.13304
+            },
+            "optional": {
+                "website": "https://www.renovat.be/joomla/production/",
+                "level2URL": "https://www.example.com/RenovatFoto.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Publishes a monthly club magazine in colour, called 'Renovaatje'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Brengt maandelijks een clubblad in kleur uit genaamd 'Renovaatje'."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wommelgem",
+                "fullName": "CreaFoto",
+                "nickName": "CreaFoto"
+            },
+            "coordinates": {
+                "latitude": 51.20404,
+                "longitude": 4.48904
+            },
+            "optional": {
+                "website": "https://fotocrea.be/",
+                "level2URL": "https://www.example.com/CreaFoto.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Has its club room and own studio in Fort II in Wommelgem, which also hosts its yearly photo salon."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Heeft clublokaal en eigen studio in Fort II van Wommelgem, waar ook het jaarlijkse fotosalon plaatsvindt."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zonhoven",
+                "fullName": "FotoDigiClub De Teut",
+                "nickName": "Teut"
+            },
+            "coordinates": {
+                "latitude": 50.98809,
+                "longitude": 5.41303
+            },
+            "optional": {
+                "website": "https://fotodigiclub.be",
+                "level2URL": "https://www.example.com/Teut.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "On the photo wall in the local community centre, a member at a time presents a series."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Op de fotowand in gemeenschapscentrum Tentakel toont telkens één lid een reeks."
+                    }
+                ]
+            }
+        }
+
+    ]
+}
