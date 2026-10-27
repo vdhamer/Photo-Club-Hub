@@ -10,6 +10,35 @@
         {
             "idPlus": {
                 "town": "Delft",
+                "fullName": "Fotoclub '59",
+                "nickName": "fc59"
+            },
+            "coordinates": {
+                "latitude": 52.01695,
+                "longitude": 4.36627
+            },
+            "optional": {
+                "website": "https://fc59delft.nl/wordpress/",
+                "level2URL": "https://www.example.com/fc59.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its nature group goes out every month to find the hidden aesthetics of a nature reserve or country estate."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De werkgroep natuur zoekt elke maand de verborgen esthetiek in een natuurgebied of landgoed."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1114
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Delft",
                 "fullName": "Vereniging Natuurfotografen West",
                 "nickName": "vnfWest"
             },
@@ -28,6 +57,145 @@
                     {
                         "language": "NL",
                         "value": "Opgericht in 2001."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Den Haag",
+                "fullName": "Fotoclub Retouche",
+                "nickName": "fcRetouche"
+            },
+            "coordinates": {
+                "latitude": 52.04963,
+                "longitude": 4.23496
+            },
+            "optional": {
+                "website": "https://fotoclubretouche.nl/",
+                "level2URL": "https://www.example.com/fcRetouche.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Deliberately holds no photo competitions, except at its annual exhibition."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt bewust geen fotowedstrijden, behalve bij de jaartentoonstelling."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leiden",
+                "fullName": "Leidse Amateur Fotografen Vereniging",
+                "nickName": "LAFV"
+            },
+            "coordinates": {
+                "latitude": 52.14174,
+                "longitude": 4.47895
+            },
+            "optional": {
+                "website": "https://www.lafv.nl/",
+                "level2URL": "https://www.example.com/LAFV.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photo relay: several groups start from the same photo, each makes a new photo and passes it on, resulting in parallel chains."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Foto-estafette: meerdere groepen beginnen met dezelfde startfoto, maken elk een nieuwe foto en geven die door (parallelle kettingen)."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1105
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leiderdorp",
+                "fullName": "Foto- en Filmclub Daguerre",
+                "nickName": "ffcDaguerre"
+            },
+            "coordinates": {
+                "latitude": 52.16099,
+                "longitude": 4.52033
+            },
+            "optional": {
+                "website": "https://www.fotoclub-daguerre.nl",
+                "level2URL": "https://www.example.com/ffcDaguerre.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A photo and film club: members are increasingly turning their photos into short films."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Foto- én filmclub: de leden maken steeds vaker korte films van hun foto's."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1151
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leidschendam",
+                "fullName": "Fotoclub Diafragma",
+                "nickName": "fcDiafragma"
+            },
+            "coordinates": {
+                "latitude": 52.09793,
+                "longitude": 4.39452
+            },
+            "optional": {
+                "website": "https://fotoclubdiafragma.nl/",
+                "level2URL": "https://www.example.com/fcDiafragma.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Season-long photo chain: each photo must fit the previous one by content and keywords, and the best link is voted on."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotoketting over het hele seizoen: elke foto moet qua inhoud en trefwoorden aansluiten op de vorige, en de beste wordt gekozen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1145
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rijswijk",
+                "fullName": "Fotoclub F70",
+                "nickName": "fcF70"
+            },
+            "coordinates": {
+                "latitude": 52.03204,
+                "longitude": 4.31093
+            },
+            "optional": {
+                "website": "https://www.fotoclubf70.nl/",
+                "level2URL": "https://www.example.com/fcF70.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Executes four photo chains simultaneously every year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Maakt elk jaar vier fotokettingen tegelijk."
                     }
                 ]
             }
