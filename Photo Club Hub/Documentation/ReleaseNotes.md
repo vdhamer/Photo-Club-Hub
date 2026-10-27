@@ -11,7 +11,13 @@ DATA
 Afdeling Brabant West, until now an empty placeholder, lists 41 clubs: the 31 Fotobond clubs on the Fotobond's roster, and 10 independent clubs. Mirrored identically in the Data package's bundled copy.
 
 * `clubsNL01.level1.json`
-Afdeling Groningen, until now an empty placeholder, lists its first club: Trefshot (Groningen), an independent club. Mirrored identically in the Data package's bundled copy.
+Afdeling Groningen, until now an empty placeholder, lists 6 clubs: Trefshot (Groningen), plus 5 from the list on fotoclubs.startpagina.nl below. Mirrored identically in the Data package's bundled copy.
+
+* `clubsNL01`, `02`, `05`, `06`, `07`, `09`, `10`, `11`, `12`, `14`, `16`, `17`
+38 Dutch clubs added from the list on fotoclubs.startpagina.nl ([vdhamer/Photo-Club-Hub-Data#89](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/89)), 20 of them Fotobond clubs: 5 in NL01, 3 in NL02, 2 in NL05, 2 in NL06, 3 in NL07, 3 in NL09, 2 in NL10, 6 in NL11, 6 in NL12, 2 in NL14 (Zeeland, until now an empty placeholder), 1 in NL16 and 3 in NL17. Mirrored identically in the Data package's bundled copy.
+
+* `clubsBE.level1.json` (new), `root_.level1.json`
+A new Level 1 file for Belgian clubs, included from `root_.level1.json`, with 4 clubs from the same list: Fauna Flora Fotoclub Schoten, Renovat Foto (Sint-Truiden), CreaFoto (Wommelgem) and FotoDigiClub De Teut (Zonhoven). Bundled through the Data package's `Package.swift`.
 
 STRUCTURAL
 
