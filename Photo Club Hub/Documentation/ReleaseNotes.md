@@ -1,12 +1,17 @@
-### TO-DO
+### 3.0.5 (GitHub commit ???????, build 4670) ??-11-2026
 
-* display expertises on People screen
-* more search functionality on People screen
-* more search functionality on Clubs screen
+TO-DO
 
----------------------------------------------------------------------------
+* fix location button spinning forever when location access is denied ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
+* show and search the town in the interface language on the Maps and Clubs tabs ([#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890))
 
-### 3.0.5 (GitHub commit ???????, build 4670) ??-??-2026
+DATA
+
+* `clubsNL15.level1.json`
+Afdeling Brabant West, until now an empty placeholder, lists 41 clubs: the 31 Fotobond clubs on the Fotobond's roster, and 10 independent clubs. Mirrored identically in the Data package's bundled copy.
+
+* `clubsNL01.level1.json`
+Afdeling Groningen, until now an empty placeholder, lists its first club: Trefshot (Groningen), an independent club. Mirrored identically in the Data package's bundled copy.
 
 STRUCTURAL
 
