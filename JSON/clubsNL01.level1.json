@@ -9,6 +9,61 @@
 
         {
             "idPlus": {
+                "town": "Delfzijl",
+                "fullName": "FotoGroep Delfzijl",
+                "nickName": "fgDelfzijl"
+            },
+            "coordinates": {
+                "latitude": 53.33066,
+                "longitude": 6.92741
+            },
+            "optional": {
+                "website": "https://www.fotogroepdelfzijl.nl/",
+                "level2URL": "https://www.example.com/fgDelfzijl.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Swaps photos every year with Fotoclub De Pollen in Warffum; the clubs take turns choosing the subject, e.g. Ede Staal."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Wisselt jaarlijks foto's uit met fotoclub De Pollen in Warffum; de clubs kiezen om beurten het onderwerp, zoals Ede Staal."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Groningen",
+                "fullName": "Amateur Fotografen Vereniging Daguerre",
+                "nickName": "afvDaguerre"
+            },
+            "coordinates": {
+                "latitude": 53.22318,
+                "longitude": 6.58899
+            },
+            "optional": {
+                "website": "https://afvdaguerre.nl/",
+                "level2URL": "https://www.example.com/afvDaguerre.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Publishes photo critiques in its own club magazine, Spotlight."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Publiceert fotobesprekingen in het eigen clubblad Spotlight."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 101
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Groningen",
                 "fullName": "Trefshot",
                 "nickName": "Trefshot"
@@ -30,6 +85,87 @@
                         "value": "De naam komt van wijkcentrum de Trefkoel, waar de club in 1972 begon, plus 'shot'."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Niekerk",
+                "fullName": "Fotoclub Westerkwartier",
+                "nickName": "fcWesterkwartier"
+            },
+            "coordinates": {
+                "latitude": 53.22449,
+                "longitude": 6.35324
+            },
+            "optional": {
+                "website": "https://www.fotoclubwesterkwartier.nl/",
+                "level2URL": "https://www.example.com/fcWesterkwartier.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photographs the historic ships at Groningen's winter evening event every year, and also makes a photo chain."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografeert elk jaar de historische schepen tijdens het Groningse winteravondevenement en maakt ook een fotoketting."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Stadskanaal",
+                "fullName": "Fotoclub De Cycloop",
+                "nickName": "fcCycloop"
+            },
+            "coordinates": {
+                "latitude": 52.99624,
+                "longitude": 7.00143
+            },
+            "optional": {
+                "website": "https://www.decycloop.nl/",
+                "level2URL": "https://www.example.com/fcCycloop.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started in 1956 as a photo and narrow-film society; each month has one theme that every member interprets freely."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Begon in 1956 als foto- en smalfilmvereniging; elke maand staat één thema centraal dat ieder lid vrij interpreteert."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veendam",
+                "fullName": "Fotoclub Veendam",
+                "nickName": "fcVeendam"
+            },
+            "coordinates": {
+                "latitude": 53.07608,
+                "longitude": 6.86071
+            },
+            "optional": {
+                "website": "https://www.fotoclubveendam.nl/",
+                "level2URL": "https://www.example.com/fcVeendam.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The 'Red Suitcase': a secret set of objects is circulated around the members, who open it only at home and return it closed."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het 'Rode Koffertje': een aantal geheime voorwerpen gaat langs de leden, die het thuis openen en gesloten terugbrengen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 108
+                }
             }
         }
 
