@@ -7,5 +7,31 @@
 
     "clubs": [
 
+        {
+            "idPlus": {
+                "town": "Groningen",
+                "fullName": "Trefshot",
+                "nickName": "Trefshot"
+            },
+            "coordinates": {
+                "latitude": 53.23152,
+                "longitude": 6.54794
+            },
+            "optional": {
+                "website": "https://www.trefshot.nl",
+                "level2URL": "https://www.example.com/Trefshot.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The name combines community centre de Trefkoel, where the club started in 1972, with 'shot'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De naam komt van wijkcentrum de Trefkoel, waar de club in 1972 begon, plus 'shot'."
+                    }
+                ]
+            }
+        }
+
     ]
 }
