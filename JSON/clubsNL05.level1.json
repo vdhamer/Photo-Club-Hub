@@ -9,6 +9,35 @@
 
         {
             "idPlus": {
+                "town": "Almelo",
+                "fullName": "Fotogroep Schelfhorst",
+                "nickName": "fgSchelfhorst"
+            },
+            "coordinates": {
+                "latitude": 52.35636,
+                "longitude": 6.66362
+            },
+            "optional": {
+                "website": "https://www.fotogroepschelfhorst.nl/",
+                "level2URL": "https://www.example.com/fgSchelfhorst.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Named after the community centre where a photography course in the mid-1970s led to the club's founding."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Genoemd naar het Almelose wijkcentrum waar een fotocursus in het midden van de jaren zeventig tot de oprichting leidde."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 527
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Haarlo",
                 "fullName": "Fotoclub Berkelland",
                 "nickName": "fcBerkelland"
@@ -32,6 +61,35 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 588
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hengelo",
+                "fullName": "Hengelose Amateur Fotografen Vereniging",
+                "nickName": "HAFV"
+            },
+            "coordinates": {
+                "latitude": 52.27554,
+                "longitude": 6.79233
+            },
+            "optional": {
+                "website": "https://hafv.nl/",
+                "level2URL": "https://www.example.com/HAFV.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Uses the Fotobond's weekly 'In the Picture' themes as club themes, to get more members to participate."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gebruikt de wekelijkse Fotobond 'In the Picture'-thema's als clubthema, om leden te stimuleren om foto's in te zenden."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 506
                 }
             }
         },
