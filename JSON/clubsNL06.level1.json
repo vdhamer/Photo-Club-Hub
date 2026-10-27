@@ -443,6 +443,32 @@
 
         {
             "idPlus": {
+                "town": "Harderwijk",
+                "fullName": "Amateur Fotografen Vereniging De IRIS",
+                "nickName": "afvIris"
+            },
+            "coordinates": {
+                "latitude": 52.33745,
+                "longitude": 5.60797
+            },
+            "optional": {
+                "website": "http://afvdeirisharderwijk.nl/",
+                "level2URL": "https://www.example.com/afvIris.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members go out shooting in random pairs; printed photos are judged in small groups using the Manders' triangle method."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden gaan in willekeurige koppels op fotopad; afgedrukte foto's worden in groepjes beoordeeld met de driehoek van Manders."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Lichtenvoorde",
                 "fullName": "Foto Collectief Lichtenvoorde",
                 "nickName": "fcLichtenvoorde"
@@ -757,6 +783,32 @@
                     {
                         "language": "NL",
                         "value": "Eens per twee jaar een openbare avond, waarop leden hun mooiste natuurbeelden laten zien en vertellen hoe die tot stand kwamen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vorden",
+                "fullName": "Gelderse Natuurfotografie",
+                "nickName": "GNF"
+            },
+            "coordinates": {
+                "latitude": 52.10408,
+                "longitude": 6.31263
+            },
+            "optional": {
+                "website": "https://www.geldersenatuurfotografie.nl/",
+                "level2URL": "https://www.example.com/GNF.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Nature photography with as motto 'Beyond the boundaries of the landscape'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Natuurfotografie met als motto 'Voorbij de grenzen van het landschap'."
                     }
                 ]
             }
