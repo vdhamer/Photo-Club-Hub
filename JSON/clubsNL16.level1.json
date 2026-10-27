@@ -364,6 +364,32 @@
 
         {
             "idPlus": {
+                "town": "Den Bosch",
+                "fullName": "Shoot-it",
+                "nickName": "Shootit"
+            },
+            "coordinates": {
+                "latitude": 51.72669,
+                "longitude": 5.29848
+            },
+            "optional": {
+                "website": "https://www.shoot-it.nl/",
+                "level2URL": "https://www.example.com/Shootit.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photo chain 'Red thread': one member gets a photo without an explanation, finds a matching image and passes it on; a series emerges."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotoketting 'Rode draad': een lid krijgt zonder uitleg een foto, zoekt een passend beeld en geeft dat door; zo ontstaat een reeks."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Den Dungen",
                 "fullName": "Fotoclub Den Dungen",
                 "nickName": "fcDenDungen"
