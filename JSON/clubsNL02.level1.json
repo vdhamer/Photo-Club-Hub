@@ -9,6 +9,61 @@
 
         {
             "idPlus": {
+                "town": "Franeker",
+                "fullName": "Fotokring De Zoeker",
+                "nickName": "fkZoeker"
+            },
+            "coordinates": {
+                "latitude": 53.1862,
+                "longitude": 5.54566
+            },
+            "optional": {
+                "website": "https://fotokringdezoeker.nl/",
+                "level2URL": "https://www.example.com/fkZoeker.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Shows technique-themed exhibitions at several public venues in Franeker, e.g. abstract, double exposure and low key."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Toont exposities met een techniekthema op verschillende openbare plekken in Franeker, zoals abstract, dubbele belichting en low key."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heerenveen",
+                "fullName": "Fotoclub Heerenveen",
+                "nickName": "fcHeerenveen"
+            },
+            "coordinates": {
+                "latitude": 52.99847,
+                "longitude": 5.92315
+            },
+            "optional": {
+                "website": "https://fotoclubheerenveen.nl/",
+                "level2URL": "https://www.example.com/fcHeerenveen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Goes on a photo trip together every year, for example by train and ferry to the NDSM wharf in Amsterdam."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gaat elk jaar samen op fotoreis, zoals met trein en pont naar het NDSM-terrein in Amsterdam."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 220
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Rottum",
                 "fullName": "Vereniging voor Natuurfotografen Friesland",
                 "nickName": "vnfFriesland"
@@ -30,6 +85,35 @@
                         "value": "Opgericht in 1992. Het jaar begint traditiegetrouw met een spreker van buiten, voorafgegaan door het 'boerenkoolgebeuren'."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wolvega",
+                "fullName": "Fotoclub Wolvega Reflex",
+                "nickName": "fcWolvegaReflex"
+            },
+            "coordinates": {
+                "latitude": 52.87629,
+                "longitude": 6.00176
+            },
+            "optional": {
+                "website": "https://www.fotoclubwolvega.nl/",
+                "level2URL": "https://www.example.com/fcWolvegaReflex.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs a photo chain in which members respond to each other in alphabetical order."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Maakt een fotoketting waarin de leden in alfabetische volgorde op elkaar reageren."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 231
+                }
             }
         }
 
