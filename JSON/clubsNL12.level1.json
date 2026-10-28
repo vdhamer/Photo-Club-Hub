@@ -36,6 +36,35 @@
         {
             "idPlus": {
                 "town": "Dordrecht",
+                "fullName": "DAF Dordtse Amateurfotografen",
+                "nickName": "DAFDordrecht"
+            },
+            "coordinates": {
+                "latitude": 51.79937,
+                "longitude": 4.65846
+            },
+            "optional": {
+                "website": "https://daf-fotografie.nl/",
+                "level2URL": "https://www.example.com/DAFDordrecht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photos nominated by members' votes during the season are collected in a yearbook that anyone can order."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Foto's die tijdens het seizoen door leden zijn genomineerd, komen in een jaarboek dat iedereen kan bestellen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1219
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Dordrecht",
                 "fullName": "Natuurfotografen Drechtsteden",
                 "nickName": "nfDrechtsteden"
             },
@@ -90,6 +119,61 @@
 
         {
             "idPlus": {
+                "town": "Nieuw-Lekkerland",
+                "fullName": "Fotoclub Molenwaard",
+                "nickName": "fcMolenwaard"
+            },
+            "coordinates": {
+                "latitude": 51.88413,
+                "longitude": 4.66031
+            },
+            "optional": {
+                "website": "https://fotomolenwaard.nl/",
+                "level2URL": "https://www.example.com/fcMolenwaard.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Picks a 'Series of the Year' from members' photo series each year, with the maker explaining the underlying idea."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Kiest elk jaar een 'Serie van het jaar' uit de fotoseries van leden, met uitleg van de maker over het idee."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Poortugaal",
+                "fullName": "Fotoclub '80",
+                "nickName": "fc80"
+            },
+            "coordinates": {
+                "latitude": 51.85728,
+                "longitude": 4.38914
+            },
+            "optional": {
+                "website": "https://fotoclub80.nl/",
+                "level2URL": "https://www.example.com/fc80.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs a 'five with coherence' contest: each entrant submits five related photos, which a jury discusses."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt de wedstrijd 'Vijf met samenhang': elke deelnemer stuurt vijf samenhangende foto's in, die een jury bespreekt."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1209
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Rotterdam",
                 "fullName": "Amateurfotoclub De Maasstad",
                 "nickName": "AFCMaasstad"
@@ -113,6 +197,35 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 1220
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Fotoclub Rotterdam",
+                "nickName": "fcRotterdam"
+            },
+            "coordinates": {
+                "latitude": 51.96142,
+                "longitude": 4.47171
+            },
+            "optional": {
+                "website": "https://www.fotoclubrotterdam.nl/",
+                "level2URL": "https://www.example.com/fcRotterdam.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs a weekly 'photo of the week' chain: each member answers the previous photo with an associative photo of their own."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Maakt een wekelijkse 'foto van de week'-ketting: elk lid reageert associatief met een eigen foto op die van de voorganger."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1248
                 }
             }
         },

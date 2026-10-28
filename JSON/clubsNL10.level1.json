@@ -38,6 +38,35 @@
 
         {
             "idPlus": {
+                "town": "Almere",
+                "fullName": "Fotolinie",
+                "nickName": "Fotolinie"
+            },
+            "coordinates": {
+                "latitude": 52.39639,
+                "longitude": 5.28002
+            },
+            "optional": {
+                "website": "https://www.fotolinie.nl/",
+                "level2URL": "https://www.example.com/Fotolinie.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Pairs each monthly theme with a 'Doedag' (do-day): a photo outing to a location in and around Almere."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Combineert elk maandthema met een 'Doedag': een fotouitstap naar een locatie in en rondom Almere."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1088
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Amstelveen",
                 "fullName": "Verenigde Amateur Natuurfotografen",
                 "nickName": "nfVAN"
@@ -57,6 +86,90 @@
                     {
                         "language": "NL",
                         "value": "Tijdens de maandelijkse clubavonden worden er maximaal vier foto's per clublid besproken."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Fotoclub FVGVB",
+                "nickName": "fcFVGVB"
+            },
+            "coordinates": {
+                "latitude": 52.3457,
+                "longitude": 4.9104
+            },
+            "optional": {
+                "website": "https://www.fvgvb.nl/",
+                "level2URL": "https://www.example.com/fcFVGVB.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Yearly photo chain relayed through an organizer, who by tradition reveals the whole chain on the season's closing evening."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Jaarlijkse fotoketting via een organisator, die traditiegetrouw op de slotavond van het seizoen de hele ketting onthult."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1022
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Fotoclub NAFVA",
+                "nickName": "fcNAFVA"
+            },
+            "coordinates": {
+                "latitude": 52.36547,
+                "longitude": 4.94657
+            },
+            "optional": {
+                "website": "https://www.nafva.nl/",
+                "level2URL": "https://www.example.com/fcNAFVA.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Opens each season by discussing a summer assignment that was formulated by the winner of the previous year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opent elk seizoen met de bespreking van een zomeropdracht, bedacht door de winnaar van het jaar ervoor."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1014
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Dronten",
+                "fullName": "Fotoclub Kiekendief",
+                "nickName": "fcKiekendief"
+            },
+            "coordinates": {
+                "latitude": 52.52299,
+                "longitude": 5.72498
+            },
+            "optional": {
+                "website": "https://fotoclubkiekendief.nl/",
+                "level2URL": "https://www.example.com/fcKiekendief.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Yearly June contest: theme announced in September, every member present is the jury, and the photos are then exhibited."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Jaarlijkse wedstrijd in juni: thema bekend in september, alle aanwezige leden vormen de jury, daarna volgt een expositie."
                     }
                 ]
             }

@@ -177,6 +177,32 @@
 
         {
             "idPlus": {
+                "town": "Noordwijk",
+                "fullName": "Fotogroep X65",
+                "nickName": "fgX65"
+            },
+            "coordinates": {
+                "latitude": 52.24342,
+                "longitude": 4.43574
+            },
+            "optional": {
+                "website": "https://www.fotogroepx65.nl/",
+                "level2URL": "https://www.example.com/fgX65.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Sets a 'subject of the month' that is sometimes a puzzle, such as 'ugly or beautiful' or 'an unusual photo'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Geeft elke maand een 'onderwerp van de maand' dat soms een puzzel is, zoals 'lelijk of mooi' of 'een ongewone foto'."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Rijswijk",
                 "fullName": "Fotoclub F70",
                 "nickName": "fcF70"
@@ -196,6 +222,32 @@
                     {
                         "language": "NL",
                         "value": "Maakt elk jaar vier fotokettingen tegelijk."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sassenheim",
+                "fullName": "Fotoclub de Bloembollenstreek",
+                "nickName": "fcBloembollenstreek"
+            },
+            "coordinates": {
+                "latitude": 52.22411,
+                "longitude": 4.52433
+            },
+            "optional": {
+                "website": "https://www.fotoclubdebloembollenstreek.nl/",
+                "level2URL": "https://www.example.com/fcBloembollenstreek.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The winner of the yearly club contest starts a photo relay that splits into two chains, each member answering the previous photo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De winnende foto van de jaarlijkse clubcompetitie start een foto-estafette in twee ketens; elk lid reageert op de vorige foto."
                     }
                 ]
             }

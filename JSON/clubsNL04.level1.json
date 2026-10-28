@@ -9,6 +9,64 @@
 
         {
             "idPlus": {
+                "town": "Bathmen",
+                "fullName": "Fotografencollectief De Salon",
+                "nickName": "Salon"
+            },
+            "coordinates": {
+                "latitude": 52.25724,
+                "longitude": 6.28736
+            },
+            "optional": {
+                "website": "https://fotocollectiefdesalon.nl/",
+                "level2URL": "https://www.example.com/Salon.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded from a wish to discuss photos differently: work on a theme, then leave each other free to say what they see."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Ontstaan uit de wens foto's anders te bespreken: werken aan een thema en elkaar vrij laten te zeggen wat je ziet."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 488
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Deventer",
+                "fullName": "Deventer Foto Kring",
+                "nickName": "DFK"
+            },
+            "coordinates": {
+                "latitude": 52.27447,
+                "longitude": 6.15118
+            },
+            "optional": {
+                "website": "https://deventerfotokring.nl/",
+                "level2URL": "https://www.example.com/DFK.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs two photo chains a year: a visual one that builds on the previous photo's form and color, and one that follows its emotion."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Maakt jaarlijks twee fotokettingen: een visuele op vorm en kleur van de vorige foto, en een gevoelsketting op de emotie ervan."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 401
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Hasselt",
                 "fullName": "Fotoclub Positief",
                 "nickName": "fcPositief"

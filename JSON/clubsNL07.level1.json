@@ -38,6 +38,35 @@
 
         {
             "idPlus": {
+                "town": "Culemborg",
+                "fullName": "Culemborgse Fotoclub Lek en Licht",
+                "nickName": "fcLekEnLicht"
+            },
+            "coordinates": {
+                "latitude": 51.95446,
+                "longitude": 5.24247
+            },
+            "optional": {
+                "website": "https://lekenlicht.nl/",
+                "level2URL": "https://www.example.com/fcLekEnLicht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Sets 'inspiration assignments' on one everyday thing, such as a chair, a bell pepper, a shoe or an apple."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Geeft 'inspiratieopdrachten' rond één alledaags ding, zoals een stoel, een paprika, een schoen of een appel."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 763
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Hilversum",
                 "fullName": "Fotoclub De Beeldjagers",
                 "nickName": "fcBeeldjagers"
@@ -116,6 +145,64 @@
 
         {
             "idPlus": {
+                "town": "Leersum",
+                "fullName": "Fotogroep Kromme Rijn",
+                "nickName": "fgKrommeRijn"
+            },
+            "coordinates": {
+                "latitude": 52.01089,
+                "longitude": 5.43406
+            },
+            "optional": {
+                "website": "https://fotogroepkrommerijn.nl/",
+                "level2URL": "https://www.example.com/fgKrommeRijn.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photo discussions start from printed photos, and the digital periodical 'De Shot' reports on each of them."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotobesprekingen gaan uit van geprinte foto's, en het digitale periodiek 'De Shot' doet er verslag van."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 730
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lexmond",
+                "fullName": "Foto Flash Vianen",
+                "nickName": "FFV"
+            },
+            "coordinates": {
+                "latitude": 51.95983,
+                "longitude": 5.03883
+            },
+            "optional": {
+                "website": "https://www.flashvianen.com/",
+                "level2URL": "https://www.example.com/FFV.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A photo chain in which a picnic case with crockery had to appear in every photo and be handed on from member to member."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een fotoketting waarin een picknickkoffer met servies op elke foto moest staan en van lid naar lid werd doorgegeven."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 762
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Schoonrewoerd",
                 "fullName": "Natuurfotografengilde",
                 "nickName": "nfGilde"
@@ -137,6 +224,35 @@
                         "value": "Opgericht in 1977, en naar eigen zeggen de oudste landelijke vereniging voor natuurfotografie in Nederland."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Woudenberg",
+                "fullName": "Fotokring Flits",
+                "nickName": "fkFlits"
+            },
+            "coordinates": {
+                "latitude": 52.08681,
+                "longitude": 5.41015
+            },
+            "optional": {
+                "website": "https://www.fotokringflits.com/",
+                "level2URL": "https://www.example.com/fkFlits.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Holds a yearly 'Foto 7 daagse': seven days, seven prompts, such as something starting with A, a noon phone shot or objects laid out and shot from above."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt jaarlijks een 'Foto 7 daagse': zeven dagen, zeven opdrachten, zoals iets met een A, een mobiele foto om twaalf uur of neergelegde voorwerpen van bovenaf."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 760
+                }
             }
         }
 

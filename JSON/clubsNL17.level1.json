@@ -9,6 +9,32 @@
 
         {
             "idPlus": {
+                "town": "Heerlen",
+                "fullName": "Fotoclub Heerlerbaan",
+                "nickName": "fcHeerlerbaan"
+            },
+            "coordinates": {
+                "latitude": 50.86676,
+                "longitude": 5.99767
+            },
+            "optional": {
+                "website": "http://www.fotoclubheerlerbaan.nl/",
+                "level2URL": "https://www.example.com/fcHeerlerbaan.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Club motto: 'Veni, vidi, foto', or: I came, I saw, I took a photo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Clubmotto: 'Veni, vidi, foto', oftewel: ik kwam, ik zag, ik maakte een foto."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Helden",
                 "fullName": "Fotoclub Helden-Panningen",
                 "nickName": "fcHeldenPanningen"
@@ -30,6 +56,35 @@
                         "value": "Aan elk uitstapje is een foto-opdracht gekoppeld."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Reuver",
+                "fullName": "Fotogroep Reuver",
+                "nickName": "fgReuver"
+            },
+            "coordinates": {
+                "latitude": 51.28636,
+                "longitude": 6.07359
+            },
+            "optional": {
+                "website": "http://fotogroepreuver.nl/",
+                "level2URL": "https://www.example.com/fgReuver.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Evening themes include 'song title' (one member shot Purple Rain), 'paradox', 'image rhyme' and a remake of a famous photo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Avondthema's zijn onder meer 'songtitel' (Purple Rain), 'paradox', 'beeldrijm' en een remake van een beroemde foto."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1731
+                }
             }
         },
 

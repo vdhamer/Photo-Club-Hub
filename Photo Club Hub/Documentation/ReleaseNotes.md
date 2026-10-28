@@ -19,6 +19,9 @@ Afdeling Groningen, until now an empty placeholder, lists 6 clubs: Trefshot (Gro
 * `clubsBE.level1.json` (new), `root_.level1.json`
 A new Level 1 file for Belgian clubs, included from `root_.level1.json`, with 4 clubs from the same list: Fauna Flora Fotoclub Schoten, Renovat Foto (Sint-Truiden), CreaFoto (Wommelgem) and FotoDigiClub De Teut (Zonhoven). Bundled through the Data package's `Package.swift`.
 
+* `clubsNL04`, `07`, `08`, `10`, `11`, `12`, `17`
+21 Dutch clubs added from the list of clubs using the Manders driehoek on mandersdriehoek.nl ([vdhamer/Photo-Club-Hub-Data#90](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/90)), 16 of them Fotobond clubs: 2 in NL04, 4 in NL07, 3 in NL08, 4 in NL10, 2 in NL11, 4 in NL12 and 2 in NL17. Mirrored identically in the Data package's bundled copy.
+
 STRUCTURAL
 
 * Tested with macOS 27.2

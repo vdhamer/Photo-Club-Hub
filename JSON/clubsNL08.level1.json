@@ -31,6 +31,93 @@
                     }
                 ]
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hoorn",
+                "fullName": "Fotovrienden West-Friesland",
+                "nickName": "fvWestFriesland"
+            },
+            "coordinates": {
+                "latitude": 52.63878,
+                "longitude": 5.03577
+            },
+            "optional": {
+                "website": "https://fotovriendenwestfriesland.nl/",
+                "level2URL": "https://www.example.com/fvWestFriesland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Keeps a 'schoenendoos' (shoebox) of everyday objects, from a key to a horseshoe, that members photograph."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Heeft een 'schoenendoos' met alledaagse voorwerpen, van een sleutel tot een hoefijzer, die leden fotograferen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 818
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Kolhorn",
+                "fullName": "Fotoclub Fotomorgana",
+                "nickName": "fcFotomorgana"
+            },
+            "coordinates": {
+                "latitude": 52.7948,
+                "longitude": 4.88988
+            },
+            "optional": {
+                "website": "https://www.fotoclub-fotomorgana.nl/",
+                "level2URL": "https://www.example.com/fcFotomorgana.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Yearly 'Rode draad' assignment: everyone shoots the same prompt, from a club-supplied stool to a model of the coronavirus."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Jaarlijkse 'Rode draad'-opdracht: iedereen fotografeert hetzelfde, van een door de club geleverde kruk tot een model van het coronavirus."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 815
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Schagerbrug",
+                "fullName": "Algemene Foto Vereniging Schagen",
+                "nickName": "afvSchagen"
+            },
+            "coordinates": {
+                "latitude": 52.79986,
+                "longitude": 4.76798
+            },
+            "optional": {
+                "website": "https://www.fotoclubschagen.nl/",
+                "level2URL": "https://www.example.com/afvSchagen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Hangs a members' exhibition in a shopping center where visitors vote; the winning photographer gets a dibond print."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Toont een ledenexpositie in een winkelcentrum waar bezoekers stemmen; de winnende fotograaf krijgt een afdruk op dibond."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 802
+                }
+            }
         }
 
     ]
