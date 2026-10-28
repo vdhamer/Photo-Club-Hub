@@ -116,32 +116,6 @@
 
         {
             "idPlus": {
-                "town": "Beekbergen",
-                "fullName": "Amateur Fotografen Vereniging de Veluwe",
-                "nickName": "afvDeVeluwe"
-            },
-            "coordinates": {
-                "latitude": 52.15895,
-                "longitude": 5.96312
-            },
-            "optional": {
-                "website": "https://develuwe.net",
-                "level2URL": "https://www.example.com/afvDeVeluwe.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Four working groups (nature, city, creative, portrait) each plan their own year."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Vier werkgroepen (natuur, stad, creatief, portret) maken elk hun eigen jaarprogramma."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Beuningen",
                 "fullName": "Fotoclub De Positieven",
                 "nickName": "fcPositievenBeuningen"
@@ -443,32 +417,6 @@
 
         {
             "idPlus": {
-                "town": "Harderwijk",
-                "fullName": "Amateur Fotografen Vereniging De IRIS",
-                "nickName": "afvIris"
-            },
-            "coordinates": {
-                "latitude": 52.33745,
-                "longitude": 5.60797
-            },
-            "optional": {
-                "website": "http://afvdeirisharderwijk.nl/",
-                "level2URL": "https://www.example.com/afvIris.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Members go out shooting in random pairs; printed photos are judged in small groups using the Manders' triangle method."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Leden gaan in willekeurige koppels op fotopad; afgedrukte foto's worden in groepjes beoordeeld met de driehoek van Manders."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Lichtenvoorde",
                 "fullName": "Foto Collectief Lichtenvoorde",
                 "nickName": "fcLichtenvoorde"
@@ -545,32 +493,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 620
                 }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Nijkerk",
-                "fullName": "Vereniging van Natuurfotografen Nijkerk",
-                "nickName": "vnfNijkerk"
-            },
-            "coordinates": {
-                "latitude": 52.23521,
-                "longitude": 5.46405
-            },
-            "optional": {
-                "website": "https://natuurfotografie.vnf-nijkerk.nl",
-                "level2URL": "https://www.example.com/vnfNijkerk.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "In the yearly photo contest, last year's winner picks the fifth category, next to macro, birds, animals and landscape."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "In de jaarlijkse fotowedstrijd kiest de winnaar van vorig jaar de vijfde categorie, naast macro, vogels, dieren en landschap."
-                    }
-                ]
             }
         },
 
@@ -757,32 +679,6 @@
                     {
                         "language": "NL",
                         "value": "Een activiteit van Wijkvereniging Passewaaij, opgericht in 2022."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Ugchelen",
-                "fullName": "Vereniging voor Natuurfotografen Apeldoorn",
-                "nickName": "vnfApeldoorn"
-            },
-            "coordinates": {
-                "latitude": 52.18542,
-                "longitude": 5.93313
-            },
-            "optional": {
-                "website": "https://vnf-apeldoorn.nl",
-                "level2URL": "https://www.example.com/vnfApeldoorn.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Every two years a public evening, where members show their best nature photos and tell how they were made."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Eens per twee jaar een openbare avond, waarop leden hun mooiste natuurbeelden laten zien en vertellen hoe die tot stand kwamen."
                     }
                 ]
             }

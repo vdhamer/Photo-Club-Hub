@@ -67,6 +67,32 @@
 
         {
             "idPlus": {
+                "town": "Harderwijk",
+                "fullName": "Amateur Fotografen Vereniging De IRIS",
+                "nickName": "afvIris"
+            },
+            "coordinates": {
+                "latitude": 52.33745,
+                "longitude": 5.60797
+            },
+            "optional": {
+                "website": "http://afvdeirisharderwijk.nl/",
+                "level2URL": "https://www.example.com/afvIris.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members go out shooting in random pairs; printed photos are judged in small groups using the Manders' triangle method."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden gaan in willekeurige koppels op fotopad; afgedrukte foto's worden in groepjes beoordeeld met de driehoek van Manders."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Hilversum",
                 "fullName": "Fotoclub De Beeldjagers",
                 "nickName": "fcBeeldjagers"
@@ -198,6 +224,32 @@
                 "nlSpecific": {
                     "fotobondNumber": 762
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nijkerk",
+                "fullName": "Vereniging van Natuurfotografen Nijkerk",
+                "nickName": "vnfNijkerk"
+            },
+            "coordinates": {
+                "latitude": 52.23521,
+                "longitude": 5.46405
+            },
+            "optional": {
+                "website": "https://natuurfotografie.vnf-nijkerk.nl",
+                "level2URL": "https://www.example.com/vnfNijkerk.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "In the yearly photo contest, last year's winner picks the fifth category, next to macro, birds, animals and landscape."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In de jaarlijkse fotowedstrijd kiest de winnaar van vorig jaar de vijfde categorie, naast macro, vogels, dieren en landschap."
+                    }
+                ]
             }
         },
 

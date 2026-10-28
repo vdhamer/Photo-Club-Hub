@@ -38,6 +38,32 @@
 
         {
             "idPlus": {
+                "town": "Beekbergen",
+                "fullName": "Amateur Fotografen Vereniging de Veluwe",
+                "nickName": "afvDeVeluwe"
+            },
+            "coordinates": {
+                "latitude": 52.15895,
+                "longitude": 5.96312
+            },
+            "optional": {
+                "website": "https://develuwe.net",
+                "level2URL": "https://www.example.com/afvDeVeluwe.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Four working groups (nature, city, creative, portrait) each plan their own year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Vier werkgroepen (natuur, stad, creatief, portret) maken elk hun eigen jaarprogramma."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Deventer",
                 "fullName": "Deventer Foto Kring",
                 "nickName": "DFK"
@@ -112,6 +138,32 @@
                     {
                         "language": "NL",
                         "value": "Voor natuurfotografen in Noordwest-Overijssel en Flevoland."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ugchelen",
+                "fullName": "Vereniging voor Natuurfotografen Apeldoorn",
+                "nickName": "vnfApeldoorn"
+            },
+            "coordinates": {
+                "latitude": 52.18542,
+                "longitude": 5.93313
+            },
+            "optional": {
+                "website": "https://vnf-apeldoorn.nl",
+                "level2URL": "https://www.example.com/vnfApeldoorn.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every two years a public evening, where members show their best nature photos and tell how they were made."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Eens per twee jaar een openbare avond, waarop leden hun mooiste natuurbeelden laten zien en vertellen hoe die tot stand kwamen."
                     }
                 ]
             }
