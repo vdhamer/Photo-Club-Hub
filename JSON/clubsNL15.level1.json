@@ -268,11 +268,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Each month the members work on a new photo assignment."
+                        "value": "Started when eight students carried on together after a two-year photography course at H19."
                     },
                     {
                         "language": "NL",
-                        "value": "Elke maand werken de leden aan een nieuwe foto-opdracht."
+                        "value": "Ontstaan toen acht cursisten na een tweejarige fotografiecursus bij H19 samen doorgingen."
                     }
                 ],
                 "nlSpecific": {
@@ -355,11 +355,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Also known as Fotoclub AFVP Etten-Leur."
+                        "value": "At the exhibition, visitors choose the best photo, series and AV production themselves."
                     },
                     {
                         "language": "NL",
-                        "value": "Ook bekend als Fotoclub AFVP Etten-Leur."
+                        "value": "Bezoekers van de expositie kiezen zelf de mooiste foto, serie en AV-productie."
                     }
                 ],
                 "nlSpecific": {
@@ -504,11 +504,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Founded in 2004; has held an exhibition every year since 2006."
+                        "value": "Meets every four weeks at a member's home."
                     },
                     {
                         "language": "NL",
-                        "value": "Opgericht in 2004; houdt sinds 2006 elk jaar een expositie."
+                        "value": "Komt om de vier weken bijeen bij één van de leden thuis."
                     }
                 ],
                 "nlSpecific": {
@@ -580,11 +580,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Also known as FCM."
+                        "value": "Members give each other workshops under the name VolDol (\"by members, for members\")."
                     },
                     {
                         "language": "NL",
-                        "value": "Ook bekend als FCM."
+                        "value": "Leden geven elkaar workshops onder de naam VolDol (\"voor leden door leden\")."
                     }
                 ]
             }
@@ -1042,16 +1042,16 @@
                 "longitude": 4.74732
             },
             "optional": {
-                "website": "https://issuu.com/dinasa",
+                "website": "https://www.facebook.com/p/Fotoclub-Dinasa-Wagenberg-61554309071954/",
                 "level2URL": "https://www.example.com/fcDinasa.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Dinasa publishes its work on Issuu."
+                        "value": "Fotoclub Dinasa has a publicly open Facebook page."
                     },
                     {
                         "language": "NL",
-                        "value": "Dinasa publiceert haar werk op Issuu."
+                        "value": "Fotoclub Dinasa heeft een openbare Facebook-pagina."
                     }
                 ],
                 "nlSpecific": {
