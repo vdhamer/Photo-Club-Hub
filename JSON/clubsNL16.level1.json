@@ -1010,6 +1010,32 @@
 
         {
             "idPlus": {
+                "town": "Hapert",
+                "fullName": "Fotocafé Visual",
+                "nickName": "fotocafeVisual"
+            },
+            "coordinates": {
+                "latitude": 51.36877,
+                "longitude": 5.25848
+            },
+            "optional": {
+                "website": "https://www.richardsimons.nl/particulier/fotocaf%C3%A9-visual",
+                "level2URL": "https://www.example.com/fotocafeVisual.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2020 as a photo café run by a professional photographer, so the club's page is on his studio's website."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In 2020 opgericht als fotocafé van een beroepsfotograaf; de clubpagina staat daarom op de website van zijn studio."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Heeswijk",
                 "fullName": "Fotoclub Bernheze",
                 "nickName": "fcBernheze"

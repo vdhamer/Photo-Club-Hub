@@ -9,6 +9,31 @@
 
         {
             "idPlus": {
+                "town": "Boom",
+                "fullName": "Koninklijke Fotoclub Argus Boom",
+                "nickName": "ArgusBoom"
+            },
+            "coordinates": {
+                "latitude": 51.09927,
+                "longitude": 4.36633
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/ArgusBoom.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Holds the title 'Koninklijke' (Royal), which Belgium grants only to societies that have existed for at least 50 years."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Draagt de titel 'Koninklijke', die België alleen toekent aan verenigingen die minstens 50 jaar bestaan."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Schoten",
                 "fullName": "Fauna Flora Fotoclub Schoten",
                 "nickName": "FFFS"

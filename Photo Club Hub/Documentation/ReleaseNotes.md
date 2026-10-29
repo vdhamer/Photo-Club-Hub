@@ -17,10 +17,13 @@ Afdeling Groningen, until now an empty placeholder, lists 6 clubs: Trefshot (Gro
 38 Dutch clubs added from the list on fotoclubs.startpagina.nl ([vdhamer/Photo-Club-Hub-Data#89](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/89)), 20 of them Fotobond clubs: 5 in NL01, 3 in NL02, 2 in NL05, 2 in NL06, 3 in NL07, 3 in NL09, 2 in NL10, 6 in NL11, 6 in NL12, 2 in NL14 (Zeeland, until now an empty placeholder), 1 in NL16 and 3 in NL17. Mirrored identically in the Data package's bundled copy.
 
 * `clubsBE.level1.json` (new), `root_.level1.json`
-A new Level 1 file for Belgian clubs, included from `root_.level1.json`, with 4 clubs from the same list: Fauna Flora Fotoclub Schoten, Renovat Foto (Sint-Truiden), CreaFoto (Wommelgem) and FotoDigiClub De Teut (Zonhoven). Bundled through the Data package's `Package.swift`.
+A new Level 1 file for Belgian clubs, included from `root_.level1.json`, with 4 clubs from the same list: Fauna Flora Fotoclub Schoten, Renovat Foto (Sint-Truiden), CreaFoto (Wommelgem) and FotoDigiClub De Teut (Zonhoven). Bundled through the Data package's `Package.swift`. A fifth club, Koninklijke Fotoclub Argus Boom, was added from its entry on verenigingsloket.be. Mirrored identically in the Data package's bundled copy.
 
 * `clubsNL04`, `07`, `08`, `10`, `11`, `12`, `17`
 21 Dutch clubs added from the list of clubs using the Manders driehoek on mandersdriehoek.nl ([vdhamer/Photo-Club-Hub-Data#90](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/90)), 16 of them Fotobond clubs: 2 in NL04, 4 in NL07, 3 in NL08, 4 in NL10, 2 in NL11, 4 in NL12 and 2 in NL17. Mirrored identically in the Data package's bundled copy.
+
+* `clubsNL16.level1.json`
+Fotocafé Visual (Hapert), an independent club, added.
 
 STRUCTURAL
 
