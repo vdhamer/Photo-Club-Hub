@@ -9,6 +9,35 @@
 
         {
             "idPlus": {
+                "town": "Hoofddorp",
+                "fullName": "AFV Objectief",
+                "nickName": "afvObjectief"
+            },
+            "coordinates": {
+                "latitude": 52.29575,
+                "longitude": 4.69054
+            },
+            "optional": {
+                "website": "https://afv-objectief.nl",
+                "level2URL": "https://www.example.com/afvObjectief.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Active in the Haarlemmermeer region since 1980. Its website shows a member's Photo of the Month."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Sinds 1980 actief in de regio Haarlemmermeer. De website toont elke maand een Foto van de maand van een lid."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 916
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Uithoorn",
                 "fullName": "Fotokring Uithoorn",
                 "nickName": "fkUithoorn"

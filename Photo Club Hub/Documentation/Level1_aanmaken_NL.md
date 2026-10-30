@@ -33,6 +33,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
     - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals `fcDenDungen` (voor "Fotoclub Den Dungen") of `fgWaalre` (voor "Fotogroep Waalre"). 
     Deze nickname wordt vooral gebruikt voor Level 2 bestandsnamen en voor webadressen.
     Een nickname moet uniek zijn over alle bestanden. Heeft een andere club de gewenste nickname al, dan houdt de club die er het eerst stond hem, en krijgt de jouwe de plaatsnaam erbij: `fcPositievenBeuningen` naast `fcPositieven`.
+    - Gebruik voor `town` de plaatsnaam zoals die ter plekke gebruikt wordt, in de lokale taal: `Köln` (niet Keulen), `Hurdegaryp` (Fries, niet Hardegarijp), `Den Bosch`. Alleen in Latijnse letters, dus `Tokyo`. De app toont de plaatsnaam vertaald in de taal van de gebruiker, berekend uit de coördinaten. Samen met `fullName` identificeert de plaatsnaam de club, dus verander hem niet zomaar.
 
 4. Pas de locatie van de club aan (`coordinates`):
     - De coördinaten worden gebruikt om de nominale ligging van een club op landkaartjes aan te geven. Dan kan je clubs in de buurt ontdekken. De app werkt _niet_ met een traditioneel adres.

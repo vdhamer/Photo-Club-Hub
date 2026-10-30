@@ -142,6 +142,32 @@
 
         {
             "idPlus": {
+                "town": "Ten Boer",
+                "fullName": "Fotoclub Objectief",
+                "nickName": "fcObjectiefTenBoer"
+            },
+            "coordinates": {
+                "latitude": 53.27301,
+                "longitude": 6.69494
+            },
+            "optional": {
+                "website": "https://fotoclubobjectief.nl",
+                "level2URL": "https://www.example.com/fcObjectiefTenBoer.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2016. A fixture is the photo relay: in two parallel series, each member continues a photo by another member; after about a year, that yields two surprising series."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 2016. Vast onderdeel is de estafettefoto: in twee series maakt elk lid een vervolg op een foto van een ander; na ongeveer een jaar levert dat twee verrassende series op."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Veendam",
                 "fullName": "Fotoclub Veendam",
                 "nickName": "fcVeendam"

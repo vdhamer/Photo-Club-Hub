@@ -173,6 +173,35 @@
                     "fotobondNumber": 1708
                 }
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Venray",
+                "fullName": "Fotoclub Venray",
+                "nickName": "fcVenray"
+            },
+            "coordinates": {
+                "latitude": 51.50506,
+                "longitude": 5.95038
+            },
+            "optional": {
+                "website": "https://www.fotoclubvenray.nl",
+                "level2URL": "https://www.example.com/fcVenray.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "New members can get a mentor for their first six months, and can introduce themselves by showing their own work on a club evening."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Nieuwe leden kunnen het eerste halfjaar een mentor krijgen en mogen zich voorstellen met een overzicht van hun eigen werk op een clubavond."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1706
+                }
+            }
         }
 
     ]

@@ -64,6 +64,32 @@
 
         {
             "idPlus": {
+                "town": "Hurdegaryp",
+                "fullName": "Fotoclub Objectief Hurdegaryp",
+                "nickName": "fcObjectiefHurdegaryp"
+            },
+            "coordinates": {
+                "latitude": 53.20587,
+                "longitude": 5.91398
+            },
+            "optional": {
+                "website": "https://www.fotoclub-objectief.nl",
+                "level2URL": "https://www.example.com/fcObjectiefHurdegaryp.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "One of its assignments: pick a spot and photograph it in all four seasons from the same viewpoint."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een van de opdrachten: kies een plek en fotografeer die in alle vier de seizoenen vanaf hetzelfde standpunt."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Rottum",
                 "fullName": "Vereniging voor Natuurfotografen Friesland",
                 "nickName": "vnfFriesland"

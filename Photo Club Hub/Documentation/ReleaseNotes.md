@@ -25,6 +25,12 @@ A new Level 1 file for Belgian clubs, included from `root_.level1.json`, with 4 
 * `clubsNL16.level1.json`
 Fotocafé Visual (Hapert), an independent club, added.
 
+* `clubsNL01`, `02`, `09`, `17`
+4 clubs found by the second dry run of the rule-based club-list generator ([vdhamer/Photo-Club-Hub-Data#81](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/81)), 2 of them Fotobond clubs: Fotoclub Objectief (Ten Boer) in NL01, Fotoclub Objectief Hurdegaryp in NL02, AFV Objectief (Hoofddorp) in NL09 and Fotoclub Venray in NL17.
+
+* `clubsNL16.level1.json`
+Corrections from the same dry run: Fotogroep Argus's website removed (its domain is now for sale), Fotogroep Vught's website and nickname corrected, Fotoclub Rapenland's Fotobond number and Fotoclub Bommelerwaard's website added.
+
 STRUCTURAL
 
 * Tested with macOS 27.2

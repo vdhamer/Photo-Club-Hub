@@ -347,7 +347,6 @@
                 "longitude": 5.3075
             },
             "optional": {
-                "website": "https://argusfoto.nl/",
                 "level2URL": "https://www.example.com/fgArgus.level2.json",
                 "remark": [
                     {
@@ -1980,14 +1979,14 @@
             "idPlus": {
                 "town": "Vught",
                 "fullName": "Fotogroep Vught",
-                "nickName": "fgVucht"
+                "nickName": "fgVught"
             },
             "coordinates": {
                 "latitude": 51.64007,
                 "longitude": 5.28902
             },
             "optional": {
-                "website": "https://www.fotogroepvught.nl",
+                "website": "https://fotogroep-vught.nl",
                 "level2URL": "https://www.example.com/fgVught.level2.json",
                 "remark": [
                     {
@@ -2155,6 +2154,7 @@
                 "longitude": 5.25076
             },
             "optional": {
+                "website": "https://www.fotoclubbommelerwaard.nl",
                 "level2URL": "https://www.example.com/fcBommelerwaard.level2.json",
                 "remark": [
                     {
