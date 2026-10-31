@@ -42,7 +42,7 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 
 STRUCTURAL
 
-* Tested with macOS 27.2
+* Tested with macOS 27.2 and Xcode 27.2 (27B52)
 
 ---------------------------------------------------------------------------
 
