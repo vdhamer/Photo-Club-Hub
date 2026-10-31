@@ -28,6 +28,7 @@ struct PhotographersTextInfo: View {
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM"
+        formatter.timeZone = .gmt // bornDT holds a calendar day as midnight GMT, so every device prints the same day
         return formatter
     }()
 
@@ -154,9 +155,15 @@ struct PhotographersTextInfo: View {
             return nil
         }
 
-        let birthdayComponents = calendar.dateComponents([.month, .day], from: birthday)
+        // The birthday is a calendar day stored as midnight GMT, so its month and day are read in GMT.
+        // The window around it stays in the device's time zone: "today" is today where the viewer is.
+        var gmtCalendar = calendar
+        gmtCalendar.timeZone = .gmt
+        let birthdayComponents = gmtCalendar.dateComponents([.month, .day], from: birthday)
 
-        let nearbyBirthday: Date = calendar.nextDate(after: timeWindowStart,
+        // nextDate(after:) never returns its starting moment, so the search starts just before the window.
+        // Otherwise a birthday on the window's first day would jump to next year's birthday.
+        let nearbyBirthday: Date = calendar.nextDate(after: timeWindowStart.addingTimeInterval(-1),
                                                      matching: DateComponents(month: birthdayComponents.month,
                                                                               day: birthdayComponents.day),
                                                      matchingPolicy: .nextTime,
@@ -190,6 +197,7 @@ struct PhotographersTextInfo: View {
     dateComponents.month = birthdayComponents.month
     dateComponents.day = birthdayComponents.day
     dateComponents.year = 1975 // Some year in the past
+    dateComponents.timeZone = .gmt // the way a loaded birthday is stored
     let birthdayDate = calendar.date(from: dateComponents)!
 
     let photographer = Photographer.findCreateUpdate(
