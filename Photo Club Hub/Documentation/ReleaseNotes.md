@@ -5,6 +5,12 @@ TO-DO
 * fix location button spinning forever when location access is denied ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
 * show and search the town in the interface language on the Maps and Clubs tabs ([#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890))
 
+USER-FACING BUG FIXES
+
+- **Birthdays show the same date everywhere.** On devices west of GMT, such as in the Americas, the People tab showed a birthday one day early.
+
+- **Birthdays stay visible through the day after.** The People tab now also shows a birthday on the day after, as was intended.
+
 DATA
 
 * `clubsNL15.level1.json`
@@ -30,6 +36,9 @@ Fotocafé Visual (Hapert), an independent club, added.
 
 * `clubsNL16.level1.json`
 Corrections from the same dry run: Fotogroep Argus's website removed (its domain is now for sale), Fotogroep Vught's website and nickname corrected, Fotoclub Rapenland's Fotobond number and Fotoclub Bommelerwaard's website added.
+
+* `clubsNL16.level1.json`
+The remark of Foto-videoclub DAF now says that, according to its website, its activities are temporarily on hold. The club stays listed. Mirrored identically in the Data package's bundled copy.
 
 STRUCTURAL
 
