@@ -19,6 +19,7 @@
             },
             "optional": {
                 "website": "https://www.TemplateMax.nl",
+                "badWebsites": [ "https://www.old-hijacked-TemplateMax.nl", "https://www.TemplateMax-for-sale.nl" ],
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
                 "level2URL": "https://www.TemplateMax.nl/TemplateMax.level2.json",
                 "remark": [
@@ -29,6 +30,35 @@
                     {
                         "language": "NL",
                         "value": "Deze clubbeschrijving kan overschreven worden door een remark-veld in het level2.json-bestand van de club."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-02-10",
+                        "author": "list maintainer",
+                        "text": "No activity found on the website for two years, and no reply to an email. Assumed stopped.",
+                        "isFormerClub": true
+                    },
+                    {
+                        "date": "2026-03-02",
+                        "author": "club",
+                        "text": "Club told us it is still active, with a new board and a new website.",
+                        "isFormerClub": false
+                    },
+                    {
+                        "date": "2026-07-20",
+                        "author": "list maintainer",
+                        "text": "Old domain was re-registered by a spammer. Club still meets, on its new website. Moved the old URL to badWebsites."
+                    },
+                    {
+                        "date": "2026-08-03",
+                        "author": "club",
+                        "text": "Club told us that the pin was at the wrong building. Corrected the coordinates."
+                    },
+                    {
+                        "date": "2026-08-03",
+                        "author": "list maintainer",
+                        "text": "Second entry on the same date: the club now meets at both buildings, so kept the corrected pin and asked which one it prefers."
                     }
                 ],
                 "maintainerEmail": "admin@TemplateMax.nl",
@@ -49,7 +79,7 @@
                 "longitude": 8.53346
             },
             "optional": {
-                "website": "https://leicasocietyinternational.org",
+                "website": "https://www.leica-rangefinder.example.org",
                 "wikipedia": "https://en.wikipedia.org/wiki/Leica_Camera",
                 "level2URL": "https://www.TemplateMax.nl/LeicaRC.level2.json",
                 "remark": [
@@ -62,7 +92,25 @@
                         "value": "Een denkbeeldige club van enthousiaste eigenaren van Leica meetzoeker camera's."
                     }
                 ],
-                "maintainerEmail": "admin@leicaROC.de"
+                "logbook": [
+                    {
+                        "date": "2025-03-14",
+                        "author": "afdeling contact",
+                        "text": "Confirmed that the club still meets, although its website is rarely updated."
+                    },
+                    {
+                        "date": "2026-09-12",
+                        "author": "generator",
+                        "text": "Website went down: timed out on three runs in a row."
+                    },
+                    {
+                        "date": "2026-10-29",
+                        "author": "afdeling contact",
+                        "text": "Example only: informed us that the club has disbanded.",
+                        "isFormerClub": true
+                    }
+                ],
+                "maintainerEmail": "admin@leica-rangefinder.example.org"
             }
         }
     ],
@@ -89,8 +137,36 @@
                     }
                 ]
             }
+        },
+        {
+            "idPlus": {
+                "town": "Example Town",
+                "fullName": "Template Museum That Closed",
+                "nickName": "TemplateMuseumClosed"
+            },
+            "coordinates": {
+                "latitude": 52.0,
+                "longitude": 5.0
+            },
+            "optional": {
+                "website": "https://www.template-museum.example.org",
+                "badWebsites": [ "https://www.old-template-museum.example.org" ],
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A hypothetical museum that shows how to record that a museum has closed."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-10-29",
+                        "author": "list maintainer",
+                        "text": "Example only: this hypothetical museum has closed.",
+                        "isFormerMuseum": true
+                    }
+                ]
+            }
         }
     ]
 
 }
-
