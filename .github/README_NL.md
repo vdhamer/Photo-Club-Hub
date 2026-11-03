@@ -644,20 +644,46 @@ voorzittersstatus niet beïnvloedt. Schrijf `"isSupported": false` om een taal t
 Voor het toevoegen van fotoclubs (of musea) op `Level 1` zijn een naam, locatie en enkele optionele URL's nodig. 
 Hiermee kan de app de items tonen in de `Kaarten`-tab en ze weergeven met locatiemarkeringen op de kaarten.
 
-`Level 1`-data wordt technisch opgeslagen in één centraal gehost 
-[bestand](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json)
-genaamd `root.level1.json`.
-Telkens wanneer de app wordt gestart, werkt deze verouderde data op het apparaat bij door dit centrale online bestand te lezen.
+`Level 1`-data wordt opgeslagen in een boom van JSON-bestanden.
+De boom begint bij een
+[bestand](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root_.level1.json)
+genaamd `root_.level1.json`.
+Elk bestand kan via de lijst `level1URLIncludes` extra Level 1-bestanden laden, zodat de bestanden een boom vormen.
+`clubsNL.level1.json` laadt bijvoorbeeld een bestand per Fotobond-afdeling:
 
-Als je ons de `Level 1`-informatie van een club stuurt, voegen we die graag voor je toe aan dit centrale `root.level1.json`-bestand.
+```text
+root_.level1.json               geen clubs, alleen includes
+├── clubsBE.level1.json         clubs in België
+├── clubsNL.level1.json         geen clubs, alleen includes
+│   ├── clubsNL01.level1.json   Groningen
+│   :
+│   ├── clubsNL16.level1.json   Brabant Oost
+│   └── clubsNL17.level1.json   Limburg
+└── museums.level1.json         fotomusea, plus includes
+    ├── museumsAU.level1.json   fotomusea in Australië
+    :
+    └── museumsUS.level1.json   fotomusea in de Verenigde Staten
+```
+
+Elke regel in een `level1URLIncludes`-lijst is een volledig webadres.
+Alle bestanden die er nu in staan, staan in de map `JSON` van deze repository op GitHub,
+maar een bestand kan ook elders staan, bijvoorbeeld op een eigen server van een federatie.
+Een nieuwe club voeg je toe aan het bestand voor het land of de regio van de club,
+zoals `clubsNL16.level1.json` voor een club in afdeling Brabant Oost.
+Hoe dat werkt, staat in
+[de Level 1-handleiding](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes)
+en hieronder bij `level1URLIncludes`.
+Telkens wanneer de app wordt gestart, werkt deze verouderde data op het apparaat bij door deze online bestanden te lezen.
+
+Als je ons de `Level 1`-informatie van een club stuurt, voegen we die graag voor je toe aan het juiste bestand.
 Waar mogelijk zien we de wijziging (en toekomstige updates) echter liever als GitHub-_pull-request_.
 Dat beperkt het werk dat nodig is om veel updates te verwerken, en verkleint de kans op administratieve fouten.
 
-Hetzelfde geldt als je een fotomuseum wilt toevoegen aan het centrale `root.level1.json`-bestand.
+Hetzelfde geldt als je een fotomuseum wilt toevoegen.
 
 <ul><details><Summary>Level 1-voorbeeld (klik om uit te vouwen)</Summary></p>
 
-Hier is een voorbeeld van het formaat van het `root.level1.json`-bestand met slechts één fotoclub en één fotomuseum.
+Hier is een voorbeeld van het formaat van een Level 1-bestand met slechts één fotoclub en één fotomuseum.
 
 ``` json
 {
@@ -709,7 +735,7 @@ Hier is een voorbeeld van het formaat van het `root.level1.json`-bestand met sle
 }
 ```
 
-Het echte `root.level1.json`-bestand bevat veel club- en museumrecords binnen hun respectievelijke secties (afgebakend met `[{},{},{}}]`-syntaxis).
+Een echt Level 1-bestand bevat veel club- of museumrecords binnen hun respectievelijke secties (afgebakend met `[{},{},{}}]`-syntaxis).
 Let op de komma's tussen de array-elementen - het JSON-dataformaat is erg kieskeurig over ontbrekende of extra komma's, 
 omdat JSON-bestanden vaak door software worden gegenereerd in plaats van met de hand.
 Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSON-validators zoals
