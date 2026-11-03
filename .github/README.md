@@ -749,6 +749,25 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
 - `nlSpecific` is a container for fields that are only relevant for clubs in the Netherlands.
   - `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
   - There used to be a `kvkNumber` as well (Chamber of Commerce) but that was removed because it wasn't worth the effort.
+- `badWebsites` is a list of URLs that must never be linked for this club or museum, for example an old domain that a spammer has taken over. A `website` that matches one of them is not stored, whichever file supplies it. The comparison ignores capitalization, `http` versus `https`, a leading `www.` and a trailing `/`.
+- `logbook` keeps a club or museum that may have stopped in its Level 1 file instead of deleting it, together with what was found, who found it and when. Each entry has:
+  - `date`: the day the entry was written, as `YYYY-MM-DD`.
+  - `author`: a role, such as `list maintainer`, `club`, `afdeling contact` or `generator`, or, if appropriate, a person's name. Keep in mind that the file is public.
+  - `text`: in English, saying what was found and how sure we are. It is not currently shown in the app.
+  - optionally `isFormerClub` (or `isFormerMuseum`) set to `true` or `false`: the state after this entry. The last entry that has the key determines whether the club or museum is shown. Without any such entry, it is shown.
+  - New entries go at the bottom: the order of the list is the order that counts, so the software never sorts on `date`. Entries are not deleted afterwards. A club that pauses its activities is not a former club: give it a dated `remark` instead.
+  - `date`, `author` and `text` are required. A Debug build of the app stops on a missing or malformed field, so that it gets fixed, while a released app keeps the entry.
+
+``` json
+"optional": {
+    "website": "https://www.new-site.example.org",
+    "badWebsites": [ "https://www.old-site.example.org" ],
+    "logbook": [
+        { "date": "2026-09-12", "author": "generator", "text": "Website went down: timed out on three runs in a row." },
+        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "isFormerClub": true }
+    ]
+}
+```
 </details></ul></p>
 
 ### Level 2. Adding Members
@@ -863,7 +882,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 
 - `club` has the same structure as a single `club` record in a Level 1 file. It serves to label the `Level2` file so you can tell which club it belongs to.
   - `idPlus` and its 3 fields (`town`, `fullName`, and `nickName`) are all required.
-  - `town` and `fullName` must precisely match the corresponding fields in the club's Level 1 entry.
+  - `town`, `fullName` and `nickName` must precisely match the corresponding fields in the club's Level 1 entry. Otherwise this Level 2 file is ignored.
 - `coordinates` is used to draw the club on the map and to generate localized versions of the names of towns and countries.
   - `coordinates` in the Level 2 file overrule the club's coordinates in the Level 1 file. This allows a club to change the coordinates without any outside help.
   - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Southern hemisphere (e.g., Australia).
@@ -876,9 +895,11 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 
 - **Optional** fields (that are ignored)
     - the `level2URL` field can be included, but its value does _not_ overrule the `level2URL` value in the club's Level 1 entry for security reasons.
+    - `logbook` and `badWebsites` belong in the club's Level 1 entry. A Level 2 file is not allowed to provide them yet ([Data#92](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/92)), so a Debug build of the app stops when it finds them here, and a released app ignores them. To report that the club has stopped or restarted, contact the maintainer of the Level 1 file.
 - **Optional** fields (that are used)
     - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding fields in the club's Level 1 entry if there is no exact match.
       This allows a club to _correct_ the centrally-provided information with club-provided information.
+      The one exception: a `website` that the club's Level 1 entry lists in `badWebsites` is never stored, so that a stale Level 2 file can't accidentally restore a hijacked website.
       Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
     - `maintainerEmail` is who to contact if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
@@ -911,6 +932,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
     - `membershipStartDate` is the date when the member joined the club.
     - `membershipEndDate` is the date when the member left the club. If the member is a current member, it is best to omit this date.
+    - All dates, here and in a Level 1 `logbook`, are written as `YYYY-MM-DD`, such as `2024-01-08`, and must be a valid date. A Debug build of the app stops on any other form, and a released app ignores that date.
     - `expertises` is a list of expertises the photographer is mainly known for.
 The list of strings at `Level 2` is used to define the applicable expertises.
 It doesn't define how they are displayed because multi-language versions of expertises are defined in `Level 0`.
@@ -1167,8 +1189,26 @@ The coordinates are also used to translate `town` names to `localizedTown_` and 
 This works by asking an online mapping service to convert the `coordinates` into a textual address (using the device's language settings).
 So if your device is set to English, you might see "The Hague" and "London", while a Dutch user might see "Den Haag" and "Londen" instead.
 In fact, if your device is set to any language supported by the device (say Japanese or Chinese) 
-and you are looking at a Japanese or Chinese organization, these will be shown localized to the device's language setting.
+and you are looking at a Japanese or Chinese organization, these will be shown localized to the device's language setting.</p>
 
+An `Organization` that may have stopped stays in the database, so that what was previously known about it isn't lost.
+`isFormerOrganization` says whether it is hidden (a stored value, not a JSON key). It is derived from the organization's `logEntries` (see `LogEntry`) each time its Level 1 file is loaded.
+`badWebsites_` holds the URLs that are too "dangerous" to use, as provided in the Level 1 file.
+A `website` that matches one of the `badWebsites_` values is not used by the app. Example: a domain name that is now owned/used by a third party (e.g. a casino).
+
+</details></ul>
+
+#### LogEntry
+
+<ul><details><summary>Details (click to expand)</summary></p>
+
+A `LogEntry` is one entry in an `Organization`'s logbook: one element of the `logbook` list in its Level 1 file.
+It holds a `date`, an `author` (a role such as `list maintainer` or, if appropriate, a person's name) and a `text`.
+Optionally it holds `isFormerOrganization`: whether the organization is former from this entry on.
+In the JSON this is the entry's `isFormerClub` or `isFormerMuseum` key. The two are aliases, so either works on a club or a museum; if an entry has both, the one matching the organization's type wins.
+The last entry that has an `isFormerOrganization` value sets the organization's own `isFormerOrganization`.
+"Last" means the entry's place in the list (`position`), not its date.</p>
+`originalDataSourceLevel` records which level of file the entry was first found in. It is always 1 for now, until Level 2 files can hold a logbook too (Data#92).
 </details></ul>
 
 #### Photographer
