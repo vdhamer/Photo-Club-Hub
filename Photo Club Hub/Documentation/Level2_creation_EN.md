@@ -76,6 +76,8 @@
            - When a member steps down from a role but stays in the club, write `"isSecretary": false` (or whichever role it was).
              Simply removing the line is not enough yet: the app remembers the role it read earlier.
        - `membershipStartDate`. This is currently displayed using Photo Club Hub HTML.
+- Dates, such as `birthday` and `membershipStartDate`, are always written as `YYYY-MM-DD`, for example `2024-01-08` with a leading zero. If a date isn't known, leave the field out.
+- If your club has stopped, restarted or moved to a new website, let whoever maintains your club's Level 1 file know. That is where this is recorded, in the club's `logbook` and `badWebsites`. Your Level 2 file can't hold those (yet).
        - `expertises` indication the main genres per photographer. It is currently an [unfinished feature](https://github.com/vdhamer/Photo-Club-Hub/issues/465), and will be covered in a separate instruction file. You can already start providing this data. Best to stick to the expertises found in [this file](https://github.com/vdhamer/Photo-Club-Hub/issues/465).
 - The `maintainerEmail` field, in the `club` part of the file rather than under a member, says who to contact if something is wrong with the JSON file. Ideally the club member who created it, which may well be whoever looks after the club website.
    - A role-based address like `secretary@yourclub.nl` is better than a personal one where the club has such an address: it keeps working when the club's officers change, and it doesn't publish an individual's address in a public file.

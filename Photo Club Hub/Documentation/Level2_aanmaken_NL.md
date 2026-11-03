@@ -150,6 +150,8 @@ Het `featuredImage` veld levert een klein voorbeeldplaatje op van het oevre van 
            - Als een lid de club verlaat of overlijdt, zet dan `isFormerMember` of `isDeceased` op true en laat de rollen staan.
              De app beschrijft het lid dan bijvoorbeeld als voormalig voorzitter, en telt het lid niet meer mee als huidig bestuurslid.
        - `membershipStartDate`. Dit veld wordt momenteel alleen gebruikt in _Photo Club Hub HTML_ en niet in de iOS app.
+   - Datums, zoals `birthday` en `membershipStartDate`, schrijf je altijd als `JJJJ-MM-DD`, bijvoorbeeld `2024-01-08` met een extra nul. Is een datum niet bekend, laat het veld dan weg.
+   - Is je club gestopt, opnieuw begonnen of overgestapt naar een nieuwe website? Laat het weten aan wie het Level 1-bestand van je club bijhoudt. Daar wordt dit vastgelegd, in het `logbook` en de `badWebsites` van de club. Je Level 2-bestand kan dat nog niet bevatten.
        - `expertises` geven één of twee opvallendste expertisegebieden van de fotograaf aan. Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) over hoe het `expertises` veld het beste te gebruiken.
        - `photographerImage` bevat het adres van een soort pasfoto van de fotograaf. In de kleine "thumbnails" naast de naam van de fotograaf wordt (afhankelijk van instellingen en beschikbaarheid) `photographerImage` of `featuredImage` getoond).
 - Het `maintainerEmail` veld is diegene binnen de club die benaderd kan worden als er iets aan de hand is met het JSON bestand.
