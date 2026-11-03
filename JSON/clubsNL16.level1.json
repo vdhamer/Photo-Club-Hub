@@ -168,6 +168,13 @@
                         "language": "NL",
                         "value": "De club houdt iedere eerste zaterdag van de maand een foto-uitje."
                     }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-03",
+                        "author": "list maintainer",
+                        "text": "Found on 29 Oct 2026: the website shows nothing newer than 2024. Kept as an active club for now."
+                    }
                 ]
             }
         },
@@ -347,6 +354,7 @@
                 "longitude": 5.3075
             },
             "optional": {
+                "badWebsites": [ "https://argusfoto.nl" ],
                 "level2URL": "https://www.example.com/fgArgus.level2.json",
                 "remark": [
                     {
@@ -356,6 +364,13 @@
                     {
                         "language": "NL",
                         "value": "De groep heeft 7 leden (met de ambitie om iets te groeien). Voor fotobesprekingen komt de groep en een mentor bijeen in een van de huiskamers."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-03",
+                        "author": "list maintainer",
+                        "text": "Found on 29 Oct 2026: argusfoto.nl was taken over by a domain dealer on 13 Mar 2026 and shows a For Sale page, so it was removed as the club's website. No newer website found. The club itself stays listed."
                     }
                 ]
             }
@@ -564,6 +579,7 @@
             },
             "optional": {
                 "website": "https://collectief-de-verbeelding.nl",
+                "badWebsites": [ "https://collectief-deverbeelding.nl" ],
                 "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
                 "remark": [
                     {
@@ -573,6 +589,13 @@
                     {
                         "language": "NL",
                         "value": "Leden werken autonoom, maar zoeken samenwerking rond gezamenlijke thema's, vaak filosofisch, maatschappelijk of existentieel."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-03",
+                        "author": "list maintainer",
+                        "text": "Found on 16 Oct 2026: the old domain collectief-deverbeelding.nl (no hyphen between de and verbeelding) was re-registered by a third party in July 2026 and now carries gambling spam. The collective is active on collectief-de-verbeelding.nl."
                     }
                 ]
             }
@@ -1725,6 +1748,13 @@
                     {
                         "language": "NL",
                         "value": "De nadruk van de club is natuur en landschappen. Het maximale ledental is 25."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-03",
+                        "author": "list maintainer",
+                        "text": "Found on 29 Oct 2026: www.fgdevriendschap.com doesn't load. The domain is registered until 2027 but has no name servers, so the URL is kept for now."
                     }
                 ]
             }

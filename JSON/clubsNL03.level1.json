@@ -104,6 +104,7 @@
             },
             "optional": {
                 "website": "https://www.fcbo.nl",
+                "badWebsites": [ "https://fotoclubborgerodoorn.nl" ],
                 "level2URL": "http://www.example.com/fcBorgerOdoorn.level2.json",
                 "remark": [
                     {
@@ -113,6 +114,13 @@
                     {
                         "language": "NL",
                         "value": "Begonnen in 2009 door enkele natuurfotografen, nu een algemene club met thema’s per seizoen."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-03",
+                        "author": "list maintainer",
+                        "text": "Found on 14 Oct 2026: the old domain fotoclubborgerodoorn.nl returns errors but is still linked from other clubs' sites. The club is active on fcbo.nl. The old domain is listed in case someone else takes it over."
                     }
                 ]
             }
@@ -156,6 +164,7 @@
             },
             "optional": {
                 "website": "https://www.fotoclub-dalfsen.nl",
+                "badWebsites": [ "https://fotoclubdalfsen.nl" ],
                 "level2URL": "https://www.example.com/fcDalfsen.level2.json",
                 "remark": [
                     {
@@ -165,6 +174,13 @@
                     {
                         "language": "NL",
                         "value": "Elk seizoen twee gelijktijdige fotokettingen vanuit eenzelfde startfoto: ieder lid ontvangt alleen de voorgaande foto."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-03",
+                        "author": "list maintainer",
+                        "text": "Found on 14 Oct 2026: the old domain fotoclubdalfsen.nl now shows a casino site, and search engines still return it as the club's site. The club is active on fotoclub-dalfsen.nl."
                     }
                 ]
             }

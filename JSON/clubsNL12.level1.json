@@ -74,6 +74,7 @@
             },
             "optional": {
                 "website": "https://nfd-fotografie.club",
+                "badWebsites": [ "https://nfd-fotografie.nl" ],
                 "level2URL": "https://www.example.com/nfDrechtsteden.level2.json",
                 "remark": [
                     {
@@ -83,6 +84,13 @@
                     {
                         "language": "NL",
                         "value": "Voor natuurfotografen in de Drechtsteden."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-03",
+                        "author": "list maintainer",
+                        "text": "Found by 15 Oct 2026: the old domain nfd-fotografie.nl now shows a casino site. The club is active on nfd-fotografie.club."
                     }
                 ]
             }
