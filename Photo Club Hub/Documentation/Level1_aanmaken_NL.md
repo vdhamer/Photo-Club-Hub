@@ -96,6 +96,33 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 10. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/hub/nl/clubs](https://www.fcDeGender.nl/hub/nl/clubs).
 
+## Als een club mogelijk gestopt is: het logboek
+
+Een club of museum dat gestopt lijkt te zijn, moet niet uit het Level 1-bestand verwijderd worden. Het blijft in het bestand staan, met een `logbook`: een lijst korte regels met wat er gevonden is, door wie en wanneer.
+Wie later naar de club kijkt, begint met deze verzameling aantekeningen.
+
+Hier is een (denkbeeldig) voorbeeld:
+
+``` json
+"optional": {
+    "website": "https://www.new-site.example.org",
+    "badWebsites": [ "https://www.old-site.example.org" ],
+    "logbook": [
+        { "date": "2026-09-12", "author": "generator", "text": "Website went down: timed out on three attempts in a row." },
+        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "isFormerClub": true }
+    ]
+}
+```
+
+- Voeg een nieuwe regel **onderaan** de lijst toe. Alleen de volgorde van de lijst telt, niet de datums. Pas eerdere regels niet aan en verwijder ze niet: schrijf liever een nieuwe regel, ook als je jezelf wilt verbeteren.
+- Elke regel heeft nodig:
+   - `date`: de dag waarop je de regel schrijft, als `JJJJ-MM-DD`.
+   - `author`: je rol, bijvoorbeeld `list maintainer`, `club` of `afdeling contact` (deze rollen blijven in het Engels), of als dat gepast is je naam. Bedenk wel dat het bestand openbaar is.
+   - `text`: in het Engels, wat je gevonden hebt en hoe zeker je ervan bent. Laat nieuws schrijf je bijvoorbeeld als "Learned today that the club stopped in 2025".
+- Om de club te verbergen, voeg je `"isFormerClub": true` toe aan de regel die uitlegt waarom. Om de club weer te tonen, voeg je later een regel toe met `"isFormerClub": false`. De laatste regel met deze sleutel beslist. Voor een museum schrijf je `isFormerMuseum`.
+- Een club die zijn activiteiten tijdelijk stillegt (zo'n voorbeeld zijn we tegengekomen), is geen voormalige club. Geef zo'n club liever een gedateerde `remark`, en laat hem zichtbaar.
+- `badWebsites` bevat oude webadressen die niet meer als website van de club gebruikt mogen worden, bijvoorbeeld een adres dat een spammer heeft overgenomen. Zet de huidige, geldige website van de club, indien die bekend is, in `website`.
+
 ## Hoe zit het met `level1URLIncludes`?
 
 Dit hoofdstuk is vooral relevant voor bestanden met "onhandig" veel clubs: 
@@ -232,6 +259,7 @@ of [dit schematische](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/c
          - `maintainerEmail` van de Level 2 bestand. Omdat dezelfde gegevens ook in het Level 2 bestand van de club staan, is invullen hier niet belangrijk.
          - `nlSpecific` bevat informatie die alleen betekenis heeft voor Nederlandse clubs
             - `fotobondNumber` is het Fotobondnummer (b.v. 1641) van een club die aangesloten is bij de Fotobond. Bij Nederlandse clubs die niet (meer) aangesloten zijn bij de Fotobond dient men de `fotobondNumber` regel weg te laten. De app kan hierdoor weten of een club momenteel lid is van de Fotobond. 
+         - `badWebsites` en `logbook` leggen adressen vast die niet gebruikt mogen worden voor het veld `website`. Voorbeeld: een club die mogelijk gestopt is. Zie [het logboek](#als-een-club-mogelijk-gestopt-is-het-logboek).
    - `museums` bevat een lijst met musea met een opmerkelijke fotografie collectie.
 Voor Nederland worden fotoclubs en fotomusea in gescheiden bestanden opgeslagen,
 en zal men dus geen musea aantreffen in bestanden over Nederlandse fotoclubs.
