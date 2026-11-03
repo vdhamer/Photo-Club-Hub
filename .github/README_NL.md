@@ -755,6 +755,25 @@ Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSO
 - `nlSpecific` is een container voor velden die alleen relevant zijn voor clubs in Nederland.
   - `fotobondNumber` is een ID-nummer dat wordt toegekend door de Fotobond (de Nederlandse federatie van fotoclubs).
   - Er was ook een `kvkNumber` (Kamer van Koophandel), maar dat is verwijderd omdat het de moeite niet waard was.
+- `badWebsites` is een lijst met URL's waar nooit naar gelinkt mag worden voor deze club of dit museum, bijvoorbeeld een oud domein dat een spammer heeft overgenomen. Een `website` die met een ervan overeenkomt, wordt niet opgeslagen, uit welk bestand die ook komt. Bij de vergelijking tellen hoofdletters, `http` of `https`, een `www.` vooraan en een `/` achteraan niet mee.
+- `logbook` houdt een club of museum dat mogelijk gestopt is in het Level 1-bestand, in plaats van het te verwijderen, samen met wat er gevonden is, door wie en wanneer. Elke regel in het logboek heeft:
+  - `date`: de dag waarop de regel geschreven is, als `JJJJ-MM-DD`.
+  - `author`: een rol, zoals `list maintainer`, `club`, `afdeling contact` of `generator`, of als dat gepast is de naam van een persoon. Bedenk wel dat het bestand openbaar is.
+  - `text`: in het Engels, met wat er gevonden is en hoe zeker dat is. Deze tekst wordt momenteel niet in de app getoond.
+  - optioneel `isFormerClub` (of `isFormerMuseum`) met de waarde `true` of `false`: de toestand na deze regel. De laatste regel met die sleutel bepaalt of de club of het museum getoond wordt. Zonder zo'n regel wordt het getoond.
+  - Nieuwe regels komen onderaan: de volgorde van de lijst is wat telt, dus de software sorteert nooit op `date`. Regels worden achteraf niet verwijderd. Een club die zijn activiteiten tijdelijk stillegt, is geen voormalige club: geef die liever een gedateerde `remark`.
+  - `date`, `author` en `text` zijn verplicht. Een Debug-versie van de app stopt bij een ontbrekend of onjuist veld, zodat het verbeterd wordt. Een uitgebrachte app houdt de regel gewoon.
+
+``` json
+"optional": {
+    "website": "https://www.new-site.example.org",
+    "badWebsites": [ "https://www.old-site.example.org" ],
+    "logbook": [
+        { "date": "2026-09-12", "author": "generator", "text": "Website went down: timed out on three runs in a row." },
+        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "isFormerClub": true }
+    ]
+}
+```
 </details></ul></p>
 
 ### Level 2. Leden toevoegen
@@ -869,7 +888,7 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
 
 - `club` heeft dezelfde structuur als één `club`-record uit een Level 1 bestand. Het dient als label van het `Level 2`-bestand, zodat je kunt zien bij welke club het hoort.
   - `idPlus` en de 3 velden ervan (`town`, `fullName` en `nickName`) zijn allemaal verplicht.
-  - `town` en `fullName` moeten exact overeenkomen met de corresponderende velden in de Level 1 gegevens van de club.
+  - `town`, `fullName` en `nickName` moeten exact overeenkomen met de corresponderende velden in de Level 1 gegevens van de club. Anders wordt dit Level 2-bestand genegeerd.
 - `coordinates` wordt gebruikt om de club op de kaart te tekenen en om gelokaliseerde versies van de namen van plaatsen en landen te genereren.
   - `coordinates` in het Level 2-bestand hebben voorrang op de coördinaten van de club in het Level 1-bestand. Zo kan een club de coördinaten wijzigen zonder hulp van buitenaf.
   - `latitude` moet in het bereik [-90.0, +90.0] liggen, waarbij negatieve waarden worden gebruikt voor het zuidelijk halfrond (bijvoorbeeld Australië).
@@ -882,9 +901,11 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
 
 - **Optionele** velden (die worden genegeerd)
     - het veld `level2URL` mag worden opgenomen, maar de waarde ervan heeft om veiligheidsredenen _geen_ voorrang op de `level2URL`-waarde in de Level 1 gegevens van de club.
+    - `logbook` en `badWebsites` horen in de Level 1 gegevens van de club. Een Level 2-bestand mag ze nog niet aanleveren ([Data#92](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/92)), dus een Debug-versie van de app stopt als ze hier staan, en een uitgebrachte app negeert ze. Wil een club laten weten dat ze gestopt of opnieuw begonnen is, neem dan contact op met de beheerder van het Level 1-bestand.
 - **Optionele** velden (die worden gebruikt)
     - de velden `wikipedia`, `fotobondNumber`, `coordinates`, `website` en `localizedRemarks` van een club hebben zo nodig voorrang op de corresponderende velden in de Level 1 gegevens van de club.
       Zo kan een club de centraal aangeleverde informatie _corrigeren_ met door de club aangeleverde informatie.
+      De enige uitzondering: een `website` die in de Level 1 gegevens van de club bij `badWebsites` staat, wordt nooit opgeslagen. Zo kan een verouderd Level 2-bestand niet per ongeluk een gekaapte website terugzetten.
       Niet al deze optionele velden staan in het voorbeeld: zie de Level 1-documentatie voor meer details.
     - `maintainerEmail` is de contactpersoon bij problemen met dit bestand. Dat kan de beheerder of secretaris van de club zijn, of een heel ander lid.</p>
     - `givenName`, `infixName` en `familyName` worden gebruikt om de fotograaf uniek te identificeren.
@@ -917,6 +938,7 @@ Hier is een voorbeeld van het formaat van een `Level 2`-lijst voor een fotoclub.
     - `level3URL` is een URL naar een bestand met de geselecteerde portfoliobeelden die dit lid heeft gemaakt in de context van een bepaalde fotoclub.
     - `membershipStartDate` is de datum waarop het lid bij de club kwam.
     - `membershipEndDate` is de datum waarop het lid de club verliet. Voor een huidig lid kan deze datum het best worden weggelaten.
+    - Alle datums, hier en in een Level 1 `logbook`, worden geschreven als `JJJJ-MM-DD`, zoals `2024-01-08`, en moeten een geldige datum zijn. Een Debug-versie van de app stopt bij elke andere schrijfwijze, en een uitgebrachte app negeert die datum.
     - `expertises` is een lijst van expertises waar de fotograaf vooral om bekendstaat.
 De lijst van teksten op `Level 2` bepaalt welke expertises van toepassing zijn.
 Hij bepaalt niet hoe ze worden weergegeven, omdat meertalige versies van expertises in `Level 0` worden gedefinieerd.
@@ -1172,8 +1194,26 @@ De coördinaten worden ook gebruikt om `town`-namen te vertalen naar `localizedT
 Dit werkt door een online kaartdienst te vragen de `coordinates` om te zetten in een tekstueel adres (met de taalinstellingen van het apparaat).
 Staat je apparaat op Engels, dan zie je mogelijk "The Hague" en "London", terwijl een Nederlandse gebruiker "Den Haag" en "Londen" ziet.
 Sterker nog: als je apparaat op een door het apparaat ondersteunde taal staat (zeg Japans of Chinees) 
-en je kijkt naar een Japanse of Chinese organisatie, dan worden deze gelokaliseerd getoond volgens de taalinstelling van het apparaat.
+en je kijkt naar een Japanse of Chinese organisatie, dan worden deze gelokaliseerd getoond volgens de taalinstelling van het apparaat.</p>
 
+Een `Organization` die mogelijk gestopt is, blijft in de database, zodat wat er eerder over bekend was niet verloren gaat.
+`isFormerOrganization` geeft aan of die verborgen wordt (een opgeslagen waarde, geen JSON-sleutel). Dit wordt afgeleid uit de `logEntries` van de organisatie (zie `LogEntry`), telkens als het Level 1-bestand geladen wordt.
+`badWebsites_` bevat de URL's die te "gevaarlijk" zijn om te gebruiken, zoals ze in het Level 1-bestand staan.
+Een `website` die met een van de `badWebsites_`-waarden overeenkomt, wordt niet door de app gebruikt. Voorbeeld: een domeinnaam die nu in handen is van, of gebruikt wordt door, een derde partij (bijvoorbeeld een casino).
+
+</details></ul>
+
+#### LogEntry
+
+<ul><details><summary>Details (klik om uit te vouwen)</summary></p>
+
+Een `LogEntry` is één regel uit het logboek van een `Organization`: één element van de `logbook`-lijst in het Level 1-bestand.
+Het bevat een `date`, een `author` (een rol zoals `list maintainer` of, als dat gepast is, de naam van een persoon) en een `text`.
+Optioneel bevat het `isFormerOrganization`: of de organisatie vanaf deze regel een voormalige is.
+In de JSON is dit de sleutel `isFormerClub` of `isFormerMuseum` van de regel. De twee zijn aliassen, dus beide werken bij een club of een museum; heeft een regel ze allebei, dan wint de sleutel die bij het soort organisatie past.
+De laatste regel met een `isFormerOrganization`-waarde bepaalt de `isFormerOrganization` van de organisatie zelf.
+"Laatste" betekent de plaats van de regel in de lijst (`position`), niet de datum.</p>
+`originalDataSourceLevel` legt vast in welk level bestand de regel voor het eerst gevonden is. Dat is voorlopig altijd 1, totdat ook Level 2-bestanden een logboek kunnen bevatten (Data#92).
 </details></ul>
 
 #### Photographer
