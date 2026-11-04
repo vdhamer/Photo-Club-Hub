@@ -38,6 +38,32 @@
 
         {
             "idPlus": {
+                "town": "Enschede",
+                "fullName": "Fotoclub 't Bruggert",
+                "nickName": "fcBruggert"
+            },
+            "coordinates": {
+                "latitude": 52.21625,
+                "longitude": 6.85364
+            },
+            "optional": {
+                "website": "https://fotoclub-bruggert.weebly.com",
+                "level2URL": "https://www.example.com/fcBruggert.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Elects a yearly “jaarfoto” (photo of the year) and organizes outings and workshops on themes such as macro and evening photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Kiest elk jaar een “jaarfoto” en organiseert uitstapjes en workshops rond thema's als macro- en avondfotografie."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Haarlo",
                 "fullName": "Fotoclub Berkelland",
                 "nickName": "fcBerkelland"

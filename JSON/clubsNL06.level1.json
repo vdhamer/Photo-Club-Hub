@@ -168,6 +168,39 @@
 
         {
             "idPlus": {
+                "town": "Brummen",
+                "fullName": "Fotoclub IJsselstroom",
+                "nickName": "fcIJsselstroom"
+            },
+            "coordinates": {
+                "latitude": 52.09005,
+                "longitude": 6.15746
+            },
+            "optional": {
+                "badWebsites": [ "https://fotoclubijsselstroom.nl" ],
+                "level2URL": "https://www.example.com/fcIJsselstroom.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members get assignments, show each other the results and sometimes go on group photo excursions."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden krijgen opdrachten, laten elkaar de resultaten zien en gaan soms samen op fotoexcursie."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "The old domain fotoclubijsselstroom.nl no longer exists. Local news of 1 Sep 2026 says the club evenings have restarted. No new website was found; the club has a Facebook group with little activity, https://www.facebook.com/groups/1750720962383389/. The old domain is listed in case somebody else acquires it."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Buren",
                 "fullName": "Fotocollectief Natuurmoment",
                 "nickName": "natuurmoment"
@@ -388,6 +421,21 @@
 
         {
             "idPlus": {
+                "town": "Elst",
+                "fullName": "Fotoclub Meinerswijk",
+                "nickName": "fcMeinerswijk"
+            },
+            "coordinates": {
+                "latitude": 51.91731,
+                "longitude": 5.85614
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcMeinerswijk.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Gaanderen",
                 "fullName": "Fotoclub De Trefkuul",
                 "nickName": "fcTrefkuul"
@@ -412,6 +460,82 @@
                 "nlSpecific": {
                     "fotobondNumber": 603
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Geldermalsen",
+                "fullName": "Beeldgenootschap Rivierenland",
+                "nickName": "bgRivierenland"
+            },
+            "coordinates": {
+                "latitude": 51.87326,
+                "longitude": 5.28956
+            },
+            "optional": {
+                "website": "https://bgrivierenland.nl",
+                "level2URL": "https://www.example.com/bgRivierenland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A collective of photographers who build portfolios together and also run a free, theme-based open photo club evening."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een collectief van fotografen dat samen portfolio's opbouwt en ook een gratis open fotoclubavond rond een thema organiseert."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Gendringen",
+                "fullName": "Fotogroep Gendringen",
+                "nickName": "fgGendringen"
+            },
+            "coordinates": {
+                "latitude": 51.87221,
+                "longitude": 6.37501
+            },
+            "optional": {
+                "website": "https://www.fotogroepgendringen.nl",
+                "badWebsites": [ "https://fotogroepgendringen.magix.net" ],
+                "level2URL": "https://www.example.com/fgGendringen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club has shared assignments, recently “Glass” and “Age”, and publishes the results on the club website."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden fotograferen volgens gezamenlijke opdrachten, recent “Glas” en “Ouderdom”, en tonen de resultaten op de clubsite."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "Found on 3 Nov 2026: the old site fotogroepgendringen.magix.net no longer exists. The club is active on fotogroepgendringen.nl (season 2026-2027 under way)."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Huissen",
+                "fullName": "Fotoclub Zilvercam",
+                "nickName": "fcZilvercam"
+            },
+            "coordinates": {
+                "latitude": 51.94498,
+                "longitude": 5.92750
+            },
+            "optional": {
+                "website": "https://zilvercam.nl",
+                "level2URL": "https://www.example.com/fcZilvercam.level2.json"
             }
         },
 
@@ -580,6 +704,31 @@
         {
             "idPlus": {
                 "town": "Nijmegen",
+                "fullName": "Fotogroep Nijmegen Noord",
+                "nickName": "fgNijmegenNoord"
+            },
+            "coordinates": {
+                "latitude": 51.87742,
+                "longitude": 5.84353
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fgNijmegenNoord.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A mixed group of beginners and experienced photographers. With short member presentations, working in pairs and a few outings a year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gemengde groep van beginners en ervaren fotografen met korte presentaties, werken in tweetallen en een paar uitstapjes per jaar."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nijmegen",
                 "fullName": "Vereniging Natuurfotografen Nijmegen",
                 "nickName": "vnfNijmegen"
             },
@@ -598,6 +747,39 @@
                     {
                         "language": "NL",
                         "value": "Exposeert geregeld in het kerkje van Persingen, midden in de Ooijpolder."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ochten",
+                "fullName": "Fotoclub Ochten",
+                "nickName": "fcOchten"
+            },
+            "coordinates": {
+                "latitude": 51.91030,
+                "longitude": 5.56755
+            },
+            "optional": {
+                "badWebsites": [ "https://fotoclubochten.nl" ],
+                "level2URL": "https://www.example.com/fcOchten.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members share photos made for a monthly theme and discuss each other's work; beginners and advanced photographers are welcome."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden delen foto's bij een maandthema en bespreken elkaars werk; zowel beginners als gevorderden zijn welkom."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "Found on 3 Nov 2026: the old domain fotoclubochten.nl no longer exists, although municipal news of 12 Jan 2026 still named it. The club is active (new members sought in Jan 2026) but no working website was found. The old domain is listed in case somebody else acquires it."
                     }
                 ]
             }
@@ -629,6 +811,39 @@
                 "nlSpecific": {
                     "fotobondNumber": 639
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Otterlo",
+                "fullName": "Fotoclub Lucky Shot Otterlo",
+                "nickName": "fcLuckyShot"
+            },
+            "coordinates": {
+                "latitude": 52.10103,
+                "longitude": 5.77471
+            },
+            "optional": {
+                "badWebsites": [ "https://fotoclubluckyshototterlo.nl" ],
+                "level2URL": "https://www.example.com/fcLuckyShot.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Besides the monthly club evening, the members go out together once a month to photograph; all skill levels are welcome."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Naast de maandelijkse clubavond gaan de leden een keer per maand samen fotograferen; alle niveaus zijn welkom."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "Found on 3 Nov 2026: the old domain fotoclubluckyshototterlo.nl no longer exists. The club is still listed in the Otterlo village newsletter of May 2026. No new website was found. The old domain is listed in case somebody else acquires it."
+                    }
+                ]
             }
         },
 
@@ -679,6 +894,32 @@
                     {
                         "language": "NL",
                         "value": "Een activiteit van Wijkvereniging Passewaaij, opgericht in 2022."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Varsseveld",
+                "fullName": "Fotokring Oost Gelre",
+                "nickName": "fkOostGelre"
+            },
+            "coordinates": {
+                "latitude": 51.94542,
+                "longitude": 6.45720
+            },
+            "optional": {
+                "website": "https://www.fkog.net",
+                "level2URL": "https://www.example.com/fkOostGelre.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Does documentary projects, such as photographing the collection of a farm museum and an exhibition about veterans."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Doet documentaire projecten, zoals het fotograferen van de collectie van een boerderijmuseum en een expositie over veteranen."
                     }
                 ]
             }

@@ -40,6 +40,9 @@ Corrections from the same dry run: Fotogroep Argus's website removed (its domain
 * `clubsNL16.level1.json`
 The remark of Foto-videoclub DAF now says that, according to its website, its activities are temporarily on hold. The club stays listed. Mirrored identically in the Data package's bundled copy.
 
+* `clubsNL05`, `06`
+10 independent clubs whose activity couldn't be confirmed when afdeling 06 was filled, now confirmed and added ([vdhamer/Photo-Club-Hub-Data#94](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/94)): Fotoclub IJsselstroom (Brummen), Fotoclub Meinerswijk (Elst), Fotogroep Gendringen, Beeldgenootschap Rivierenland (Geldermalsen), Fotoclub Zilvercam (Huissen), Fotogroep Nijmegen Noord, Fotoclub Ochten, Fotoclub Lucky Shot Otterlo and Fotokring Oost Gelre (Varsseveld) in NL06, and Fotoclub 't Bruggert (Enschede) in NL05.
+
 STRUCTURAL
 
 * Tested with macOS 27.2 and Xcode 27.2 (27B52)
