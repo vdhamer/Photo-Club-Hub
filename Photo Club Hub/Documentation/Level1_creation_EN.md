@@ -31,8 +31,20 @@ Separate instructions exist for adding lists of _club members_ ("Level 2" JSON).
     > As an alternative you can use a bare-bones editor such as [Windows NotePad](https://en.wikipedia.org/wiki/Notepad), [NotePad++](https://en.wikipedia.org/wiki/Notepad%2B%2B) or [Sublime Text](https://en.wikipedia.org/wiki/Sublime_Text).
     Avoid using word processors like Microsoft Word or Apple Pages. These use much fancier proprietary file formats (.docx and .pages) that cannot be read by these apps.
 
-    - For the short name, `nickName`, avoid spaces and puctuation in the nickname: a nickname is used in Level 2 file names and in web adresses. So a nickname of "Photo Club Twinkle" will give problems down the road.
-    In the Netherlands we abbreviate common prefixes like "Fotoclub" (fc) and "Fotogroep" (fg) because most club names contain either. You may want to do something similar for other languages.
+    - For the short name, `nickName`, avoid spaces and punctuation in the nickname: a nickname is used in Level 2 file names and in web addresses. So a nickname of "Photo Club Twinkle" will give problems down the road.
+    In the Netherlands we abbreviate the word a club name starts with, because most names start with one of these:
+
+        | Prefix | Club name starts with | Example |
+        |---|---|---|
+        | `fc` | Fotoclub, and also a photo collective | `fcDenDungen` |
+        | `fg` | Fotogroep | `fgWaalre` |
+        | `fk` | Fotokring | `fkHeemskerk` |
+        | `fwg` | Fotowerkgroep | `fwgKiekNauw` |
+        | `afc` | Amateur Fotoclub | `afcReusel` |
+        | `afv` | AFV: Amateur Fotografen Vereniging | `afvVlaardingen` |
+        | `afv` | AFV: Algemene Foto Vereniging | `afvSchagen` |
+
+    Whether an article such as "De" or "Het" stays after the prefix is a judgment call per club: keep it where it helps (`afvDePollen`), drop it where it is noise (`fcSluiter` for "Fotoclub De Sluiter"). If none of the prefixes fits, use the club's own abbreviation (`AFO`, `OFKC`). You may want to do something similar for other languages.
     A nickname must be unique across all files. If another club already has the nickname you want, the club that was listed first keeps it, and yours gets its town added: `fcPositievenBeuningen` next to `fcPositieven`.
     - For `town`, use the place name as it is used locally, in the local language: `Köln` (not Cologne), `Hurdegaryp` (Frisian, not Hardegarijp), `Den Bosch`. Latin letters only, so `Tokyo`. The app shows the town translated into the user's language, computed from the coordinates. Together with `fullName` the town identifies the club, so don't change it lightly.
 
@@ -248,7 +260,7 @@ or [this schematic one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON
       - `level1URLIncludes` can contain a list of [subordinate](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_creation_EN.md#what-about-level1urlincludes) Level 1 files to be read.
       - `maintainerEmail` is the contact person for problems with this file.
    - `clubs` contains a list of photo clubs. This is merged with any clubs found via `level1URLIncludes`. The individual members within a division are treated as an extra club by the app (with `fotobondNumber` 1600 for e.g. division 16).
-      - `idPlus` is the identification of a club. `town` and `fullName` together must be unique. `nickName` must also be unique and preferably have a format such as "fcMyClub" (Fotoclub) or "fgMyClub" (Fotogroep) for the Netherlands.
+      - `idPlus` is the identification of a club. `town` and `fullName` together must be unique. `nickName` must also be unique and preferably have a format such as "fcMyClub" (Fotoclub) or "fgMyClub" (Fotogroep) for the Netherlands; step 4 lists all prefixes.
       - `coordinates` are the longitude and latitude of where the club meets or exhibits (format: 51.53557 resp. 5.62722, but less precision is allowed too - more makes no sense).
       - `optional`
          - `website` contains the address of an existing website of the club.

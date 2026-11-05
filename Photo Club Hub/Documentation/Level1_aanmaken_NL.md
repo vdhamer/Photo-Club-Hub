@@ -30,7 +30,19 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
     Microsoft Word of Apple Pages zijn ongeschikt omdat ze van nature een eigen bestandsformaat gebruiken (.docx en .pages).
 
-    - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals `fcDenDungen` (voor "Fotoclub Den Dungen") of `fgWaalre` (voor "Fotogroep Waalre"). 
+    - Voor de verkorte naam, `nickName`, gebruiken we een voorvoegsel voor het woord waarmee de clubnaam begint:
+
+        | Voorvoegsel | Clubnaam begint met | Voorbeeld |
+        |---|---|---|
+        | `fc` | Fotoclub, en ook een fotocollectief | `fcDenDungen` |
+        | `fg` | Fotogroep | `fgWaalre` |
+        | `fk` | Fotokring | `fkHeemskerk` |
+        | `fwg` | Fotowerkgroep | `fwgKiekNauw` |
+        | `afc` | Amateur Fotoclub | `afcReusel` |
+        | `afv` | AFV: Amateur Fotografen Vereniging | `afvVlaardingen` |
+        | `afv` | AFV: Algemene Foto Vereniging | `afvSchagen` |
+
+    Of een lidwoord zoals "De" of "Het" na het voorvoegsel blijft staan, beslis je per club: houd het als het helpt (`afvDePollen`), laat het weg als het ruis is (`fcSluiter` voor "Fotoclub De Sluiter"). Past geen van de voorvoegsels, gebruik dan de eigen afkorting van de club (`AFO`, `OFKC`).
     Deze nickname wordt vooral gebruikt voor Level 2 bestandsnamen en voor webadressen.
     Een nickname moet uniek zijn over alle bestanden. Heeft een andere club de gewenste nickname al, dan houdt de club die er het eerst stond hem, en krijgt de jouwe de plaatsnaam erbij: `fcPositievenBeuningen` naast `fcPositieven`.
     - Gebruik voor `town` de plaatsnaam zoals die ter plekke gebruikt wordt, in de lokale taal: `Köln` (niet Keulen), `Hurdegaryp` (Fries, niet Hardegarijp), `Den Bosch`. Alleen in Latijnse letters, dus `Tokyo`. De app toont de plaatsnaam vertaald in de taal van de gebruiker, berekend uit de coördinaten. Samen met `fullName` identificeert de plaatsnaam de club, dus verander hem niet zomaar.
@@ -249,7 +261,7 @@ of [dit schematische](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/c
       - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
       - `maintainerEmail` is de contactpersoon voor problemen met dit bestand.
    - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden als extra club behandeld door de app (met `fotobondNumber` 1600 voor b.v. afdeling 16).
-      - `idPlus` is de identificatie van een club. `town` en `fullName` moeten samen uniek zijn. `nickName` moet ook uniek zijn en liefst voor Nederland een formaat zoals "fcMijnClub" (Fotoclub) of "fgMijnClub" (Fotogroep) hebben.
+      - `idPlus` is de identificatie van een club. `town` en `fullName` moeten samen uniek zijn. `nickName` moet ook uniek zijn en liefst voor Nederland een formaat zoals "fcMijnClub" (Fotoclub) of "fgMijnClub" (Fotogroep) hebben; stap 3 noemt alle voorvoegsels.
       - `coordinates` zijn lengtegraad en breedtegraad van waar de club bijeenkomt of exposeert (formaat: 51.53557 resp 5.62722 maar minder precisie mag ook - meer heeft geen zin).
       - `optional`
          - `website` bevat het adres van een bestaande website van de club.
