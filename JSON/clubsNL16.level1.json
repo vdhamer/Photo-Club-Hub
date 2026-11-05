@@ -813,6 +813,13 @@
                         "language": "NL",
                         "value": "De club komt bijeen in Gemeenschapshuis De Uitwijk, Eindhoven. De jaarlijkse expo valt in maart."
                     }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-05",
+                        "author": "list maintainer",
+                        "text": "The live Fotobond roster lists this club as number 1626 (checked 2026-11-05). We were told in October 2026 that the club is no longer a Fotobond member, but could not confirm this yet, so the number is left out for now."
+                    }
                 ]
             }
         },
@@ -998,9 +1005,18 @@
                         "value": "De club is in 1980 opgericht door de dorpsfotograaf/schilder Piet Kuppens als een soort fotografieschool. Het woord Expressie in de clubnaam stamt uit die periode."
                     }
                 ],
-                "nlSpecific": {
-                    "fotobondNumber": 1632
-                }
+                "logbook": [
+                    {
+                        "date": "2026-11-05",
+                        "author": "list maintainer",
+                        "text": "Fotobond number 1632 is not on the live Fotobond roster (checked 2026-11-05) nor on a copy from September 2026, and the club's website does not mention the Fotobond. The number is kept until a club contact confirms whether the club is still a member."
+                    },
+                    {
+                        "date": "2026-11-05",
+                        "author": "list maintainer",
+                        "text": "On 5 Nov 2026 a club contact confirmed that the club left the Fotobond about two years ago, so the number 1632 was removed."
+                    }
+                ]
             }
         },
 
