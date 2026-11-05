@@ -34,6 +34,32 @@
 
         {
             "idPlus": {
+                "town": "Kontich",
+                "fullName": "Fotoclub In de lens",
+                "nickName": "fcInDeLens"
+            },
+            "coordinates": {
+                "latitude": 51.13474,
+                "longitude": 4.44697
+            },
+            "optional": {
+                "website": "https://indelens.be/",
+                "level2URL": "https://www.example.com/fcInDeLens.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A section of Raak Martinus Kontich, alongside its cooking, card and wine clubs; members also photograph cultural events in the region."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een onderafdeling van Raak Martinus Kontich, naast onder meer een kook-, kaart- en wijnclub; leden fotograferen ook socio-culturele activiteiten in de regio."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Schoten",
                 "fullName": "Fauna Flora Fotoclub Schoten",
                 "nickName": "FFFS"
