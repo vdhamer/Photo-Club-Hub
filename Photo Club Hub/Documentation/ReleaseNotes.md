@@ -49,6 +49,9 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 * `clubsNL01`, `02`, `03`, `04`, `05`, `08`, `10`, `11`, `12`, `14`, `15`, `17`
 38 independent clubs found by a web search of 13 afdelingen in the same run (all except 03, 06 and 16, which were searched earlier): 4 in NL01, 4 in NL02, 2 in NL03, 4 in NL04, 1 in NL05, 3 in NL08, 1 in NL10, 3 in NL11, 1 in NL12, 9 in NL14, 3 in NL15 and 3 in NL17. Mirrored identically in the Data package's bundled copy.
 
+* `clubsNL01`, `02`, `06`, `08`, `10`, `14`, `15`
+7 more independent clubs from a follow-up check of that search's unclear finds: Fotoblok050 (Groningen), Fotoclub 8-88 (Stiens), Werkgroep Fotografie IVN Ede, De ZesFotografen (Oosthuizen), De Online Fotoclub (Monnickendam), Sasse Fotokring (Sas van Gent) and Fotowerkgroep KNNV Tilburg. Mirrored identically in the Data package's bundled copy.
+
 STRUCTURAL
 
 * Tested with macOS 27.2 and Xcode 27.2 (27B52), Xcode 27.3 beta 1 (27C5020n), iOS 27.3 beta (24C5037i)
