@@ -217,6 +217,39 @@
 
         {
             "idPlus": {
+                "town": "Sas van Gent",
+                "fullName": "Sasse Fotokring",
+                "nickName": "fkSasse"
+            },
+            "coordinates": {
+                "latitude": 51.22778,
+                "longitude": 3.79994
+            },
+            "optional": {
+                "badWebsites": [ "https://sassefotokring.nl/" ],
+                "level2URL": "https://www.example.com/fkSasse.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "'Sasse' means 'of Sas', the local nickname for Sas van Gent."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "'Sasse' verwijst naar Sas, de korte naam voor Sas van Gent."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-05",
+                        "author": "list maintainer",
+                        "text": "Found on 5 Nov 2026: sassefotokring.nl redirects to a hosting company's domain page. The club is active per a lottery permit in Terneuzen's municipal gazette of 4 Feb 2026; no other web presence was found."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Schoondijke",
                 "fullName": "Fotoclub Breskens",
                 "nickName": "fcBreskens"

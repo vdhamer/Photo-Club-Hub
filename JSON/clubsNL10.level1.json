@@ -203,6 +203,31 @@
 
         {
             "idPlus": {
+                "town": "Monnickendam",
+                "fullName": "De Online Fotoclub (DOF)",
+                "nickName": "onlineFotoclub"
+            },
+            "coordinates": {
+                "latitude": 52.45631,
+                "longitude": 5.03192
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/onlineFotoclub.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "An online photo club, started to share knowledge and inspire each other; members are expected to take an active part, and they also exhibit together."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een online fotoclub, opgericht om kennis te delen en elkaar te inspireren; leden doen actief mee, en exposeren ook samen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Purmerend",
                 "fullName": "Fotoclub Purmerend",
                 "nickName": "fcPurmerend"

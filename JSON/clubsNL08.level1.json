@@ -221,6 +221,31 @@
 
         {
             "idPlus": {
+                "town": "Oosthuizen",
+                "fullName": "De ZesFotografen",
+                "nickName": "ZesFotografen"
+            },
+            "coordinates": {
+                "latitude": 52.56919,
+                "longitude": 4.9933
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/ZesFotografen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Six photographers who each have their own perspective, from hidden stories to beauty in simplicity; they exhibit together (fifth time in 2026)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Zes fotografen die elk een eigen invalshoek hebben, van verborgen verhalen tot schoonheid in eenvoud, en samen exposeren; hun vijfde expositie was in 2026."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Schagerbrug",
                 "fullName": "Algemene Foto Vereniging Schagen",
                 "nickName": "afvSchagen"

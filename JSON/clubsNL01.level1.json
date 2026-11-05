@@ -152,6 +152,39 @@
         {
             "idPlus": {
                 "town": "Groningen",
+                "fullName": "Fotoblok050",
+                "nickName": "Fotoblok050"
+            },
+            "coordinates": {
+                "latitude": 53.21955,
+                "longitude": 6.56166
+            },
+            "optional": {
+                "badWebsites": [ "https://fotoblok050.nl/" ],
+                "level2URL": "https://www.example.com/Fotoblok050.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A small group that critiques each other's work, makes weekend photo trips, such as to Lübeck, and exhibits the results."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een kleine groep die elkaars werk bespreekt, weekendjes weg gaat om te fotograferen, zoals naar Lübeck, en exposities houdt."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-05",
+                        "author": "list maintainer",
+                        "text": "Found on 5 Nov 2026: fotoblok050.nl answers 404 on every page. The group exhibited at Fotogalerie Lichtzone, Groningen, in January and February 2026."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Groningen",
                 "fullName": "Trefshot",
                 "nickName": "Trefshot"
             },

@@ -958,6 +958,32 @@
         {
             "idPlus": {
                 "town": "Tilburg",
+                "fullName": "Fotowerkgroep KNNV Tilburg",
+                "nickName": "fwgKNNVTilburg"
+            },
+            "coordinates": {
+                "latitude": 51.55984,
+                "longitude": 5.08135
+            },
+            "optional": {
+                "website": "https://tilburg.knnv.nl/fotowerkgroep-2/",
+                "level2URL": "https://www.example.com/fwgKNNVTilburg.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Nature photographers pick a yearly theme, such as nature in the city, work on it at working evenings and show the best photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Natuurfotografen kiezen elk jaar een thema, zoals stadsnatuur, werken eraan op werkavonden en tonen de beste foto's."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Tilburg",
                 "fullName": "Tilburgse Amateur Fotografen Vereniging",
                 "nickName": "TAFV"
             },

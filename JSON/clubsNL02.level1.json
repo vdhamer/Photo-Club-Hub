@@ -306,6 +306,32 @@
 
         {
             "idPlus": {
+                "town": "Stiens",
+                "fullName": "Fotoclub 8-88",
+                "nickName": "fc888"
+            },
+            "coordinates": {
+                "latitude": 53.26059,
+                "longitude": 5.75891
+            },
+            "optional": {
+                "website": "https://fotoclub8-88.nl/",
+                "level2URL": "https://www.example.com/fc888.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members vote on a Photo of the Month, and the winning photo is printed in the village magazine Stienser."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden stemmen op de Foto van de Maand en de winnende foto wordt afgedrukt in het dorpsblad de Stienser."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Wolvega",
                 "fullName": "Fotoclub Wolvega Reflex",
                 "nickName": "fcWolvegaReflex"

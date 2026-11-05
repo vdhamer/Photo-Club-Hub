@@ -392,6 +392,32 @@
 
         {
             "idPlus": {
+                "town": "Ede",
+                "fullName": "Werkgroep Fotografie IVN Ede",
+                "nickName": "fwgIVNEde"
+            },
+            "coordinates": {
+                "latitude": 52.04264,
+                "longitude": 5.65186
+            },
+            "optional": {
+                "website": "https://www.ivn.nl/afdeling/ede/werkgroep-fotografie/",
+                "level2URL": "https://www.example.com/fwgIVNEde.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members show nature photos plus an optional monthly photo assignment; outings follow the season, such as the deer rut."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden tonen vrije natuurfoto's plus een facultatieve maandelijkse foto-opdracht; excursies volgen het seizoen, zoals de hertenbronst."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Elst",
                 "fullName": "Fotoclub Focel",
                 "nickName": "fcFocel"
