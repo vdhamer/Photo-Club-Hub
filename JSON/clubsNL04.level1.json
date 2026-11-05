@@ -93,6 +93,25 @@
 
         {
             "idPlus": {
+                "town": "Epe",
+                "fullName": "Fotoclub A.F.V. Epe",
+                "nickName": "fcEpe"
+            },
+            "coordinates": {
+                "latitude": 52.34790,
+                "longitude": 5.98846
+            },
+            "optional": {
+                "website": "https://fotoclub-epe.nl/",
+                "level2URL": "https://www.example.com/fcEpe.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 419
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Hasselt",
                 "fullName": "Fotoclub Positief",
                 "nickName": "fcPositief"
@@ -112,6 +131,61 @@
                     {
                         "language": "NL",
                         "value": "Maakt clubuitjes naar onder meer Amersfoort, Deventer, Enkhuizen en Villa Rams Woerthe."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heerde",
+                "fullName": "Fotoclub De Sprengen",
+                "nickName": "fcSprengen"
+            },
+            "coordinates": {
+                "latitude": 52.38730,
+                "longitude": 6.04680
+            },
+            "optional": {
+                "website": "https://www.fotoclubdesprengen.nl/",
+                "level2URL": "https://www.example.com/fcSprengen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Living-room groups: members team up by interest, such as street, nature or portrait, pick their own topics and present the results."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Huiskamergroepen: leden vormen groepjes rond een interesse, zoals straat, natuur of portret, kiezen eigen onderwerpen en tonen de resultaten."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 426
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heino",
+                "fullName": "Fotoclub Heino",
+                "nickName": "fcHeino"
+            },
+            "coordinates": {
+                "latitude": 52.43689,
+                "longitude": 6.23656
+            },
+            "optional": {
+                "website": "https://fotoclubheino.nl/",
+                "level2URL": "https://www.example.com/fcHeino.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members built a photo chain: each photo is a link, and viewers guess what connects them."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden maakten een kettingfoto: elke foto is een schakel en de kijker raadt wat ze verbindt."
                     }
                 ]
             }
@@ -145,6 +219,58 @@
 
         {
             "idPlus": {
+                "town": "Nunspeet",
+                "fullName": "Fotoclub Nunspeet",
+                "nickName": "fcNunspeet"
+            },
+            "coordinates": {
+                "latitude": 52.33729,
+                "longitude": 5.79564
+            },
+            "optional": {
+                "website": "https://fotoclubnunspeet.nl/",
+                "level2URL": "https://www.example.com/fcNunspeet.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each month has a set theme photo, and the members pick a photo of the month from the results."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke maand is er een fotothema en de leden kiezen daaruit de foto van de maand."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Raalte",
+                "fullName": "Fotoclub Salland",
+                "nickName": "fcSalland"
+            },
+            "coordinates": {
+                "latitude": 52.38743,
+                "longitude": 6.30785
+            },
+            "optional": {
+                "website": "https://fotoclubsalland.nl/",
+                "level2URL": "https://www.example.com/fcSalland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Besides the monthly club evening, there is a monthly Saturday outing, plus a yearly club championship with external jurors."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Naast de maandelijkse clubavond is er elke maand een zaterdagactiviteit en jaarlijks een clubkampioenschap met externe jury."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Ugchelen",
                 "fullName": "Vereniging voor Natuurfotografen Apeldoorn",
                 "nickName": "vnfApeldoorn"
@@ -164,6 +290,32 @@
                     {
                         "language": "NL",
                         "value": "Eens per twee jaar een openbare avond, waarop leden hun mooiste natuurbeelden laten zien en vertellen hoe die tot stand kwamen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zwolle",
+                "fullName": "Fotoclub Zwolle",
+                "nickName": "fcZwolle"
+            },
+            "coordinates": {
+                "latitude": 52.52215,
+                "longitude": 6.13552
+            },
+            "optional": {
+                "website": "https://www.fotoclubzwolle.nl/",
+                "level2URL": "https://www.example.com/fcZwolle.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club keeps a shared flash set that members can borrow to learn studio lighting at home."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club heeft een gezamenlijke flitsset die leden kunnen lenen om thuis met studiolicht te leren werken."
                     }
                 ]
             }

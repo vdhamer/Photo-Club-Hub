@@ -38,6 +38,64 @@
 
         {
             "idPlus": {
+                "town": "Boekelo",
+                "fullName": "Fotogroep Boekelo",
+                "nickName": "fgBoekelo"
+            },
+            "coordinates": {
+                "latitude": 52.20471,
+                "longitude": 6.80112
+            },
+            "optional": {
+                "website": "http://www.fotogroepboekelo.nl/",
+                "level2URL": "https://www.example.com/fgBoekelo.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "New members are paired with a club mentor during their first months, to talk about their photography and the club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Nieuwe leden krijgen in de eerste maanden een clubmentor om over hun fotografie en over de club te praten."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 534
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Borne",
+                "fullName": "Fotoclub Borne",
+                "nickName": "fcBorne"
+            },
+            "coordinates": {
+                "latitude": 52.30230,
+                "longitude": 6.75815
+            },
+            "optional": {
+                "website": "http://www.fotoclub-borne.nl/",
+                "level2URL": "https://www.example.com/fcBorne.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotocafe evenings have no set program: members bring photos and simply talk about each other's work over a drink."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotocafe-avonden hebben geen vast programma: leden nemen foto's mee en praten er gewoon over met elkaar."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 510
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Enschede",
                 "fullName": "Fotoclub 't Bruggert",
                 "nickName": "fcBruggert"
@@ -59,6 +117,93 @@
                         "value": "Kiest elk jaar een “jaarfoto” en organiseert uitstapjes en workshops rond thema's als macro- en avondfotografie."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Enschede",
+                "fullName": "Fotoclub De Zoeker",
+                "nickName": "fcDeZoeker"
+            },
+            "coordinates": {
+                "latitude": 52.21966,
+                "longitude": 6.89440
+            },
+            "optional": {
+                "website": "https://www.fotoclubdezoeker.nl/",
+                "level2URL": "https://www.example.com/fcDeZoeker.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Deep dive groups: a few members dig into one topic for three months, then the groups are reshuffled for a next round."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Verdiepingsgroepen: enkele leden duiken drie maanden in één onderwerp, daarna worden de groepen opnieuw samengesteld."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 505
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Enschede",
+                "fullName": "Fotoclub Twente",
+                "nickName": "fcTwente"
+            },
+            "coordinates": {
+                "latitude": 52.21922,
+                "longitude": 6.89341
+            },
+            "optional": {
+                "website": "https://www.fotoclub-twente.nl/",
+                "level2URL": "https://www.example.com/fcTwente.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each month the board sets a theme and members shoot one new photo for it, never one from the archive, to learn to see differently."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke maand geeft het bestuur een thema en maken leden daar één nieuwe foto voor, geen archieffoto, om anders te leren kijken."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 537
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Haaksbergen",
+                "fullName": "Fotogroep Haaksbergen",
+                "nickName": "fgHaaksbergen"
+            },
+            "coordinates": {
+                "latitude": 52.15493,
+                "longitude": 6.74567
+            },
+            "optional": {
+                "website": "https://fotogroephaaksbergen.nl/",
+                "level2URL": "https://www.example.com/fgHaaksbergen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every other year the club turns the village center into an open-air gallery, with photos on pipes, pallets and wooden frames."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Om het jaar maakt de club van het dorpscentrum een openluchtgalerie: foto's op buizen, pallets en houten lijsten."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 519
+                }
             }
         },
 
@@ -87,6 +232,24 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 588
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hengelo",
+                "fullName": "FC Holec",
+                "nickName": "fcHolec"
+            },
+            "coordinates": {
+                "latitude": 52.26587,
+                "longitude": 6.79240
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcHolec.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 516
                 }
             }
         },
@@ -141,6 +304,32 @@
                     {
                         "language": "NL",
                         "value": "Heeft een strikte gedragscode, waaronder: `dieren in gevangenschap mag je niet als wild presenteren`."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oldenzaal",
+                "fullName": "Fotoclub Oldenzaal",
+                "nickName": "fcOldenzaal"
+            },
+            "coordinates": {
+                "latitude": 52.30898,
+                "longitude": 6.93017
+            },
+            "optional": {
+                "website": "https://www.fcoldenzaal.nl/",
+                "level2URL": "https://www.example.com/fcOldenzaal.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members continue each other's photos in a photo chain: the start photo gets a follow-up, then goes to the next member, etc."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden maken een kettingfoto: op een startfoto komt steeds een vervolg, dat wordt doorgegeven aan de volgende deelnemer."
                     }
                 ]
             }

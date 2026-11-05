@@ -1506,7 +1506,7 @@
             "idPlus": {
                 "town": "Reusel",
                 "fullName": "Amateur Fotoclub Reusel",
-                "nickName": "AFCReusel"
+                "nickName": "afcReusel"
             },
             "coordinates": {
                 "latitude": 51.36227,
@@ -1514,7 +1514,7 @@
             },
             "optional": {
                 "website": "https://afcreusel.nl",
-                "level2URL": "https://www.example.com/AFCReusel.level2.json",
+                "level2URL": "https://www.example.com/afcReusel.level2.json",
                 "remark": [
                     {
                         "language": "EN",

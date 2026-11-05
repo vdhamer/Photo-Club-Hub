@@ -35,6 +35,108 @@
 
         {
             "idPlus": {
+                "town": "Den Helder",
+                "fullName": "Fotoclub Den Helder",
+                "nickName": "fcDenHelder"
+            },
+            "coordinates": {
+                "latitude": 52.95210,
+                "longitude": 4.77163
+            },
+            "optional": {
+                "website": "https://www.fotoclubdenhelder.nl/",
+                "level2URL": "https://www.example.com/fcDenHelder.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Table evening: everyone brings two photos they are unsure about and gets help from the others."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Tafeltjesavond: iedereen brengt twee foto's mee waar men onzeker over is en krijgt hulp van de anderen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heerhugowaard",
+                "fullName": "Fotoclub Heerhugowaard",
+                "nickName": "fcHeerhugowaard"
+            },
+            "coordinates": {
+                "latitude": 52.66707,
+                "longitude": 4.84189
+            },
+            "optional": {
+                "website": "https://www.fotoclubheerhugowaard.nl/",
+                "level2URL": "https://www.example.com/fcHeerhugowaard.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Invites other clubs to present their work, then returns the visit. Also holds a series award and a 'magazine evening' where members browse photo magazines."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Nodigt andere clubs uit hun werk te tonen en gaat daarna op tegenbezoek. Ook een seriewedstrijd en een tijdschriftenavond."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 811
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heiloo",
+                "fullName": "Fotoclub Heiloo",
+                "nickName": "fcHeiloo"
+            },
+            "coordinates": {
+                "latitude": 52.60195,
+                "longitude": 4.69674
+            },
+            "optional": {
+                "website": "https://www.fotoclubheiloo.nl/",
+                "level2URL": "https://www.example.com/fcHeiloo.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Also known as HAF (Heilooër Amateur Fotografen)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Ook bekend als HAF: Heilooër Amateur Fotografen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 804
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heiloo",
+                "fullName": "Fotoclub Sportbeeld",
+                "nickName": "fcSportbeeld"
+            },
+            "coordinates": {
+                "latitude": 52.60500,
+                "longitude": 4.71251
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcSportbeeld.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 825
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Hoorn",
                 "fullName": "Fotovrienden West-Friesland",
                 "nickName": "fvWestFriesland"
@@ -59,6 +161,32 @@
                 "nlSpecific": {
                     "fotobondNumber": 818
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hoorn",
+                "fullName": "Fotowerkgroep Hoorn",
+                "nickName": "fwgHoorn"
+            },
+            "coordinates": {
+                "latitude": 52.63945,
+                "longitude": 5.03664
+            },
+            "optional": {
+                "website": "https://www.fotowerkgroephoorn.nl/",
+                "level2URL": "https://www.example.com/fwgHoorn.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Raw challenge: one member's photo is handed to all the others, who each edit it in their own style."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Raw challenge: de foto van één lid wordt door de andere leden naar eigen smaak bewerkt."
+                    }
+                ]
             }
         },
 
@@ -117,6 +245,60 @@
                 "nlSpecific": {
                     "fotobondNumber": 802
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wieringerwerf",
+                "fullName": "Fotoclub Het Derde Oog",
+                "nickName": "fcDerdeOog"
+            },
+            "coordinates": {
+                "latitude": 52.85483,
+                "longitude": 5.02707
+            },
+            "optional": {
+                "website": "https://www.fotoclubhetderdeoog.nl/",
+                "level2URL": "https://www.example.com/fcDerdeOog.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Offers newer members a free basic exposure course, taught one-on-one or to at most two people, and sometimes visits exhibitions instead of shooting."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Biedt nieuwe leden een gratis basiscursus belichting (een-op-een of met maximaal twee deelnemers) en bezoekt soms tentoonstellingen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 812
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wieringerwerf",
+                "fullName": "Fotocollectief De Sluiter",
+                "nickName": "fcSluiterWW"
+            },
+            "coordinates": {
+                "latitude": 52.85159,
+                "longitude": 5.02287
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcSluiterWW.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Hung an outdoor photo exhibition along the paths of a historic cemetery, as a lead-up to its 10th anniversary."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Hing een buitenexpositie langs de paden van een historische begraafplaats, als opmaat naar het tienjarig bestaan."
+                    }
+                ]
             }
         }
 

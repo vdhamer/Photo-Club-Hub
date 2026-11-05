@@ -343,7 +343,7 @@
             "idPlus": {
                 "town": "Etten-Leur",
                 "fullName": "Amateur Fotografen Vereniging Prinsenbeek en Etten-Leur",
-                "nickName": "AFVP"
+                "nickName": "afvPrinsenbeek"
             },
             "coordinates": {
                 "latitude": 51.56274,
@@ -351,7 +351,7 @@
             },
             "optional": {
                 "website": "https://www.afvp-etten-leur.nl",
-                "level2URL": "https://www.example.com/AFVP.level2.json",
+                "level2URL": "https://www.example.com/afvPrinsenbeek.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -490,6 +490,32 @@
 
         {
             "idPlus": {
+                "town": "Hoogerheide",
+                "fullName": "Fotogroep Zuidwesthoek",
+                "nickName": "fgZuidwesthoek"
+            },
+            "coordinates": {
+                "latitude": 51.42434,
+                "longitude": 4.32384
+            },
+            "optional": {
+                "website": "https://www.fotogroepzuidwesthoek.nl/",
+                "level2URL": "https://www.example.com/fgZuidwesthoek.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A whole year of monthly photo assignments is planned ahead, such as one viewpoint in three weather conditions, then shown by theme."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een heel jaar maandelijkse foto-opdrachten wordt vooraf gepland, zoals één standpunt bij drie weersomstandigheden, en per thema getoond."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Loon op Zand",
                 "fullName": "Fotogroep CreatiVision",
                 "nickName": "fgCreatiVision"
@@ -585,6 +611,32 @@
                     {
                         "language": "NL",
                         "value": "Leden geven elkaar workshops onder de naam VolDol (\"voor leden door leden\")."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nispen",
+                "fullName": "Fotogroep Nispen",
+                "nickName": "fgNispen"
+            },
+            "coordinates": {
+                "latitude": 51.48235,
+                "longitude": 4.46161
+            },
+            "optional": {
+                "website": "https://www.fotogroep-nispen.nl/",
+                "level2URL": "https://www.example.com/fgNispen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photographers and a poets' collective paired photos with poems, and visitors of the annual exhibition voted for the best combination."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografen en een dichterscollectief koppelden foto's aan gedichten; bezoekers van de jaarexpositie kozen de mooiste combinatie."
                     }
                 ]
             }
@@ -1086,6 +1138,32 @@
                 "nlSpecific": {
                     "fotobondNumber": 1548
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Woudrichem",
+                "fullName": "Fotogroep Lumière",
+                "nickName": "fgLumiere"
+            },
+            "coordinates": {
+                "latitude": 51.81682,
+                "longitude": 5.00334
+            },
+            "optional": {
+                "website": "https://fotogroeplumiere.nl/",
+                "level2URL": "https://www.example.com/fgLumiere.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each year's themed photo contest is judged by an outside mentor, and the entries then hang in a rotating permanent exhibition."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke jaarlijkse themawedstrijd wordt door een externe mentor beoordeeld; de inzendingen hangen daarna in een wisselende vaste expositie."
+                    }
+                ]
             }
         }
 

@@ -242,6 +242,32 @@
         
         {
             "idPlus": {
+                "town": "Genemuiden",
+                "fullName": "Fotoclub Genemuiden",
+                "nickName": "fcGenemuiden"
+            },
+            "coordinates": {
+                "latitude": 52.62384,
+                "longitude": 6.04170
+            },
+            "optional": {
+                "website": "https://www.fotoclubgenemuiden.nl/",
+                "level2URL": "https://www.example.com/fcGenemuiden.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club has its own studio and holds 13 portrait evenings a year, often with a model."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club heeft een eigen studio en houdt jaarlijks 13 portretavonden, vaak met een model."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
                 "town": "Gieten",
                 "fullName": "Fotoclub GiAF",
                 "nickName": "fcGiaf"
@@ -478,6 +504,32 @@
                     {
                         "language": "NL",
                         "value": "Maandelijks een opdracht of uitje, van light painting tot kapotgeschoten ballonnen; per lid terug te zien tot 2019."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Vollenhove",
+                "fullName": "Fotoclub Din81",
+                "nickName": "fcDin81"
+            },
+            "coordinates": {
+                "latitude": 52.68073,
+                "longitude": 5.94911
+            },
+            "optional": {
+                "website": "https://www.fcdin81.nl/",
+                "level2URL": "https://www.example.com/fcDin81.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each year two photo chains start from the same photo and grow apart over the season; the makers explain each link at the club evening."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk jaar starten twee fotokettingen met dezelfde foto en groeien in het seizoen uit elkaar; de makers lichten elke schakel toe op de clubavond."
                     }
                 ]
             }

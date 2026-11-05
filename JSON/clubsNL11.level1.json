@@ -9,6 +9,35 @@
 
         {
             "idPlus": {
+                "town": "'s-Gravenzande",
+                "fullName": "Dia- en Fotoclub ’s-Gravenzande",
+                "nickName": "dfGravenzande"
+            },
+            "coordinates": {
+                "latitude": 52.00163,
+                "longitude": 4.15831
+            },
+            "optional": {
+                "website": "https://fotoclubdfg.nl/",
+                "level2URL": "https://www.example.com/dfGravenzande.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "An audiovisual workgroup turns photos into shows with music, sound effects or narration, entered in AV festivals."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een audiovisuele werkgroep maakt van foto's shows met muziek, geluid of spraak en doet mee aan AV-festivals."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1118
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Delft",
                 "fullName": "Fotoclub '59",
                 "nickName": "fc59"
@@ -33,6 +62,32 @@
                 "nlSpecific": {
                     "fotobondNumber": 1114
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Delft",
+                "fullName": "Fotoclub Klik",
+                "nickName": "fcKlik"
+            },
+            "coordinates": {
+                "latitude": 52.01285,
+                "longitude": 4.35268
+            },
+            "optional": {
+                "website": "https://fotoclubklik.nl/",
+                "level2URL": "https://www.example.com/fcKlik.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Named after the 1950 AGFA Klik, an analog camera; darkroom printing stays alive alongside digital."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Genoemd naar de AGFA Klik filmcamera uit 1950; doka-werk blijft naast digitaal springlevend."
+                    }
+                ]
             }
         },
 
@@ -65,6 +120,43 @@
         {
             "idPlus": {
                 "town": "Den Haag",
+                "fullName": "De Haagse Fotografen",
+                "nickName": "deHaagse"
+            },
+            "coordinates": {
+                "latitude": 52.04656,
+                "longitude": 4.27304
+            },
+            "optional": {
+                "website": "https://dehaagse.nl/",
+                "badWebsites": [ "http://home.kpn.nl/wicha016" ],
+                "level2URL": "https://www.example.com/deHaagse.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A joint club of two older ones: KPN staff and retirees join AmFo Fotogroep KPN, everyone else the HAFV, with identical facilities."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een samenwerking van twee clubs: KPN'ers en gepensioneerden worden lid van AmFo Fotogroep KPN, alle anderen van de HAFV, met dezelfde faciliteiten."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "The old KPN home page home.kpn.nl/wicha016 no longer works (still returning errors on 2026-11-04). The club is active on dehaagse.nl as De Haagse Fotografen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1152
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Den Haag",
                 "fullName": "Fotoclub Retouche",
                 "nickName": "fcRetouche"
             },
@@ -85,6 +177,53 @@
                         "value": "Houdt bewust geen fotowedstrijden, behalve bij de jaartentoonstelling."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Gouda",
+                "fullName": "De Goudse Fotoclub",
+                "nickName": "deGoudse"
+            },
+            "coordinates": {
+                "latitude": 52.03116,
+                "longitude": 4.69666
+            },
+            "optional": {
+                "website": "https://degoudsefotoclub.nl/",
+                "level2URL": "https://www.example.com/deGoudse.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "When enough members are interested, the club invites a Fotobond mentor to coach members one-on-one on their photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Bij voldoende belangstelling nodigt de club een Fotobond-mentor uit die leden persoonlijk coacht bij hun foto's."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1103
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Gouda",
+                "fullName": "Fotokring Groene Hart",
+                "nickName": "fkGroeneHart"
+            },
+            "coordinates": {
+                "latitude": 52.01812,
+                "longitude": 4.71112
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fkGroeneHart.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1154
+                }
             }
         },
 
@@ -177,6 +316,69 @@
 
         {
             "idPlus": {
+                "town": "Leidschendam",
+                "fullName": "Fotokring Leidschendam-Voorburg",
+                "nickName": "fkLeidschendamVB"
+            },
+            "coordinates": {
+                "latitude": 52.08101,
+                "longitude": 4.39890
+            },
+            "optional": {
+                "website": "https://fotokring-lv.nl/",
+                "badWebsites": [ "https://fotokringlv.nl/" ],
+                "level2URL": "https://www.example.com/fkLeidschendamVB.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Together with two neighboring clubs, they pick one shared year theme (2026: Shadows) and preview the photos for each other."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Samen met twee buurclubs kiezen ze één gezamenlijk jaarthema (2026: Schaduwen) en bespreken ze elkaars foto's."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "The old domain fotokringlv.nl was taken over by an online casino site (found on 2026-11-04). The club is now active on fotokring-lv.nl."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1147
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leidschenveen",
+                "fullName": "Leidschenveensefotoclub",
+                "nickName": "Leidschenveensefotoclub"
+            },
+            "coordinates": {
+                "latitude": 52.06328,
+                "longitude": 4.40386
+            },
+            "optional": {
+                "website": "https://leidschenveensefotoclub.nl/",
+                "level2URL": "https://www.example.com/Leidschenveensefotoclub.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "In a photo relay, each member anonymously receives a photo and answers with a follow-up shot, with a story why it belongs."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Bij de fotoestafette krijgt elk lid anoniem een foto en maakt er een vervolgfoto op, met een verhaal waarom die erbij hoort."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Noordwijk",
                 "fullName": "Fotogroep X65",
                 "nickName": "fgX65"
@@ -196,6 +398,32 @@
                     {
                         "language": "NL",
                         "value": "Geeft elke maand een 'onderwerp van de maand' dat soms een puzzel is, zoals 'lelijk of mooi' of 'een ongewone foto'."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rijswijk",
+                "fullName": "Fotoclub F22",
+                "nickName": "fcF22"
+            },
+            "coordinates": {
+                "latitude": 52.03739,
+                "longitude": 4.32250
+            },
+            "optional": {
+                "website": "https://www.fotoclubf22.nl/",
+                "level2URL": "https://www.example.com/fcF22.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "F22 is the smallest aperture, so sharpest: members keep each other sharp through feedback and talking about photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "F22 is het kleinste diafragma, dus scherp: leden houden elkaar scherp met feedback en praten over foto's."
                     }
                 ]
             }
@@ -229,6 +457,35 @@
 
         {
             "idPlus": {
+                "town": "Rijswijk",
+                "fullName": "Fotoclub Rijswijk",
+                "nickName": "fcRijswijk"
+            },
+            "coordinates": {
+                "latitude": 52.04600,
+                "longitude": 4.33615
+            },
+            "optional": {
+                "website": "http://www.fotoclubrijswijk.nl/",
+                "level2URL": "https://www.example.com/fcRijswijk.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Two photo chains run side by side: a fast one (3 days per photo) and a slow one (7 days), each responding to the previous photo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Twee fotokettingen lopen naast elkaar: een snelle (3 dagen per foto) en een trage (7 dagen), elk antwoordend op de vorige foto."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1101
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Sassenheim",
                 "fullName": "Fotoclub de Bloembollenstreek",
                 "nickName": "fcBloembollenstreek"
@@ -250,6 +507,93 @@
                         "value": "De winnende foto van de jaarlijkse clubcompetitie start een foto-estafette in twee ketens; elk lid reageert op de vorige foto."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wassenaar",
+                "fullName": "Fotoclub Silhouet Wassenaar",
+                "nickName": "fcSilhouet"
+            },
+            "coordinates": {
+                "latitude": 52.14018,
+                "longitude": 4.39248
+            },
+            "optional": {
+                "website": "https://silhouetwassenaar0.wordpress.com/",
+                "level2URL": "https://www.example.com/fcSilhouet.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members set each other assignments and discuss the results; a mentor series digs into one genre, such as street photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden geven elkaar opdrachten en bespreken de resultaten; in een mentorreeks duiken ze dieper in één genre, zoals straatfotografie."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1134
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zoetermeer",
+                "fullName": "Fotoclub Lamar",
+                "nickName": "fcLamar"
+            },
+            "coordinates": {
+                "latitude": 52.06225,
+                "longitude": 4.49012
+            },
+            "optional": {
+                "website": "https://www.fotoclublamar.nl/",
+                "level2URL": "https://www.example.com/fcLamar.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A year-long Cadavre Exquis project: composite images built from photos by five different members, plus one the whole club makes together."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een jaarproject Cadavre Exquis: samengestelde beelden uit foto's van vijf verschillende leden, plus één die de hele club samen maakt."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1153
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zoetermeer",
+                "fullName": "Fotogroep Zoetermeer",
+                "nickName": "fgZoetermeer"
+            },
+            "coordinates": {
+                "latitude": 52.05737,
+                "longitude": 4.49792
+            },
+            "optional": {
+                "website": "https://www.fotogroep-zoetermeer.nl/",
+                "level2URL": "https://www.example.com/fgZoetermeer.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The portrait group photographs two models each month, sometimes with a makeup artist, alongside six other specialty groups."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De portretgroep fotografeert elke maand twee modellen, soms met visagist, naast zes andere werkgroepen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1111
+                }
             }
         }
 

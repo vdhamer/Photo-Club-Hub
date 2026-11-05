@@ -9,6 +9,137 @@
 
         {
             "idPlus": {
+                "town": "Beek",
+                "fullName": "Fotogroep EyeConnect",
+                "nickName": "fgEyeConnect"
+            },
+            "coordinates": {
+                "latitude": 50.92688,
+                "longitude": 5.81069
+            },
+            "optional": {
+                "website": "http://www.fg-eyeconnect.nl/",
+                "level2URL": "https://www.example.com/fgEyeConnect.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1779
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Belfeld",
+                "fullName": "Fotogroep Belfeld",
+                "nickName": "fgBelfeld"
+            },
+            "coordinates": {
+                "latitude": 51.31075,
+                "longitude": 6.11430
+            },
+            "optional": {
+                "website": "https://www.fotogroepbelfeld.nl/",
+                "level2URL": "https://www.example.com/fgBelfeld.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every club evening has a theme; each member submits two photos, all are discussed together and a winner is picked."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke clubavond heeft een thema; ieder lid levert twee foto's in, samen bespreekt men ze en wordt de winnaar gekozen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Blerick",
+                "fullName": "AFV Blerick",
+                "nickName": "afvBlerick"
+            },
+            "coordinates": {
+                "latitude": 51.37571,
+                "longitude": 6.12997
+            },
+            "optional": {
+                "website": "https://www.afvblerick.nl/",
+                "level2URL": "https://www.example.com/afvBlerick.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1727
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Brunssum",
+                "fullName": "Fotogroep Tegenlicht",
+                "nickName": "fgTegenlicht"
+            },
+            "coordinates": {
+                "latitude": 50.94382,
+                "longitude": 5.97483
+            },
+            "optional": {
+                "website": "http://www.facebook.com/FotogroepTegenlicht",
+                "level2URL": "https://www.example.com/fgTegenlicht.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1766
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Geleen",
+                "fullName": "Fotokring Geleen",
+                "nickName": "fkGeleen"
+            },
+            "coordinates": {
+                "latitude": 50.97147,
+                "longitude": 5.83050
+            },
+            "optional": {
+                "website": "https://fotokring-geleen.eu/",
+                "level2URL": "https://www.example.com/fkGeleen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each round of photos is reviewed by an outside expert, such as a photographer, artist, designer or architect, who picks the most special ones."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke fotoronde wordt besproken door een externe deskundige, zoals een fotograaf, kunstenaar, vormgever of architect, die de bijzonderste foto's kiest."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1701
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Gronsveld",
+                "fullName": "Fotomotief Zuid",
+                "nickName": "fotomotiefZuid"
+            },
+            "coordinates": {
+                "latitude": 50.81104,
+                "longitude": 5.73083
+            },
+            "optional": {
+                "website": "https://fotomotiefzuid.nl/",
+                "level2URL": "https://www.example.com/fotomotiefZuid.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1785
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Heerlen",
                 "fullName": "Fotoclub Heerlerbaan",
                 "nickName": "fcHeerlerbaan"
@@ -35,6 +166,54 @@
 
         {
             "idPlus": {
+                "town": "Heerlen",
+                "fullName": "Fotoclub Zuyderlicht",
+                "nickName": "fcZuyderlicht"
+            },
+            "coordinates": {
+                "latitude": 50.87752,
+                "longitude": 5.98151
+            },
+            "optional": {
+                "website": "https://www.fotoclub-Zuyderlicht.nl/",
+                "level2URL": "https://www.example.com/fcZuyderlicht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Besides review nights with themes like Candy, Beach and Creative Self-Portrait, a committee runs separate 'alternative evenings'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Naast bespreekavonden met thema's als Snoep, Strand en Creatief Zelfportret organiseert een commissie aparte 'alternatieve avonden'."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1725
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heerlen",
+                "fullName": "Fotografen Kollektief Zuid-Limburg",
+                "nickName": "FKZL"
+            },
+            "coordinates": {
+                "latitude": 50.87762,
+                "longitude": 5.98161
+            },
+            "optional": {
+                "website": "https://fkzl.nl/",
+                "level2URL": "https://www.example.com/FKZL.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1782
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Helden",
                 "fullName": "Fotoclub Helden-Panningen",
                 "nickName": "fcHeldenPanningen"
@@ -56,6 +235,360 @@
                         "value": "Aan elk uitstapje is een foto-opdracht gekoppeld."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Horst",
+                "fullName": "Fotogroep Horst aan de Maas",
+                "nickName": "fgHorstAanDeMaas"
+            },
+            "coordinates": {
+                "latitude": 51.45250,
+                "longitude": 6.05392
+            },
+            "optional": {
+                "website": "http://www.fotogroephorstaandemaas.nl/",
+                "level2URL": "https://www.example.com/fgHorstAanDeMaas.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded as 'Onstofix': Ontwikkelen, Stoppen, Fixeren (develop, stop, fix), after the darkroom steps its founders learned."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht als 'Onstofix': Ontwikkelen, Stoppen, Fixeren, naar de stappen in de doka die de oprichters leerden."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1735
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Landgraaf",
+                "fullName": "AFV het Motief",
+                "nickName": "afvHetMotief"
+            },
+            "coordinates": {
+                "latitude": 50.88470,
+                "longitude": 6.03310
+            },
+            "optional": {
+                "website": "https://www.afvhetmotief.nl/",
+                "level2URL": "https://www.example.com/afvHetMotief.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1702
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Landgraaf",
+                "fullName": "Fotogroep Abedia Landgraaf",
+                "nickName": "fgAbedia"
+            },
+            "coordinates": {
+                "latitude": 50.88424,
+                "longitude": 6.02308
+            },
+            "optional": {
+                "website": "https://abedia.nl/",
+                "level2URL": "https://www.example.com/fgAbedia.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1950 at the head office of the Laura & Vereniging coal mine, and now exhibiting every two years in the town hall."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1950 op het hoofdkantoor van steenkolenmijn Laura & Vereniging; exposeert nu om de twee jaar in het gemeentehuis."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1712
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Landgraaf",
+                "fullName": "Fotogroep ISO'73",
+                "nickName": "fgISO73"
+            },
+            "coordinates": {
+                "latitude": 50.91073,
+                "longitude": 6.02313
+            },
+            "optional": {
+                "website": "https://iso73.nl/",
+                "level2URL": "https://www.example.com/fgISO73.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Alternate evenings: everyone shoots the same assignment (double exposure, tabletop, high key, low key), then discusses the results next time."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Om en om: iedereen maakt dezelfde opdracht (dubbele belichting, tabletop, highkey, lowkey) en bespreekt de resultaten de volgende keer."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1751
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Maasbracht",
+                "fullName": "Fotoclub De Sluiter",
+                "nickName": "fcSluiterMB"
+            },
+            "coordinates": {
+                "latitude": 51.14464,
+                "longitude": 5.89386
+            },
+            "optional": {
+                "website": "https://www.desluiter.nl/",
+                "level2URL": "https://www.example.com/fcSluiterMB.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Around 1988 younger members introduced 'Het Experiment': cropped faces, abstracts and blur. Each member is still urged to find a unique signature style."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Rond 1988 introduceerden jonge leden 'Het Experiment': aangesneden gezichten, abstracten en onscherpte. Nog steeds zoekt ieder lid een eigen signatuur."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1750
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Maastricht",
+                "fullName": "Fotogroep Fotrega",
+                "nickName": "fgFotrega"
+            },
+            "coordinates": {
+                "latitude": 50.85134,
+                "longitude": 5.69108
+            },
+            "optional": {
+                "website": "https://fotrega.nl/",
+                "level2URL": "https://www.example.com/fgFotrega.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Once or twice a year the group calls itself 'Foodtrega' and supplements photos with culinary creations by the members."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een- of tweemaal per jaar heet de groep 'Foodtrega', en delen leden hun culinaire talenten in plaats van alleen foto's."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1775
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Maastricht",
+                "fullName": "Fotogroep Helpoort Maastricht",
+                "nickName": "fgHelpoort"
+            },
+            "coordinates": {
+                "latitude": 50.84249,
+                "longitude": 5.72777
+            },
+            "optional": {
+                "website": "https://www.fotogroephelpoort.nl/",
+                "level2URL": "https://www.example.com/fgHelpoort.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each month the members' photos are rated and a 'Photo of the Month' plus a top 3 is published on the club site."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke maand worden foto's van leden beoordeeld en op de clubsite staan de 'Foto van de maand' en een top 3."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1784
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Maastricht",
+                "fullName": "Fotogroep Kiekdoes Maastricht",
+                "nickName": "fgKiekdoes"
+            },
+            "coordinates": {
+                "latitude": 50.86179,
+                "longitude": 5.73191
+            },
+            "optional": {
+                "website": "https://fotogroepkiekdoes.nl/",
+                "level2URL": "https://www.example.com/fgKiekdoes.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "An ongoing photo relay: each photo builds on the previous one (composition, color, subject or technique), and each meeting picks the next one."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een doorlopende fotoestafette: elke foto bouwt voort op de vorige (compositie, kleur, onderwerp of techniek); elke avond kiest de volgende."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1777
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Maastricht",
+                "fullName": "Fotogroep Maastricht",
+                "nickName": "fgMaastricht"
+            },
+            "coordinates": {
+                "latitude": 50.85124,
+                "longitude": 5.69098
+            },
+            "optional": {
+                "website": "https://fgmaastricht.wixsite.com/foto",
+                "level2URL": "https://www.example.com/fgMaastricht.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1774
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Margraten",
+                "fullName": "Fotogroep Dracula",
+                "nickName": "fgDracula"
+            },
+            "coordinates": {
+                "latitude": 50.82181,
+                "longitude": 5.82103
+            },
+            "optional": {
+                "website": "https://www.fotogroepdracula.nl/",
+                "level2URL": "https://www.example.com/fgDracula.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The name comes from a youth society that, at the time, screened Dracula films; the dragon logo is believed to have come from a pack of Dragon tobacco."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De naam komt van een jongerensociëteit die Dracula-films draaide; het drakenlogo komt volgens een oud clubblad van een pakje Dragon-shag."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1758
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Melick",
+                "fullName": "Fotogroep F8 Roerdalen",
+                "nickName": "fgF8Roerdalen"
+            },
+            "coordinates": {
+                "latitude": 51.15686,
+                "longitude": 6.01366
+            },
+            "optional": {
+                "website": "http://fotogroepf8roerdalen.nl/",
+                "level2URL": "https://www.example.com/fgF8Roerdalen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each year has themed photo rounds (e.g. Beestenboel, Beweging) with results revealed at a club night, plus a chain photo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk jaar zijn er themafotoronden (zoals Beestenboel en Beweging) met uitslag op een clubavond, plus een kettingfoto."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1761
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nederweert",
+                "fullName": "Nederweerter Foto Club",
+                "nickName": "NederweerterFC"
+            },
+            "coordinates": {
+                "latitude": 51.29189,
+                "longitude": 5.74815
+            },
+            "optional": {
+                "website": "https://www.nederweerterfotoclub.nl/",
+                "level2URL": "https://www.example.com/NederweerterFC.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each month a different member sets a one-word photo assignment, such as shadow or reflection; everyone reads it their own way."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke maand geeft een ander lid een fotoopdracht van één woord, zoals schaduw of reflectie; iedereen beeldt dat op eigen wijze uit."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuth",
+                "fullName": "FotoF Limburg",
+                "nickName": "fotoF_Limburg"
+            },
+            "coordinates": {
+                "latitude": 50.91719,
+                "longitude": 5.88383
+            },
+            "optional": {
+                "website": "https://fotoflimburg.weebly.com/",
+                "level2URL": "https://www.example.com/fotoF_Limburg.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club has no board: a few members guide it and everyone takes personal responsibility for their own tasks."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club kent geen bestuur: enkele leden geven richting en ieder lid draagt persoonlijk verantwoordelijkheid voor zijn eigen taken."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1728
+                }
             }
         },
 
@@ -90,6 +623,82 @@
 
         {
             "idPlus": {
+                "town": "Roermond",
+                "fullName": "Fotogroep Interfocus Roermond e.o.",
+                "nickName": "fgInterfocus"
+            },
+            "coordinates": {
+                "latitude": 51.19880,
+                "longitude": 6.01276
+            },
+            "optional": {
+                "website": "https://fotogroepinterfocus.nl/",
+                "level2URL": "https://www.example.com/fgInterfocus.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A 'chain photo' project: two chains of eight members each, every photo linked to the previous one, starting from the same photo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een kettingfoto-project: twee ketens van acht leden, elke foto sluit aan op de vorige, beide vanaf dezelfde startfoto."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1776
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Roosteren",
+                "fullName": "Fotokring Echt",
+                "nickName": "fkEcht"
+            },
+            "coordinates": {
+                "latitude": 51.08288,
+                "longitude": 5.81307
+            },
+            "optional": {
+                "website": "https://fotokringecht.weebly.com/",
+                "level2URL": "https://www.example.com/fkEcht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Mentorships: a half-year course with one evening a month under a mentor. Clubs also swap and critique each other's photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Mentoraten: een halfjaarlijkse opleiding met één avond per maand onder begeleiding van een mentor. Ook beoordelen clubs elkaars foto's."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1714
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sittard",
+                "fullName": "Fotoclub Grensland",
+                "nickName": "fcGrensland"
+            },
+            "coordinates": {
+                "latitude": 50.99752,
+                "longitude": 5.86676
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcGrensland.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1780
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Sittard",
                 "fullName": "Fotoclub Sittard",
                 "nickName": "fcSittard"
@@ -113,6 +722,47 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 1771
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Stein",
+                "fullName": "Fotogroep Het Moment",
+                "nickName": "fgMoment"
+            },
+            "coordinates": {
+                "latitude": 50.96827,
+                "longitude": 5.76500
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fgMoment.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Tegelen",
+                "fullName": "AFG Tegelen",
+                "nickName": "afgTegelen"
+            },
+            "coordinates": {
+                "latitude": 51.34293,
+                "longitude": 6.13622
+            },
+            "optional": {
+                "badWebsites": [ "http://www.afg-tegelen.nl" ],
+                "level2URL": "https://www.example.com/afgTegelen.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "The domain afg-tegelen.nl shows a hosting provider error page (hosting suspended or locked) as of 2026-11-04. No current club website was found."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1719
                 }
             }
         },
@@ -177,6 +827,35 @@
 
         {
             "idPlus": {
+                "town": "Venlo",
+                "fullName": "Fotoclub Venlo",
+                "nickName": "fcVenlo"
+            },
+            "coordinates": {
+                "latitude": 51.35769,
+                "longitude": 6.13263
+            },
+            "optional": {
+                "website": "https://www.fotoclubvenlo.nl/",
+                "level2URL": "https://www.example.com/fcVenlo.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A member writes a monthly column on the club site, giving an editorial view on photography and club life."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een lid schrijft elke maand een column op de clubsite, met een persoonlijke blik op fotografie en het clubleven."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1711
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Venray",
                 "fullName": "Fotoclub Venray",
                 "nickName": "fcVenray"
@@ -200,6 +879,64 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 1706
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Venray",
+                "fullName": "Fotogroep eXposure Venray",
+                "nickName": "fgExposure"
+            },
+            "coordinates": {
+                "latitude": 51.50828,
+                "longitude": 5.95890
+            },
+            "optional": {
+                "website": "https://fotogroep-exposure-venray.nl/",
+                "level2URL": "https://www.example.com/fgExposure.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in the 1970s by Rank Xerox employees; when the company stopped supporting it, the name changed and the capital X recalls its origin."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In de jaren zeventig opgericht door medewerkers van Rank Xerox; toen het bedrijf stopte met steun kreeg de club een nieuwe naam, waarbij de hoofdletter X aan de herkomst herinnert."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1717
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Weert",
+                "fullName": "Fotogroep Weert",
+                "nickName": "fgWeert"
+            },
+            "coordinates": {
+                "latitude": 51.23558,
+                "longitude": 5.70508
+            },
+            "optional": {
+                "website": "https://www.fotogroepweert.nl/fg/",
+                "level2URL": "https://www.example.com/fgWeert.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Four work groups (nature, people, architecture, creative) each run their own evening, plus a quarterly theme night where work is shared."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Vier werkgroepen (natuur, mensen, architectuur, creatief) verzorgen elk hun eigen avond, plus een kwartaalthema-avond waarop werk wordt gedeeld."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1710
                 }
             }
         }

@@ -9,6 +9,32 @@
 
         {
             "idPlus": {
+                "town": "'s-Heer Hendrikskinderen",
+                "fullName": "FotoGroep Goes",
+                "nickName": "fgGoes"
+            },
+            "coordinates": {
+                "latitude": 51.50204,
+                "longitude": 3.85995
+            },
+            "optional": {
+                "website": "https://www.fotogroepgoes.nl/",
+                "level2URL": "https://www.example.com/fgGoes.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every member gets a 'winter object' to photograph over the season; the results are shown together in March."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk lid krijgt een 'winterobject' om het seizoen mee te fotograferen; de resultaten worden in maart samen bekeken."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Axel",
                 "fullName": "Fotoclub Axel",
                 "nickName": "fcAxel"
@@ -35,6 +61,58 @@
 
         {
             "idPlus": {
+                "town": "Goes",
+                "fullName": "Fotoclub Difo-Goes",
+                "nickName": "fcDifoGoes"
+            },
+            "coordinates": {
+                "latitude": 51.49584,
+                "longitude": 3.89164
+            },
+            "optional": {
+                "website": "https://www.difo-goes.nl/",
+                "level2URL": "https://www.example.com/fcDifoGoes.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members each edit the same photo that was sent to them, in their own taste, and compare the results."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden bewerken allemaal dezelfde toegestuurde foto naar eigen smaak en vergelijken de resultaten."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Kortgene",
+                "fullName": "Fotoclub Noord-Beveland",
+                "nickName": "fcNoordBeveland"
+            },
+            "coordinates": {
+                "latitude": 51.55600,
+                "longitude": 3.80656
+            },
+            "optional": {
+                "website": "https://fotoclub-noord-beveland.nl/",
+                "level2URL": "https://www.example.com/fcNoordBeveland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "After each theme night a few photos are chosen; the maker shares the raw file, members edit it, and the results are discussed next time."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Na elke themaavond worden enkele foto's gekozen; de maker deelt het raw-bestand, leden bewerken het en de resultaten worden de volgende keer besproken."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Koudekerke",
                 "fullName": "Fotoclub Valkenisse",
                 "nickName": "fcValkenisse"
@@ -54,6 +132,162 @@
                     {
                         "language": "NL",
                         "value": "Genoemd naar Valkenisse, een voormalige gemeente op Walcheren waartoe Koudekerke behoorde, zelf vernoemd naar een boerderij uit de 17e eeuw."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oost-Souburg",
+                "fullName": "Fotoclub De Draadontspanner",
+                "nickName": "fcDraadontspanner"
+            },
+            "coordinates": {
+                "latitude": 51.46613,
+                "longitude": 3.60574
+            },
+            "optional": {
+                "website": "https://www.fcdd.club/",
+                "level2URL": "https://www.example.com/fcDraadontspanner.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The year-end photo vote is based on anonymous photos (identified with letters); every member distributes their 15 points over 5 favorites."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De jaarfoto-verkiezing werkt met anonieme foto's: een foto krijgt een letter en elk lid verdeelt 15 punten over 5 favorieten."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oud-Vossemeer",
+                "fullName": "FoTho",
+                "nickName": "FoTho"
+            },
+            "coordinates": {
+                "latitude": 51.56976,
+                "longitude": 4.19689
+            },
+            "optional": {
+                "website": "https://www.fotho.nl/",
+                "level2URL": "https://www.example.com/FoTho.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The program has evenings like 'Kitchen drawer' and 'You on Tholen', plus a trip to a graffiti warehouse."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het programma kent avonden als 'Keukenla' en 'Jij op Tholen', plus een bezoek aan een graffitiloods."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Renesse",
+                "fullName": "FotoGroep Schouwen-Duiveland",
+                "nickName": "fgSchouwenDuiveland"
+            },
+            "coordinates": {
+                "latitude": 51.73221,
+                "longitude": 3.77258
+            },
+            "optional": {
+                "website": "https://www.fotogroepschouwen-duiveland.nl/",
+                "level2URL": "https://www.example.com/fgSchouwenDuiveland.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each month one 'photo of the month' is picked, discussed, and sometimes printed and hung in the community center."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke maand wordt een 'foto van de maand' gekozen, besproken en desgewenst afgedrukt en in het dorpshuis opgehangen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Schoondijke",
+                "fullName": "Fotoclub Breskens",
+                "nickName": "fcBreskens"
+            },
+            "coordinates": {
+                "latitude": 51.35954,
+                "longitude": 3.57336
+            },
+            "optional": {
+                "website": "https://fotoclubbreskens.nl/",
+                "level2URL": "https://www.example.com/fcBreskens.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "In the yearly show, every member contributes three photos on specific themes: portrait, animals, landscape and roads."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In de jaarlijkse expositie maakt elk lid drie foto's bij vaste thema's: portret, dieren, landschap en wegen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Terneuzen",
+                "fullName": "Fotoclub Brandpunt",
+                "nickName": "fcBrandpunt"
+            },
+            "coordinates": {
+                "latitude": 51.31218,
+                "longitude": 3.85296
+            },
+            "optional": {
+                "website": "https://www.fotobrandpunt.nl/",
+                "level2URL": "https://www.example.com/fcBrandpunt.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members' photos hang permanently in the hall of a hospital in Terneuzen and in a community center in Koewacht."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Foto's van leden hangen permanent in de gang van het ziekenhuis in Terneuzen en in een buurthuis in Koewacht."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Terneuzen",
+                "fullName": "Fotoclub Dow",
+                "nickName": "fcDow"
+            },
+            "coordinates": {
+                "latitude": 51.29884,
+                "longitude": 3.84220
+            },
+            "optional": {
+                "website": "https://www.fotoclubdow.nl/",
+                "level2URL": "https://www.example.com/fcDow.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The yearly exhibition ends with a public vote; the audience winners are published each year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De jaarlijkse expositie eindigt met een publieksstemming; de publieksuitslag wordt elk jaar gepubliceerd."
                     }
                 ]
             }

@@ -35,6 +35,93 @@
 
         {
             "idPlus": {
+                "town": "Foxhol",
+                "fullName": "Fotoclub Noorderlicht",
+                "nickName": "fcNoorderlicht"
+            },
+            "coordinates": {
+                "latitude": 53.16786,
+                "longitude": 6.72167
+            },
+            "optional": {
+                "website": "https://www.fotoclubnoorderlicht.nl/",
+                "level2URL": "https://www.example.com/fcNoorderlicht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photo stories in a chain: five photographers each see only the previous photo, starting from a poem, sound or film trailer."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Beeldverhalen in een keten: vijf fotografen zien alleen de vorige foto, met een gedicht, geluid of filmtrailer als start."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 127
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Garmerwolde",
+                "fullName": "Fotogroep Garmerwolde",
+                "nickName": "fgGarmerwolde"
+            },
+            "coordinates": {
+                "latitude": 53.24817,
+                "longitude": 6.64759
+            },
+            "optional": {
+                "website": "http://fotogroepgarmerwolde.com/",
+                "level2URL": "https://www.example.com/fgGarmerwolde.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Most years the group exhibits series of 2 or 3 in a village church, often on a theme, such as Minimalism, Color and Rhythm."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De groep exposeert bijna elk jaar twee- en drieluiken in een dorpskerk, vaak rond een thema, zoals Minimalisme, Kleur en Ritme."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 128
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Glimmen",
+                "fullName": "Fotoclub Beeldspraak",
+                "nickName": "fcBeeldspraak"
+            },
+            "coordinates": {
+                "latitude": 53.14382,
+                "longitude": 6.63036
+            },
+            "optional": {
+                "website": "https://www.fotoclubbeeldspraak.nl/",
+                "level2URL": "https://www.example.com/fcBeeldspraak.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club's motto is a challenge for the members: \"how do I make the invisible visible, and the ordinary unusual?\""
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het clubmotto daagt elk lid uit: \"hoe maak ik het onzichtbare zichtbaar, en hoe maak ik het gewone ongewoon?\""
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 104
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Groningen",
                 "fullName": "Amateur Fotografen Vereniging Daguerre",
                 "nickName": "afvDaguerre"
@@ -142,6 +229,58 @@
 
         {
             "idPlus": {
+                "town": "Stadskanaal",
+                "fullName": "Fotoclub Stadskanaal",
+                "nickName": "fcStadskanaal"
+            },
+            "coordinates": {
+                "latitude": 52.98496,
+                "longitude": 6.94894
+            },
+            "optional": {
+                "website": "https://www.fotoclubstadskanaal.nl/",
+                "level2URL": "https://www.example.com/fcStadskanaal.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "One theme gets three club evenings: a guest talk, a hands-on practice night, then a critique of the results."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Eén thema krijgt drie clubavonden: een gastspreker, een oefenavond en daarna een bespreking van de resultaten."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Stadskanaal",
+                "fullName": "Knoalster Foto Collectief",
+                "nickName": "Knoalster"
+            },
+            "coordinates": {
+                "latitude": 52.99648,
+                "longitude": 6.93852
+            },
+            "optional": {
+                "website": "https://www.facebook.com/knoalsterfotocollectief/",
+                "level2URL": "https://www.example.com/Knoalster.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A collective of ten whose exhibitions tour the region: a town hall, a cultural center and a 1771 barn."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een collectief van tien waarvan de groepsexposities de regio rondreizen: gemeentehuis, cultureel centrum en een boerderijschuur uit 1771."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Ten Boer",
                 "fullName": "Fotoclub Objectief",
                 "nickName": "fcObjectiefTenBoer"
@@ -192,6 +331,76 @@
                 "nlSpecific": {
                     "fotobondNumber": 108
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Warffum",
+                "fullName": "AFV De Pollen",
+                "nickName": "afvDePollen"
+            },
+            "coordinates": {
+                "latitude": 53.39112,
+                "longitude": 6.55885
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/afvDePollen.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 110
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Winschoten",
+                "fullName": "Fotogroep Oldambt",
+                "nickName": "fgOldambt"
+            },
+            "coordinates": {
+                "latitude": 53.15177,
+                "longitude": 7.03045
+            },
+            "optional": {
+                "website": "https://fgoldambt.wordpress.com/",
+                "level2URL": "https://www.example.com/fgOldambt.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "At the club exhibition every photo carries a QR code that opens that member's complete portfolio."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Bij de clubexpositie staat onder elke foto een QR-code die naar de complete portfolio van die fotograaf leidt."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wirdum",
+                "fullName": "Fotoclub de Wiemers",
+                "nickName": "fcWiemers"
+            },
+            "coordinates": {
+                "latitude": 53.32357,
+                "longitude": 6.78522
+            },
+            "optional": {
+                "website": "https://fotoclubdewiemers.nl/",
+                "level2URL": "https://www.example.com/fcWiemers.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each annual exhibition comes with a \"guess what is pictured\" photo puzzle; the winner gets a gift voucher."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Bij elke jaarlijkse expositie hoort een raadplaat: raad wat er op de foto staat en win een cadeaubon."
+                    }
+                ]
             }
         }
 

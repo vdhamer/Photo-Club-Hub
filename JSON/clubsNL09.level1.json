@@ -9,6 +9,122 @@
 
         {
             "idPlus": {
+                "town": "Castricum",
+                "fullName": "Fotoclub Castricum",
+                "nickName": "fcCastricum"
+            },
+            "coordinates": {
+                "latitude": 52.54560,
+                "longitude": 4.66376
+            },
+            "optional": {
+                "website": "https://fotoclubcastricum.nl/",
+                "level2URL": "https://www.example.com/fcCastricum.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Working groups for nature, street, series and birds go out monthly; members take turns organizing and show results twice a year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Werkgroepen voor natuur, straat, series en vogels gaan maandelijks op pad; leden organiseren bij toerbeurt en tonen de resultaten twee keer per jaar."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 929
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Driehuis",
+                "fullName": "Fotokring Polderlicht",
+                "nickName": "fkPolderlicht"
+            },
+            "coordinates": {
+                "latitude": 52.44965,
+                "longitude": 4.63797
+            },
+            "optional": {
+                "website": "https://fotokringpolderlicht.nl/",
+                "level2URL": "https://www.example.com/fkPolderlicht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1998 by a member who had just moved to the new residential area of Velserbroek."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1998 door een lid dat net was verhuisd naar de nieuwe woonwijk Velserbroek."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 926
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Haarlem",
+                "fullName": "Fotogroep Haarlem",
+                "nickName": "fgHaarlem"
+            },
+            "coordinates": {
+                "latitude": 52.39795,
+                "longitude": 4.64246
+            },
+            "optional": {
+                "website": "https://fotogroephaarlem.nl/",
+                "level2URL": "https://www.example.com/fgHaarlem.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A two-person assignment where members pair up, plus a 'Haarlem assignment' on the railway station and a series-of-five contest."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een tweetallenopdracht waarbij leden samen werken, een Haarlemopdracht over het station en een wedstrijd met series van vijf."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 904
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heemskerk",
+                "fullName": "Fotokring Heemskerk",
+                "nickName": "fkHeemskerk"
+            },
+            "coordinates": {
+                "latitude": 52.49472,
+                "longitude": 4.67949
+            },
+            "optional": {
+                "website": "http://fotokringheemskerk.nl/",
+                "level2URL": "https://www.example.com/fkHeemskerk.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Besides photo days (shooting by day or night), groups team up to produce a photo reportage within a limited amount of time."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Naast fotodagen, overdag en 's nachts, maken groepjes samen een fotoreportage binnen een afgesproken tijd."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 914
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Hoofddorp",
                 "fullName": "AFV Objectief",
                 "nickName": "afvObjectief"
@@ -32,6 +148,64 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 916
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nieuw-Vennep",
+                "fullName": "Fotoclub Positief",
+                "nickName": "fcPositiefNV"
+            },
+            "coordinates": {
+                "latitude": 52.26489,
+                "longitude": 4.62877
+            },
+            "optional": {
+                "website": "https://www.fc-positief.nl/",
+                "level2URL": "https://www.example.com/fcPositiefNV.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every year the club runs photo chains: one member supplies a photo, the next replies with a photo of their own."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk jaar maakt de club fotokettingen: een lid levert een foto aan en het volgende lid antwoordt met een eigen foto."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 913
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Uitgeest",
+                "fullName": "Fotoclub Uitgeest",
+                "nickName": "fcUitgeest"
+            },
+            "coordinates": {
+                "latitude": 52.52877,
+                "longitude": 4.71404
+            },
+            "optional": {
+                "website": "https://www.fotoclubuitgeest.nl/",
+                "level2URL": "https://www.example.com/fcUitgeest.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "For its jubilee the club hid photo fragments in 12 shop windows, forming a puzzle walk where visitors reassembled the picture."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Voor het jubileum hing de club fotofragmenten in 12 etalages: een puzzeltocht waarbij bezoekers de foto weer in elkaar konden zetten."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 911
                 }
             }
         },
@@ -114,6 +288,35 @@
                         "value": "Heeft naast de themaavonden een jaarthema; in 2026-27 is dat 'Zaanse buurten', de wijken van de Zaanstreek."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zandvoort",
+                "fullName": "Fotokring Zandvoort",
+                "nickName": "fkZandvoort"
+            },
+            "coordinates": {
+                "latitude": 52.37216,
+                "longitude": 4.53347
+            },
+            "optional": {
+                "website": "https://fotokringzandvoort.com/",
+                "level2URL": "https://www.example.com/fkZandvoort.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members once ran a photo chain letter: one starting photo, then ten replies, each photographer answering the previous image."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden deden eens een fotokettingbrief: een startfoto en tien reacties, waarbij ieder de vorige foto beantwoordde."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 908
+                }
             }
         }
 

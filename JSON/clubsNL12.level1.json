@@ -10,6 +10,35 @@
         {
             "idPlus": {
                 "town": "Alblasserdam",
+                "fullName": "Fotoclub Alblasserdam",
+                "nickName": "fcAlblasserdam"
+            },
+            "coordinates": {
+                "latitude": 51.86686,
+                "longitude": 4.65836
+            },
+            "optional": {
+                "website": "http://www.fcalblasserdam.nl/",
+                "level2URL": "https://www.example.com/fcAlblasserdam.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A yearly photo relay: each member answers the previous photo in the chain; in 2023 two groups ran parallel chains from the same start photo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een jaarlijkse foto-estafette: elk lid reageert op de vorige foto in de reeks; in 2023 liepen twee ketens vanuit dezelfde startfoto."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1206
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Alblasserdam",
                 "fullName": "Fotoclub Sliedrecht",
                 "nickName": "fcSliedrecht"
             },
@@ -98,6 +127,100 @@
 
         {
             "idPlus": {
+                "town": "Hellevoetsluis",
+                "fullName": "Fotoclub VPR \"de Klinker\"",
+                "nickName": "fcVPR"
+            },
+            "coordinates": {
+                "latitude": 51.83204,
+                "longitude": 4.14117
+            },
+            "optional": {
+                "website": "https://www.fotoclub-vpr.nl/",
+                "level2URL": "https://www.example.com/fcVPR.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A season-long photo chain: a start photo is passed from member to member, each adding a new photo to the chain."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een kettingfoto over het hele seizoen: een startfoto gaat van lid naar lid, en iedereen voegt een nieuwe foto aan de ketting toe."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1242
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hoogvliet",
+                "fullName": "Fotoclub Door de Lens",
+                "nickName": "fcDoorDeLens"
+            },
+            "coordinates": {
+                "latitude": 51.87041,
+                "longitude": 4.36381
+            },
+            "optional": {
+                "badWebsites": [ "http://www.fc-ddl.nl" ],
+                "level2URL": "https://www.example.com/fcDoorDeLens.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each season every member sets a personal photo challenge, and the club also takes on one shared challenge together."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk seizoen stelt ieder lid zichzelf een persoonlijke fotouitdaging, en daarnaast pakt de club samen één gezamenlijke uitdaging op."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "The domain fc-ddl.nl is gone (no longer in DNS when checked on 2026-11-04). The club appears to still meet in Hoogvliet (Rotterdam), but no new website or social page was found."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1201
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Maassluis",
+                "fullName": "Fotoclub FWS Maassluis",
+                "nickName": "fcFWSMaassluis"
+            },
+            "coordinates": {
+                "latitude": 51.92299,
+                "longitude": 4.25951
+            },
+            "optional": {
+                "website": "https://www.fwsmaassluis.nl/",
+                "level2URL": "https://www.example.com/fcFWSMaassluis.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "For its 50th year, members ran a 24-hour photo relay through town, with one or more members on the street each hour; 24 images became an outdoor show."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Voor het 50-jarig bestaan fotografeerden leden 24 uur lang estafette in de stad, elk uur iemand op pad; 24 beelden werden een buitenexpositie."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1208
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Melissant",
                 "fullName": "Fotoclub De Rarekiek",
                 "nickName": "fcRarekiek"
@@ -153,6 +276,64 @@
 
         {
             "idPlus": {
+                "town": "Oud-Beijerland",
+                "fullName": "Fotoclub De Hoeksche Waard",
+                "nickName": "fcHoekscheWaard"
+            },
+            "coordinates": {
+                "latitude": 51.81778,
+                "longitude": 4.42767
+            },
+            "optional": {
+                "website": "https://www.fchw.nl/",
+                "level2URL": "https://www.example.com/fcHoekscheWaard.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Living-room groups: small groups within the club that dig deeper into one genre, such as macro, landscape or black-and-white."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Huiskamergroepen: kleine groepen binnen de club die zich verdiepen in één genre, zoals macro, landschap of zwart-wit."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1236
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ouderkerk aan den IJssel",
+                "fullName": "Amateur Fotogroep Ouderkerk aan den IJssel (AFO)",
+                "nickName": "AFO"
+            },
+            "coordinates": {
+                "latitude": 51.93727,
+                "longitude": 4.63741
+            },
+            "optional": {
+                "website": "https://www.afo-fotogroep.nl/",
+                "level2URL": "https://www.example.com/AFO.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Monthly theme assignment: show an unedited photo next to your edited version, with the edit pushed as far as possible."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Maandthema-opdracht: toon een onbewerkte foto naast je bewerkte versie, met een zo extreem mogelijke bewerking."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1288
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Poortugaal",
                 "fullName": "Fotoclub '80",
                 "nickName": "fc80"
@@ -183,8 +364,37 @@
         {
             "idPlus": {
                 "town": "Rotterdam",
+                "fullName": "Amateur Fotoclub RET",
+                "nickName": "fcRET"
+            },
+            "coordinates": {
+                "latitude": 51.92058,
+                "longitude": 4.50971
+            },
+            "optional": {
+                "website": "https://fc-ret.nl/",
+                "level2URL": "https://www.example.com/fcRET.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Some evenings are 'up for adoption': a member adopts the slot and fills it. Each season also opens with a shared yearly theme like Rhythm (2026)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Sommige avonden zijn 'te adopteren': een lid neemt de avond over en vult hem in. Elk seizoen begint ook met een jaarthema, nu Ritme."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1228
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
                 "fullName": "Amateurfotoclub De Maasstad",
-                "nickName": "AFCMaasstad"
+                "nickName": "afcMaasstad"
             },
             "coordinates": {
                 "latitude": 51.91072,
@@ -192,7 +402,7 @@
             },
             "optional": {
                 "website": "https://fotoclubdemaasstad.nl/",
-                "level2URL": "https://www.example.com/AFCMaasstad.level2.json",
+                "level2URL": "https://www.example.com/afcMaasstad.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -205,6 +415,35 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 1220
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Fotoclub De Phoenix",
+                "nickName": "fcPhoenix"
+            },
+            "coordinates": {
+                "latitude": 51.87753,
+                "longitude": 4.47051
+            },
+            "optional": {
+                "website": "https://fcdephoenix.nl/",
+                "level2URL": "https://www.example.com/fcPhoenix.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club took its name from the neighborhood center 'de Phoenix' that housed it; it started in a garage after a 1972 call-to-action in a newspaper."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club dankt zijn naam aan buurthuis 'de Phoenix', waar hij onderdak vond; hij begon in een garage na een krantenoproep in 1972."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1231
                 }
             }
         },
@@ -269,9 +508,34 @@
 
         {
             "idPlus": {
+                "town": "Schiedam",
+                "fullName": "Fotoclub Schiedam",
+                "nickName": "fcSchiedam"
+            },
+            "coordinates": {
+                "latitude": 51.91718,
+                "longitude": 4.40191
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcSchiedam.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each photo is discussed in 2 steps: someone other than the photographer describes it first, then the photographer explains how it was made."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een foto wordt besproken doordat eerst iemand anders de foto beschrijft, daarna legt de maker uit hoe hij is gemaakt."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Vlaardingen",
                 "fullName": "Amateur Fotografen Vereniging Vlaardingen",
-                "nickName": "AFVV"
+                "nickName": "afvVlaardingen"
             },
             "coordinates": {
                 "latitude": 51.90668,
@@ -279,7 +543,7 @@
             },
             "optional": {
                 "website": "https://www.afvv.nl/",
-                "level2URL": "https://www.example.com/AFVV.level2.json",
+                "level2URL": "https://www.example.com/afvVlaardingen.level2.json",
                 "remark": [
                     {
                         "language": "EN",

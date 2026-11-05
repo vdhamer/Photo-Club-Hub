@@ -10,6 +10,64 @@
         {
             "idPlus": {
                 "town": "Amersfoort",
+                "fullName": "Fotoclub Keistad",
+                "nickName": "fcKeistad"
+            },
+            "coordinates": {
+                "latitude": 52.18413,
+                "longitude": 5.43501
+            },
+            "optional": {
+                "website": "https://www.fotoclubkeistad.nl/",
+                "level2URL": "https://www.example.com/fcKeistad.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded by three photographers who finished the course at photo school Keistad in 2017, hence the name and the tagline 'youngest photo club of Amersfoort'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht door drie fotografen die in 2017 de opleiding bij fotoschool Keistad afrondden; vandaar de naam en 'jongste fotoclub van Amersfoort'."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 774
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Amersfoort",
+                "fullName": "Fotoclub ZoneV",
+                "nickName": "fcZoneV"
+            },
+            "coordinates": {
+                "latitude": 52.18403,
+                "longitude": 5.43491
+            },
+            "optional": {
+                "website": "https://www.zonev.nl/",
+                "level2URL": "https://www.example.com/fcZoneV.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Any member can start a new working group around a genre or theme, and each group presents its work during a club evening at least once a year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk lid kan een werkgroep rond een genre of thema starten; elke groep toont minstens één keer per jaar het werk op een clubavond."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 771
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Amersfoort",
                 "fullName": "Fotokring Eemland",
                 "nickName": "fkEemland"
             },
@@ -32,6 +90,35 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 709
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Austerlitz",
+                "fullName": "Fotogroep De Essentie",
+                "nickName": "fgDeEssentie"
+            },
+            "coordinates": {
+                "latitude": 52.07915,
+                "longitude": 5.31505
+            },
+            "optional": {
+                "website": "https://fg-de-essentie.com/",
+                "level2URL": "https://www.example.com/fgDeEssentie.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members submit a photo each quarter on a set theme; one evening asks whether you should ever discard photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk kwartaal leveren leden een foto in op een vast thema; één avond ging over de vraag of je foto's ooit moet weggooien."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 742
                 }
             }
         },
@@ -67,6 +154,35 @@
 
         {
             "idPlus": {
+                "town": "Driebergen-Rijsenburg",
+                "fullName": "Fotogroep Reflectief",
+                "nickName": "fgReflectief"
+            },
+            "coordinates": {
+                "latitude": 52.05229,
+                "longitude": 5.28348
+            },
+            "optional": {
+                "website": "https://www.fg-reflectief.nl/",
+                "level2URL": "https://www.example.com/fgReflectief.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A small group of photographers, each with a different specialty, who inspire each other by sharing techniques. Motto: \"searching for perfection\"."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een kleine groep fotografen met elk een eigen specialiteit die elkaar inspireren door technieken te delen. Motto: \"zoeken naar perfectie\"."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 772
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Harderwijk",
                 "fullName": "Amateur Fotografen Vereniging De IRIS",
                 "nickName": "afvIris"
@@ -94,6 +210,35 @@
         {
             "idPlus": {
                 "town": "Hilversum",
+                "fullName": "Fotoclub 't Gooi",
+                "nickName": "fcHetGooi"
+            },
+            "coordinates": {
+                "latitude": 52.24135,
+                "longitude": 5.17805
+            },
+            "optional": {
+                "website": "https://fotoclubhetgooi.nl/",
+                "level2URL": "https://www.example.com/fcHetGooi.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "At least once a year the whole club travels to a chosen destination to photograph together, from Friesland to Belgium."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Minstens één keer per jaar reist de hele club naar een bestemming om samen te fotograferen, van Friesland tot België."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 703
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hilversum",
                 "fullName": "Fotoclub De Beeldjagers",
                 "nickName": "fcBeeldjagers"
             },
@@ -114,6 +259,53 @@
                         "value": "Kleine werkgroepjes verdiepen zich elk een half jaar in één onderdeel van de fotografie en presenteren dat aan de club."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hilversum",
+                "fullName": "Fotoclub Perspectief Hilversum",
+                "nickName": "fcPerspectiefHvs"
+            },
+            "coordinates": {
+                "latitude": 52.21049,
+                "longitude": 5.15269
+            },
+            "optional": {
+                "website": "https://fotoclubperspectief.nl/",
+                "level2URL": "https://www.example.com/fcPerspectiefHvs.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every two months a new theme: 'I admire / I photograph in the style of...', where members shoot like a photographer they admire."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke twee maanden een nieuw thema: 'Ik bewonder / ik fotografeer in de stijl van...', waarbij leden fotograferen als een bewonderde fotograaf."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 754
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Hoevelaken",
+                "fullName": "Fotokring Hoevelaken",
+                "nickName": "fkHoevelaken"
+            },
+            "coordinates": {
+                "latitude": 52.17571,
+                "longitude": 5.45770
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fkHoevelaken.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 768
+                }
             }
         },
 
@@ -166,6 +358,35 @@
                         "value": "Opgericht in 2009. Vereniging wordt soms afgekort als NVU."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Huizen",
+                "fullName": "Fotoclub Flevo",
+                "nickName": "fcFlevo"
+            },
+            "coordinates": {
+                "latitude": 52.29986,
+                "longitude": 5.23196
+            },
+            "optional": {
+                "website": "https://www.fotoclub-flevo.nl/",
+                "level2URL": "https://www.example.com/fcFlevo.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Once a year members form chains: each makes a photo answering the previous one in content, technique, mood and color, then passes it on."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Eens per jaar vormen leden ketens: iedereen maakt een foto die past bij de vorige qua inhoud, techniek, sfeer en kleur."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 704
+                }
             }
         },
 
@@ -229,6 +450,140 @@
 
         {
             "idPlus": {
+                "town": "Maarn",
+                "fullName": "Fotokring Heuvelrug",
+                "nickName": "fkHeuvelrug"
+            },
+            "coordinates": {
+                "latitude": 52.06525,
+                "longitude": 5.37597
+            },
+            "optional": {
+                "website": "https://www.fkheuvelrug.nl/",
+                "level2URL": "https://www.example.com/fkHeuvelrug.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Workshops try unusual techniques, such as abstract photography through glass and oil on water, and outings range from city walks to night photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Workshops proberen bijzondere technieken uit, zoals abstracte fotografie met glas en olie op water, en clubtochten gaan van stadswandelingen tot nachtfotografie."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 759
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Muiderberg",
+                "fullName": "Fotocollectief Delta F",
+                "nickName": "fcDeltaF"
+            },
+            "coordinates": {
+                "latitude": 52.32686,
+                "longitude": 5.11708
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcDeltaF.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 744
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nieuwegein",
+                "fullName": "Fotoclub de Ontspanner",
+                "nickName": "fcOntspanner"
+            },
+            "coordinates": {
+                "latitude": 52.02100,
+                "longitude": 5.08276
+            },
+            "optional": {
+                "website": "https://www.fcdeontspanner.nl/",
+                "level2URL": "https://www.example.com/fcOntspanner.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started in 2007 as a nature photography working group; the club says its lively evenings explain the name 'Ontspanner' (relaxer)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Begonnen in 2007 als werkgroep natuurfotografie; de club zegt dat de gezellige avonden de naam 'Ontspanner' verklaren."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 761
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nieuwegein",
+                "fullName": "Fotoclub Nieuwegein",
+                "nickName": "fcNieuwegein"
+            },
+            "coordinates": {
+                "latitude": 52.01726,
+                "longitude": 5.08968
+            },
+            "optional": {
+                "website": "https://www.fotoclubnieuwegein.nl/",
+                "level2URL": "https://www.example.com/fcNieuwegein.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Besides club evenings, there is a monthly portrait group for small groups and a monthly digital evening for learning Photoshop and editing."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Naast clubavonden is er een maandelijkse portretgroep voor kleine groepen en een maandelijkse digitale avond om Photoshop en bewerken te leren."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 751
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nieuwegein",
+                "fullName": "Fotogroep Fotogein",
+                "nickName": "fgFotogein"
+            },
+            "coordinates": {
+                "latitude": 52.04017,
+                "longitude": 5.07513
+            },
+            "optional": {
+                "website": "https://fotogein.nl/",
+                "level2URL": "https://www.example.com/fgFotogein.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every year, members each enter five photos for a Portfolio of the Year, which an invited photographer judges and discusses in an open session."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Jaarlijks zendt elk lid vijf foto's in voor het Portfolio van het jaar; een uitgenodigde fotograaf beoordeelt en bespreekt ze."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 748
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Nijkerk",
                 "fullName": "Vereniging van Natuurfotografen Nijkerk",
                 "nickName": "vnfNijkerk"
@@ -276,6 +631,192 @@
                         "value": "Opgericht in 1977, en naar eigen zeggen de oudste landelijke vereniging voor natuurfotografie in Nederland."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Utrecht",
+                "fullName": "Fotoclub De VerBEELDing 811",
+                "nickName": "fcVerBEELDing811"
+            },
+            "coordinates": {
+                "latitude": 52.08429,
+                "longitude": 5.09890
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcVerBEELDing811.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 765
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Utrecht",
+                "fullName": "Fotoclub Lunetten",
+                "nickName": "fcLunetten"
+            },
+            "coordinates": {
+                "latitude": 52.06418,
+                "longitude": 5.13631
+            },
+            "optional": {
+                "website": "https://www.fotoclublunetten.nl/",
+                "level2URL": "https://www.example.com/fcLunetten.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The 'little suitcase': each member sees only the previous photo, adds their own to a sealed envelope, and all are shown in order at season's end."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het koffertje: je ziet alleen de foto van je voorganger, voegt een eigen foto toe in een dichtgeplakte envelop; aan het eind van het seizoen zie je alles."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 770
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Utrecht",
+                "fullName": "Fotowerkgroep De Verbeelding",
+                "nickName": "fwgDeVerbeelding"
+            },
+            "coordinates": {
+                "latitude": 52.08419,
+                "longitude": 5.09880
+            },
+            "optional": {
+                "badWebsites": [ "https://fwg-deverbeelding.nl/" ],
+                "level2URL": "https://www.example.com/fwgDeVerbeelding.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "The domain fwg-deverbeelding.nl was taken over: on 2026-11-04 it showed a generic page of links to webshops and unrelated sites. The club appears to be active in Utrecht (annual exhibition), but no current website was found."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 755
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veenendaal",
+                "fullName": "Fotoclub Camera Obscura",
+                "nickName": "fcCameraObscura"
+            },
+            "coordinates": {
+                "latitude": 52.03160,
+                "longitude": 5.57726
+            },
+            "optional": {
+                "website": "http://www.fotoclub-cameraobscura.nl/",
+                "level2URL": "https://www.example.com/fcCameraObscura.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "In the yearly Kettingfoto, a member builds a new photo on what they saw in the photo sent to them, and so the image travels along."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In de jaarlijkse Kettingfoto maakt een lid een nieuwe foto op basis van wat hij of zij zag in de toegestuurde foto."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 713
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vinkeveen",
+                "fullName": "Fotogroep AurorA",
+                "nickName": "fgAurorA"
+            },
+            "coordinates": {
+                "latitude": 52.21532,
+                "longitude": 4.93481
+            },
+            "optional": {
+                "website": "https://www.facebook.com/p/Fotogroep-Aurora-61557056615821/",
+                "level2URL": "https://www.example.com/fgAurorA.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-04",
+                        "author": "list maintainer",
+                        "text": "The website www.aurorafoto.nl (source: Fotobond) responded with HTTP 500 and an empty page (4 Nov 2026), so the club's Facebook page is linked instead. The domain still exists, so it is not listed as a bad website."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 769
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vleuten",
+                "fullName": "Fotoclub Vleuten",
+                "nickName": "fcVleuten"
+            },
+            "coordinates": {
+                "latitude": 52.10724,
+                "longitude": 5.01249
+            },
+            "optional": {
+                "website": "https://fotoclubvleuten.nl/",
+                "level2URL": "https://www.example.com/fcVleuten.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club magazine Kontaktdruk comes out three times a year, with members' photos and articles."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het clubblad Kontaktdruk verschijnt driemaal per jaar met foto's en artikelen van leden."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 723
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Woerden",
+                "fullName": "Fotoclub Iris",
+                "nickName": "fcIris"
+            },
+            "coordinates": {
+                "latitude": 52.08128,
+                "longitude": 4.86711
+            },
+            "optional": {
+                "website": "https://fotoclub-iris.com/",
+                "level2URL": "https://www.example.com/fcIris.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A team of red, yellow and blue Playmobil photographers accompany club outings. Their adventures became a photo chain."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een drietal rode, blauwe en gele Playmobil-fotograafjes gaan mee tijdens clubuitstapjes; hun avonturen werden een fotoketting."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 737
+                }
             }
         },
 

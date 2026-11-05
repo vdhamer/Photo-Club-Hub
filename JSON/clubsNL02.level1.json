@@ -9,9 +9,64 @@
 
         {
             "idPlus": {
+                "town": "Dokkum",
+                "fullName": "Fotoclub Skaed & Ljocht",
+                "nickName": "fcSkaedLjocht"
+            },
+            "coordinates": {
+                "latitude": 53.32448,
+                "longitude": 6.00093
+            },
+            "optional": {
+                "website": "https://skaedenljocht.nl/",
+                "level2URL": "https://www.example.com/fcSkaedLjocht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The name is Frisian for 'Shadow & Light'; two Dokkum photographers and some amateurs founded the club in 1959."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De naam is Fries voor 'Schaduw & Licht'; twee Dokkumer fotografen en enkele amateurs richtten de club onder die naam in 1959 op."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Drachten",
+                "fullName": "Fotogroep Noorderlicht",
+                "nickName": "fgNoorderlicht"
+            },
+            "coordinates": {
+                "latitude": 53.10911,
+                "longitude": 6.09481
+            },
+            "optional": {
+                "website": "https://www.fotogroepnoorderlicht.nl/",
+                "level2URL": "https://www.example.com/fgNoorderlicht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Hands-on evenings: instead of reviewing photos, members shoot together using several prepared lighting setups, for example a portrait night."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Doe-avonden: in plaats van foto's bespreken, nemen leden samen foto's met diverse opgebouwde lichtopstellingen, zoals een portretavond."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 202
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Franeker",
                 "fullName": "Fotokring De Zoeker",
-                "nickName": "fkZoeker"
+                "nickName": "fkDeZoeker"
             },
             "coordinates": {
                 "latitude": 53.1862,
@@ -19,7 +74,7 @@
             },
             "optional": {
                 "website": "https://fotokringdezoeker.nl/",
-                "level2URL": "https://www.example.com/fkZoeker.level2.json",
+                "level2URL": "https://www.example.com/fkDeZoeker.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -90,6 +145,112 @@
 
         {
             "idPlus": {
+                "town": "Kimswerd",
+                "fullName": "Fotoclub Focus",
+                "nickName": "fcFocusKimswerd"
+            },
+            "coordinates": {
+                "latitude": 53.14122,
+                "longitude": 5.43766
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcFocusKimswerd.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "For an exhibition aboard a radio lighthouse ship, members could choose from two themes: the Wadden Sea or Harlingen harbor."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Voor een expositie op een radiolichtschip kregen leden een gezamenlijk thema: de Waddenzee of de haven van Harlingen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leeuwarden",
+                "fullName": "Fotoclub Heechterp-Schieringen",
+                "nickName": "fcHeechterpSchieringen"
+            },
+            "coordinates": {
+                "latitude": 53.20421,
+                "longitude": 5.82255
+            },
+            "optional": {
+                "website": "https://www.buurthuisinsulinde.nl/fotoclub-heechterp-schieringen/",
+                "level2URL": "https://www.example.com/fcHeechterpSchieringen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each month a member or guest introduces a theme, such as shooting in the style of a famous photographer; the next month everyone shows results."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke maand introduceert een lid of gast een thema, bijvoorbeeld fotograferen in de stijl van een beroemd fotograaf; de maand erop volgt de bespreking."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leeuwarden",
+                "fullName": "Fotoclub Leeuwarden",
+                "nickName": "fcLeeuwarden"
+            },
+            "coordinates": {
+                "latitude": 53.19178,
+                "longitude": 5.79449
+            },
+            "optional": {
+                "website": "https://fotoclubleeuwarden.nl/",
+                "level2URL": "https://www.example.com/fcLeeuwarden.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Keeps a running list of quick assignments with a single word title such as 'Sporen' (traces) or 'Schoon' (clean)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt een lijst bij van korte 'snelopdrachten' met een eenwoordsthema, zoals 'Sporen' of 'Schoon'."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Makkinga",
+                "fullName": "Fotoclub Harambe Appelscha (FoHa)",
+                "nickName": "fcHarambe"
+            },
+            "coordinates": {
+                "latitude": 52.98030,
+                "longitude": 6.21711
+            },
+            "optional": {
+                "website": "http://fotoclubappelscha.nl/",
+                "level2URL": "https://www.example.com/fcHarambe.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Besides review evenings, a separate hands-on evening lets members practice together, and the club joins the local Kunstroute with a yearly theme."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Naast bespreekavonden is er een aparte doe-avond om samen te oefenen, en de club doet mee aan de Kunstroute met een jaarthema."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 205
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Rottum",
                 "fullName": "Vereniging voor Natuurfotografen Friesland",
                 "nickName": "vnfFriesland"
@@ -111,6 +272,35 @@
                         "value": "Opgericht in 1992. Het jaar begint traditiegetrouw met een spreker van buiten, voorafgegaan door het 'boerenkoolgebeuren'."
                     }
                 ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sneek",
+                "fullName": "Fotoclub 't Filter Sneek",
+                "nickName": "fcHetFilter"
+            },
+            "coordinates": {
+                "latitude": 53.02103,
+                "longitude": 5.64839
+            },
+            "optional": {
+                "website": "https://www.filter-sneek.nl/",
+                "level2URL": "https://www.example.com/fcHetFilter.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photos discussed at club evenings are exhibited publicly afterward, so the public sees the club's work every month."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Foto's die op de clubavond zijn besproken, worden daarna openbaar tentoongesteld, zodat het publiek maandelijks het clubwerk ziet."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 218
+                }
             }
         },
 

@@ -199,6 +199,32 @@
                     }
                 ]
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Purmerend",
+                "fullName": "Fotoclub Purmerend",
+                "nickName": "fcPurmerend"
+            },
+            "coordinates": {
+                "latitude": 52.51043,
+                "longitude": 4.96587
+            },
+            "optional": {
+                "website": "https://www.fotoclubpurmerend.nl/",
+                "level2URL": "https://www.example.com/fcPurmerend.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "An antique balance scale was passed from member to member all season; each made a photo of it within a week."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een antieke weegschaal ging het hele seizoen van lid naar lid; ieder maakte er binnen een week een foto van."
+                    }
+                ]
+            }
         }
 
     ]
