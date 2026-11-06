@@ -55,6 +55,7 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 STRUCTURAL
 
 * Tested with macOS 27.2 and Xcode 27.2 (27B52), Xcode 27.3 beta 1 (27C5020n), iOS 27.3 beta (24C5037i)
+* Built using v3.8.0 of the Photo Club Hub Data package ([release notes](https://github.com/vdhamer/Photo-Club-Hub-Data/releases/tag/v3.8.0)). It adds log entries and the flag for former clubs and museums ([Data#91](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/91)), which [#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891) and [#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892) build on, and `Organization.fullNameLocalizedTown(for:)` ([Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88)), which [#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890) uses. It brings two new packages, WebURL (`karwa/swift-url` 0.4.2) and `apple/swift-system` 1.8.1 ([Data#93](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/93)). Its Core Data model `3_8_0` is an additive change, so existing data migrates in place without a reset. It also carries the bundled copies of the data files listed above.
 
 ---------------------------------------------------------------------------
 
