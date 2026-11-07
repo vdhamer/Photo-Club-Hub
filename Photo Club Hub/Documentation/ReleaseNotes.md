@@ -3,7 +3,10 @@
 TO-DO
 
 * fix location button spinning forever when location access is denied ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
-* show and search the town in the interface language on the Maps and Clubs tabs ([#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890))
+
+USER-FACING CHANGES
+
+- **Find a club or museum by its town in your own language.** The search on the Maps tab now also matches the town as its card shows it, in the language of the app: in Dutch, "Keulen" finds Museum Ludwig in Köln, and in English "Cologne" does. Searching by the town's own name, such as "Köln", still works. The town is Apple's name for the place on the map, so it is sometimes a neighboring village or a district of a city. The section headers on the Clubs tab show the town the same way, and still leave it out when the club's name already contains it. ([#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890), [Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88))
 
 USER-FACING BUG FIXES
 
@@ -12,6 +15,9 @@ USER-FACING BUG FIXES
 - **Birthdays stay visible through the day after.** The People tab now also shows a birthday on the day after, as was intended.
 
 DATA
+
+* `museumsCN.level1.json`
+Fotografiska Shanghai and the Lianzhou Museum of Photography had each other's coordinates, so each pin was in the other's city and each card showed the other's town. Swapped back. The Lianzhou remark no longer blames the coordinates; its website still doesn't respond, which a new `logbook` entry records, without listing it in `badWebsites` because it may only be unreachable from outside China. Both museums are geocoded again on their own, so no data reset is needed. Mirrored identically in the Data package's bundled copy. ([Data#98](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/98))
 
 * `clubsNL15.level1.json`
 Afdeling Brabant West, until now an empty placeholder, lists 41 clubs: the 31 Fotobond clubs on the Fotobond's roster, and 10 independent clubs. Mirrored identically in the Data package's bundled copy.
