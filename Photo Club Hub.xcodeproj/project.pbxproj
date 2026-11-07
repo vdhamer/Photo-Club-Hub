@@ -41,6 +41,7 @@
 		37A22B703009B1E400074B0C /* MapsView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */; };
 		37A2A0AF2FAA587F00EF39A1 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */; };
 		37A2A0B22FAA7DD200EF39A1 /* FilteredMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */; };
+		37F890A42FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F890A32FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift */; };
 		37A2A0E02FAA959F00EF39A1 /* MapsViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */; };
 		37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */; };
 		37A2A0E42FAA9EA100EF39A1 /* MapsViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E32FAA9EA100EF39A1 /* MapsViewMap.swift */; };
@@ -69,6 +70,7 @@
 		37F61871306492E6002DA468 /* ItemFilterStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */; };
 		37F61872306492F8002DA468 /* ElementTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ElementTypeEnum.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */; };
+		37F890A22FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F890A12FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
@@ -171,6 +173,7 @@
 		37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapsView+Screenshot.swift"; sourceTree = "<group>"; };
 		37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMapsView.swift; sourceTree = "<group>"; };
+		37F890A32FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilteredMapsView+Search.swift"; sourceTree = "<group>"; };
 		37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewTitle.swift; sourceTree = "<group>"; };
 		37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewInfo.swift; sourceTree = "<group>"; };
 		37A2A0E32FAA9EA100EF39A1 /* MapsViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewMap.swift; sourceTree = "<group>"; };
@@ -235,6 +238,7 @@
 		37F36C1230078A2400BBDD60 /* Levels_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levels_EN_Light.jpg; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarkerAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerAppearance.swift; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
+		37F890A12FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+InterfaceLanguage.swift"; sourceTree = "<group>"; };
 		92188A9A6BD04E6D8A835019 /* restore-workspace.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "restore-workspace.sh"; sourceTree = "<group>"; };
 		D002615E301128030098588E /* Maps_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_EN_Light.jpg; sourceTree = "<group>"; };
 		D002615F301128030098588E /* Maps_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_NL_Light.jpg; sourceTree = "<group>"; };
@@ -716,6 +720,7 @@
 				D024F11528423BE60055021B /* Sounds.swift */,
 				D0795CE9294FCAC000FA62A8 /* String extensions */,
 				D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */,
+				37F890A12FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift */,
 				D0795CEA294FCB1D00FA62A8 /* View extensions */,
 				375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */,
 			);
@@ -777,6 +782,7 @@
 				37D9D01F306E8842006B4E43 /* MapsViewCard.swift */,
 				37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */,
 				37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */,
+				37F890A32FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
 				37F573C92F3668C7001305F2 /* MapMarkerAppearance.swift */,
 				37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */,
@@ -1117,6 +1123,7 @@
 				37415B222F9D5E96004B4647 /* ReadmeSectionOnConcept.swift in Sources */,
 				D087540C2BC5EE3700FCBDB3 /* PhotographersThumbnails.swift in Sources */,
 				37A2A0B22FAA7DD200EF39A1 /* FilteredMapsView.swift in Sources */,
+				37F890A42FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift in Sources */,
 				377E8C15303B22C200C118A8 /* EmptyListReason.swift in Sources */,
 				37A2A0E62FAAA53400EF39A1 /* MapsViewRemark.swift in Sources */,
 				37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */,
@@ -1183,6 +1190,7 @@
 				376277202FF956140047E77C /* MainTabView1827.swift in Sources */,
 				37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
+				37F890A22FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift in Sources */,
 				D082BE912957806800FF0812 /* LogoPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
