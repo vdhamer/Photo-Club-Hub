@@ -33,21 +33,13 @@ struct FilteredMapsView: View {
         return request
     }()) private var anyOrganizationProbe: FetchedResults<Organization>
 
-    /// The language these cards are shown in: the app's own resolved UI language, so a localized town
-    /// reads in the same language as the rest of the interface. `knownRegions` is en/nl, so this can only
-    /// resolve to a language the site generator also publishes, which keeps the rows written here
-    /// interchangeable with the ones `OrganizationGeocoder` writes (#827).
+    /// The language these cards are shown and searched in: the app's own resolved interface language
+    /// (see `Language.interfaceLanguageRequest`).
     ///
     /// A `@FetchRequest` rather than a lookup per card: SwiftUI maintains it, so the row is not
     /// re-fetched on every body evaluation. Empty only if `Language.initConstants` has not run.
-    @FetchRequest(fetchRequest: {
-        let request = Language.fetchRequest()
-        request.predicate = NSPredicate(format: "isoCode_ =[c] %@", // avoid localization
-                                        Locale.current.language.languageCode?.identifier ?? "en")
-        request.sortDescriptors = [] // required: @FetchRequest traps on a request with nil sortDescriptors
-        request.fetchLimit = 1       // one row is enough
-        return request
-    }()) private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
+    @FetchRequest(fetchRequest: Language.interfaceLanguageRequest)
+    private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
 
     /// Never directly read: it exists only so that any geocoded town or country, new or changed, redraws the cards.
     /// `fetchedOrganizations` alone misses an address rewritten in place: a fetch request reports changes to its
@@ -293,9 +285,13 @@ struct FilteredMapsView: View {
             }
         } else {
             return fetchedOrganizations.filter { organization in
-                organization.isUsable &&
-                organization.fullNameTown.localizedCaseInsensitiveContains(searchText.wrappedValue) }
+                organization.isUsable && matchesSearchText(organization) }
         }
+    }
+
+    /// Applies the search field to one organization (see `matches`, in FilteredMapsView+Search.swift).
+    private func matchesSearchText(_ organization: Organization) -> Bool {
+        Self.matches(organization, searchText: searchText.wrappedValue, language: uiLanguages.first)
     }
 
     /// The rows of the `ForEach`, each with its identity already computed to rule out race conditions.

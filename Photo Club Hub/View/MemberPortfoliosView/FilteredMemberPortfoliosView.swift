@@ -39,6 +39,17 @@ struct FilteredMemberPortfoliosView: View {
         return request
     }()) private var anyMemberProbe: FetchedResults<MemberPortfolio>
 
+    /// The language the section headers show the town in: the app's own resolved interface language
+    /// (see `Language.interfaceLanguageRequest`). Empty only if `Language.initConstants` has not run.
+    @FetchRequest(fetchRequest: Language.interfaceLanguageRequest)
+    private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
+
+    /// Never directly read: it exists only so that a town geocoded after this view appeared redraws the headers.
+    /// A new or changed `LocalizedAddress` does not change any `MemberPortfolio`, so the sectioned request above
+    /// does not report it (#862).
+    @FetchRequest(sortDescriptors: [])
+    private var localizedAddresses: FetchedResults<LocalizedAddress>
+
     /// Bound to the parent's search field; changes here trigger re-filtering without a new fetch.
     private let searchText: Binding<String>
     /// Parent-owned selection: a row sets it to trigger navigation via the parent's `navigationDestination(item:)`,
@@ -72,6 +83,7 @@ struct FilteredMemberPortfoliosView: View {
 
     var body: some View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
+        let titles = sectionTitles(for: sectionedPortfoliosResults) // read Core Data here, on the main thread
         // Like a `guard`: deal with the reasons the list could be empty, then get on with the happy flow
         // below. Every reason but `.listHasRows` implies no section survives the filter, so the two never
         // both show.
@@ -90,7 +102,8 @@ struct FilteredMemberPortfoliosView: View {
                     }
                     .tint(.clubsColor)
                 } header: {
-                    MemberListSectionHeader(title: section.id) // String used to group the elements into Sections
+                    MemberListSectionHeader(name: titles[section.id]?.name ?? section.id, // Strings, not the club
+                                            town: titles[section.id]?.town) // see sectionTitles(for:) and #802
                 } footer: {
                     MemberListSectionFooter(filtCount: filteredPortfolios.count,
                                             unfiltCount: section.endIndex,
@@ -101,6 +114,43 @@ struct FilteredMemberPortfoliosView: View {
                 .id(section.id)
             }
         }
+    }
+
+    // MARK: - section titles
+
+    /// The title users see above each section, keyed by section id (`fullNameTown`): the club name, and the town
+    /// in the interface language unless the name already contains it (`fullNameLocalizedTown`, Data#88).
+    ///
+    /// The title cannot be the section id itself, which must stay the same in every language. Nor can the header
+    /// look up the club itself, because reaching back to the organization traps on a row deleted mid-scroll (#802).
+    /// So the titles are computed here, in `body` on the main thread, and the header and the `ForEach` content,
+    /// which SwiftUI may evaluate on a background thread, read only this dictionary.
+    ///
+    /// Name and town are kept apart because the header sets the town a size smaller. Splitting the composed
+    /// string later would fail on parentheses inside a name ("... (AFO)") or a town ("Beuningen (Gld)").
+    /// A section without a usable row, or a missing `Language` row, gets no entry: its header falls back to
+    /// the section id.
+    private func sectionTitles(for sections: SectionedFetchResults<String, MemberPortfolio>)
+                              -> [String: (name: String, town: String?)] {
+        guard let uiLanguage = uiLanguages.first else { return [:] } // Language table not seeded yet
+        var titles: [String: (name: String, town: String?)] = [:]
+        for section in sections {
+            guard let organization = section.first(where: { $0.isUsable })?.organization_ else { continue }
+            titles[section.id] = Self.sectionTitle(for: organization, language: uiLanguage)
+        }
+        return titles
+    }
+
+    /// One section's title: the club name, and its town in `language` unless the name already contains it.
+    ///
+    /// `fullNameLocalizedTown` returns either the name alone or "name (town)", so the town is what follows the name
+    /// and " (", minus the closing ")". Cutting by the name's length rather than searching for " (" keeps any
+    /// parentheses inside the name or the town where they belong.
+    static func sectionTitle(for organization: Organization, language: Language) -> (name: String, town: String?) {
+        let name = organization.fullName
+        let title = organization.fullNameLocalizedTown(for: language) // either `name` or "name (town)"
+        let town: String? = title == name ? nil : String(title.dropFirst(name.count + 2).dropLast())
+        return (name: name, town: town)
     }
 
     // MARK: - explaining an empty list

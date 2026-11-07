@@ -12,28 +12,17 @@ import SwiftUI
 /// with any trailing "(town)" set one font size smaller than the club name itself.
 /// Used by `FilteredMemberPortfoliosView` as the `header` of each club's `Section`.
 ///
+/// It holds only strings, never the club: reaching back to `organization_` traps on a row deleted mid-scroll (#802).
+///
 /// Minor differences between the iOS 26 and 17/18 versions are handled by logic rather than having 2 file copies:
 /// - on iOS 26+ the capsule is Liquid Glass tinted with the Clubs tab color, while
 /// - iOS 17/18 gets a gradient of system fill colors.
 struct MemberListSectionHeader: View {
 
-    let title: String // club name identifying the section/club
-
-    /// Splits `title` into the club name and, when present, the trailing `" (town)"`.
-    ///
-    /// `title` is `Organization.fullNameTown`, which appends `" (town)"` *only* when the club name
-    /// does not already name its own town ("Fotogroep Waalre" in Waalre stays unsuffixed, while
-    /// "Fotogroep Aalst" in Waalre becomes "Fotogroep Aalst (Waalre)"). So the suffix is optional,
-    /// and a title without one is left entirely as the name.
-    ///
-    /// This re-splits a string the Data package composed. Passing name and town down separately
-    /// would be cleaner, but the caller deliberately holds only the section id: reaching back to
-    /// `organization_` traps on a row deleted mid-scroll (#802).
-    private var titleParts: (name: String, town: String?) {
-        guard title.hasSuffix(")"),
-              let openParen = title.range(of: " (", options: .backwards) else { return (title, nil) }
-        return (String(title[title.startIndex..<openParen.lowerBound]), String(title[openParen.lowerBound...]))
-    }
+    let name: String // club name, as the club writes it
+    /// The club's town in the interface language, or nil when the name already contains the town
+    /// ("Fotogroep Waalre" in Waalre has none, "Fotogroep Aalst" in Waalre has "Waalre").
+    let town: String?
 
     /// The club name at `.title2` with any `" (town)"` one step smaller at `.title3`.
     ///
@@ -41,10 +30,9 @@ struct MemberListSectionHeader: View {
     /// `multilineTextAlignment` still apply across both parts. Neither part sets a color: the
     /// whole label takes `Color.primary` from `body`.
     private var styledTitle: Text {
-        let parts = titleParts
-        let name = Text(verbatim: parts.name).font(.title2)
-        guard let town = parts.town else { return name }
-        return name + Text(verbatim: town).font(.title3)
+        let nameText = Text(verbatim: name).font(.title2)
+        guard let town else { return nameText }
+        return nameText + Text(verbatim: " (\(town))").font(.title3)
     }
 
     var body: some View {
@@ -113,7 +101,8 @@ private extension View {
 /// `.plain` List. Rendering the header on its own is misleading, because a standalone `Shape`
 /// sizes itself differently and `List` supplies its own foreground style to section headers.
 private struct HeaderInPlainList: View {
-    let title: String
+    let name: String
+    let town: String?
 
     var body: some View {
         List {
@@ -121,7 +110,7 @@ private struct HeaderInPlainList: View {
                 Text(verbatim: "Jan Jansen")
                 Text(verbatim: "Piet Pietersen")
             } header: {
-                MemberListSectionHeader(title: title)
+                MemberListSectionHeader(name: name, town: town)
             }
         }
             .listStyle(.plain) // as used by MemberPortfolioView, which pins the header while scrolling
@@ -129,21 +118,27 @@ private struct HeaderInPlainList: View {
 }
 
 #Preview("Light mode") {
-    HeaderInPlainList(title: "Fotogroep de Gender (Eindhoven)")
+    HeaderInPlainList(name: "Fotogroep de Gender", town: "Eindhoven")
         .preferredColorScheme(.light)
 }
 
 #Preview("Dark mode") {
-    HeaderInPlainList(title: "Fotogroep de Gender (Eindhoven)")
+    HeaderInPlainList(name: "Fotogroep de Gender", town: "Eindhoven")
         .preferredColorScheme(.dark)
 }
 
 #Preview("Long name (wraps to 2 lines)") {
-    HeaderInPlainList(title: "A Very Long Photo Club Name That Might Overflow The Capsule Width (Istanbul)")
+    HeaderInPlainList(name: "A Very Long Photo Club Name That Might Overflow The Capsule Width", town: "Istanbul")
 }
 
-/// The other branch of `titleParts`: `fullNameTown` omits the town when the club name already
-/// contains it, so there is no "(town)" to shrink and the whole title stays at `.title2`.
+/// No town: `fullNameLocalizedTown` omits it when the club name already contains it,
+/// so there is no "(town)" to shrink and the whole title stays at `.title2`.
 #Preview("No town suffix") {
-    HeaderInPlainList(title: "Fotogroep Waalre")
+    HeaderInPlainList(name: "Fotogroep Waalre", town: nil)
+}
+
+/// Parentheses inside the town, as Apple writes "Beuningen (Gld)": name and town arrive separately,
+/// so the inner parenthesis is not mistaken for the start of the town.
+#Preview("Parentheses in town") {
+    HeaderInPlainList(name: "Shooters Fotoclub", town: "Beuningen (Gld)")
 }
