@@ -14,19 +14,26 @@
                 "nickName": "LMoP Lianzhou"
             },
             "coordinates": {
-                "latitude": 31.24236,
-                "longitude": 121.45586
+                "latitude": 24.78468,
+                "longitude": 112.38392
             },
             "optional": {
                 "website": "http://www.lmop.org.cn",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
+                        "value": "The museum's website doesn't currently work, but the museum is in Lianzhou, China."
                     },
                     {
                         "language": "NL",
-                        "value": "Het webadres en zelfs de lengte- en breedtegraad van het in Lianzhou gelegen museum geven soms problemen."
+                        "value": "De website van het in Lianzhou gelegen museum werkt momenteel niet."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-07",
+                        "author": "list maintainer",
+                        "text": "The website http://www.lmop.org.cn did not respond on 2026-11-07 (no connection, no HTTP status), checked from the Netherlands. It may be unreachable from outside China rather than gone, so it is not listed in badWebsites. The location was checked the same day: the corrected coordinates (Data#98) match OpenStreetMap and Google Maps."
                     }
                 ]
             }
@@ -39,8 +46,8 @@
                 "nickName": "Fotografiska CN"
             },
             "coordinates": {
-                "latitude": 24.78468,
-                "longitude": 112.38392
+                "latitude": 31.24236,
+                "longitude": 121.45586
             },
             "optional": {
                 "website": "https://shanghai.fotografiska.com/en",
