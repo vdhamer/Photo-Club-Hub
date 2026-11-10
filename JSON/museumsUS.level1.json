@@ -11,7 +11,7 @@
             "idPlus": {
                 "town": "Riverside",
                 "fullName": "UCR/California Museum of Photography",
-                "nickName": "UCR/CMP"
+                "nickName": "UCR_CMP"
             },
             "coordinates": {
                 "latitude": 33.9816,
@@ -37,7 +37,7 @@
             "idPlus": {
                 "town": "Rochester",
                 "fullName": "George Eastman Museum",
-                "nickName": "George Eastman House"
+                "nickName": "George_Eastman_House"
             },
             "coordinates": {
                 "latitude": 43.152147,
@@ -63,7 +63,7 @@
             "idPlus": {
                 "town": "New York City",
                 "fullName": "International Center of Photography Museum",
-                "nickName": "ICP NY"
+                "nickName": "ICP_NY"
             },
             "coordinates": {
                 "latitude": 40.718028,
@@ -89,7 +89,7 @@
             "idPlus": {
                 "town": "New York City",
                 "fullName": "Fotografiska New York",
-                "nickName": "Fotografiska NY"
+                "nickName": "Fotografiska_NY"
             },
             "coordinates": {
                 "latitude": 40.739278,
@@ -115,7 +115,7 @@
             "idPlus": {
                 "town": "New York City",
                 "fullName": "Museum of Modern Art New York",
-                "nickName": "MoMA NY"
+                "nickName": "MoMA_NY"
             },
             "coordinates": {
                 "latitude": 40.761667,
@@ -141,7 +141,7 @@
             "idPlus": {
                 "town": "Washington D.C.",
                 "fullName": "National Geographic Museum",
-                "nickName": "NatGeo Washington"
+                "nickName": "NatGeo_Washington"
             },
             "coordinates": {
                 "latitude": 38.90503,

@@ -45,7 +45,7 @@
             "idPlus": {
                 "town": "Dublin",
                 "fullName": "National Photographic Archive",
-                "nickName": "NLI Dublin"
+                "nickName": "NLI_Dublin"
             },
             "coordinates": {
                 "latitude": 53.345279,
@@ -71,7 +71,7 @@
             "idPlus": {
                 "town": "Gurugram",
                 "fullName": "Museo Camera Centre for the Photographic Arts",
-                "nickName": "Museo Camera"
+                "nickName": "Museo_Camera"
             },
             "coordinates": {
                 "latitude": 28.46969,
@@ -97,7 +97,7 @@
             "idPlus": {
                 "town": "Lausanne",
                 "fullName": "Photo Elysée",
-                "nickName": "Photo Elysée"
+                "nickName": "Photo_Elysee"
             },
             "coordinates": {
                 "latitude": 46.5098,
@@ -127,7 +127,7 @@
             "idPlus": {
                 "town": "Madrid",
                 "fullName": "Sala Canal Isabel II",
-                "nickName": "SCI2 Madrid"
+                "nickName": "SCI2_Madrid"
             },
             "coordinates": {
                 "latitude": 40.43948,
@@ -152,7 +152,7 @@
             "idPlus": {
                 "town": "Oslo",
                 "fullName": "Fotografiska Oslo",
-                "nickName": "Fotografiska NO"
+                "nickName": "Fotografiska_NO"
             },
             "coordinates": {
                 "latitude": 59.91661,
@@ -204,7 +204,7 @@
             "idPlus": {
                 "town": "Paris",
                 "fullName": "Henri Cartier-Bresson Foundation",
-                "nickName": "Fondation HCB"
+                "nickName": "Fondation_HCB"
             },
             "coordinates": {
                 "latitude": 48.8629,
@@ -230,7 +230,7 @@
             "idPlus": {
                 "town": "Porto",
                 "fullName": "Portuguese Centre of Photography",
-                "nickName": "CPF Porto"
+                "nickName": "CPF_Porto"
             },
             "coordinates": {
                 "latitude": 41.144656,
@@ -308,7 +308,7 @@
             "idPlus": {
                 "town": "Tallinn",
                 "fullName": "Fotografiska Tallinn",
-                "nickName": "Fotografiska EE"
+                "nickName": "Fotografiska_EE"
             },
             "coordinates": {
                 "latitude": 59.43855,
@@ -334,7 +334,7 @@
             "idPlus": {
                 "town": "Thessaloniki",
                 "fullName": "MOMus–Thessaloniki Museum of Photography",
-                "nickName": "MOMus Thessaloniki"
+                "nickName": "MOMus_Thessaloniki"
             },
             "coordinates": {
                 "latitude": 40.63295,
@@ -342,7 +342,7 @@
             },
             "optional": {
                 "website": "https://momus.gr/en/museum/thessaloniki-museum-photography#museum",
-                "wikipedia": "https://en.wikipedia.org/wiki/MOMus–Thessaloniki_Museum_of_Photography",
+                "wikipedia": "https://en.wikipedia.org/wiki/MOMus%E2%80%93Thessaloniki_Museum_of_Photography",
                 "remark": [
                     {
                         "language": "EN",

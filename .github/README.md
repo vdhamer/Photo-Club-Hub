@@ -709,7 +709,7 @@ Here is an example of the format of a Level 1 file containing only one photo clu
             "idPlus": {
                 "town": "New York",
                 "fullName": "Fotografiska New York",
-                "nickName": "Fotografiska NYC"
+                "nickName": "Fotografiska_NYC"
             },
             "coordinates": {
                 "latitude": 40.739278,

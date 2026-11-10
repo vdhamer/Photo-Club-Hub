@@ -11,7 +11,7 @@
             "idPlus": {
                 "town": "Sakata",
                 "fullName": "Ken Domon Museum of Photography",
-                "nickName": "土門拳記念館"
+                "nickName": "KenDomon_Sakata"
             },
             "coordinates": {
                 "latitude": 38.891299,
@@ -37,7 +37,7 @@
             "idPlus": {
                 "town": "Tokyo",
                 "fullName": "Tokyo Museum of Photography",
-                "nickName": "TOP Tokyo"
+                "nickName": "TOP_Tokyo"
             },
             "coordinates": {
                 "latitude": 35.6417,

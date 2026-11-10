@@ -37,7 +37,7 @@
             "idPlus": {
                 "town": "Amsterdam",
                 "fullName": "Huis Marseille Museum for Photography",
-                "nickName": "Marseille Adam"
+                "nickName": "Marseille_Adam"
             },
             "coordinates": {
                 "latitude": 52.367561,
@@ -88,7 +88,7 @@
             "idPlus": {
                 "town": "Axel",
                 "fullName": "Witte’s Museum voor Fotografie en Radio",
-                "nickName": "Witte’s Museum"
+                "nickName": "Wittes_Museum"
             },
             "coordinates": {
                 "latitude": 51.269286,
@@ -113,7 +113,7 @@
             "idPlus": {
                 "town": "Den Haag",
                 "fullName": "Fotomuseum Den Haag",
-                "nickName": "FM Den Haag"
+                "nickName": "FM_DenHaag"
             },
             "coordinates": {
                 "latitude": 52.090556,
@@ -190,7 +190,7 @@
             "idPlus": {
                 "town": "Hilversum",
                 "fullName": "Museum Hilversum",
-                "nickName": "Museum Hilversum"
+                "nickName": "Museum_Hilversum"
             },
             "coordinates": {
                 "latitude": 52.224097,
@@ -216,7 +216,7 @@
             "idPlus": {
                 "town": "Maastricht",
                 "fullName": "Fotomuseum aan het Vrijthof",
-                "nickName": "F/M Vrijthof"
+                "nickName": "FM_Vrijthof"
             },
             "coordinates": {
                 "latitude": 50.848333,
@@ -242,7 +242,7 @@
             "idPlus": {
                 "town": "Rotterdam",
                 "fullName": "Nederlands Fotomuseum",
-                "nickName": "NFM Rdam"
+                "nickName": "NFM_Rdam"
             },
             "coordinates": {
                 "latitude": 51.90296,
@@ -294,7 +294,7 @@
             "idPlus": {
                 "town": "Zierikzee",
                 "fullName": "Cameramuseum Zierikzee",
-                "nickName": "CM Zierikzee"
+                "nickName": "CM_Zierikzee"
             },
             "coordinates": {
                 "latitude": 51.6501,

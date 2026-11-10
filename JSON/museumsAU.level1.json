@@ -11,7 +11,7 @@
             "idPlus": {
                 "town": "Ballarat",
                 "fullName": "National Centre for Photography",
-                "nickName": "NCfP Au"
+                "nickName": "NCfP_Au"
             },
             "coordinates": {
                 "latitude": -37.5624,
@@ -37,7 +37,7 @@
             "idPlus": {
                 "town": "Melbourne",
                 "fullName": "Centre for Contemporary Photography",
-                "nickName": "CCP Melbourne"
+                "nickName": "CCP_Melbourne"
             },
             "coordinates": {
                 "latitude": -37.797222,
@@ -63,7 +63,7 @@
             "idPlus": {
                 "town": "Sydney",
                 "fullName": "Australian Centre for Photography",
-                "nickName": "ACP Sydney"
+                "nickName": "ACP_Sydney"
             },
             "coordinates": {
                 "latitude": -33.8788,

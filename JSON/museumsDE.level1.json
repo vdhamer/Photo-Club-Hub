@@ -11,7 +11,7 @@
             "idPlus": {
                 "town": "Berlin",
                 "fullName": "Fotografiska Berlin",
-                "nickName": "Fotografiska DE"
+                "nickName": "Fotografiska_DE"
             },
             "coordinates": {
                 "latitude": 52.52728,
@@ -37,7 +37,7 @@
             "idPlus": {
                 "town": "Berlin",
                 "fullName": "Museum für Fotografie",
-                "nickName": "MfürF Berlin"
+                "nickName": "MfuerF_Berlin"
             },
             "coordinates": {
                 "latitude": 52.507778,
@@ -67,7 +67,7 @@
             "idPlus": {
                 "town": "Köln",
                 "fullName": "Museum Ludwig",
-                "nickName": "Museum Ludwig"
+                "nickName": "Museum_Ludwig"
             },
             "coordinates": {
                 "latitude": 50.94083,

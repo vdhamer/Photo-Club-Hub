@@ -716,7 +716,7 @@ Hier is een voorbeeld van het formaat van een Level 1-bestand met slechts één 
             "idPlus": {
                 "town": "New York",
                 "fullName": "Fotografiska New York",
-                "nickName": "Fotografiska NYC"
+                "nickName": "Fotografiska_NYC"
             },
             "coordinates": {
                 "latitude": 40.739278,
@@ -763,7 +763,7 @@ Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSO
 - `town` en `fullName` identificeren samen een club of museum.
   - Het is dus mogelijk om twee clubs met dezelfde naam in verschillende plaatsen te hebben. Twee aparte clubs of musea met een identieke naam in dezelfde plaats zou verwarrend zijn, en zou door de app als één entiteit worden behandeld totdat de data over de oorspronkelijke `town`/`fullName`-combinatie uit de database op het apparaat is verwijderd. Het verwijderen van verouderde `Organization`-records gebeurt helaas nog niet automatisch.
   - Probeer geen van beide teksten te wijzigen. Omdat de app de nieuwe ID niet koppelt aan de oorspronkelijke ID, leidt een wijziging ertoe dat de app twee verschillende clubs of musea toont.
-- `nickName` is een korte versie van `fullName` die wordt getoond in krappe ruimtes zoals op kaarten. Het mag elke tekst zijn, maar houd het kort.
+- `nickName` is een korte versie van `fullName` die ook als sleutel dient: het wordt de naam van het Level 2-bestand van een club en een deel van de webadressen van de club, en het moet gelijk zijn in het Level 1- en Level 2-bestand van de club. Daarom mag het alleen ASCII-letters, cijfers en `_` bevatten, zoals in `fgDeGender` of `Fotografiska_NYC`. De app toont het ook in krappe ruimtes, dus houd het kort.
 - `coordinates` wordt gebruikt om de club op de kaart te tekenen en om gelokaliseerde versies van de namen van plaatsen en landen te [genereren](https://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/).
 - `latitude` moet in het bereik [-90.0, +90.0] liggen, waarbij negatieve waarden worden gebruikt voor het zuidelijk halfrond (bijvoorbeeld Australië).
 - `longitude` moet in het bereik [-180.0, +180.0] liggen, waarbij negatieve waarden worden gebruikt voor het westelijk halfrond (bijvoorbeeld de VS).</p>

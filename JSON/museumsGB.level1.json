@@ -11,7 +11,7 @@
             "idPlus": {
                 "town": "London",
                 "fullName": "The Photographers’ Gallery",
-                "nickName": "TPG London"
+                "nickName": "TPG_London"
             },
             "coordinates": {
                 "latitude": 51.5148,
@@ -37,7 +37,7 @@
             "idPlus": {
                 "town": "London",
                 "fullName": "The Victoria & Albert Museum",
-                "nickName": "V&A London"
+                "nickName": "VandA_London"
             },
             "coordinates": {
                 "latitude": 51.496389,
