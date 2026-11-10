@@ -72,8 +72,8 @@
 #
 # Release labels (Project#25):
 #   The `release` column marks where each iOS release falls on the line-count
-#   graphs. A release is a tag in this repo named v<digits>... (plus the
-#   one-off typo v.2.2.9); the b<number> build tags are not releases.
+#   graphs. A release is a tag in this repo named v<digits>...; the b<number>
+#   build tags are not releases.
 #   A tag is made after its release commit, often on the other Mac, so the
 #   commit's own row cannot be labeled when it is written. Instead every run
 #   looks for release tags that appear nowhere in the column yet and writes
@@ -221,7 +221,7 @@ fi
 # The date of the tagged commit: dereferenced (*) for an annotated tag.
 TAG_DATE='%(if)%(*objectname)%(then)%(*committerdate:short-local)%(else)%(committerdate:short-local)%(end)'
 RELEASE_TAGS="$(git -C "$REPO_ROOT" for-each-ref --sort=v:refname \
-    --format="$TAG_DATE %(refname:short)" 'refs/tags/v[.0-9]*' 2>/dev/null)" || {
+    --format="$TAG_DATE %(refname:short)" 'refs/tags/v[0-9]*' 2>/dev/null)" || {
     echo "warning: could not list release tags; no new release labels" >&2
     RELEASE_TAGS=""
 }
@@ -267,9 +267,9 @@ LABELED="$(mktemp)"                                # "tag -> date" lines for the
       awk -F, -v OFS=, -v n="$NCOLS" -v today="$DATE" -v newRow="$NEW_ROW" \
           -v labeled="$LABELED" '
         # True if version tag a is newer than b, comparing the dot-separated
-        # numbers after the leading "v" (or the typo "v.") one by one.
+        # numbers after the leading "v" one by one.
         function newer(a, b,    x, y, i, k, l) {
-            sub(/^v\.?/, "", a); sub(/^v\.?/, "", b)
+            sub(/^v/, "", a); sub(/^v/, "", b)
             k = split(a, x, "."); l = split(b, y, "."); if (l > k) k = l
             for (i = 1; i <= k; i++) if (x[i] + 0 != y[i] + 0) return x[i] + 0 > y[i] + 0
             return 0
