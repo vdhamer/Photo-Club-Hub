@@ -27,7 +27,7 @@ enum BuildStampKey: String, CaseIterable {
 
     /// The `_preference`-suffixed names used up to and including release 3.0.x.
     ///
-    /// Nothing reads these any more. They are swept once on launch purely so that `defaults read`
+    /// Nothing reads these anymore. They are swept once on launch purely so that `defaults read`
     /// and the Settings pane do not keep reporting values from a build that is long gone. Mirrors the
     /// `prevUserDefaultsKeys` approach in the Data package's `Settings.swift`.
     static let deprecatedKeys: [String] = ["version_preference",
