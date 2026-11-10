@@ -5,11 +5,12 @@
 # Produces one CSV row:
 #   date,files,code,comments,blanks,tests,openIssues,closedIssues,
 #   files_HTML,code_HTML,comments_HTML,blanks_HTML,
-#   files_Data,code_Data,comments_Data,blanks_Data,expertises
+#   files_Data,code_Data,comments_Data,blanks_Data,expertises,release
 #   Columns are grouped by repository: the iOS app first (through closedIssues),
 #   then Photo-Club-Hub-HTML, then Photo-Club-Hub-Data. Each repo's block runs
-#   files,code,comments,blanks in that order. `expertises` sits last because it
-#   measures the data, not any repo's source.
+#   files,code,comments,blanks in that order. `expertises` follows because it
+#   measures the data, not any repo's source. `release` is last and is the only
+#   text column.
 #   files/code/comments/blanks : from `cloc` over all Swift in the repo
 #                                (app sources + tests), matching the historical
 #                                LineCount.xlsx "SwiftUI version" columns.
@@ -18,6 +19,10 @@
 #                                left empty if gh is unavailable or offline.
 #   expertises                 : number of supported expertises, counted in
 #                                JSON/root.level0.json; empty if jq is missing.
+#   release                    : the iOS app's version tag released as of this
+#                                row, e.g. "v3.0.4", or empty. Unlike the other
+#                                columns this is not measured today: see
+#                                "Release labels" below.
 #   *_HTML / *_Data            : the same Swift file/code/comment/blank counts for
 #                                two sibling repositories Photo-Club-Hub-HTML and
 #                                Photo-Club-Hub-Data. These are counted from
@@ -61,6 +66,32 @@
 #     LineCount.csv (see .gitattributes); highest-code is deterministic
 #     (order-independent) and self-heals the file on the next run.
 #   - Data rows are kept sorted by date; the header stays on line 1.
+#   - Rows with fewer columns than the header (written before a column was
+#     added, and possibly brought back by merging an old branch) are padded
+#     with empty cells.
+#
+# Release labels (Project#25):
+#   The `release` column marks where each iOS release falls on the line-count
+#   graphs. A release is a tag in this repo named v<digits>... (plus the
+#   one-off typo v.2.2.9); the b<number> build tags are not releases.
+#   A tag is made after its release commit, often on the other Mac, so the
+#   commit's own row cannot be labeled when it is written. Instead every run
+#   looks for release tags that appear nowhere in the column yet and writes
+#   each one onto the latest row dated on or before the tag's date: that row's
+#   counts are what shipped. A row on the tag's own date often does not exist
+#   (no commit that day). Labels already in the column are never moved, so the
+#   first run fills in the history and later runs only add.
+#   A row holds one label. When two releases land on the same row, the newer
+#   version wins and the older one is dropped: two releases a day apart mean
+#   the first was superseded before anyone used it (v2.2.2 and v2.2.3, both
+#   on 2022-10-23). A dropped tag stays dropped, because its row already
+#   carries a newer one.
+#   A tag's date is the date of the commit it tags, also for an annotated
+#   tag, whose own date can be much later (v2.1.1 was tagged weeks after its
+#   commit).
+#
+#   Example: v3.0.4 is tagged on 2026-10-25, and that day has a row. The next
+#   run writes "v3.0.4" into the `release` cell of the 2026-10-25 row.
 #
 set -euo pipefail
 
@@ -184,48 +215,110 @@ if [[ -z "$expertises" ]]; then
     echo "warning: could not count expertises in $LEVEL0_JSON; leaving column empty" >&2
 fi
 
+# Release tags as "YYYY-MM-DD tag" lines, in version order (see "Release
+# labels" above). Non-fatal: without git the labels already in the CSV are kept
+# and no new ones are added.
+# The date of the tagged commit: dereferenced (*) for an annotated tag.
+TAG_DATE='%(if)%(*objectname)%(then)%(*committerdate:short-local)%(else)%(committerdate:short-local)%(end)'
+RELEASE_TAGS="$(git -C "$REPO_ROOT" for-each-ref --sort=v:refname \
+    --format="$TAG_DATE %(refname:short)" 'refs/tags/v[.0-9]*' 2>/dev/null)" || {
+    echo "warning: could not list release tags; no new release labels" >&2
+    RELEASE_TAGS=""
+}
+
 NEW_ROW="$DATE,$files,$code,$comments,$blanks,$tests,$openIssues,$closedIssues"
 NEW_ROW="$NEW_ROW,$filesHTML,$codeHTML,$commentsHTML,$blanksHTML"
 NEW_ROW="$NEW_ROW,$filesData,$codeData,$commentsData,$blanksData,$expertises"
 
-# --- write row (dedupe by date, keep sorted) ---------------------------------
-# Drop any pre-existing row for today so this fresh recount is authoritative,
-# then append it. Collapse any remaining duplicate dates (only possible from a
-# `merge=union` merge) keeping the highest `code` value — a deterministic,
-# order-independent rule. Today's date is now unique, so it is unaffected by the
-# highest-code rule and always reflects this recount.
+# --- write row (dedupe by date, label releases, keep sorted) ------------------
+# Today's existing row is replaced by this fresh recount, so the recount is
+# authoritative; only its release label carries over. Any remaining duplicate
+# dates (only possible from a `merge=union` merge) collapse to the row with the
+# highest `code` value, a deterministic, order-independent rule, again keeping
+# the newest release label found on any of the duplicates. Today's date is unique
+# after the replacement, so it is unaffected by the highest-code rule.
 # The layout is fixed, so the header comes from this constant rather than being
 # patched column-by-column as it used to be. That incremental style only worked
-# while new columns went on the end; with `expertises` now last it could no
-# longer place anything correctly.
+# while new columns went on the end; with `expertises` last it could no longer
+# place anything correctly.
 HEADER="date,files,code,comments,blanks,tests,openIssues,closedIssues"
 HEADER="$HEADER,files_HTML,code_HTML,comments_HTML,blanks_HTML"
 HEADER="$HEADER,files_Data,code_Data,comments_Data,blanks_Data,expertises"
-# Refuse a CSV written in an older layout instead of restamping the header over
-# it: the values would silently shift into the wrong columns.
+# The layout before `release` was added. A CSV in it is widened on this run
+# rather than refused: the new column goes on the end, so no value moves.
+HEADER_BEFORE_RELEASE="$HEADER"
+HEADER="$HEADER,release"
+NCOLS=18
+# Refuse a CSV in any other layout instead of restamping the header over it:
+# the values would silently shift into the wrong columns.
 CURRENT_HEADER="$(head -n 1 "$CSV")"
-if [[ "$CURRENT_HEADER" != "$HEADER" ]]; then
+if [[ "$CURRENT_HEADER" != "$HEADER" && "$CURRENT_HEADER" != "$HEADER_BEFORE_RELEASE" ]]; then
     echo "error: unexpected header in $CSV" >&2
     echo "  found:    $CURRENT_HEADER" >&2
     echo "  expected: $HEADER" >&2
     exit 1
 fi
 TMP="$(mktemp)"
+LABELED="$(mktemp)"                                # "tag -> date" lines for the report
 {
     printf '%s\n' "$HEADER"
-    {
-        tail -n +2 "$CSV" | grep -v "^$DATE,"
-        printf '%s\n' "$NEW_ROW"
-    } | awk -F, 'NF {
-            if (!($1 in best) || $3 + 0 >= code[$1]) { best[$1] = $0; code[$1] = $3 + 0 }
+    tail -n +2 "$CSV" \
+    | TAG_LIST="$RELEASE_TAGS" \
+      awk -F, -v OFS=, -v n="$NCOLS" -v today="$DATE" -v newRow="$NEW_ROW" \
+          -v labeled="$LABELED" '
+        # True if version tag a is newer than b, comparing the dot-separated
+        # numbers after the leading "v" (or the typo "v.") one by one.
+        function newer(a, b,    x, y, i, k, l) {
+            sub(/^v\.?/, "", a); sub(/^v\.?/, "", b)
+            k = split(a, x, "."); l = split(b, y, "."); if (l > k) k = l
+            for (i = 1; i <= k; i++) if (x[i] + 0 != y[i] + 0) return x[i] + 0 > y[i] + 0
+            return 0
         }
-        END { for (d in best) print best[d] }' \
-      | sort -t, -k1,1
+        # Sets label[d] to the newest of its current tag and the space-separated
+        # tags in `tags` (cells written before the one-label rule held several).
+        function addLabels(d, tags,    t, k, i) {
+            k = split(tags, t, " ")
+            for (i = 1; i <= k; i++)
+                if (label[d] == "" || newer(t[i], label[d])) label[d] = t[i]
+        }
+        # Pads a row to n fields and keeps it as the row for its date if its
+        # `code` is the highest so far; its label is collected either way.
+        function take(isNew) {
+            while (NF < n) $(NF + 1) = ""
+            addLabels($1, $n)
+            if (isNew || !($1 in best) || $3 + 0 >= code[$1]) { best[$1] = $0; code[$1] = $3 + 0 }
+        }
+        NF == 0 { next }
+        $1 == today { addLabels(today, (NF >= n ? $n : "")); next }   # replaced by newRow
+        { take(0) }
+        END {
+            $0 = newRow; take(1)
+            for (d in label) if (label[d] != "") known[label[d]] = 1
+            # Label each release tag that is in no row yet, on the latest row
+            # dated on or before the tag, unless that row has a newer one. A tag
+            # older than the first row gets none.
+            m = split(ENVIRON["TAG_LIST"], line, "\n")   # macOS awk refuses newlines in -v
+            for (j = 1; j <= m; j++) {
+                if (split(line[j], f, " ") != 2 || (f[2] in known)) continue
+                target = ""
+                for (d in best) if (d <= f[1] && d > target) target = d
+                if (target == "") continue
+                before = label[target]; addLabels(target, f[2]); known[f[2]] = 1
+                if (label[target] != before) print f[2] " -> " target > labeled
+            }
+            for (d in best) { $0 = best[d]; $n = label[d]; print }
+        }' \
+    | sort -t, -k1,1
 } > "$TMP"
 mv "$TMP" "$CSV"
 
 echo "Recorded $NEW_ROW"
 echo "  -> $CSV"
+if [[ -s "$LABELED" ]]; then
+    echo "Release labels added:"
+    sed 's/^/   /' "$LABELED"
+fi
+rm -f "$LABELED"
 
 # --- report what changed vs. the previous record -----------------------------
 # Compare each metric against the most recent row older than today and print what
@@ -239,7 +332,7 @@ PREV_ROW="$(tail -n +2 "$CSV" | awk -F, -v d="$DATE" '$1 "" < d ""' | sort -t, -
 if [[ -n "$PREV_ROW" ]]; then
     IFS=, read -r pDate pFiles pCode pComments pBlanks pTests pOpen pClosed \
         pFilesHTML pCodeHTML pCommentsHTML pBlanksHTML \
-        pFilesData pCodeData pCommentsData pBlanksData pExpertises \
+        pFilesData pCodeData pCommentsData pBlanksData pExpertises pRelease \
         <<< "$PREV_ROW"
 
     anyChange=0
