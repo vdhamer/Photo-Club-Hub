@@ -58,10 +58,17 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 * `clubsNL01`, `02`, `06`, `08`, `10`, `14`, `15`
 7 more independent clubs from a follow-up check of that search's unclear finds: Fotoblok050 (Groningen), Fotoclub 8-88 (Stiens), Werkgroep Fotografie IVN Ede, De ZesFotografen (Oosthuizen), De Online Fotoclub (Monnickendam), Sasse Fotokring (Sas van Gent) and Fotowerkgroep KNNV Tilburg. Mirrored identically in the Data package's bundled copy.
 
+* `clubsNL03`, `05`, `06`, `16`, `museums`, `museumsDE`, `museumsNL` and `fgOirschot`
+30 values now use plain typography: 28 remarks lose their curly quotes, curly apostrophes and no-break spaces, a museum's nickname loses its curly apostrophe, and the MOMus Wikipedia link writes its en dash percent-encoded (same page). Website visitors search the remarks with the browser's Find, and the review-page scripts read these files directly. Four organization names keep their curly apostrophe or en dash until most devices run 3.0.5, because older versions would show a straightened name as a second organization ([Data#101](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/101)). `root.level1.json` is unchanged ([Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100)). Mirrored identically in the Data package's bundled copy.
+
+* `museums`, `museumsAU`, `CN`, `DE`, `GB`, `JP`, `NL`, `US` and `TemplateMax`
+35 museum nicknames renamed to plain identifiers, such as "V&A London" to `VandA_London` and "F/M Vrijthof" to `FM_Vrijthof`. A nickname now uses only ASCII letters, digits and `_`, because a club's nickname becomes its Level 2 file name and part of its web addresses. Nothing showed a museum's nickname, and every load overwrites it, so no data reset is needed. The README (English and Dutch) now states the rule ([Data#102](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/102)). Mirrored identically in the Data package's bundled copy.
+
 STRUCTURAL
 
-* Tested with macOS 27.2 and Xcode 27.2 (27B52), Xcode 27.3 beta 1 (27C5020n), iOS 27.3 beta (24C5037i)
+* Tested with macOS 27.2.1 and Xcode 27.2 (27B52), Xcode 27.3 beta 1 (27C5020n), iOS 27.3 beta (24C5037i) and iOS 27.2.1
 * Built using v3.8.0 of the Photo Club Hub Data package ([release notes](https://github.com/vdhamer/Photo-Club-Hub-Data/releases/tag/v3.8.0)). It adds log entries and the flag for former clubs and museums ([Data#91](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/91)), which [#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891) and [#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892) build on, and `Organization.fullNameLocalizedTown(for:)` ([Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88)), which [#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890) uses. It brings two new packages, WebURL (`karwa/swift-url` 0.4.2) and `apple/swift-system` 1.8.1 ([Data#93](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/93)). Its Core Data model `3_8_0` is an additive change, so existing data migrates in place without a reset. It also carries the bundled copies of the data files listed above.
+* `LineCount.csv` gains a last column, `release`, so the line-count graphs can mark each app release with its version. `countLines.sh` writes every `v` tag not yet in the column onto the latest row on or before the tagged commit's date, which fills in the history on its first run and adds a release on the first commit after its tag is pulled. Rows without the column, as an old branch could merge back, are padded. 19 releases whose date had no row, some for months, now have one rebuilt from the tagged commit, so their marker sits on the release date. A row carries one label: when two releases share a row, the newer one wins, as with v2.2.3 over v2.2.2 ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
 
 ---------------------------------------------------------------------------
 
@@ -282,7 +289,7 @@ STRUCTURAL
 
 ---------------------------------------------------------------------------
 
-### 2.11.2 (GitHub commit 0001cae) 03-08-2026 - prerelease version only
+### 2.11.2 (GitHub commit 0001cae, build 4664) 03-08-2026 - prerelease version only
 
 USER-FACING
 
@@ -299,7 +306,7 @@ This build #4664 was made using Xcode 27.0 beta. A next build is intended to go 
 
 ---------------------------------------------------------------------------
 
-### 2.10.0 (GitHub commit 2bcbbf9) 20-07-2026
+### 2.10.0 (GitHub commit 2bcbbf9, build 4663) 20-07-2026
 
 USER-FACING
 
@@ -345,7 +352,7 @@ Amount of code and data lines changed since previous release: 14,934 additions a
 
 ---------------------------------------------------------------------------
 
-### 2.10.0 (GitHub commit 04488a0) 12-07-2026
+### 2.10.0 (GitHub commit 04488a0, build 4662) 12-07-2026
 
 USER-FACING
 
@@ -388,7 +395,7 @@ Amount of code and data lines changed since previous release: 1340 additions and
 
 ---------------------------------------------------------------------------
 
-### 2.9.3 (GitHub commit eb0baaf) 14-05-2026
+### 2.9.3 (GitHub commit eb0baaf, build 4660) 14-05-2026
 
 PREFERENCES SCREEN
 
@@ -441,7 +448,7 @@ GitHub's change statistics is too high - likely because multiple succesive chang
 
 ---------------------------------------------------------------------------
 
-### 2.9.2 (GitHub commit acc336e) 26-02-2026
+### 2.9.2 (GitHub commit acc336e, build 4657) 26-02-2026
 
 ORGANIZATIONS SCREEN
 
@@ -477,7 +484,7 @@ Amount of code and data lines changed since previous release: 476 additions and 
 
 ---------------------------------------------------------------------------
 
-### 2.9.1 (GitHub commit 749f85a) 15-02-2026
+### 2.9.1 (GitHub commit 749f85a, build 4656) 15-02-2026
 
 ORGANIZATIONS SCREEN
 
@@ -517,7 +524,7 @@ Amount of code and data lines changed since previous release: 2,816 additions an
 
 ---------------------------------------------------------------------------
 
-### 2.9.0 (GitHub commit 436e910) 13-01-2026
+### 2.9.0 (GitHub commit 436e910, build 4655) 13-01-2026
 
 PORTFOLIOS, CLUBS & MUSEUMS, WHO'S WHO SCREENS
 
@@ -561,7 +568,7 @@ Amount of code and data lines changed since previous release: 5,636 additions an
 
 ---------------------------------------------------------------------------
 
-### 2.8.8 (GitHub commit d6a09d9) 22-12-25
+### 2.8.8 (GitHub commit d6a09d9, build 4654) 22-12-25
 
 CLUBS AND MUSEUMS SCREEN
 
@@ -602,7 +609,7 @@ This build #4654 was made using Xcode 26.2 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
 
-### 2.8.7 (GitHub commit 09e9bcf) 16-11-25
+### 2.8.7 (GitHub commit 09e9bcf, build 4653) 16-11-25
 
 PRELUDE SCREEN (iOS v26 only)
 
@@ -625,7 +632,7 @@ This build #4653 was made using Xcode 26.1.1
 
 ---------------------------------------------------------------------------
 
-### 2.8.6 (GitHub commit bf1c49f) 08-11-25
+### 2.8.6 (GitHub commit bf1c49f, build 4652) 08-11-25
 
 CODE MAINTENANCE
 
@@ -650,7 +657,7 @@ This build #4652 was made using Xcode 26.1 and was published in the App Store.
 
 ---------------------------------------------------------------------------
 
-### 2.8.5 (GitHub commit 8a15801) 23-10-25
+### 2.8.5 (GitHub commit 8a15801, build 4651) 23-10-25
 
 WHO'S WHO SCREEN
 
@@ -687,7 +694,7 @@ This build #4651 was made using Xcode 26.0.1 and is intended for release via the
 
 ---------------------------------------------------------------------------
 
-### 2.8.4 (GitHub commit bc4dcb7) 17-09-25
+### 2.8.4 (GitHub commit bc4dcb7, build 4650) 17-09-25
 
 PRELUDE SCREEN
 
@@ -719,7 +726,7 @@ This build #4650 was made using Xcode 26.0 and is intended for release via the A
 
 ---------------------------------------------------------------------------
 
-### 2.8.3 (GitHub commit c45aaea) 29-08-25
+### 2.8.3 (GitHub commit c45aaea, build 4649) 29-08-25
 
 Who's Who screen
 * Fixed: 2 minor translation errors.
@@ -751,7 +758,7 @@ This build #4649 was made using Xcode 16.4 and is suitable for release to the Ap
 
 ---------------------------------------------------------------------------
 
-### 2.8.3 (GitHub commit c5245aa) 17-08-25
+### 2.8.3 (GitHub commit c5245aa, build 4648) 17-08-25
 
 Who's Who screen
 * Fix: some Supported Expertises (in footnote #4 at bottom of Who's Who) incorrectly displayed as Temporary.
@@ -768,7 +775,7 @@ This build #4648 was made using Xcode 26.0 build 5 and and therefore cannot be r
 
 ---------------------------------------------------------------------------
 
-### 2.8.2 (GitHub commit ede2aa2) 05-08-25
+### 2.8.2 (GitHub commit ede2aa2, build 4647) 05-08-25
 
 Who's Who screen
 * Preventing the image captions from taking up too much space (Dynamic Type related).
@@ -788,7 +795,7 @@ This build #4647 was made using Xcode 16.4 and is intended for release via the A
 
 ---------------------------------------------------------------------------
 
-### 2.8.2 (GitHub commit 5c2a2ef) 28-07-25
+### 2.8.2 (GitHub commit 5c2a2ef, build 4646) 28-07-25
 
 Portfolio screen
 * By default clubs fgOirschot and IndividueelBO now show up. Previously only load when "loadTestClubs" setting enabled.
@@ -808,7 +815,7 @@ This build #4646 was made using Xcode 23.0 beta 4 and can thus only be used for 
 
 ---------------------------------------------------------------------------
 
-### 2.8.1 (GitHub commit bc51dba) 14-07-25
+### 2.8.1 (GitHub commit bc51dba, build 4645) 14-07-25
 
 * Added "Theater" Expertise tag (for August 2025).
 
@@ -833,7 +840,7 @@ This build #4645 was made using Xcode 16.4 and was released via the App Store.
 
 ---------------------------------------------------------------------------
 
-### 2.8.0 (GitHub commit 0d8cd34) 07-07-25
+### 2.8.0 (GitHub commit e70a9fe, build 4644) 07-07-25
 
 Code Maintenance
 * Changed message asking permission to access user's location (minor).
@@ -846,7 +853,7 @@ This build #4644 was made using Xcode 16.4 was released via the App Store.
 
 ---------------------------------------------------------------------------
 
-### 2.8.0 (GitHub commit cda6e56) 06-07-25
+### 2.8.0 (GitHub commit cda6e56, build 4643) 06-07-25
 
 Data Maintenance
 * Added Pennings Foundation (Eindhoven) to the list of photo museums.
@@ -867,7 +874,7 @@ This build #4643 was made using Xcode beta 2 (17A5241o) and can thus only be use
 
 ---------------------------------------------------------------------------
 
-### 2.8.0 (GitHub commit 0d8cd34) 28-06-25
+### 2.8.0 (GitHub commit 0d8cd34, build 4642) 28-06-25
 
 Portfolio screen
 * Bug fix: when a club hasn't provide a FeatauredImage yet, an orange question mark was shown instead of red disc.
@@ -884,7 +891,7 @@ This build #4642 was made using Xcode 16.4.
 
 ---------------------------------------------------------------------------
 
-### 2.8.0 (GitHub commit 407e7cc) 20-06-25
+### 2.8.0 (GitHub commit 407e7cc, build 4641) 20-06-25
 
 Code Maintenance
 * Bug fix: Fotoclub Den Dungen is no longer displayed as "Fotoclub Den Dungen (Den Dungen)"
@@ -906,7 +913,7 @@ This build #4641 was made using Xcode beta 1 (17A5241e) and can thus only be use
 
 ---------------------------------------------------------------------------
 
-### 2.8.0 (GitHub commit c3e5229) 09-06-25
+### 2.8.0 (GitHub commit c3e5229, build 4640) 09-06-25
 
 Portfolio screen
 * Display areas of expertise of club members.
@@ -931,7 +938,7 @@ This build #4640 was made using Xcode 16.4 and is intended for beta testing only
 
 ---------------------------------------------------------------------------
 
-### 2.8.0 (GitHub commit 77ab4e2) 04-06-25
+### 2.8.0 (GitHub commit 77ab4e2, build 4639) 04-06-25
 
 Who's Who screen
 * Keyword is renamed to Expertise
@@ -959,7 +966,7 @@ This build #4639 was made using Xcode 16.4 and is intended for beta testing only
 
 ---------------------------------------------------------------------------
 
-### 2.7.3 (GitHub commit 65199f7) 01-04-25
+### 2.7.3 (GitHub commit 65199f7, build 4638) 01-04-25
 
 Code Maintenance
 * Tested on Xcode 16.3, iOS 18.4, macOS 15.4, and visionOS 2.4.
@@ -973,7 +980,7 @@ This build #4638 was made using Xcode 16.3 and is intended for App Store distrib
 
 ---------------------------------------------------------------------------
 
-### 2.7.3 (GitHub commit 4985f44) 26-03-25
+### 2.7.3 (GitHub commit 4985f44, build 4637) 26-03-25
 
 Preferences screen
 * Forced a data reset to clean up the content of the in-app database when 2.7.3 or higher is first run (JS of fgW related)
@@ -1006,7 +1013,7 @@ This build #4637 was made using Xcode 16.3
 
 ---------------------------------------------------------------------------
 
-### 2.7.2 (GitHub commit 50334f9) 10-02-25
+### 2.7.2 (GitHub commit 3a83a4f, build 4636) 10-02-25
 
 Preferences screen
 * Changed app default to "don't show former members".
@@ -1029,7 +1036,7 @@ This build #4636 was made using Xcode 16.2 and is intended for App Store distrib
 
 ---------------------------------------------------------------------------
 
-### 2.7.2 (GitHub commit c4d0faa) 29-01-25
+### 2.7.2 (GitHub commit 6ee4f43, build 4635) 29-01-25
 
 Portfolios and Clubs-and-Museums screens
 * Added two demo clubs (TemplateMin and TemplateMax) as examples for adding new clubs.
@@ -1066,7 +1073,7 @@ This build #4635 was made using Xcode 16.2 and is intended for TestFlight distri
 
 ---------------------------------------------------------------------------
 
-### 2.7.1 (GitHub commit dd07c09) 11-12-24
+### 2.7.1 (GitHub commit 675c26c, build 4634) 11-12-24
 
 Working on a new standalone macOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
 This version requires at least iOS version 17.6.
@@ -1109,7 +1116,7 @@ This build #4634 was built using Xcode 16.2 and was distributed via the App Stor
 
 ---------------------------------------------------------------------------
 
-### 2.7.0 (GitHub commit 663471b) 11-08-24
+### 2.7.0 (GitHub commit 663471b, build 4630) 11-08-24
 
 Portfolios screen
 * added Fotogroep de Gender portfolios
@@ -1137,7 +1144,7 @@ This build #4630 was built using Xcode 15.4 and is intended for App Store distri
 
 ---------------------------------------------------------------------------
 
-### 2.7.0 (GitHub commit ca3d871) 06-08-24
+### 2.7.0 (GitHub commit ca3d871, build 4629) 06-08-24
 
 Data
 * The membership data for fgDeGender, fgAnders and fcBellusImago are now read from level2.json data files.
@@ -1158,7 +1165,7 @@ This build #4629 was built using Xcode 16.0 beta 4. It can only be used for Test
 
 ---------------------------------------------------------------------------
 
-### 2.6.3 (GitHub commit fbeb334) 13-07-24
+### 2.6.3 (GitHub commit fbeb334, build 4628) 13-07-24
 
 Portfolios screen
 * Removed function to delete rows by swiping left.
@@ -1189,7 +1196,7 @@ This build #4628 was made with Xcode 15.4 and was distributed via TestFlight and
 
 ---------------------------------------------------------------------------
 
-### 2.6.2 (GitHub commit 9e14585) 30-06-24
+### 2.6.2 (GitHub commit 9e14585, build 4627) 30-06-24
 
 Prelude screen
 * Changed color ordering to match app icon colors
@@ -1220,7 +1227,7 @@ This build #4627 was made with Xcode 16.0 beta 2 (16A5171r) and distributed via 
 
 ---------------------------------------------------------------------------
 
-### 2.6.2 (GitHub commit 1536a1e) 16-06-24
+### 2.6.2 (GitHub commit 1536a1e, build 4625) 16-06-24
 
 This is build #4625.
 
@@ -1239,7 +1246,7 @@ This is build #4625 and was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 
-### 2.6.2 (GitHub commit a815fbb) 28-05-24
+### 2.6.2 (GitHub commit a815fbb, build 4624) 28-05-24
 
 Maintenance
 * Tested on iOS 17.5.1
@@ -1250,7 +1257,7 @@ This is build #4624 and was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 
-### 2.6.2 (GitHub commit 4fe7568) 20-05-24
+### 2.6.2 (GitHub commit 4fe7568, build 4623) 20-05-24
 
 Who's Who screen
 * Cleaned up usage notes at the bottom of the screen.
@@ -1269,7 +1276,7 @@ This is build #4623 and was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 
-### 2.6.1 (GitHub commit f4d89a9) 28-04-24
+### 2.6.1 (GitHub commit f4d89a9, build 4622) 28-04-24
 
 Who's Who screen
 * Cleaned up vertical smart scrolling (scrolling stops on item boundaries)
@@ -1283,7 +1290,7 @@ This is build #4622, was released via TestFlight, and was released as v2.6.1 on 
 
 ---------------------------------------------------------------------------
 
-### 2.6.0 (GitHub commit fe447b0) 21-04-24
+### 2.6.0 (GitHub commit fe447b0, build 4619) 21-04-24
 
 Who's Who screen
 * Added vertical smart scrolling (scrolling stops on item boundaries)
@@ -1297,7 +1304,7 @@ This is build #4621 and will be released (with build #4619 changes) as v2.6.0 vi
 
 ---------------------------------------------------------------------------
 
-### 2.5.7 (GitHub commit fcd8918) 7-04-24
+### 2.5.7 (GitHub commit fcd8918, build 4619) 7-04-24
 
 Portfolio screen
 * Delete caused app to terminate (bug) when deleting last member of a club (id).
@@ -1320,7 +1327,7 @@ Documentation
 This is build #4619 and was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
-### 2.5.6 (GitHub commit 74a487d) 4-04-24
+### 2.5.6 (GitHub commit 74a487d, build 4618) 4-04-24
 
 Readme screen
 * Mentioned the Search Bar as one of the app's features (because it may be overlooked).
@@ -1345,7 +1352,7 @@ Maintenance
 This is build #4618 and was released as v2.5.6 on the Apple App Store.
 
 ---------------------------------------------------------------------------
-### 2.5.6 (GitHub commit b7f46f7) 31-03-24
+### 2.5.6 (GitHub commit b7f46f7, build 4617) 31-03-24
 
 Clubs and Museums screen
 * Added a Search bar for filtering organizations on name and town (at top of screen).
@@ -1373,7 +1380,7 @@ Maintenance
 This is build #4617 and was sent out to Apple Testflight users only.
 
 ---------------------------------------------------------------------------
-### 2.5.5 (GitHub commit cffe1e4) 20-03-24
+### 2.5.5 (GitHub commit cffe1e4, build 4616) 20-03-24
 
 Clubs and Museums screen
 * Remarks can now be shown in any language (previously: just English and Dutch).
@@ -1388,7 +1395,7 @@ Maintenance
 This is build #4616, and was submitted as release 2.5.5 on the Apple App Store.
 
 ---------------------------------------------------------------------------
-### 2.5.4 (GitHub commit 769676c) 02-03-24
+### 2.5.4 (GitHub commit 769676c, build 4615) 02-03-24
 
 Readme screen
 * Many changes to the English and Dutch versions of the built-in Readme text.
@@ -1411,7 +1418,7 @@ Maintenance
 This is build #4615, and is available as release 2.5.4 on the Apple App Store.
 
 ---------------------------------------------------------------------------
-### 2.5.3 (GitHub commit 83a9e0c) 12-02-24
+### 2.5.3 (GitHub commit 83a9e0c, build 4613) 12-02-24
 
 Clubs and Museums screen
 * Removed member count for photo museums and clubs with no available member data
@@ -1436,7 +1443,7 @@ Maintenance
 This is build #4614, and was published on the Apple App Store (with the changes in build #4613)
 
 ---------------------------------------------------------------------------
-### 2.5.3 (GitHub commit 02e860a) 19-01-24
+### 2.5.3 (GitHub commit 02e860a, build 4613) 19-01-24
 
 Clubs and Museums screen
 * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
@@ -1466,7 +1473,7 @@ Maintenance
 This is build #4613, and was sent out to Apple Testflight users only.
 
 ---------------------------------------------------------------------------
-### 2.5.2 (GitHub commit 7cc0780) 16-12-23
+### 2.5.2 (GitHub commit 7cc0780, build 4610) 16-12-23
 
 Photo Clubs screen
 * User location is shown on map when user presses a new MapUserLocationButton() control.
@@ -1485,7 +1492,7 @@ Maintenance
 This is build #4610 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.5.1 (GitHub commit 51501f7) 22-11-23
+### 2.5.1 (GitHub commit 51501f7, build 4608) 22-11-23
 
 Photo Clubs screen
 * Added Fotogroep Anders (Eindhoven), Bellus Imago (partial), and Fotogroep de Gender (partial).
@@ -1508,7 +1515,7 @@ Maintenance
 This is build #4608 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.5.0 (GitHub commit beafb53) 3-11-23
+### 2.5.0 (GitHub commit beafb53, build 4603) 3-11-23
 
 Portfolios screen
 * Minor design changes (e.g. separator lines, footer text).
@@ -1531,7 +1538,7 @@ Maintenance
 This is build #4603 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.4.2 (GitHub commit 3548647) 13-09-23
+### 2.4.2 (GitHub commit 3548647, build 4596) 13-09-23
 
 Portfolio screen
 * Fixed bug where users were incorrectly labeled "former member". This release is to fix this bug.
@@ -1545,7 +1552,7 @@ Maintenance
 This is build #4596 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.4.1 (GitHub commit 2ee61a1) 9-09-23
+### 2.4.1 (GitHub commit 2ee61a1, build 4594) 9-09-23
 
 Portfolio screen
 * Added a 2nd admin for FGWaalre
@@ -1567,7 +1574,7 @@ Maintenance
 This is build #4594 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.4.0 (GitHub commit 276c9f3) 4-08-23
+### 2.4.0 (GitHub commit 276c9f3, build 4593) 4-08-23
 
 This is build #4593 in Apple's App Store
 * Bumped version number to 2.4.0 because of the new app name.
@@ -1596,7 +1603,7 @@ Maintenance
 In Apple's App Store, the release notes of 2.3.6 and 2.4.0 are combined.*
 
 ---------------------------------------------------------------------------
-### 2.3.6 (GitHub commit 4ccc917) 21-06-23
+### 2.3.6 (GitHub commit 4ccc917, build 4591) 21-06-23
 
 This is build #4591, which was _not_ released in Apple's App Store
 
@@ -1613,7 +1620,7 @@ Maintenance
 * Temporarily set new ENABLE_USER_SCRIPT_SANDBOXING = NO (swiftlint reading non-swift files)
 * Reduced priority of Fotogroepw Waalre from 3 to 1 to ensure basic alphabetical order
 ---------------------------------------------------------------------------
-### 2.3.5 (GitHub commit 62a54b7) 30-05-23
+### 2.3.5 (GitHub commit 62a54b7, build 4590) 30-05-23
 
 Photo Clubs screen
 * Displays a help message in the (rare) case that there are zero clubs loaded
@@ -1632,7 +1639,7 @@ Maintenance
 This is build #4590 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.3.4 (GitHub commit 5c3e710) 02-04-23
+### 2.3.4 (GitHub commit 5c3e710, build 4589) 02-04-23
 
 Readme screen
 * Roadmap voting screen `Search` function now searches descriptions (new) and titles
@@ -1649,7 +1656,7 @@ This is build #4589 in Apple's App Store.
 In Apple's App Store, the release notes of 2.3.3 and 2.3.4 are combined.
 
 ---------------------------------------------------------------------------
-### 2.3.3 (GitHub commit 26092a4) 25-03-23
+### 2.3.3 (GitHub commit 26092a4, build 4588) 25-03-23
 
 Readme screen
 * Bug fix: colors of status field of Roadmap items didn't get triggered in Dutch translation
@@ -1666,7 +1673,7 @@ Maintenance
 This is build #4588 (didn't make it to Apple's App Store)
 
 ---------------------------------------------------------------------------
-### 2.3.2 (GitHub commit ef445ca) 19-03-23
+### 2.3.2 (GitHub commit ef445ca, build 4587) 19-03-23
 
 Readme screen
 * User can vote on possible enhancements within the app (Readme > Features and tips > Vote on roadmap items)
@@ -1682,7 +1689,7 @@ Maintenance
 This is build #4587 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.3.1 (GitHub commit 1793262) 05-03-23
+### 2.3.1 (GitHub commit 1793262, build 4586) 05-03-23
 
 Portfolios screen
 * Section headers on Portfolios page are now gray to attract less attention
@@ -1702,7 +1709,7 @@ This is build #4586 in Apple's App Store.
 In Apple's App Store, the release notes of 2.3.0 and 2.3.1 are combined.
 
 ---------------------------------------------------------------------------
-### 2.3.0 (GitHub commit 8d35bd6) 02-03-23
+### 2.3.0 (GitHub commit 8d35bd6, build 4585) 02-03-23
 
 Portfolios screen
 * List of portfolios is now grouped into sections, each representing a different photo club.
@@ -1731,7 +1738,7 @@ Maintenance
 This is build #4585 (didn't make it to Apple's App Store).
 
 ---------------------------------------------------------------------------
-### 2.2.10 (GitHub commit 09212fb) 06-02-23
+### 2.2.10 (GitHub commit 09212fb, build 4583) 06-02-23
 
 Photo Clubs screen
 * Fixed bug w.r.t. dark mode.
@@ -1742,7 +1749,7 @@ This is build #4583 in Apple's App Store.
 In Apple's App Store, the release notes of 2.2.10 and 2.2.9 are combined.
 
 ---------------------------------------------------------------------------
-### 2.2.9 (GitHub commit 21a6cd6) 05-02-23
+### 2.2.9 (GitHub commit 21a6cd6, build 4582) 05-02-23
 
 Portfolios screen
 * Small layout change to scrolling list (saves some horizontal space).
@@ -1763,7 +1770,7 @@ Maintenance
 This is build #4582 (didn't make to Apple's App Store).
 
 ---------------------------------------------------------------------------
-### 2.2.8 (GitHub commit 426c09c) 22-01-23
+### 2.2.8 (GitHub commit 426c09c, build 4581) 22-01-23
 
 Portfolios screen
 * Changed misleading wording of a Dutch text (shown when the returned Portfolio list is empty).
@@ -1785,7 +1792,7 @@ Maintainability
 This is build #4581 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.2.7 (GitHub commit 0130c45) 01-01-23
+### 2.2.7 (GitHub commit 0130c45, build 4580) 01-01-23
 
 Portfolios screen
 * Thumbnails are now shown for former members (etc).
@@ -1802,7 +1809,7 @@ Maintainability
 This is build #4580 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.2.6 (GitHub commit e763662) 25-12-22
+### 2.2.6 (GitHub commit e763662, build 4579) 25-12-22
 
 * Adapted for iOS 16.2, Swift 5.7, XCode 14.2,  and SwiftLint 0.50.3
 * Converted to NavigationStack and replaced deprecated NavigationLink (new in iOS 16)
@@ -1817,7 +1824,7 @@ Prelude screen (formerly known as Animation screen)
 This is build #4579 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.2.5 (GitHub commit 6f40286) 10-12-22
+### 2.2.5 (GitHub commit 6f40286, build 4578) 10-12-22
 
 Who's who screen
 * Extract date of birth from (extended) membership file for FGW instead of hardcoding this data
@@ -1836,7 +1843,7 @@ Refactoring
 This is build #4578 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.2.4 (GitHub commit 15c87ab) 2-12-22
+### 2.2.4 (GitHub commit 15c87ab, build 4577) 2-12-22
 
 * Updated README.md file (mainly architecture topics)
 
@@ -1852,7 +1859,7 @@ Refactoring
 This is build #4577 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.2.3 (GitHub commit 9d1dfed) 23-10-22
+### 2.2.3 (GitHub commit 9d1dfed, build 4576) 23-10-22
 
 Release notes for 2.2.3 also contain 2.2.2 release notes
 
@@ -1862,7 +1869,7 @@ Portfolios screen
 This is build #4576 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.2.2 (GitHub commit 2462bf9) 23-10-22
+### 2.2.2 (GitHub commit 2462bf9, build 4575) 23-10-22
 
 Photo Clubs screen
 * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
@@ -1885,7 +1892,7 @@ Refactoring
 This is build #4575 that didn't end up in Apple's App Store (forgot to merge a branch).
 
 ---------------------------------------------------------------------------
-### 2.2.1 (GitHub commit 71b3b84) 09-10-22
+### 2.2.1 (GitHub commit 71b3b84, build 4574) 09-10-22
 
 Preferences screen
 * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
@@ -1895,7 +1902,7 @@ Preferences screen
 This is build #4574 in Apple's App Store.
 
 -------------------------------------------------------------------------
-### 2.2.0 (GitHub commit c9f0d16) 08-10-22
+### 2.2.0 (GitHub commit c9f0d16, build 4573) 08-10-22
 
 * Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
 
@@ -1922,7 +1929,7 @@ Preferences screen
 This is build #4573 (but it was rejected Apple's App Store because the screenshots showed device bezels).
 
 ---------------------------------------------------------------------------
-### 2.1.1 (GitHub commit 4974461) 11-09-22
+### 2.1.1 (GitHub commit 4974461, build 4381) 11-09-22
 
 Bug fix
 * Immediate crash running GitHub version (due to file name error). No impact on App Store version.
@@ -1937,7 +1944,7 @@ Refactoring
 This is build #4381 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.1.0 (GitHub commit a658b52) 17-08-22
+### 2.1.0 (GitHub commit a658b52, build 4379) 17-08-22
 
 * Minimum required iOS version is 15.5
 
@@ -1957,7 +1964,7 @@ Robustness
 This is build #4379 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.10 (not on GitHub) 1-06-22
+### 2.0.10 (not on GitHub, build 4303) 1-06-22
 
 * Fixed bug regarding updating of version/build info in iOS Settings (build script -> startup code)
 
@@ -1969,7 +1976,7 @@ Preferences screen
 This is build #4303 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.9 (not on GitHub) 23-05-22
+### 2.0.9 (not on GitHub, build 4299) 23-05-22
 
 * Many text changes in embedded Dutch language ReadMe (and a few to the English version)
 
@@ -1980,7 +1987,7 @@ Animimation screen
 This is build #4299 in Apple's App Store/
 
 ---------------------------------------------------------------------------
-### 2.0.8 (not on GitHub) 09-05-22
+### 2.0.8 (not on GitHub, build 4298) 09-05-22
 
 Preferences screen
 * simplified Preferences page, while adding toggle to show club officers
@@ -1999,7 +2006,7 @@ Who's who screen
 This is build #4298 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.7 (not on GitHub) 01-05-22
+### 2.0.7 (not on GitHub, build 4294) 01-05-22
 
 Preferences screen
 * fixed: "former members" no longer includes external coaches
@@ -2021,7 +2028,7 @@ Readme screen
 This is build #4294 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.6 (not on GitHub) 03-04-22
+### 2.0.6 (not on GitHub, build 3982) 03-04-22
 
 * fixed top layout of Readme page on iPhones
 * new [i] button and Readme page
@@ -2035,7 +2042,7 @@ This is build #4294 in Apple's App Store.
 This is build #3982 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.5 (not on GitHub) 24-03-22
+### 2.0.5 (not on GitHub, build 3976) 24-03-22
 
 * made opening Prelude screen more interactive
 * higher resolution version of opening image
@@ -2045,7 +2052,7 @@ This is build #3982 in Apple's App Store.
 This is build #3976 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.4 (not on GitHub) 13-03-22
+### 2.0.4 (not on GitHub, build 3974) 13-03-22
 
 * changed membership status icons and various other user interface improvements
 * new opening Prelude screen showing App icon morphing into Bayer color filter array
@@ -2055,7 +2062,7 @@ This is build #3976 in Apple's App Store.
 This is build #3974 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.3 (not on GitHub) 29-01-22
+### 2.0.3 (not on GitHub, build 3966) 29-01-22
 
 * new Search feature to search the lists of names
 * the web addresses of club-external websites are now displayed (when the info is available)
@@ -2067,7 +2074,7 @@ This is build #3974 in Apple's App Store.
 This is build #3966 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.2 (not on GitHub) 20-01-22
+### 2.0.2 (not on GitHub, build 3956) 20-01-22
 
 * map supports panning.
 * user interface refinements in icons and colors.
@@ -2082,7 +2089,7 @@ This is build #3966 in Apple's App Store.
 This is build #3956 in Apple's App Store.
 
 ---------------------------------------------------------------------------
-### 2.0.1 (not on GitHub) 09-01-22
+### 2.0.1 (not on GitHub, build 3566) 09-01-22
 
 * Minor: moved documentation files out of target / bundle.
 * Minor: changed accent colors in all List sections. Causes .accentcolor to turn gray when a page loses focus.
