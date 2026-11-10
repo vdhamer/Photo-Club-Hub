@@ -757,7 +757,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
 - `town` and `fullName` together serve to identify clubs or museums.
   - It is thus possible to have two clubs with the same name in different cities. Two separate clubs or museums with an identical name in the same town would be confusing, and would be treated as a single entity by the app until the data about the original `town` /` fullname` combination is removed from the in-device database. Removal of obsolete `Organization` records is unfortunately not done automatically yet.
   - Try to avoid changing either string. Because the app doesn't associate the new ID with the original ID, this results in the app displaying two different clubs instead of one club.
-- `nickName` is a short version of `fullName` that is displayed in confined spaces such as on maps. It can be any string, but please keep it short.
+- `nickName` is a short version of `fullName` that also serves as a key: it becomes the name of a club's Level 2 file and part of the club's web addresses, and it must match between the club's Level 1 and Level 2 files. It may only contain ASCII letters, digits and `_`, as in `fgDeGender` or `Fotografiska_NYC`. The app also shows it in confined spaces, so please keep it short.
 - `coordinates` is used to draw the club on the map and to [generate](https://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of the names of towns and countries.
 - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Southern hemisphere (e.g., Australia).
 - `longitude` should be in the range [-180.0, +180.0] where negative values are used for the Western hemisphere (e.g., USA).</p>
@@ -1190,6 +1190,11 @@ Optional properties in the database with names like `Organization.town_` have a 
 property named `Organization.town` that always has a non-nil value. This allows `Organization.town` to always hold
 a value such as "Unknown town" (e.g. for display purposes) instead of `nil` (the representation in the database).
 
+Every table whose records are directly filled from a JSON file has a Boolean `obsolete`:
+`Organization`, `MemberPortfolio`, `Photographer`, `PhotographerExpertise`, `Expertise`, `LocalizedExpertise`
+and `LocalizedRemark`. It will be used to automatically remove orphaned records that none of the JSON file list anymore.
+([Data#39](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/39)).
+
 #### Organization
 
 <ul><details><summary>Details (click to expand)</summary></p>
@@ -1360,7 +1365,9 @@ The `LocalizedExpertise` table holds the strings representing `Expertises` in an
 <ul><details><summary>Details (click to expand)</summary></p>
 
 The `PhotographerExpertise` table links an `Expertise` to a `Photographer`.
-It is thus a many-to-many relationship without any additional attributes.</p>
+It is thus a many-to-many relationship. Its only attribute, `obsolete`, is reserved for future use:
+it is meant for removing an expertise that none of the photographer's clubs list anymore.
+([Data#39](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/39)).</p>
 
 Note that `Expertises` per `Photographer` are provided per Club (`Level2.json` input files) but are stored at the `Photographer` level.
 Example: John is or was a member of both ClubA and ClubB.

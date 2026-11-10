@@ -1195,6 +1195,11 @@ Optionele properties in de database met namen als `Organization.town_` hebben ee
 property genaamd `Organization.town` die altijd een niet-nil-waarde heeft. Zo kan `Organization.town` altijd
 een waarde bevatten zoals "Unknown town" (bijvoorbeeld voor weergavedoeleinden) in plaats van `nil` (de representatie in de database).
 
+Elke tabel waarvan een JSON-bestand de records rechtstreeks vermeldt, heeft een Boolean `obsolete`:
+`Organization`, `MemberPortfolio`, `Photographer`, `PhotographerExpertise`, `Expertise`, `LocalizedExpertise`
+en `LocalizedRemark`. `obsolete` is bedoeld om records te verwijderen die niet meer in de JSON-bestanden voorkomen, en wordt nog niet gebruikt (Nov 2026).
+([Data#39](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/39)).
+
 #### Organization
 
 <ul><details><summary>Details (klik om uit te vouwen)</summary></p>
@@ -1364,7 +1369,9 @@ De `LocalizedExpertise`-tabel bevat de teksten die `Expertises` in een specifiek
 <ul><details><summary>Details (klik om uit te vouwen)</summary></p>
 
 De `PhotographerExpertise`-tabel koppelt een `Expertise` aan een `Photographer`.
-Het is dus een veel-op-veelrelatie zonder extra attributen.</p>
+Het is dus een veel-op-veelrelatie. Het enige attribuut, `obsolete`, wordt nog niet gebruikt (Nov 2026):
+het is gereserveerd om een expertise te verwijderen die geen van de clubs van de fotograaf nog vermeldt
+([Data#39](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/39)).</p>
 
 Merk op dat `Expertises` per `Photographer` per club worden aangeleverd (`Level2.json`-invoerbestanden), maar op `Photographer`-niveau worden opgeslagen.
 Voorbeeld: John is of was lid van zowel ClubA als ClubB.
