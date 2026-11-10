@@ -83,7 +83,7 @@ struct SettingsBundleKeysTests {
 }
 
 // Mutates UserDefaults.standard, a process-wide singleton, so these run serially and clean up after
-// themselves. Only the obsolete keys are touched — nothing reads those any more.
+// themselves. Only the obsolete keys are touched — nothing reads those anymore.
 @Suite("Checks the one-time cleanup of the obsolete _preference keys", .serialized)
 struct BuildStampKeyCleanupTests {
 
