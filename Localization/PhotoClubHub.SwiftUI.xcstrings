@@ -654,6 +654,23 @@
         }
       }
     },
+    "Location_denied_key" : {
+      "comment" : "Message of the tip on the Maps tab, shown when the user denied this app the use of the location",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The maps can’t show where you are, because this app is not permitted to use your location. You can change this in the Settings app."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De kaarten kunnen niet laten zien waar je bent omdat deze app geen toestemming heeft om je locatie op te vragen. Je kunt dat aanpassen in de Instellingen app."
+          }
+        }
+      }
+    },
     "Manual loading" : {
       "comment" : "Shown instead of app name in PreludeView when app is started",
       "localizations" : {
@@ -854,6 +871,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "van"
+          }
+        }
+      }
+    },
+    "Open the Settings app" : {
+      "comment" : "Button in the tip on the Maps tab that opens this app's page in the iOS Settings app",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open the Settings app"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open de Instellingen app"
           }
         }
       }
@@ -1587,6 +1621,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Waarschuwing: zowel Clubs en Musea staan uit in de Instellingen tab. Om landkaarten te zien, moet minstens één aanstaan."
+          }
+        }
+      }
+    },
+    "Your location is off" : {
+      "comment" : "Title of the tip on the Maps tab, shown when the user denied this app the use of the location",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your location is off"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je locatie staat uit"
           }
         }
       }

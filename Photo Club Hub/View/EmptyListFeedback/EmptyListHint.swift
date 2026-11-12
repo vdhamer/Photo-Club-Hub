@@ -10,13 +10,14 @@
 //    wording, and it picks between a box, a spinner, and showing nothing. Start here.
 //  * `CalloutBox` is the box itself: a `Text` in a rounded, tinted frame, with no opinion about when it
 //    belongs on screen. Instantiate it directly only for a remark that is not about an empty list;
-//    `MemberPortfolioView` also borrows its three styling constants for the TipKit tips above it.
+//    `calloutTipStyle(tint:)`, at the end of this file, applies its three styling constants to TipKit tips.
 //
 //  The current callers are the four "Filtered…" views of the Clubs, Maps and People tabs
 //  (People has one view per iOS version), all of which use `EmptyListHint`.
 //
 
-import SwiftUI // for View
+import SwiftUI  // for View
+import TipKit   // for tipCornerRadius, tipBackground
 
 /// Renders the hint chosen by `EmptyListReason.resolve`, or nothing when the screen speaks for itself.
 ///
@@ -89,9 +90,9 @@ struct EmptyListHint: View { // wraps CalloutBox, which can also be instantiated
 /// discovery aid backed by a datastore, with a one-way `invalidate` and no per-tip way back. The callout
 /// messages report the current state, so they should return whenever the same state occurs again. (#821).
 ///
-/// The styling is duplicated by `MemberPortfolioView.calloutTipStyle()` rather than shared, because
-/// `.tipCornerRadius` and `.tipBackground` only exist on `TipView`; that extension reads these same
-/// constants so the Tips and the Callouts below them stay one look.
+/// The look is applied in two places, here and in `calloutTipStyle(tint:)`, because `.tipCornerRadius`
+/// and `.tipBackground` only exist on `TipView`. Both read the three constants below, to ensure that
+/// a tip and the callout below it look the same.
 ///
 /// ```swift
 /// CalloutBox(text: Text("The map is locked.", tableName: "PhotoClubHub.SwiftUI", comment: "…"),
@@ -109,7 +110,7 @@ struct CalloutBox: View {
     /// what lets one box explain an empty list on all three tabs. Used for both the border and the wash.
     let tint: Color
 
-    // Read by `MemberPortfolioView.calloutTipStyle()` as well, which is why these are not private.
+    // Not private, because `calloutTipStyle(tint:)`, a `View` extension at the end of this file, reads them too.
     static let cornerRadius: CGFloat = 12
     static let borderWidth: CGFloat = 1.5
     static let backgroundOpacity: CGFloat = 0.15
@@ -126,6 +127,29 @@ struct CalloutBox: View {
             }
             .tint(.primary)
             .listRowSeparator(.hidden)
+    }
+
+}
+
+// MARK: - Tip styling
+
+extension View {
+
+    /// Gives a `TipView` the look of `CalloutBox`: the same rounded corners, and a border and light wash in
+    /// the tab's color, so a tip and the empty-list callout below it look alike. Used on the Clubs tab
+    /// (`.clubsColor`) and the Maps tab (`.mapsColor`).
+    ///
+    /// `CalloutBox` cannot call this and instead repeats the styling itself, because `.tipCornerRadius`
+    /// and `.tipBackground` only take effect on a `TipView`.
+    func calloutTipStyle(tint: Color) -> some View {
+        self
+            .tipCornerRadius(CalloutBox.cornerRadius)
+            .overlay {
+                RoundedRectangle(cornerRadius: CalloutBox.cornerRadius)
+                    .strokeBorder(tint, lineWidth: CalloutBox.borderWidth)
+            }
+            .tipBackground(tint.opacity(CalloutBox.backgroundOpacity))
+            .tint(.primary)
     }
 
 }
