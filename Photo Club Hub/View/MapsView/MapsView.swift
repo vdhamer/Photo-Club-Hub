@@ -6,7 +6,8 @@
 //
 
 import CoreData // for NSManagedObjectContext, FetchRequest
-import SwiftUI // for View
+import SwiftUI  // for View
+import TipKit   // for TipView
 import Photo_Club_Hub_Data // for types like Organization
 
 /// A scroll-based view that displays photo clubs and museums with maps and markers showing their locations.
@@ -44,6 +45,12 @@ struct MapsView: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack(alignment: .leading, spacing: 12) {
+                // Shown only while the user has denied this app the location (#889).
+                // Above `FilteredMapsView`, so it also shows when the list is empty. Renders nothing otherwise.
+                TipView(LocationDeniedTip())
+                    .calloutTipStyle(tint: .mapsColor)
+                    .padding(.horizontal) // the organization cards bring their own padding; a tip doesn't
+
                 /// This is where the List of Photographers is generated.
                 /// So the most relevant stuff happens in FilteredMapsView
                 FilteredMapsView(
@@ -69,6 +76,7 @@ struct MapsView: View {
             .padding(.horizontal)
         } // ScrollView
 
+        .environment(\.locationAccess, locationManager.access) // MapsViewMap hides its location button without it
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .animation(.default, value: searchText) // maps fade in/out as the Search text changes
         .searchable(text: $searchText,
@@ -84,11 +92,11 @@ struct MapsView: View {
         .refreshable { // for pull-to-refresh
             await ClubLoadCoordinator.shared.refresh(viewContext: viewContext)
         }
-        .task { // will be aborted when ScrollView disappears
-            // Request location authorization and start updates; aborted when ScrollView disappears.
-            try? await locationManager.requestUserAuthorization()
+        .task { // runs while the Maps tab is on screen; cancelled when its ScrollView disappears
+            // Asks for location access if needed (details how depends on the iOS version, see LocationManager),
+            // then follows the location.
+            // Nothing in this block after startCurrentLocationUpdates() runs until the task is cancelled.
             try? await locationManager.startCurrentLocationUpdates()
-            // remember that nothing will run here until the for try await loop finishes
         }
         .scrollPosition(id: $scrollPositionID)
         .onAppear { applyScrollPresetIfReady() }

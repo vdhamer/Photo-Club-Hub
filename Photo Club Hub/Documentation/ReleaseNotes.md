@@ -1,14 +1,12 @@
 ### 3.0.5 (GitHub commit ???????, build 4670) ??-11-2026
 
-TO-DO
-
-* fix location button spinning forever when location access is denied ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
-
 USER-FACING CHANGES
 
 - **Find a club or museum by its town in your own language.** The search on the Maps tab now also matches the town as its card shows it, in the language of the app: in Dutch, "Keulen" finds Museum Ludwig in Köln, and in English "Cologne" does. Searching by the town's own name, such as "Köln", still works. The town is Apple's name for the place on the map, so it is sometimes a neighboring village or a district of a city. The section headers on the Clubs tab show the town the same way, and still leave it out when the club's name already contains it. ([#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890), [Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88))
 
 USER-FACING BUG FIXES
+
+- **The location button no longer spins forever.** If you chose not to let the app use your location, the button that shows where you are on an unlocked map kept spinning, waiting for a location it would never get. It is now hidden until you allow it. The Maps tab then shows a short tip, at most twice, whose button opens the app's own page in the Settings app. Allow the location there, and the button and the dot showing where you are come back right away. ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
 
 - **Birthdays show the same date everywhere.** On devices west of GMT, such as in the Americas, the People tab showed a birthday one day early.
 
@@ -69,6 +67,7 @@ STRUCTURAL
 * Tested with macOS 27.2.1 and Xcode 27.2 (27B52), Xcode 27.3 beta 1 (27C5020n), iOS 27.3 beta (24C5037i) and iOS 27.2.1
 * Built using v3.8.0 of the Photo Club Hub Data package ([release notes](https://github.com/vdhamer/Photo-Club-Hub-Data/releases/tag/v3.8.0)). It adds log entries and the flag for former clubs and museums ([Data#91](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/91)), which [#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891) and [#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892) build on, and `Organization.fullNameLocalizedTown(for:)` ([Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88)), which [#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890) uses. It brings two new packages, WebURL (`karwa/swift-url` 0.4.2) and `apple/swift-system` 1.8.1 ([Data#93](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/93)). Its Core Data model `3_8_0` is an additive change, so existing data migrates in place without a reset. It also carries the bundled copies of the data files listed above.
 * `LineCount.csv` gains a last column, `release`, so the line-count graphs can mark each app release with its version. `countLines.sh` writes every `v` tag not yet in the column onto the latest row on or before the tagged commit's date, which fills in the history on its first run and adds a release on the first commit after its tag is pulled. Rows without the column, as an old branch could merge back, are padded. 19 releases whose date had no row, some for months, now have one rebuilt from the tagged commit, so their marker sits on the release date. A row carries one label: when two releases share a row, the newer one wins, as with v2.2.3 over v2.2.2 ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
+* `LocationManager` now tracks whether the app may use the location, as a `LocationAccess` value that the Maps tab reads. On iOS 18 and later it asks with a `CLServiceSession` and reads the diagnostics of each `CLLocationUpdate`; on iOS 17 a `CLLocationManagerDelegate` in `LocationAuthorizationObserver1717` reports it, to be deleted with iOS 17 support. `MapsViewMap` leaves out `MapUserLocationButton` without access, and the new `LocationDeniedTip` appears only when the user denied this app, not when Location Services are off for the whole device or restricted. The tip ignores the one-tip-per-day limit, because after a fresh install the Clubs tab's tips use up that day's tip. `calloutTipStyle(tint:)` moved next to `CalloutBox`, so the Clubs and Maps tabs share it. New `LocationAccessTest` (25 cases) ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
 
 ---------------------------------------------------------------------------
 
