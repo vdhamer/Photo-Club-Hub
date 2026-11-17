@@ -254,6 +254,32 @@
 
         {
             "idPlus": {
+                "town": "Chaam",
+                "fullName": "Chaamse Fotoclub",
+                "nickName": "fcChaam"
+            },
+            "coordinates": {
+                "latitude": 51.50494,
+                "longitude": 4.86186
+            },
+            "optional": {
+                "website": "https://www.chaamsefotoclub.nl",
+                "level2URL": "https://www.example.com/fcChaam.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every member works for a whole season on the same theme (2026: Abstract); past assignments included photographing in the style of Chema Madoz."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Ieder lid werkt een heel seizoen aan hetzelfde thema (2026: Abstract); eerdere opdrachten waren onder meer fotograferen in de stijl van Chema Madoz."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Den Hout",
                 "fullName": "Fotogroep Xposure",
                 "nickName": "fgXposure"
@@ -394,6 +420,31 @@
                 "nlSpecific": {
                     "fotobondNumber": 1541
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Gilze",
+                "fullName": "Fotoclub Silhouet",
+                "nickName": "fcSilhouetGilze"
+            },
+            "coordinates": {
+                "latitude": 51.54022,
+                "longitude": 4.94117
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcSilhouetGilze.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started out as a course in developing and printing your own film; now often works around themes such as mechanics or light versus dark."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Begon als cursus om zelf filmrolletjes te ontwikkelen en af te drukken; werkt nu vaak rond thema's als mechaniek of licht tegenover donker."
+                    }
+                ]
             }
         },
 
@@ -1188,6 +1239,32 @@
                     {
                         "language": "NL",
                         "value": "Elke jaarlijkse themawedstrijd wordt door een externe mentor beoordeeld; de inzendingen hangen daarna in een wisselende vaste expositie."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wouw",
+                "fullName": "Fotoclub Wouw",
+                "nickName": "fcWouw"
+            },
+            "coordinates": {
+                "latitude": 51.52017,
+                "longitude": 4.39185
+            },
+            "optional": {
+                "website": "https://www.fotoclubwouw.nl",
+                "level2URL": "https://www.example.com/fcWouw.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs an anonymous photo-of-the-month contest judged by the members themselves, and has gone on location to the Shell Moerdijk industrial site and to the Biesbosch with nature photographer Thomas van Esch."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt een anonieme 'foto van de maand'-wedstrijd die de leden zelf jureren, en ging op locatie naar het Shell-terrein in Moerdijk en met natuurfotograaf Thomas van Esch de Biesbosch in."
                     }
                 ]
             }
