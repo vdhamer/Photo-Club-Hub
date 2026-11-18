@@ -9,6 +9,32 @@
         
         {
             "idPlus": {
+                "town": "Aarle-Rixtel",
+                "fullName": "Fotowerkgroep Kiek nou!",
+                "nickName": "fwgKiekNou"
+            },
+            "coordinates": {
+                "latitude": 51.51659,
+                "longitude": 5.64306
+            },
+            "optional": {
+                "website": "https://www.ivn.nl/afdeling/laarbeek/kiek-nou/",
+                "level2URL": "https://www.example.com/fwgKiekNou.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "IVN nature photography group with its own 10-rule code of conduct: no baiting, no staging, no manipulation. Its photos are used in IVN's public education."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "IVN-natuurfotowerkgroep met een eigen gedragscode van 10 regels: niet lokken, niet ensceneren, niet manipuleren. De foto's worden ingezet voor natuureducatie door het IVN."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Asten",
                 "fullName": "Fotokring Beeldhoek",
                 "nickName": "fkBeeldhoek"
@@ -1100,6 +1126,32 @@
 
         {
             "idPlus": {
+                "town": "Heeze",
+                "fullName": "Fotowerkgroep IVN Heeze-Leende",
+                "nickName": "fwgHeezeLeende"
+            },
+            "coordinates": {
+                "latitude": 51.38773,
+                "longitude": 5.58024
+            },
+            "optional": {
+                "website": "https://www.ivn.nl/afdeling/heeze-leende/fotografie/",
+                "level2URL": "https://www.example.com/fwgHeezeLeende.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photographs nature within its own municipality on themed outings, and discusses the nature in the photos as well as the photography. Non-members of IVN can join an outing."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografeert de natuur in de eigen gemeente tijdens excursies rond een thema, en bespreekt naast de fotografie ook de gefotografeerde natuur. Ook niet-leden van het IVN kunnen vrijblijvend mee."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Helmond",
                 "fullName": "Fotoclub Brandevoort",
                 "nickName": "fcBrandevoort"
@@ -1431,6 +1483,32 @@
                     {
                         "language": "NL",
                         "value": "In 2023 heeft de club met twee clubs in Rosmalen een fotoketting gemaakt waarbij ieder binnen een week fotografisch reageerde op een foto van een voorganger."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oirschot",
+                "fullName": "De Hippe Fotoclub",
+                "nickName": "fcDeHippe"
+            },
+            "coordinates": {
+                "latitude": 51.51884,
+                "longitude": 5.26878
+            },
+            "optional": {
+                "website": "https://hippefotoclub.nl/",
+                "level2URL": "https://www.example.com/fcDeHippe.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Several members came from traditional clubs and wanted something different: all members photograph the same subject, the nature of the Groene Woud."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een aantal leden kwam van traditionele clubs en zocht iets anders: alle leden fotograferen hetzelfde onderwerp, de natuur van het Groene Woud."
                     }
                 ]
             }
@@ -1776,6 +1854,57 @@
             }
         },
 
+        {
+            "idPlus": {
+                "town": "Son en Breugel",
+                "fullName": "Fotogroep De Beleving",
+                "nickName": "fgDeBeleving"
+            },
+            "coordinates": {
+                "latitude": 51.50982,
+                "longitude": 5.49384
+            },
+            "optional": {
+                "website": "https://www.pvge.nl/sonenbreugel/clubs/clubs-nieuw-programma-verslagen/nieuws-van-de-fotoclub-de-beleving",
+                "level2URL": "https://www.example.com/fgDeBeleving.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "PVGE seniors' group that photographs together under a professional photographer's guidance. A local art society helps select the photos for its yearly exhibition."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "PVGE-seniorengroep die samen fotografeert onder begeleiding van een professionele fotograaf. Een kunstvereniging helpt de foto's voor de jaarlijkse expositie te selecteren."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Son en Breugel",
+                "fullName": "Fotoclub Son en Breugel",
+                "nickName": "fcSonEnBreugel"
+            },
+            "coordinates": {
+                "latitude": 51.51964,
+                "longitude": 5.51473
+            },
+            "optional": {
+                "website": "https://www.fotoclubsonenbreugel.nl/",
+                "level2URL": "https://www.example.com/fcSonEnBreugel.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A new club, started in 2023. Besides reviewing members' photos, it brings in a professional photographer to give workshops."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Nieuwe club, opgericht in 2023. Naast het bespreken van elkaars foto's haalt de club een professionele fotograaf in huis voor workshops."
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {
