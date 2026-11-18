@@ -63,10 +63,10 @@ struct MemberPortfolioView: View {
                 Section {
                     // one-shot tip (toolbar → tabs migration); renders nothing once dismissed
                     TipView(TabNavigationTip())
-                        .calloutTipStyle()
+                        .calloutTipStyle(tint: .clubsColor)
 
                     TipView(ReadmeTip())
-                        .calloutTipStyle()
+                        .calloutTipStyle(tint: .clubsColor)
                 }
                 FilteredMemberPortfoliosView(memberPredicate: settingsModel.settings.memberPredicate,
                                              searchText: $searchText,
@@ -129,28 +129,6 @@ struct MemberPortfolioView: View {
             }
             .sheet(isPresented: $showingReadmeSheet, content: readmeSheetContent) // screenshot pipeline (#777)
         } // ScrollViewReader
-    }
-
-}
-
-// MARK: - Tip styling
-
-private extension View {
-
-    /// Gives a `TipView` the same look as `CalloutBox`: its rounding, club-color border and wash, so the
-    /// tips and the empty-list callout below them stay one look.
-    ///
-    /// `CalloutBox` cannot call this and instead repeats the styling itself, because `.tipCornerRadius`
-    /// and `.tipBackground` only take effect on a `TipView`.
-    func calloutTipStyle() -> some View {
-        self
-            .tipCornerRadius(CalloutBox.cornerRadius)
-            .overlay {
-                RoundedRectangle(cornerRadius: CalloutBox.cornerRadius)
-                    .strokeBorder(Color.clubsColor, lineWidth: CalloutBox.borderWidth)
-            }
-            .tipBackground(Color.clubsColor.opacity(CalloutBox.backgroundOpacity))
-            .tint(.primary)
     }
 
 }
