@@ -10,15 +10,20 @@ import MapKit // for MKMapItem
 import CoreData // for FetchedResults
 import Photo_Club_Hub_Data // for types like Organization
 
-/// Map showing the selected club/museum in the middle, with markers for other organizations and the user's location.
+/// Map shows the selected organization in the center, with markers for other organizations
+/// and optionally the user's location.
 /// Includes the standard map controls (compass, pitch toggle, scale, user-location button)
 /// which are hidden when the map's pan/zoom interaction is locked.
+/// The user-location button is also hidden when the app is not permitted to use the location (#889).
 @MainActor
 struct MapsViewMap: View {
 
     @ObservedObject var mapOrganization: Organization // the organization this map is about and is centered on
     var fetchedOrganizations: FetchedResults<Organization> // all organizations; `markedOrganizations` picks from these
     let isMapScrollLocked: Bool // read-only copy; the @State lives in `MapsViewCard`, whose lock button toggles it
+
+    /// Whether the app may use the location, set by `MapsView`. Decides whether the location button is shown.
+    @Environment(\.locationAccess) private var locationAccess
 
     /// Height of the map. Shared with the placeholder that `MapsViewCard` shows before the map is live (#870),
     /// so the card keeps its height when switching from a placeholder to an actual live map.
@@ -90,7 +95,9 @@ struct MapsViewMap: View {
             MapCompass() // map Compass shown if rotation differs from North on top
             MapPitchToggle() // switch between 2D and 3D
             MapScaleView() // distance scale
-            MapUserLocationButton()
+            if locationAccess.showsLocationButton { // without access, the button would spin forever (#889)
+                MapUserLocationButton() // and without access, the button doesn't do anything useful anyway
+            }
         }
         .mapControlVisibility(isMapScrollLocked ? .hidden : .automatic)
         .onChange(of: mapMarkerTagString) { _, newSelection in
