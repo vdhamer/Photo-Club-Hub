@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0E140384FE58F91689864C /* LocationDeniedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE6A106F832D12AEC32F9D1 /* LocationDeniedTip.swift */; };
+		2B394239214BBA8EA06B9EAF /* LocationAuthorizationObserver1717.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFF7B2966DDEFB3F084C23 /* LocationAuthorizationObserver1717.swift */; };
 		370752E1300A257600B0654C /* MemberPortfolioView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370752E0300A257600B0654C /* MemberPortfolioView+Screenshot.swift */; };
 		370752E3300A25A200B0654C /* PhotographersListView2627+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370752E2300A25A200B0654C /* PhotographersListView2627+Screenshot.swift */; };
 		370752E5300A25C600B0654C /* SinglePortfolioView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370752E4300A25C600B0654C /* SinglePortfolioView+Screenshot.swift */; };
@@ -41,7 +43,6 @@
 		37A22B703009B1E400074B0C /* MapsView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */; };
 		37A2A0AF2FAA587F00EF39A1 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */; };
 		37A2A0B22FAA7DD200EF39A1 /* FilteredMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */; };
-		37F890A42FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F890A32FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift */; };
 		37A2A0E02FAA959F00EF39A1 /* MapsViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */; };
 		37A2A0E22FAA973400EF39A1 /* MapsViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */; };
 		37A2A0E42FAA9EA100EF39A1 /* MapsViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A0E32FAA9EA100EF39A1 /* MapsViewMap.swift */; };
@@ -50,6 +51,8 @@
 		37AAA6813020CE980056BC94 /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = 37AAA6803020CE980056BC94 /* Photo Club Hub Data */; };
 		37C9BEBA2FFC5F120075F6DE /* ReadmeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9BEB92FFC5F120075F6DE /* ReadmeButton.swift */; };
 		37CA632F2FA63EFA00C92F30 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA632E2FA63EFA00C92F30 /* MemberPortfolioRow.swift */; };
+		37D3CCEE30A9E55D00AA743F /* clubsBE-Antwerpen.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D3CCEC30A9E55D00AA743F /* clubsBE-Antwerpen.level1.json */; };
+		37D3CCEF30A9E55D00AA743F /* clubsBE.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D3CCED30A9E55D00AA743F /* clubsBE.level1.json */; };
 		37D7A8C42F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */; };
 		37D984092F90406200C30EE5 /* SettingsViewMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D984082F90406200C30EE5 /* SettingsViewMembersSection.swift */; };
 		37D9840B2F9042F600C30EE5 /* SettingsViewMapsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9840A2F9042F600C30EE5 /* SettingsViewMapsSection.swift */; };
@@ -71,6 +74,8 @@
 		37F61872306492F8002DA468 /* ElementTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ElementTypeEnum.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2627.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */; };
 		37F890A22FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F890A12FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift */; };
+		37F890A42FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F890A32FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift */; };
+		CC84FD1C1715654D748D18FF /* LocationAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC92003F253A5239217BC7 /* LocationAccess.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
@@ -111,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EDFF7B2966DDEFB3F084C23 /* LocationAuthorizationObserver1717.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAuthorizationObserver1717.swift; sourceTree = "<group>"; };
 		3384213C8E634E3BA2235CD8 /* draft-level2.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "draft-level2.py"; sourceTree = "<group>"; };
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		370752E0300A257600B0654C /* MemberPortfolioView+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolioView+Screenshot.swift"; sourceTree = "<group>"; };
@@ -173,7 +179,6 @@
 		37A22B6F3009B1E400074B0C /* MapsView+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapsView+Screenshot.swift"; sourceTree = "<group>"; };
 		37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		37A2A0B12FAA7DD200EF39A1 /* FilteredMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMapsView.swift; sourceTree = "<group>"; };
-		37F890A32FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilteredMapsView+Search.swift"; sourceTree = "<group>"; };
 		37A2A0DF2FAA959F00EF39A1 /* MapsViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewTitle.swift; sourceTree = "<group>"; };
 		37A2A0E12FAA973400EF39A1 /* MapsViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewInfo.swift; sourceTree = "<group>"; };
 		37A2A0E32FAA9EA100EF39A1 /* MapsViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewMap.swift; sourceTree = "<group>"; };
@@ -209,6 +214,8 @@
 		37CE2E81304CBC14006C68B3 /* list-archives.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "list-archives.sh"; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
+		37D3CCEC30A9E55D00AA743F /* clubsBE-Antwerpen.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsBE-Antwerpen.level1.json; sourceTree = "<group>"; };
+		37D3CCED30A9E55D00AA743F /* clubsBE.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsBE.level1.json; sourceTree = "<group>"; };
 		37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeCaptionedImage.swift; sourceTree = "<group>"; };
 		37D984082F90406200C30EE5 /* SettingsViewMembersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewMembersSection.swift; sourceTree = "<group>"; };
 		37D9840A2F9042F600C30EE5 /* SettingsViewMapsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewMapsSection.swift; sourceTree = "<group>"; };
@@ -239,7 +246,10 @@
 		37F573C92F3668C7001305F2 /* MapMarkerAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerAppearance.swift; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2627.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2627.swift; sourceTree = "<group>"; };
 		37F890A12FB0C0DE00A1B2C3 /* Language+InterfaceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+InterfaceLanguage.swift"; sourceTree = "<group>"; };
+		37F890A32FB0C0DE00A1B2C3 /* FilteredMapsView+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilteredMapsView+Search.swift"; sourceTree = "<group>"; };
+		7BFC92003F253A5239217BC7 /* LocationAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAccess.swift; sourceTree = "<group>"; };
 		92188A9A6BD04E6D8A835019 /* restore-workspace.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "restore-workspace.sh"; sourceTree = "<group>"; };
+		AFE6A106F832D12AEC32F9D1 /* LocationDeniedTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedTip.swift; sourceTree = "<group>"; };
 		D002615E301128030098588E /* Maps_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_EN_Light.jpg; sourceTree = "<group>"; };
 		D002615F301128030098588E /* Maps_NL_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maps_NL_Light.jpg; sourceTree = "<group>"; };
 		D002616130112E9F0098588E /* Clubs_EN_Light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clubs_EN_Light.jpg; sourceTree = "<group>"; };
@@ -425,6 +435,7 @@
 			children = (
 				37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */,
 				378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */,
+				AFE6A106F832D12AEC32F9D1 /* LocationDeniedTip.swift */,
 			);
 			path = TipKit;
 			sourceTree = "<group>";
@@ -491,6 +502,14 @@
 				37CE2E7F304CBBEB006C68B3 /* verify-screenshots.sh */,
 			);
 			path = screenshots;
+			sourceTree = "<group>";
+		};
+		8B36CE8148981E7241591F73 /* OldIOSVersionSupport */ = {
+			isa = PBXGroup;
+			children = (
+				2EDFF7B2966DDEFB3F084C23 /* LocationAuthorizationObserver1717.swift */,
+			);
+			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
 		};
 		BF79A4AF10B944F491B352DE /* release */ = {
@@ -716,6 +735,7 @@
 				3722DC9F2F98CE9000F2851C /* ImageChoice.swift */,
 				D0329449283F9D1D0044C70C /* Bundle+BuildInfo.swift */,
 				D006BA7D2B115FB1002E555B /* LocationManager.swift */,
+				7BFC92003F253A5239217BC7 /* LocationAccess.swift */,
 				D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */,
 				D024F11528423BE60055021B /* Sounds.swift */,
 				D0795CE9294FCAC000FA62A8 /* String extensions */,
@@ -778,6 +798,7 @@
 		D0AE1B7327889D6700E0100E /* MapsView */ = {
 			isa = PBXGroup;
 			children = (
+				8B36CE8148981E7241591F73 /* OldIOSVersionSupport */,
 				3756CE61307301AF00B7C724 /* MapsViewScreenshot.swift */,
 				37D9D01F306E8842006B4E43 /* MapsViewCard.swift */,
 				37A2A0AE2FAA587F00EF39A1 /* MapsView.swift */,
@@ -867,6 +888,8 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				37D3CCEC30A9E55D00AA743F /* clubsBE-Antwerpen.level1.json */,
+				37D3CCED30A9E55D00AA743F /* clubsBE.level1.json */,
 				37DA3E082F06AFC600AB7993 /* clubsNL.level1.json */,
 				37A835F030608FFD004F69CB /* clubsNL01.level1.json */,
 				37A835F130608FFD004F69CB /* clubsNL02.level1.json */,
@@ -1045,6 +1068,8 @@
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
+				37D3CCEE30A9E55D00AA743F /* clubsBE-Antwerpen.level1.json in Resources */,
+				37D3CCEF30A9E55D00AA743F /* clubsBE.level1.json in Resources */,
 				372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
 				D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
@@ -1165,11 +1190,14 @@
 				D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */,
 				37D9D020306E8842006B4E43 /* MapsViewCard.swift in Sources */,
 				378D4D4C2FFE570E00A49F5A /* ReadmeTip.swift in Sources */,
+				0F0E140384FE58F91689864C /* LocationDeniedTip.swift in Sources */,
 				37174DAA2F8F93E100E58B6E /* SettingsView.swift in Sources */,
 				37F573CA2F3668C7001305F2 /* MapMarkerAppearance.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographersListView2627.swift in Sources */,
 				377E8C13303B229400C118A8 /* EmptyListHint.swift in Sources */,
 				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,
+				2B394239214BBA8EA06B9EAF /* LocationAuthorizationObserver1717.swift in Sources */,
+				CC84FD1C1715654D748D18FF /* LocationAccess.swift in Sources */,
 				37DA8385303746770064E3AA /* BuildStampKey.swift in Sources */,
 				376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */,
 				D0831A21277F72270049AB84 /* FilteredPhotographerView2627.swift in Sources */,
