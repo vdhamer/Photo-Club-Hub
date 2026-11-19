@@ -1086,6 +1086,7 @@ zodat Core Data bijvoorbeeld hernoemde struct-typen of hernoemde properties kan 
 ## Bijdragen
 
 Bugfixes en nieuwe functies zijn welkom.
+[CONTRIBUTING.md](CONTRIBUTING.md) (in het Engels) beschrijft waar je kunt beginnen, hoe je de app bouwt en wat een pull request nodig heeft.
 Voordat je moeite steekt in het ontwerpen, programmeren, testen en verfijnen van functies, is het het beste om
 het idee of de functionele wijziging eerst te beschrijven in een nieuwe of bestaande GitHub-`Issue`.
 Dat maakt wat voorafgaande discussie mogelijk en voorkomt verspilde moeite door overlappende initiatieven.</p>

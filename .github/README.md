@@ -1080,6 +1080,7 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 ## Contributing
 
 Bug fixes and new features are welcome.
+[CONTRIBUTING.md](CONTRIBUTING.md) lists where to start, how to build the app, and what a pull request needs.
 Before investing effort in designing, coding testing, and refining features, it is best to first describe
 the idea or functional change within a new or existing GitHub `Issue`.
 That allows for some upfront discussion and prevents wasted effort due to overlapping initiatives.</p>
