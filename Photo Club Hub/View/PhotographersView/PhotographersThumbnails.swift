@@ -19,6 +19,8 @@ struct PhotographersThumbnails: View {
     /// (pull-to-refresh loads clubs concurrently), so without observing it SwiftUI sees unchanged inputs and
     /// skips redrawing this row, leaving it one thumbnail short.
     @ObservedObject var photographer: Photographer // who is this about?
+    /// The language of the captions, passed on to each `PhotographersThumbnail` (see there).
+    let language: Language?
     /// Set by tapping a caption or chevron; the screen-level view owns the navigationDestination(item:).
     /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
     @Binding var selectedPortfolio: MemberPortfolio?
@@ -32,6 +34,7 @@ struct PhotographersThumbnails: View {
                 // unfiltered sorted() traps before the ForEach body ever runs (issue #802).
                 ForEach(photographer.memberships.filter { $0.isUsable }.sorted(), id: \.id) { membership in
                     PhotographersThumbnail(member: membership,
+                                           language: language,
                                            settings: settingsModel.settings,
                                            selectedPortfolio: $selectedPortfolio)
                 } // ForEach
@@ -71,6 +74,7 @@ struct PhotographersThumbnails: View {
                 Divider()
 
                 PhotographersThumbnails(photographer: photographer,
+                                        language: nil,
                                         selectedPortfolio: $selectedPortfolio)
                     .border(Color.gray.opacity(0.7), width: 1)
 
@@ -115,6 +119,7 @@ struct PhotographersThumbnails: View {
                     .font(.headline)
 
                 PhotographersThumbnails(photographer: photographer,
+                                        language: nil,
                                         selectedPortfolio: $selectedPortfolio)
                     .border(Color.gray.opacity(0.7), width: 1)
 

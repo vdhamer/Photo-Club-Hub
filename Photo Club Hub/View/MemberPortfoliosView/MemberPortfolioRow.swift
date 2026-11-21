@@ -16,6 +16,10 @@ import Photo_Club_Hub_Data // for types like MemberPortfolio
 struct MemberPortfolioRow: View {
     /// The member portfolio used to populate this row.
     @ObservedObject var member: MemberPortfolio
+    /// The language of the role line, including the club's town: the interface language, passed down by
+    /// `FilteredMemberPortfoliosView`, whose section headers use the same one, so a row and its header show the same
+    /// town (#890). `nil` (`Language` table not seeded yet, or a preview) gives the stored town.
+    let language: Language?
     /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
     /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
     @Binding var selectedPortfolio: MemberPortfolio?
@@ -28,8 +32,9 @@ struct MemberPortfolioRow: View {
     /// (Photo-Club-Hub-Data#39). Deleting on a background context does not avoid this:
     /// merging that save into the view context notifies the observing views on the main thread in the same way.
     /// The parent's `isUsable` filter cannot help, because the parent's body has not run again yet.
-    init(member: MemberPortfolio, selectedPortfolio: Binding<MemberPortfolio?>) {
+    init(member: MemberPortfolio, language: Language?, selectedPortfolio: Binding<MemberPortfolio?>) {
         self.member = member
+        self.language = language
         self._selectedPortfolio = selectedPortfolio
     }
 
@@ -41,6 +46,7 @@ struct MemberPortfolioRow: View {
         if member.isUsable, let photographer = member.photographer_ {
             MemberPortfolioRowContent(member: member,
                                       photographer: photographer,
+                                      language: language,
                                       selectedPortfolio: $selectedPortfolio)
         }
     }
@@ -62,11 +68,11 @@ struct MemberPortfolioRowContent: View {
     /// not on the membership: during pull-to-refresh another club's file can add expertises after this row is drawn,
     /// and observing `member` does not notice that (#862).
     @ObservedObject var photographer: Photographer
+    /// The language of the role line, passed in by `MemberPortfolioRow` (see there).
+    let language: Language?
     /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
     /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
     @Binding var selectedPortfolio: MemberPortfolio?
-    /// Localized connector text used as '<person> of <photo club>'.
-    private let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
     /// Core Data context used to resolve localized expertise lists.
     let moc = PersistenceController.shared.container.viewContext
     /// `flipImageFlag` is flipped by tapping on image. It reverses the image to an alternative image.
@@ -138,7 +144,7 @@ struct MemberPortfolioRowContent: View {
                         .truncationMode(.tail)
 
                         // roles
-                        Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                        Text(verbatim: member.roleDescriptionOfClubTown(language: language))
                             .truncationMode(.tail)
                             .lineLimit(2)
                             .font(UIDevice.isIPad ? .subheadline : .caption)
@@ -153,6 +159,7 @@ struct MemberPortfolioRowContent: View {
 
             DualImageWithCaptionAndControls(member: member,
                                             photographer: photographer,
+                                            language: language,
                                             settings: settingsModel.settings,
                                             squareSize: 80,
                                             caption: false,
@@ -221,6 +228,6 @@ struct MemberPortfolioRowContent: View {
             memberRolesAndStatus: memberRolesAndStatus
         )
     )
-    MemberPortfolioRow(member: member, selectedPortfolio: .constant(nil))
+    MemberPortfolioRow(member: member, language: nil, selectedPortfolio: .constant(nil))
         .border(.blue, width: 1) .padding([.horizontal], 10)
 }

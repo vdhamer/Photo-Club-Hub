@@ -73,11 +73,13 @@ struct TownInInterfaceLanguageTests {
         #expect(!FilteredMapsView.matches(museum, searchText: "Keulen", language: nil)) // Language table not seeded
     }
 
-    @Test("Apple's non-breaking hyphen matches an ordinary hyphen typed by the user")
-    func nonBreakingHyphenMatches() throws {
+    @Test("Typographic hyphens and apostrophes match, in Apple's town and in the search text (Data#100)")
+    func typographyMatches() throws {
         let club = try club(fullName: "Fotogroep Argus", town: "Den Bosch",
-                            localizedTowns: ["nl": "'s\u{2011}Hertogenbosch"])
+                            localizedTowns: ["nl": "'s\u{2011}Hertogenbosch"]) // Apple's non-breaking hyphen
         #expect(FilteredMapsView.matches(club, searchText: "'s-Hertogenbosch", language: try language("nl")))
+        #expect(FilteredMapsView.matches(club, searchText: "\u{2019}s-Hertogenbosch", // the keyboard's apostrophe
+                                         language: try language("nl")))
         #expect(FilteredMapsView.matches(club, searchText: "Den Bosch", language: try language("nl")))
     }
 

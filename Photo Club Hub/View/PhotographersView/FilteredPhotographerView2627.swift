@@ -37,6 +37,12 @@ struct FilteredPhotographerView2627: View {
         return request
     }()) private var anyPhotographerProbe: FetchedResults<Photographer>
 
+    /// The language the portfolio captions show the club's town in: the app's own resolved interface language
+    /// (see `Language.interfaceLanguageRequest`), as on the Clubs tab (#890).
+    /// Empty only if `Language.initConstants` has not run.
+    @FetchRequest(fetchRequest: Language.interfaceLanguageRequest)
+    private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
+
     private let isDeletePhotographersPermitted = true // enable/disable .onDelete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
@@ -58,6 +64,7 @@ struct FilteredPhotographerView2627: View {
     }
 
     var body: some View {
+        let uiLanguage = uiLanguages.first // read here, on the main thread, not inside the ForEach
         ItemFilterStatsView(filteredCount: filteredPhotographers.count,
                             unfilteredCount: fetchedPhotographers.count,
                             unit: .photographer)
@@ -90,7 +97,9 @@ struct FilteredPhotographerView2627: View {
 
                 } // HStack
 
-                PhotographersThumbnails(photographer: photographer, selectedPortfolio: selectedPortfolio)
+                PhotographersThumbnails(photographer: photographer,
+                                        language: uiLanguage,
+                                        selectedPortfolio: selectedPortfolio)
 
             } // VStack
             .accentColor(.peopleColor)
@@ -160,9 +169,12 @@ struct FilteredPhotographerView2627: View {
                 photographer.isUsable
             }
         } else {
+            // Names are stored with plain apostrophes and hyphens (Data#100), so "D’Eau" typed with the
+            // keyboard's curly apostrophe must be normalized the same way to find "D'Eau".
+            let normalizedSearchText = searchText.wrappedValue.normalizedTypography
             return fetchedPhotographers.filter { photographer in
                 photographer.isUsable &&
-                photographer.fullNameFirstLast.localizedCaseInsensitiveContains(searchText.wrappedValue) }
+                photographer.fullNameFirstLast.localizedCaseInsensitiveContains(normalizedSearchText) }
         }
     }
 
