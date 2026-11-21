@@ -98,7 +98,7 @@ struct FilteredPhotographerView2627: View {
                 } // HStack
 
                 PhotographersThumbnails(photographer: photographer,
-                                        language: uiLanguage,
+                                        uiLanguage: uiLanguage,
                                         selectedPortfolio: selectedPortfolio)
 
             } // VStack

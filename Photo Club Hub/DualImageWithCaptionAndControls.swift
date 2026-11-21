@@ -25,7 +25,7 @@ struct DualImageWithCaptionAndControls: View {
     @ObservedObject private var photographer: Photographer
     /// The language of the caption, including the club's town: the interface language, passed down from the list
     /// (#890). `nil` (`Language` table not seeded yet, or a preview) gives the stored town.
-    let language: Language?
+    let uiLanguage: Language?
     let settings: SettingsStruct
     /// size of  square image
     let squareSize: CGFloat
@@ -41,7 +41,7 @@ struct DualImageWithCaptionAndControls: View {
     /// deleted (#874), so the caller passes in the photographer it has already checked.
     init(member: MemberPortfolio,
          photographer: Photographer,
-         language: Language?,
+         uiLanguage: Language?,
          settings: SettingsStruct,
          squareSize: CGFloat,
          caption: Bool,
@@ -49,7 +49,7 @@ struct DualImageWithCaptionAndControls: View {
          selectedPortfolio: Binding<MemberPortfolio?>) {
         self.member = member
         self.photographer = photographer
-        self.language = language
+        self.uiLanguage = uiLanguage
         self.settings = settings
         self.squareSize = squareSize
         self.caption = caption
@@ -123,7 +123,7 @@ struct DualImageWithCaptionAndControls: View {
                     // Button sets selectedPortfolio; the screen-level navigationDestination(item:) handles navigation.
                     // Navigation destinations may not live inside lazy containers (List rows, LazyVStack).
                     Button { selectedPortfolio = member } label: {
-                        Text(verbatim: member.roleDescriptionOfClubTown(language: language))
+                        Text(verbatim: member.roleDescriptionOfClubTown(language: uiLanguage))
                             .frame(width: squareSize, height: 35)
                             .multilineTextAlignment(.center)
                             .font(.caption)
@@ -195,7 +195,7 @@ struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
             NavigationStack {
                 DualImageWithCaptionAndControls(member: member,
                                                 photographer: member.photographer,
-                                                language: nil,
+                                                uiLanguage: nil,
                                                 settings: SettingsStruct.defaultValue,
                                                 squareSize: squareSize,
                                                 caption: caption,

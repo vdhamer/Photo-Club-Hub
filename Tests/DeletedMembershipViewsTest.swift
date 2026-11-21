@@ -64,7 +64,7 @@ struct DeletedMembershipViewsTests {
     @Test("MemberPortfolioRow can be created and drawn for a deleted membership")
     func memberPortfolioRow() throws {
         let (member, _) = try deletedMembership()
-        let row = MemberPortfolioRow(member: member, language: nil, selectedPortfolio: .constant(nil))
+        let row = MemberPortfolioRow(member: member, uiLanguage: nil, selectedPortfolio: .constant(nil))
         _ = row.body
     }
 
@@ -73,7 +73,7 @@ struct DeletedMembershipViewsTests {
         let (member, photographer) = try deletedMembership()
         let content = MemberPortfolioRowContent(member: member,
                                                 photographer: photographer,
-                                                language: nil,
+                                                uiLanguage: nil,
                                                 selectedPortfolio: .constant(nil))
         _ = content.body
     }
@@ -83,7 +83,7 @@ struct DeletedMembershipViewsTests {
         let (member, photographer) = try deletedMembership()
         let dualImage = DualImageWithCaptionAndControls(member: member,
                                                         photographer: photographer,
-                                                        language: nil,
+                                                        uiLanguage: nil,
                                                         settings: SettingsStruct.defaultValue,
                                                         squareSize: 80,
                                                         caption: false,
@@ -96,7 +96,7 @@ struct DeletedMembershipViewsTests {
     func photographersThumbnail() throws {
         let (member, _) = try deletedMembership()
         let thumbnail = PhotographersThumbnail(member: member,
-                                               language: nil,
+                                               uiLanguage: nil,
                                                settings: SettingsStruct.defaultValue,
                                                selectedPortfolio: .constant(nil))
         _ = thumbnail.body

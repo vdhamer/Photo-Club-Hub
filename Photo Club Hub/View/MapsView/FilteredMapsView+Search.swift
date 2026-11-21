@@ -21,17 +21,17 @@ extension FilteredMapsView { // the search field on the Maps tab
     /// searching "Town?" lists the organizations for which Apple gave no town, a check for maintainers.
     ///
     /// Static, without the view's state, so that it can be tested.
-    /// - Parameter language: the interface language, or nil when the `Language` table has not been seeded yet,
+    /// - Parameter uiLanguage: the interface language, or nil when the `Language` table has not been seeded yet,
     ///   in which case only the name and the stored town are compared.
-    static func matches(_ organization: Organization, searchText: String, language: Language?) -> Bool {
+    static func matches(_ organization: Organization, searchText: String, uiLanguage: Language?) -> Bool {
         let searchText = searchText.normalizedTypography
         if organization.fullNameTown.localizedCaseInsensitiveContains(searchText) {
             return true
         }
 
-        guard let language else { return false } // Language table not seeded yet
+        guard let uiLanguage else { return false } // Language table not seeded yet
 
-        return organization.localizedTown(for: language).localizedCaseInsensitiveContains(searchText)
+        return organization.localizedTown(for: uiLanguage).localizedCaseInsensitiveContains(searchText)
     }
 
 }

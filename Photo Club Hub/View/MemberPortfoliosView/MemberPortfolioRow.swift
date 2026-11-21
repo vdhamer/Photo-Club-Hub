@@ -19,7 +19,7 @@ struct MemberPortfolioRow: View {
     /// The language of the role line, including the club's town: the interface language, passed down by
     /// `FilteredMemberPortfoliosView`, whose section headers use the same one, so a row and its header show the same
     /// town (#890). `nil` (`Language` table not seeded yet, or a preview) gives the stored town.
-    let language: Language?
+    let uiLanguage: Language?
     /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
     /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
     @Binding var selectedPortfolio: MemberPortfolio?
@@ -32,9 +32,9 @@ struct MemberPortfolioRow: View {
     /// (Photo-Club-Hub-Data#39). Deleting on a background context does not avoid this:
     /// merging that save into the view context notifies the observing views on the main thread in the same way.
     /// The parent's `isUsable` filter cannot help, because the parent's body has not run again yet.
-    init(member: MemberPortfolio, language: Language?, selectedPortfolio: Binding<MemberPortfolio?>) {
+    init(member: MemberPortfolio, uiLanguage: Language?, selectedPortfolio: Binding<MemberPortfolio?>) {
         self.member = member
-        self.language = language
+        self.uiLanguage = uiLanguage
         self._selectedPortfolio = selectedPortfolio
     }
 
@@ -46,7 +46,7 @@ struct MemberPortfolioRow: View {
         if member.isUsable, let photographer = member.photographer_ {
             MemberPortfolioRowContent(member: member,
                                       photographer: photographer,
-                                      language: language,
+                                      uiLanguage: uiLanguage,
                                       selectedPortfolio: $selectedPortfolio)
         }
     }
@@ -69,7 +69,7 @@ struct MemberPortfolioRowContent: View {
     /// and observing `member` does not notice that (#862).
     @ObservedObject var photographer: Photographer
     /// The language of the role line, passed in by `MemberPortfolioRow` (see there).
-    let language: Language?
+    let uiLanguage: Language?
     /// Parent-owned selection: set when the text/icon area is tapped, triggering navigation to the member's
     /// portfolio via the `navigationDestination(item:)` registered in `MemberPortfolioView`.
     @Binding var selectedPortfolio: MemberPortfolio?
@@ -144,7 +144,7 @@ struct MemberPortfolioRowContent: View {
                         .truncationMode(.tail)
 
                         // roles
-                        Text(verbatim: member.roleDescriptionOfClubTown(language: language))
+                        Text(verbatim: member.roleDescriptionOfClubTown(language: uiLanguage))
                             .truncationMode(.tail)
                             .lineLimit(2)
                             .font(UIDevice.isIPad ? .subheadline : .caption)
@@ -159,7 +159,7 @@ struct MemberPortfolioRowContent: View {
 
             DualImageWithCaptionAndControls(member: member,
                                             photographer: photographer,
-                                            language: language,
+                                            uiLanguage: uiLanguage,
                                             settings: settingsModel.settings,
                                             squareSize: 80,
                                             caption: false,
@@ -228,6 +228,6 @@ struct MemberPortfolioRowContent: View {
             memberRolesAndStatus: memberRolesAndStatus
         )
     )
-    MemberPortfolioRow(member: member, language: nil, selectedPortfolio: .constant(nil))
+    MemberPortfolioRow(member: member, uiLanguage: nil, selectedPortfolio: .constant(nil))
         .border(.blue, width: 1) .padding([.horizontal], 10)
 }

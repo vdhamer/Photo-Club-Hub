@@ -23,7 +23,7 @@ import CoreData // for Organization and FetchedResults
 struct MapsViewCard: View {
 
     let organization: Organization
-    let language: Language?
+    let uiLanguage: Language?
     let fetchedOrganizations: FetchedResults<Organization>
 
     @State private var isMapScrollLocked: Bool = true // every map is initially locked
@@ -58,7 +58,7 @@ struct MapsViewCard: View {
     var body: some View {
         VStack(alignment: .leading) {
             MapsViewTitle(organization: organization)
-            MapsViewInfo(organization: organization, language: language, isMapScrollLocked: $isMapScrollLocked)
+            MapsViewInfo(organization: organization, uiLanguage: uiLanguage, isMapScrollLocked: $isMapScrollLocked)
             if showsLiveMap {
                 MapsViewMap(mapOrganization: organization,
                             fetchedOrganizations: fetchedOrganizations,
@@ -109,7 +109,7 @@ struct MapsViewCard: View {
 private struct MapsViewCardPreviewHost: View {
 
     let organization: Organization
-    let language: Language?
+    let uiLanguage: Language?
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\Organization.fullName_, order: .forward)])
     private var fetchedOrganizations: FetchedResults<Organization>
@@ -117,7 +117,7 @@ private struct MapsViewCardPreviewHost: View {
     init() {
         let context = MapsViewMapPreviews.persistenceController.container.viewContext
         organization = MapsViewMapPreviews.seedOrganization(context: context)
-        language = Self.seedLocalizedAddress(for: organization, in: context)
+        uiLanguage = Self.seedLocalizedAddress(for: organization, in: context)
     }
 
     /// Stores a fixed English town and country for `organization`, and returns that language.
@@ -141,7 +141,7 @@ private struct MapsViewCardPreviewHost: View {
 
     var body: some View {
         MapsViewCard(organization: organization,
-                     language: language,
+                     uiLanguage: uiLanguage,
                      fetchedOrganizations: fetchedOrganizations)
         .padding() // the same framing as each card in `FilteredMapsView`
         .border(Color(.darkGray), width: 0.5)
