@@ -5,7 +5,7 @@
 //  Created by Claude Code (guided by Peter van den Hamer) on 07/11/2026.
 //
 
-import Photo_Club_Hub_Data // for Organization, Language
+import Photo_Club_Hub_Data // for Organization, Language, String.normalizedTypography
 
 extension FilteredMapsView { // the search field on the Maps tab
 
@@ -15,8 +15,8 @@ extension FilteredMapsView { // the search field on the Maps tab
     /// So "Keulen" in Dutch, "Cologne" in English and "Köln" in either setting find Museum Ludwig.
     ///
     /// The localized town is Apple's name for the place at the coordinates.
-    /// Apple writes some names with a non-breaking hyphen (U+2011, as in 's‑Hertogenbosch),
-    /// which is compared as an ordinary hyphen, so that the text a user types matches.
+    /// Names and towns are stored with plain hyphens, apostrophes and quotes (Data#100). Benefit: the search text is
+    /// normalized the same way: a curly apostrophe typed by the iOS keyboard still finds "'s-Hertogenbosch".
     /// The "Town?" placeholder is matched like any town, because the card shows it:
     /// searching "Town?" lists the organizations for which Apple gave no town, a check for maintainers.
     ///
@@ -24,14 +24,14 @@ extension FilteredMapsView { // the search field on the Maps tab
     /// - Parameter language: the interface language, or nil when the `Language` table has not been seeded yet,
     ///   in which case only the name and the stored town are compared.
     static func matches(_ organization: Organization, searchText: String, language: Language?) -> Bool {
+        let searchText = searchText.normalizedTypography
         if organization.fullNameTown.localizedCaseInsensitiveContains(searchText) {
             return true
         }
 
         guard let language else { return false } // Language table not seeded yet
 
-        return organization.localizedTown(for: language).replacingOccurrences(of: "\u{2011}", with: "-")
-                            .localizedCaseInsensitiveContains(searchText)
+        return organization.localizedTown(for: language).localizedCaseInsensitiveContains(searchText)
     }
 
 }
