@@ -23,6 +23,9 @@ struct DualImageWithCaptionAndControls: View {
     /// during pull-to-refresh it can arrive from another club's file after this view is drawn,
     /// and observing `member` does not notice that (#862).
     @ObservedObject private var photographer: Photographer
+    /// The language of the caption, including the club's town: the interface language, passed down from the list
+    /// (#890). `nil` (`Language` table not seeded yet, or a preview) gives the stored town.
+    let language: Language?
     let settings: SettingsStruct
     /// size of  square image
     let squareSize: CGFloat
@@ -36,10 +39,17 @@ struct DualImageWithCaptionAndControls: View {
 
     /// Reads nothing from `member`: SwiftUI can create this view for a membership that e.g. pull-to-refresh has just
     /// deleted (#874), so the caller passes in the photographer it has already checked.
-    init(member: MemberPortfolio, photographer: Photographer, settings: SettingsStruct, squareSize: CGFloat,
-         caption: Bool, flipImageFlag: Binding<Bool>, selectedPortfolio: Binding<MemberPortfolio?>) {
+    init(member: MemberPortfolio,
+         photographer: Photographer,
+         language: Language?,
+         settings: SettingsStruct,
+         squareSize: CGFloat,
+         caption: Bool,
+         flipImageFlag: Binding<Bool>,
+         selectedPortfolio: Binding<MemberPortfolio?>) {
         self.member = member
         self.photographer = photographer
+        self.language = language
         self.settings = settings
         self.squareSize = squareSize
         self.caption = caption
@@ -113,7 +123,7 @@ struct DualImageWithCaptionAndControls: View {
                     // Button sets selectedPortfolio; the screen-level navigationDestination(item:) handles navigation.
                     // Navigation destinations may not live inside lazy containers (List rows, LazyVStack).
                     Button { selectedPortfolio = member } label: {
-                        Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                        Text(verbatim: member.roleDescriptionOfClubTown(language: language))
                             .frame(width: squareSize, height: 35)
                             .multilineTextAlignment(.center)
                             .font(.caption)
@@ -185,6 +195,7 @@ struct DualImageWithCaptionAndControls_Previews: PreviewProvider {
             NavigationStack {
                 DualImageWithCaptionAndControls(member: member,
                                                 photographer: member.photographer,
+                                                language: nil,
                                                 settings: SettingsStruct.defaultValue,
                                                 squareSize: squareSize,
                                                 caption: caption,
