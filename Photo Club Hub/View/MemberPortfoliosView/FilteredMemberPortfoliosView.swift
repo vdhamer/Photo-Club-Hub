@@ -85,7 +85,7 @@ struct FilteredMemberPortfoliosView: View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
         let uiLanguage = uiLanguages.first // the headers and the rows get the same Language (#890)
         let titles = sectionTitles(for: sectionedPortfoliosResults, // read Core Data here, on the main thread
-                                   language: uiLanguage)
+                                   uiLanguage: uiLanguage)
         // Like a `guard`: deal with the reasons the list could be empty, then get on with the happy flow
         // below. Every reason but `.listHasRows` implies no section survives the filter, so the two never
         // both show.
@@ -99,7 +99,7 @@ struct FilteredMemberPortfoliosView: View {
                 Section {
                     ForEach(filteredPortfolios, id: \.id) { filteredMember in
                         MemberPortfolioRow(member: filteredMember,
-                                           language: uiLanguage,
+                                           uiLanguage: uiLanguage,
                                            selectedPortfolio: selectedPortfolio)
                             .listRowSeparator(.visible)
                     }
@@ -122,7 +122,7 @@ struct FilteredMemberPortfoliosView: View {
     // MARK: - section titles
 
     /// The title users see above each section, keyed by section id (`fullNameTown`): the club name, and the town
-    /// in the interface language unless the name already contains it (`fullNameLocalizedTown`, Data#88).
+    /// in the uiLanguage unless the name already contains it (`fullNameLocalizedTown`, Data#88).
     ///
     /// The title cannot be the section id itself, which must stay the same in every language. Nor can the header
     /// look up the club itself, because reaching back to the organization traps on a row deleted mid-scroll (#802).
@@ -133,25 +133,25 @@ struct FilteredMemberPortfoliosView: View {
     /// string later would fail on parentheses inside a name ("... (AFO)") or a town ("Beuningen (Gld)").
     /// A section without a usable row, or a missing `Language` row, gets no entry: its header falls back to
     /// the section id.
-    private func sectionTitles(for sections: SectionedFetchResults<String, MemberPortfolio>, language: Language?)
+    private func sectionTitles(for sections: SectionedFetchResults<String, MemberPortfolio>, uiLanguage: Language?)
                               -> [String: (name: String, town: String?)] {
-        guard let language else { return [:] } // Language table not seeded yet
+        guard let uiLanguage else { return [:] } // Language table not seeded yet
         var titles: [String: (name: String, town: String?)] = [:]
         for section in sections {
             guard let organization = section.first(where: { $0.isUsable })?.organization_ else { continue }
-            titles[section.id] = Self.sectionTitle(for: organization, language: language)
+            titles[section.id] = Self.sectionTitle(for: organization, uiLanguage: uiLanguage)
         }
         return titles
     }
 
-    /// One section's title: the club name, and its town in `language` unless the name already contains it.
+    /// One section's title: the club name, and its town in `uiLanguage` unless the name already contains it.
     ///
     /// `fullNameLocalizedTown` returns either the name alone or "name (town)", so the town is what follows the name
     /// and " (", minus the closing ")". Cutting by the name's length rather than searching for " (" keeps any
     /// parentheses inside the name or the town where they belong.
-    static func sectionTitle(for organization: Organization, language: Language) -> (name: String, town: String?) {
+    static func sectionTitle(for organization: Organization, uiLanguage: Language) -> (name: String, town: String?) {
         let name = organization.fullName
-        let title = organization.fullNameLocalizedTown(for: language) // either `name` or "name (town)"
+        let title = organization.fullNameLocalizedTown(for: uiLanguage) // either `name` or "name (town)"
         let town: String? = title == name ? nil : String(title.dropFirst(name.count + 2).dropLast())
         return (name: name, town: town)
     }

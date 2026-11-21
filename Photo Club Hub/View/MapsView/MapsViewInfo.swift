@@ -21,15 +21,15 @@ struct MapsViewInfo: View {
     let organizationWebsite: URL?
     @Binding var isMapScrollLocked: Bool // owned by the card (`MapsViewCard`), which also passes it to the map
 
-    /// - Parameter language: the language to show the address in, or nil when the `Language` table has
-    ///   not been seeded yet. Nil falls back to the unlocalized town the JSON supplied (#827).
+    /// - Parameter uiLanguage: user interface language in which, to show the address, or nil when the `Language` table
+    ///   has not been seeded yet. Nil falls back to the unlocalized town the JSON supplied (#827).
     init(organization: Organization, // higher level initializer for production
-         language: Language?,
+         uiLanguage: Language?,
          isMapScrollLocked: Binding<Bool>) {
         organizationType = organization.organizationType.organizationTypeEnum
-        if let language {
-            localizedTown = organization.localizedTown(for: language)
-            localizedCountry = organization.localizedCountry(for: language)
+        if let uiLanguage {
+            localizedTown = organization.localizedTown(for: uiLanguage)
+            localizedCountry = organization.localizedCountry(for: uiLanguage)
         } else {
             localizedTown = organization.town
             localizedCountry = LocalizedAddress.unknownCountry

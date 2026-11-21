@@ -37,7 +37,7 @@ struct FilteredPhotographerView1718: View {
         return request
     }()) private var anyPhotographerProbe: FetchedResults<Photographer>
 
-    /// The language the portfolio captions show the club's town in: the app's own resolved interface language
+    /// The language the portfolio captions show the club's town in: the app's own resolved uiLanguage
     /// (see `Language.interfaceLanguageRequest`), as on the Clubs tab (#890).
     /// Empty only if `Language.initConstants` has not run.
     @FetchRequest(fetchRequest: Language.interfaceLanguageRequest)
@@ -98,7 +98,7 @@ struct FilteredPhotographerView1718: View {
                 } // HStack
 
                 PhotographersThumbnails(photographer: photographer,
-                                        language: uiLanguage,
+                                        uiLanguage: uiLanguage,
                                         selectedPortfolio: selectedPortfolio)
 
             } // VStack

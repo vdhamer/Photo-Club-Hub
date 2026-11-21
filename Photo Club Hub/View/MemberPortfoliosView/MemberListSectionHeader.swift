@@ -20,7 +20,7 @@ import SwiftUI
 struct MemberListSectionHeader: View {
 
     let name: String // club name, as the club writes it
-    /// The club's town in the interface language, or nil when the name already contains the town
+    /// The club's town in the uiLanguage, or nil when the name already contains the town
     /// ("Fotogroep Waalre" in Waalre has none, "Fotogroep Aalst" in Waalre has "Waalre").
     let town: String?
 

@@ -10,7 +10,7 @@ import Photo_Club_Hub_Data // for Organization, Language, String.normalizedTypog
 extension FilteredMapsView { // the search field on the Maps tab
 
     /// True when the search text occurs in the organization's name, its stored town, or its town in the
-    /// interface language: the town its card shows (Data#88).
+    /// uiLanguage: the town its card shows (Data#88).
     ///
     /// So "Keulen" in Dutch, "Cologne" in English and "Köln" in either setting find Museum Ludwig.
     ///
@@ -21,17 +21,17 @@ extension FilteredMapsView { // the search field on the Maps tab
     /// searching "Town?" lists the organizations for which Apple gave no town, a check for maintainers.
     ///
     /// Static, without the view's state, so that it can be tested.
-    /// - Parameter language: the interface language, or nil when the `Language` table has not been seeded yet,
+    /// - Parameter uiLanguage: the uiLanguage, or nil when the `Language` table has not been seeded yet,
     ///   in which case only the name and the stored town are compared.
-    static func matches(_ organization: Organization, searchText: String, language: Language?) -> Bool {
+    static func matches(_ organization: Organization, searchText: String, uiLanguage: Language?) -> Bool {
         let searchText = searchText.normalizedTypography
         if organization.fullNameTown.localizedCaseInsensitiveContains(searchText) {
             return true
         }
 
-        guard let language else { return false } // Language table not seeded yet
+        guard let uiLanguage else { return false } // Language table not seeded yet
 
-        return organization.localizedTown(for: language).localizedCaseInsensitiveContains(searchText)
+        return organization.localizedTown(for: uiLanguage).localizedCaseInsensitiveContains(searchText)
     }
 
 }

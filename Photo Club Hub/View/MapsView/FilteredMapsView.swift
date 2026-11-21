@@ -33,13 +33,13 @@ struct FilteredMapsView: View {
         return request
     }()) private var anyOrganizationProbe: FetchedResults<Organization>
 
-    /// The language these cards are shown and searched in: the app's own resolved interface language
+    /// The language these cards are shown and searched in: the app's own resolved uiLanguage
     /// (see `Language.interfaceLanguageRequest`).
     ///
     /// A `@FetchRequest` rather than a lookup per card: SwiftUI maintains it, so the row is not
     /// re-fetched on every body evaluation. Empty only if `Language.initConstants` has not run.
     @FetchRequest(fetchRequest: Language.interfaceLanguageRequest)
-    private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
+    private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this holds only 1
 
     /// Never directly read: it exists only so that any geocoded town or country, new or changed, redraws the cards.
     /// `fetchedOrganizations` alone misses an address rewritten in place: a fetch request reports changes to its
@@ -90,7 +90,7 @@ struct FilteredMapsView: View {
             @State var flipImageFlag: Bool = false
 
             MapsViewCard(organization: filteredOrganization,
-                         language: uiLanguages.first,
+                         uiLanguage: uiLanguages.first,
                          fetchedOrganizations: fetchedOrganizations) // to show all markers within map scope
             .id(row.id)
             .onAppear {
@@ -291,7 +291,7 @@ struct FilteredMapsView: View {
 
     /// Applies the search field to one organization (see `matches`, in FilteredMapsView+Search.swift).
     private func matchesSearchText(_ organization: Organization) -> Bool {
-        Self.matches(organization, searchText: searchText.wrappedValue, language: uiLanguages.first)
+        Self.matches(organization, searchText: searchText.wrappedValue, uiLanguage: uiLanguages.first)
     }
 
     /// The rows of the `ForEach`, each with its identity already computed to rule out race conditions.

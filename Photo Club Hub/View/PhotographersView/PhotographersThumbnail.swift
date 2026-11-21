@@ -16,9 +16,9 @@ import Photo_Club_Hub_Data // for types like MemberPortfolio
 
 struct PhotographersThumbnail: View {
     @ObservedObject var member: MemberPortfolio // who is this about?
-    /// The language of the caption, including the club's town: the interface language, passed down from the
+    /// The language of the caption, including the club's town: the uiLanguage, passed down from the
     /// People list (#890). `nil` (`Language` table not seeded yet, or a preview) gives the stored town.
-    let language: Language?
+    let uiLanguage: Language?
     let settings: SettingsStruct
     /// Set by tapping the caption or chevron; the screen-level view owns the navigationDestination(item:).
     /// Navigation destinations may not be declared inside lazy containers (List rows, LazyVStack).
@@ -35,7 +35,7 @@ struct PhotographersThumbnail: View {
             HStack {
                 DualImageWithCaptionAndControls(member: member,
                                                 photographer: photographer,
-                                                language: language,
+                                                uiLanguage: uiLanguage,
                                                 settings: settings,
                                                 squareSize: 160,
                                                 caption: true,
@@ -80,7 +80,7 @@ extension PhotographersThumbnail {
             Divider()
 
             PhotographersThumbnail(member: membership,
-                                   language: nil,
+                                   uiLanguage: nil,
                                    settings: settings,
                                    selectedPortfolio: $selectedPortfolio)
                 .border(Color.gray.opacity(0.3), width: 1)

@@ -10,7 +10,7 @@ import Photo_Club_Hub_Data  // for Language
 
 extension Language {
 
-    /// A fetch request for the `Language` of the app's own resolved interface language, for use in a `@FetchRequest`.
+    /// A fetch request for the `Language` of the app's own resolved uiLanguage, for use in a `@FetchRequest`.
     ///
     /// This is the language an organization's town is shown and searched in (Data#88), so that a localized town
     /// reads in the same language as the rest of the interface. `knownRegions` is en/nl, so this can only resolve
