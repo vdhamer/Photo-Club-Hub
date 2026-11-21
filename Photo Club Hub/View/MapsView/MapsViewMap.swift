@@ -228,10 +228,7 @@ struct MapsViewMapPreviews: View {
                                                          idPlus: OrganizationIdPlus(fullName: "Fotogroep de Gender",
                                                                                     town: "Eindhoven",
                                                                                     nickname: "fgDeGender"),
-                                                         coordinates: center,
-                                                         removeOrganization: false,
-                                                         optionalFields: OrganizationOptionalFields(),
-                                                         pinned: false)
+                                                         coordinates: center)
 
         addNeighbors(around: center, in: context)
 
@@ -266,10 +263,7 @@ struct MapsViewMapPreviews: View {
                                                                          nickname: "fcPreview\(name)"),
                                               coordinates: CLLocationCoordinate2D(
                                                   latitude: center.latitude + offset.latitude,
-                                                  longitude: center.longitude + offset.longitude),
-                                              removeOrganization: false,
-                                              optionalFields: OrganizationOptionalFields(),
-                                              pinned: false)
+                                                  longitude: center.longitude + offset.longitude))
         }
     }
 
