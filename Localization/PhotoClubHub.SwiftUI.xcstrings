@@ -858,23 +858,6 @@
         }
       }
     },
-    "of2" : {
-      "comment" : "<person> of <photo club>",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "of"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "van"
-          }
-        }
-      }
-    },
     "Open the Settings app" : {
       "comment" : "Button in the tip on the Maps tab that opens this app's page in the iOS Settings app",
       "localizations" : {
