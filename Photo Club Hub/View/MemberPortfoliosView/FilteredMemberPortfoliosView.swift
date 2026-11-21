@@ -39,8 +39,8 @@ struct FilteredMemberPortfoliosView: View {
         return request
     }()) private var anyMemberProbe: FetchedResults<MemberPortfolio>
 
-    /// The language the section headers show the town in: the app's own resolved interface language
-    /// (see `Language.interfaceLanguageRequest`). Empty only if `Language.initConstants` has not run.
+    /// The language the section headers and the member rows show the town in: the app's own resolved interface
+    /// language (see `Language.interfaceLanguageRequest`). Empty only if `Language.initConstants` has not run.
     @FetchRequest(fetchRequest: Language.interfaceLanguageRequest)
     private var uiLanguages: FetchedResults<Language> // fetchRequests returns array, although this hold only 1
 
@@ -83,7 +83,9 @@ struct FilteredMemberPortfoliosView: View {
 
     var body: some View {
         let sectionedPortfoliosResults = sectionedMemberPortfolios // copy results to avoid recomputation
-        let titles = sectionTitles(for: sectionedPortfoliosResults) // read Core Data here, on the main thread
+        let uiLanguage = uiLanguages.first // the headers and the rows get the same Language (#890)
+        let titles = sectionTitles(for: sectionedPortfoliosResults, // read Core Data here, on the main thread
+                                   language: uiLanguage)
         // Like a `guard`: deal with the reasons the list could be empty, then get on with the happy flow
         // below. Every reason but `.listHasRows` implies no section survives the filter, so the two never
         // both show.
@@ -97,6 +99,7 @@ struct FilteredMemberPortfoliosView: View {
                 Section {
                     ForEach(filteredPortfolios, id: \.id) { filteredMember in
                         MemberPortfolioRow(member: filteredMember,
+                                           language: uiLanguage,
                                            selectedPortfolio: selectedPortfolio)
                             .listRowSeparator(.visible)
                     }
@@ -130,13 +133,13 @@ struct FilteredMemberPortfoliosView: View {
     /// string later would fail on parentheses inside a name ("... (AFO)") or a town ("Beuningen (Gld)").
     /// A section without a usable row, or a missing `Language` row, gets no entry: its header falls back to
     /// the section id.
-    private func sectionTitles(for sections: SectionedFetchResults<String, MemberPortfolio>)
+    private func sectionTitles(for sections: SectionedFetchResults<String, MemberPortfolio>, language: Language?)
                               -> [String: (name: String, town: String?)] {
-        guard let uiLanguage = uiLanguages.first else { return [:] } // Language table not seeded yet
+        guard let language else { return [:] } // Language table not seeded yet
         var titles: [String: (name: String, town: String?)] = [:]
         for section in sections {
             guard let organization = section.first(where: { $0.isUsable })?.organization_ else { continue }
-            titles[section.id] = Self.sectionTitle(for: organization, language: uiLanguage)
+            titles[section.id] = Self.sectionTitle(for: organization, language: language)
         }
         return titles
     }
@@ -250,12 +253,16 @@ struct FilteredMemberPortfoliosView: View {
                 memberPortfolio.isUsable
             }
         } else {
+            // Names are stored with plain apostrophes and hyphens (Data#100), so "D’Eau" typed with the
+            // keyboard's curly apostrophe must be normalized the same way to find "D'Eau".
+            let normalizedSearchText = searchText.wrappedValue.normalizedTypography
             filteredPortfolios = unFilteredPortfolios.filter { memberPortfolio in
                 memberPortfolio.isUsable && (
                     memberPortfolio.photographer.fullNameFirstLast
-                        .localizedCaseInsensitiveContains(searchText.wrappedValue) ||
+                        .localizedCaseInsensitiveContains(normalizedSearchText) ||
                     comparePhotographerExpertisesToSearchText(
-                        photographerExpertises: memberPortfolio.photographer.photographerExpertises
+                        photographerExpertises: memberPortfolio.photographer.photographerExpertises,
+                        searchText: normalizedSearchText
                     )
                 )
             }
@@ -265,11 +272,12 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     /// Returns `true` if any of the photographer's expertise names contain `searchText` (case-insensitive).
-    private func comparePhotographerExpertisesToSearchText(photographerExpertises: Set<PhotographerExpertise>) -> Bool {
+    private func comparePhotographerExpertisesToSearchText(photographerExpertises: Set<PhotographerExpertise>,
+                                                           searchText: String) -> Bool {
         for photographerExpertise in photographerExpertises where
             photographerExpertise.expertise // check every Expertise
                                  .selectedLocalizedExpertise().name // gets its name in selected language
-                                 .localizedCaseInsensitiveContains(searchText.wrappedValue) {
+                                 .localizedCaseInsensitiveContains(searchText) {
             return true // doing an || here across all elements of the Set
         }
         return false
