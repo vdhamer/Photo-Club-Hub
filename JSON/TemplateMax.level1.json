@@ -37,13 +37,13 @@
                         "date": "2026-02-10",
                         "author": "list maintainer",
                         "text": "No activity found on the website for two years, and no reply to an email. Assumed stopped.",
-                        "isFormerClub": true
+                        "status": "possiblyInactive"
                     },
                     {
                         "date": "2026-03-02",
                         "author": "club",
                         "text": "Club told us it is still active, with a new board and a new website.",
-                        "isFormerClub": false
+                        "status": "active"
                     },
                     {
                         "date": "2026-07-20",
@@ -107,7 +107,7 @@
                         "date": "2026-10-29",
                         "author": "afdeling contact",
                         "text": "Example only: informed us that the club has disbanded.",
-                        "isFormerClub": true
+                        "status": "inactive"
                     }
                 ],
                 "maintainerEmail": "admin@leica-rangefinder.example.org"
@@ -162,7 +162,7 @@
                         "date": "2026-10-29",
                         "author": "list maintainer",
                         "text": "Example only: this hypothetical museum has closed.",
-                        "isFormerMuseum": true
+                        "status": "inactive"
                     }
                 ]
             }

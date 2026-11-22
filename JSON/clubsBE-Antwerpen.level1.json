@@ -549,7 +549,7 @@
                         "date": "2026-11-14",
                         "author": "list maintainer",
                         "text": "Found on 14 Nov 2026: the Fotogroep Antwerpen club list includes this club without a website, and so does the list of cultural associations on westerlo.be. Its former domain fotoclubmorgana.be does not respond; the Internet Archive has it only until 2014. The Belgian company register (KBO) shows the club's vzw, founded in 2014, put into liquidation in November 2024 and inactive since 27 December 2024. The pin is the town center.",
-                        "isFormerClub": true
+                        "status": "inactive"
                     }
                 ]
             }
@@ -1387,7 +1387,7 @@
                         "date": "2026-11-14",
                         "author": "list maintainer",
                         "text": "Found on 14 Nov 2026: fogika.be, linked from the Fotogroep Antwerpen club list, no longer resolves. The Internet Archive has the club's site until October 2023. No later activity found, although the federation's list still includes the club. A manual search on the same day found a mention of the club from 16 March 2017 and nothing more recent. The list of cultural associations on westerlo.be still includes it, meeting in the Sint-Antoniuszaal, where the pin is.",
-                        "isFormerClub": true
+                        "status": "possiblyInactive"
                     }
                 ]
             }
@@ -1513,7 +1513,7 @@
                         "date": "2026-11-14",
                         "author": "list maintainer",
                         "text": "Found on 14 Nov 2026: krysto.webs.com, linked from the Fotogroep Antwerpen club list, no longer exists. The Internet Archive has the club's site until 2022. A manual search on the same day found a mention of the club from 2017 and nothing more recent, although the federation's list still includes the club.",
-                        "isFormerClub": true
+                        "status": "possiblyInactive"
                     }
                 ]
             }
