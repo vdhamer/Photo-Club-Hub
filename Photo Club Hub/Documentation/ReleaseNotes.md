@@ -104,7 +104,7 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 </details>
 
 <details>
-<summary><b>STRUCTURAL</b>: built with Data 3.10.0, location access, a release column for the line counts</summary>
+<summary><b>STRUCTURAL</b>: built with Data 3.10.0, location access, settings that survive a new field, a release column for the line counts</summary>
 
 **Built and tested**
 
@@ -118,6 +118,10 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 **Code: location access** ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
 
 * `LocationManager` now tracks whether the app may use the location, as a `LocationAccess` value that the Maps tab reads. On iOS 18 and later it asks with a `CLServiceSession` and reads the diagnostics of each `CLLocationUpdate`; on iOS 17 a `CLLocationManagerDelegate` in `LocationAuthorizationObserver1717` reports it, to be deleted with iOS 17 support. `MapsViewMap` leaves out `MapUserLocationButton` without access, and the new `LocationDeniedTip` appears only when the user denied this app, not when Location Services are off for the whole device or restricted. The tip ignores the one-tip-per-day limit, because after a fresh install the Clubs tab's tips use up that day's tip. `calloutTipStyle(tint:)` moved next to `CalloutBox`, so the Clubs and Maps tabs share it. New `LocationAccessTest` (25 cases)
+
+**Code: settings survive a new field** ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
+
+* `SettingsStruct` now decodes each stored setting on its own, so a missing or unreadable field falls back to its default, and the other settings are kept. The synthesized decoder was all-or-nothing: without this change, adding `showInactiveOrganizations` would have reset every user's settings on updating to 3.0.5. The same now holds for a stored `highlightColor` that the color picker no longer offers. Encoding is unchanged. No released version lost settings this way, since the stored fields hadn't changed since 2.10.0. New `SettingsStructDecodingTest` (5 cases)
 
 **Tooling: release column in the line counts** ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
 
