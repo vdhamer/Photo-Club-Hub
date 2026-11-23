@@ -1,39 +1,70 @@
 ### 3.0.5 (GitHub commit ???????, build 4670) ??-11-2026
 
+IN SHORT
+
+- **323 more clubs**, 468 in all: every club on the Fotobond's roster, many independent clubs, and the first 65 in Belgium.
+- **Search by town in your own language**, such as "Keulen" (NL) for Köln.
+- **The location button no longer spins forever** when the app doesn't have your permission to access it.
+- **A one-time reload** the first time you open the app after updating.
+
 USER-FACING CHANGES
 
-- **Find a club or museum by its town in your own language.** The search on the Maps tab now also matches the town spelled exactly as its card shows it: in the language of the app. In Dutch, "Keulen" finds Museum Ludwig in Köln, and in English "Cologne" will work. Searching by the local name (\_endonym\_), such as "Köln", still works. The town is Apple's name for the place on the map, so it is sometimes a neighboring village or a district of a city. The section headers on the Clubs tab can show the town the same way, but leave it out when the club's name already contains it. So does the line below each member's name on the Clubs tab, and the caption below each picture on the People tab. Searching on the Maps, Clubs and People tabs now also finds a name typed with the curly apostrophe of the iPhone keyboard, as in ’s-Hertogenbosch. ([#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890), [Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88), [Data#99](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/99), [Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100))
+- **323 extra clubs, now also in Belgium.** The Maps tab lists 468 clubs, up from 145. Every club on the Fotobond's list of member clubs is now included, together with many independent clubs all over the Netherlands. Groningen, Kennemerland, Zeeland and Brabant West, which had no clubs yet, now have between 11 and 48 each. Belgium appears for the first time, with 65 clubs, mostly in the Antwerp area. The new clubs appear on the Clubs tab once a club shares its member list. ([Data#89](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/89), [Data#90](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/90), [Data#95](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/95), [Data#105](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/105))
+
+- **Find a club or museum by its town in your own language.** The search on the Maps tab now also matches the town spelled exactly as the app shows it. In Dutch, "Keulen" finds Museum Ludwig in Köln, and in English "Cologne" will work. Searching by the local name (\_endonym\_), such as "Köln", still works. The town is Apple's name for the place on the map, so it is sometimes a neighboring village or a city district. The section headers on the Clubs tab can show the town the same way, but omit it when the club's name already contains the town name. So does the line below each member's name on the Clubs tab, and the caption below each picture on the People tab. Searching on the Maps, Clubs and People tabs now also finds a name typed with the curly apostrophe of the iPhone keyboard, as in ’s-Hertogenbosch. ([#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890), [Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88), [Data#99](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/99), [Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100))
 
 - **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. Names and towns are now stored with plain apostrophes and hyphens, so that what you type in a search field finds them. Without the reload, the few clubs and museums whose name held a curly apostrophe or a special dash would appear twice. The reload also removes the old Fotobond number of Foto Expressie Groep Gemert, which left the Fotobond. ([Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100), [#896](https://github.com/vdhamer/Photo-Club-Hub/issues/896))
 
 USER-FACING BUG FIXES
 
-- **The location button no longer spins forever.** If you chose not to let the app use your location, the button that shows where you are on an unlocked map kept spinning, waiting for a location it would never get. It is now hidden until you allow it. The Maps tab then shows a short tip, at most twice, whose button opens the app's own page in the Settings app. Allow the location there, and the button and the dot showing where you are come back right away. ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
+- **The location button no longer spins forever.** If you chose not to let the app use your location, the button that shows where you are on an unlocked map kept spinning, waiting for a location it would never get. The button is now hidden until you allow it. The Maps tab then shows a short tip, at most twice, with a link to the app's page in the Settings app. Allow the location there, and the button and the dot showing your current location come back immediately. ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
 
-- **Birthdays show the same date everywhere.** On devices west of GMT, such as in the Americas, the People tab showed a birthday one day early.
+- **Birthdays show the same date everywhere.** On devices west of GMT, such as in the Americas, the People tab showed a birthday one day early. The People tab now also shows a birthday on the day after, as was intended.
 
-- **Birthdays stay visible through the day after.** The People tab now also shows a birthday on the day after, as was intended.
+<details>
+<summary><b>DATA</b>: 323 clubs added in 16 Dutch afdelingen and Belgium, 2 museum pins fixed, plainer text</summary>
 
-DATA
+| Region | Clubs in 3.0.4 | Clubs in 3.0.5 | of which Fotobond |
+|---|--:|--:|--:|
+| 01 Groningen | 0 | 16 | 6 |
+| 02 Friesland | 1 | 13 | 5 |
+| 03 Drenthe-Vechtdal | 18 | 20 | 6 |
+| 04 Transijssel | 2 | 12 | 4 |
+| 05 Twente | 2 | 12 | 9 |
+| 06 Gelderland Zuid | 36 | 44 | 13 |
+| 07 Utrecht-'t Gooi | 2 | 31 | 25 |
+| 08 Noord-Holland Noord | 1 | 12 | 7 |
+| 09 Kennemerland | 0 | 11 | 9 |
+| 10 Amsterdam | 1 | 9 | 4 |
+| 11 Zuid-Holland Noord | 1 | 21 | 13 |
+| 12 Zuid-Holland Zuid | 1 | 20 | 16 |
+| 14 Zeeland | 0 | 12 | 0 |
+| 15 Brabant West | 0 | 48 | 31 |
+| 16 Brabant Oost | 79 | 86 | 29 |
+| 17 Limburg | 1 | 36 | 31 |
+| Belgium, province of Antwerp | 0 | 61 | N/A|
+| Belgium, elsewhere | 0 | 4 | N/A|
+| **Total** | **145** | **468** | **208** |
 
-* `museumsCN.level1.json`
-Fotografiska Shanghai and the Lianzhou Museum of Photography had each other's coordinates, so each pin was in the other's city and each card showed the other's town. Swapped back. The Lianzhou remark no longer blames the coordinates; its website still doesn't respond, which a new `logbook` entry records, without listing it in `badWebsites` because it may only be unreachable from outside China. Both museums are geocoded again on their own, so no data reset is needed. Mirrored identically in the Data package's bundled copy. ([Data#98](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/98))
+Counted in the Level 1 files at the v3.0.4 tag and now. The Fotobond column includes the Persoonlijke Leden entries of afdelingen 03 and 16.
+
+**Clubs added**
 
 * `clubsNL15.level1.json`
-Afdeling Brabant West, until now an empty placeholder, lists 41 clubs: the 31 Fotobond clubs on the Fotobond's roster, and 10 independent clubs. Mirrored identically in the Data package's bundled copy.
+Afdeling Brabant West, until now an empty placeholder, lists 41 clubs: the 31 Fotobond clubs on the Fotobond's roster, and 10 independent clubs.
 
 * `clubsNL01.level1.json`
-Afdeling Groningen, until now an empty placeholder, lists 6 clubs: Trefshot (Groningen), plus 5 from the list on fotoclubs.startpagina.nl below. Mirrored identically in the Data package's bundled copy.
+Afdeling Groningen, until now an empty placeholder, lists 6 clubs: Trefshot (Groningen), plus 5 from the list on fotoclubs.startpagina.nl below.
 
 * `clubsNL01`, `02`, `05`, `06`, `07`, `09`, `10`, `11`, `12`, `14`, `16`, `17`
-38 Dutch clubs added from the list on fotoclubs.startpagina.nl ([vdhamer/Photo-Club-Hub-Data#89](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/89)), 20 of them Fotobond clubs: 5 in NL01, 3 in NL02, 2 in NL05, 2 in NL06, 3 in NL07, 3 in NL09, 2 in NL10, 6 in NL11, 6 in NL12, 2 in NL14 (Zeeland, until now an empty placeholder), 1 in NL16 and 3 in NL17. Mirrored identically in the Data package's bundled copy.
+38 Dutch clubs added from the list on fotoclubs.startpagina.nl ([vdhamer/Photo-Club-Hub-Data#89](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/89)), 20 of them Fotobond clubs: 5 in NL01, 3 in NL02, 2 in NL05, 2 in NL06, 3 in NL07, 3 in NL09, 2 in NL10, 6 in NL11, 6 in NL12, 2 in NL14 (Zeeland, until now an empty placeholder), 1 in NL16 and 3 in NL17.
 
 * `clubsBE.level1.json` (new), `clubsBE-Antwerpen.level1.json` (new), `root_.level1.json`
 A new Level 1 file for Belgian clubs, included from `root_.level1.json`, with 4 clubs from the same list: Fauna Flora Fotoclub Schoten, Renovat Foto (Sint-Truiden), CreaFoto (Wommelgem) and FotoDigiClub De Teut (Zonhoven). Bundled through the Data package's `Package.swift`. A fifth club, Koninklijke Fotoclub Argus Boom, was added from its entry on verenigingsloket.be, a sixth, Fotoclub In de lens (Kontich), from its own website, and a seventh, Fotokring FIDIFOK (Mol), from its own website too.
-`clubsBE.level1.json` now includes a second new file, `clubsBE-Antwerpen.level1.json`, for the member clubs of Fotogroep Antwerpen, the photo club federation for the province of Antwerp ([vdhamer/Photo-Club-Hub-Data#105](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/105)). It lists 61 clubs: 58 added from the federation's club list, 6 of them outside the province because they belong to this federation, plus CreaFoto, Fauna Flora Fotoclub Schoten and Fotokring FIDIFOK, which moved there from `clubsBE`. A move keeps a club's town and full name, so no data reset is needed. 12 of the added clubs have a `logbook` entry saying how their website or activity was checked: 7 list a lost domain in `badWebsites`, and 3 that show no activity since 2024 or earlier are flagged `isFormerClub`. 2 entries on the list were left out: Apertura, with no town and no activity since 2022, and Pro Forma, a single photographer rather than a club. Both files are mirrored identically in the Data package's bundled copy, and the new one is bundled through its `Package.swift`.
+`clubsBE.level1.json` now includes a second new file, `clubsBE-Antwerpen.level1.json`, for the member clubs of Fotogroep Antwerpen, the photo club federation for the province of Antwerp ([vdhamer/Photo-Club-Hub-Data#105](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/105)). It lists 61 clubs: 58 added from the federation's club list, 6 of them outside the province because they belong to this federation, plus CreaFoto, Fauna Flora Fotoclub Schoten and Fotokring FIDIFOK, which moved there from `clubsBE`. A move keeps a club's town and full name, so no data reset is needed. 12 of the added clubs have a `logbook` entry saying how their website or activity was checked: 7 list a lost domain in `badWebsites`, and 3 that show no activity since 2024 or earlier are flagged `isFormerClub`. 2 entries on the list were left out: Apertura, with no town and no activity since 2022, and Pro Forma, a single photographer rather than a club. The new one is bundled through the Data package's `Package.swift` too.
 
 * `clubsNL04`, `07`, `08`, `10`, `11`, `12`, `17`
-21 Dutch clubs added from the list of clubs using the Manders driehoek on mandersdriehoek.nl ([vdhamer/Photo-Club-Hub-Data#90](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/90)), 16 of them Fotobond clubs: 2 in NL04, 4 in NL07, 3 in NL08, 4 in NL10, 2 in NL11, 4 in NL12 and 2 in NL17. Mirrored identically in the Data package's bundled copy.
+21 Dutch clubs added from the list of clubs using the Manders driehoek on mandersdriehoek.nl ([vdhamer/Photo-Club-Hub-Data#90](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/90)), 16 of them Fotobond clubs: 2 in NL04, 4 in NL07, 3 in NL08, 4 in NL10, 2 in NL11, 4 in NL12 and 2 in NL17.
 
 * `clubsNL16.level1.json`
 Fotocafé Visual (Hapert), an independent club, added.
@@ -41,36 +72,58 @@ Fotocafé Visual (Hapert), an independent club, added.
 * `clubsNL01`, `02`, `09`, `17`
 4 clubs found by the second dry run of the rule-based club-list generator ([vdhamer/Photo-Club-Hub-Data#81](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/81)), 2 of them Fotobond clubs: Fotoclub Objectief (Ten Boer) in NL01, Fotoclub Objectief Hurdegaryp in NL02, AFV Objectief (Hoofddorp) in NL09 and Fotoclub Venray in NL17.
 
-* `clubsNL16.level1.json`
-Corrections from the same dry run: Fotogroep Argus's website removed (its domain is now for sale), Fotogroep Vught's website and nickname corrected, Fotoclub Rapenland's Fotobond number and Fotoclub Bommelerwaard's website added.
-
-* `clubsNL16.level1.json`
-The remark of Foto-videoclub DAF now says that, according to its website, its activities are temporarily on hold. The club stays listed. Mirrored identically in the Data package's bundled copy.
-
 * `clubsNL05`, `06`
 10 independent clubs whose activity couldn't be confirmed when afdeling 06 was filled, now confirmed and added ([vdhamer/Photo-Club-Hub-Data#94](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/94)): Fotoclub IJsselstroom (Brummen), Fotoclub Meinerswijk (Elst), Fotogroep Gendringen, Beeldgenootschap Rivierenland (Geldermalsen), Fotoclub Zilvercam (Huissen), Fotogroep Nijmegen Noord, Fotoclub Ochten, Fotoclub Lucky Shot Otterlo and Fotokring Oost Gelre (Varsseveld) in NL06, and Fotoclub 't Bruggert (Enschede) in NL05.
 
 * `clubsNL01`, `02`, `04`, `05`, `07`, `08`, `09`, `11`, `12`, `17`
-89 Fotobond clubs from the Fotobond's roster that were still missing, added ([vdhamer/Photo-Club-Hub-Data#95](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/95)): 4 in NL01, 3 in NL02, 2 in NL04, 6 in NL05, 20 in NL07, 4 in NL08, 7 in NL09, 9 in NL11, 8 in NL12 and 26 in NL17. Every club on the roster is now listed. Mirrored identically in the Data package's bundled copy.
+89 Fotobond clubs from the Fotobond's roster that were still missing, added ([vdhamer/Photo-Club-Hub-Data#95](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/95)): 4 in NL01, 3 in NL02, 2 in NL04, 6 in NL05, 20 in NL07, 4 in NL08, 7 in NL09, 9 in NL11, 8 in NL12 and 26 in NL17. Every club on the roster is now listed.
 
 * `clubsNL01`, `02`, `03`, `04`, `05`, `08`, `10`, `11`, `12`, `14`, `15`, `17`
-38 independent clubs found by a web search of 13 afdelingen in the same run (all except 03, 06 and 16, which were searched earlier): 4 in NL01, 4 in NL02, 2 in NL03, 4 in NL04, 1 in NL05, 3 in NL08, 1 in NL10, 3 in NL11, 1 in NL12, 9 in NL14, 3 in NL15 and 3 in NL17. Mirrored identically in the Data package's bundled copy.
+38 independent clubs found by a web search of 13 afdelingen in the same run (all except 03, 06 and 16, which were searched earlier): 4 in NL01, 4 in NL02, 2 in NL03, 4 in NL04, 1 in NL05, 3 in NL08, 1 in NL10, 3 in NL11, 1 in NL12, 9 in NL14, 3 in NL15 and 3 in NL17.
 
 * `clubsNL01`, `02`, `06`, `08`, `10`, `14`, `15`
-7 more independent clubs from a follow-up check of that search's unclear finds: Fotoblok050 (Groningen), Fotoclub 8-88 (Stiens), Werkgroep Fotografie IVN Ede, De ZesFotografen (Oosthuizen), De Online Fotoclub (Monnickendam), Sasse Fotokring (Sas van Gent) and Fotowerkgroep KNNV Tilburg. Mirrored identically in the Data package's bundled copy.
+7 more independent clubs from a follow-up check of that search's unclear finds: Fotoblok050 (Groningen), Fotoclub 8-88 (Stiens), Werkgroep Fotografie IVN Ede, De ZesFotografen (Oosthuizen), De Online Fotoclub (Monnickendam), Sasse Fotokring (Sas van Gent) and Fotowerkgroep KNNV Tilburg.
+
+**Other data changes**
+
+* `museumsCN.level1.json`
+Fotografiska Shanghai and the Lianzhou Museum of Photography had each other's coordinates, so each pin was in the other's city and each card showed the other's town. Swapped back. The Lianzhou remark no longer blames the coordinates; its website still doesn't respond, which a new `logbook` entry records, without listing it in `badWebsites` because it may only be unreachable from outside China. Both museums are geocoded again on their own, so no data reset is needed. ([Data#98](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/98))
+
+* `clubsNL16.level1.json`
+Corrections from the second dry run of the club-list generator ([vdhamer/Photo-Club-Hub-Data#81](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/81)): Fotogroep Argus's website removed (its domain is now for sale), Fotogroep Vught's website and nickname corrected, Fotoclub Rapenland's Fotobond number and Fotoclub Bommelerwaard's website added.
+
+* `clubsNL16.level1.json`
+The remark of Foto-videoclub DAF now says that, according to its website, its activities are temporarily on hold. The club stays listed.
 
 * `clubsNL03`, `05`, `06`, `16`, `museums`, `museumsDE`, `museumsNL` and `fgOirschot`
-30 values now use plain typography: 28 remarks lose their curly quotes, curly apostrophes and no-break spaces, a museum's nickname loses its curly apostrophe, and the MOMus Wikipedia link writes its en dash percent-encoded (same page). Website visitors search the remarks with the browser's Find, and the review-page scripts read these files directly. Four organization names keep their curly apostrophe or en dash until most devices run 3.0.5, because older versions would show a straightened name as a second organization ([Data#101](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/101)). `root.level1.json` is unchanged ([Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100)). Mirrored identically in the Data package's bundled copy.
+30 values now use plain typography: 28 remarks lose their curly quotes, curly apostrophes and no-break spaces, a museum's nickname loses its curly apostrophe, and the MOMus Wikipedia link writes its en dash percent-encoded (same page). Website visitors search the remarks with the browser's Find, and the review-page scripts read these files directly. Four organization names keep their curly apostrophe or en dash until most devices run 3.0.5, because older versions would show a straightened name as a second organization ([Data#101](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/101)). `root.level1.json` is unchanged ([Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100)).
 
 * `museums`, `museumsAU`, `CN`, `DE`, `GB`, `JP`, `NL`, `US` and `TemplateMax`
-35 museum nicknames renamed to plain identifiers, such as "V&A London" to `VandA_London` and "F/M Vrijthof" to `FM_Vrijthof`. A nickname now uses only ASCII letters, digits and `_`, because a club's nickname becomes its Level 2 file name and part of its web addresses. Nothing showed a museum's nickname, and every load overwrites it, so no data reset is needed. The README (English and Dutch) now states the rule ([Data#102](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/102)). Mirrored identically in the Data package's bundled copy.
+35 museum nicknames renamed to plain identifiers, such as "V&A London" to `VandA_London` and "F/M Vrijthof" to `FM_Vrijthof`. A nickname now uses only ASCII letters, digits and `_`, because a club's nickname becomes its Level 2 file name and part of its web addresses. Nothing showed a museum's nickname, and every load overwrites it, so no data reset is needed. The README (English and Dutch) now states the rule ([Data#102](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/102)).
 
-STRUCTURAL
+</details>
 
-* Tested with macOS 27.2.1 and Xcode 27.2 (27B52), Xcode 27.3 beta 2 (27C5035i), iOS 27.3 beta (24C5049d) and iOS 27.2.1
-* Built using v3.9.0 of the Photo Club Hub Data package ([release notes](https://github.com/vdhamer/Photo-Club-Hub-Data/releases/tag/v3.9.0)). It stores names, towns and Apple's towns with plain typography ([Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100)), which changes the identity of a few organizations, so it carries this build's one-time reset key, `dataResetPending305b4670`. It gives the role line "Member of Club (Town)" the town in the uiLanguage ([Data#99](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/99)), which [#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890) uses, and adds `minimumDataPackageVersion` to Level 1 headers ([Data#107](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/107)), which [#899](https://github.com/vdhamer/Photo-Club-Hub/issues/899) builds on. Its Core Data model `3_9_0` renames the removal flags to `obsolete` ([Data#39](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/39)); existing data migrates in place before the reset runs. Its 3.8.0 part adds log entries and the flag for former clubs and museums ([Data#91](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/91)), which [#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891) and [#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892) build on, and `Organization.fullNameLocalizedTown(for:)` ([Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88)), which [#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890) uses. It brought two new packages, WebURL (`karwa/swift-url` 0.4.2) and `apple/swift-system` 1.8.1 ([Data#93](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/93)), and an additive Core Data model `3_8_0`. It also carries the bundled copies of the data files listed above.
-* `LineCount.csv` gains a last column, `release`, so the line-count graphs can mark each app release with its version. `countLines.sh` writes every `v` tag not yet in the column onto the latest row on or before the tagged commit's date, which fills in the history on its first run and adds a release on the first commit after its tag is pulled. Rows without the column, as an old branch could merge back, are padded. 19 releases whose date had no row, some for months, now have one rebuilt from the tagged commit, so their marker sits on the release date. A row carries one label: when two releases share a row, the newer one wins, as with v2.2.3 over v2.2.2 ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
-* `LocationManager` now tracks whether the app may use the location, as a `LocationAccess` value that the Maps tab reads. On iOS 18 and later it asks with a `CLServiceSession` and reads the diagnostics of each `CLLocationUpdate`; on iOS 17 a `CLLocationManagerDelegate` in `LocationAuthorizationObserver1717` reports it, to be deleted with iOS 17 support. `MapsViewMap` leaves out `MapUserLocationButton` without access, and the new `LocationDeniedTip` appears only when the user denied this app, not when Location Services are off for the whole device or restricted. The tip ignores the one-tip-per-day limit, because after a fresh install the Clubs tab's tips use up that day's tip. `calloutTipStyle(tint:)` moved next to `CalloutBox`, so the Clubs and Maps tabs share it. New `LocationAccessTest` (25 cases) ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
+<details>
+<summary><b>STRUCTURAL</b>: built with Data 3.10.0, location access, a release column for the line counts</summary>
+
+**Built and tested**
+
+* Built using v3.10.0 of the Photo Club Hub Data package ([release notes](https://github.com/vdhamer/Photo-Club-Hub-Data/releases/tag/v3.10.0)), which includes 3.8.0 and 3.9.0. It also carries the bundled copies of the data files listed above.
+  * **3.10.0** replaces the new flag for "former" clubs and museums, before any release read it, with a log entry's `"status"` (`active`, `rejected`, `inactive` or `possiblyInactive`), `OrganizationStatus` and predicates for active and in-scope organizations ([Data#116](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/116)), which [#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891) and [#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892) build on. Its Core Data model `3_10_0` adds the status column.
+  * **3.9.0** stores names, towns and Apple's towns with plain typography ([Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100)), which changes the identity of a few organizations, so it carries this build's one-time reset key, `dataResetPending305b4670`. It gives the role line "Member of Club (Town)" the town in the uiLanguage ([Data#99](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/99)), which [#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890) uses, and adds `minimumDataPackageVersion` to Level 1 headers ([Data#107](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/107)), which [#899](https://github.com/vdhamer/Photo-Club-Hub/issues/899) builds on. Its Core Data model `3_9_0` renames the removal flags to `obsolete` ([Data#39](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/39)); existing data migrates in place before the reset runs.
+  * **3.8.0** adds log entries ([Data#91](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/91)) and `Organization.fullNameLocalizedTown(for:)` ([Data#88](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/88)), which [#890](https://github.com/vdhamer/Photo-Club-Hub/issues/890) uses. It brought two new packages, WebURL (`karwa/swift-url` 0.4.2) and `apple/swift-system` 1.8.1 ([Data#93](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/93)), and an additive Core Data model `3_8_0`.
+
+- Tested with macOS 27.2.1 and Xcode 27.2 (27B52), Xcode 27.3 beta 2 (27C5035i), iOS 27.3 beta (24C5049d) and iOS 27.2.1
+
+**Code: location access** ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
+
+* `LocationManager` now tracks whether the app may use the location, as a `LocationAccess` value that the Maps tab reads. On iOS 18 and later it asks with a `CLServiceSession` and reads the diagnostics of each `CLLocationUpdate`; on iOS 17 a `CLLocationManagerDelegate` in `LocationAuthorizationObserver1717` reports it, to be deleted with iOS 17 support. `MapsViewMap` leaves out `MapUserLocationButton` without access, and the new `LocationDeniedTip` appears only when the user denied this app, not when Location Services are off for the whole device or restricted. The tip ignores the one-tip-per-day limit, because after a fresh install the Clubs tab's tips use up that day's tip. `calloutTipStyle(tint:)` moved next to `CalloutBox`, so the Clubs and Maps tabs share it. New `LocationAccessTest` (25 cases)
+
+**Tooling: release column in the line counts** ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
+
+* `LineCount.csv` gains a last column, `release`, so the line-count graphs can mark each app release with its version. `countLines.sh` writes every release tag (such as `v3.0.4`) not yet in the column onto the latest row on or before the tagged commit's date, which fills in the history on its first run and adds a release on the first commit after its tag is pulled. Rows without the column, as an old branch could merge back, are padded. 19 releases whose date had no row, some for months, now have one rebuilt from the tagged commit, so their marker sits on the release date. A row carries one label: when two releases share a row, the newer one wins, as with v2.2.3 over v2.2.2
+
+</details>
 
 ---------------------------------------------------------------------------
 
