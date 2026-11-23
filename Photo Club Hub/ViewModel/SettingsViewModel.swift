@@ -5,23 +5,24 @@
 //  Created by Peter van den Hamer on 23/12/2021.
 //
 
-import CoreData // for NSManagedObject
-import Combine // for AnyCancellable
-import SemanticColorPicker // for SemanticColor
-import Photo_Club_Hub_Data // for OrganizationTypeEnum
+import CoreData             // for NSManagedObject
+import Combine              // for AnyCancellable
+import SemanticColorPicker  // for SemanticColor
+import Photo_Club_Hub_Data  // for OrganizationTypeEnum
 
 /// A view model that manages the user's preferences for filtering presentation preferences throughout the app.
 ///
-/// `SettingsViewModel` is an `ObservableObject` that publishes a single `SettingsStruct` value, which
-/// contains all toggleable options used to build Core Data predicates for members, photographers, and organizations.
+/// `SettingsViewModel` is an `ObservableObject` that publishes a single `settings: SettingsStruct` value,
+///  which holds all of the user's settings. Most are toggles.
+///  Some of them build the Core Data predicates for members and organizations.
 ///
-/// The view model is annotated with `@MainActor` because it is observed by the UI
-/// and its published state is read-only on the main thread.
+/// The view model is annotated with `@MainActor` because SwiftUI views both read and change `settings`,
+/// and an `ObservableObject` must publish its changes on the main thread.
 ///
 /// Persistence
-/// - The `settings` property uses a custom `@Published("settings", cancellableSet:)` wrapper
-///   that persists changes and restores values across launches. The static `cancellableSet` is kept
-///   on the type so the app can retain Combine subscriptions associated with persistence. (Hmmm. Written by ChapGTP).
+/// - `settings` uses the `@Published(_:cancellableSet:)` initializer from the Data package. It loads the stored value
+///   from `UserDefaults` at launch and saves every change. The subscription that does the saving is stored in the
+///   static `cancellableSet`, so that it lives as long as the app does.
 ///
 /// Usage
 /// - Observe an instance of this view model from SwiftUI views and bind to the `settings` value.
@@ -36,15 +37,13 @@ class SettingsViewModel: ObservableObject {
     /// the values of that moment, and the view would not be redrawn when they change (#885).
     static let shared = SettingsViewModel()
 
-    /// Stores Combine cancellables tied to persistence of the `settings` property.
-    static var cancellableSet: Set<AnyCancellable> = [] // not used: view currently has no Cancel button
+    /// Holds the subscription that saves `settings` to `UserDefaults`. Without it, changes would no longer be saved.
+    static var cancellableSet: Set<AnyCancellable> = []
 
     /// The app's persisted user preferences. Changes are published to update dependent views and
     /// are used to derive Core Data predicates for filtering content.
     @Published("settings", cancellableSet: &cancellableSet) // @Published only works on classes
     var settings: SettingsStruct = SettingsStruct.defaultValue
-
-    private var cancellables = Set<AnyCancellable>()
 }
 
 struct SettingsStruct { // order in which they are shown on Preferences page
@@ -92,6 +91,18 @@ struct SettingsStruct { // order in which they are shown on Preferences page
         highlightColor: .orange
     )
 
+    /// The Core Data predicate for the Clubs tab's fetch request: which `MemberPortfolio`s are fetched, and thereby
+    /// which clubs can get a section. The Search bar is not part of it: it filters the fetched portfolios afterwards,
+    /// in Swift.
+    ///
+    /// A membership is shown if it matches at least one enabled member category (current, aspiring, officer, honorary,
+    /// former, deceased, external coach). The categories overlap, but a fetch returns each membership only once.
+    /// The result is then narrowed by the status of the membership's club: only active clubs by default,
+    /// or every club except rejected ones while `showInactiveOrganizations` is on.
+    ///
+    /// `showClubs` and `showMuseums` play no part here: they only filter the Maps tab.
+    ///
+    /// Returns a bare `FALSEPREDICATE` when every member category is off.
     var memberPredicate: NSPredicate {
         var format = ""
         let args: [NSManagedObject] = [] // array from which to fetch the %@ values
@@ -136,21 +147,37 @@ struct SettingsStruct { // order in which they are shown on Preferences page
             format = format.predicateOrAppend(suffix: "(isMentor = TRUE)")
         }
 
-        let predicate: NSPredicate
-        if format != "" {
-            predicate = NSPredicate(format: format, argumentArray: args)
-        } else {
-            let predicateNone = NSPredicate(format: "FALSEPREDICATE")
-            predicate = predicateNone // if all toggles are disabled, we don't show anything
-        }
-        return predicate
+        // If all toggles are disabled, we don't show anything. This is returned without the status clause below,
+        // because FilteredMemberPortfoliosView compares against FALSEPREDICATE to explain the empty list.
+        guard format != "" else { return NSPredicate(format: "FALSEPREDICATE") }
+
+        // Members of inactive clubs are hidden unless asked for, so that this tab agrees with the Maps tab.
+        // Members of rejected clubs are never shown in any "normal" user interface (#891, #892).
+        let statusPredicate = showInactiveOrganizations ? MemberPortfolio.inScopeOrganizationPredicate // not rejected
+                                                        : MemberPortfolio.activeOrganizationPredicate // not inactive
+        return NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: format, argumentArray: args),
+                                                                  statusPredicate])
     }
 
+    /// The Core Data predicate for the Maps tab's fetch request: which `Organization`s are fetched.
+    /// The Search bar is not part of it: it filters the fetched organizations afterwards, in Swift.
+    ///
+    /// The same fetch supplies the pins on every card's map and the tab's header count, so whatever this excludes is
+    /// gone from all of them, and Search can't find it either.
+    ///
+    /// An organization is shown if its type is enabled (`showClubs`, `showMuseums`) and its status passes:
+    /// only active organizations by default, or every org except rejected ones while `showInactiveOrganizations` is on.
+    ///
+    /// Returns a bare `FALSEPREDICATE` when both types are off.
     var organizationPredicate: NSPredicate {
         var format = ""
         var args: [String] = [] // array from which to fetch the %@ values
+
+        // Inactive organizations are hidden unless asked for. Rejected ones are never shown (#891, #892).
+        let statusPredicate = showInactiveOrganizations ? Organization.inScopePredicate // not rejected
+                                                        : Organization.activePredicate // not inactive
         let showAll = showClubs && showMuseums // for query optimization
-        if showAll { return NSPredicate(format: "TRUEPREDICATE") } // kind of a guard statement, but avoiding Not()
+        if showAll { return statusPredicate } // kind of a guard statement, but avoiding Not()
 
         if showClubs { // TemplateMin and TemplateMax are clubs like any other, so nothing is excluded here (#858)
             format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@)")
@@ -162,14 +189,12 @@ struct SettingsStruct { // order in which they are shown on Preferences page
             args.append(OrganizationTypeEnum.museum.rawValue)
         }
 
-        let predicate: NSPredicate
-        if format != "" {
-            predicate = NSPredicate(format: format, argumentArray: args)
-        } else {
-            let predicateAll = NSPredicate(format: "FALSEPREDICATE") // if no OR conditions, return 0 Organizations
-            predicate = predicateAll
-        }
-        return predicate
+        // If no OR conditions, return 0 Organizations. This is returned without the status clause,
+        // because FilteredMapsView compares against FALSEPREDICATE to explain the empty list.
+        guard format != "" else { return NSPredicate(format: "FALSEPREDICATE") }
+
+        return NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: format, argumentArray: args),
+                                                                  statusPredicate])
     }
 
     var photographerPredicate: NSPredicate {
