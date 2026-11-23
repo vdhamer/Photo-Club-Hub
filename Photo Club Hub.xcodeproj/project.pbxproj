@@ -214,7 +214,7 @@
 		37CE2E81304CBC14006C68B3 /* list-archives.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "list-archives.sh"; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
-		37D3CCEC30A9E55D00AA743F /* clubsBE-Antwerpen.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsBE-Antwerpen.level1.json; sourceTree = "<group>"; };
+		37D3CCEC30A9E55D00AA743F /* clubsBE-Antwerpen.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "clubsBE-Antwerpen.level1.json"; sourceTree = "<group>"; };
 		37D3CCED30A9E55D00AA743F /* clubsBE.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsBE.level1.json; sourceTree = "<group>"; };
 		37D7A8C32F9D7E1800FD4E89 /* ReadmeCaptionedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeCaptionedImage.swift; sourceTree = "<group>"; };
 		37D984082F90406200C30EE5 /* SettingsViewMembersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewMembersSection.swift; sourceTree = "<group>"; };
