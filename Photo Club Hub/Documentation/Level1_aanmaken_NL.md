@@ -121,7 +121,7 @@ Hier is een (denkbeeldig) voorbeeld:
     "badWebsites": [ "https://www.old-site.example.org" ],
     "logbook": [
         { "date": "2026-09-12", "author": "generator", "text": "Website went down: timed out on three attempts in a row." },
-        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "isFormerClub": true }
+        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "status": "inactive" }
     ]
 }
 ```
@@ -131,8 +131,13 @@ Hier is een (denkbeeldig) voorbeeld:
    - `date`: de dag waarop je de regel schrijft, als `JJJJ-MM-DD`.
    - `author`: je rol, bijvoorbeeld `list maintainer`, `club` of `afdeling contact` (deze rollen blijven in het Engels), of als dat gepast is je naam. Bedenk wel dat het bestand openbaar is.
    - `text`: in het Engels, wat je gevonden hebt en hoe zeker je ervan bent. Laat nieuws schrijf je bijvoorbeeld als "Learned today that the club stopped in 2025".
-- Om de club te verbergen, voeg je `"isFormerClub": true` toe aan de regel die uitlegt waarom. Om de club weer te tonen, voeg je later een regel toe met `"isFormerClub": false`. De laatste regel met deze sleutel beslist. Voor een museum schrijf je `isFormerMuseum`.
-- Een club die zijn activiteiten tijdelijk stillegt (zo'n voorbeeld zijn we tegengekomen), is geen voormalige club. Geef zo'n club liever een gedateerde `remark`, en laat hem zichtbaar.
+- Om de club te verbergen, voeg je een `"status"` toe aan de regel die uitlegt waarom:
+   - `"inactive"` als een bron bevestigt dat de club gestopt is, zoals de club zelf, de contactpersoon van de afdeling of een handelsregister.
+   - `"possiblyInactive"` als de club gestopt lijkt, maar niemand dat nog bevestigd heeft.
+
+   Om de club weer te tonen, voeg je later een regel toe met `"status": "active"`. De laatste regel met een `"status"` beslist. Voor een museum gelden dezelfde waarden.
+- `"rejected"` is voor een organisatie die helemaal geen fotoclub is, zoals een kunstkring. Die blijft in het bestand staan zodat niemand hem opnieuw voorstelt, maar wordt nooit getoond.
+- Een club die zijn activiteiten tijdelijk stillegt (zo'n voorbeeld zijn we tegengekomen), is niet inactief. Geef zo'n club liever een gedateerde `remark`, en laat hem zichtbaar.
 - `badWebsites` bevat oude webadressen die niet meer als website van de club gebruikt mogen worden, bijvoorbeeld een adres dat een spammer heeft overgenomen. Zet de huidige, geldige website van de club, indien die bekend is, in `website`.
 
 ## Hoe zit het met `level1URLIncludes`?

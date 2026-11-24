@@ -122,7 +122,7 @@ Here is a (fictional) example:
     "badWebsites": [ "https://www.old-site.example.org" ],
     "logbook": [
         { "date": "2026-09-12", "author": "generator", "text": "Website went down: timed out on three attempts in a row." },
-        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "isFormerClub": true }
+        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "status": "inactive" }
     ]
 }
 ```
@@ -132,8 +132,13 @@ Here is a (fictional) example:
    - `date`: the day you write the entry, as `YYYY-MM-DD`.
    - `author`: your role, for example `list maintainer`, `club` or `afdeling contact`, or, if appropriate, your name. Keep in mind that the file is public.
    - `text`: in English, what you found and how sure you are. Late news is written as, for example, "Learned today that the club stopped in 2025".
-- To hide the club, add `"isFormerClub": true` to the entry that explains why. To show it again, add a later entry with `"isFormerClub": false`. The last entry that has this key decides. For a museum, write `isFormerMuseum`.
-- A club that pauses its activities (we found such an example) is not a former club. Give it a dated `remark` instead, and leave it visible.
+- To hide the club, add a `"status"` to the entry that explains why:
+   - `"inactive"` when a source confirms that it stopped, such as the club itself, the afdeling contact or a company register.
+   - `"possiblyInactive"` when it looks stopped, but nobody has confirmed it yet.
+
+   To show it again, add a later entry with `"status": "active"`. The last entry that has a `"status"` decides. Museums use the same values.
+- `"rejected"` is for an organization that isn't a photo club at all, such as an art circle. It stays in the file so that nobody proposes it again, but it is never shown.
+- A club that pauses its activities (we found such an example) is not inactive. Give it a dated `remark` instead, and leave it visible.
 - `badWebsites` lists old website addresses that are no longer allowed as the club's website, for example one that a spammer has taken over. Put the club's current valid website, if known, in `website`.
 
 ## What about `level1URLIncludes`?

@@ -786,8 +786,8 @@ Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSO
   - `date`: de dag waarop de regel geschreven is, als `JJJJ-MM-DD`.
   - `author`: een rol, zoals `list maintainer`, `club`, `afdeling contact` of `generator`, of als dat gepast is de naam van een persoon. Bedenk wel dat het bestand openbaar is.
   - `text`: in het Engels, met wat er gevonden is en hoe zeker dat is. Deze tekst wordt momenteel niet in de app getoond.
-  - optioneel `isFormerClub` (of `isFormerMuseum`) met de waarde `true` of `false`: de toestand na deze regel. De laatste regel met die sleutel bepaalt of de club of het museum getoond wordt. Zonder zo'n regel wordt het getoond.
-  - Nieuwe regels komen onderaan: de volgorde van de lijst is wat telt, dus de software sorteert nooit op `date`. Regels worden achteraf niet verwijderd. Een club die zijn activiteiten tijdelijk stillegt, is geen voormalige club: geef die liever een gedateerde `remark`.
+  - optioneel `status`: de toestand na deze regel. Dat is `"active"`, `"inactive"` (een bron bevestigt dat de organisatie gestopt is), `"possiblyInactive"` (ze lijkt gestopt, maar niemand heeft dat bevestigd) of `"rejected"` (helemaal geen fotoclub, zoals een kunstkring, die blijft staan zodat niemand hem opnieuw voorstelt). De laatste regel met een `status` beslist, voor clubs en musea gelijk. Zonder zo'n regel is de organisatie actief. De app verbergt inactieve en mogelijk inactieve organisaties standaard, en toont afgewezen organisaties nooit.
+  - Nieuwe regels komen onderaan: de volgorde van de lijst is wat telt, dus de software sorteert nooit op `date`. Regels worden achteraf niet verwijderd. Een club die zijn activiteiten tijdelijk stillegt, is niet inactief: geef die liever een gedateerde `remark`.
   - `date`, `author` en `text` zijn verplicht. Een Debug-versie van de app stopt bij een ontbrekend of onjuist veld, zodat het verbeterd wordt. Een uitgebrachte app houdt de regel gewoon.
 
 ``` json
@@ -796,7 +796,7 @@ Je kunt de basissyntaxis van JSON-bestanden overigens controleren met online JSO
     "badWebsites": [ "https://www.old-site.example.org" ],
     "logbook": [
         { "date": "2026-09-12", "author": "generator", "text": "Website went down: timed out on three runs in a row." },
-        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "isFormerClub": true }
+        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "status": "inactive" }
     ]
 }
 ```
@@ -1229,7 +1229,7 @@ Sterker nog: als je apparaat op een door het apparaat ondersteunde taal staat (z
 en je kijkt naar een Japanse of Chinese organisatie, dan worden deze gelokaliseerd getoond volgens de taalinstelling van het apparaat.</p>
 
 Een `Organization` die mogelijk gestopt is, blijft in de database, zodat wat er eerder over bekend was niet verloren gaat.
-`isFormerOrganization` geeft aan of die verborgen wordt (een opgeslagen waarde, geen JSON-sleutel). Dit wordt afgeleid uit de `logEntries` van de organisatie (zie `LogEntry`), telkens als het Level 1-bestand geladen wordt.
+`status` (opgeslagen als `status_`) geeft aan of die `active`, `inactive`, `possiblyInactive` of `rejected` is. Het is geen JSON-sleutel van de organisatie zelf: het wordt afgeleid uit de `logEntries` van de organisatie (zie `LogEntry`), telkens als het Level 1-bestand geladen wordt.
 `badWebsites_` bevat de URL's die te "gevaarlijk" zijn om te gebruiken, zoals ze in het Level 1-bestand staan.
 Een `website` die met een van de `badWebsites_`-waarden overeenkomt, wordt niet door de app gebruikt. Voorbeeld: een domeinnaam die nu in handen is van, of gebruikt wordt door, een derde partij (bijvoorbeeld een casino).
 
@@ -1241,9 +1241,9 @@ Een `website` die met een van de `badWebsites_`-waarden overeenkomt, wordt niet 
 
 Een `LogEntry` is één regel uit het logboek van een `Organization`: één element van de `logbook`-lijst in het Level 1-bestand.
 Het bevat een `date`, een `author` (een rol zoals `list maintainer` of, als dat gepast is, de naam van een persoon) en een `text`.
-Optioneel bevat het `isFormerOrganization`: of de organisatie vanaf deze regel een voormalige is.
-In de JSON is dit de sleutel `isFormerClub` of `isFormerMuseum` van de regel. De twee zijn aliassen, dus beide werken bij een club of een museum; heeft een regel ze allebei, dan wint de sleutel die bij het soort organisatie past.
-De laatste regel met een `isFormerOrganization`-waarde bepaalt de `isFormerOrganization` van de organisatie zelf.
+Optioneel bevat het een `status`: de status van de organisatie vanaf deze regel.
+In de JSON is dit de sleutel `"status"` van de regel, voor clubs en musea gelijk.
+De laatste regel met een `status` bepaalt de `status` van de organisatie zelf.
 "Laatste" betekent de plaats van de regel in de lijst (`position`), niet de datum.</p>
 `originalDataSourceLevel` legt vast in welk level bestand de regel voor het eerst gevonden is. Dat is voorlopig altijd 1, totdat ook Level 2-bestanden een logboek kunnen bevatten (Data#92).
 </details></ul>

@@ -780,8 +780,8 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
   - `date`: the day the entry was written, as `YYYY-MM-DD`.
   - `author`: a role, such as `list maintainer`, `club`, `afdeling contact` or `generator`, or, if appropriate, a person's name. Keep in mind that the file is public.
   - `text`: in English, saying what was found and how sure we are. It is not currently shown in the app.
-  - optionally `isFormerClub` (or `isFormerMuseum`) set to `true` or `false`: the state after this entry. The last entry that has the key determines whether the club or museum is shown. Without any such entry, it is shown.
-  - New entries go at the bottom: the order of the list is the order that counts, so the software never sorts on `date`. Entries are not deleted afterwards. A club that pauses its activities is not a former club: give it a dated `remark` instead.
+  - optionally `status`: the state after this entry. It is `"active"`, `"inactive"` (a source confirms that it stopped), `"possiblyInactive"` (it looks stopped, but nobody has confirmed it) or `"rejected"` (not a photo club at all, such as an art circle, kept so that nobody proposes it again). The last entry that has a `status` decides, for clubs and museums alike. Without any such entry, the organization is active. The app hides inactive and possibly inactive organizations by default, and never shows rejected ones.
+  - New entries go at the bottom: the order of the list is the order that counts, so the software never sorts on `date`. Entries are not deleted afterwards. A club that pauses its activities is not inactive: give it a dated `remark` instead.
   - `date`, `author` and `text` are required. A Debug build of the app stops on a missing or malformed field, so that it gets fixed, while a released app keeps the entry.
 
 ``` json
@@ -790,7 +790,7 @@ You can incidentally check the basic syntax of JSON files using online JSON vali
     "badWebsites": [ "https://www.old-site.example.org" ],
     "logbook": [
         { "date": "2026-09-12", "author": "generator", "text": "Website went down: timed out on three runs in a row." },
-        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "isFormerClub": true }
+        { "date": "2026-10-29", "author": "afdeling contact", "text": "Informed us that the club has disbanded.", "status": "inactive" }
     ]
 }
 ```
@@ -1224,7 +1224,7 @@ In fact, if your device is set to any language supported by the device (say Japa
 and you are looking at a Japanese or Chinese organization, these will be shown localized to the device's language setting.</p>
 
 An `Organization` that may have stopped stays in the database, so that what was previously known about it isn't lost.
-`isFormerOrganization` says whether it is hidden (a stored value, not a JSON key). It is derived from the organization's `logEntries` (see `LogEntry`) each time its Level 1 file is loaded.
+`status` (stored as `status_`) says whether it is `active`, `inactive`, `possiblyInactive` or `rejected`. It is not a JSON key of the organization itself: it is derived from the organization's `logEntries` (see `LogEntry`) each time its Level 1 file is loaded.
 `badWebsites_` holds the URLs that are too "dangerous" to use, as provided in the Level 1 file.
 A `website` that matches one of the `badWebsites_` values is not used by the app. Example: a domain name that is now owned/used by a third party (e.g. a casino).
 
@@ -1236,9 +1236,9 @@ A `website` that matches one of the `badWebsites_` values is not used by the app
 
 A `LogEntry` is one entry in an `Organization`'s logbook: one element of the `logbook` list in its Level 1 file.
 It holds a `date`, an `author` (a role such as `list maintainer` or, if appropriate, a person's name) and a `text`.
-Optionally it holds `isFormerOrganization`: whether the organization is former from this entry on.
-In the JSON this is the entry's `isFormerClub` or `isFormerMuseum` key. The two are aliases, so either works on a club or a museum; if an entry has both, the one matching the organization's type wins.
-The last entry that has an `isFormerOrganization` value sets the organization's own `isFormerOrganization`.
+Optionally it holds a `status`: the organization's status from this entry on.
+In the JSON this is the entry's `"status"` key, for clubs and museums alike.
+The last entry that has a `status` sets the organization's own `status`.
 "Last" means the entry's place in the list (`position`), not its date.</p>
 `originalDataSourceLevel` records which level of file the entry was first found in. It is always 1 for now, until Level 2 files can hold a logbook too (Data#92).
 </details></ul>
