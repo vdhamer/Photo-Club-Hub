@@ -15,6 +15,7 @@ struct MapsViewInfo: View {
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
     let organizationType: OrganizationTypeEnum
+    let status: OrganizationStatus // an inactive organization gets a ghost marker and a line saying so (#892)
     let localizedTown: String
     let localizedCountry: String
     let memberCount: Int
@@ -27,6 +28,7 @@ struct MapsViewInfo: View {
          uiLanguage: Language?,
          isMapScrollLocked: Binding<Bool>) {
         organizationType = organization.organizationType.organizationTypeEnum
+        status = organization.status
         if let uiLanguage {
             localizedTown = organization.localizedTown(for: uiLanguage)
             localizedCountry = organization.localizedCountry(for: uiLanguage)
@@ -40,12 +42,14 @@ struct MapsViewInfo: View {
     }
 
     fileprivate init(organizationType: OrganizationTypeEnum, // lower level initiatizer used by preview
+                     status: OrganizationStatus,
                      localizedTown: String,
                      localizedCountry: String,
                      memberCount: Int,
                      organizationWebsite: URL?,
                      isMapScrollLocked: Binding<Bool>) {
         self.organizationType = organizationType
+        self.status = status
         self.localizedTown = localizedTown
         self.localizedCountry = localizedCountry
         self.memberCount = memberCount
@@ -56,7 +60,7 @@ struct MapsViewInfo: View {
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
             // The same balloon as this organization's own (purple) marker on the map below.
-            MapMarkerBalloon(mapOrganizationType: organizationType)
+            MapMarkerBalloon(mapOrganizationType: organizationType, isGhost: status.isGhost)
                 .padding(.leading, 5)
                 .padding(.trailing, 12) // the gap to the text
 
@@ -67,6 +71,13 @@ struct MapsViewInfo: View {
                      "\(localizedTown), \(localizedCountry)" :
                      "\(localizedCountry) ,\(localizedTown)")
                 .font(.subheadline)
+
+                // "No longer active" or "May no longer be active", only for a ghost
+                if let statusLabel = status.displayNameForAppUI {
+                    Text(verbatim: statusLabel) // localized by the Data package
+                        .font(.subheadline)
+                        .italic()
+                }
 
                 // number of members (if applicable)
                 if memberCount > 0 { // hide for museums and clubs without members
@@ -115,6 +126,7 @@ struct MapsViewInfo: View {
 // MARK: - Previews
 
 // Believe it or not, these previews actually work.
+// Town and country are fixed English text here, while the app localizes them; the status line is localized in both.
 
 #Preview {
     @Previewable @State var lockedClub1 = false
@@ -123,15 +135,17 @@ struct MapsViewInfo: View {
     VStack(alignment: .leading, spacing: 20) {
         Divider()
         MapsViewInfo(organizationType: .club,
+                             status: .active,
                              localizedTown: "Eindhoven",
                              localizedCountry: "Netherlands",
-                             memberCount: 20,
+                             memberCount: 99,
                              organizationWebsite: URL(string: "https://www.fcDeGender.nl"),
                              isMapScrollLocked: $lockedClub1)
         Divider()
         MapsViewInfo(organizationType: .unknown,
-                             localizedTown: "Nieuw Amsterdam",
-                             localizedCountry: "Verenigde Staten",
+                             status: .possiblyInactive,
+                             localizedTown: "Gibsland",
+                             localizedCountry: "United States",
                              memberCount: 0,
                              organizationWebsite: nil,
                              isMapScrollLocked: $lockedClub2)
