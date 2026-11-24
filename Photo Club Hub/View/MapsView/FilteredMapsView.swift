@@ -171,8 +171,8 @@ struct FilteredMapsView: View {
         case .noCategoriesEnabled:
             return Text("""
                         Warning: \
-                        all organization categories (Clubs and Museums) on the Settings page are disabled. \
-                        To see maps, please adjust the filter settings in the Settings tab.
+                        all organization categories (Clubs and Museums) are disabled in the Settings tab. \
+                        To see maps, please enable at least one of them.
                         """,
                         tableName: "PhotoClubHub.SwiftUI",
                         comment: "Hint to the user if all of the Organization toggles are disabled.")
@@ -187,8 +187,8 @@ struct FilteredMapsView: View {
 
         case .searchFilterTooStrict:
             return Text("""
-                        To see clubs and museums here, please adapt the Search filter \
-                        or enable additional categories on the Preferences page.
+                        To see clubs or museums here, please adapt the Search filter \
+                        or enable additional categories in the Settings tab.
                         """,
                         tableName: "PhotoClubHub.SwiftUI",
                         comment: "Hint to the user if zero Organizations remain visible with Search filter in use.")
@@ -196,7 +196,7 @@ struct FilteredMapsView: View {
         case .categoriesTooStrict:
             return Text("""
                         To see clubs and museums here, please enable additional categories \
-                        on the Preferences page.
+                        in the Settings tab.
                         """,
                         tableName: "PhotoClubHub.SwiftUI",
                         comment: "Hint to the user if the database returns zero Organizations, empty Search filter.")
@@ -357,15 +357,32 @@ extension FilteredMapsView { // reverse GeoCoding
 // Shows the generated sample organizations of `PersistenceController.preview`, not the real clubs.
 // The random coordinates also come from `PersistenceController.preview` and are locations in/nearby the Netherlands.
 struct FilteredMapsView_Previews: PreviewProvider {
-    static let organizationPredicate = NSPredicate(format: "TRUEPREDICATE")
+    static let organizationPredicate = Organization.inScopePredicate
     @State static var searchText: String = ""
+
+    // All sample clubs are active, so three pinned ones, shown first, get another status: two ghosts, then an active
+    // club, as the rejected one stays hidden (#892). Unsaved, yet later previews in this process may see it (shared).
+    static let context: NSManagedObjectContext = {
+        let context = PersistenceController.preview.container.viewContext
+        let statuses: [String: OrganizationStatus] = ["PhotoClub4A": .inactive,
+                                                      "PhotoClub4B": .possiblyInactive,
+                                                      "PhotoClub8A": .rejected]
+        for (fullName, status) in statuses {
+            let fetchRequest = NSFetchRequest<Organization>(entityName: "Organization")
+            fetchRequest.predicate = NSPredicate(format: "fullName_ == %@", fullName)
+            for organization in (try? context.fetch(fetchRequest)) ?? [] {
+                organization.status_ = status.rawValue
+            }
+        }
+        return context
+    }()
 
     static var previews: some View {
         NavigationStack {
             if #available(iOS 26, *) {
                 List { // lists are "Lazy" automatically
                     FilteredMapsView(predicate: organizationPredicate, searchText: $searchText)
-                        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+                        .environment(\.managedObjectContext, context)
                 }
                 .navigationBarTitle(Text(String("FilteredMapsView"))) // prevent localization
                 .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
@@ -373,7 +390,7 @@ struct FilteredMapsView_Previews: PreviewProvider {
             } else {
                 List { // lists are "Lazy" automatically
                     FilteredMapsView(predicate: organizationPredicate, searchText: $searchText)
-                        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+                        .environment(\.managedObjectContext, context)
                 }
                 .navigationBarTitle(Text(String("FilteredMapsView"))) // prevent localization
                 .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
