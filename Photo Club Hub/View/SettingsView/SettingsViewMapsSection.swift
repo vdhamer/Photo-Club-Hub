@@ -7,12 +7,13 @@
 
 import SwiftUI
 import SemanticColorPicker // for SemanticColor and SemanticColorPicker
+import Photo_Club_Hub_Data // for OrganizationTypeEnum
 
 struct SettingsViewMapsSection: View {
     @Binding var settings: SettingsStruct
 
     var body: some View {
-        Section(header: Text("Maps tab",
+        Section(header: Text("Organizations",
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Settings, section title above map-related toggles"),
                 content: {

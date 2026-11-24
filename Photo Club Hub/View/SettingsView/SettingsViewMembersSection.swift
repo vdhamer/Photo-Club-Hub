@@ -11,7 +11,7 @@ struct SettingsViewMembersSection: View {
     @Binding var settings: SettingsStruct
 
     var body: some View {
-        Section(header: Text("Clubs tab",
+        Section(header: Text("Club members",
                              tableName: "PhotoClubHub.SwiftUI",
                              comment: "In Preferences, above toggles like \"Show former members\""),
                 content: {
