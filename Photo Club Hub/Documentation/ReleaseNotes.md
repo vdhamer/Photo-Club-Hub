@@ -6,6 +6,7 @@ IN SHORT
 - **Search by town in your own language**, such as "Keulen" (NL) for Köln.
 - **The location button no longer spins forever** when the app doesn't have your permission to access it.
 - **A one-time reload** the first time you open the app after updating.
+- **Clubs that may have stopped are hidden**, unless you ask for them in the Settings tab.
 
 USER-FACING CHANGES
 
@@ -15,13 +16,21 @@ USER-FACING CHANGES
 
 - **A one-time reload after updating.** The first time you open the app after updating, it takes a little longer: it reloads all its data once. Names and towns are now stored with plain apostrophes and hyphens, so that what you type in a search field finds them. Without the reload, the few clubs and museums whose name held a curly apostrophe or a special dash would appear twice. The reload also removes the old Fotobond number of Foto Expressie Groep Gemert, which left the Fotobond. ([Data#100](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/100), [#896](https://github.com/vdhamer/Photo-Club-Hub/issues/896))
 
-- **Clubs that may have stopped are hidden.** Clubs and museums that have stopped, or show clear signs of having stopped, no longer appear on the Maps tab or the Clubs tab, so you won't travel to a club that no longer meets. On the Maps tab they lose their card and their pin, and they are no longer counted or found by search. ([#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891))
+- **Clubs that may have stopped are hidden.** Clubs and museums that have stopped, or show clear signs of having stopped, no longer appear on the Maps tab or the Clubs tab, so you won't travel to a club that no longer meets. On the Maps tab they lose their card and their pin, and they are no longer counted or found by search. To see them anyway, turn on "Show inactive organizations" in the Organizations section of the Settings tab. As the line below it says, it also applies to the Clubs tab. They then come back as pale pins with a dotted outline, and their card on the Maps tab and their header on the Clubs tab say "No longer active" or "May no longer be active". ([#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891), [#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
+
+- **Hints point to the Settings tab.** When the Maps or Clubs tab is empty because of a setting, its hint now always sends you to the Settings tab, and so does the third tip below the Maps tab's list. Some of them spoke of "Preferences", a "Preferences page" or a "Settings page". ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
+
+- **Settings sections renamed.** The first three sections of the Settings tab are now called Organizations, Club members and People, instead of Maps tab, Clubs tab and People tab (in Dutch: Organisaties, Clubleden and Personen). ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
+
+- **Settings icons match the maps.** In the Organizations section of the Settings tab, "Show clubs" and "Show museums" now have the purple club and museum markers of the Maps tab as their icons, and "Show inactive organizations" has the pale ghost marker. The Fotobond highlighting rows show a club marker in the highlighting color you picked. ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
 
 USER-FACING BUG FIXES
 
 - **The location button no longer spins forever.** If you chose not to let the app use your location, the button that shows where you are on an unlocked map kept spinning, waiting for a location it would never get. The button is now hidden until you allow it. The Maps tab then shows a short tip, at most twice, with a link to the app's page in the Settings app. Allow the location there, and the button and the dot showing your current location come back immediately. ([#889](https://github.com/vdhamer/Photo-Club-Hub/issues/889))
 
 - **Birthdays show the same date everywhere.** On devices west of GMT, such as in the Americas, the People tab showed a birthday one day early. The People tab now also shows a birthday on the day after, as was intended.
+
+- **"1 member" instead of "1 members".** A club card on the Maps tab now uses the singular for a club with one member, in English and in Dutch ("1 lid").
 
 <details>
 <summary><b>DATA</b>: 323 clubs added in 16 Dutch afdelingen and Belgium, 2 museum pins fixed, plainer text</summary>
@@ -129,7 +138,13 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 
 * `SettingsStruct` now decodes each stored setting on its own, so a missing or unreadable field falls back to its default, and the other settings are kept. The synthesized decoder was all-or-nothing: without this change, adding `showInactiveOrganizations` would have reset every user's settings on updating to 3.0.5. The same now holds for a stored `highlightColor` that the color picker no longer offers. Encoding is unchanged. No released version lost settings this way, since the stored fields hadn't changed since 2.10.0. New `SettingsStructDecodingTest` (5 cases)
 
-**Tooling: release column in the line counts** ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
+**Code: showing inactive organizations** ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
+
+* The Organizations section of the Settings tab gets the toggle for `showInactiveOrganizations`, with a second line saying that it also applies to the Clubs tab. `MapMarkerBalloon` draws a ghost for an organization whose `OrganizationStatus.isGhost` (`inactive` or `possiblyInactive`): a pale fill over white, a dotted outline and the symbol in the tint, grey for other organizations and purple for the card's own one, with Fotobond highlighting not applied. `init(mapOrganizationType:)` gains `isGhost` for the card's own marker. `MapMarkerBalloonDrawing` is no longer private: the Clubs tab's section header draws its grey ghost with it, and `SettingsViewMapsSection.markerIcon` draws every icon of that section with it, each in a color the row chooses (purple, grey ghost, or the highlighting color), sized over a hidden `mappin.square` so the labels line up. `MapsViewInfo` and `MemberListSectionHeader` add the Data package's `displayNameForAppUI` below the town or the club name. `sectionTitle(for:uiLanguage:)` now returns the club's status as well, as a `SectionTitle`. Six empty-list hints and the Maps tab's third caption (`Organizations_Caption_3`) were reworded to name the Settings tab. `markerTint` is no longer private, so `HighlightIconColorTest` can check that the highlighting icon has the color a highlighted club gets on the map, for every color in the picker. New `GhostOrganizationTest` (12 cases) and `HighlightIconColorTest` (36 cases). `FilteredMapsView`'s preview gives three pinned sample clubs a status (inactive, possibly inactive, rejected) and uses `inScopePredicate`, so it opens on two ghosts while the rejected club stays hidden. `MapsViewInfo`'s previews use English town and country names only
+
+* The Settings section headers "Maps tab", "Clubs tab" and "People tab" became "Organizations", "Club members" and "People". "Organizations" and "People" reuse the String Catalog entries of the Maps tab title and the People tab, so their Dutch follows those; "Club members" is a new entry ("Clubleden").
+
+**Tooling: release column in the line counts** spreadsheet ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
 
 * `LineCount.csv` gains a last column, `release`, so the line-count graphs can mark each app release with its version. `countLines.sh` writes every release tag (such as `v3.0.4`) not yet in the column onto the latest row on or before the tagged commit's date, which fills in the history on its first run and adds a release on the first commit after its tag is pulled. Rows without the column, as an old branch could merge back, are padded. 19 releases whose date had no row, some for months, now have one rebuilt from the tagged commit, so their marker sits on the release date. A row carries one label: when two releases share a row, the newer one wins, as with v2.2.3 over v2.2.2
 
