@@ -11,7 +11,7 @@
                 "longitude": 4.89383
             },
             "optional": {
-                "level2URL": "https://www.TemplateMin.nl/TemplateMin.level2.json"
+                "level2URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMin.level2.json"
             }
         },
 

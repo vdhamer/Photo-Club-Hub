@@ -21,7 +21,7 @@
                 "website": "https://www.TemplateMax.nl",
                 "badWebsites": [ "https://www.old-hijacked-TemplateMax.nl", "https://www.TemplateMax-for-sale.nl" ],
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
-                "level2URL": "https://www.TemplateMax.nl/TemplateMax.level2.json",
+                "level2URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMax.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -70,26 +70,24 @@
 
         {
             "idPlus": {
-                "town": "Wetzlar",
-                "fullName": "Leica Rangefinder Club",
-                "nickName": "LeicaRC"
+                "town": "Gibsland",
+                "fullName": "Template Club That Stopped",
+                "nickName": "TemplateStopped"
             },
             "coordinates": {
-                "latitude": 50.55221,
-                "longitude": 8.53346
+                "latitude": 32.54706,
+                "longitude": -93.05102
             },
             "optional": {
-                "website": "https://www.leica-rangefinder.example.org",
-                "wikipedia": "https://en.wikipedia.org/wiki/Leica_Camera",
-                "level2URL": "https://www.TemplateMax.nl/LeicaRC.level2.json",
+                "website": "https://www.template-stopped.example.org",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "A hypothetical exclusive photography club for Leica rangefinder owners."
+                        "value": "A hypothetical club that shows how to record that a club has stopped."
                     },
                     {
                         "language": "NL",
-                        "value": "Een denkbeeldige club van enthousiaste eigenaren van Leica meetzoeker camera's."
+                        "value": "Een denkbeeldige club die laat zien hoe je aangeeft dat een club gestopt is."
                     }
                 ],
                 "logbook": [
@@ -110,7 +108,7 @@
                         "status": "inactive"
                     }
                 ],
-                "maintainerEmail": "admin@leica-rangefinder.example.org"
+                "maintainerEmail": "admin@template-stopped.example.org"
             }
         }
     ],
@@ -119,34 +117,39 @@
     "museums": [
         {
             "idPlus": {
-                "town": "New York City",
-                "fullName": "Fotografiska New York",
-                "nickName": "Fotografiska_NYC"
+                "town": "Gibsland",
+                "fullName": "Template Photo Gallery",
+                "nickName": "TemplateGallery"
             },
             "coordinates": {
-                "latitude": 40.739378,
-                "longitude": -73.986622
+                "latitude": 32.54306,
+                "longitude": -93.05502
             },
             "optional": {
-                "website": "https://www.fotografiska.com/nyc/",
-                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
+                "website": "https://www.template-gallery.example.org",
+                "wikipedia": "https://en.wikipedia.org/wiki/Gibsland,_Louisiana",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Associated with the original Fotografiska Museum in Stockholm"
+                        "value": "A hypothetical photo gallery that shows how to record a museum or gallery."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een denkbeeldige fotogalerie die laat zien hoe je een museum of galerie vastlegt."
                     }
                 ]
             }
         },
+
         {
             "idPlus": {
-                "town": "Example Town",
+                "town": "Gibsland",
                 "fullName": "Template Museum That Closed",
                 "nickName": "TemplateMuseumClosed"
             },
             "coordinates": {
-                "latitude": 52.0,
-                "longitude": 5.0
+                "latitude": 32.54706,
+                "longitude": -93.05502
             },
             "optional": {
                 "website": "https://www.template-museum.example.org",

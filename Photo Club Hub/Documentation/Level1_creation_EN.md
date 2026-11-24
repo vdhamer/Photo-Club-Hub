@@ -216,8 +216,10 @@ you also find the branch (`museums.level1.json`) with international photography 
     "level1Header": {
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root_.level1.json",
         "level1URLIncludes": [
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL.level1.json",
-            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museums.level1.json"
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museums.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/templates.level1.json"
         ],
         "maintainerEmail": "vdhamer@msn.com"
     }
@@ -255,7 +257,7 @@ These are therefore fields that you can add later, for example once the required
 
 - A detailed English description of all supported fields in a 'level1.json' file can be found in the [README.md](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs) file.
 It is often practical to start from an existing Level 1 such as [this real one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)
-or [this schematic one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubTemplates.level1.json) example.
+or [this schematic one](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) example.
 
 - All fields that describe an individual photo club under `clubs:` in a Level 1 file also appear in the `club:` part at the top of a Level 2 file. The fields are described in somewhat more detail in [that documentation](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_creation_EN.md).
 

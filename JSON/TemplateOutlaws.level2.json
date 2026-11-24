@@ -1,0 +1,57 @@
+{
+    "club":
+        {
+            "idPlus": {
+                "town": "Gibsland",
+                "fullName": "Template Gang of Outlaws",
+                "nickName": "TemplateOutlaws"
+            },
+            "coordinates": {
+                "latitude": 32.54506,
+                "longitude": -93.05302
+            },
+            "optional": {
+                "level2URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateOutlaws.level2.json"
+            }
+        },
+
+
+    "members": [
+
+        {
+            "name": {
+                "givenName": "Bonnie",
+                "infixName": "",
+                "familyName": "Outlaw"
+            },
+            "optional": {
+                "photographerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/BonnieParkerCigar1933.jpg/500px-BonnieParkerCigar1933.jpg",
+                "featuredImage": "https://picsum.photos/200"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Clyde",
+                "infixName": "",
+                "familyName": "Outlaw"
+            },
+            "optional": {
+                "photographerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Clyde_Champion_Barrow_Mug_Shot_-_Dallas_6048.jpg/500px-Clyde_Champion_Barrow_Mug_Shot_-_Dallas_6048.jpg",
+                "featuredImage": "https://picsum.photos/200"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Mike",
+                "infixName": "",
+                "familyName": "Blaak"
+            },
+            "optional": {
+                "featuredImage": "https://picsum.photos/200"
+            }
+        }
+
+    ]
+}

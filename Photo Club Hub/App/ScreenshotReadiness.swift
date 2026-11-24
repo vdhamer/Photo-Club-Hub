@@ -26,7 +26,7 @@ enum ScreenshotReadiness {
     // MARK: - initialize without using init()
 
     /// An organization for a screenshot targets. It is identified by name and town, as in the JSON:
-    /// a name alone could recur in another town or in a template file ("Fotografiska New York" does).
+    /// a name alone could recur in another town.
     /// Compare with an `Organization` by converting it first: `OrganizationTarget(organization) == target`.
     struct OrganizationTarget: Equatable {
         let fullName: String

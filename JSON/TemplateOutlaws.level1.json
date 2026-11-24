@@ -1,0 +1,43 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateOutlaws.level1.json",
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Gibsland",
+                "fullName": "Template Gang of Outlaws",
+                "nickName": "TemplateOutlaws"
+            },
+            "coordinates": {
+                "latitude": 32.54506,
+                "longitude": -93.05302
+            },
+            "optional": {
+                "level2URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateOutlaws.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A hypothetical gang that was submitted as a photo club. Shows how to record an organization that is not a photo club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een denkbeeldige bende die als fotoclub werd aangemeld. Laat zien hoe je een organisatie vastlegt die geen fotoclub is."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-24",
+                        "author": "list maintainer",
+                        "text": "Example only: a gang of outlaws, not a photo club.",
+                        "status": "rejected"
+                    }
+                ]
+            }
+        }
+
+    ]
+}

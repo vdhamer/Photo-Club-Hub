@@ -652,10 +652,14 @@ root_.level1.json               no clubs, only includes
 │   :
 │   ├── clubsNL16.level1.json   Brabant Oost
 │   └── clubsNL17.level1.json   Limburg
-└── museums.level1.json         photo museums, plus includes
-    ├── museumsAU.level1.json   photo museums in Australia
-    :
-    └── museumsUS.level1.json   photo museums in the United States
+├── museums.level1.json         photo museums, plus includes
+│   ├── museumsAU.level1.json   photo museums in Australia
+│   :
+│   └── museumsUS.level1.json   photo museums in the United States
+└── templates.level1.json       examples for people who edit these files, only includes
+    ├── TemplateMin.level1.json
+    ├── TemplateMax.level1.json
+    └── TemplateOutlaws.level1.json
 ```
 
 Each entry in a `level1URLIncludes` list is a full web address.

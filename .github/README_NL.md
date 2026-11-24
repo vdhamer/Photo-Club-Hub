@@ -659,10 +659,14 @@ root_.level1.json               geen clubs, alleen includes
 │   :
 │   ├── clubsNL16.level1.json   Brabant Oost
 │   └── clubsNL17.level1.json   Limburg
-└── museums.level1.json         fotomusea, plus includes
-    ├── museumsAU.level1.json   fotomusea in Australië
-    :
-    └── museumsUS.level1.json   fotomusea in de Verenigde Staten
+├── museums.level1.json         fotomusea, plus includes
+│   ├── museumsAU.level1.json   fotomusea in Australië
+│   :
+│   └── museumsUS.level1.json   fotomusea in de Verenigde Staten
+└── templates.level1.json       voorbeelden voor wie deze bestanden bewerkt, alleen includes
+    ├── TemplateMin.level1.json
+    ├── TemplateMax.level1.json
+    └── TemplateOutlaws.level1.json
 ```
 
 Elke regel in een `level1URLIncludes`-lijst is een volledig webadres.

@@ -13,7 +13,7 @@
             "optional": {
                 "website": "https://www.rotterdam.nl/stadhuis",
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam",
-                "level2URL": "https://www.example.com/TemplateMax.level2.json",
+                "level2URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMax.level2.json",
                 "remark": [
                     {
                         "language": "EN",
