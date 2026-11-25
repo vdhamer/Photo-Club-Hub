@@ -32,7 +32,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 // One section per tab, in tab bar order (#887): Maps, Clubs, People.
-                SettingsViewMapsSection(settings: $settings)
+                SettingsViewOrganizationsSection(settings: $settings)
                 SettingsViewMembersSection(settings: $settings) // "Clubs tab"
                 SettingsViewPhotographersSection(settings: $settings) // "People tab"
                 SettingsViewAdvancedSection(settings: $settings)

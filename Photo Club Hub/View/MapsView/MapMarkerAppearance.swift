@@ -13,30 +13,38 @@ import Photo_Club_Hub_Data // for types such as Organization
 // it shows a table of all possible cases and resulting markers.
 
 /// Central rules for deciding a marker's tint, applied in this order of priority.
-/// `markerTint` is private, and only meant to be used by `MapMarkerBalloon` (and by the Preview of this file).
+/// `markerTint` is only meant to be used by `MapMarkerBalloon` (and by the Preview of this file).
+/// It is not private only so that tests can check that the Settings tab's highlighting icon matches it
+/// (`HighlightIconColorTest`).
 /// Note that the marker uses a different symbol for Clubs than for Museums.
 ///
 /// - Parameters:
 ///   - organizationType: The organization's type.
 ///   - isOwn: Whether the organization is the one the map is about.
 ///   - isInFotobond: Whether the organization is a club that is a member of the Dutch Fotobond.
-///   - settings: The app's settings, for cases when highlighting feature in Settings is used (for now a Dutch thing)
+///   - isGhost: Whether the organization is drawn as a ghost (see `OrganizationStatus.isGhost`).
+///   - settings: The app's settings, for cases when highlighting feature in Settings is used (for now a Fotobond thing)
 /// - Returns: The `Color` in which to tint the marker.
-private func markerTint(organizationType: OrganizationTypeEnum,
-                        isOwn: Bool,
-                        isInFotobond: Bool,
-                        settings: SettingsStruct
-                       ) -> Color {
+func markerTint(organizationType: OrganizationTypeEnum,
+                isOwn: Bool,
+                isInFotobond: Bool,
+                isGhost: Bool,
+                settings: SettingsStruct
+               ) -> Color {
     let errorColor: Color = .red
 
     // The map's own organization gets a special color, even if it has a .unknown type (would be a bug)
     if isOwn { return .mapsColor }
 
+    // A ghost is grey whatever its type, and Fotobond highlighting doesn't apply: a club that may have stopped
+    // shouldn't draw attention to itself (#892).
+    if isGhost { return .ghostMarkerColor }
+
     switch organizationType {
     case .unknown:
         return errorColor
     case .museum:
-        return .blue // Show any Museum in blue (except the map's "own" organization)
+        return .plainMarkerColor // any museum except the map's "own" organization
     case .club:
         guard !(settings.highlightNonFotobondNL == true && settings.highlightFotobondNL == true) else {
             ifDebugFatalError("Fotobond and non-Fotobond toggle are both enabled. That is an invalid state.")
@@ -47,7 +55,7 @@ private func markerTint(organizationType: OrganizationTypeEnum,
         let neutralColor: Color = .gray
 
         if settings.highlightFotobondNL == false && settings.highlightNonFotobondNL == false {
-            return .blue // nothing to highlight, this is a mainstream case
+            return .plainMarkerColor // nothing to highlight, this is a mainstream case
         }
 
         if settings.highlightFotobondNL {
@@ -66,6 +74,10 @@ private func markerTint(organizationType: OrganizationTypeEnum,
 /// in dark mode, has the map's dark outline color, so it is hard to see, and the eye takes the circle's center for
 /// the spot. Here the tint runs into a longer point, whose tip points to the organization's location on the map.
 ///
+/// An organization that is inactive or possibly inactive gets a "ghost" instead: the same balloon, pale, with a dotted
+/// outline and its symbol in the tint (#892). Such organizations only reach a map while the setting
+/// "Show inactive organizations" is on.
+///
 /// This view decides the color; `MapMarkerBalloonDrawing` draws the balloon.
 struct MapMarkerBalloon: View {
 
@@ -73,6 +85,7 @@ struct MapMarkerBalloon: View {
     private let organizationType: OrganizationTypeEnum
     private let isOwn: Bool
     private let isInFotobond: Bool
+    private let isGhost: Bool
 
     /// Observed, so the marker can immediately change color as soon as any highlight setting changes (#885).
     /// Merely reading the settings when the marker is created is not enough: SwiftUI keeps the map cards, and with
@@ -85,14 +98,17 @@ struct MapMarkerBalloon: View {
         self.organizationType = organization.organizationType.organizationTypeEnum
         self.isOwn = MapsViewMap.isMapOrganization(organization, mapOrganization: mapOrganization)
         self.isInFotobond = organization.fotobondClubNumber?.id != nil // is club member of Dutch photo club federation
+        self.isGhost = organization.status.isGhost
     }
 
-    /// For the purple marker of the organization a map is about, shown next to its name by `MapsViewInfo`.
+    /// For the purple marker of the organization a map is about, shown next to its name by `MapsViewInfo`,
+    /// or its purple ghost if the organization is inactive.
     /// The map's own organization is always purple, so Fotobond membership and the settings don't matter.
-    init(mapOrganizationType: OrganizationTypeEnum) {
+    init(mapOrganizationType: OrganizationTypeEnum, isGhost: Bool) {
         self.organizationType = mapOrganizationType
         self.isOwn = true
         self.isInFotobond = false
+        self.isGhost = isGhost
     }
 
     static let width: CGFloat = 30 // matches MapKit's own marker (iPhone simulator, Oct 2026)
@@ -103,19 +119,39 @@ struct MapMarkerBalloon: View {
                                 color: markerTint(organizationType: organizationType,
                                                   isOwn: isOwn,
                                                   isInFotobond: isInFotobond,
-                                                  settings: settingsModel.settings))
+                                                  isGhost: isGhost,
+                                                  settings: settingsModel.settings),
+                                isGhost: isGhost)
+    }
+}
+
+extension OrganizationStatus {
+    /// Whether an organization with this status gets a ghost marker, and the line "No longer active" or
+    /// "May no longer be active" (`displayNameForAppUI`) on its Maps card and Clubs tab header (#892).
+    /// A rejected organization is never fetched, so it never needs a marker.
+    var isGhost: Bool {
+        switch self {
+        case .inactive, .possiblyInactive: true
+        case .active, .rejected: false
+        }
     }
 }
 
 /// The balloon of a `MapMarkerBalloon`, in a given color.
 /// Kept separate so that the Preview below can show every combination of settings side by side,
 /// while the app itself only ever uses the one set of settings it has.
-private struct MapMarkerBalloonDrawing: View {
+/// Also used directly where a marker is an icon with a color of its own: the Settings tab's Maps section
+/// (`SettingsViewOrganizationsSection.markerIcon`).
+struct MapMarkerBalloonDrawing: View {
 
     let organizationType: OrganizationTypeEnum
     let color: Color // from `markerTint`
+    let isGhost: Bool
 
     private static let outlineWidth: CGFloat = 1.5
+
+    /// A ghost's outline: round dots, because a zero-length dash with a round cap is drawn as a dot.
+    private static let ghostOutline = StrokeStyle(lineWidth: 2, lineCap: .round, dash: [0, 4])
 
     /// The SF Symbol drawn in the round part, for the organization's type.
     private var systemImage: String {
@@ -127,17 +163,32 @@ private struct MapMarkerBalloonDrawing: View {
     }
 
     var body: some View {
-        MapMarkerBalloonShape()
-            .fill(color)
-            .stroke(.secondary, lineWidth: Self.outlineWidth)
+        balloon
             .overlay(alignment: .top) {
                 Image(systemName: systemImage)
                     .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(isGhost ? color : .white)
                     .frame(width: MapMarkerBalloon.width, height: MapMarkerBalloon.width) // centered in the round part
             }
-            .shadow(color: .black.opacity(0.4), radius: 3, x: 3, y: 3)
+            .shadow(color: .black.opacity(isGhost ? 0.2 : 0.4), radius: 3, x: 3, y: 3)
             .frame(width: MapMarkerBalloon.width, height: MapMarkerBalloon.height)
+    }
+
+    /// The balloon without its symbol. A normal one is filled with `color` and has a thin solid outline.
+    /// A ghost is a pale tint of `color` over a mostly opaque white, so the map barely shows through, in light and in
+    /// dark mode alike, with a dotted outline in `color`.
+    @ViewBuilder
+    private var balloon: some View {
+        if isGhost {
+            MapMarkerBalloonShape()
+                .fill(color.opacity(0.2))
+                .background(MapMarkerBalloonShape().fill(.white.opacity(0.8)))
+                .overlay(MapMarkerBalloonShape().stroke(color, style: Self.ghostOutline))
+        } else {
+            MapMarkerBalloonShape()
+                .fill(color)
+                .stroke(.secondary, lineWidth: Self.outlineWidth)
+        }
     }
 }
 
@@ -186,7 +237,11 @@ private struct MapMarkerBalloonShape: Shape {
         TintPreviewRow("Fotobond CLUB, highlight others", .club,
                        isInFotobond: true, settings: .highlighting(fotobond: false)),
         TintPreviewRow("other CLUB, highlight others", .club, settings: .highlighting(fotobond: false)),
-        TintPreviewRow("unknown type", .unknown)
+        TintPreviewRow("unknown type", .unknown),
+        TintPreviewRow("inactive MUSEUM", .museum, isGhost: true),
+        TintPreviewRow("inactive CLUB", .club, isGhost: true),
+        TintPreviewRow("inactive Fotobond CLUB, highlight", .club,
+                       isInFotobond: true, isGhost: true, settings: .highlighting(fotobond: true))
     ]
 
     Grid(horizontalSpacing: 20, verticalSpacing: 10) { // a Grid, so the cells line up in columns
@@ -206,7 +261,9 @@ private struct MapMarkerBalloonShape: Shape {
                                             color: markerTint(organizationType: row.type,
                                                               isOwn: isOwn,
                                                               isInFotobond: row.isInFotobond,
-                                                              settings: row.settings))
+                                                              isGhost: row.isGhost,
+                                                              settings: row.settings),
+                                            isGhost: row.isGhost)
                 }
             }
         }
@@ -214,7 +271,8 @@ private struct MapMarkerBalloonShape: Shape {
     .font(.footnote) // small enough for the longest label to fit on one line
     .padding()
     .background(Color(.systemGray4))
-    Text(verbatim: "Highlight color is set in Settings tab")
+    Text(verbatim: "Highlight color is set in Settings tab.")
+    Text(verbatim: "Rejected: never fetched, so no marker.")
 }
 
 /// One row of the preview: an organization type, and what else its marker's tint depends on.
@@ -222,13 +280,15 @@ private struct TintPreviewRow {
     let label: String
     let type: OrganizationTypeEnum
     let isInFotobond: Bool
+    let isGhost: Bool
     let settings: SettingsStruct
 
     init(_ label: String, _ type: OrganizationTypeEnum,
-         isInFotobond: Bool = false, settings: SettingsStruct = .defaultValue) {
+         isInFotobond: Bool = false, isGhost: Bool = false, settings: SettingsStruct = .defaultValue) {
         self.label = label
         self.type = type
         self.isInFotobond = isInFotobond
+        self.isGhost = isGhost
         self.settings = settings
     }
 }

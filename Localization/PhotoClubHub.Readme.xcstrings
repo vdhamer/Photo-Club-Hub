@@ -1206,6 +1206,12 @@
     "Rotate phone 90° to view larger" : {
       "comment" : "Caption for image on Readme page",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rotate phone 90° to view larger"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",

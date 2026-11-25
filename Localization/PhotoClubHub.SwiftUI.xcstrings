@@ -18,40 +18,6 @@
         }
       }
     },
-    "“Current members” includes “current club officers”" : {
-      "comment" : "Shown when \"Show current club officers\" entry is missing in Preferences",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“Current members” includes “current club officers”"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De optie “huidige leden” bevat “huidige bestuursleden”"
-          }
-        }
-      }
-    },
-    "“Former members” includes “deceased members”" : {
-      "comment" : "Shown when \"Show deceased members\" entry is missing in Preferences",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“Former members” includes “deceased members”"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De optie “ex-leden” bevat “overleden leden”"
-          }
-        }
-      }
-    },
     "(of %lld)" : {
       "comment" : "Suffix showing effect of filtering via \"(of 123)\"",
       "localizations" : {
@@ -157,15 +123,39 @@
       "comment" : "<count> members (including all types of members) within photo club",
       "localizations" : {
         "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld members (inc. ex-members)"
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld member (inc. ex-members)"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld members (inc. ex-members)"
+                }
+              }
+            }
           }
         },
         "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld leden (incl. ex-leden)"
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld lid (incl. ex-leden)"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld leden (incl. ex-leden)"
+                }
+              }
+            }
           }
         }
       }
@@ -330,6 +320,23 @@
         }
       }
     },
+    "Also applies to the Clubs tab" : {
+      "comment" : "Second line of the Show inactive organizations toggle in Settings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Also applies to the Clubs tab"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geldt ook voor de Clubs tab"
+          }
+        }
+      }
+    },
     "Birthday" : {
       "comment" : "Birthday of member (without year). Date not currently localized?",
       "localizations" : {
@@ -364,6 +371,23 @@
         }
       }
     },
+    "Club members" : {
+      "comment" : "In Settings, above toggles like \"Show former members\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Club members"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubleden"
+          }
+        }
+      }
+    },
     "Clubs" : {
       "comment" : "Tab bar label for the club member portfolios list\nTitle of page showing member portfolios\nTitle of page with maps for Clubs",
       "localizations" : {
@@ -377,23 +401,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clubs"
-          }
-        }
-      }
-    },
-    "Clubs tab" : {
-      "comment" : "In Preferences, above toggles like \"Show former members\"",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs tab"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs tab"
           }
         }
       }
@@ -518,13 +525,13 @@
         }
       }
     },
-    "Highlight Dutch Fotobond NL clubs" : {
-      "comment" : "Label of toggle in Preferences",
+    "Highlight Fotobond clubs" : {
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Highlight Dutch Fotobond NL clubs"
+            "value" : "Highlight Fotobond clubs"
           }
         },
         "nl" : {
@@ -535,25 +542,25 @@
         }
       }
     },
-    "Highlight non-Fotobond NL clubs" : {
-      "comment" : "Label of toggle in Preferences",
+    "Highlight non-Fotobond clubs" : {
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Highlight non-Fotobond NL clubs"
+            "value" : "Highlight non-Fotobond clubs"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Benadruk overige clubs"
+            "value" : "Benadruk niet‑Fotobond clubs"
           }
         }
       }
     },
     "Highlighting color" : {
-      "comment" : "Label of color picker in Preferences",
+      "comment" : "Label of color picker in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -565,40 +572,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kleur voor benadrukte clubs"
-          }
-        }
-      }
-    },
-    "Highlighting of Fotobond clubs already enabled" : {
-      "comment" : "Shown when highlightFotobondNL toggle is enabled",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Highlighting of Fotobond clubs already enabled"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotobond clubs worden al benadrukt"
-          }
-        }
-      }
-    },
-    "Highlighting of non-Fotobond clubs already enabled" : {
-      "comment" : "Shown when highlightNonFotobondNL toggle is enabled",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Highlighting of non-Fotobond clubs already enabled"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Overige clubs worden al benadrukt"
           }
         }
       }
@@ -701,23 +674,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaarten"
-          }
-        }
-      }
-    },
-    "Maps tab" : {
-      "comment" : "In Settings, section title above map-related toggles",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maps tab"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kaarten tab"
           }
         }
       }
@@ -876,7 +832,7 @@
       }
     },
     "Organizations" : {
-      "comment" : "Title of page with maps for Organizations",
+      "comment" : "In Settings, section title above map-related toggles\nTitle of page with maps for Organizations",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -932,19 +888,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "③ This list consists of two sublists. The first shows the photo clubs, the second shows photo museums. Individual sublists can be enabled/disabled in Preferences. The titel of the Organizations screen may then change to “Clubs” or “Museums”. "
+            "value" : "③ This list consists of two sublists. The first shows the photo clubs, the second shows photo museums. Individual sublists can be enabled/disabled in the Settings tab. The title of this tab may then change to “Clubs” or “Museums”. "
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "③ Dit scherm kan twee soorten organisaties (Clubs en Musea) tonen. Welke getoond worden hangt af van keuzes onder Instellingen. Afhankelijk van deze keuzes is de titel van dit scherm “Organisaties”, “Clubs” of “Musea”."
+            "value" : "③ Deze tab kan twee soorten organisaties (Clubs en Musea) tonen. Welke getoond worden hangt af van keuzes in de Instellingen tab. Afhankelijk van deze keuzes is de titel van deze tab “Organisaties”, “Clubs” of “Musea”."
           }
         }
       }
     },
     "People" : {
-      "comment" : "Tab bar label for the list of people (photographers)\nTitle of page with list of photographers",
+      "comment" : "In Preferences, section title\nTab bar label for the list of people (photographers)\nTitle of page with list of photographers",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -956,23 +912,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Personen"
-          }
-        }
-      }
-    },
-    "People tab" : {
-      "comment" : "In Preferences, section title",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "People tab"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Personen tab"
           }
         }
       }
@@ -1182,7 +1121,7 @@
       }
     },
     "Show aspiring members" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1199,7 +1138,7 @@
       }
     },
     "Show clubs" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1216,7 +1155,7 @@
       }
     },
     "Show current club officers" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1233,7 +1172,7 @@
       }
     },
     "Show current members" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1250,7 +1189,7 @@
       }
     },
     "Show deceased members" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1267,7 +1206,7 @@
       }
     },
     "Show external coaches" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1284,7 +1223,7 @@
       }
     },
     "Show former members" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1301,7 +1240,7 @@
       }
     },
     "Show honorary members" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1317,8 +1256,25 @@
         }
       }
     },
+    "Show inactive %@" : {
+      "comment" : "Label of toggle in Settings: also show clubs and/or museums that stopped",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show inactive %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon inactieve %@"
+          }
+        }
+      }
+    },
     "Show museums" : {
-      "comment" : "Label of toggle in Preferences",
+      "comment" : "Label of toggle in Settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1455,70 +1411,70 @@
         }
       }
     },
-    "To see clubs and museums here, please adapt the Search filter or enable additional categories on the Preferences page." : {
-      "comment" : "Hint to the user if zero Organizations remain visible with Search filter in use.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "To see clubs and museums here, please adapt the Search filter or enable additional categories on the Preferences page."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dit scherm is leeg doordat de Zoekfilter niets vindt binnen de gekozen categorieën. Pas de Zoekfilter aan of zet met organisatiecategorieën aan in de Instellingen tab."
-          }
-        }
-      }
-    },
-    "To see clubs and museums here, please enable additional categories on the Preferences page." : {
+    "To see clubs and museums here, please enable additional categories in the Settings tab." : {
       "comment" : "Hint to the user if the database returns zero Organizations, empty Search filter.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To see clubs and museums here, please enable additional categories on the Preferences page."
+            "value" : "To see clubs and museums here, please enable additional categories in the Settings tab."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dit scherm is vermoedelijk leeg omdat er onvoldoende categorieën (Clubs, Musea) geselecteerd zijn op de Instellingen tab."
+            "value" : "Dit scherm is vermoedelijk leeg omdat er onvoldoende categorieën (Clubs, Musea) geselecteerd zijn in de Instellingen tab."
           }
         }
       }
     },
-    "To see names here, please adapt the Search filter or enable additional categories on the Settings page." : {
+    "To see clubs or museums here, please adapt the Search filter or enable additional categories in the Settings tab." : {
+      "comment" : "Hint to the user if zero Organizations remain visible with Search filter in use.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To see clubs or museums here, please adapt the Search filter or enable additional categories in the Settings tab."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit scherm is leeg doordat de Zoekfilter niets vindt binnen de gekozen categorieën. Pas de Zoekfilter aan of zet meer organisatiecategorieën aan in de Instellingen tab."
+          }
+        }
+      }
+    },
+    "To see names here, please adapt the Search filter or enable additional categories in the Settings tab." : {
       "comment" : "Hint to the user if zero Members remain visible with Search filter in use.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To see names here, please adapt the Search filter or enable additional categories on the Settings page."
+            "value" : "To see names here, please adapt the Search filter or enable additional categories in the Settings tab."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deze lijst is leeg doordat de Zoekfilter niets vindt binnen de gekozen ledencategorieën. Pas de Zoekfilter aan of voeg bij Instellingen ledencategorieën toe."
+            "value" : "Deze lijst is leeg doordat de Zoekfilter niets vindt binnen de gekozen ledencategorieën. Pas de Zoekfilter aan of zet in de Instellingen tab meer ledencategorieën aan."
           }
         }
       }
     },
-    "To see names here, please enable additional categories on the Settings page." : {
+    "To see names here, please enable additional categories in the Settings tab." : {
       "comment" : "Hint to the user if the database returns zero Members with empty Search filter.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To see names here, please enable additional categories on the Settings page."
+            "value" : "To see names here, please enable additional categories in the Settings tab."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deze lijst is waarschijnlijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm."
+            "value" : "Deze lijst is waarschijnlijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn in de Instellingen tab."
           }
         }
       }
@@ -1574,36 +1530,70 @@
         }
       }
     },
-    "Warning: all member categories on the Settings page are disabled. Please enable one or more options in Settings." : {
+    "Warning: all member categories in the Settings tab are disabled. Please enable one or more of them." : {
       "comment" : "Hint to the user if all of the Settings toggles are disabled.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Warning: all member categories on the Settings page are disabled. Please enable one or more options in Settings."
+            "value" : "Warning: all member categories in the Settings tab are disabled. Please enable one or more of them."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Waarschuwing: alle leden categorieën in de Instelling tab staan uit. Hierdoor is de getoonde lijst leeg."
+            "value" : "Waarschuwing: alle ledencategorieën in de Instellingen tab staan uit. Hierdoor is de getoonde lijst leeg."
           }
         }
       }
     },
-    "Warning: all organization categories (Clubs and Museums) on the Settings page are disabled. To see maps, please adjust the filter settings in the Settings tab." : {
+    "Warning: all organization categories (Clubs and Museums) are disabled in the Settings tab. To see maps, please enable at least one of them." : {
       "comment" : "Hint to the user if all of the Organization toggles are disabled.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Warning: all organization categories (Clubs and Museums) on the Settings page are disabled. To see maps, please adjust the filter settings in the Settings tab."
+            "value" : "Warning: all organization categories (Clubs and Museums) are disabled in the Settings tab. To see maps, please enable at least one of them."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Waarschuwing: zowel Clubs en Musea staan uit in de Instellingen tab. Om landkaarten te zien, moet minstens één aanstaan."
+            "value" : "Waarschuwing: alle organisatiecategorieën (Clubs en Musea) staan uit in de Instellingen tab. Om landkaarten te zien, moet er minstens één aanstaan."
+          }
+        }
+      }
+    },
+    "Warning: Clubs will show no members when all member categories are off." : {
+      "comment" : "In Settings, footer of the Club members section while every Show toggle there is off",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warning: Clubs will show no members when all member categories are off."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waarschuwing: de Clubs tab toont geen leden als alle ledencategorieën uit staan."
+          }
+        }
+      }
+    },
+    "Warning: Maps will show no markers when clubs and museums are both off." : {
+      "comment" : "In Settings, footer of the Organizations section while Show clubs and Show museums are off",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warning: Maps will show no markers when clubs and museums are both off."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waarschuwing: de Kaarten tab toont geen spelden als clubs en musea allebei uit staan."
           }
         }
       }

@@ -87,18 +87,35 @@ struct OrganizationStatusPredicateTests {
         #expect(shown.members == ["active", "inactive", "possiblyInactive"])
     }
 
-    // FilteredMapsView and FilteredMemberPortfoliosView compare against FALSEPREDICATE to explain an empty list.
-    @Test("All toggles off still gives the bare FALSEPREDICATE", arguments: [true, false])
-    func allTogglesOff(showInactive: Bool) {
-        var settings = settings(showInactive: showInactive, allTypesShortcut: false) // museums off
+    // With clubs and museums off the maps show nothing, and `couldShowOrganizations` tells the Maps tab to explain why.
+    // The Clubs tab ignores these two toggles, so its members stay.
+    @Test("Clubs and museums off: no organizations, members still shown", arguments: [true, false])
+    func organizationTypesOff(showInactive: Bool) {
+        var settings = settings(showInactive: showInactive, allTypesShortcut: false) // current members on
         settings.showClubs = false
-        settings.showCurrentMembers = false // didSet also turns off officers
+        settings.showMuseums = false
+        #expect(settings.organizationPredicate == NSPredicate(format: "FALSEPREDICATE"))
+        #expect(settings.couldShowOrganizations == false)
+        #expect(settings.memberPredicate != NSPredicate(format: "FALSEPREDICATE"))
+        #expect(settings.couldShowMembers == true)
+    }
+
+    // With every member category off the Clubs tab shows nothing, and `couldShowMembers` tells it to explain why.
+    // The Maps tab doesn't depend on member categories, so its clubs stay.
+    @Test("All member categories off: no members, organizations still shown", arguments: [true, false])
+    func memberCategoriesOff(showInactive: Bool) {
+        var settings = settings(showInactive: showInactive, allTypesShortcut: false) // clubs on
+        settings.showCurrentMembers = false
+        settings.showOfficers = false // set after showCurrentMembers, whose didSet also sets it
         settings.showAspiringMembers = false
         settings.showHonoraryMembers = false
-        settings.showFormerMembers = false // didSet also turns off deceased members
+        settings.showFormerMembers = false
+        settings.showDeceasedMembers = false // set after showFormerMembers, whose didSet also sets it
         settings.showExternalCoaches = false
-        #expect(settings.organizationPredicate == NSPredicate(format: "FALSEPREDICATE"))
         #expect(settings.memberPredicate == NSPredicate(format: "FALSEPREDICATE"))
+        #expect(settings.couldShowMembers == false)
+        #expect(settings.organizationPredicate != NSPredicate(format: "FALSEPREDICATE"))
+        #expect(settings.couldShowOrganizations == true)
     }
 
 }
