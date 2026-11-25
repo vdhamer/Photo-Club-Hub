@@ -50,7 +50,6 @@ struct SettingsStruct { // order in which they are shown on Preferences page
     var showCurrentMembers: Bool {
         didSet {
             showOfficers = showCurrentMembers // officers are current members
-            openCloseSound(openClose: showCurrentMembers ? .close : .open)
         }
     }
     var showOfficers: Bool
@@ -59,7 +58,6 @@ struct SettingsStruct { // order in which they are shown on Preferences page
     var showFormerMembers: Bool {
         didSet {
             showDeceasedMembers = showFormerMembers // deceased members are former members
-            openCloseSound(openClose: showFormerMembers ? .close : .open)
         }
     }
     var showDeceasedMembers: Bool
