@@ -69,6 +69,7 @@ struct MemberPortfolioView: View {
                         .calloutTipStyle(tint: .clubsColor)
                 }
                 FilteredMemberPortfoliosView(memberPredicate: settingsModel.settings.memberPredicate,
+                                             couldShowMembers: settingsModel.settings.couldShowMembers,
                                              searchText: $searchText,
                                              selectedPortfolio: $selectedPortfolio)
             }

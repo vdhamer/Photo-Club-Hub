@@ -56,8 +56,12 @@ struct FilteredMemberPortfoliosView: View {
     /// which must be registered outside this lazy `List` content.
     private let selectedPortfolio: Binding<MemberPortfolio?>
 
+    /// Whether any member category is on (`SettingsStruct.couldShowMembers`): if not, the empty list says why.
+    private let couldShowMembers: Bool
+
     /// Replaces `predicateNone` with `memberPredicate` and applies the standard sort order.
     init(memberPredicate: NSPredicate,
+         couldShowMembers: Bool,
          searchText: Binding<String>,
          selectedPortfolio: Binding<MemberPortfolio?>) {
     // https://developer.apple.com/documentation/SwiftUI/SectionedFetchRequest
@@ -75,6 +79,7 @@ struct FilteredMemberPortfoliosView: View {
             sortDescriptors: sortDescriptors,
             predicate: memberPredicate,
             animation: .default)
+        self.couldShowMembers = couldShowMembers
         self.searchText = searchText
         self.selectedPortfolio = selectedPortfolio
     }
@@ -176,7 +181,7 @@ struct FilteredMemberPortfoliosView: View {
     private func emptyListReason(for sections: SectionedFetchResults<String, MemberPortfolio>)
                                 -> EmptyListReason {
         EmptyListReason.resolve(hasVisibleRows: !allSectionsFilterToZero(sections),
-                                allCategoriesOff: sections.nsPredicate == Self.predicateNone,
+                                allCategoriesOff: couldShowMembers == false,
                                 storeIsEmpty: anyMemberProbe.isEmpty,
                                 searchIsEmpty: searchText.wrappedValue.isEmpty)
     }
@@ -313,6 +318,7 @@ struct FilteredMemberPortfoliosView: View {
         if #available(iOS 26, *) {
             List { // lists are "Lazy" automatically
                 FilteredMemberPortfoliosView(memberPredicate: memberPredicate,
+                                             couldShowMembers: true,
                                              searchText: $searchText,
                                              selectedPortfolio: $selectedPortfolio)
             }
@@ -322,6 +328,7 @@ struct FilteredMemberPortfoliosView: View {
         } else {
             List { // lists are "Lazy" automatically
                 FilteredMemberPortfoliosView(memberPredicate: memberPredicate,
+                                             couldShowMembers: true,
                                              searchText: $searchText,
                                              selectedPortfolio: $selectedPortfolio)
             }

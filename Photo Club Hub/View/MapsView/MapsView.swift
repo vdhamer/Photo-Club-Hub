@@ -55,6 +55,7 @@ struct MapsView: View {
                 /// So the most relevant stuff happens in FilteredMapsView
                 FilteredMapsView(
                     predicate: modelToHoldSettings.settings.organizationPredicate,
+                    couldShowOrganizations: modelToHoldSettings.settings.couldShowOrganizations,
                     searchText: $searchText)
             }
             .scrollTargetLayout()

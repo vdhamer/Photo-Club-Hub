@@ -13,8 +13,7 @@ import Photo_Club_Hub_Data // for types like Organization
 @MainActor
 struct FilteredMapsView: View {
 
-    /// Would return nothing — what `organizationPredicate` yields when every category toggle is off.
-    private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
+    private let couldShowOrganizations: Bool // from `SettingsStruct`: if false, the empty list says why
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
@@ -57,7 +56,7 @@ struct FilteredMapsView: View {
     private let searchText: Binding<String>
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
-    init(predicate: NSPredicate, searchText: Binding<String>) {
+    init(predicate: NSPredicate, couldShowOrganizations: Bool, searchText: Binding<String>) {
         let sortDescriptors: [SortDescriptor] = [
             SortDescriptor(\Organization.pinned, order: .reverse), // pinned clubs first
             SortDescriptor(\Organization.organizationType_?.organizationTypeName_, order: .forward),
@@ -70,6 +69,7 @@ struct FilteredMapsView: View {
             predicate: predicate,
             animation: .easeIn
         )
+        self.couldShowOrganizations = couldShowOrganizations
         self.searchText = searchText
     }
 
@@ -155,7 +155,7 @@ struct FilteredMapsView: View {
     /// flashed "pull down to reload" during the pull-to-refresh that had just emptied the store (#821).
     private func emptyListReason() -> EmptyListReason {
         EmptyListReason.resolve(hasVisibleRows: !filteredOrganizations.isEmpty,
-                                allCategoriesOff: fetchedOrganizations.nsPredicate == Self.predicateNone,
+                                allCategoriesOff: couldShowOrganizations == false,
                                 storeIsEmpty: anyOrganizationProbe.isEmpty,
                                 searchIsEmpty: searchText.wrappedValue.isEmpty)
     }
@@ -357,7 +357,7 @@ extension FilteredMapsView { // reverse GeoCoding
 // Shows the generated sample organizations of `PersistenceController.preview`, not the real clubs.
 // The random coordinates also come from `PersistenceController.preview` and are locations in/nearby the Netherlands.
 struct FilteredMapsView_Previews: PreviewProvider {
-    static let organizationPredicate = Organization.inScopePredicate
+    static let predicate = Organization.inScopePredicate
     @State static var searchText: String = ""
 
     // All sample clubs are active, so three pinned ones, shown first, get another status: two ghosts, then an active
@@ -381,7 +381,7 @@ struct FilteredMapsView_Previews: PreviewProvider {
         NavigationStack {
             if #available(iOS 26, *) {
                 List { // lists are "Lazy" automatically
-                    FilteredMapsView(predicate: organizationPredicate, searchText: $searchText)
+                    FilteredMapsView(predicate: predicate, couldShowOrganizations: true, searchText: $searchText)
                         .environment(\.managedObjectContext, context)
                 }
                 .navigationBarTitle(Text(String("FilteredMapsView"))) // prevent localization
@@ -389,7 +389,7 @@ struct FilteredMapsView_Previews: PreviewProvider {
                 .searchToolbarBehavior(.minimize)
             } else {
                 List { // lists are "Lazy" automatically
-                    FilteredMapsView(predicate: organizationPredicate, searchText: $searchText)
+                    FilteredMapsView(predicate: predicate, couldShowOrganizations: true, searchText: $searchText)
                         .environment(\.managedObjectContext, context)
                 }
                 .navigationBarTitle(Text(String("FilteredMapsView"))) // prevent localization
