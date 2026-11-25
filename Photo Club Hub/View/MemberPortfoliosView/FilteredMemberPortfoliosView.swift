@@ -105,8 +105,9 @@ struct FilteredMemberPortfoliosView: View {
                     }
                     .tint(.clubsColor)
                 } header: {
-                    MemberListSectionHeader(name: titles[section.id]?.name ?? section.id, // Strings, not the club
-                                            town: titles[section.id]?.town) // see sectionTitles(for:) and #802
+                    MemberListSectionHeader(name: titles[section.id]?.name ?? section.id, // values, not the club
+                                            town: titles[section.id]?.town, // see sectionTitles(for:) and #802
+                                            status: titles[section.id]?.status ?? .active)
                 } footer: {
                     MemberListSectionFooter(filtCount: filteredPortfolios.count,
                                             unfiltCount: section.endIndex,
@@ -128,32 +129,43 @@ struct FilteredMemberPortfoliosView: View {
     /// look up the club itself, because reaching back to the organization traps on a row deleted mid-scroll (#802).
     /// So the titles are computed here, in `body` on the main thread, and the header and the `ForEach` content,
     /// which SwiftUI may evaluate on a background thread, read only this dictionary.
+    /// Hence all sections in one go, before the `List` is built: computing a title when a header asks for it would
+    /// read Core Data on that background thread.
     ///
     /// Name and town are kept apart because the header sets the town a size smaller. Splitting the composed
     /// string later would fail on parentheses inside a name ("... (AFO)") or a town ("Beuningen (Gld)").
+    /// The club's status comes along, so the header can mark an inactive club (#892).
     /// A section without a usable row, or a missing `Language` row, gets no entry: its header falls back to
-    /// the section id.
+    /// the section id, unmarked.
     private func sectionTitles(for sections: SectionedFetchResults<String, MemberPortfolio>, uiLanguage: Language?)
-                              -> [String: (name: String, town: String?)] {
+                              -> [String: SectionTitle] {
         guard let uiLanguage else { return [:] } // Language table not seeded yet
-        var titles: [String: (name: String, town: String?)] = [:]
+        var sectionTitlesDictionary: [String: SectionTitle] = [:]
         for section in sections {
             guard let organization = section.first(where: { $0.isUsable })?.organization_ else { continue }
-            titles[section.id] = Self.sectionTitle(for: organization, uiLanguage: uiLanguage)
+            sectionTitlesDictionary[section.id] = Self.sectionTitle(for: organization, uiLanguage: uiLanguage)
         }
-        return titles
+        return sectionTitlesDictionary
     }
 
-    /// One section's title: the club name, and its town in `uiLanguage` unless the name already contains it.
+    /// What a section header shows of its club. Plain values, so the header never touches the club itself (#802).
+    struct SectionTitle {
+        let name: String
+        let town: String?
+        let status: OrganizationStatus
+    }
+
+    /// One section's title: the club name, its town in `uiLanguage` unless the name already contains it,
+    /// and its status.
     ///
     /// `fullNameLocalizedTown` returns either the name alone or "name (town)", so the town is what follows the name
     /// and " (", minus the closing ")". Cutting by the name's length rather than searching for " (" keeps any
     /// parentheses inside the name or the town where they belong.
-    static func sectionTitle(for organization: Organization, uiLanguage: Language) -> (name: String, town: String?) {
+    static func sectionTitle(for organization: Organization, uiLanguage: Language) -> SectionTitle {
         let name = organization.fullName
         let title = organization.fullNameLocalizedTown(for: uiLanguage) // either `name` or "name (town)"
         let town: String? = title == name ? nil : String(title.dropFirst(name.count + 2).dropLast())
-        return (name: name, town: town)
+        return SectionTitle(name: name, town: town, status: organization.status)
     }
 
     // MARK: - explaining an empty list
@@ -179,8 +191,8 @@ struct FilteredMemberPortfoliosView: View {
 
         case .noCategoriesEnabled:
             return Text("""
-                        Warning: all member categories on the Settings page are disabled. \
-                        Please enable one or more options in Settings.
+                        Warning: all member categories in the Settings tab are disabled. \
+                        Please enable one or more of them.
                         """,
                         tableName: "PhotoClubHub.SwiftUI",
                         comment: "Hint to the user if all of the Settings toggles are disabled.")
@@ -198,14 +210,14 @@ struct FilteredMemberPortfoliosView: View {
         case .searchFilterTooStrict:
             return Text("""
                         To see names here, please adapt the Search filter \
-                        or enable additional categories on the Settings page.
+                        or enable additional categories in the Settings tab.
                         """,
                         tableName: "PhotoClubHub.SwiftUI",
                         comment: "Hint to the user if zero Members remain visible with Search filter in use.")
 
         case .categoriesTooStrict:
             return Text("""
-                        To see names here, please enable additional categories on the Settings page.
+                        To see names here, please enable additional categories in the Settings tab.
                         """,
                         tableName: "PhotoClubHub.SwiftUI",
                         comment: "Hint to the user if the database returns zero Members with empty Search filter.")
