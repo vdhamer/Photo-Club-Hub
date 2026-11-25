@@ -89,6 +89,21 @@ struct SettingsStruct { // order in which they are shown on Preferences page
         highlightColor: .orange
     )
 
+    /// Whether at least one member category is on, so that the Clubs tab can list members. If not, `memberPredicate`
+    /// returns `FALSEPREDICATE`, the Clubs tab explains its empty list, and the Club members section of the Settings
+    /// tab shows a warning.
+    var couldShowMembers: Bool {
+        showCurrentMembers || showOfficers || showAspiringMembers || showHonoraryMembers ||
+            showFormerMembers || showDeceasedMembers || showExternalCoaches
+    }
+
+    /// Whether clubs or museums are on, so that the maps can show markers. If not, `organizationPredicate` returns
+    /// `FALSEPREDICATE`, the Maps tab explains its empty list, and the Organizations section of the Settings tab shows
+    /// a warning.
+    var couldShowOrganizations: Bool {
+        showClubs || showMuseums
+    }
+
     /// The Core Data predicate for the Clubs tab's fetch request: which `MemberPortfolio`s are fetched, and thereby
     /// which clubs can get a section. The Search bar is not part of it: it filters the fetched portfolios afterwards,
     /// in Swift.
@@ -100,8 +115,11 @@ struct SettingsStruct { // order in which they are shown on Preferences page
     ///
     /// `showClubs` and `showMuseums` play no part here: they only filter the Maps tab.
     ///
-    /// Returns a bare `FALSEPREDICATE` when every member category is off.
+    /// Returns `FALSEPREDICATE` when every member category is off.
     var memberPredicate: NSPredicate {
+        // Without any category, nothing is shown. Also needed because an empty format string would not parse.
+        guard couldShowMembers else { return NSPredicate(format: "FALSEPREDICATE") }
+
         var format = ""
         let args: [NSManagedObject] = [] // array from which to fetch the %@ values
 
@@ -145,10 +163,6 @@ struct SettingsStruct { // order in which they are shown on Preferences page
             format = format.predicateOrAppend(suffix: "(isMentor = TRUE)")
         }
 
-        // If all toggles are disabled, we don't show anything. This is returned without the status clause below,
-        // because FilteredMemberPortfoliosView compares against FALSEPREDICATE to explain the empty list.
-        guard format != "" else { return NSPredicate(format: "FALSEPREDICATE") }
-
         // Members of inactive clubs are hidden unless asked for, so that this tab agrees with the Maps tab.
         // Members of rejected clubs are never shown in any "normal" user interface (#891, #892).
         let statusPredicate = showInactiveOrganizations ? MemberPortfolio.inScopeOrganizationPredicate // not rejected
@@ -166,8 +180,11 @@ struct SettingsStruct { // order in which they are shown on Preferences page
     /// An organization is shown if its type is enabled (`showClubs`, `showMuseums`) and its status passes:
     /// only active organizations by default, or every org except rejected ones while `showInactiveOrganizations` is on.
     ///
-    /// Returns a bare `FALSEPREDICATE` when both types are off.
+    /// Returns `FALSEPREDICATE` when both types are off.
     var organizationPredicate: NSPredicate {
+        // Without clubs or museums, nothing is shown. Also needed because an empty format string would not parse.
+        guard couldShowOrganizations else { return NSPredicate(format: "FALSEPREDICATE") }
+
         var format = ""
         var args: [String] = [] // array from which to fetch the %@ values
 
@@ -186,10 +203,6 @@ struct SettingsStruct { // order in which they are shown on Preferences page
             format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@)")
             args.append(OrganizationTypeEnum.museum.rawValue)
         }
-
-        // If no OR conditions, return 0 Organizations. This is returned without the status clause,
-        // because FilteredMapsView compares against FALSEPREDICATE to explain the empty list.
-        guard format != "" else { return NSPredicate(format: "FALSEPREDICATE") }
 
         return NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: format, argumentArray: args),
                                                                   statusPredicate])
