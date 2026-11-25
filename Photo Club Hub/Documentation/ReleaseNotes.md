@@ -138,7 +138,7 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 
 **Code: hiding inactive organizations** ([#891](https://github.com/vdhamer/Photo-Club-Hub/issues/891))
 
-* `organizationPredicate` and `memberPredicate` in `SettingsStruct` now add the Data package's status predicates: active organizations only, or every organization except rejected ones when `showInactiveOrganizations` is on. The shortcut in `organizationPredicate` for clubs and museums both on now returns the status predicate instead of `TRUEPREDICATE`. With every toggle off, both return `FALSEPREDICATE`. New `OrganizationStatusPredicateTest` (6 cases)
+* `organizationPredicate` and `memberPredicate` in `SettingsStruct` now add the Data package's status predicates: active organizations only, or every organization except rejected ones when `showInactiveOrganizations` is on. The shortcut in `organizationPredicate` for clubs and museums both on now returns the status predicate instead of `TRUEPREDICATE`. With every toggle off, both return `FALSEPREDICATE`. New `OrganizationStatusPredicateTest` (8 cases)
 
 **Code: settings survive a new field** ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
 
