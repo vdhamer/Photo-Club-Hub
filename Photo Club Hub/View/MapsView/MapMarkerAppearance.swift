@@ -38,13 +38,13 @@ func markerTint(organizationType: OrganizationTypeEnum,
 
     // A ghost is grey whatever its type, and Fotobond highlighting doesn't apply: a club that may have stopped
     // shouldn't draw attention to itself (#892).
-    if isGhost { return .gray }
+    if isGhost { return .ghostMarkerColor }
 
     switch organizationType {
     case .unknown:
         return errorColor
     case .museum:
-        return .blue // Show any Museum in blue (except the map's "own" organization)
+        return .plainMarkerColor // any museum except the map's "own" organization
     case .club:
         guard !(settings.highlightNonFotobondNL == true && settings.highlightFotobondNL == true) else {
             ifDebugFatalError("Fotobond and non-Fotobond toggle are both enabled. That is an invalid state.")
@@ -55,7 +55,7 @@ func markerTint(organizationType: OrganizationTypeEnum,
         let neutralColor: Color = .gray
 
         if settings.highlightFotobondNL == false && settings.highlightNonFotobondNL == false {
-            return .blue // nothing to highlight, this is a mainstream case
+            return .plainMarkerColor // nothing to highlight, this is a mainstream case
         }
 
         if settings.highlightFotobondNL {

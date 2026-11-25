@@ -21,6 +21,18 @@ extension ShapeStyle where Self == Color {
         Color("_OrganizationColor") // from asset catalog
     }
 
+    /// A club or museum on a map that is not the map's own organization, highlighted or a ghost (`markerTint`).
+    /// Also the icons of "Show clubs" and "Show museums" in the Settings tab.
+    static var plainMarkerColor: Color {
+        .blue // system blue, not from the asset catalog
+    }
+
+    /// A ghost on a map: an inactive or possibly inactive organization that is not the map's own (`markerTint`).
+    /// Also the icon of "Show inactive organizations" in the Settings tab, and an inactive club's Clubs tab header.
+    static var ghostMarkerColor: Color {
+        .gray // system gray, not from the asset catalog
+    }
+
     static var settingsColor: Color {
         Color("_SettingsColor") // from asset catalog (sepia brown; lighter tan in dark mode)
     }

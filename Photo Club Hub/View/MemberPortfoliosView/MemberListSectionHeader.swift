@@ -55,7 +55,7 @@ struct MemberListSectionHeader: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 4)
             .frame(maxWidth: 400, alignment: .center) // grows to the row width, capped at 400 pt
-            .capsuleFill(tint: status.isGhost ? .gray : .clubsColor) // grey as a ghost's marker (`markerTint`)
+            .capsuleFill(tint: status.isGhost ? .ghostMarkerColor : .clubsColor)
             Spacer()
         }
         .frame(maxWidth: .infinity)
@@ -72,7 +72,7 @@ private extension View {
     /// strength the pill is too vivid on device, so the tint is held back to 70%: the pill lightens
     /// towards the page in light mode and darkens towards it in dark mode, which also lets the
     /// label color stay legible on both (black on #FFA54C, white on #B25900).
-    /// An inactive club's pill takes `.gray` instead, the color of its ghost marker on a map, at the same 70%.
+    /// An inactive club's pill takes `.ghostMarkerColor` instead, the color of its ghost on a map, at the same 70%.
     ///
     /// The iOS 17/18 pill is instead built from system fill colors, which - unlike `Color.gray` -
     /// adapt to dark mode and to the Increase Contrast setting. It ignores `tint`, so there the pill is the same
