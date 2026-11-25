@@ -141,7 +141,7 @@ extension OrganizationStatus {
 /// Kept separate so that the Preview below can show every combination of settings side by side,
 /// while the app itself only ever uses the one set of settings it has.
 /// Also used directly where a marker is an icon with a color of its own: the Settings tab's Maps section
-/// (`SettingsViewMapsSection.markerIcon`).
+/// (`SettingsViewOrganizationsSection.markerIcon`).
 struct MapMarkerBalloonDrawing: View {
 
     let organizationType: OrganizationTypeEnum
