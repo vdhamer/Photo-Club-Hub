@@ -53,10 +53,15 @@
 #
 # Sibling repositories:
 #   The *_HTML and *_Data columns are counted from directories next to this
-#   repo's checkout. Both local naming conventions are tried ("Photo Club Hub
-#   HTML" and "Photo-Club-Hub-HTML"). Override with the environment variables
-#   PCH_HTML_REPO / PCH_DATA_REPO if your checkouts live elsewhere. A missing
-#   checkout is a warning, not an error: its three columns are left empty.
+#   repo's main clone. That is also where they are looked for when the script
+#   runs in a git worktree, such as the ones Claude Code makes under
+#   .claude/worktrees/<name>/: next to the worktree itself there is nothing to
+#   find. Outside git, or if git reports an unusual layout, the directory next to
+#   the script's own checkout is used instead. Both local naming conventions are
+#   tried ("Photo Club Hub HTML" and "Photo-Club-Hub-HTML"). Override with the
+#   environment variables PCH_HTML_REPO / PCH_DATA_REPO if your checkouts live
+#   elsewhere. A missing checkout is a warning, not an error: its four columns
+#   are left empty.
 #
 # Behavior:
 #   - Today's row is always replaced by this fresh recount (idempotent), even if
@@ -103,7 +108,15 @@ set -euo pipefail
 # --- locate repo root (this script lives in <repo>/scripts/linecount/) -------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-PARENT_DIR="$(dirname "$REPO_ROOT")"               # holds the sibling checkouts
+# The sibling checkouts sit next to the main clone, which is not REPO_ROOT's
+# parent when REPO_ROOT is a worktree (see "Sibling repositories" above). Every
+# worktree shares the main clone's .git, so its parent is the main clone.
+GIT_COMMON_DIR="$(git -C "$REPO_ROOT" rev-parse --path-format=absolute --git-common-dir 2>/dev/null)" || true
+if [[ "$GIT_COMMON_DIR" == */.git ]]; then
+    PARENT_DIR="$(dirname "$(dirname "$GIT_COMMON_DIR")")"
+else
+    PARENT_DIR="$(dirname "$REPO_ROOT")"           # no git, or an unusual layout
+fi
 
 DATE="$(date +%F)"                                  # YYYY-MM-DD
 
