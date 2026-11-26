@@ -60,6 +60,7 @@
 		37D984252F904DB200C30EE5 /* SettingsViewAdvancedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D984242F904DB200C30EE5 /* SettingsViewAdvancedSection.swift */; };
 		37D9D020306E8842006B4E43 /* MapsViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9D01F306E8842006B4E43 /* MapsViewCard.swift */; };
 		37DA8385303746770064E3AA /* BuildStampKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DA8384303746770064E3AA /* BuildStampKey.swift */; };
+		37DA8387303746770064E3AA /* AppUpdateTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DA8386303746770064E3AA /* AppUpdateTip.swift */; };
 		37DA83893037850C0064E3AA /* PhotoClubHubApp+Versioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DA83883037850C0064E3AA /* PhotoClubHubApp+Versioning.swift */; };
 		37DB78382FB73C62007AC405 /* FilteredMemberPortfoliosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */; };
 		37DB783A2FB74854007AC405 /* MemberPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB78392FB74854007AC405 /* MemberPortfolioView.swift */; };
@@ -172,6 +173,7 @@
 		377D81893002FF5100E04A04 /* PhotoClubHub_flyer_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PhotoClubHub_flyer_en.md; sourceTree = "<group>"; };
 		377E8C12303B229400C118A8 /* EmptyListHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListHint.swift; sourceTree = "<group>"; };
 		377E8C14303B22C200C118A8 /* EmptyListReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListReason.swift; sourceTree = "<group>"; };
+		3784317030B8599A00B01528 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		378856A03016CE370008EA13 /* Level1_creation_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_creation_EN.md; sourceTree = "<group>"; };
 		378856A13016CEAB0008EA13 /* FAQ_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FAQ_en.md; sourceTree = "<group>"; };
 		378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeTip.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 		37DA3E0E2F06B40A00AB7993 /* museums.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museums.level1.json; sourceTree = "<group>"; };
 		37DA3E102F06B62600AB7993 /* museumsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsNL.level1.json; sourceTree = "<group>"; };
 		37DA8384303746770064E3AA /* BuildStampKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildStampKey.swift; sourceTree = "<group>"; };
+		37DA8386303746770064E3AA /* AppUpdateTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateTip.swift; sourceTree = "<group>"; };
 		37DA83883037850C0064E3AA /* PhotoClubHubApp+Versioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoClubHubApp+Versioning.swift"; sourceTree = "<group>"; };
 		37DB78372FB73C62007AC405 /* FilteredMemberPortfoliosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView.swift; sourceTree = "<group>"; };
 		37DB78392FB74854007AC405 /* MemberPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioView.swift; sourceTree = "<group>"; };
@@ -436,6 +439,7 @@
 				37ECFBDC2FFDAD7600806590 /* TabNavigationTip.swift */,
 				378D4D4B2FFE570200A49F5A /* ReadmeTip.swift */,
 				AFE6A106F832D12AEC32F9D1 /* LocationDeniedTip.swift */,
+				37DA8386303746770064E3AA /* AppUpdateTip.swift */,
 			);
 			path = TipKit;
 			sourceTree = "<group>";
@@ -858,6 +862,7 @@
 		D0F2F2F22873A19F009DDD2A /* .github */ = {
 			isa = PBXGroup;
 			children = (
+				3784317030B8599A00B01528 /* CONTRIBUTING.md */,
 				375099FE30347F5200CB2EEB /* rulesets */,
 				D02C35F12880C3D6008C671A /* README.md */,
 				37A88B5A300E1D3400193829 /* README_NL.md */,
@@ -1191,6 +1196,7 @@
 				37D9D020306E8842006B4E43 /* MapsViewCard.swift in Sources */,
 				378D4D4C2FFE570E00A49F5A /* ReadmeTip.swift in Sources */,
 				0F0E140384FE58F91689864C /* LocationDeniedTip.swift in Sources */,
+				37DA8387303746770064E3AA /* AppUpdateTip.swift in Sources */,
 				37174DAA2F8F93E100E58B6E /* SettingsView.swift in Sources */,
 				37F573CA2F3668C7001305F2 /* MapMarkerAppearance.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographersListView2627.swift in Sources */,
