@@ -51,6 +51,9 @@ struct RootView: View {
         }
         .task { ScreenshotReadiness.applyScreenshotOrientation() } // screenshot mode only (#881); no-op otherwise
         .onAppear {
+            if showPrelude == false { // launched with `-skipPrelude YES` (an obscure corner case during screenshots)
+                AppUpdateTip.isPreludeGone = true
+            }
             if !Settings.manualDataLoading && !isRunningTests && !isRunningInPreviews {
                 ClubLoadCoordinator.shared.loadIfIdle()
                 print("Loading clubs and members in background")
@@ -73,6 +76,7 @@ struct RootView: View {
         withAnimation(.spring(duration: 0.6)) {
             showPrelude = false
         }
+        AppUpdateTip.isPreludeGone = true // the update tip waits for this, see its `rules`
     }
 
 }
