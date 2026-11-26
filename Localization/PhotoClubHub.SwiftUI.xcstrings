@@ -303,6 +303,23 @@
         }
       }
     },
+    "A newer version of Photo Club Hub is available. That version includes a change that lets the app show the most recent online data. You can install the latest version via the App Store." : {
+      "comment" : "Message of the tip on the Clubs tab, shown when the club data asks for a newer app version",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A newer version of Photo Club Hub is available. That version includes a change that lets the app show the most recent online data. You can install the latest version via the App Store."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is een nieuwere versie van Fotoclub Hub beschikbaar. In dit geval gaat het over een verandering waardoor de app de meest recente online gegevens kan tonen. Je kunt de nieuwste versie installeren via de App Store."
+          }
+        }
+      }
+    },
     "Advanced" : {
       "comment" : "In Preferences, above link to Settings",
       "localizations" : {
@@ -814,6 +831,23 @@
         }
       }
     },
+    "Open App Store" : {
+      "comment" : "Button in the tip on the Clubs tab that opens the app's page in the App Store",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open App Store"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open App Store"
+          }
+        }
+      }
+    },
     "Open the Settings app" : {
       "comment" : "Button in the tip on the Maps tab that opens this app's page in the iOS Settings app",
       "localizations" : {
@@ -1014,6 +1048,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "④ Fotografische expertise tags"
+          }
+        }
+      }
+    },
+    "Please update the app" : {
+      "comment" : "Title of the tip on the Clubs tab, shown when the club data asks for a newer version of the app",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please update the app"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werk de app bij"
           }
         }
       }
