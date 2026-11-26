@@ -61,6 +61,12 @@ struct MemberPortfolioView: View {
             List { // lists are automatically "Lazy"
                 // Section prevents the List from adopting the tip as an implicit section header (all-caps styling).
                 Section {
+                    // shown only while the club data asks for a newer app (#899); renders nothing otherwise
+                    TipView(AppUpdateTip())
+                        .tint(.clubsColor) // orange buttons: set before `calloutTipStyle`, so it beats its `.primary`
+                        .primaryTipImage() // but a black icon, like the other tips, despite that tint
+                        .calloutTipStyle(tint: .clubsColor)
+
                     // one-shot tip (toolbar → tabs migration); renders nothing once dismissed
                     TipView(TabNavigationTip())
                         .calloutTipStyle(tint: .clubsColor)
