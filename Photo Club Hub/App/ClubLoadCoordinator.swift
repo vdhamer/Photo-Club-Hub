@@ -87,11 +87,31 @@ final class ClubLoadCoordinator {
         startupPassInFlight || (!hasStartedInitialLoadPass && !Settings.manualDataLoading)
     }
 
+    /// The Level 1 root to load instead of the built-in one, named with the `-level1RootURL <URL>` launch argument.
+    ///
+    /// For testing `AppUpdateTip` with a root that asks for a newer app (#899), such as Data's own test file
+    /// `minimumVersionHighTest.level1.json` (asks for 99.0.0), served from GitHub like the production files are.
+    /// #899 has the full URL. Without the argument this is nil, and the app loads the built-in root.
+    /// The argument itself is not stored, but the clubs it loads are: the next normal launch still shows them,
+    /// until a pull-to-refresh replaces them.
+    /// With a custom root, Data skips the hardcoded Level 2 clubs and has no bundled copy to fall back on (#829).
+    private static var level1RootURL: URL? { // used for testing only, so normally nil
+        UserDefaults.standard.string(forKey: "level1RootURL").flatMap { URL(string: $0) }
+    }
+
+    /// Set with the `-forceAppUpdateTip YES` launch argument: shows `AppUpdateTip` over the normal production data,
+    /// as a user of an outdated app would see it (#899).
+    /// `-level1RootURL` tests the real path from file to tip instead, but replaces the production data.
+    /// Not stored: the next launch without the argument behaves normally.
+    private static var forceAppUpdateTip: Bool { // used for testing only, so normally false
+        UserDefaults.standard.bool(forKey: "forceAppUpdateTip")
+    }
+
     /// Startup path: start the first load pass; stays fire-and-forget for the caller.
     func loadIfIdle() {
         guard !hasStartedInitialLoadPass else { return }
         hasStartedInitialLoadPass = true
-        enqueue(isStartupPass: true) { await LevelLoader.loadAllLevels() }
+        enqueue(isStartupPass: true) { await self.loadAllLevels() } // thin wrapper for LevelLoader.loadAllLevels()
     }
 
     /// Pull-to-refresh: queue a delete-then-reload behind whatever is already in flight, and await it
@@ -100,9 +120,18 @@ final class ClubLoadCoordinator {
         _ = Settings.dataResetPending            // side-effect clears the flag
         await enqueue(isStartupPass: false) {
             Model.deleteCoreDataObjects(viewContext: viewContext, deletionScope: .all)
-            await LevelLoader.loadAllLevels()
+            await self.loadAllLevels() // thin wrapper for LevelLoader.loadAllLevels()
         }.value
     } // SwiftUI's refresh spinner automatically stops here
+
+    /// Runs one load pass and then reads its `newerPackageRequest`, which Data sets only once the pass is over:
+    /// whether a Level 1 file asked for a newer Data package than this build contains (Data#107). That shows or hides
+    /// `AppUpdateTip` (#899), unless `forceAppUpdateTip` shows it anyway. Which file asked, and for which version, Data
+    /// logs as a warning.
+    private func loadAllLevels() async {
+        await LevelLoader.loadAllLevels(level1RootURL: Self.level1RootURL)
+        AppUpdateTip.dataNeedsNewerApp = LevelLoader.newerPackageRequest != nil || Self.forceAppUpdateTip
+    }
 
     /// Appends `work` to the queue of load passes, and returns its Task.
     ///
