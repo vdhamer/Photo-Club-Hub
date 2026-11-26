@@ -7,6 +7,7 @@ IN SHORT
 - **The location button no longer spins forever** when the app doesn't have your permission to access it.
 - **A one-time reload** the first time you open the app after updating.
 - **Clubs that may have stopped are hidden**, unless you ask for them in the Settings tab.
+- **A request to update the app** when the club data needs a newer version.
 
 USER-FACING CHANGES
 
@@ -29,6 +30,8 @@ USER-FACING CHANGES
 - **Club members settings work the same way.** In the Club members section of the Settings tab, each icon now shows only while its toggle is on, so the icons together show which kinds of members the Clubs tab lists. "Show current club officers" is hidden while current members are shown, as officers are current members; it used to say so in grey text instead. The same goes for "Show deceased members" while former members are shown. With every kind of member off, a warning below the section says that Clubs will show no members. ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
 
 - **Settings toggles are silent.** "Show current members" and "Show former members" no longer click when switched, like every other toggle in the Settings tab. ([#892](https://github.com/vdhamer/Photo-Club-Hub/issues/892))
+
+- **A request to update when the club data needs it.** When a newer version of the app is needed to show the most recent club data, a tip at the top of the Clubs tab says so, with a button that opens the App Store. It appears up to three times, after the opening screen, and again each month for as long as you haven't updated; closing it with ✕ hides it until the next month. The app keeps working with the data it has: the tip only appears when the club data needs it, not for every new version. No data file asks for this yet: it prepares for a later version that moves the club data to a new layout, which this version cannot read yet. The older layout then stays in place but is no longer updated, and this tip tells you this, and how to fix the issue through updating the app ([#899](https://github.com/vdhamer/Photo-Club-Hub/issues/899), [Data#107](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/107))
 
 USER-FACING BUG FIXES
 
@@ -121,7 +124,7 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 </details>
 
 <details>
-<summary><b>STRUCTURAL</b>: built with Data 3.10.0, location access, settings that survive a new field, a release column for the line counts</summary>
+<summary><b>STRUCTURAL</b>: built with Data 3.10.1, location access, settings that survive a new field, a hint to update, a release column for the line counts</summary>
 
 **Built and tested**
 
@@ -153,6 +156,16 @@ The remark of Foto-videoclub DAF now says that, according to its website, its ac
 * `SettingsViewMembersSection` follows the same rules: each `RoleStatusIconView` is transparent while its toggle is off, the officers and deceased rows are hidden while current or former members are shown (replacing the two "… includes …" texts), and `emptyClubsFooter` adds a warning while every member category is off, decided by the new `SettingsStruct.couldShowMembers`, which also decides `memberPredicate`. `couldShowOrganizations` does the same for the Organizations section's footer and `organizationPredicate`. Both are now passed to `FilteredMemberPortfoliosView` and `FilteredMapsView`, which used to recognize the all-off case by comparing their predicate with `FALSEPREDICATE`. Every toggle there now animates, so the footer slides in whichever toggle was last. The `didSet`s of `showCurrentMembers` and `showFormerMembers` no longer call `openCloseSound`, which made those two toggles click; the map lock keeps its sound. Translator comments in both sections say "in Settings" instead of "in Preferences".
 
 * The Settings section headers "Maps tab", "Clubs tab" and "People tab" became "Organizations", "Club members" and "People". "Organizations" and "People" reuse the String Catalog entries of the Maps tab title and the People tab, so their Dutch follows those; "Club members" is a new entry ("Clubleden").
+
+**Code: asking users to update** ([#899](https://github.com/vdhamer/Photo-Club-Hub/issues/899))
+
+* A Level 1 file can name the oldest Data package that reads it as intended, in its header's `minimumDataPackageVersion` (Data 3.9.0, [Data#107](https://github.com/vdhamer/Photo-Club-Hub-Data/issues/107)). When it names a newer one than this build contains, Data still loads the file and reports it in `LevelLoader.newerPackageRequest`. `ClubLoadCoordinator` now checks it after each load pass, startup or pull-to-refresh, and sets `AppUpdateTip.dataNeedsNewerApp`.
+
+* New `AppUpdateTip`, a TipKit tip at the top of the Clubs tab: "Please update the app" ("Werk de app bij"), with the app's name localized in the message ("Fotoclub Hub" in Dutch) and an "Open App Store" action that opens `https://apps.apple.com/app/id1178324330` (no country, so the user's own storefront). In `MemberPortfolioView` the tip is tinted `.clubsColor`, so the button is orange rather than the black of the shared `calloutTipStyle`; the new `primaryTipImage()` keeps its icon (`square.and.arrow.down`) black on iOS 18 and later, where `tipImageStyle` exists. Its rules need `dataNeedsNewerApp` and `isPreludeGone`, which `RootView` sets once the Prelude screen is gone: the Clubs tab sits underneath the Prelude, and TipKit otherwise counts showings the Prelude hides. Its id names the app version and the calendar month (`AppUpdateTip-3.0.5-2026-12`), so `MaxDisplayCount(3)` and a ✕ apply per version and per month: a user who doesn't update is reminded monthly. `IgnoresDisplayFrequency(true)` keeps the app's one-tip-per-day limit from delaying it. Three new String Catalog entries (title, message, button), in English and Dutch. There is no check that the device can install the newer app: a device running this version can install any version with the same deployment target, and the release checklist ([#896](https://github.com/vdhamer/Photo-Club-Hub/issues/896)) keeps it that way.
+
+* For testing, the launch argument `-level1RootURL <URL>` makes the app load another Level 1 root, passed to `LevelLoader.loadAllLevels(level1RootURL:)`, which Data already supports for [#829](https://github.com/vdhamer/Photo-Club-Hub/issues/829). Data's own test file asks for 99.0.0: `-level1RootURL https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub-Data/main/Tests/Photo%20Club%20Hub%20DataTests/JSON/Level1/minimumVersionHighTest.level1.json`. Deleting the app resets the tip's count. The test clubs stay in the store after such a run, until a pull-to-refresh. The launch argument `-forceAppUpdateTip YES` instead shows the tip over the normal data, as a user of an outdated app would see it. Both are saved, unticked, in the shared scheme, together with the app's other launch arguments, which the new "Launch arguments" section of `.github/CONTRIBUTING.md` lists.
+
+* `AppUpdateTipTest` checks the tip's id across a month boundary and for another version, and that this build's Data package reports a Level 1 root written by the test only when its `minimumDataPackageVersion` is 99.0.0, not 1.0.0 or absent.
 
 **Tooling: release column in the line counts** spreadsheet ([Project#25](https://github.com/vdhamer/Photo-Club-Hub-Project/issues/25))
 
