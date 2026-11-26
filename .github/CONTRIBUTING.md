@@ -10,7 +10,7 @@ already decided, no deep knowledge of the code needed) and **Help wanted** (bigg
 with a specific skill).
 
 | Repository | What it is | Starter issues |
-|---|---|---|
+|---|---|---|:---:|
 | [Photo-Club-Hub](https://github.com/vdhamer/Photo-Club-Hub) | the iOS app, and (for now) the live club data | [good first issue](https://github.com/vdhamer/Photo-Club-Hub/issues?q=is%3Aopen+label%3A%22Good+first+issue%22), [help wanted](https://github.com/vdhamer/Photo-Club-Hub/issues?q=is%3Aopen+label%3A%22Help+wanted%22) |
 | [Photo-Club-Hub-HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) | a macOS app that generates the equivalent website | [good first issue](https://github.com/vdhamer/Photo-Club-Hub-HTML/issues?q=is%3Aopen+label%3A%22Good+first+issue%22), [help wanted](https://github.com/vdhamer/Photo-Club-Hub-HTML/issues?q=is%3Aopen+label%3A%22Help+wanted%22) |
 | [Photo-Club-Hub-Data](https://github.com/vdhamer/Photo-Club-Hub-Data) | the Swift package both apps use: data model and loaders. The live data is moving here. | [good first issue](https://github.com/vdhamer/Photo-Club-Hub-Data/issues?q=is%3Aopen+label%3A%22Good+first+issue%22), [help wanted](https://github.com/vdhamer/Photo-Club-Hub-Data/issues?q=is%3Aopen+label%3A%22Help+wanted%22) |
@@ -45,6 +45,28 @@ You can also open an issue (a bug, an idea, a feature request) without offering 
 
 If [SwiftLint](https://github.com/realm/SwiftLint) is installed, it runs during every build with its default
 rules and no configuration file. Please fix its warnings in the code rather than switching rules off.
+
+## Launch arguments
+
+The app reads a few launch arguments that are (infrequently) used for development testing.
+Some are used by the `capture-screenshots.sh` script to set particular app states used for App Store
+screenshot generation.
+They can be found, unticked, in the launch arguments of the shared scheme. To try them out,
+tick one under *Product ▸ Scheme ▸ Edit Scheme… ▸ Run ▸ Arguments*.
+
+| Argument | Effect | Issue | `capture-screenshots.sh` |
+|---|---|---|:---:|
+| `-forceAppUpdateTip YES` | Shows the "Please update the app" tip on the Clubs tab, over the normal data. | [#899](https://github.com/vdhamer/Photo-Club-Hub/issues/899) | |
+| `-level1RootURL <URL>` | Loads another Level 1 root instead of the built-in one, without the 15 hardcoded Level 2 clubs. | [#829](https://github.com/vdhamer/Photo-Club-Hub/issues/829), [#899](https://github.com/vdhamer/Photo-Club-Hub/issues/899) | |
+| `-skipPrelude YES` | Starts on the tabs, without the splash screen. | [#775](https://github.com/vdhamer/Photo-Club-Hub/issues/775) | yes |
+| `-initialTab <name>` | Opens a given tab or screen with preset data, for screenshots. | [#775](https://github.com/vdhamer/Photo-Club-Hub/issues/775), [#777](https://github.com/vdhamer/Photo-Club-Hub/issues/777) | yes |
+| `-suppressTips YES` | Hides all tips. | [#776](https://github.com/vdhamer/Photo-Club-Hub/issues/776) | yes |
+
+Xcode passes them only when it starts the app itself; a launch from the Home Screen has none. They are not stored,
+except for the data that a load pass writes. The code reads each argument as a `UserDefaults.standard` key of the
+same name, such as `UserDefaults.standard.bool(forKey: "forceAppUpdateTip")`, and has a comment with the details.
+`scripts/screenshots/capture-screenshots.sh` lists the values of `-initialTab`.
+Please add any new argument to this table and to the scheme.
 
 ## Pull requests
 
