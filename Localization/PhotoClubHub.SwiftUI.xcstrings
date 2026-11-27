@@ -1053,7 +1053,7 @@
       }
     },
     "Please update the app" : {
-      "comment" : "Title of the tip on the Clubs tab, shown when the club data asks for a newer version of the app",
+      "comment" : "Title of the tip on the Clubs tab, shown when the club data needs a newer version of the app",
       "localizations" : {
         "en" : {
           "stringUnit" : {
