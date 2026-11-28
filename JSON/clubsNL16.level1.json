@@ -372,6 +372,39 @@
         {
             "idPlus": {
                 "town": "Den Bosch",
+                "fullName": "Fotocollectief ISO 2016",
+                "nickName": "iso2016"
+            },
+            "coordinates": {
+                "latitude": 51.65823,
+                "longitude": 5.29832
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/iso2016.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club ISO 2016 in Den Bosch ('s Hertogenbosch) does not currently have a website."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "ISO2016 heeft geen eigen website."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Removed from the list on 23 Oct 2026 because the club stopped. Re-added and flagged under the new rules (Data#91).",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Den Bosch",
                 "fullName": "Fotogroep Argus",
                 "nickName": "fgArgus"
             },

@@ -782,6 +782,16 @@
             "optional": {
                 "website": "https://fg-t-experiment.nl",
                 "level2URL": "https://www.example.com/fgExperiment.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its \"Camera mee\" outings range from architecture in Rotterdam to smartphone photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De Camera mee-uitstappen gaan van architectuur in Rotterdam tot smartphonefotografie."
+                    }
+                ],
                 "nlSpecific": {
                     "fotobondNumber": 1529
                 }
@@ -861,6 +871,32 @@
                 "nlSpecific": {
                     "fotobondNumber": 1538
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Roosendaal",
+                "fullName": "BeeldCollectief WestBrabant",
+                "nickName": "bcWestBrabant"
+            },
+            "coordinates": {
+                "latitude": 51.52541,
+                "longitude": 4.47510
+            },
+            "optional": {
+                "website": "https://www.beeldcollectiefwestbrabant.nl",
+                "level2URL": "https://www.example.com/bcWestBrabant.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members photograph local cultural productions, such as musicals and dance performances in Roosendaal."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden fotograferen lokale culturele producties, zoals musicals en dansvoorstellingen in Roosendaal."
+                    }
+                ]
             }
         },
 

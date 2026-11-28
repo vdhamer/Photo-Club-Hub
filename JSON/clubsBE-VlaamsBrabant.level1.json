@@ -1,0 +1,909 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-VlaamsBrabant.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Aarschot",
+                "fullName": "Clickshot",
+                "nickName": "clickshot"
+            },
+            "coordinates": {
+                "latitude": 50.98427,
+                "longitude": 4.83643
+            },
+            "optional": {
+                "website": "https://clickshotvzw.be",
+                "level2URL": "https://www.example.com/clickshot.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Grew in 2009 out of four young friends who set out to find Belgium's most photogenic places."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gegroeid in 2009 uit vier jonge vrienden die samen de meest fotogenieke plekken van België gingen ontdekken."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 in the Flemish Brabant photo club list on sprokkel.be; it is not on the VBF club list."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Asse",
+                "fullName": "Fotoclub Asse",
+                "nickName": "fcAsse"
+            },
+            "coordinates": {
+                "latitude": 50.91085,
+                "longitude": 4.20068
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcAsse.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Vlaams Brabantse Fotokringen (vbfweb.be). It has no website; the municipality of Asse lists it, and its exhibition Fotomuze ran at CC Asse from October to December 2025. The pin is Het Oud Gasthuis, where an older VBF page says it meets."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Begijnendijk",
+                "fullName": "Fotoclub IRIS",
+                "nickName": "fcIrisBegijnendijk"
+            },
+            "coordinates": {
+                "latitude": 51.0182,
+                "longitude": 4.78443
+            },
+            "optional": {
+                "website": "https://www.fotoclubiris.be/",
+                "level2URL": "https://www.example.com/fcIrisBegijnendijk.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its motto is 'from click to art', pursued through workshops, outings, hands-on evenings and forums."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het motto is 'van klik tot kunst', met workshops, uitstappen, doe-avonden en forums."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Boortmeerbeek",
+                "fullName": "Lenske Boortmeerbeek",
+                "nickName": "Lenske"
+            },
+            "coordinates": {
+                "latitude": 50.99421,
+                "longitude": 4.5565
+            },
+            "optional": {
+                "website": "https://www.lenske.be/",
+                "level2URL": "https://www.example.com/Lenske.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Celebrated 50 years in 2025; no subject is off limits, from macro and architecture to sports and urbex."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Vierde in 2025 het 50-jarig bestaan; geen enkel onderwerp is uitgesloten, van macro en architectuur tot sport en urbex."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Diest",
+                "fullName": "Fotoclub LichtVast",
+                "nickName": "fcLichtVast"
+            },
+            "coordinates": {
+                "latitude": 50.98302,
+                "longitude": 5.04464
+            },
+            "optional": {
+                "website": "https://www.lichtvast.be",
+                "level2URL": "https://www.example.com/fcLichtVast.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A \"doe-club\" built around photographing together; members can book the club's studio."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een doe-club waarin samen fotograferen centraal staat; leden kunnen de clubstudio reserveren."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 in the Flemish Brabant photo club list on sprokkel.be; it is not on the VBF club list. The pin is at the Citadel."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Dilbeek",
+                "fullName": "Fotoclub Westrand Dilbeek",
+                "nickName": "fcWestrandDilbeek"
+            },
+            "coordinates": {
+                "latitude": 50.84999,
+                "longitude": 4.26083
+            },
+            "optional": {
+                "website": "https://www.fotoclubdilbeek.be",
+                "level2URL": "https://www.example.com/fcWestrandDilbeek.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Halle",
+                "fullName": "Cameraclub Halle",
+                "nickName": "ccHalle"
+            },
+            "coordinates": {
+                "latitude": 50.73605,
+                "longitude": 4.23743
+            },
+            "optional": {
+                "website": "https://www.cameraclubhalle.be",
+                "level2URL": "https://www.example.com/ccHalle.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in the 1950s as De Camera by a Salesian priest at the Don Bosco institute."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In de jaren vijftig opgericht als De Camera door een salesiaanse pater in het Don Boscoinstituut."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Herent",
+                "fullName": "Fotoclub Herent",
+                "nickName": "fcHerent"
+            },
+            "coordinates": {
+                "latitude": 50.91251,
+                "longitude": 4.65172
+            },
+            "optional": {
+                "website": "https://www.facebook.com/groups/fotoclubherent/",
+                "level2URL": "https://www.example.com/fcHerent.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started in January 2025, it welcomes anyone who feels like taking photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gestart in januari 2025; iedereen die zin heeft in fotograferen is welkom."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Vlaams Brabantse Fotokringen (vbfweb.be). The website given here is its public Facebook group, which had recent posts on 27 Nov 2026. The group says Fotoclub Herent started in January 2025, while the non-profit was registered in 2003. The pin is the town center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heverlee",
+                "fullName": "Fotoclub Objectief",
+                "nickName": "fcObjectiefHeverlee"
+            },
+            "coordinates": {
+                "latitude": 50.86459,
+                "longitude": 4.69377
+            },
+            "optional": {
+                "website": "https://www.facebook.com/profile.php?id=100091349619392",
+                "level2URL": "https://www.example.com/fcObjectiefHeverlee.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Verbond van Limburgse Fotokringen (vlfvzw.be). It is in Flemish Brabant, not Limburg. Its only web presence is a Facebook page. The pin is the town center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heverlee",
+                "fullName": "Fotoclub Prisma",
+                "nickName": "fcPrismaHeverlee"
+            },
+            "coordinates": {
+                "latitude": 50.87132,
+                "longitude": 4.72297
+            },
+            "optional": {
+                "website": "https://fotoclubprisma.be",
+                "level2URL": "https://www.example.com/fcPrismaHeverlee.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started in 1972 in Korbeek-Lo, when residents set up several associations because the village lacked cultural activities."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gestart in 1972 in Korbeek-Lo, toen inwoners bij gebrek aan culturele activiteiten verschillende verenigingen oprichtten."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heverlee",
+                "fullName": "Fotogroep Park-Heverlea",
+                "nickName": "fgParkHeverlea"
+            },
+            "coordinates": {
+                "latitude": 50.86469,
+                "longitude": 4.69387
+            },
+            "optional": {
+                "website": "http://www.fotogroepparkheverlea.be",
+                "level2URL": "https://www.example.com/fgParkHeverlea.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members travel together to photograph, from Antwerp to the Opal Coast and Portugal."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden trekken er samen op uit om te fotograferen, van Antwerpen tot de Opaalkust en Portugal."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Keerbergen",
+                "fullName": "Fotoclub Keerpunt '65",
+                "nickName": "fcKeerpunt65"
+            },
+            "coordinates": {
+                "latitude": 51.0043,
+                "longitude": 4.63344
+            },
+            "optional": {
+                "website": "https://www.facebook.com/groups/493488117427480/",
+                "badWebsites": [ "http://www.foto-diaclub-keerpunt65.be" ],
+                "level2URL": "https://www.example.com/fcKeerpunt65.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started out as a photo and slide club; every two years it holds a public weekend exhibition called Digi-Taal."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Begonnen als foto- en diaclub; om de twee jaar houdt de club een publieke weekendtentoonstelling, Digi-Taal."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-14",
+                        "author": "list maintainer",
+                        "text": "Found on 14 Nov 2026: foto-diaclub-keerpunt65.be, linked from the Fotogroep Antwerpen club list, no longer resolves; the Internet Archive has the club's site until February 2023. The club, now called Fotoclub Keerpunt '65 instead of Foto-Diaclub Keerpunt '65, is active in a Facebook group, with a post on 19 Feb 2026 around its exhibition of 20-22 February 2026. The old domain is listed in case someone else takes it over."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Kessel-Lo",
+                "fullName": "Fotoclub Raechem",
+                "nickName": "fcRaechem"
+            },
+            "coordinates": {
+                "latitude": 50.88525,
+                "longitude": 4.73137
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcRaechem.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Vlaams Brabantse Fotokringen (vbfweb.be). It has no website; an older VBF page spells it Raychem and says it meets in the Aula Raychem in Kessel-Lo. That page was last changed in March 2022, and no later sign of activity was found on 27 Nov 2026. A search by the list maintainer found no Facebook page. The pin is the town center.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lembeek",
+                "fullName": "Fotoclub Iris Lembeek",
+                "nickName": "fcIrisLembeek"
+            },
+            "coordinates": {
+                "latitude": 50.71037,
+                "longitude": 4.23829
+            },
+            "optional": {
+                "website": "https://fotoclubirislembeek.be",
+                "level2URL": "https://www.example.com/fcIrisLembeek.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each month brings one review meeting and two practical activities, from a lesson to a mini outing."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke maand is er een bespreekvergadering en twee praktische activiteiten, van een lesmoment tot een mini-uitstap."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lembeek",
+                "fullName": "Olympdia Lembeek",
+                "nickName": "olympdia"
+            },
+            "coordinates": {
+                "latitude": 50.71354,
+                "longitude": 4.22297
+            },
+            "optional": {
+                "website": "http://www.olympdialembeek.be",
+                "level2URL": "https://www.example.com/olympdia.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started by a few friends who mainly made slides; the name probably nods to those 'dia' days."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht door enkele vrienden die vooral dia's maakten; de naam verwijst daar vermoedelijk naar."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lennik",
+                "fullName": "Fotografencollectief De Pajot",
+                "nickName": "fcDePajot"
+            },
+            "coordinates": {
+                "latitude": 50.80856,
+                "longitude": 4.16486
+            },
+            "optional": {
+                "website": "https://www.fotoclublennik.be",
+                "level2URL": "https://www.example.com/fcDePajot.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2009."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 2009."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leuven",
+                "fullName": "Foto Gamma",
+                "nickName": "fotoGamma"
+            },
+            "coordinates": {
+                "latitude": 50.87920,
+                "longitude": 4.70117
+            },
+            "optional": {
+                "website": "https://www.fotogamma.be",
+                "level2URL": "https://www.example.com/fotoGamma.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1909; members work in groups on nature, people, structures and technique."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1909; de leden werken in werkgroepen rond natuur, mens, structuren en techniek."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Leuven",
+                "fullName": "Fotocollectief Leuven",
+                "nickName": "fcLeuven"
+            },
+            "coordinates": {
+                "latitude": 50.89557,
+                "longitude": 4.69963
+            },
+            "optional": {
+                "website": "https://fotocollectiefleuven.be",
+                "level2URL": "https://www.example.com/fcLeuven.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each year the club picks a focus; in 2026 it is storytelling in photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk jaar kiest de club een focus; in 2026 is dat storytelling in de fotografie."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Londerzeel",
+                "fullName": "Pixa",
+                "nickName": "pixa"
+            },
+            "coordinates": {
+                "latitude": 51.02920,
+                "longitude": 4.29547
+            },
+            "optional": {
+                "website": "https://pixalonderzeel.be",
+                "badWebsites": [ "https://pixa.be" ],
+                "level2URL": "https://www.example.com/pixa.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A \"doe-club\" centered on taking photos, with short lessons so beginners can keep up."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een doe-club waarin het fotograferen centraal staat, met korte lessen zodat ook beginners mee kunnen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lubbeek",
+                "fullName": "Camera Libra",
+                "nickName": "cameraLibra"
+            },
+            "coordinates": {
+                "latitude": 50.88231,
+                "longitude": 4.83841
+            },
+            "optional": {
+                "website": "http://www.cameralibra.be",
+                "level2URL": "https://www.example.com/cameraLibra.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1990; some twenty people braved a heavy storm to attend the first meeting."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1990; zo'n twintig belangstellenden trotseerden hevig stormweer voor de eerste vergadering."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Merchtem",
+                "fullName": "Fotoclub Merchtem",
+                "nickName": "fcMerchtem"
+            },
+            "coordinates": {
+                "latitude": 50.95936,
+                "longitude": 4.23357
+            },
+            "optional": {
+                "website": "https://www.fotoclubmerchtem.be",
+                "level2URL": "https://www.example.com/fcMerchtem.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Discusses members' work in a deliberately non-competitive atmosphere, accepting that photography is subjective."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Bespreekt het werk van de leden in een bewust niet-competitieve sfeer, omdat fotografie subjectief is."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Overijse",
+                "fullName": "Fotoklub Kreatief",
+                "nickName": "fkKreatief"
+            },
+            "coordinates": {
+                "latitude": 50.79276,
+                "longitude": 4.50416
+            },
+            "optional": {
+                "website": "https://www.fotoklubkreatief.be",
+                "level2URL": "https://www.example.com/fkKreatief.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Keeps a permanent exhibition in the patio of its community center, with six new members' works every ten weeks."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt een permanente tentoonstelling in de patio van het gemeenschapscentrum, met om de tien weken zes nieuwe werken van leden."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Roosdaal",
+                "fullName": "Fotografenvereniging Roosdaal",
+                "nickName": "fvRoosdaal"
+            },
+            "coordinates": {
+                "latitude": 50.83998,
+                "longitude": 4.11537
+            },
+            "optional": {
+                "website": "https://www.facebook.com/groups/812735038849745/",
+                "level2URL": "https://www.example.com/fvRoosdaal.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2015; most members favor nature photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 2015; de meeste leden hebben een voorkeur voor natuurfotografie."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Vlaams Brabantse Fotokringen (vbfweb.be). The website given here is its public Facebook group; local news reports a yearly exhibition and its tenth anniversary in 2025. The pin is the meeting place, the Koetshuis in Strijtem, named in a persinfo.org news item and in a post of November 2023 in the group."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ruisbroek",
+                "fullName": "Foto- en Diaclub Open Vizier",
+                "nickName": "openVizier"
+            },
+            "coordinates": {
+                "latitude": 50.79001,
+                "longitude": 4.29808
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/openVizier.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Runs a yearly digifestival with a photo competition open to other clubs."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Organiseert jaarlijks een digifestival met een fotowedstrijd voor andere clubs."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Vlaams Brabantse Fotokringen (vbfweb.be). It has no website; local news on sint-pieters-leeuw.eu announced its exhibition at Kasteel Coloma in April 2026. The pin is the village center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Scherpenheuvel",
+                "fullName": "Fotoclub Scherpzicht",
+                "nickName": "fcScherpzicht"
+            },
+            "coordinates": {
+                "latitude": 50.98027,
+                "longitude": 4.97746
+            },
+            "optional": {
+                "website": "https://www.fotoclubscherpzicht.be",
+                "level2URL": "https://www.example.com/fcScherpzicht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Keeps a small, regularly refreshed exhibition of members' work in a local shop."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Toont in een plaatselijke winkel een kleine, geregeld vernieuwde tentoonstelling van werk van de leden."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sint-Pieters-Leeuw",
+                "fullName": "Fotoclub Pixleeuw",
+                "nickName": "pixleeuw"
+            },
+            "coordinates": {
+                "latitude": 50.78003,
+                "longitude": 4.24436
+            },
+            "optional": {
+                "website": "https://www.facebook.com/PixLeeuw",
+                "level2URL": "https://www.example.com/pixleeuw.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-28",
+                        "author": "list maintainer",
+                        "text": "Never listed before. A news item on sint-pieters-leeuw.eu of 23 December 2023, seen on 28 Nov 2026, reports that the club would stop for good on 31 December 2023, after five years. Recorded so that it is recognized if it turns up again. The pin is the town center.",
+                        "status": "inactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Steenokkerzeel",
+                "fullName": "De Digivrienden",
+                "nickName": "digivrienden"
+            },
+            "coordinates": {
+                "latitude": 50.90935,
+                "longitude": 4.51105
+            },
+            "optional": {
+                "website": "https://digivrienden.be",
+                "level2URL": "https://www.example.com/digivrienden.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started in 2008 by members of Kennisbeurs Steenokkerzeel who had all switched to digital, hence the name."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gestart in 2008 door leden van Kennisbeurs Steenokkerzeel die allemaal overgestapt waren naar digitaal, vandaar de naam."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Tienen",
+                "fullName": "Artosa",
+                "nickName": "artosa"
+            },
+            "coordinates": {
+                "latitude": 50.80748,
+                "longitude": 4.93718
+            },
+            "optional": {
+                "website": "https://www.artosa.eu",
+                "level2URL": "https://www.example.com/artosa.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1932; the name joins Artos, a brand of photo paper, and the A of Agfa, the film most members used."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1932; de naam voegt Artos, een merk fotopapier, samen met de A van Agfa, de film die de meeste leden gebruikten."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Tienen",
+                "fullName": "Fotoclub Reflex",
+                "nickName": "fcReflexTienen"
+            },
+            "coordinates": {
+                "latitude": 50.80758,
+                "longitude": 4.93728
+            },
+            "optional": {
+                "website": "https://www.reflextienen.be",
+                "level2URL": "https://www.example.com/fcReflexTienen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members travel together to photograph, as far as Valencia in 2022."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden trekken samen op fotoreis, tot in Valencia in 2022."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Tremelo",
+                "fullName": "Fotoclub Damiaan",
+                "nickName": "fcDamiaan"
+            },
+            "coordinates": {
+                "latitude": 50.99190,
+                "longitude": 4.70406
+            },
+            "optional": {
+                "website": "http://fotoclubdamiaan.be",
+                "level2URL": "https://www.example.com/fcDamiaan.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Probably named after Father Damien, who was born in Tremelo; founded in 2012."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Vermoedelijk genoemd naar pater Damiaan, die in Tremelo geboren werd; opgericht in 2012."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wemmel",
+                "fullName": "Fotoclub De Korrel",
+                "nickName": "fcDeKorrel"
+            },
+            "coordinates": {
+                "latitude": 50.90922,
+                "longitude": 4.30299
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcDeKorrel.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Vlaams Brabantse Fotokringen (vbfweb.be). Its domain fotoclubdekorrel.be showed only an empty page on that day, so no website is set. The pin is the municipality center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zaventem",
+                "fullName": "Fotoclub Klik-Klak",
+                "nickName": "fcKlikKlak"
+            },
+            "coordinates": {
+                "latitude": 50.88062,
+                "longitude": 4.47300
+            },
+            "optional": {
+                "website": "https://www.klik-klak.be",
+                "level2URL": "https://www.example.com/fcKlikKlak.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each year's exhibition has a theme, such as 'Architectuur in de natuur' in 2025, and visitors vote for the winners."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke jaartentoonstelling heeft een thema, zoals 'Architectuur in de natuur' in 2025, en de bezoekers kiezen de winnaars."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zemst",
+                "fullName": "Zefoda",
+                "nickName": "zefoda"
+            },
+            "coordinates": {
+                "latitude": 50.98288,
+                "longitude": 4.46558
+            },
+            "optional": {
+                "website": "https://zefoda.be",
+                "level2URL": "https://www.example.com/zefoda.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zoutleeuw",
+                "fullName": "Photo-Art Friends",
+                "nickName": "photoArtFriends"
+            },
+            "coordinates": {
+                "latitude": 50.83320,
+                "longitude": 5.10310
+            },
+            "optional": {
+                "website": "https://www.photo-art-friends.be",
+                "level2URL": "https://www.example.com/photoArtFriends.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members photograph local traditions, such as the Epiphany begging song Stak het oep in Zoutleeuw."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden fotograferen lokale tradities, zoals het driekoningenzingen Stak het oep in Zoutleeuw."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the club list of the Verbond van Limburgse Fotokringen (vlfvzw.be). It is in Flemish Brabant, not Limburg. The pin is the town center."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

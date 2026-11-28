@@ -182,6 +182,39 @@
 
         {
             "idPlus": {
+                "town": "Den Haag",
+                "fullName": "Fotocollectief Van Blankenburg",
+                "nickName": "fcVanBlankenburg"
+            },
+            "coordinates": {
+                "latitude": 52.05358,
+                "longitude": 4.23585
+            },
+            "optional": {
+                "website": "https://www.vanblankenburg.com",
+                "level2URL": "https://www.example.com/fcVanBlankenburg.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every six weeks the members photograph a Den Haag subject together, guided by two Hague photographers, and review the results in a follow-up session."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke zes weken fotograferen de leden samen een Haags onderwerp, begeleid door twee Haagse fotografen, en bespreken ze de resultaten in een vervolgsessie."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 through local news on 070online.nl and its own site: founded in early 2024, exhibitions in Wijkwinkel Scheveningen in May 2025 and at Varia Art en Expo in Loosduinen in September to November 2026. The pin is Varia, its usual exhibition venue."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Gouda",
                 "fullName": "De Goudse Fotoclub",
                 "nickName": "deGoudse"

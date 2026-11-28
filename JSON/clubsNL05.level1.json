@@ -10,6 +10,30 @@
         {
             "idPlus": {
                 "town": "Almelo",
+                "fullName": "Fotogroep Eninver '73",
+                "nickName": "fgEninver73"
+            },
+            "coordinates": {
+                "latitude": 52.35774,
+                "longitude": 6.64565
+            },
+            "optional": {
+                "website": "https://www.facebook.com/FotogroepEninver73/",
+                "level2URL": "https://www.example.com/fgEninver73.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 5 Nov 2026: the Fotobond roster listed this group as club 504 in September 2026, but no longer did in November 2026. Its only web presence is a Facebook page whose latest dated post is from 2023; it says the group met monthly in wijkcentrum Eninver, Almelo. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Almelo",
                 "fullName": "Fotogroep Schelfhorst",
                 "nickName": "fgSchelfhorst"
             },
@@ -304,6 +328,32 @@
                     {
                         "language": "NL",
                         "value": "Heeft een strikte gedragscode, waaronder: `dieren in gevangenschap mag je niet als wild presenteren`."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Losser",
+                "fullName": "Fotocollectief Dinkelshoot",
+                "nickName": "fcDinkelshoot"
+            },
+            "coordinates": {
+                "latitude": 52.26820,
+                "longitude": 7.01373
+            },
+            "optional": {
+                "website": "https://dinkelshoot.nl",
+                "level2URL": "https://www.example.com/fcDinkelshoot.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "In its photo chain each member reacts to a photo only they have seen; at a club evening the others then try to put the chain back in order."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Bij de fotoketting reageert elk lid op een foto die alleen hij of zij heeft gezien; op een clubavond proberen de anderen daarna de volgorde van de ketting te reconstrueren."
                     }
                 ]
             }

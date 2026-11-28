@@ -747,13 +747,28 @@
                 "longitude": 4.93481
             },
             "optional": {
-                "website": "https://www.facebook.com/p/Fotogroep-Aurora-61557056615821/",
+                "badWebsites": [ "https://www.facebook.com/p/Fotogroep-Aurora-61557056615821/" ],
                 "level2URL": "https://www.example.com/fgAurorA.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A group of six photography friends, also members of another photo club, who meet to review each other's latest work."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een groep van zes fotografievrienden, ook lid van een andere fotoclub, die samenkomen om elkaars recente werk te bespreken."
+                    }
+                ],
                 "logbook": [
                     {
                         "date": "2026-11-04",
                         "author": "list maintainer",
                         "text": "The website www.aurorafoto.nl (source: Fotobond) responded with HTTP 500 and an empty page (4 Nov 2026), so the club's Facebook page is linked instead. The domain still exists, so it is not listed as a bad website."
+                    },
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Checked on 27 Nov 2026: the Facebook page linked on 4 Nov belongs to a different Fotogroep Aurora, in Wieringerwerf, so the link is removed and listed under badWebsites, which clears it on existing installs. www.aurorafoto.nl still answers with HTTP 500, so no website is set."
                     }
                 ],
                 "nlSpecific": {

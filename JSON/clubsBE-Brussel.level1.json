@@ -1,0 +1,341 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-Brussel.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Auderghem",
+                "fullName": "Click O'Derghem",
+                "nickName": "clickOderghem"
+            },
+            "coordinates": {
+                "latitude": 50.81719,
+                "longitude": 4.42732
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/clickOderghem.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each exhibition has a theme, such as 'Chemin de vie' in 2026."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke tentoonstelling heeft een thema, zoals 'Chemin de vie' in 2026."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 club list of the Fédération des Cercles Photographiques (FCP). It has no website; the municipality of Auderghem announced its exhibition for December 2026 at the Centre culturel d'Auderghem, where the pin is."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Brussel",
+                "fullName": "Fotoclub Brussel",
+                "nickName": "fcBrussel"
+            },
+            "coordinates": {
+                "latitude": 50.85033,
+                "longitude": 4.34711
+            },
+            "optional": {
+                "badWebsites": [ "https://www.fotoclubbrussel.be", "https://www.fotoclubbrussel.com" ],
+                "level2URL": "https://www.example.com/fcBrussel.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 by a web search for Dutch-speaking photo clubs in Brussels. Both its domains, fotoclubbrussel.be and fotoclubbrussel.com, no longer exist, and it is not on the 2026 club list of the Vlaams Brabantse Fotokringen. The old domains are listed in case someone else takes them over. The pin is its last known meeting place, GC De Markten.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Brussel",
+                "fullName": "Fotoclub Metaforo",
+                "nickName": "fcMetaforo"
+            },
+            "coordinates": {
+                "latitude": 50.85153,
+                "longitude": 4.35045
+            },
+            "optional": {
+                "website": "https://www.bop.brussels/metaforo-foto-atelier-fotoclub",
+                "level2URL": "https://www.example.com/fcMetaforo.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The photo club of the Brussels seniors' platform; an outside photographer joins every other week to set assignments and give feedback."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De fotoclub van het Brussels Ouderenplatform; om de twee weken komt een externe fotograaf opdrachten geven en de foto's bespreken."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 by a web search for Dutch-speaking photo clubs in Brussels. The website is its page on the site of the Brussels Ouderenplatform, which announced its autumn 2026 season."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Bruxelles",
+                "fullName": "PC Europe",
+                "nickName": "pcEurope"
+            },
+            "coordinates": {
+                "latitude": 50.84112,
+                "longitude": 4.37833
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/pcEurope.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The photo club of the European Commission's staff."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De fotoclub van het personeel van de Europese Commissie."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 club list of the Fédération des Cercles Photographiques (FCP). It has no website; a 2018 FCP directory gives its meeting place on the Rue Van Maerlant, where the pin is."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ganshoren",
+                "fullName": "Perfect Ganshoren",
+                "nickName": "perfectGanshoren"
+            },
+            "coordinates": {
+                "latitude": 50.87406,
+                "longitude": 4.31373
+            },
+            "optional": {
+                "website": "https://www.perfectganshoren.com",
+                "level2URL": "https://www.example.com/perfectGanshoren.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each round of its internal competition is judged by a member of another club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elke ronde van de interne wedstrijd wordt beoordeeld door een lid van een andere club."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Jette",
+                "fullName": "Association photographique Brussels Miroir",
+                "nickName": "brusselsMiroir"
+            },
+            "coordinates": {
+                "latitude": 50.87472,
+                "longitude": 4.32831
+            },
+            "optional": {
+                "website": "http://www.brusselsmiroir.be",
+                "level2URL": "https://www.example.com/brusselsMiroir.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Holds that a photograph is meant to be printed and, when the opportunity arises, exhibited."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Vindt dat een foto bedoeld is om afgedrukt en, als de kans zich voordoet, tentoongesteld te worden."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 club list of the Fédération des Cercles Photographiques (FCP). The newest session report on its site is from 2024. Its agenda page lists sessions for the 2026-2027 season."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Molenbeek-Saint-Jean",
+                "fullName": "Royal Photo-club Germinal",
+                "nickName": "rpcGerminal"
+            },
+            "coordinates": {
+                "latitude": 50.86024,
+                "longitude": 4.31544
+            },
+            "optional": {
+                "website": "https://www.photoclubgerminal.brussels",
+                "level2URL": "https://www.example.com/rpcGerminal.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Meets in a real castle: the Knights' Room of Karreveld Castle."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Komt samen in een echt kasteel: de ridderzaal van het Karreveldkasteel."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sint-Jans-Molenbeek",
+                "fullName": "Cultuursmakers Brussel Fotoclub",
+                "nickName": "cmBrusselFotoclub"
+            },
+            "coordinates": {
+                "latitude": 50.85832,
+                "longitude": 4.33931
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/cmBrusselFotoclub.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Works from its own photo studio and travels together to photo festivals."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Werkt vanuit een eigen fotostudio en trekt samen naar fotofestivals."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 by a web search for Dutch-speaking photo clubs in Brussels. Its page on the site of Cultuursmakers no longer exists; only search results quote the older site, which does not respond. The pin is the address of Cultuursmakers in Molenbeek.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Uccle",
+                "fullName": "ARTE VIII",
+                "nickName": "arteViii"
+            },
+            "coordinates": {
+                "latitude": 50.79032,
+                "longitude": 4.35969
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/arteViii.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Exhibits photo series rather than single images."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Stelt fotoreeksen tentoon in plaats van losse beelden."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 club list of the Fédération des Cercles Photographiques (FCP). It has no website; an exhibition of its photo series was announced for October 2026. The pin is the municipality center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vorst",
+                "fullName": "TW Fotoclub",
+                "nickName": "twFotoclub"
+            },
+            "coordinates": {
+                "latitude": 50.81623,
+                "longitude": 4.32645
+            },
+            "optional": {
+                "website": "https://www.facebook.com/twfotoclub/",
+                "level2URL": "https://www.example.com/twFotoclub.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A collective darkroom for analog and experimental printing, from wet collodion to plant-based developers."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een collectieve donkere kamer voor analoog en experimenteel afdrukken, van natte collodion tot ontwikkelaars op plantenbasis."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 by a web search for Dutch-speaking photo clubs in Brussels. It works in Dutch and French. Its only web presence is a Facebook page; GC Ten Weyngaert, where the pin is, hosted its exhibition from June to September 2026."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Woluwe-Saint-Pierre",
+                "fullName": "Club de Photographes Amateurs de Sainte-Alix",
+                "nickName": "cpaSainteAlix"
+            },
+            "coordinates": {
+                "latitude": 50.83703,
+                "longitude": 4.42746
+            },
+            "optional": {
+                "website": "https://www.cpastealix.com",
+                "level2URL": "https://www.example.com/cpaSainteAlix.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its club bulletin, La vie du club, has passed 400 issues."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het clubblad, La vie du club, telt al meer dan 400 nummers."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

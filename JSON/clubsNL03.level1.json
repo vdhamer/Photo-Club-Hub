@@ -485,6 +485,30 @@
         
         {
             "idPlus": {
+                "town": "Sleen",
+                "fullName": "Fotoclub VAFS",
+                "nickName": "fcVAFS"
+            },
+            "coordinates": {
+                "latitude": 52.77537,
+                "longitude": 6.80449
+            },
+            "optional": {
+                "badWebsites": [ "https://vafs.nl" ],
+                "level2URL": "https://www.example.com/fcVAFS.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 14 Oct 2026: vafs.nl is a domain-for-sale page, and their latest news is from April 2023 (five members, founded 4 April 2004). On 16 Oct 2026 the afdeling contact confirmed the club no longer exists.",
+                        "status": "inactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Spijkerboor",
                 "fullName": "Fotoclub Spijkerboor",
                 "nickName": "fcSpijkerboor"

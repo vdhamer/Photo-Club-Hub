@@ -88,6 +88,53 @@
         {
             "idPlus": {
                 "town": "Arnhem",
+                "fullName": "Fotocollectief Arnhem",
+                "nickName": "fcArnhem"
+            },
+            "coordinates": {
+                "latitude": 51.97789,
+                "longitude": 5.90953
+            },
+            "optional": {
+                "badWebsites": [ "https://fotocollectiefarnhem.nl" ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026: six Arnhem photographers and a guest photographer who made a photo book about Arnhem neighborhoods, ONZE WIJK. It is a project group, not a photo club, and is not related to Fotogroep Arnhem. The last Facebook post (https://www.facebook.com/fotocollectiefarnhem/), from 22 January 2020, promotes the book; Instagram is https://www.instagram.com/fotocollectiefarnhem/. Its website, unchanged since 2018 in the Internet Archive, now redirects to a spam site. Recorded so that it is recognized if it turns up again. The pin is the town center.",
+                        "status": "rejected"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Arnhem",
+                "fullName": "Fotogroep Arnhem",
+                "nickName": "fgArnhem"
+            },
+            "coordinates": {
+                "latitude": 52.00114,
+                "longitude": 5.89259
+            },
+            "optional": {
+                "badWebsites": [ "https://fotogroeparnhem.nl" ],
+                "level2URL": "https://www.example.com/fgArnhem.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 15 Oct 2026 (Data#68, pass 2): fotogroeparnhem.nl redirects to a missing Adobe Portfolio page, and a search snippet describes a teacher-led group at 400 euros a year, possibly a course rather than a club. Judged defunct.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Arnhem",
                 "fullName": "Fotokring Arnhem",
                 "nickName": "fkArnhem"
             },
@@ -393,6 +440,29 @@
         {
             "idPlus": {
                 "town": "Ede",
+                "fullName": "Fotogroep Anders",
+                "nickName": "fgAndersEde"
+            },
+            "coordinates": {
+                "latitude": 52.04604,
+                "longitude": 5.6849
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fgAndersEde.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 4 Nov 2026: fotogroep-anders.nl is still registered (updated Jan 2025) but shows only an empty server page. The newest sign of activity is an unconfirmed \"Expositie 2025\" heading in a search snippet. No reference to Fotoclub Objectief Ede was found. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ede",
                 "fullName": "Werkgroep Fotografie IVN Ede",
                 "nickName": "fwgIVNEde"
             },
@@ -551,6 +621,29 @@
 
         {
             "idPlus": {
+                "town": "Heteren",
+                "fullName": "Fotoclub Heteren",
+                "nickName": "fcHeteren"
+            },
+            "coordinates": {
+                "latitude": 51.9518,
+                "longitude": 5.7546
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcHeteren.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: the newest sign of activity is the Heteren magazine Peperbus of July 2024, which mentions a monthly photo evening and a private Facebook group. The club has no website, and nothing was found for 2025 or 2026. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Huissen",
                 "fullName": "Fotoclub Zilvercam",
                 "nickName": "fcZilvercam"
@@ -643,6 +736,32 @@
                 "nlSpecific": {
                     "fotobondNumber": 620
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Meteren",
+                "fullName": "Fotoclub de Betuwe",
+                "nickName": "fcBetuwe"
+            },
+            "coordinates": {
+                "latitude": 51.86372,
+                "longitude": 5.28342
+            },
+            "optional": {
+                "badWebsites": [
+                    "https://fotoclubdebetuwe.nl"
+                ],
+                "level2URL": "https://www.example.com/fcBetuwe.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: the club's former website, fotoclubdebetuwe.nl, said the club stopped in summer 2020; the domain no longer exists. The newest club news found dates from April 2020. A July 2026 exhibition mentioned in an earlier search could not be tied to this club.",
+                        "status": "inactive"
+                    }
+                ]
             }
         },
 
@@ -747,6 +866,30 @@
                     {
                         "language": "NL",
                         "value": "Gemengde groep van beginners en ervaren fotografen met korte presentaties, werken in tweetallen en een paar uitstapjes per jaar."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nijmegen",
+                "fullName": "Fotokring Meer Licht",
+                "nickName": "fkMeerLicht"
+            },
+            "coordinates": {
+                "latitude": 51.83502,
+                "longitude": 5.83341
+            },
+            "optional": {
+                "badWebsites": [ "https://fotokringmeerlicht.nl" ],
+                "level2URL": "https://www.example.com/fkMeerLicht.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 15 Oct 2026 (Data#68, pass 2): fotokringmeerlicht.nl returns `404 Not Found`, and a local history site describes the club as historic. Judged defunct.",
+                        "status": "possiblyInactive"
                     }
                 ]
             }
@@ -953,6 +1096,33 @@
 
         {
             "idPlus": {
+                "town": "Velp",
+                "fullName": "Fotoclub Velp",
+                "nickName": "fcVelp"
+            },
+            "coordinates": {
+                "latitude": 51.99587,
+                "longitude": 5.97513
+            },
+            "optional": {
+                "badWebsites": [
+                    "https://fotoclubvelp.nl",
+                    "https://fotoclubvelp.com"
+                ],
+                "level2URL": "https://www.example.com/fcVelp.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: fotoclubvelp.nl and fotoclubvelp.com no longer exist. The club used to be on the Fotobond roster but no longer is, and no sign of activity was found since early 2020, when meetings had moved online. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Vorden",
                 "fullName": "Gelderse Natuurfotografie",
                 "nickName": "GNF"
@@ -1129,16 +1299,39 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Spends a year working toward the exhibition \"Ik zie ik zie…\" (I spy…) at the Turmac Cultuurfabriek in Zevenaar."
+                        "value": "Spends a year working toward the exhibition \"Ik zie ik zie...\" (I spy...) at the Turmac Cultuurfabriek in Zevenaar."
                     },
                     {
                         "language": "NL",
-                        "value": "Werkte een jaar lang toe naar de expositie \"Ik zie ik zie…\" in de Turmac Cultuurfabriek in Zevenaar."
+                        "value": "Werkte een jaar lang toe naar de expositie \"Ik zie ik zie...\" in de Turmac Cultuurfabriek in Zevenaar."
                     }
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 618
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zelhem",
+                "fullName": "Fotoclub Blik",
+                "nickName": "fcBlik"
+            },
+            "coordinates": {
+                "latitude": 52.00875,
+                "longitude": 6.34901
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcBlik.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: the only source is a Contact Zuid article of 6 May 2019 describing an artists' collective near Zelhem that met monthly at members' homes. Nothing newer was found. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
             }
         },
 

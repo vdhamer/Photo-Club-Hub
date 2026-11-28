@@ -1,0 +1,1161 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-WestVlaanderen.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Avelgem",
+                "fullName": "Foca Scaldis",
+                "nickName": "focaScaldis"
+            },
+            "coordinates": {
+                "latitude": 50.77884,
+                "longitude": 3.46562
+            },
+            "optional": {
+                "website": "https://focascaldis.wixsite.com/foca-scaldis-avelgem",
+                "level2URL": "https://www.example.com/focaScaldis.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Regularly organizes model shoots and invites models to contact the club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Organiseert geregeld modellenshoots en nodigt modellen uit om contact op te nemen met de club."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Bredene",
+                "fullName": "Fotoclub ObjektiV",
+                "nickName": "fcObjektiv"
+            },
+            "coordinates": {
+                "latitude": 51.25358,
+                "longitude": 2.98665
+            },
+            "optional": {
+                "website": "https://objektiv.be",
+                "level2URL": "https://www.example.com/fcObjektiv.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 2007 by nine friends."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 2007 door negen vrienden."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Brugge",
+                "fullName": "Brugs Fotoatelier",
+                "nickName": "brugsFotoatelier"
+            },
+            "coordinates": {
+                "latitude": 51.21435,
+                "longitude": 3.25202
+            },
+            "optional": {
+                "website": "https://brugsfotoatelier.be",
+                "level2URL": "https://www.example.com/brugsFotoatelier.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1934 as the Brugse Fotoamateurs."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1934 als de Brugse Fotoamateurs."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Brugge",
+                "fullName": "Fotoclub Omega",
+                "nickName": "fcOmega"
+            },
+            "coordinates": {
+                "latitude": 51.20871,
+                "longitude": 3.22440
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcOmega.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu), as 'Omega Brugge'. No website was found. The pin is the town center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Brugge",
+                "fullName": "Fotoclub Studio 1",
+                "nickName": "fcStudio1Brugge"
+            },
+            "coordinates": {
+                "latitude": 51.20855,
+                "longitude": 3.22677
+            },
+            "optional": {
+                "website": "https://wp.studio1brugge.be",
+                "level2URL": "https://www.example.com/fcStudio1Brugge.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Named after the studio where it met every two weeks after its founding in 1968."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Genoemd naar de studio waar de club na de oprichting in 1968 om de veertien dagen samenkwam."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eernegem",
+                "fullName": "Fotoclub Bellebos",
+                "nickName": "fcBellebos"
+            },
+            "coordinates": {
+                "latitude": 51.12966,
+                "longitude": 3.02637
+            },
+            "optional": {
+                "badWebsites": [ "http://fotoclub-bellebos.be", "https://www.fotoclub-bellebos.com", "http://www.fotoclubbellebos.be" ],
+                "website": "https://www.facebook.com/groups/1541836932771932/",
+                "level2URL": "https://www.example.com/fcBellebos.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1978; its yearly digital show has run for more than 30 editions."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1978; de jaarlijkse digitale show telt al meer dan 30 edities."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). None of its known domains (fotoclub-bellebos.be, fotoclub-bellebos.com, fotoclubbellebos.be) resolves any more; the municipality of Ichtegem still lists the club, and it is active on its Facebook group, which is the website given here. The old domains are listed in case someone else takes them over. The pin is on the market square of Eernegem."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Harelbeke",
+                "fullName": "Frame-It",
+                "nickName": "frameIt"
+            },
+            "coordinates": {
+                "latitude": 50.85751,
+                "longitude": 3.31137
+            },
+            "optional": {
+                "website": "https://www.frame-it.one",
+                "level2URL": "https://www.example.com/frameIt.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Calls itself a photo collective; members make day trips together to towns such as Ronse, Sluis and Veere."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Noemt zichzelf een fotocollectief; leden maken samen daguitstappen naar steden als Ronse, Sluis en Veere."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Harelbeke",
+                "fullName": "Harelbeekse Fotovrienden",
+                "nickName": "harelbeekseFotovrienden"
+            },
+            "coordinates": {
+                "latitude": 50.85446,
+                "longitude": 3.31342
+            },
+            "optional": {
+                "website": "https://harelbeeksefotovrienden.be",
+                "level2URL": "https://www.example.com/harelbeekseFotovrienden.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Began some 50 years ago as a club at the Lano carpet factory; until 2016 it was called Difodi Lano."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Begon zo'n 50 jaar geleden als club bij tapijtfabriek Lano; tot 2016 heette het Difodi Lano."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Heuvelland",
+                "fullName": "Spectrum Heuvelland",
+                "nickName": "spectrumHeuvelland"
+            },
+            "coordinates": {
+                "latitude": 50.74333,
+                "longitude": 2.82226
+            },
+            "optional": {
+                "website": "https://www.spectrumheuvelland.be",
+                "level2URL": "https://www.example.com/spectrumHeuvelland.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ieper",
+                "fullName": "Cultuursmakers Fotoclub Ieper",
+                "nickName": "cultuursmakersIeper"
+            },
+            "coordinates": {
+                "latitude": 50.85131,
+                "longitude": 2.88632
+            },
+            "optional": {
+                "website": "https://fotoclubieper.cultuursmakers.be",
+                "level2URL": "https://www.example.com/cultuursmakersIeper.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 by a web search for photo clubs in Ieper. Its page announces a travel reportage on 18 December 2026. The pin is at the town center, stepped aside so that the Ieper pins do not coincide."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ieper",
+                "fullName": "Fotoclub Kordial",
+                "nickName": "fcKordial"
+            },
+            "coordinates": {
+                "latitude": 50.85121,
+                "longitude": 2.88622
+            },
+            "optional": {
+                "website": "https://kordial.jouwweb.nl",
+                "level2URL": "https://www.example.com/fcKordial.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Shares its Photoshop and photography lessons as free downloads on its website."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deelt de lessen Photoshop en fotografie als gratis download op de website."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu), which spells it 'Cordial'. Its own site and that of the Verenigde Ieperse Fotoclubs (fotoclubieper.be) write Kordial. The latest dated material seen on its site is from 2023, and the federation list may be out of date. The combined Ieper site has 2026 albums of 'ABC' evenings, an activity Kordial's site describes, but does not name the club with them. The pin is the town center.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ieper",
+                "fullName": "Koninklijke Ieperse Foto- en Diakring",
+                "nickName": "ifdkIeper"
+            },
+            "coordinates": {
+                "latitude": 50.85141,
+                "longitude": 2.88642
+            },
+            "optional": {
+                "website": "https://www.fotoclubieper.be/ifdk.html",
+                "level2URL": "https://www.example.com/ifdkIeper.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its history goes back more than 100 years."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De geschiedenis van de club gaat meer dan 100 jaar terug."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the site of the Verenigde Ieperse Fotoclubs (fotoclubieper.be); the website given here is the club's page there. The page was last changed in December 2021. No activity of this club in 2026 or 2027 was found, though the combined site itself was updated in 2026. Facebook was not searched. The pin is at the town center, stepped aside so that the Ieper pins do not coincide.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ieper",
+                "fullName": "Picamera",
+                "nickName": "picamera"
+            },
+            "coordinates": {
+                "latitude": 50.85151,
+                "longitude": 2.88652
+            },
+            "optional": {
+                "website": "https://www.fotoclubieper.be/picamera.html",
+                "level2URL": "https://www.example.com/picamera.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Focuses on competition photography; its international photo salons once brought well-known photographers from all continents to Ieper."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Legt zich toe op wedstrijdfotografie; dankzij de internationale fotosalons van de club kwamen ooit bekende fotografen uit alle werelddelen naar Ieper."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the site of the Verenigde Ieperse Fotoclubs (fotoclubieper.be); the website given here is the club's page there. No activity of this club in 2026 or 2027 was found, though the combined site itself was updated in 2026. Facebook was not searched. The pin is at the town center, stepped aside so that the Ieper pins do not coincide.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ieper",
+                "fullName": "Travel Camera Club",
+                "nickName": "tccIeper"
+            },
+            "coordinates": {
+                "latitude": 50.85161,
+                "longitude": 2.88662
+            },
+            "optional": {
+                "website": "https://www.fotoclubieper.be/tcc.html",
+                "level2URL": "https://www.example.com/tccIeper.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Devoted to travel photography, travel talks and audiovisual travel shows."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Richt zich op reisfotografie, reisvoordrachten en reismontages."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the site of the Verenigde Ieperse Fotoclubs (fotoclubieper.be); the website given here is the club's page there. No activity of this club in 2026 or 2027 was found, though the combined site itself was updated in 2026. Facebook was not searched. The pin is at the town center, stepped aside so that the Ieper pins do not coincide.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Klerken",
+                "fullName": "Fodiak",
+                "nickName": "fodiak"
+            },
+            "coordinates": {
+                "latitude": 50.99801,
+                "longitude": 2.90475
+            },
+            "optional": {
+                "website": "https://fodiak.be",
+                "level2URL": "https://www.example.com/fodiak.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1981 by a competition photographer who wanted a club with less pressure to score."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1981 door een wedstrijdfotograaf die een club wilde met minder druk om te scoren."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Koksijde",
+                "fullName": "JoMi Fotografie Groep",
+                "nickName": "jomi"
+            },
+            "coordinates": {
+                "latitude": 51.11877,
+                "longitude": 2.63493
+            },
+            "optional": {
+                "website": "https://www.jomi-fotografiegroep.be",
+                "level2URL": "https://www.example.com/jomi.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The name joins the first names of its founders, Jos and Michel."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De naam voegt de voornamen van de stichters samen, Jos en Michel."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Kortrijk",
+                "fullName": "Fotoclub Groeninghe",
+                "nickName": "fcGroeninghe"
+            },
+            "coordinates": {
+                "latitude": 50.82650,
+                "longitude": 3.27968
+            },
+            "optional": {
+                "website": "https://www.instagram.com/fotogroeninghe/",
+                "level2URL": "https://www.example.com/fcGroeninghe.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Prospective members apply by email and have to convince the club with their creative images."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Kandidaat-leden melden zich per mail aan en moeten de club overtuigen met hun creatieve beelden."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). Its site, fotogroeninghe.be, showed only a blank WordPress installation page on that day, so the website given here is the club's Instagram page; the domain still looks like the club's. The city of Kortrijk lists the club. The pin is its meeting place, the Groeningheheem."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Kortrijk",
+                "fullName": "PxL Fotocollectief",
+                "nickName": "pxlKortrijk"
+            },
+            "coordinates": {
+                "latitude": 50.82764,
+                "longitude": 3.26599
+            },
+            "optional": {
+                "website": "https://pxlfotocollectief.be",
+                "level2URL": "https://www.example.com/pxlKortrijk.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its exhibitions use unusual Kortrijk venues, such as an enclosed Carmelite convent opened to the public in 2022, with a guest curator."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De tentoonstellingen gebruiken bijzondere Kortrijkse locaties, zoals in 2022 een voor het publiek opengesteld Karmelieter slotklooster, met een gastcurator."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 by a web search for fotocollectief. A group of photographers working in different fields, recognized and subsidized by the city of Kortrijk, so closer to an artists' group than most clubs. No meeting place was found. The pin is the town center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lauwe",
+                "fullName": "Fotoclub Digitaal Zien",
+                "nickName": "fcDigitaalZien"
+            },
+            "coordinates": {
+                "latitude": 50.79439,
+                "longitude": 3.18513
+            },
+            "optional": {
+                "website": "https://www.dzlauwe.be",
+                "level2URL": "https://www.example.com/fcDigitaalZien.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Every few months members may each enter two photos on a set theme, and they pick the winner themselves. They also present their travel reportages in a public show, such as 'Over de grenzen heen' in 2026."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Om de paar maanden mogen de leden elk twee foto's rond een thema indienen, en ze kiezen zelf de winnende foto. Ze stellen ook hun reisreportages voor in een publieke voorstelling, zoals 'Over de grenzen heen' in 2026."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Lichtervelde",
+                "fullName": "Lidiac",
+                "nickName": "lidiac"
+            },
+            "coordinates": {
+                "latitude": 51.03043,
+                "longitude": 3.14196
+            },
+            "optional": {
+                "website": "https://lidiac.be",
+                "level2URL": "https://www.example.com/lidiac.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Each year it sets a theme for the whole club, such as cemeteries in 2026."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Elk jaar kiest de club een jaarthema voor alle leden, zoals begraafplaatsen in 2026."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Middelkerke",
+                "fullName": "Fotoclub Candela",
+                "nickName": "fcCandela"
+            },
+            "coordinates": {
+                "latitude": 51.18657,
+                "longitude": 2.82345
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcCandela.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its yearly salon each October shows the members' work of the past year."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het jaarlijkse salon in oktober toont het werk van de leden van het voorbije jaar."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). It has no website; the municipality of Middelkerke lists it, and its salon was announced for October 2025 at CC De Branding, where the pin is."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oostende",
+                "fullName": "Fotoclub De Meeuwen",
+                "nickName": "fcDeMeeuwen"
+            },
+            "coordinates": {
+                "latitude": 51.22442,
+                "longitude": 2.91253
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcDeMeeuwen.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "'Meeuwen' is Dutch for seagulls, a fitting name in a harbor town on the North Sea."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een passende naam in een havenstad aan de Noordzee, waar meeuwen nooit ver weg zijn."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). It has no website; the city of Oostende lists it, and it shows members' photos in the Oostende library in December 2026. The pin is its listed meeting place, Buurthuis Oud Hospitaal."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oostende",
+                "fullName": "Fotoclub EXIF",
+                "nickName": "fcExif"
+            },
+            "coordinates": {
+                "latitude": 51.22586,
+                "longitude": 2.91950
+            },
+            "optional": {
+                "website": "https://fotoclubexif.be",
+                "level2URL": "https://www.example.com/fcExif.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "An exhibition club: it takes no part in competitions, and its photo salon is the high point of the season."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een tentoonstellingsclub die niet aan wedstrijden deelneemt; het fotosalon is het hoogtepunt van het seizoen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oostende",
+                "fullName": "Fotoclub Ter Streep",
+                "nickName": "fcTerStreep"
+            },
+            "coordinates": {
+                "latitude": 51.23461,
+                "longitude": 2.94655
+            },
+            "optional": {
+                "website": "https://www.fotoclub-terstreep.be",
+                "level2URL": "https://www.example.com/fcTerStreep.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Named after Ter Streep, a fishing village on a sandbank off Oostende that the sea later swallowed."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Genoemd naar Ter Streep, een vissersdorp op een zandbank voor Oostende die later door de zee werd verzwolgen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oudenburg",
+                "fullName": "Natuurfotografen De Otter",
+                "nickName": "fcDeOtter"
+            },
+            "coordinates": {
+                "latitude": 51.18363,
+                "longitude": 3.01043
+            },
+            "optional": {
+                "badWebsites": [ "https://nfhd.be" ],
+                "level2URL": "https://www.example.com/fcDeOtter.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Formerly known as Natuurfotografen Hoge Dijken."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Vroeger bekend als Natuurfotografen Hoge Dijken."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu), as 'De Otter Oudenburg'. No website was found. The pin was first set at the town center; on 28 Nov 2026 it was moved to the exhibition venue, LDC Biezenbilk, as no meeting place is known."
+                    },
+                    {
+                        "date": "2026-11-28",
+                        "author": "list maintainer",
+                        "text": "Two news articles on kw.be, seen by their headlines, say that Natuurfotografen Hoge Dijken continue as De Otter and name Natuurfotografen De Otter exhibiting at LDC Biezenbilk in Oudenburg. The articles need a login. The domain nfhd.be of the former name did not resolve on 28 Nov 2026 and is listed in case someone else takes it over."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Roeselare",
+                "fullName": "Knipoogje",
+                "nickName": "knipoogje"
+            },
+            "coordinates": {
+                "latitude": 50.93282,
+                "longitude": 3.15465
+            },
+            "optional": {
+                "website": "https://www.knipoogje.be",
+                "level2URL": "https://www.example.com/knipoogje.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members share their own club studio, with a monthly Sunday-morning gathering for guest speakers and demonstrations."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden delen een eigen clubstudio, met een maandelijkse zondagochtend voor gastsprekers en demonstraties."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Ruiselede",
+                "fullName": "Focidia",
+                "nickName": "focidia"
+            },
+            "coordinates": {
+                "latitude": 51.04070,
+                "longitude": 3.39675
+            },
+            "optional": {
+                "website": "https://www.facebook.com/FocidiaRuiselede/",
+                "badWebsites": [ "http://www.focidia-ruiselede.be" ],
+                "level2URL": "https://www.example.com/focidia.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members swap ideas and tips, and less experienced photographers are guided to improve."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De leden wisselen ideeën en tips uit, en minder ervaren fotoliefhebbers worden begeleid om beter te worden."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). Its domain focidia-ruiselede.be no longer resolves; the club is active on Facebook, and its page there is the website given here. The old domain is listed in case someone else takes it over. The pin was first set at a sports hall given as its meeting place; on 28 Nov 2026 it was moved to the room above the Sociaal Huis, Dorpstraat 3, which the Facebook page gives as the meeting place."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Tielt",
+                "fullName": "Fotokring Gamma",
+                "nickName": "fkGamma"
+            },
+            "coordinates": {
+                "latitude": 51.00029,
+                "longitude": 3.32734
+            },
+            "optional": {
+                "website": "https://www.gammatielt.be",
+                "level2URL": "https://www.example.com/fkGamma.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1987."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1987."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Torhout",
+                "fullName": "Fotoclub Camera Obscura Wijnendale",
+                "nickName": "fcCameraObscuraWijnendale"
+            },
+            "coordinates": {
+                "latitude": 51.09219,
+                "longitude": 3.06875
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcCameraObscuraWijnendale.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1997 as a small group of friends with roots in Wijnendale."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In 1997 opgericht als een kleine vriendengroep met roots in Wijnendale."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). It has no website; the city of Torhout lists it, and it exhibited at Groenhove in 2025. The pin is the village of Wijnendale."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veldegem",
+                "fullName": "Fotoclub Aquarius Digitaal",
+                "nickName": "fcAquarius"
+            },
+            "coordinates": {
+                "latitude": 51.10489,
+                "longitude": 3.16065
+            },
+            "optional": {
+                "website": "https://www.aquarius-digitaal-veldegem.be",
+                "level2URL": "https://www.example.com/fcAquarius.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its theme assignments are judged by members of another photo club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De thema-opdrachten worden beoordeeld door leden van een andere fotoclub."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veurne",
+                "fullName": "Koninklijke Fotoclub Westhoek Veurne",
+                "nickName": "kfcWesthoek"
+            },
+            "coordinates": {
+                "latitude": 51.07259,
+                "longitude": 2.66275
+            },
+            "optional": {
+                "website": "https://www.fotoclubwesthoek.eu",
+                "level2URL": "https://www.example.com/kfcWesthoek.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1957; since 2022 members also go on a monthly afternoon photo outing."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1957; sinds 2022 trekken leden er ook maandelijks een namiddag samen op uit om te fotograferen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vlamertinge",
+                "fullName": "Fotoclub Lichtdrukmaal",
+                "nickName": "fcLichtdrukmaal"
+            },
+            "coordinates": {
+                "latitude": 50.85538,
+                "longitude": 2.82182
+            },
+            "optional": {
+                "website": "https://sites.google.com/view/lichtdrukmaal",
+                "level2URL": "https://www.example.com/fcLichtdrukmaal.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Its yearly program sets an assignment for most months, such as a story told in four photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het jaarprogramma geeft voor de meeste maanden een opdracht, zoals een verhaal in vier foto's."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Waregem",
+                "fullName": "VTB Fotoclub Waregem",
+                "nickName": "vtbWaregem"
+            },
+            "coordinates": {
+                "latitude": 50.88682,
+                "longitude": 3.43236
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/vtbWaregem.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Holds a yearly multimedia show of members' work."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Houdt jaarlijks een multimediavoorstelling met werk van de leden."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). It has no website; the city of Waregem lists it, and its multimedia show was last announced for November 2023. The pin is the town center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Waregem",
+                "fullName": "Waro Foto- & Diaclub",
+                "nickName": "waro"
+            },
+            "coordinates": {
+                "latitude": 50.87487,
+                "longitude": 3.42590
+            },
+            "optional": {
+                "website": "https://www.waro-waregem.be",
+                "level2URL": "https://www.example.com/waro.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1965."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1965."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wervik",
+                "fullName": "Fotoclub Kiknu",
+                "nickName": "fcKiknu"
+            },
+            "coordinates": {
+                "latitude": 50.77822,
+                "longitude": 3.04397
+            },
+            "optional": {
+                "website": "https://www.fotoclub-kiknu-wervik.be",
+                "level2URL": "https://www.example.com/fcKiknu.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members can borrow the club's equipment."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Leden kunnen materiaal van de club lenen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wevelgem",
+                "fullName": "Fotogroep EOS",
+                "nickName": "fgEosWevelgem"
+            },
+            "coordinates": {
+                "latitude": 50.80632,
+                "longitude": 3.18459
+            },
+            "optional": {
+                "website": "https://eos-wevelgem.be",
+                "level2URL": "https://www.example.com/fgEosWevelgem.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "One of its yearly club competitions is traditionally devoted entirely to color photos."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Een van de jaarlijkse clubwedstrijden staat traditioneel volledig in het teken van kleurfoto's."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zandvoorde",
+                "fullName": "Fotogroep 't Kasteel Zandvoorde",
+                "nickName": "fgKasteelZandvoorde"
+            },
+            "coordinates": {
+                "latitude": 51.20225,
+                "longitude": 2.97573
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fgKasteelZandvoorde.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu). It has no website; the city of Oostende lists it, and it exhibited in the Oostende library in March 2025. The pin is Wijkcentrum 't Kasteel, where it meets."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zedelgem",
+                "fullName": "Kiwabi Multimedia",
+                "nickName": "kiwabi"
+            },
+            "coordinates": {
+                "latitude": 51.13897,
+                "longitude": 3.13956
+            },
+            "optional": {
+                "website": "https://kiwabizedelgem.wixsite.com/kiwabi",
+                "level2URL": "https://www.example.com/kiwabi.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Started in 1976 within the KWB workers' movement of the Sint-Laurentius parish."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gestart in 1976 binnen de KWB van de Sint-Laurentiusparochie."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zwevegem",
+                "fullName": "Koninklijke Sobeka Fotoclub",
+                "nickName": "kfcSobeka"
+            },
+            "coordinates": {
+                "latitude": 50.81664,
+                "longitude": 3.35125
+            },
+            "optional": {
+                "website": "http://www.sobekafotoclub.be",
+                "level2URL": "https://www.example.com/kfcSobeka.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Began in 1957 as the photo club of the Bekaert works in Zwevegem."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Begon in 1957 als fotoclub van de Bekaertfabriek in Zwevegem."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zwevezele",
+                "fullName": "Cultura Zwevezele",
+                "nickName": "culturaZwevezele"
+            },
+            "coordinates": {
+                "latitude": 51.03615,
+                "longitude": 3.21070
+            },
+            "optional": {
+                "website": "https://culturazwevezele.be",
+                "level2URL": "https://www.example.com/culturaZwevezele.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Photographs life in its own municipality: local events, vanished and new buildings, and landscapes."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografeert het leven in de eigen gemeente: evenementen, verdwenen gebouwen en nieuwbouw, en landschappen."
+                    }
+                ],
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 27 Nov 2026 on the 2026 member list of the West-Vlaams Verbond van Fotokringen Digitaal (wvfd.eu), as 'Cultura, Zwevezele'. The website covers all the projects of Cultura Zwevezele, which says it brought its activities together under that name in 2020. The pin is the village center."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zwevezele",
+                "fullName": "Koninklijke Fotokring Argos",
+                "nickName": "kfArgos"
+            },
+            "coordinates": {
+                "latitude": 51.03820,
+                "longitude": 3.21403
+            },
+            "optional": {
+                "website": "https://www.fotokringargos.be",
+                "level2URL": "https://www.example.com/kfArgos.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Founded in 1974."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgericht in 1974."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

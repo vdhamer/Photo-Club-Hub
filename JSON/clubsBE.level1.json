@@ -2,115 +2,13 @@
     "level1Header": {
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE.level1.json",
         "level1URLIncludes": [
-            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-Antwerpen.level1.json"
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-Antwerpen.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-OostVlaanderen.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-WestVlaanderen.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-Limburg.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-VlaamsBrabant.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsBE-Brussel.level1.json"
         ],
         "maintainerEmail": "vdhamer@msn.com"
-    },
-
-    "clubs": [
-
-        {
-            "idPlus": {
-                "town": "Boom",
-                "fullName": "Koninklijke Fotoclub Argus Boom",
-                "nickName": "ArgusBoom"
-            },
-            "coordinates": {
-                "latitude": 51.09927,
-                "longitude": 4.36633
-            },
-            "optional": {
-                "level2URL": "https://www.example.com/ArgusBoom.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Holds the title 'Koninklijke' (Royal), which Belgium grants only to societies that have existed for at least 50 years."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Draagt de titel 'Koninklijke', die België alleen toekent aan verenigingen die minstens 50 jaar bestaan."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Kontich",
-                "fullName": "Fotoclub In de lens",
-                "nickName": "fcInDeLens"
-            },
-            "coordinates": {
-                "latitude": 51.13474,
-                "longitude": 4.44697
-            },
-            "optional": {
-                "website": "https://indelens.be/",
-                "level2URL": "https://www.example.com/fcInDeLens.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "A section of Raak Martinus Kontich, alongside its cooking, card and wine clubs; members also photograph cultural events in the region."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Een onderafdeling van Raak Martinus Kontich, naast onder meer een kook-, kaart- en wijnclub; leden fotograferen ook socio-culturele activiteiten in de regio."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Sint-Truiden",
-                "fullName": "Renovat Foto",
-                "nickName": "RenovatFoto"
-            },
-            "coordinates": {
-                "latitude": 50.77871,
-                "longitude": 5.13304
-            },
-            "optional": {
-                "website": "https://www.renovat.be/joomla/production/",
-                "level2URL": "https://www.example.com/RenovatFoto.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Publishes a monthly club magazine in colour, called 'Renovaatje'."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Brengt maandelijks een clubblad in kleur uit genaamd 'Renovaatje'."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Zonhoven",
-                "fullName": "FotoDigiClub De Teut",
-                "nickName": "Teut"
-            },
-            "coordinates": {
-                "latitude": 50.98809,
-                "longitude": 5.41303
-            },
-            "optional": {
-                "website": "https://fotodigiclub.be",
-                "level2URL": "https://www.example.com/Teut.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "On the photo wall in the local community centre, a member at a time presents a series."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Op de fotowand in gemeenschapscentrum Tentakel toont telkens één lid een reeks."
-                    }
-                ]
-            }
-        }
-
-    ]
+    }
 }

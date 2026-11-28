@@ -84,6 +84,16 @@
             "optional": {
                 "website": "http://www.facebook.com/FotogroepTegenlicht",
                 "level2URL": "https://www.example.com/fgTegenlicht.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Goes on a photo excursion every month, alongside a monthly review evening."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Gaat elke maand op foto-excursie, naast een maandelijkse bespreekavond."
+                    }
+                ],
                 "nlSpecific": {
                     "fotobondNumber": 1766
                 }
@@ -206,6 +216,16 @@
             "optional": {
                 "website": "https://fkzl.nl/",
                 "level2URL": "https://www.example.com/FKZL.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Members come from all over South Limburg; their work extends to experimental images that test the limits of photography."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De leden komen uit heel Zuid-Limburg; hun werk gaat tot experimentele beelden die de grenzen van de fotografie opzoeken."
+                    }
+                ],
                 "nlSpecific": {
                     "fotobondNumber": 1782
                 }
@@ -263,6 +283,35 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 1735
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Itteren",
+                "fullName": "Fotokollektief ZENZR",
+                "nickName": "fkZenzr"
+            },
+            "coordinates": {
+                "latitude": 50.89797,
+                "longitude": 5.69906
+            },
+            "optional": {
+                "website": "https://www.mathbartholomeusphotography.nl/fotokollektief-zenzr/",
+                "level2URL": "https://www.example.com/fkZenzr.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The name ZENZR is a dialect corruption of the word \"sensor\"."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De naam ZENZR is een lokale verbastering van het woord \"sensor\"."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1781
                 }
             }
         },
@@ -690,7 +739,15 @@
                 "longitude": 5.86676
             },
             "optional": {
+                "website": "https://www.facebook.com/fotoclubgrensland/",
                 "level2URL": "https://www.example.com/fcGrensland.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Checked on 27 Nov 2026: the club's own site, fotoclubgrensland.nl, still exists, but its newest program is from 2019 and its home page returns an error. The club is active on Facebook, with a post on 25 August 2026, so the website points there. The domain is still the club's: it is used in its email address."
+                    }
+                ],
                 "nlSpecific": {
                     "fotobondNumber": 1780
                 }

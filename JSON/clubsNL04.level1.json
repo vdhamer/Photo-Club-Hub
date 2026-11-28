@@ -9,6 +9,55 @@
 
         {
             "idPlus": {
+                "town": "Apeldoorn",
+                "fullName": "Fotoclub DigiDia",
+                "nickName": "fcDigiDia"
+            },
+            "coordinates": {
+                "latitude": 52.21565,
+                "longitude": 5.96395
+            },
+            "optional": {
+                "badWebsites": [
+                    "http://www.fotoclubapeldoorn.nl"
+                ],
+                "level2URL": "https://www.example.com/fcDigiDia.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: the club's former domain fotoclubapeldoorn.nl no longer exists, and no dated activity from any source was found. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Apeldoorn",
+                "fullName": "Fotoclub Lucide",
+                "nickName": "fcLucide"
+            },
+            "coordinates": {
+                "latitude": 52.21575,
+                "longitude": 5.96405
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fcLucide.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: the only traces are a registry listing (registered with the KvK on 1 March 2019 as a hobby club) and a Facebook page, https://www.facebook.com/p/Fotoclub-Lucide-100054443383319/, that looks inactive since 2019. No website and no other sign of activity was found. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Bathmen",
                 "fullName": "Fotografencollectief De Salon",
                 "nickName": "Salon"
@@ -264,6 +313,55 @@
                     {
                         "language": "NL",
                         "value": "Naast de maandelijkse clubavond is er elke maand een zaterdagactiviteit en jaarlijks een clubkampioenschap met externe jury."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Twello",
+                "fullName": "Fotocollectief Twello",
+                "nickName": "fcTwello"
+            },
+            "coordinates": {
+                "latitude": 52.2396,
+                "longitude": 6.10041
+            },
+            "optional": {
+                "badWebsites": [
+                    "https://fotocollectieftwello.nl"
+                ],
+                "level2URL": "https://www.example.com/fcTwello.level2.json",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: fotocollectieftwello.nl no longer exists, and the newest sign of activity is a library exhibition in Twello in February and March 2024. Assumed stopped.",
+                        "status": "possiblyInactive"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Twello",
+                "fullName": "Kunstkring Voorst",
+                "nickName": "kunstkringVoorst"
+            },
+            "coordinates": {
+                "latitude": 52.2397,
+                "longitude": 6.10051
+            },
+            "optional": {
+                "website": "https://kunstkringvoorst.nl",
+                "logbook": [
+                    {
+                        "date": "2026-11-27",
+                        "author": "list maintainer",
+                        "text": "Never listed before. Found on 3 Nov 2026: Kunstkring Voorst is an art circle of more than 90 artists covering many art forms including photography. It is not listed because it is not a photo club. Recorded so that it is recognized if it turns up again.",
+                        "status": "rejected"
                     }
                 ]
             }
